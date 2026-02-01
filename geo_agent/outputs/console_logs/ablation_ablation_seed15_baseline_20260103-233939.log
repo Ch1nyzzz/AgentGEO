@@ -1,0 +1,74 @@
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+2026-01-03 23:39:46,064 - [WARNING] - Connection pool is full, discarding connection: www.chatnoir.eu. Connection pool size: 10
+2026-01-03 23:39:46,108 - [WARNING] - Connection pool is full, discarding connection: www.chatnoir.eu. Connection pool size: 10
+2026-01-03 23:39:46,253 - [WARNING] - Connection pool is full, discarding connection: www.chatnoir.eu. Connection pool size: 10
+2026-01-03 23:39:46,500 - [WARNING] - Connection pool is full, discarding connection: www.chatnoir.eu. Connection pool size: 10
+2026-01-03 23:39:46,658 - [WARNING] - Connection pool is full, discarding connection: www.chatnoir.eu. Connection pool size: 10
+2026-01-03 23:39:49,802 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:49,834 - [INFO] - Generated answer length: 237
+2026-01-03 23:39:50,974 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:50,981 - [INFO] - Generated answer length: 865
+2026-01-03 23:39:51,853 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:51,858 - [INFO] - Generated answer length: 791
+2026-01-03 23:39:51,998 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:52,006 - [INFO] - Generated answer length: 1362
+2026-01-03 23:39:52,233 - [INFO] - Retrying request to /chat/completions in 0.395188 seconds
+2026-01-03 23:39:52,234 - [INFO] - Retrying request to /chat/completions in 0.418031 seconds
+2026-01-03 23:39:52,238 - [INFO] - Retrying request to /chat/completions in 0.427647 seconds
+2026-01-03 23:39:52,238 - [INFO] - Retrying request to /chat/completions in 0.431248 seconds
+2026-01-03 23:39:52,238 - [INFO] - Retrying request to /chat/completions in 0.406073 seconds
+2026-01-03 23:39:52,239 - [INFO] - Retrying request to /chat/completions in 0.453902 seconds
+2026-01-03 23:39:52,243 - [INFO] - Retrying request to /chat/completions in 0.470807 seconds
+2026-01-03 23:39:52,244 - [INFO] - Retrying request to /chat/completions in 0.430363 seconds
+2026-01-03 23:39:52,244 - [INFO] - Retrying request to /chat/completions in 0.434956 seconds
+2026-01-03 23:39:52,245 - [INFO] - Retrying request to /chat/completions in 0.485470 seconds
+2026-01-03 23:39:52,245 - [INFO] - Retrying request to /chat/completions in 0.433740 seconds
+2026-01-03 23:39:52,246 - [INFO] - Retrying request to /chat/completions in 0.441640 seconds
+2026-01-03 23:39:52,246 - [INFO] - Retrying request to /chat/completions in 0.480443 seconds
+2026-01-03 23:39:53,835 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:53,840 - [INFO] - Generated answer length: 919
+2026-01-03 23:39:54,766 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:54,771 - [INFO] - Generated answer length: 1014
+2026-01-03 23:39:54,883 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:54,885 - [INFO] - Generated answer length: 1245
+2026-01-03 23:39:55,324 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:55,331 - [INFO] - Generated answer length: 1034
+2026-01-03 23:39:55,594 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:55,600 - [INFO] - Generated answer length: 1092
+2026-01-03 23:39:55,666 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:55,669 - [INFO] - Generated answer length: 1290
+2026-01-03 23:39:55,758 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:55,760 - [INFO] - Generated answer length: 1149
+2026-01-03 23:39:56,129 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:56,135 - [INFO] - Generated answer length: 992
+2026-01-03 23:39:56,153 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:56,158 - [INFO] - Generated answer length: 1093
+2026-01-03 23:39:56,241 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:56,247 - [INFO] - Generated answer length: 1427
+2026-01-03 23:39:56,444 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:56,446 - [INFO] - Generated answer length: 1205
+2026-01-03 23:39:56,641 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:56,643 - [INFO] - Generated answer length: 1273
+2026-01-03 23:39:56,676 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:56,683 - [INFO] - Generated answer length: 1495
+2026-01-03 23:39:57,030 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:57,037 - [INFO] - Generated answer length: 1481
+2026-01-03 23:39:57,822 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:57,828 - [INFO] - Generated answer length: 1479
+2026-01-03 23:39:58,134 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:39:58,139 - [INFO] - Generated answer length: 1950
+2026-01-03 23:40:07,561 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:40:07,567 - [INFO] - Generated answer length: 1966
+2026-01-03 23:40:12,257 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:40:12,260 - [INFO] - Generated answer length: 1360
+2026-01-03 23:40:15,286 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:40:15,291 - [INFO] - Generated answer length: 732
+2026-01-03 23:40:20,504 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:40:20,508 - [INFO] - Generated answer length: 1558
+2026-01-03 23:40:25,281 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:40:25,287 - [INFO] - Generated answer length: 926
+2026-01-03 23:40:30,781 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:42:43,340 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:42:46,866 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-03 23:42:46,868 - [INFO] - Generated answer length: 877
+2026-01-03 23:46:01,519 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

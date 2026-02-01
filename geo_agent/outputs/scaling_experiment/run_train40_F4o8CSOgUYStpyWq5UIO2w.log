@@ -1,0 +1,762 @@
+2026-01-04 20:59:43,492 - [INFO] - Query: buy influencer marketing research report... | Competitors: 5 (full content, lengths: [24612, 25734, 15767]...) | Target idx: [6]
+2026-01-04 20:59:43,916 - [INFO] - Query: best platforms for finding influencers... | Competitors: 5 (full content, lengths: [29544, 63141, 21809]...) | Target idx: [6]
+2026-01-04 20:59:45,156 - [INFO] - Query: forbes celebrity status list... | Competitors: 5 (full content, lengths: [45086, 4293, 7261]...) | Target idx: [6]
+2026-01-04 20:59:47,640 - [INFO] - Query: best books on celebrity capital and media studies... | Competitors: 5 (full content, lengths: [21126, 11257, 13946]...) | Target idx: [6]
+2026-01-04 20:59:49,128 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:59:49,138 - [INFO] - Generated answer length: 2384
+2026-01-04 20:59:49,139 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 4, 5]
+2026-01-04 20:59:50,393 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:59:50,396 - [INFO] - Generated answer length: 1571
+2026-01-04 20:59:50,396 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:59:51,285 - [INFO] - Query: what is celebrity capital in social media?... | Competitors: 5 (full content, lengths: [134154, 27778, 8528]...) | Target idx: [6]
+2026-01-04 20:59:54,443 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:59:54,445 - [INFO] - Generated answer length: 4074
+2026-01-04 20:59:54,445 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:59:56,155 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:59:56,158 - [INFO] - Generated answer length: 3419
+2026-01-04 20:59:56,158 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:59:56,312 - [INFO] - Query: buy 'celebrity capital: the role of celebrities in... | Competitors: 5 (full content, lengths: [30463, 21126, 11257]...) | Target idx: [6]
+2026-01-04 20:59:57,951 - [INFO] - Query: buy influencer marketing services... | Competitors: 5 (full content, lengths: [14193, 5931, 7206]...) | Target idx: [6]
+2026-01-04 20:59:58,415 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:59:58,418 - [INFO] - Generated answer length: 2155
+2026-01-04 20:59:58,418 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 3, 6]
+2026-01-04 21:00:00,271 - [INFO] - Query: buy course on becoming a celebrity from an influen... | Competitors: 5 (full content, lengths: [22995, 4490, 6204]...) | Target idx: [6]
+2026-01-04 21:00:01,968 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:01,969 - [INFO] - Generated answer length: 1906
+2026-01-04 21:00:01,969 - [INFO] - Citation check: target=[6] cited=False | All citations: [2, 3, 4, 5]
+2026-01-04 21:00:02,005 - [INFO] - Query: instagram official page of charli d'amelio... | Competitors: 5 (full content, lengths: [14161, 45574, 151029]...) | Target idx: [6]
+2026-01-04 21:00:04,836 - [INFO] - Query: best courses for becoming a social media influence... | Competitors: 5 (full content, lengths: [9740, 11859, 4874]...) | Target idx: [6]
+2026-01-04 21:00:04,917 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:04,918 - [INFO] - Generated answer length: 2555
+2026-01-04 21:00:04,918 - [INFO] - Citation check: target=[6] cited=False | All citations: []
+2026-01-04 21:00:06,221 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:06,224 - [INFO] - Generated answer length: 475
+2026-01-04 21:00:06,224 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 4]
+2026-01-04 21:00:08,324 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:08,327 - [INFO] - Generated answer length: 3098
+2026-01-04 21:00:08,327 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:00:10,056 - [INFO] - Query: cultural impact of social media stars on youth... | Competitors: 5 (full content, lengths: [17519, 7654, 54640]...) | Target idx: [6]
+2026-01-04 21:00:10,206 - [INFO] - Query: top platforms for leveraging celebrity capital in ... | Competitors: 5 (full content, lengths: [12574, 68098, 7727]...) | Target idx: [6]
+2026-01-04 21:00:12,158 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:12,161 - [INFO] - Generated answer length: 2720
+2026-01-04 21:00:12,161 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:00:14,831 - [INFO] - Query: influencer marketing hub... | Competitors: 5 (full content, lengths: [19120, 19120, 51227]...) | Target idx: [6]
+2026-01-04 21:00:17,340 - [INFO] - Query: buy 'celebrity culture and the american dream' by ... | Competitors: 5 (full content, lengths: [35664, 28885, 21134]...) | Target idx: [6]
+2026-01-04 21:00:20,021 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:20,024 - [INFO] - Generated answer length: 1950
+2026-01-04 21:00:20,024 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 5]
+2026-01-04 21:00:21,172 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:21,175 - [INFO] - Generated answer length: 3306
+2026-01-04 21:00:21,175 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 3, 4, 5, 6]
+2026-01-04 21:00:23,158 - [INFO] - Query: impact of influencers on consumer behavior... | Competitors: 5 (full content, lengths: [145971, 26007, 51477]...) | Target idx: [6]
+2026-01-04 21:00:24,956 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:24,958 - [INFO] - Generated answer length: 1925
+2026-01-04 21:00:24,958 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:00:25,322 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:25,325 - [INFO] - Generated answer length: 3241
+2026-01-04 21:00:25,325 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 5, 6]
+2026-01-04 21:00:25,798 - [INFO] - Query: best books on celebrification and social media... | Competitors: 5 (full content, lengths: [16279, 16254, 47093]...) | Target idx: [6]
+2026-01-04 21:00:26,813 - [INFO] - Query: instagram influencer marketing platform... | Competitors: 5 (full content, lengths: [21809, 10597, 13891]...) | Target idx: [6]
+2026-01-04 21:00:27,241 - [INFO] - Query: top social media management tools for marketers... | Competitors: 5 (full content, lengths: [36320, 37411, 24553]...) | Target idx: [6]
+2026-01-04 21:00:31,613 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:31,615 - [INFO] - Generated answer length: 2815
+2026-01-04 21:00:31,615 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 5, 6]
+2026-01-04 21:00:34,435 - [INFO] - Query: buy social media analytics software... | Competitors: 5 (full content, lengths: [26028, 30605, 45921]...) | Target idx: [6]
+2026-01-04 21:00:35,537 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:35,540 - [INFO] - Generated answer length: 3094
+2026-01-04 21:00:35,540 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 3, 4, 5, 6]
+2026-01-04 21:00:37,367 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:37,373 - [INFO] - Generated answer length: 3199
+2026-01-04 21:00:37,373 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:00:38,770 - [INFO] - Query: buy course on increasing celebrity capital... | Competitors: 5 (full content, lengths: [54732, 134154, 7367]...) | Target idx: [6]
+2026-01-04 21:00:39,983 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:39,987 - [INFO] - Generated answer length: 3630
+2026-01-04 21:00:39,987 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:00:39,988 - [INFO] - Query: how do influencers acquire celebrity capital... | Competitors: 5 (full content, lengths: [134154, 8604, 7772]...) | Target idx: [6]
+2026-01-04 21:00:45,185 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:45,187 - [INFO] - Generated answer length: 2758
+2026-01-04 21:00:45,187 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:00:47,316 - [INFO] - Query: best courses for building celebrity capital as an ... | Competitors: 5 (full content, lengths: [18779, 39303, 22995]...) | Target idx: [6]
+2026-01-04 21:00:47,759 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:47,761 - [INFO] - Generated answer length: 2301
+2026-01-04 21:00:47,762 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 6]
+2026-01-04 21:00:51,129 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:51,132 - [INFO] - Generated answer length: 3707
+2026-01-04 21:00:51,133 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:00:52,478 - [INFO] - Query: buy 'the influencer code' book... | Competitors: 5 (full content, lengths: [1675, 7499, 7499]...) | Target idx: [6]
+2026-01-04 21:00:52,674 - [INFO] - Query: instagram digital influencer page... | Competitors: 5 (full content, lengths: [23578, 34840, 14193]...) | Target idx: [6]
+2026-01-04 21:00:54,578 - [INFO] - Query: impact of social media influencer fame on consumer... | Competitors: 5 (full content, lengths: [4545, 43657, 51477]...) | Target idx: [6]
+2026-01-04 21:00:57,850 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:57,853 - [INFO] - Generated answer length: 977
+2026-01-04 21:00:57,853 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:00:59,214 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:59,216 - [INFO] - Generated answer length: 3331
+2026-01-04 21:00:59,216 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:01:01,271 - [INFO] - Query: hootsuite digital influencer marketing page... | Competitors: 5 (full content, lengths: [20389, 20673, 6907]...) | Target idx: [6]
+2026-01-04 21:01:01,624 - [INFO] - Query: buy book on becoming a social media influencer... | Competitors: 5 (full content, lengths: [16445, 17696, 144506]...) | Target idx: [6]
+2026-01-04 21:01:02,651 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:02,653 - [INFO] - Generated answer length: 2254
+2026-01-04 21:01:02,654 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 3, 4, 5]
+2026-01-04 21:01:03,367 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:03,369 - [INFO] - Generated answer length: 2389
+2026-01-04 21:01:03,369 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:01:04,936 - [INFO] - Query: hire social media star for brand campaign... | Competitors: 5 (full content, lengths: [14193, 16178, 53208]...) | Target idx: [6]
+2026-01-04 21:01:08,279 - [INFO] - Query: buy influencer marketing guide... | Competitors: 5 (full content, lengths: [13588, 7709, 144506]...) | Target idx: [6]
+2026-01-04 21:01:10,432 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:10,436 - [INFO] - Generated answer length: 2348
+2026-01-04 21:01:10,436 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:01:10,500 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:10,504 - [INFO] - Generated answer length: 2535
+2026-01-04 21:01:10,504 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:01:12,948 - [INFO] - Query: how do people become famous on social media?... | Competitors: 5 (full content, lengths: [24201, 20124, 2375]...) | Target idx: [6]
+2026-01-04 21:01:13,090 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:13,092 - [INFO] - Generated answer length: 2355
+2026-01-04 21:01:13,092 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 4, 5]
+2026-01-04 21:01:14,664 - [INFO] - Query: impact of digital influencers on consumer behavior... | Competitors: 5 (full content, lengths: [30156, 15004, 145971]...) | Target idx: [6]
+2026-01-04 21:01:14,868 - [INFO] - Query: how do influencers become celebrities?... | Competitors: 5 (full content, lengths: [6061, 7291, 11213]...) | Target idx: [6]
+2026-01-04 21:01:15,960 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:15,962 - [INFO] - Generated answer length: 2370
+2026-01-04 21:01:15,962 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 4, 5]
+2026-01-04 21:01:20,843 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:20,852 - [INFO] - Generated answer length: 2715
+2026-01-04 21:01:20,852 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 5, 6]
+2026-01-04 21:01:21,450 - [INFO] - Query: buy digital influencer marketing course... | Competitors: 5 (full content, lengths: [17994, 2056, 11435]...) | Target idx: [6]
+2026-01-04 21:01:21,732 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:21,737 - [INFO] - Generated answer length: 2287
+2026-01-04 21:01:21,737 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 6]
+2026-01-04 21:01:24,103 - [INFO] - Query: how to become a successful influencer as a senior ... | Competitors: 5 (full content, lengths: [5072, 16655, 7804]...) | Target idx: [6]
+2026-01-04 21:01:24,293 - [INFO] - Query: buy book on celebrification and social media... | Competitors: 5 (full content, lengths: [21758, 32659, 16213]...) | Target idx: [6]
+2026-01-04 21:01:24,973 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:24,976 - [INFO] - Generated answer length: 3335
+2026-01-04 21:01:24,977 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:01:27,063 - [INFO] - Query: forbes article on celebrity capital for influencer... | Competitors: 5 (full content, lengths: [134154, 42306, 44044]...) | Target idx: [6]
+2026-01-04 21:01:31,937 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:31,940 - [INFO] - Generated answer length: 3342
+2026-01-04 21:01:31,940 - [INFO] - Citation check: target=[6] cited=False | All citations: []
+2026-01-04 21:01:33,139 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:33,147 - [INFO] - Generated answer length: 2241
+2026-01-04 21:01:33,147 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 6]
+2026-01-04 21:01:33,548 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:33,551 - [INFO] - Generated answer length: 2150
+2026-01-04 21:01:33,551 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 4]
+2026-01-04 21:01:33,889 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:33,891 - [INFO] - Generated answer length: 2463
+2026-01-04 21:01:33,891 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 6]
+2026-01-04 21:01:34,942 - [INFO] - Query: best courses to learn social media fame strategies... | Competitors: 5 (full content, lengths: [18422, 9620, 16584]...) | Target idx: [6]
+2026-01-04 21:01:35,706 - [INFO] - Query: top platforms for influencer marketing research... | Competitors: 5 (full content, lengths: [10597, 21809, 25906]...) | Target idx: [6]
+2026-01-04 21:01:35,891 - [INFO] - Query: top platforms for finding social media influencers... | Competitors: 5 (full content, lengths: [43315, 29544, 26548]...) | Target idx: [6]
+2026-01-04 21:01:36,197 - [INFO] - Query: best courses to become a social media influencer... | Competitors: 5 (full content, lengths: [15084, 9740, 4874]...) | Target idx: [6]
+2026-01-04 21:01:47,917 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:47,922 - [INFO] - Generated answer length: 3063
+2026-01-04 21:01:47,923 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 5]
+2026-01-04 21:01:48,240 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:48,242 - [INFO] - Generated answer length: 3022
+2026-01-04 21:01:48,243 - [INFO] - Citation check: target=[6] cited=False | All citations: [2, 3, 4]
+2026-01-04 21:01:49,726 - [INFO] - Query: instagram login page... | Competitors: 5 (full content, lengths: [4611, 4467, 3571]...) | Target idx: [6]
+2026-01-04 21:01:50,060 - [INFO] - Query: hootsuite social media dashboard... | Competitors: 5 (full content, lengths: [16648, 22247, 6946]...) | Target idx: [6]
+2026-01-04 21:01:50,870 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:50,871 - [INFO] - Generated answer length: 3544
+2026-01-04 21:01:50,871 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:01:52,496 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:52,499 - [INFO] - Generated answer length: 4684
+2026-01-04 21:01:52,499 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:01:53,750 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:53,753 - [INFO] - Generated answer length: 1076
+2026-01-04 21:01:53,753 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 5]
+2026-01-04 21:01:54,287 - [INFO] - Query: buy social media growth tools... | Competitors: 5 (full content, lengths: [37358, 31961, 35528]...) | Target idx: [6]
+2026-01-04 21:01:56,754 - [INFO] - Query: bourdieu celebrity capital theory... | Competitors: 5 (full content, lengths: [66464, 4301, 3704]...) | Target idx: [6]
+2026-01-04 21:01:58,090 - [INFO] - Query: impact of social media on celebrity status... | Competitors: 5 (full content, lengths: [11345, 8354, 13308]...) | Target idx: [6]
+2026-01-04 21:01:59,224 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:59,226 - [INFO] - Generated answer length: 2528
+2026-01-04 21:01:59,227 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:02:01,610 - [INFO] - Query: top courses for becoming a social media influencer... | Competitors: 5 (full content, lengths: [17994, 31737, 9740]...) | Target idx: [6]
+2026-01-04 21:02:03,350 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:02:03,353 - [INFO] - Generated answer length: 3318
+2026-01-04 21:02:03,353 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:02:03,861 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:02:03,863 - [INFO] - Generated answer length: 2345
+2026-01-04 21:02:03,863 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 6]
+2026-01-04 21:02:04,356 - [INFO] - Query: how digital influencers impact brand awareness... | Competitors: 5 (full content, lengths: [10904, 35989, 80362]...) | Target idx: [6]
+2026-01-04 21:02:05,255 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:02:05,264 - [INFO] - Generated answer length: 2462
+2026-01-04 21:02:05,264 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:02:05,780 - [INFO] - Query: how do influencers transition to celebrities in di... | Competitors: 5 (full content, lengths: [134154, 16593, 11213]...) | Target idx: [6]
+2026-01-04 21:02:07,474 - [INFO] - Query: buy book on celebrification and influencer marketi... | Competitors: 5 (full content, lengths: [3504, 21758, 189157]...) | Target idx: [6]
+2026-01-04 21:02:12,075 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:02:12,076 - [INFO] - Generated answer length: 2799
+2026-01-04 21:02:12,076 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:02:13,111 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:02:13,129 - [INFO] - Generated answer length: 4013
+2026-01-04 21:02:13,129 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:02:13,795 - [INFO] - Query: instagram profile of charli d'amelio... | Competitors: 5 (full content, lengths: [45574, 21491, 20975]...) | Target idx: [6]
+2026-01-04 21:02:14,132 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:02:14,135 - [INFO] - Generated answer length: 2746
+2026-01-04 21:02:14,136 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 5, 6]
+2026-01-04 21:02:17,181 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:02:17,184 - [INFO] - Generated answer length: 2660
+2026-01-04 21:02:17,184 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:02:17,333 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:02:17,335 - [INFO] - Generated answer length: 610
+2026-01-04 21:02:17,336 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3]
+2026-01-04 21:02:24,207 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:02:26,177 - [INFO] - Query: top influencer marketing platforms for celebrity g... | Competitors: 5 (full content, lengths: [24746, 12574, 68098]...) | Target idx: [6]
+2026-01-04 21:02:40,053 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:02:40,056 - [INFO] - Generated answer length: 4621
+2026-01-04 21:02:40,057 - [INFO] - Citation check: target=[6] cited=False | All citations: [2, 4, 5]
+2026-01-04 21:02:52,198 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:03:21,649 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:03:21,654 - [INFO] - Query: top influencer marketing platforms for celebrity g... | Competitors: 5 (full content, lengths: [24746, 12574, 68098]...) | Target idx: [6]
+2026-01-04 21:03:32,317 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:03:32,325 - [INFO] - Generated answer length: 3507
+2026-01-04 21:03:32,326 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 5, 6]
+2026-01-04 21:03:36,899 - [INFO] - Query: buy documentary on influencer to celebrity transit... | Competitors: 5 (full content, lengths: [23524, 52511, 13201]...) | Target idx: [6]
+2026-01-04 21:03:43,321 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:03:43,324 - [INFO] - Generated answer length: 1978
+2026-01-04 21:03:43,324 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:03:53,664 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:04:27,866 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:04:27,881 - [INFO] - Query: buy documentary on influencer to celebrity transit... | Competitors: 5 (full content, lengths: [23524, 52511, 13201]...) | Target idx: [6]
+2026-01-04 21:04:33,571 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:04:33,573 - [INFO] - Generated answer length: 2161
+2026-01-04 21:04:33,573 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:04:44,979 - [INFO] - Query: buy 'the fame game' book by justine bateman... | Competitors: 5 (full content, lengths: [41975, 253108, 44361]...) | Target idx: [6]
+2026-01-04 21:04:49,692 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:04:49,696 - [INFO] - Generated answer length: 1502
+2026-01-04 21:04:49,697 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:05:08,156 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:05:08,161 - [WARNING] - Parse attempt 1/3 failed: Failed to parse AnalysisResult from completion null. Got: 1 validation error for AnalysisResult
+  Input should be a valid dictionary or instance of AnalysisResult [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-01-04 21:05:14,867 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:05:47,517 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:05:47,529 - [INFO] - Query: buy 'the fame game' book by justine bateman... | Competitors: 5 (full content, lengths: [41975, 253108, 44361]...) | Target idx: [6]
+2026-01-04 21:05:53,681 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:05:53,683 - [INFO] - Generated answer length: 1800
+2026-01-04 21:05:53,683 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:06:11,163 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Random seed set to: 42
+
+=== Baseline Evaluation ===
+
+=== Optimize ===
+Starting GEO for https://www.tandfonline.com/doi/full/10.1080/00913367.2021.1977737
+--------------------------------
+📌 Core idea: The document primarily explores how social media influencers (SMIs) acquire and leverage "celebrity capital"—a form of sociocultural currency based on media visibility—in the digital advertising ecosystem, introducing the concept of "influencer celebrification" as a distinct, iterative process involving generative, collaborative, and evaluative practices. It highlights the unique roles of advertising practitioners as talent scouts, creative concierges, and impact analysts in facilitating this process, emphasizing the synergistic interplay between influencer content, audience engagement, and cross-platform dynamics that differentiate influencers from traditional celebrities. The study advances theoretical understanding of influencer advertising by framing celebrity capital acquisition as a community-driven, platform-agnostic, and co-creative phenomenon central to modern promotional culture.
+--------------------------------
+
+--- Processing Query: top influencer marketing platforms for celebrity growth ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 7 paragraphs
+Reason: The target document provides a deep theoretical and empirical analysis of how influencers acquire celebrity capital through a process termed 'influencer celebrification,' focusing on practices and roles of advertising practitioners. However, it does not directly address or list specific influencer marketing platforms, tools, or software solutions that brands or marketers can use to grow celebrity influencers. The query 'top influencer marketing platforms for celebrity growth' seeks concrete platform recommendations, features, or comparisons, which the target document lacks. Instead, it focuses on conceptual frameworks, industry roles, and influencer practices rather than practical platform listings or evaluations. Additionally, the document's academic tone and structure may not align with the more commercial, tool-focused content typically cited for such queries. To improve relevance and citation likelihood, the document could include a section summarizing or referencing leading influencer marketing platforms, their functionalities, and how they support influencer growth and celebrity capital acquisition.
+Tool Selected: content_restructure
+📦 Target paragraph: 5
+📝 Key Changes: ['Reorganized content into thematic sections (theoretical insights, practical implications, industry participants, future research) for improved clarity and focus on the core idea.', 'Integrated summary tables of influencer vs. celebrity characteristics, sample influencers, and key industry players to facilitate quick extraction of relevant information.', 'Condensed and clarified complex narrative to emphasize the unique, iterative process of influencer celebrification and the roles of advertising practitioners within the influencer marketing ecosystem.']
+Iteration 2/3
+✅ Success! Document cited for query: top influencer marketing platforms for celebrity growth
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: buy documentary on influencer to celebrity transition ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 6 paragraphs
+Reason: The target document provides a comprehensive, theoretically rich analysis of the influencer celebrification process, focusing on how influencers acquire celebrity capital through generative, collaborative, and evaluative practices. However, it lacks direct discussion or practical guidance on how to buy or access documentaries about influencer to celebrity transitions, which is the core of the user query. Additionally, the document does not mention or reference specific documentaries, including the HBO documentary "Fake Famous," which is a prominent example related to the query. The tone and academic style of the document, while authoritative, do not align with the more consumer-oriented, media-specific content that typically gets cited for documentary purchase or viewing queries. To improve citation likelihood for such queries, the document should include a dedicated section or appendix referencing notable documentaries on influencer culture and celebrification, including summaries, availability, and purchase or streaming options. This addition would build upon existing theoretical insights without contradicting prior modifications and would enhance practical relevance and user utility.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Added a new paragraph in the Theoretical Insights section referencing documentaries like HBO’s *Fake Famous* to illustrate the influencer-to-celebrity transition and complement the concept of influencer celebrification.', 'Integrated the role of such documentaries in demonstrating the iterative, co-creative, and community-driven nature of influencer celebrification without disrupting the existing thematic flow.', 'Maintained all previous structural and content modifications while enhancing relevance by connecting academic theory with popular media representations.']
+Iteration 2/3
+✅ Success! Document cited for query: buy documentary on influencer to celebrity transition
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: buy 'the fame game' book by justine bateman ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 6 paragraphs
+Reason: The target document is a scholarly, conceptual analysis of influencer celebrification and celebrity capital acquisition, focusing on advertising industry practices and theoretical frameworks. It does not mention or provide any information about Justine Bateman's book "Fame: The Hijacking of Reality," nor does it include practical details such as where to buy the book or summaries of its content. The tone and content are academic and do not align with consumer-oriented queries about purchasing a specific book. Therefore, the document was not cited for the query "buy 'the fame game' book by justine bateman" because it lacks any relevant mention or information about that book. To improve citation likelihood for such queries, the document would need an additive section referencing notable books on fame, including Bateman's work, with purchase information or summaries, without contradicting existing academic content.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Integrated a new paragraph on Justine Bateman’s *Fame: The Hijacking of Reality* within Theoretical Insights, linking it to influencer celebrification and celebrity capital.', 'Maintained all existing thematic sections and previous modifications while smoothly incorporating the book’s significance and purchase information.', 'Enhanced the theoretical framework by connecting academic concepts with both visual and literary media representations of fame and influencer culture.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 6 paragraphs
+Reason: The target document was not cited for the query "buy 'the fame game' book by justine bateman" because it lacks any direct mention or practical information about Justine Bateman's book, including its title, content summary, or purchasing details. The document is primarily an academic analysis of influencer celebrification and celebrity capital, with a theoretical and industry-focused tone that does not align with consumer-oriented queries about buying a specific book. Although previous modifications added a paragraph referencing Bateman's book, it did not include concrete purchase information or a clear callout that would make the document relevant for such queries. To fix this, the document should be enhanced by integrating a dedicated, clearly marked section that provides a concise summary of Bateman's book, its thematic relevance, critical reception, and explicit purchase options (e.g., links or retailer names like Amazon, Barnes & Noble). This addition should be additive and maintain the academic tone while improving practical relevance for purchase-related queries.2026-01-04 21:06:43,894 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:43,926 - [INFO] - Query: buy 'the fame game' book by justine bateman... | Competitors: 5 (full content, lengths: [41975, 253108, 44361]...) | Target idx: [6]
+2026-01-04 21:06:52,298 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:52,298 - [INFO] - Generated answer length: 1863
+2026-01-04 21:06:52,299 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:06:59,344 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:59,348 - [WARNING] - Parse attempt 1/3 failed: Failed to parse AnalysisResult from completion null. Got: 1 validation error for AnalysisResult
+  Input should be a valid dictionary or instance of AnalysisResult [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-01-04 21:07:06,050 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:36,882 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:37,417 - [INFO] - Query: top tools for tracking celebrification in social m... | Competitors: 5 (full content, lengths: [29591, 44089, 58740]...) | Target idx: [6]
+2026-01-04 21:07:50,827 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:50,830 - [INFO] - Generated answer length: 4294
+2026-01-04 21:07:50,831 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:07:59,018 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:08:40,111 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:08:40,115 - [INFO] - Query: top tools for tracking celebrification in social m... | Competitors: 5 (full content, lengths: [29591, 44089, 58740]...) | Target idx: [6]
+2026-01-04 21:08:48,274 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:08:48,277 - [INFO] - Generated answer length: 3042
+2026-01-04 21:08:48,277 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:08:50,668 - [INFO] - Query: how to become a digital influencer... | Competitors: 5 (full content, lengths: [9818, 8296, 22952]...) | Target idx: [6]
+2026-01-04 21:09:01,268 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:09:01,270 - [INFO] - Generated answer length: 3470
+2026-01-04 21:09:01,270 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:09:04,077 - [INFO] - Query: how to grow followers on social media... | Competitors: 5 (full content, lengths: [43958, 30923, 30326]...) | Target idx: [6]
+2026-01-04 21:09:11,611 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:09:11,614 - [INFO] - Generated answer length: 2661
+2026-01-04 21:09:11,614 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:09:17,493 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:09:57,347 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:09:57,351 - [INFO] - Query: how to grow followers on social media... | Competitors: 5 (full content, lengths: [43958, 30923, 30326]...) | Target idx: [6]
+2026-01-04 21:10:03,353 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:10:03,359 - [INFO] - Generated answer length: 2356
+2026-01-04 21:10:03,359 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:10:11,205 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:10:53,000 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Integrated a detailed paragraph on Justine Bateman’s *Fame: The Hijacking of Reality* within Theoretical Insights, linking it to influencer celebrification and celebrity capital.', 'Included information on the book’s critical reception and availability through major retailers to enhance practical relevance.', 'Ensured smooth thematic flow by connecting literary and visual media representations of fame without disrupting existing content or structure.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 6 paragraphs
+Reason: The target document was not cited for the query "buy 'the fame game' book by justine bateman" because it lacks explicit, consumer-oriented purchase information about Justine Bateman's book. Although previous modifications added a theoretical mention of Bateman's book and its relevance to influencer celebrification, the document does not provide concrete details such as the book's full title, summary, critical reception, or direct purchase options (e.g., retailer names or links). The tone remains academic and conceptual, which does not align well with the practical, transactional nature of the query. To improve citation likelihood, the document should include a dedicated, clearly marked section that summarizes the book, highlights its significance, and provides explicit purchase information from major retailers like Amazon and Barnes & Noble. This addition should be integrated smoothly without disrupting the existing academic tone or structure.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Integrated a comprehensive paragraph on Justine Bateman’s *Fame: The Hijacking of Reality* within Theoretical Insights, linking its themes to influencer celebrification and celebrity capital.', 'Added information on the book’s critical reception and practical purchase options to enhance accessibility and relevance for readers.', 'Ensured smooth thematic flow by connecting literary and visual media representations of fame without disrupting existing content or structure.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: top tools for tracking celebrification in social media ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 6 paragraphs
+Reason: The target document was not cited for the query "top tools for tracking celebrification in social media" because it primarily offers a theoretical and conceptual analysis of influencer celebrification and celebrity capital acquisition, rather than practical, tool-focused content. It lacks explicit references, summaries, or evaluations of specific social media monitoring or influencer analytics tools that track influencer growth, audience engagement, or celebrification metrics. The tone is academic and conceptual, which does not align with the commercial, feature-driven, and comparative nature of typical content cited for tool-related queries. To improve citation likelihood, the document should include an additive section or appendix that explicitly lists and briefly describes leading influencer marketing and social media analytics tools, highlighting how these tools support tracking influencer celebrification, audience metrics, and campaign performance. This addition should build on the existing theoretical framework without disrupting the academic tone or prior modifications.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Added a new section on influencer marketing and social media analytics tools, describing key platforms and their importance in measuring and growing influencer celebrity capital.', 'Integrated this tools section naturally within the existing thematic flow, linking it to practical implications and the operationalization of influencer celebrification.', 'Maintained all previous modifications and thematic coherence while enhancing the document’s practical relevance and completeness regarding influencer celebrification measurement.']
+Iteration 2/3
+✅ Success! Document cited for query: top tools for tracking celebrification in social media
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: how to become a digital influencer ---
+Iteration 1/3
+✅ Success! Document cited for query: how to become a digital influencer
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: how to grow followers on social media ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 6 paragraphs
+Reason: The target document was not cited for the query 'how to grow followers on social media' because it primarily offers a theoretical and conceptual analysis of influencer celebrification and celebrity capital acquisition rather than practical, actionable strategies or step-by-step guidance on follower growth. The tone is academic and focused on advertising industry practices, lacking direct, user-oriented advice on social media growth tactics such as content creation tips, engagement strategies, algorithm insights, or platform-specific growth hacks. Additionally, the document does not include concrete examples, how-to guides, or tool recommendations specifically aimed at follower growth, which are typically sought by users with this query. To improve citation likelihood, the document should incorporate a dedicated section summarizing practical, evidence-based strategies for growing social media followers, including actionable tips, platform-specific advice, and possibly integration with influencer celebrification concepts to bridge theory and practice.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Added a practical strategies subsection within Practical Implications, providing actionable follower growth tactics aligned with influencer celebrification.', 'Enhanced the linkage between theoretical insights and real-world application by integrating platform-specific content creation, engagement, and algorithm awareness advice.', 'Maintained all previous structural and thematic elements while enriching the document’s practical relevance and accessibility for influencer marketing stakeholders.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 7 paragraphs
+Reason: The target document was not cited for the query 'how to grow followers on social media' because it primarily presents a theoretical and conceptual framework of influencer celebrification and celebrity capital acquisition, rather than providing direct, practical, and actionable strategies for follower growth. The tone is academic and focused on advertising industry practices, lacking explicit step-by-step guidance, platform-specific tactics, or user-oriented growth hacks typically sought by users with this query. Although previous modifications have added practical implications, the document would benefit from a dedicated, clearly marked section that summarizes evidence-based, actionable follower growth strategies aligned with the influencer celebrification framework. This would bridge the gap between theory and practice, enhancing relevance and citation likelihood for such queries.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Added a dedicated subsection within Practical Implications outlining actionable, platform-specific strategies for follower growth aligned with the influencer celebrification framework.', 'Integrated practical tips on content creation, audience engagement, cross-platform tactics, algorithm awareness, collaborations, and data-driven optimization to enhance the document’s utility for practitioners.', 'Ensured seamless thematic flow by linking these strategies explicitly to generative, collaborative, and evaluative practices already established in the theoretical framework.']
+Iteration 3/32026-01-04 21:10:53,004 - [INFO] - Query: how to grow followers on social media... | Competitors: 5 (full content, lengths: [43958, 30923, 30326]...) | Target idx: [6]
+2026-01-04 21:10:59,287 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:10:59,289 - [INFO] - Generated answer length: 2495
+2026-01-04 21:10:59,289 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:11:14,300 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:11:57,341 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:12:02,558 - [INFO] - Query: best books on building celebrity capital... | Competitors: 5 (full content, lengths: [11257, 8663, 21126]...) | Target idx: [6]
+2026-01-04 21:12:10,723 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:12:10,725 - [INFO] - Generated answer length: 3379
+2026-01-04 21:12:10,725 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:12:11,637 - [INFO] - Query: buy instagram followers for celebrity status... | Competitors: 5 (full content, lengths: [13268, 14368, 10073]...) | Target idx: [6]
+2026-01-04 21:12:19,215 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:12:19,217 - [INFO] - Generated answer length: 2299
+2026-01-04 21:12:19,217 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:12:23,708 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:13:04,006 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:13:04,010 - [INFO] - Query: buy instagram followers for celebrity status... | Competitors: 5 (full content, lengths: [13268, 14368, 10073]...) | Target idx: [6]
+2026-01-04 21:13:12,080 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:13:12,082 - [INFO] - Generated answer length: 2630
+2026-01-04 21:13:12,083 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:13:15,004 - [INFO] - Query: how does celebrification impact influencer marketi... | Competitors: 5 (full content, lengths: [134154, 37310, 7291]...) | Target idx: [6]
+2026-01-04 21:13:24,228 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:13:24,231 - [INFO] - Generated answer length: 2968
+2026-01-04 21:13:24,231 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 6]
+2026-01-04 21:13:31,038 - [INFO] - Query: buy 'influencer: building your personal brand in t... | Competitors: 5 (full content, lengths: [312905, 8142, 34585]...) | Target idx: [6]
+2026-01-04 21:13:38,073 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:13:38,076 - [INFO] - Generated answer length: 1477
+2026-01-04 21:13:38,076 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:13:46,881 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:14:36,887 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:14:36,896 - [INFO] - Query: buy 'influencer: building your personal brand in t... | Competitors: 5 (full content, lengths: [312905, 8142, 34585]...) | Target idx: [6]
+2026-01-04 21:14:48,532 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:14:48,538 - [INFO] - Generated answer length: 1745
+2026-01-04 21:14:48,538 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:14:56,716 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:14:56,718 - [WARNING] - Parse attempt 1/3 failed: Failed to parse AnalysisResult from completion null. Got: 1 validation error for AnalysisResult
+  Input should be a valid dictionary or instance of AnalysisResult [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-01-04 21:15:04,814 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+❌ Not cited. Analyzing...
+📦 Document split into 7 paragraphs
+Reason: The target document was not cited for the query 'how to grow followers on social media' because it primarily presents a theoretical and conceptual framework of influencer celebrification and celebrity capital acquisition, rather than providing direct, practical, and actionable strategies for follower growth. The tone is academic and focused on advertising industry practices, lacking explicit step-by-step guidance, platform-specific tactics, or user-oriented growth hacks typically sought by users with this query. Although previous modifications have added practical implications, the document would benefit from a dedicated, clearly marked section that summarizes evidence-based, actionable follower growth strategies aligned with the influencer celebrification framework. This would bridge the gap between theory and practice, enhancing relevance and citation likelihood for such queries.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Added a dedicated subsection within Practical Implications providing detailed, actionable strategies for growing followers on social media platforms, explicitly linked to the influencer celebrification framework.', 'Integrated practical tips on content creation, audience engagement, cross-platform synergy, algorithm awareness, collaborations, and data-driven optimization to enhance the document’s utility for practitioners.', 'Ensured seamless thematic flow by connecting these strategies to the generative, collaborative, and evaluative practices already established in the theoretical framework, preserving all previous modifications and core ideas.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: best books on building celebrity capital ---
+Iteration 1/3
+✅ Success! Document cited for query: best books on building celebrity capital
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: buy instagram followers for celebrity status ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 7 paragraphs
+Reason: The target document was not cited for the query "buy instagram followers for celebrity status" because it fundamentally lacks any discussion or endorsement of purchasing followers as a strategy for acquiring celebrity capital or influencer status. The document is an academic, theoretical analysis of influencer celebrification, focusing on organic, community-driven, and platform-agnostic processes by which influencers acquire celebrity capital through attention labor, collaborative content creation, and evaluative metrics. It explicitly emphasizes authenticity, audience engagement, and the role of advertising practitioners in facilitating genuine influencer growth. There is no mention of buying followers, follower purchasing services, or any commercial tactics that artificially inflate follower counts. The tone is academic and conceptual, not transactional or promotional, which does not align with the practical, commercial nature of the query. To improve citation likelihood for such queries, the document would need an additive section that critically addresses the phenomenon of buying followers, its implications for celebrity capital, and possibly contrasts it with authentic growth strategies, without contradicting the existing theoretical framework.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Integrated a balanced academic discussion on the practice of buying Instagram followers, contrasting it with authentic influencer celebrification and highlighting its risks and limitations.', 'Expanded the Theoretical Insights and Practical Implications sections to incorporate the impact of artificial follower inflation on community-centric KPIs, algorithmic responses, and sustainable celebrity capital growth.', 'Maintained all previous modifications and thematic coherence while enhancing the document’s relevance to contemporary influencer marketing practices and challenges.']
+Iteration 2/3
+✅ Success! Document cited for query: buy instagram followers for celebrity status
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: how does celebrification impact influencer marketing ---
+Iteration 1/3
+✅ Success! Document cited for query: how does celebrification impact influencer marketing
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: buy 'influencer: building your personal brand in the age of social media' ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 7 paragraphs
+Reason: The target document was not cited for the query "buy 'influencer: building your personal brand in the age of social media'" because it lacks any direct mention or practical information about the book titled "Influencer: Building Your Personal Brand in the Age of Social Media" by Brittany Hennessy. The document is an academic, theoretical analysis of influencer celebrification and celebrity capital acquisition, focusing on advertising industry practices and conceptual frameworks. It does not include consumer-oriented content such as book summaries, purchase options, retailer information, or promotional details that would make it relevant for a transactional query about buying this specific book. The tone and content are not aligned with the practical, commercial nature of the query. To improve citation likelihood, the document should include an additive section that explicitly references Brittany Hennessy's book, provides a concise summary of its content and significance, and offers clear purchase information (e.g., availability on major retailers like Amazon, Barnes & Noble). This addition should be integrated smoothly without disrupting the existing academic tone or structure, thereby bridging the gap between theoretical insights and practical user needs.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Integrated a detailed overview of Brittany Hennessy’s *Influencer: Building Your Personal Brand in the Age of Social Media*, linking its content and significance to the influencer celebrification framework and providing practical purchase information.', 'Enhanced the Theoretical Insights section by weaving Hennessy’s book alongside existing references to documentaries and Justine Bateman’s *Fame*, enriching the literary and practical dimensions of influencer celebrification.', 'Maintained and reinforced the document’s core focus on authentic, community-driven celebrity capital acquisition by contrasting Hennessy’s practical guidance with the risks of buying followers, preserving all previous modifications and thematic coherence.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 7 paragraphs
+Reason: The target document was not cited for the query "buy 'influencer: building your personal brand in the age of social media'" because it lacks any direct mention or practical information about Brittany Hennessy's book, including its title, summary, significance, or purchase options. The document is primarily an academic, theoretical analysis of influencer celebrification and celebrity capital acquisition, which does not align with the transactional and consumer-oriented nature of the query. Although previous modifications have added references to related media and books, they do not explicitly include Hennessy's book or provide clear purchase information that would make the document relevant for such a query. To improve citation likelihood, the document should include an additive, clearly marked section summarizing Hennessy's book, its relevance to influencer celebrification, and explicit purchase details (e.g., availability on Amazon, Barnes & Noble). This addition should be integrated smoothly without disrupting the academic tone or existing structure, thereby bridging the gap between theoretical insights and practical user needs.2026-01-04 21:15:58,264 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:15:58,270 - [INFO] - Query: buy 'influencer: building your personal brand in t... | Competitors: 5 (full content, lengths: [312905, 8142, 34585]...) | Target idx: [6]
+2026-01-04 21:16:04,303 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:16:04,305 - [INFO] - Generated answer length: 1771
+2026-01-04 21:16:04,305 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:16:17,738 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:17:13,799 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:17:18,101 - [INFO] - Query: best cameras for influencer photography... | Competitors: 5 (full content, lengths: [7346, 5571, 22481]...) | Target idx: [6]
+2026-01-04 21:17:30,393 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:17:30,395 - [INFO] - Generated answer length: 2604
+2026-01-04 21:17:30,395 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 3, 4, 5]
+2026-01-04 21:17:38,493 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:18:34,880 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:18:34,924 - [INFO] - Query: best cameras for influencer photography... | Competitors: 5 (full content, lengths: [7346, 5571, 22481]...) | Target idx: [6]
+2026-01-04 21:18:45,817 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:18:45,844 - [INFO] - Generated answer length: 3497
+2026-01-04 21:18:45,844 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:18:56,482 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:20:08,482 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:20:08,491 - [INFO] - Query: best cameras for influencer photography... | Competitors: 5 (full content, lengths: [7346, 5571, 22481]...) | Target idx: [6]
+2026-01-04 21:20:18,346 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:20:18,348 - [INFO] - Generated answer length: 3214
+2026-01-04 21:20:18,349 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:20:27,631 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Integrated a detailed overview of Brittany Hennessy’s *Influencer: Building Your Personal Brand in the Age of Social Media* within Theoretical Insights, linking it to influencer celebrification and celebrity capital.', 'Added practical purchase information for Hennessy’s book, noting availability on Amazon, Barnes & Noble, and independent bookstores to enhance accessibility and relevance.', 'Seamlessly connected Hennessy’s work with existing references to documentaries and Justine Bateman’s *Fame*, enriching the literary and practical dimensions of influencer celebrification without disrupting thematic flow.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 7 paragraphs
+Reason: The target document was not cited for the query "buy 'influencer: building your personal brand in the age of social media'" because it lacks explicit, consumer-oriented purchase information about Brittany Hennessy's book. Although previous modifications added a theoretical mention of the book and its relevance to influencer celebrification, the document does not provide concrete details such as the book's full title, summary, critical reception, or direct purchase options (e.g., retailer names or links). The tone remains academic and conceptual, which does not align well with the practical, transactional nature of the query. To improve citation likelihood, the document should include a dedicated, clearly marked section that summarizes Hennessy's book, highlights its significance, and provides explicit purchase information from major retailers like Amazon and Barnes & Noble. This addition should be integrated smoothly without disrupting the existing academic tone or structure, thereby bridging the gap between theoretical insights and practical user needs.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Added a dedicated, consumer-oriented overview of Brittany Hennessy’s *Influencer: Building Your Personal Brand in the Age of Social Media* within Theoretical Insights, linking it to influencer celebrification and celebrity capital.', 'Included critical reception and practical purchase information for Hennessy’s book, enhancing accessibility and relevance for readers interested in influencer marketing.', 'Seamlessly integrated this new content alongside existing references to documentaries and Justine Bateman’s *Fame*, enriching the literary and practical dimensions of influencer celebrification without disrupting thematic flow.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: best cameras for influencer photography ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 7 paragraphs
+Reason: The target document was not cited for the query 'best cameras for influencer photography' because it primarily focuses on the theoretical framework of influencer celebrification and the acquisition of celebrity capital, rather than providing practical, product-specific recommendations or reviews of camera equipment. The tone is academic and conceptual, lacking any direct discussion of camera gear, photography tools, or technical advice relevant to influencer content creation. Additionally, the document does not include consumer-oriented content such as buying guides, product comparisons, or up-to-date technology insights that are typically cited for such queries. To improve citation likelihood, the document should include an additive, clearly marked section that addresses the role of camera equipment in influencer content creation, highlighting key camera features important for influencer photography, and possibly listing or reviewing current best cameras suited for influencers. This addition should be integrated smoothly without disrupting the existing academic tone or structure, thereby bridging the gap between theoretical insights and practical user needs related to influencer photography equipment.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Integrated a detailed discussion on the importance of camera equipment and photography tools in influencer content creation, linking technical aspects to the generative practices of influencer celebrification.', 'Added specific camera features valued by influencers and examples of popular camera models to illustrate how equipment choice impacts content quality and celebrity capital growth.', 'Seamlessly incorporated this technical dimension into both Theoretical Insights and Practical Implications sections, emphasizing its role in sustaining authentic, high-quality content production essential for influencer celebrification.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 8 paragraphs
+Reason: The target document was not cited for the query 'best cameras for influencer photography' because it primarily focuses on the theoretical framework of influencer celebrification and the acquisition of celebrity capital, rather than providing practical, product-specific recommendations or reviews of camera equipment. The tone is academic and conceptual, lacking any direct discussion of camera gear, photography tools, or technical advice relevant to influencer content creation. Additionally, the document does not include consumer-oriented content such as buying guides, product comparisons, or up-to-date technology insights that are typically cited for such queries. To improve citation likelihood, the document should include an additive, clearly marked section that addresses the role of camera equipment in influencer content creation, highlighting key camera features important for influencer photography, and possibly listing or reviewing current best cameras suited for influencers. This addition should be integrated smoothly without disrupting the existing academic tone or structure, thereby bridging the gap between theoretical insights and practical user needs related to influencer photography equipment.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Integrated a detailed discussion on the importance of camera equipment and photography tools within the Theoretical Insights and Practical Implications sections, linking technical aspects to generative practices of influencer celebrification.', 'Added specific camera features valued by influencers and examples of popular camera models to illustrate how equipment choice impacts content quality and celebrity capital growth.', 'Seamlessly incorporated this technical dimension without disrupting existing thematic flow, emphasizing its role in sustaining authentic, high-quality content production essential for influencer celebrification.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 8 paragraphs
+Reason: The target document was not cited for the query 'best cameras for influencer photography' because it primarily focuses on the theoretical framework of influencer celebrification and celebrity capital acquisition, rather than providing practical, product-specific recommendations or reviews of camera equipment. The tone is academic and conceptual, lacking direct discussion of camera gear, photography tools, or technical advice relevant to influencer content creation. It also lacks consumer-oriented content such as buying guides, product comparisons, or up-to-date technology insights that are typically cited for such queries. Although previous modifications have added some mention of camera equipment's role in influencer content creation, the coverage remains high-level and does not include concrete, detailed, and current camera model recommendations or buying advice that users expect for this query. To improve citation likelihood, the document should include an additive, clearly marked section that addresses the role of camera equipment in influencer content creation, highlights key camera features important for influencer photography, and lists or reviews current best cameras suited for influencers. This addition should be integrated smoothly without disrupting the existing academic tone or structure, thereby bridging the gap between theoretical insights and practical user needs related to influencer photography equipment.2026-01-04 21:21:33,031 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:21:35,567 - [INFO] - Query: buy access to celebrity status influencer database... | Competitors: 5 (full content, lengths: [33718, 12574, 1144]...) | Target idx: [6]
+2026-01-04 21:21:46,046 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:21:46,057 - [INFO] - Generated answer length: 2719
+2026-01-04 21:21:46,057 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:21:59,104 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:23:09,192 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:23:09,203 - [INFO] - Query: buy access to celebrity status influencer database... | Competitors: 5 (full content, lengths: [33718, 12574, 1144]...) | Target idx: [6]
+2026-01-04 21:23:15,567 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:23:15,571 - [INFO] - Generated answer length: 2823
+2026-01-04 21:23:15,571 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:23:23,156 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:25:01,997 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:25:02,005 - [INFO] - Query: buy access to celebrity status influencer database... | Competitors: 5 (full content, lengths: [33718, 12574, 1144]...) | Target idx: [6]
+2026-01-04 21:25:09,428 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:25:09,431 - [INFO] - Generated answer length: 2690
+2026-01-04 21:25:09,431 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:25:17,190 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:26:39,156 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:26:44,617 - [INFO] - Query: how do influencers gain followers on social media... | Competitors: 5 (full content, lengths: [42502, 68351, 24427]...) | Target idx: [6]
+2026-01-04 21:26:53,313 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:26:53,321 - [INFO] - Generated answer length: 3118
+2026-01-04 21:26:53,321 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:26:55,777 - [INFO] - Query: best courses for aspiring social media influencers... | Competitors: 5 (full content, lengths: [17994, 16248, 22995]...) | Target idx: [6]
+2026-01-04 21:27:11,828 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:27:11,831 - [INFO] - Generated answer length: 4334
+2026-01-04 21:27:11,832 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:27:21,260 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:28:26,666 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Added a detailed section on camera equipment and photography tools within Theoretical Insights, linking key camera features and popular models to the generative practices of influencer celebrification.', 'Integrated the technical dimension of content creation into Practical Implications by emphasizing the importance of investing in appropriate camera equipment for authentic, high-quality content production.', 'Maintained seamless thematic flow by connecting technical tools to the broader influencer celebrification framework without disrupting existing content or structure.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: buy access to celebrity status influencer database ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 9 paragraphs
+Reason: The target document was not cited for the query "buy access to celebrity status influencer database" because it lacks any direct mention, description, or practical information about purchasing or accessing databases of celebrity influencers. The document is primarily an academic and theoretical analysis of influencer celebrification and celebrity capital acquisition, focusing on conceptual frameworks, industry roles, and practices rather than transactional or commercial content. It does not provide listings, pricing, access methods, or platform recommendations for celebrity influencer databases, which are core to the query. To improve citation likelihood, the document should include an additive, clearly marked section that explicitly addresses the availability, types, and access methods of celebrity influencer databases, including examples of leading platforms or services where such databases can be purchased or subscribed to. This addition should be integrated smoothly without disrupting the existing academic tone or structure, thereby bridging the gap between theoretical insights and practical user needs related to acquiring access to celebrity influencer data.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Added a comprehensive new section on celebrity influencer databases, detailing their importance, leading platforms, features, purchasing models, and considerations for brands and marketers.', 'Seamlessly integrated this new section within the Practical Implications and Industry Participants thematic flow to enhance the document’s practical relevance and completeness.', 'Maintained all previous modifications and core ideas, ensuring the new content supports the influencer celebrification framework without disrupting thematic coherence.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 10 paragraphs
+Reason: The target document was not cited for the query "buy access to celebrity status influencer database" because it lacks any explicit, practical, or transactional information about purchasing or accessing celebrity influencer databases. While the document provides a rich theoretical framework on influencer celebrification and discusses the roles of advertising practitioners, it does not mention specific platforms, databases, or services where such data can be bought or subscribed to. The tone is academic and conceptual, not commercial or service-oriented, which does not align with the query's intent. To improve citation likelihood, the document should include an additive, clearly marked section that explicitly addresses celebrity influencer databases, their features, leading platforms, purchasing models, and considerations for brands and marketers. This addition should be integrated smoothly within the existing practical implications or industry participants sections to maintain thematic coherence and build upon previous modifications.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Integrated a comprehensive new section on celebrity influencer databases, detailing leading platforms, key features, subscription models, and considerations for brands and marketers.', 'Seamlessly incorporated this information within the Practical Implications and Industry Participants thematic flow to enhance the document’s practical relevance and completeness.', 'Maintained all previous modifications and core ideas, ensuring the new content supports the influencer celebrification framework without disrupting thematic coherence.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 11 paragraphs
+Reason: The target document was not cited for the query 'buy access to celebrity status influencer database' because it lacks explicit, practical, and transactional information about purchasing or accessing celebrity influencer databases. While the document provides a rich theoretical framework on influencer celebrification and discusses the roles of advertising practitioners, it does not mention specific platforms, databases, or services where such data can be bought or subscribed to. The tone is academic and conceptual, not commercial or service-oriented, which does not align with the query's intent. To improve citation likelihood, the document should include an additive, clearly marked section that explicitly addresses celebrity influencer databases, their features, leading platforms, purchasing models, and considerations for brands and marketers. This addition should be integrated smoothly within the existing practical implications or industry participants sections to maintain thematic coherence and build upon previous modifications.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Integrated a comprehensive new section on celebrity influencer databases, including leading platforms, key features, subscription models, and considerations for brands and marketers.', 'Seamlessly incorporated this information within the Practical Implications and Industry Participants thematic flow to enhance the document’s practical relevance and completeness.', 'Maintained all previous modifications and core ideas, ensuring the new content supports the influencer celebrification framework without disrupting thematic coherence.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: how do influencers gain followers on social media ---
+Iteration 1/3
+✅ Success! Document cited for query: how do influencers gain followers on social media
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: best courses for aspiring social media influencers ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 12 paragraphs
+Reason: The target document was not cited for the query "best courses for aspiring social media influencers" because it primarily offers a theoretical and conceptual analysis of influencer celebrification and celebrity capital acquisition, rather than practical, actionable guidance or curated lists of courses. While it includes rich academic insights, industry practices, and mentions some media and books related to influencer culture, it lacks explicit, user-oriented content such as recommended courses, step-by-step learning paths, or educational resources tailored for aspiring influencers. The tone is academic and the content is structured around conceptual frameworks and industry roles, which does not align well with the practical, instructional nature of the query. To improve citation likelihood, the document should include an additive, clearly marked section that summarizes or recommends top courses, training programs, or educational resources for aspiring social media influencers, ideally linking these recommendations to the influencer celebrification framework to maintain thematic coherence and build upon previous modifications.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Added a dedicated section on recommended influencer marketing courses and training programs, linking them to the influencer celebrification framework and practical skill development.', 'Integrated the educational resources section naturally within Theoretical Insights to bridge theory and practice for aspiring influencers.', 'Ensured seamless thematic flow by connecting courses with existing discussions on community engagement, personal branding, and platform strategies without disrupting prior content.']2026-01-04 21:28:26,675 - [INFO] - Query: best courses for aspiring social media influencers... | Competitors: 5 (full content, lengths: [17994, 16248, 22995]...) | Target idx: [6]
+2026-01-04 21:28:36,923 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:28:36,928 - [INFO] - Generated answer length: 3837
+2026-01-04 21:28:36,928 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:28:47,224 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:29:30,076 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:29:30,081 - [INFO] - Query: best courses for aspiring social media influencers... | Competitors: 5 (full content, lengths: [17994, 16248, 22995]...) | Target idx: [6]
+2026-01-04 21:29:40,880 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:29:40,886 - [INFO] - Generated answer length: 4171
+2026-01-04 21:29:40,886 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:29:52,460 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:30:32,533 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:30:38,510 - [INFO] - Query: instagram celebrity status verification page... | Competitors: 5 (full content, lengths: [5750, 3774, 4329]...) | Target idx: [6]
+2026-01-04 21:30:44,720 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:30:44,723 - [INFO] - Generated answer length: 2337
+2026-01-04 21:30:44,723 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:30:54,767 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:32:01,544 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:32:01,613 - [INFO] - Query: instagram celebrity status verification page... | Competitors: 5 (full content, lengths: [5750, 3774, 4329]...) | Target idx: [6]
+2026-01-04 21:32:08,754 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:32:08,760 - [INFO] - Generated answer length: 2709
+2026-01-04 21:32:08,760 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:32:27,593 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:33:03,881 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:33:03,892 - [INFO] - Query: instagram celebrity status verification page... | Competitors: 5 (full content, lengths: [5750, 3774, 4329]...) | Target idx: [6]
+2026-01-04 21:33:10,542 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:33:10,545 - [INFO] - Generated answer length: 2359
+2026-01-04 21:33:10,546 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:33:23,320 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 13 paragraphs
+Reason: The target document was not cited for the query 'best courses for aspiring social media influencers' because it primarily offers a theoretical and conceptual analysis of influencer celebrification and celebrity capital acquisition, rather than practical, actionable guidance or curated lists of courses. Although it contains rich academic insights and references to media and books related to influencer culture, it lacks explicit, user-oriented content such as recommended courses, step-by-step learning paths, or educational resources tailored for aspiring influencers. The tone is academic and the content is structured around conceptual frameworks and industry roles, which does not align well with the practical, instructional nature of the query. To improve citation likelihood, the document should include an additive, clearly marked section that summarizes or recommends top courses, training programs, or educational resources for aspiring social media influencers, ideally linking these recommendations to the influencer celebrification framework to maintain thematic coherence and build upon previous modifications.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: []
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 13 paragraphs
+Reason: The target document was not cited for the query "best courses for aspiring social media influencers" because it primarily offers a theoretical and conceptual analysis of influencer celebrification and celebrity capital acquisition, rather than practical, actionable guidance or curated lists of courses. Although it contains rich academic insights and references to media and books related to influencer culture, it lacks explicit, user-oriented content such as recommended courses, step-by-step learning paths, or educational resources tailored for aspiring influencers. The tone is academic and the content is structured around conceptual frameworks and industry roles, which does not align well with the practical, instructional nature of the query. To improve citation likelihood, the document should include an additive, clearly marked section that summarizes or recommends top courses, training programs, or educational resources for aspiring social media influencers, ideally linking these recommendations to the influencer celebrification framework to maintain thematic coherence and build upon previous modifications.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: []
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: instagram celebrity status verification page ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 13 paragraphs
+Reason: The target document was not cited for the query 'instagram celebrity status verification page' because it lacks any direct, practical, or procedural information about Instagram's verification process, verified badges, or Meta Verified subscriptions. The document is an academic, theoretical analysis focused on influencer celebrification and celebrity capital acquisition, emphasizing conceptual frameworks, industry roles, and influencer marketing practices. It does not address Instagram's verification criteria, how to apply for verification, the meaning of verified badges, or the existence of paid verification services like Meta Verified. Additionally, the tone and content are academic and conceptual rather than user-oriented or transactional, which does not align with the informational needs of users seeking guidance on Instagram verification. To improve citation likelihood for such queries, the document should include an additive, clearly marked section summarizing Instagram's verification process, eligibility criteria, benefits of verified badges, and the Meta Verified subscription service, including links or references to official Instagram resources. This addition should be integrated smoothly without disrupting the existing academic tone or structure, thereby bridging the gap between influencer celebrification theory and practical social media platform features.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Integrated a comprehensive section on Instagram’s verified badge system, detailing its purpose, eligibility, application process, and the Meta Verified subscription service, linking it to influencer celebrification and authenticity.', 'Clarified key considerations and FAQs about verification to enhance practical relevance for influencers and marketing practitioners.', 'Seamlessly connected the verification system to the broader theoretical and practical framework of influencer celebrification without disrupting existing thematic flow.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 13 paragraphs
+Reason: The target document was not cited for the query 'instagram celebrity status verification page' because it lacks any direct, practical, or procedural information about Instagram's verification process, verified badges, or the Meta Verified subscription service. The document is primarily an academic, theoretical analysis focused on influencer celebrification and celebrity capital acquisition, emphasizing conceptual frameworks and industry roles rather than user-oriented or transactional guidance. It does not address Instagram's verification criteria, how to apply for verification, the meaning of verified badges, or the existence of paid verification services. The tone and content are academic and conceptual, which do not align with the informational needs of users seeking guidance on Instagram verification. To improve citation likelihood, the document should include an additive, clearly marked section summarizing Instagram's verification process, eligibility criteria, benefits of verified badges, and the Meta Verified subscription service, including links or references to official Instagram resources. This addition should be integrated smoothly without disrupting the existing academic tone or structure, thereby bridging the gap between influencer celebrification theory and practical social media platform features.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Added a comprehensive section detailing Instagram’s verified badge system, including eligibility, application process, the Meta Verified subscription, key considerations, and FAQs, linking verification to influencer celebrification and authenticity.', 'Seamlessly integrated verification content within Theoretical Insights to emphasize its role in signaling authenticity and complementing community-driven celebrity capital.', 'Maintained all previous modifications and thematic coherence while enhancing practical relevance for influencers and marketing practitioners regarding authenticity and trust signals.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 13 paragraphs
+Reason: The target document was not cited for the query 'instagram celebrity status verification page' because it lacks a dedicated, clear, and practical section explaining Instagram's verification process, the verified badge meaning, eligibility criteria, application steps, and the Meta Verified subscription service. Although the document is rich in theoretical insights about influencer celebrification and celebrity capital, it remains academic and conceptual without addressing the procedural and user-oriented details that users seeking Instagram verification information require. The tone and content do not align with the practical, step-by-step, or FAQ-style guidance typical of content cited for such queries. To improve citation likelihood, the document should include an additive, clearly marked section summarizing Instagram's verified badge system, eligibility, application process, benefits, and Meta Verified subscription, with references to official Instagram resources. This addition should be integrated smoothly within the existing academic framework, linking verification to influencer celebrification and authenticity without disrupting prior modifications.2026-01-04 21:33:58,351 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:33:59,963 - [INFO] - Query: best books on social media influence... | Competitors: 5 (full content, lengths: [60796, 11212, 47227]...) | Target idx: [6]
+2026-01-04 21:34:11,163 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:34:11,167 - [INFO] - Generated answer length: 3966
+2026-01-04 21:34:11,167 - [INFO] - Citation check: target=[6] cited=False | All citations: []
+2026-01-04 21:34:11,231 - [WARNING] - No valid cited indices, skipping this iteration.
+2026-01-04 21:34:11,231 - [INFO] - Query: best books on social media influence... | Competitors: 5 (full content, lengths: [60796, 11212, 47227]...) | Target idx: [6]
+2026-01-04 21:34:22,266 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:34:22,284 - [INFO] - Generated answer length: 3799
+2026-01-04 21:34:22,284 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 5, 6]
+2026-01-04 21:34:22,753 - [INFO] - Query: buy ring light for influencer videos... | Competitors: 5 (full content, lengths: [23673, 6620, 18134]...) | Target idx: [6]
+2026-01-04 21:34:33,184 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:34:33,187 - [INFO] - Generated answer length: 2930
+2026-01-04 21:34:33,187 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 4, 5]
+
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Added a comprehensive, user-oriented section detailing Instagram’s verified badge system, including eligibility, application process, and the Meta Verified subscription service, linking verification to influencer celebrification.', 'Integrated key considerations and FAQs about Instagram verification to enhance practical relevance for influencers and marketing practitioners.', 'Connected the verification system to the broader theoretical framework by emphasizing authenticity and trust as foundational to sustainable celebrity capital.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: best books on social media influence ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 13 paragraphs
+⚠️ No valid competitor citations found, skipping this iteration.
+Iteration 2/3
+✅ Success! Document cited for query: best books on social media influence
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: buy ring light for influencer videos ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 13 paragraphs
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/main.py", line 289, in run_async
+    optimized_page = await agent.optimize_page_async(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 509, in optimize_page_async
+    
+    
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 408, in analyze_failure
+    tool_descriptions=tool_descs,
+                 ^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 277, in _ainvoke_llm
+    
+  File "/Users/erv1n/autoGEO_reproduce/geo_agent/config.py", line 104, in ainvoke
+    resp = await client.chat.completions.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 2678, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1794, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1529, in request
+    response = await self._client.send(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 35, in read
+    return await self._stream.receive(max_bytes=max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 244, in receive
+    data = await self._call_sslobject_method(self._ssl_object.read, max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 187, in _call_sslobject_method
+    data = await self.transport_stream.receive()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1292, in receive
+    await self._protocol.read_event.wait()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/locks.py", line 212, in wait
+    await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/main.py", line 374, in <module>
+    main()
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/main.py", line 370, in main
+    asyncio.run(run_async())
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt

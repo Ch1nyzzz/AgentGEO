@@ -1,0 +1,887 @@
+2026-01-04 20:55:12,468 - [INFO] - Query: best management training programs for corporate tr... | Competitors: 5 (full content, lengths: [53793, 10935, 28343]...) | Target idx: [6]
+2026-01-04 20:55:13,113 - [INFO] - Query: best governance training programs for corporate tr... | Competitors: 5 (full content, lengths: [30006, 30006, 30006]...) | Target idx: [6]
+2026-01-04 20:55:13,640 - [INFO] - Query: world bank governance resources... | Competitors: 5 (full content, lengths: [42543, 7690, 27690]...) | Target idx: [6]
+2026-01-04 20:55:17,376 - [INFO] - Query: best online courses for supervision skills... | Competitors: 5 (full content, lengths: [12173, 27191, 2093]...) | Target idx: [6]
+2026-01-04 20:55:21,304 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:21,313 - [INFO] - Generated answer length: 3300
+2026-01-04 20:55:21,314 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:55:21,377 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:21,383 - [INFO] - Generated answer length: 3069
+2026-01-04 20:55:21,383 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:55:21,857 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:21,859 - [INFO] - Generated answer length: 3407
+2026-01-04 20:55:21,860 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 3, 4, 5]
+2026-01-04 20:55:23,176 - [INFO] - Query: understanding management vs administration in busi... | Competitors: 5 (full content, lengths: [12041, 18298, 29805]...) | Target idx: [6]
+2026-01-04 20:55:24,206 - [INFO] - Query: what is the difference between management and admi... | Competitors: 5 (full content, lengths: [10967, 25856, 8905]...) | Target idx: [6]
+2026-01-04 20:55:24,879 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:24,881 - [INFO] - Generated answer length: 2994
+2026-01-04 20:55:24,881 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:55:28,427 - [INFO] - Query: buy hr oversight tools... | Competitors: 5 (full content, lengths: [65433, 51593, 30841]...) | Target idx: [6]
+2026-01-04 20:55:30,862 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:30,864 - [INFO] - Generated answer length: 3029
+2026-01-04 20:55:30,864 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 5, 6]
+2026-01-04 20:55:31,856 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:31,861 - [INFO] - Generated answer length: 3116
+2026-01-04 20:55:31,862 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 3, 4, 6]
+2026-01-04 20:55:34,068 - [INFO] - Query: linkedin page for supervision training programs... | Competitors: 5 (full content, lengths: [22114, 38872, 11965]...) | Target idx: [6]
+2026-01-04 20:55:34,340 - [INFO] - Query: buy corporate governance training materials... | Competitors: 5 (full content, lengths: [56585, 30006, 19071]...) | Target idx: [6]
+2026-01-04 20:55:34,861 - [INFO] - Query: best books on management vs administration for tra... | Competitors: 5 (full content, lengths: [40799, 40799, 230905]...) | Target idx: [6]
+2026-01-04 20:55:38,808 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:38,811 - [INFO] - Generated answer length: 1873
+2026-01-04 20:55:38,811 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:55:40,284 - [INFO] - Query: difference between management and administration i... | Competitors: 5 (full content, lengths: [25856, 11997, 11480]...) | Target idx: [6]
+2026-01-04 20:55:40,608 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:40,610 - [INFO] - Generated answer length: 2113
+2026-01-04 20:55:40,611 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 20:55:42,116 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:42,118 - [INFO] - Generated answer length: 2470
+2026-01-04 20:55:42,118 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 6]
+2026-01-04 20:55:42,295 - [INFO] - Query: harvard business review leadership articles... | Competitors: 5 (full content, lengths: [7933, 52388, 15576]...) | Target idx: [6]
+2026-01-04 20:55:45,022 - [INFO] - Query: difference between management and administration i... | Competitors: 5 (full content, lengths: [8905, 16872, 17871]...) | Target idx: [6]
+2026-01-04 20:55:47,717 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:47,729 - [INFO] - Generated answer length: 2852
+2026-01-04 20:55:47,729 - [INFO] - Citation check: target=[6] cited=True | All citations: [3, 4, 5, 6]
+2026-01-04 20:55:49,068 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:49,076 - [INFO] - Generated answer length: 3904
+2026-01-04 20:55:49,076 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:55:50,154 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:50,156 - [INFO] - Generated answer length: 1885
+2026-01-04 20:55:50,156 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 6]
+2026-01-04 20:55:50,776 - [INFO] - Query: what is corporate governance in business... | Competitors: 5 (full content, lengths: [17492, 14097, 22652]...) | Target idx: [6]
+2026-01-04 20:55:52,596 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:52,598 - [INFO] - Generated answer length: 4071
+2026-01-04 20:55:52,599 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:55:53,631 - [INFO] - Query: buy management and administration comparison textb... | Competitors: 5 (full content, lengths: [48625, 48371, 32107]...) | Target idx: [6]
+2026-01-04 20:55:55,596 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:55:55,600 - [INFO] - Generated answer length: 1729
+2026-01-04 20:55:55,600 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:55:56,200 - [INFO] - Query: best books on management vs administration... | Competitors: 5 (full content, lengths: [18214, 200333, 9953]...) | Target idx: [6]
+2026-01-04 20:55:57,925 - [INFO] - Query: best oversight software for small businesses... | Competitors: 5 (full content, lengths: [30476, 16249, 17049]...) | Target idx: [6]
+2026-01-04 20:55:58,062 - [INFO] - Query: best books on corporate governance for aspiring ma... | Competitors: 5 (full content, lengths: [14132, 24961, 7681]...) | Target idx: [6]
+2026-01-04 20:56:00,327 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:00,328 - [INFO] - Generated answer length: 2670
+2026-01-04 20:56:00,328 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:56:02,184 - [INFO] - Query: difference between governance and management in bu... | Competitors: 5 (full content, lengths: [3881, 46706, 38842]...) | Target idx: [6]
+2026-01-04 20:56:06,125 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:06,127 - [INFO] - Generated answer length: 2593
+2026-01-04 20:56:06,127 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 6]
+2026-01-04 20:56:07,756 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:07,761 - [INFO] - Generated answer length: 3463
+2026-01-04 20:56:07,761 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 20:56:09,264 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:09,265 - [INFO] - Generated answer length: 2543
+2026-01-04 20:56:09,265 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 20:56:09,695 - [INFO] - Query: what are the key responsibilities of an administra... | Competitors: 5 (full content, lengths: [23918, 4461, 12034]...) | Target idx: [6]
+2026-01-04 20:56:11,184 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:11,185 - [INFO] - Generated answer length: 4287
+2026-01-04 20:56:11,185 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:56:11,282 - [INFO] - Query: harvard business school administration page... | Competitors: 5 (full content, lengths: [4516, 3806, 1725]...) | Target idx: [6]
+2026-01-04 20:56:12,414 - [INFO] - Query: buy management and administration guide for small ... | Competitors: 0 (snippet only) | Target idx: [1]
+2026-01-04 20:56:13,206 - [INFO] - Query: what is the role of oversight in hr management... | Competitors: 5 (full content, lengths: [5147, 4161, 9471]...) | Target idx: [6]
+2026-01-04 20:56:15,198 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:15,208 - [INFO] - Generated answer length: 885
+2026-01-04 20:56:15,208 - [INFO] - Citation check: target=[1] cited=True | All citations: [1]
+2026-01-04 20:56:17,780 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:17,782 - [INFO] - Generated answer length: 3122
+2026-01-04 20:56:17,782 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 20:56:18,051 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:18,053 - [INFO] - Generated answer length: 1884
+2026-01-04 20:56:18,053 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 20:56:19,591 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:19,594 - [INFO] - Generated answer length: 2637
+2026-01-04 20:56:19,594 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 20:56:19,890 - [INFO] - Query: best management software for small businesses... | Competitors: 5 (full content, lengths: [26591, 35027, 16249]...) | Target idx: [6]
+2026-01-04 20:56:20,364 - [INFO] - Query: buy management and administration comparison guide... | Competitors: 5 (full content, lengths: [15259, 12780, 11841]...) | Target idx: [6]
+2026-01-04 20:56:20,971 - [INFO] - Query: best leadership development books for trainers... | Competitors: 5 (full content, lengths: [13328, 17822, 10189]...) | Target idx: [6]
+2026-01-04 20:56:21,820 - [INFO] - Query: best books on management and administration compar... | Competitors: 5 (full content, lengths: [12243, 6493, 28775]...) | Target idx: [6]
+2026-01-04 20:56:29,291 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:29,297 - [INFO] - Generated answer length: 2562
+2026-01-04 20:56:29,297 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 3, 5, 6]
+2026-01-04 20:56:29,515 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:29,517 - [INFO] - Generated answer length: 3612
+2026-01-04 20:56:29,517 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:56:29,546 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:29,548 - [INFO] - Generated answer length: 3543
+2026-01-04 20:56:29,548 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 6]
+2026-01-04 20:56:30,922 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:30,924 - [INFO] - Generated answer length: 3063
+2026-01-04 20:56:30,924 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:56:31,159 - [INFO] - Query: best governance software for small businesses... | Competitors: 5 (full content, lengths: [34278, 19794, 43253]...) | Target idx: [6]
+2026-01-04 20:56:33,160 - [INFO] - Query: best supervision training programs for hr professi... | Competitors: 5 (full content, lengths: [7143, 8218, 34159]...) | Target idx: [6]
+2026-01-04 20:56:35,505 - [INFO] - Query: best management textbooks for business students... | Competitors: 5 (full content, lengths: [17923, 10290, 35720]...) | Target idx: [6]
+2026-01-04 20:56:37,032 - [INFO] - Query: best books on corporate oversight... | Competitors: 5 (full content, lengths: [14132, 8931, 25773]...) | Target idx: [6]
+2026-01-04 20:56:40,604 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:40,606 - [INFO] - Generated answer length: 2893
+2026-01-04 20:56:40,606 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3]
+2026-01-04 20:56:42,486 - [INFO] - Query: what is the difference between management and admi... | Competitors: 5 (full content, lengths: [25856, 29805, 12041]...) | Target idx: [6]
+2026-01-04 20:56:42,714 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:42,717 - [INFO] - Generated answer length: 3681
+2026-01-04 20:56:42,717 - [INFO] - Citation check: target=[6] cited=False | All citations: [2, 3, 4, 5]
+2026-01-04 20:56:45,861 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:45,862 - [INFO] - Generated answer length: 2632
+2026-01-04 20:56:45,862 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 20:56:47,499 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:47,501 - [INFO] - Generated answer length: 1563
+2026-01-04 20:56:47,501 - [INFO] - Citation check: target=[6] cited=True | All citations: [4, 6]
+2026-01-04 20:56:48,671 - [INFO] - Query: best books on management and administration roles... | Competitors: 5 (full content, lengths: [9953, 28540, 6493]...) | Target idx: [6]
+2026-01-04 20:56:50,370 - [INFO] - Query: buy business administration books on amazon... | Competitors: 5 (full content, lengths: [463048, 318741, 412390]...) | Target idx: [6]
+2026-01-04 20:56:51,064 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:51,072 - [INFO] - Generated answer length: 4646
+2026-01-04 20:56:51,072 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 20:56:51,278 - [INFO] - Query: best administration software for corporate trainer... | Competitors: 5 (full content, lengths: [40119, 45100, 13970]...) | Target idx: [6]
+2026-01-04 20:56:54,534 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:56:54,537 - [INFO] - Generated answer length: 703
+2026-01-04 20:56:54,537 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:56:56,832 - [INFO] - Query: difference between management and administration... | Competitors: 5 (full content, lengths: [48625, 17871, 25856]...) | Target idx: [6]
+2026-01-04 20:56:58,865 - [INFO] - Query: buy business administration textbooks... | Competitors: 5 (full content, lengths: [17884, 463048, 25445]...) | Target idx: [6]
+2026-01-04 20:57:00,105 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:00,107 - [INFO] - Generated answer length: 3119
+2026-01-04 20:57:00,107 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 5]
+2026-01-04 20:57:00,278 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:00,280 - [INFO] - Generated answer length: 2642
+2026-01-04 20:57:00,280 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 20:57:02,607 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:02,608 - [INFO] - Generated answer length: 2035
+2026-01-04 20:57:02,608 - [INFO] - Citation check: target=[6] cited=True | All citations: [2, 4, 5, 6]
+2026-01-04 20:57:04,499 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:04,501 - [INFO] - Generated answer length: 1937
+2026-01-04 20:57:04,501 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:57:06,395 - [INFO] - Query: best books on management and administration roles ... | Competitors: 5 (full content, lengths: [20709, 8774, 222174]...) | Target idx: [6]
+2026-01-04 20:57:06,595 - [INFO] - Query: subscribe to management vs administration newslett... | Competitors: 5 (full content, lengths: [48625, 8905, 17871]...) | Target idx: [6]
+2026-01-04 20:57:06,930 - [INFO] - Query: buy online course on management and administration... | Competitors: 5 (full content, lengths: [17871, 18738, 30469]...) | Target idx: [6]
+2026-01-04 20:57:08,617 - [INFO] - Query: buy management and administration books online... | Competitors: 5 (full content, lengths: [8797, 30108, 30108]...) | Target idx: [6]
+2026-01-04 20:57:12,700 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:12,702 - [INFO] - Generated answer length: 2452
+2026-01-04 20:57:12,702 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3]
+2026-01-04 20:57:12,973 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:12,979 - [INFO] - Generated answer length: 2481
+2026-01-04 20:57:12,979 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:57:13,102 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:13,103 - [INFO] - Generated answer length: 2873
+2026-01-04 20:57:13,103 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:57:13,178 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:13,181 - [INFO] - Generated answer length: 1631
+2026-01-04 20:57:13,181 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:57:15,280 - [INFO] - Query: best books on management vs administration for ent... | Competitors: 5 (full content, lengths: [6431, 16212, 24989]...) | Target idx: [6]
+2026-01-04 20:57:15,845 - [INFO] - Query: wikipedia management vs administration... | Competitors: 5 (full content, lengths: [22983, 16403, 8905]...) | Target idx: [6]
+2026-01-04 20:57:16,137 - [INFO] - Query: buy hr administration training course... | Competitors: 5 (full content, lengths: [63292, 45557, 6696]...) | Target idx: [6]
+2026-01-04 20:57:18,833 - [INFO] - Query: best oversight tools for corporate training... | Competitors: 5 (full content, lengths: [30339, 20501, 13839]...) | Target idx: [6]
+2026-01-04 20:57:24,896 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:24,902 - [INFO] - Generated answer length: 3097
+2026-01-04 20:57:24,902 - [INFO] - Citation check: target=[6] cited=False | All citations: [2, 3, 4, 5]
+2026-01-04 20:57:24,911 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:24,913 - [INFO] - Generated answer length: 3346
+2026-01-04 20:57:24,913 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 6]
+2026-01-04 20:57:25,355 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:25,358 - [INFO] - Generated answer length: 2873
+2026-01-04 20:57:25,358 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 5]
+2026-01-04 20:57:26,744 - [INFO] - Query: buy governance training course for entrepreneurs... | Competitors: 5 (full content, lengths: [32518, 15869, 30006]...) | Target idx: [6]
+2026-01-04 20:57:27,721 - [INFO] - Query: what are the key principles of effective administr... | Competitors: 5 (full content, lengths: [16591, 12485, 49557]...) | Target idx: [6]
+2026-01-04 20:57:27,867 - [INFO] - Query: how to define management roles in a company... | Competitors: 5 (full content, lengths: [22687, 23182, 44106]...) | Target idx: [6]
+2026-01-04 20:57:28,426 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:28,428 - [INFO] - Generated answer length: 4153
+2026-01-04 20:57:28,428 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 5, 6]
+2026-01-04 20:57:30,221 - [INFO] - Query: best leadership training programs for hr professio... | Competitors: 5 (full content, lengths: [17293, 6825, 18588]...) | Target idx: [6]
+2026-01-04 20:57:35,189 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:35,208 - [INFO] - Generated answer length: 3552
+2026-01-04 20:57:35,208 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:57:35,553 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:35,559 - [INFO] - Generated answer length: 3061
+2026-01-04 20:57:35,559 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:57:36,856 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:36,859 - [INFO] - Generated answer length: 2790
+2026-01-04 20:57:36,859 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:57:39,874 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:39,877 - [INFO] - Generated answer length: 3620
+2026-01-04 20:57:39,877 - [INFO] - Citation check: target=[6] cited=False | All citations: [2, 3, 4, 5]
+2026-01-04 20:57:46,716 - [INFO] - Query: john maxwell leadership blog... | Competitors: 5 (full content, lengths: [9235, 16627, 18763]...) | Target idx: [6]
+2026-01-04 20:57:51,157 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:51,159 - [INFO] - Generated answer length: 1630
+2026-01-04 20:57:51,159 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 5]
+2026-01-04 20:57:52,776 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:57:57,277 - [INFO] - Query: best books on management oversight... | Competitors: 5 (full content, lengths: [6493, 36621, 32576]...) | Target idx: [6]
+2026-01-04 20:58:06,827 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:58:06,829 - [INFO] - Generated answer length: 2938
+2026-01-04 20:58:06,829 - [INFO] - Citation check: target=[6] cited=False | All citations: [2, 4, 5]
+2026-01-04 20:58:10,492 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:58:19,320 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:58:19,323 - [INFO] - Query: best books on management oversight... | Competitors: 5 (full content, lengths: [6493, 36621, 32576]...) | Target idx: [6]
+2026-01-04 20:58:27,531 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:58:27,534 - [INFO] - Generated answer length: 2760
+2026-01-04 20:58:27,534 - [INFO] - Citation check: target=[6] cited=False | All citations: [2, 4, 5]
+2026-01-04 20:58:39,543 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:58:54,176 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:58:54,183 - [INFO] - Query: best books on management oversight... | Competitors: 5 (full content, lengths: [6493, 36621, 32576]...) | Target idx: [6]
+2026-01-04 20:59:01,220 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:59:01,224 - [INFO] - Generated answer length: 2662
+2026-01-04 20:59:01,224 - [INFO] - Citation check: target=[6] cited=True | All citations: [2, 5, 6]
+2026-01-04 20:59:04,317 - [INFO] - Query: top courses for management vs administration... | Competitors: 5 (full content, lengths: [11743, 16741, 29805]...) | Target idx: [6]
+2026-01-04 20:59:11,052 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:59:11,056 - [INFO] - Generated answer length: 2695
+2026-01-04 20:59:11,056 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 4, 5]
+2026-01-04 20:59:17,122 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:59:32,996 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:59:33,006 - [INFO] - Query: top courses for management vs administration... | Competitors: 5 (full content, lengths: [11743, 16741, 29805]...) | Target idx: [6]
+2026-01-04 20:59:42,361 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:59:42,366 - [INFO] - Generated answer length: 3754
+2026-01-04 20:59:42,366 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 5, 6]
+2026-01-04 20:59:44,253 - [INFO] - Query: harvard business review management articles... | Competitors: 5 (full content, lengths: [21470, 11393, 2608]...) | Target idx: [6]
+2026-01-04 20:59:51,425 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:59:51,429 - [INFO] - Generated answer length: 3112
+2026-01-04 20:59:51,429 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:59:58,200 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:19,734 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:19,737 - [INFO] - Query: harvard business review management articles... | Competitors: 5 (full content, lengths: [21470, 11393, 2608]...) | Target idx: [6]
+2026-01-04 21:00:26,257 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:26,260 - [INFO] - Generated answer length: 2486
+2026-01-04 21:00:26,260 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 6]
+2026-01-04 21:00:28,243 - [INFO] - Query: harvard business review roles of management and ad... | Competitors: 5 (full content, lengths: [20920, 21027, 270212]...) | Target idx: [6]
+2026-01-04 21:00:35,810 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:35,813 - [INFO] - Generated answer length: 2484
+2026-01-04 21:00:35,814 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 3, 6]
+Random seed set to: 42
+
+=== Baseline Evaluation ===
+Tavily search error: 1 validation error for SearchResult
+raw_content
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+
+=== Optimize ===
+Starting GEO for https://www.differencebetween.info/difference-between-management-and-administration
+--------------------------------
+📌 Core idea: The document primarily distinguishes between management and administration by defining administration as the top-level function responsible for setting organizational objectives and policies, while management is the middle-level function that implements these policies. It emphasizes that administration involves decision-making, planning, and organizing, whereas management focuses on motivating and directing employees to achieve the set goals. Key concepts include the hierarchical difference, scope of authority, and distinct roles in decision-making and execution within an organization.
+--------------------------------
+
+--- Processing Query: best books on management oversight ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document focuses on the difference between management and administration, providing definitions, comparisons, and detailed explanations of their roles and functions. However, the user query is "best books on management oversight," which is a request for recommended books or authoritative resources on the topic of management oversight. The target content does not address or mention any books, resources, or recommendations related to management oversight or management literature. It is more of an educational or explanatory article rather than a curated list or guide to books. Additionally, the tone is purely informational and lacks any elements that would make it relevant for a query seeking book recommendations. The top competitor content, by contrast, provides a curated list of best leadership and management books, directly addressing the query intent. Therefore, the target was ignored because it lacks relevant content (book recommendations), does not match the query intent, and does not provide the type of information the user is seeking.
+Tool Selected: content_restructure
+📝 Key Changes: ['Reorganized content to clearly separate and emphasize the hierarchical difference between administration and management.', 'Rephrased and grouped related concepts (roles, functions, scope, authority) for improved clarity and flow.', 'Reformatted the comparison table for better readability and alignment with the core distinctions.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document was not cited because it does not address the user query intent, which is to find the best books on management oversight. The content focuses exclusively on explaining the difference between management and administration, providing definitions, comparisons, and organizational roles. It lacks any mention of books, resources, or recommendations related to management oversight or management literature. The tone is purely informational and educational, without any elements that would satisfy a query seeking curated book lists or authoritative reading suggestions. Additionally, the structure and content do not align with the user's need for actionable recommendations or authoritative sources on management oversight. Therefore, the document was ignored in favor of competitor content that directly provides a curated list of best leadership and management books, which better matches the query intent.
+Tool Selected: knowledge_injection
+📝 Key Changes: ['Integrated a curated list of recommended books on management oversight, including titles, authors, and brief descriptions, to guide readers seeking further literature on the topic.', 'Seamlessly incorporated the new section after the main comparison table to maintain logical flow and relevance.', 'Rephrased some sentences slightly to ensure smooth transitions without altering the original core distinctions or structure.']
+Iteration 3/3
+✅ Success! Document cited for query: best books on management oversight
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: top courses for management vs administration ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document was not cited for the query "top courses for management vs administration" because it primarily focuses on defining and comparing management and administration roles, functions, and hierarchy without addressing educational pathways, specific courses, or degree programs related to these fields. The content lacks detailed information about academic courses, curricula, or program recommendations that would directly satisfy a user query about top courses. Additionally, the tone is purely informational and does not provide actionable guidance on course selection or educational options. The structure is clear but does not include course-related content, which is critical for this query. To improve relevance and citation potential, the content should be enhanced by adding a section that outlines typical courses, specializations, or degree programs in management and administration, highlighting their differences and advising on course selection based on career goals.
+Tool Selected: knowledge_injection
+📝 Key Changes: ['Added a new section detailing educational pathways, degree programs, and recommended courses for administration and management to guide prospective students.', 'Integrated information on specializations and professional certifications relevant to both fields to enhance practical understanding.', 'Ensured smooth transitions and maintained the original document’s focus on hierarchical and functional distinctions while expanding its relevance.']
+Iteration 2/3
+✅ Success! Document cited for query: top courses for management vs administration
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: harvard business review management articles ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document was not cited for the query "harvard business review management articles" because it lacks direct references to Harvard Business Review (HBR) content or articles, which is the core user intent. The content primarily explains the difference between management and administration, including educational pathways and recommended books, but it does not mention or link to any HBR articles, research, or insights. The tone and structure are clear and authoritative, but the absence of HBR-specific references or citations makes it irrelevant for a query explicitly seeking HBR management articles. To improve citation potential, the content should be enhanced by integrating references to notable HBR management articles, summaries, or insights that align with the existing explanations, thereby directly addressing the query intent without undoing previous improvements.
+Tool Selected: knowledge_injection
+📝 Key Changes: ['Integrated references and summaries of key Harvard Business Review articles related to management and administration distinctions, leadership, and oversight.', 'Seamlessly incorporated HBR insights into a new section following the recommended resources to maintain logical flow and relevance.', 'Rephrased existing content slightly to ensure smooth transitions while preserving all previous modifications and the document’s core focus.']
+Iteration 2/3
+✅ Success! Document cited for query: harvard business review management articles
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: harvard business review roles of management and administration ---
+Iteration 1/3
+✅ Success! Document cited for query: harvard business review roles of management and administration
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json2026-01-04 21:00:36,352 - [INFO] - Query: world bank governance page... | Competitors: 5 (full content, lengths: [42543, 22766, 69012]...) | Target idx: [6]
+2026-01-04 21:00:48,315 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:00:48,317 - [INFO] - Generated answer length: 3334
+2026-01-04 21:00:48,317 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:00:55,767 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:27,473 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:27,481 - [INFO] - Query: world bank governance page... | Competitors: 5 (full content, lengths: [42543, 22766, 69012]...) | Target idx: [6]
+2026-01-04 21:01:39,179 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:01:39,183 - [INFO] - Generated answer length: 4096
+2026-01-04 21:01:39,183 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:02:18,200 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:02:52,065 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:02:52,073 - [INFO] - Query: world bank governance page... | Competitors: 5 (full content, lengths: [42543, 22766, 69012]...) | Target idx: [6]
+2026-01-04 21:03:01,185 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:03:01,188 - [INFO] - Generated answer length: 3456
+2026-01-04 21:03:01,189 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 4, 5]
+2026-01-04 21:03:12,277 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:03:44,446 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:03:45,700 - [INFO] - Query: buy management and administration course for entre... | Competitors: 5 (full content, lengths: [6013, 32500, 64372]...) | Target idx: [6]
+2026-01-04 21:03:56,811 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:03:56,823 - [INFO] - Generated answer length: 4193
+2026-01-04 21:03:56,823 - [INFO] - Citation check: target=[6] cited=False | All citations: []
+2026-01-04 21:03:56,834 - [WARNING] - No valid cited indices, skipping this iteration.
+2026-01-04 21:03:56,834 - [INFO] - Query: buy management and administration course for entre... | Competitors: 5 (full content, lengths: [6013, 32500, 64372]...) | Target idx: [6]
+2026-01-04 21:04:08,504 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:04:08,508 - [INFO] - Generated answer length: 4529
+2026-01-04 21:04:08,509 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:04:09,732 - [INFO] - Query: management vs administration workshops... | Competitors: 5 (full content, lengths: [16403, 26077, 48625]...) | Target idx: [6]
+2026-01-04 21:04:23,155 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:04:23,158 - [INFO] - Generated answer length: 3997
+2026-01-04 21:04:23,158 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 6]
+2026-01-04 21:04:23,669 - [INFO] - Query: buy oversight software for training management... | Competitors: 5 (full content, lengths: [28467, 39538, 30339]...) | Target idx: [6]
+2026-01-04 21:04:32,078 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:04:32,081 - [INFO] - Generated answer length: 3456
+2026-01-04 21:04:32,081 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:04:37,452 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+
+--- Processing Query: world bank governance page ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document was not cited for the query 'world bank governance page' because it primarily focuses on explaining the difference between management and administration, including educational pathways and recommended books on management oversight. It lacks any direct mention, description, or detailed information about the World Bank's governance initiatives, programs, data, or resources. The content does not address the core user intent of the query, which is to find authoritative information about the World Bank's governance page, its governance-related data, programs, or institutional focus. The tone and structure are clear and well-organized but irrelevant to the query. To improve citation potential, the content should be enhanced by adding a dedicated section summarizing the World Bank's governance efforts, key governance programs, data resources like the Worldwide Governance Indicators, and links or references to the official World Bank governance page. This addition should be integrated without undoing previous improvements and should build upon the existing educational and resource-oriented structure.
+Tool Selected: knowledge_injection
+📝 Key Changes: ['Integrated a new section detailing the World Bank’s governance initiatives, programs, and data resources, linking them to the document’s core distinctions between administration and management.', 'Added information on the Worldwide Governance Indicators (WGI), governance-related research, and the World Bank’s role in transparency, anti-corruption, and digital government transformation to enhance practical relevance.', 'Seamlessly incorporated the World Bank’s governance data portals, publications, and events to provide a global perspective on governance and organizational oversight without altering the original document’s focus or structure.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document was not cited for the query 'world bank governance page' because it primarily focuses on the conceptual distinction between management and administration, educational pathways, and recommended resources on management oversight. It lacks direct, detailed, and authoritative information about the World Bank's governance initiatives, programs, data resources, or the official World Bank governance webpage. The content does not address the core user intent, which is to find specific information about the World Bank's governance efforts, data portals like the Worldwide Governance Indicators, governance-related research, or events hosted by the World Bank. The tone and structure are clear and educational but irrelevant to the query. To improve citation potential, the content should be enhanced by adding a dedicated, well-structured section summarizing the World Bank's governance role, key governance programs, data resources, and links to official World Bank governance pages. This addition should be integrated without undoing previous improvements and should build upon the existing educational and resource-oriented structure.
+Tool Selected: knowledge_injection
+📝 Key Changes: ['Integrated a comprehensive section detailing the World Bank’s governance initiatives, programs, and their alignment with administration and management distinctions.', 'Added information on the Worldwide Governance Indicators (WGI), governance-related research, publications, and data portals provided by the World Bank.', 'Included the World Bank’s role in promoting transparency, anti-corruption, public sector reforms, digital government transformation, and governance-focused events to enhance the document’s practical relevance.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document was not cited for the query 'world bank governance page' because it lacks direct, detailed, and authoritative information specifically about the World Bank's governance page, its governance initiatives, data resources, or official governance-related content. While the document now includes a section on the World Bank's governance role and the Worldwide Governance Indicators (WGI), it does not provide explicit references, direct links, or detailed descriptions of the World Bank's official governance webpage or its interactive data portals. The content is informative but remains primarily conceptual and educational, focusing on administration and management distinctions rather than serving as a practical guide or direct resource for the World Bank governance page. To improve citation potential, the content should be enhanced by adding clear, structured, and well-referenced information about the World Bank's governance webpage, including direct URLs, descriptions of key governance data portals, and guidance on how users can access and utilize these resources. This addition should be integrated smoothly without undoing previous improvements and should build upon the existing governance section to increase relevance and authority for the query.
+Tool Selected: knowledge_injection
+📝 Key Changes: ['Added explicit URLs and descriptions for the World Bank’s official governance page and the Worldwide Governance Indicators (WGI) interactive portal to provide direct access to governance data and resources.', 'Included practical guidance on how to access and utilize the World Bank’s governance-related publications, surveys, and tools, enhancing the document’s relevance and citation potential.', 'Expanded the World Bank section to detail its governance initiatives, programs, and events, linking them clearly to the core distinctions between administration and management without altering the document’s original focus.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: buy management and administration course for entrepreneurs ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+⚠️ No valid competitor citations found, skipping this iteration.
+Iteration 2/3
+✅ Success! Document cited for query: buy management and administration course for entrepreneurs
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: management vs administration workshops ---
+Iteration 1/3
+✅ Success! Document cited for query: management vs administration workshops
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: buy oversight software for training management ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document was not cited for the query "buy oversight software for training management" because it primarily focuses on conceptual distinctions between management and administration, educational pathways, recommended books, governance, and general training management concepts. It lacks specific, detailed, and actionable information about purchasing, evaluating, or selecting oversight software or training management software solutions. The content does not mention or review any software products, features, pricing, or vendor comparisons relevant to buying oversight or training management software. Additionally, the tone is educational and informational rather than commercial or transactional, which does not align with the user intent of finding software to buy. The structure is comprehensive but does not include product listings, buying guides, or software evaluations that would satisfy the query. To improve citation potential, the content should be enhanced by adding a dedicated section that directly addresses buying oversight software for training management, including product recommendations, feature checklists, vendor comparisons, pricing information, and guidance on selecting the right software solution. This addition should build upon the existing educational and governance context without undoing previous improvements.
+Tool Selected: knowledge_injection2026-01-04 21:05:22,495 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:05:22,509 - [INFO] - Query: buy oversight software for training management... | Competitors: 5 (full content, lengths: [28467, 39538, 30339]...) | Target idx: [6]
+2026-01-04 21:05:33,982 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:05:33,996 - [INFO] - Generated answer length: 3813
+2026-01-04 21:05:33,997 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:06:27,123 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:11,672 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:11,686 - [INFO] - Query: buy oversight software for training management... | Competitors: 5 (full content, lengths: [28467, 39538, 30339]...) | Target idx: [6]
+2026-01-04 21:07:24,413 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:24,416 - [INFO] - Generated answer length: 4439
+2026-01-04 21:07:24,416 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:07:33,580 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:08:06,822 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:08:08,477 - [INFO] - Query: buy 'the art of supervision' book... | Competitors: 5 (full content, lengths: [20509, 43152, 85986]...) | Target idx: [6]
+2026-01-04 21:08:14,512 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:08:14,516 - [INFO] - Generated answer length: 1615
+2026-01-04 21:08:14,517 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:09:02,096 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:09:50,211 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:09:50,239 - [INFO] - Query: buy 'the art of supervision' book... | Competitors: 5 (full content, lengths: [20509, 43152, 85986]...) | Target idx: [6]
+2026-01-04 21:09:56,750 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:09:56,756 - [INFO] - Generated answer length: 1533
+2026-01-04 21:09:56,757 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:10:15,522 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:10:57,684 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:10:57,740 - [INFO] - Query: buy 'the art of supervision' book... | Competitors: 5 (full content, lengths: [20509, 43152, 85986]...) | Target idx: [6]
+2026-01-04 21:11:03,044 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:11:03,047 - [INFO] - Generated answer length: 1611
+2026-01-04 21:11:03,047 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:11:20,035 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+📝 Key Changes: []
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 2 paragraphs
+Reason: The target document was not cited for the query "buy oversight software for training management" because it lacks specific, actionable, and detailed information about purchasing or selecting oversight or training management software. While the document provides a conceptual and educational overview of management and administration distinctions, governance, and general training management concepts, it does not include product recommendations, feature comparisons, pricing details, vendor evaluations, or buying guides that directly address the user intent of acquiring software solutions. The tone is primarily informational and educational rather than transactional or commercial, which does not align with the query's intent. To improve citation potential, the document should be enhanced by adding a dedicated, well-structured section focused on oversight and training management software purchasing advice, including key features to consider, top product recommendations, pricing models, and vendor evaluation tips. This addition should build upon the existing content without undoing previous improvements and maintain a logical flow.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Added a comprehensive buying guide for oversight and training management software, including key features, product recommendations, pricing models, vendor evaluation criteria, and implementation guidance.', 'Seamlessly integrated the software-focused content after the World Bank governance section to maintain logical flow and relevance to management oversight.', 'Rephrased transitional sentences to ensure smooth incorporation of new information while preserving all previous modifications and the document’s core distinctions.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 2 paragraphs
+Reason: The target document was not cited for the query "buy oversight software for training management" because it lacks specific, actionable, and detailed information about purchasing or selecting oversight or training management software. While the document provides a comprehensive conceptual overview of management and administration distinctions, governance, and general training management concepts, it does not include product recommendations, feature comparisons, pricing details, vendor evaluations, or buying guides that directly address the user intent of acquiring software solutions. The tone is primarily educational and informational rather than transactional or commercial, which does not align with the query's intent. The structure is clear and well-organized but does not contain the practical software buying information that users seeking to purchase oversight or training management software would expect. To improve citation potential, the document should be enhanced by adding a dedicated, well-structured section focused on oversight and training management software purchasing advice, including key features to consider, top product recommendations, pricing models, vendor evaluation tips, and implementation guidance. This addition should build upon the existing content without undoing previous improvements and maintain a logical flow.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Added a comprehensive buying guide for oversight and training management software, including key features, product recommendations, pricing models, vendor evaluation criteria, and implementation guidance.', 'Seamlessly integrated the software-focused content after the World Bank governance section to maintain logical flow and relevance to management oversight.', 'Rephrased transitional sentences to ensure smooth incorporation of the new software-focused information while preserving all previous modifications and the document’s core distinctions.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: buy 'the art of supervision' book ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 2 paragraphs
+Reason: The target document was not cited for the query "buy 'the art of supervision' book" because it does not mention or reference the specific book "The Art of Supervision" or provide any direct information about purchasing it. The content focuses on the conceptual distinctions between management and administration, educational pathways, recommended books on management oversight (none of which include the queried title), governance, and software buying guides. It lacks any mention, description, or recommendation of "The Art of Supervision" book or related pastoral or clinical supervision literature. The tone is educational and informational rather than transactional or product-focused, which does not align with the user's intent to find or buy that specific book. To improve citation potential for such queries, the content should include a dedicated section listing and describing key books on supervision, including "The Art of Supervision," with purchase information or links. This would directly address the user intent without undoing previous improvements.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Added a dedicated subsection under recommended resources featuring *“The Art of Supervision: A Pastoral Counseling Perspective”* with a brief description and purchase information to address the query about buying the book.', 'Seamlessly integrated this new book entry into the existing recommended resources section without altering the document’s core distinctions or structure.', 'Rephrased transitional sentences slightly to maintain smooth flow and preserve all previous modifications and the document’s focus.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 2 paragraphs
+Reason: The target document was not cited for the query "buy 'the art of supervision' book" because it does not specifically mention or provide purchasing information about the book titled "The Art of Supervision." Although the document includes a broad section on recommended books related to management oversight and supervision, it lacks a dedicated, detailed entry for this particular book, including author details, description, and purchase links or platforms. The tone is educational and informational rather than transactional or product-focused, which does not align with the user's intent to find or buy that specific book. To improve citation potential, the content should be enhanced by adding a dedicated subsection that explicitly references "The Art of Supervision" (or the closely related "The Art of Clinical Supervision: A Pastoral Counseling Perspective"), including a brief description and clear purchase information or links. This addition should be integrated smoothly into the existing recommended resources section without undoing previous improvements.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Added a dedicated subsection under recommended resources featuring *“The Art of Supervision: A Pastoral Counseling Perspective”* with a description of its relevance to management oversight and purchase information.', 'Seamlessly integrated this new book entry into the existing recommended resources section without altering the document’s core distinctions or structure.', 'Rephrased transitional sentences slightly to maintain smooth flow and preserve all previous modifications and the document’s focus.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 2 paragraphs
+Reason: The target document was not cited for the query "buy 'the art of supervision' book" because it does not explicitly mention or provide purchasing information about the specific book titled "The Art of Supervision." Although the document includes a recommended resources section with books related to management oversight and supervision, it lacks a dedicated, detailed entry for this particular book, including author details, description, and direct purchase links or platforms. The tone remains educational and informational rather than transactional or product-focused, which does not align with the user's clear intent to find and buy that specific book. To improve citation potential, the content should be enhanced by adding a dedicated subsection explicitly referencing "The Art of Supervision: A Pastoral Counseling Perspective," including a brief description and clear purchase information or links. This addition should be integrated smoothly into the existing recommended resources section without undoing previous improvements.2026-01-04 21:12:03,599 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:12:04,768 - [INFO] - Query: harvard business review article on management vs a... | Competitors: 5 (full content, lengths: [12780, 17771, 30551]...) | Target idx: [6]
+2026-01-04 21:12:15,010 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:12:15,031 - [INFO] - Generated answer length: 3449
+2026-01-04 21:12:15,031 - [INFO] - Citation check: target=[6] cited=True | All citations: [3, 4, 5, 6]
+2026-01-04 21:12:19,696 - [INFO] - Query: effective leadership strategies for corporate trai... | Competitors: 5 (full content, lengths: [10786, 14272, 13577]...) | Target idx: [6]
+2026-01-04 21:12:26,605 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:12:26,609 - [INFO] - Generated answer length: 2765
+2026-01-04 21:12:26,609 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 5]
+2026-01-04 21:12:33,002 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:13:22,873 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:13:22,884 - [INFO] - Query: effective leadership strategies for corporate trai... | Competitors: 5 (full content, lengths: [10786, 14272, 13577]...) | Target idx: [6]
+2026-01-04 21:13:29,850 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:13:29,853 - [INFO] - Generated answer length: 2995
+2026-01-04 21:13:29,853 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 5]
+2026-01-04 21:13:37,240 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:13:37,310 - [INFO] - Query: effective leadership strategies for corporate trai... | Competitors: 5 (full content, lengths: [10786, 14272, 13577]...) | Target idx: [6]
+2026-01-04 21:13:44,113 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:13:44,116 - [INFO] - Generated answer length: 2552
+2026-01-04 21:13:44,116 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:13:49,462 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:14:35,354 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:14:37,688 - [INFO] - Query: difference between management and administration r... | Competitors: 5 (full content, lengths: [8905, 16872, 26077]...) | Target idx: [6]
+2026-01-04 21:14:47,185 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:14:47,191 - [INFO] - Generated answer length: 3469
+2026-01-04 21:14:47,192 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 6]
+2026-01-04 21:14:49,776 - [INFO] - Query: best books on management vs administration for sma... | Competitors: 5 (full content, lengths: [7089, 27300, 27361]...) | Target idx: [6]
+2026-01-04 21:15:00,587 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:15:00,589 - [INFO] - Generated answer length: 4039
+2026-01-04 21:15:00,589 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 5, 6]
+2026-01-04 21:15:02,228 - [INFO] - Query: harvard business review article on supervision... | Competitors: 5 (full content, lengths: [24993, 39635, 2781]...) | Target idx: [6]
+2026-01-04 21:15:06,362 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:15:06,366 - [INFO] - Generated answer length: 1837
+2026-01-04 21:15:06,366 - [INFO] - Citation check: target=[6] cited=False | All citations: [2, 3, 4, 5]
+2026-01-04 21:15:15,773 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:16:26,117 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Added a dedicated subsection under recommended resources featuring *“The Art of Supervision: A Pastoral Counseling Perspective”* with a description of its relevance to management oversight and purchase information.', 'Seamlessly integrated this new book entry into the existing recommended resources section without altering the document’s core distinctions or structure.', 'Rephrased transitional sentences slightly to maintain smooth flow and preserve all previous modifications and the document’s focus.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: harvard business review article on management vs administration ---
+Iteration 1/3
+✅ Success! Document cited for query: harvard business review article on management vs administration
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: effective leadership strategies for corporate trainers ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 2 paragraphs
+Reason: The target document was not cited for the query 'effective leadership strategies for corporate trainers' because it primarily focuses on the conceptual distinctions between management and administration, educational pathways, governance, and software buying guides. It lacks specific, actionable content on leadership strategies tailored for corporate trainers, such as training design, delivery methods, leadership skill development, or best practices in corporate training leadership. The tone is educational and conceptual rather than practical or strategy-oriented for corporate training leadership. Additionally, the structure does not highlight or emphasize leadership strategies or training methodologies relevant to corporate trainers, which is the core user intent. To improve citation potential, the content should be enhanced by adding a dedicated section that outlines effective leadership strategies specifically for corporate trainers, including practical tips, frameworks, and examples that align with the query intent without undoing previous improvements.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Added a dedicated section on effective leadership strategies for corporate trainers, covering practical approaches to training design, delivery, engagement, motivation, feedback, and continuous improvement aligned with organizational goals.', 'Seamlessly integrated this new section after the Harvard Business Review insights to maintain logical flow and relevance to management oversight and leadership development.', 'Rephrased transitional sentences slightly to ensure smooth incorporation of the new content while preserving all previous modifications and the document’s core distinctions.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 2 paragraphs
+Reason: The target document was not cited for the query 'effective leadership strategies for corporate trainers' because it primarily focuses on the conceptual distinctions between management and administration, educational pathways, governance, and software buying guides. It lacks specific, actionable content on leadership strategies tailored for corporate trainers, such as training design, delivery methods, leadership skill development, or best practices in corporate training leadership. The tone is educational and conceptual rather than practical or strategy-oriented for corporate training leadership. The structure does not highlight or emphasize leadership strategies or training methodologies relevant to corporate trainers, which is the core user intent. To improve citation potential, the content should be enhanced by adding a dedicated section that outlines effective leadership strategies specifically for corporate trainers, including practical tips, frameworks, and examples that align with the query intent without undoing previous improvements.
+Tool Selected: knowledge_injection
+⚠️ LLM did not return target_chunk_index, skipping this iteration.
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 2 paragraphs
+Reason: The target document was not cited for the query 'effective leadership strategies for corporate trainers' because it primarily focuses on the conceptual distinctions between management and administration, educational pathways, governance, and software buying guides. While it contains a newly added section on effective leadership strategies for corporate trainers, this section is relatively brief and lacks depth compared to the competitor content, which provides a comprehensive, detailed, and practical guide with multiple actionable strategies, examples, and best practices specifically tailored for corporate trainers. The tone of the target content is more educational and conceptual rather than practical and strategy-oriented, which is the core user intent. To improve citation potential, the target document should be enhanced by expanding the leadership strategies section with more detailed, practical, and structured content that aligns closely with the user query intent, including examples, frameworks, and actionable tips for corporate trainers.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Expanded the "Effective Leadership Strategies for Corporate Trainers" section with detailed, practical leadership strategies including training design, delivery methods, learner engagement, motivation, feedback, leadership skill development, and continuous improvement practices.', 'Added examples and frameworks such as blended learning, interactive techniques, and alignment with organizational goals to enhance the applicability of leadership strategies for corporate trainers.', 'Rephrased transitional sentences to ensure smooth integration of the expanded content while preserving all previous modifications and the document’s core distinctions.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: difference between management and administration roles ---
+Iteration 1/3
+✅ Success! Document cited for query: difference between management and administration roles
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: best books on management vs administration for small business owners ---
+Iteration 1/3
+✅ Success! Document cited for query: best books on management vs administration for small business owners
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: harvard business review article on supervision ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 2 paragraphs
+Reason: The target document was not cited for the query "harvard business review article on supervision" because it lacks direct references or citations to Harvard Business Review (HBR) articles specifically about supervision or related management topics. While the document includes a section on HBR insights related to management and administration, it does not mention supervision explicitly or link to HBR articles focused on supervision practices, theories, or leadership in supervision. The tone and structure are educational and conceptual but do not address the user intent of finding HBR articles on supervision. To improve citation potential, the document should be enhanced by integrating references to relevant HBR articles on supervision, including summaries and links, thereby directly addressing the query intent without undoing previous improvements.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Added a dedicated subsection under the Harvard Business Review insights section highlighting key HBR articles specifically focused on supervision and supervisory leadership to address the query intent.', 'Integrated authoritative HBR articles on effective supervisory practices, leadership in supervision, and managing teams through supervision, enriching the document’s relevance to management oversight.', 'Rephrased transitional sentences to smoothly incorporate the new HBR supervision content while preserving all previous modifications and the document’s core distinctions.']2026-01-04 21:16:26,122 - [INFO] - Query: harvard business review article on supervision... | Competitors: 5 (full content, lengths: [24993, 39635, 2781]...) | Target idx: [6]
+2026-01-04 21:16:33,364 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:16:33,367 - [INFO] - Generated answer length: 2622
+2026-01-04 21:16:33,368 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 3, 4, 6]
+2026-01-04 21:16:37,017 - [INFO] - Query: buy management books for beginners... | Competitors: 5 (full content, lengths: [13798, 32576, 46127]...) | Target idx: [6]
+2026-01-04 21:16:46,634 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:16:46,640 - [INFO] - Generated answer length: 3429
+2026-01-04 21:16:46,641 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:16:56,510 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:17:40,277 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:17:40,299 - [INFO] - Query: buy management books for beginners... | Competitors: 5 (full content, lengths: [13798, 32576, 46127]...) | Target idx: [6]
+2026-01-04 21:17:51,495 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:17:51,500 - [INFO] - Generated answer length: 2520
+2026-01-04 21:17:51,500 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 4, 6]
+2026-01-04 21:17:59,770 - [INFO] - Query: what are the roles of management and administratio... | Competitors: 5 (full content, lengths: [16498, 8069, 8783]...) | Target idx: [6]
+2026-01-04 21:18:07,799 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:18:07,800 - [INFO] - Generated answer length: 2852
+2026-01-04 21:18:07,800 - [INFO] - Citation check: target=[6] cited=True | All citations: [3, 6]
+2026-01-04 21:18:09,714 - [INFO] - Query: best oversight software for hr departments... | Competitors: 5 (full content, lengths: [65433, 11732, 21377]...) | Target idx: [6]
+2026-01-04 21:18:21,731 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:18:21,738 - [INFO] - Generated answer length: 3829
+2026-01-04 21:18:21,738 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:19:43,819 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:20:05,479 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:20:05,486 - [INFO] - Query: best oversight software for hr departments... | Competitors: 5 (full content, lengths: [65433, 11732, 21377]...) | Target idx: [6]
+2026-01-04 21:20:15,060 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:20:15,071 - [INFO] - Generated answer length: 3259
+2026-01-04 21:20:15,072 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:21:30,338 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:21:54,791 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:21:54,812 - [INFO] - Query: best oversight software for hr departments... | Competitors: 5 (full content, lengths: [65433, 11732, 21377]...) | Target idx: [6]
+2026-01-04 21:22:04,781 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:22:04,784 - [INFO] - Generated answer length: 3437
+2026-01-04 21:22:04,784 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:22:16,502 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Iteration 2/3
+✅ Success! Document cited for query: harvard business review article on supervision
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: buy management books for beginners ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query 'buy management books for beginners' because it lacks a dedicated, clearly structured section that directly addresses beginner-level management book recommendations. While it includes a 'Recommended Resources on Management Oversight' section, the books listed are mostly advanced, specialized, or focused on management oversight rather than beginner-friendly management books. The tone is educational and conceptual rather than transactional or explicitly targeted at beginners seeking to buy management books. Additionally, the document does not provide direct purchase links, pricing, or clear beginner guidance, which are often expected in content addressing buying queries. To improve citation potential, the document should be enhanced by adding a focused subsection listing beginner-friendly management books with brief descriptions and purchase information, integrated smoothly into the existing recommended resources section without undoing previous improvements.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Added a dedicated subsection listing beginner-friendly management books with brief descriptions and purchase information, integrated into the recommended resources section to directly address the query about buying management books for beginners.', 'Included clear indications of where these beginner-level books can be purchased, such as Amazon and major bookstores, to guide new readers.', 'Rephrased transitional sentences to smoothly incorporate the new beginner-friendly book recommendations while preserving all previous modifications and the document’s core distinctions.']
+Iteration 2/3
+✅ Success! Document cited for query: buy management books for beginners
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: difference between supervision and management in small business ---
+Tavily search error: 1 validation error for SearchResult
+raw_content
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+No documents retrieved for query: difference between supervision and management in small business
+
+--- Processing Query: what are the roles of management and administration in a company ---
+Iteration 1/3
+✅ Success! Document cited for query: what are the roles of management and administration in a company
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: best oversight software for hr departments ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query "best oversight software for hr departments" because, although it now includes a comprehensive section on oversight and training management software, it lacks specific coverage of HR compliance software solutions tailored for HR departments. The content focuses on general oversight and training management software with LMS capabilities and training tracking, but it does not address the critical compliance aspects, legal risk mitigation, payroll tax compliance, employee classification, or multi-state labor law compliance that are central to HR oversight software. Furthermore, it does not mention or review leading HR compliance software products, their features, pricing, or comparisons that are directly relevant to HR departments seeking oversight software. The tone is educational and conceptual rather than practical and product-focused, which does not fully align with the user intent of finding the best HR oversight software. The structure is clear but does not highlight HR compliance software as a distinct category or provide actionable buying guidance specific to HR compliance needs. To improve citation potential, the document should be enhanced by adding a dedicated, well-structured section focused explicitly on HR compliance software for HR departments, including top product recommendations, feature comparisons, pricing models, and practical guidance on selecting the best software for HR oversight and compliance management. This addition should build upon the existing software buying guide without undoing previous improvements and maintain logical flow.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 2
+📝 Key Changes: ['Added a dedicated section on HR compliance software, detailing its importance for HR oversight, key features, top platforms, pricing, vendor evaluation, and implementation guidance.', 'Integrated this HR compliance software section naturally after the existing oversight and training management software content to maintain logical flow and relevance.', 'Rephrased transitional sentences to ensure smooth incorporation of the new HR compliance software information while preserving all previous modifications and the document’s core distinctions.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query "best oversight software for hr departments" because, while it includes a general section on oversight and training management software, it lacks specific, detailed, and actionable information about HR compliance software tailored for HR departments. The existing content focuses on LMS and training tracking features but does not address critical HR compliance needs such as payroll tax compliance, labor law tracking, employee classification, multi-state compliance, or legal risk mitigation. It also does not provide product recommendations, feature comparisons, pricing details, or vendor evaluations specific to HR compliance software, which are essential for satisfying the user intent of finding the best HR oversight software. The tone is educational and conceptual rather than practical and product-focused, and the structure does not highlight HR compliance software as a distinct category. To improve citation potential, the document should be enhanced by adding a dedicated, well-structured section focused explicitly on HR compliance software for HR departments, including top product recommendations, feature comparisons, pricing models, and practical guidance on selecting the best software for HR oversight and compliance management. This addition should build upon the existing software buying guide without undoing previous improvements and maintain logical flow and relevance.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 2
+📝 Key Changes: ['Added a comprehensive section on HR compliance software tailored for HR oversight, detailing its importance, key features, top platforms, pricing, vendor evaluation, and implementation guidance.', 'Integrated this HR compliance software section naturally after the existing oversight and training management software content to maintain logical flow and relevance.', 'Rephrased transitional sentences to ensure smooth incorporation of the new information while preserving all previous modifications and the document’s core distinctions.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query 'best oversight software for hr departments' because, while it includes a general section on oversight and training management software, it lacks specific, detailed, and actionable information about HR compliance software tailored for HR departments. The existing content focuses mainly on LMS and training tracking features but does not address critical HR compliance needs such as payroll tax compliance, labor law tracking, employee classification, multi-state compliance, or legal risk mitigation. It also does not provide product recommendations, feature comparisons, pricing details, or vendor evaluations specific to HR compliance software, which are essential to satisfy the user intent of finding the best HR oversight software. The tone is educational and conceptual rather than practical and product-focused, and the structure does not highlight HR compliance software as a distinct category. To improve citation potential, the document should be enhanced by adding a dedicated, well-structured section focused explicitly on HR compliance software for HR departments, including top product recommendations, feature comparisons, pricing models, and practical guidance on selecting the best software for HR oversight and compliance management. This addition should build upon the existing software buying guide without undoing previous improvements and maintain logical flow and relevance.2026-01-04 21:22:42,097 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:22:44,555 - [INFO] - Query: buy management vs administration course online... | Competitors: 5 (full content, lengths: [17871, 16741, 18738]...) | Target idx: [6]
+2026-01-04 21:22:58,695 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:22:58,702 - [INFO] - Generated answer length: 4426
+2026-01-04 21:22:58,702 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:23:01,031 - [INFO] - Query: best administration software for small businesses... | Competitors: 5 (full content, lengths: [26591, 21091, 16249]...) | Target idx: [6]
+2026-01-04 21:23:14,059 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:23:14,063 - [INFO] - Generated answer length: 3570
+2026-01-04 21:23:14,063 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:23:22,139 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:23:51,110 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:23:51,157 - [INFO] - Query: best administration software for small businesses... | Competitors: 5 (full content, lengths: [26591, 21091, 16249]...) | Target idx: [6]
+2026-01-04 21:24:03,307 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:24:03,311 - [INFO] - Generated answer length: 3514
+2026-01-04 21:24:03,311 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:24:10,166 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:24:40,556 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:24:40,563 - [INFO] - Query: best administration software for small businesses... | Competitors: 5 (full content, lengths: [26591, 21091, 16249]...) | Target idx: [6]
+2026-01-04 21:24:50,910 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:24:50,914 - [INFO] - Generated answer length: 3508
+2026-01-04 21:24:50,914 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:24:58,584 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:25:29,500 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:25:31,376 - [INFO] - Query: online seminars on management vs administration... | Competitors: 5 (full content, lengths: [17871, 18738, 11559]...) | Target idx: [6]
+2026-01-04 21:25:38,669 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:25:38,675 - [INFO] - Generated answer length: 2974
+2026-01-04 21:25:38,675 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 6]
+2026-01-04 21:25:40,924 - [INFO] - Query: buy leadership books for new managers... | Competitors: 5 (full content, lengths: [10081, 12951, 14418]...) | Target idx: [6]
+2026-01-04 21:25:48,064 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:25:48,066 - [INFO] - Generated answer length: 2740
+2026-01-04 21:25:48,066 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:25:56,171 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Tool Selected: knowledge_injection
+📦 Target paragraph: 2
+📝 Key Changes: ['Added a comprehensive section on HR compliance software tailored for HR oversight, detailing its importance, key features, top platforms, pricing, vendor evaluation, and implementation guidance.', 'Seamlessly integrated the HR compliance software content after the existing oversight and training management software section to maintain logical flow and relevance.', 'Rephrased transitional sentences slightly to ensure smooth incorporation of the new information while preserving all previous modifications and the document’s core distinctions.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: buy management vs administration course online ---
+Iteration 1/3
+✅ Success! Document cited for query: buy management vs administration course online
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: best administration software for small businesses ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query "best administration software for small businesses" because it lacks any direct mention, review, or recommendation of administration software products, especially those tailored for small businesses. The content primarily focuses on conceptual distinctions between management and administration, educational pathways, recommended books, governance, and general oversight and training management software. While it includes a buying guide for oversight and training management software and HR compliance software, it does not address or list administration software solutions, features, pricing, or vendor comparisons relevant to small business administration needs. The tone is educational and conceptual rather than product-focused or transactional, which does not align with the user intent of finding the best administration software. To improve citation potential, the document should be enhanced by adding a dedicated, well-structured section that directly addresses administration software for small businesses, including key features, top product recommendations, pricing models, and guidance on selecting the right software. This addition should build upon the existing software buying guide sections without undoing previous improvements and maintain logical flow and relevance.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 2
+📝 Key Changes: ['Added a comprehensive new section on administration software solutions tailored for small businesses, detailing key features, top products, pricing, vendor evaluation, and implementation guidance.', 'Integrated this section naturally after the oversight and training management software content to maintain logical flow and relevance to the document’s core focus on hierarchical distinctions between administration and management.', 'Rephrased transitional sentences to ensure smooth incorporation of the new administration software content while preserving all previous modifications and the document’s core distinctions.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query 'best administration software for small businesses' because it lacks any direct mention, review, or recommendation of administration software products specifically tailored for small businesses. While the document includes comprehensive conceptual distinctions between management and administration, educational pathways, recommended books, governance, and software buying guides for oversight and training management software, it does not address or list administration software solutions, features, pricing, or vendor comparisons relevant to small business administration needs. The tone is educational and conceptual rather than product-focused or transactional, which does not align with the user intent of finding the best administration software. To improve citation potential, the document should be enhanced by adding a dedicated, well-structured section that directly addresses administration software for small businesses, including key features, top product recommendations, pricing models, and guidance on selecting the right software. This addition should build upon the existing software buying guide sections without undoing previous improvements and maintain logical flow and relevance.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 2
+📝 Key Changes: ['Added a comprehensive new section on administration software solutions for small businesses, including definitions, key features, top product recommendations, pricing models, vendor evaluation criteria, and implementation guidance.', 'Seamlessly integrated this section after the oversight and training management software content to maintain logical flow and relevance to the document’s core focus on hierarchical distinctions between administration and management.', 'Rephrased transitional sentences slightly to ensure smooth incorporation of the new administration software content while preserving all previous modifications and the document’s core distinctions.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query 'best administration software for small businesses' because it lacks any direct mention, review, or recommendation of administration software products tailored for small businesses. While the document thoroughly explains the conceptual distinctions between management and administration, educational pathways, recommended books, governance, and oversight/training management software, it does not address or list administration software solutions, their features, pricing, or vendor comparisons relevant to small business administration needs. The tone is educational and conceptual rather than product-focused or transactional, which does not align with the user intent of finding the best administration software. To improve citation potential, the document should be enhanced by adding a dedicated, well-structured section that directly addresses administration software for small businesses, including key features, top product recommendations, pricing models, and guidance on selecting the right software. This addition should build upon the existing software buying guide sections without undoing previous improvements and maintain logical flow and relevance.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 2
+📝 Key Changes: ['Added a comprehensive new section on administration software solutions tailored for small businesses, detailing definitions, key features, top products, pricing, vendor evaluation, and implementation guidance.', 'Seamlessly integrated the administration software content after the oversight and training management software section to maintain logical flow and relevance.', 'Rephrased transitional sentences slightly to ensure smooth incorporation of the new administration software information while preserving all previous modifications and the document’s core distinctions.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: online seminars on management vs administration ---
+Iteration 1/3
+✅ Success! Document cited for query: online seminars on management vs administration
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: buy leadership books for new managers ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query "buy leadership books for new managers" because, although it contains a recommended resources section with management and oversight books, it lacks a dedicated, clearly structured subsection specifically targeting leadership books for new or beginner managers. The existing recommended books are mostly advanced or focused on management oversight rather than beginner-friendly leadership books. Additionally, the document does not provide direct purchase information or links for these books, which is typically expected in content addressing buying queries. The tone is educational and conceptual rather than transactional or explicitly targeted at new managers seeking to buy leadership books. To improve citation potential, the document should be enhanced by adding a focused subsection listing beginner-friendly leadership and management books for new managers, including brief descriptions and purchase information or links, integrated smoothly into the existing recommended resources section without undoing previous improvements.2026-01-04 21:26:31,277 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:26:31,280 - [INFO] - Query: buy leadership books for new managers... | Competitors: 5 (full content, lengths: [10081, 12951, 14418]...) | Target idx: [6]
+2026-01-04 21:26:39,144 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:26:39,145 - [INFO] - Generated answer length: 2695
+2026-01-04 21:26:39,145 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:26:46,219 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:27:29,905 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:27:29,975 - [INFO] - Query: buy leadership books for new managers... | Competitors: 5 (full content, lengths: [10081, 12951, 14418]...) | Target idx: [6]
+2026-01-04 21:27:39,541 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:27:39,544 - [INFO] - Generated answer length: 2984
+2026-01-04 21:27:39,544 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:27:45,539 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:28:25,065 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:28:29,018 - [INFO] - Query: best software for managing administrative tasks in... | Competitors: 5 (full content, lengths: [44160, 26349, 81380]...) | Target idx: [6]
+2026-01-04 21:28:37,757 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:28:37,761 - [INFO] - Generated answer length: 3640
+2026-01-04 21:28:37,761 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:29:01,806 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:29:35,759 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:29:35,767 - [INFO] - Query: best software for managing administrative tasks in... | Competitors: 5 (full content, lengths: [44160, 26349, 81380]...) | Target idx: [6]
+2026-01-04 21:29:44,134 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:29:44,139 - [INFO] - Generated answer length: 3232
+2026-01-04 21:29:44,139 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:29:58,638 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:30:30,402 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Added a dedicated subsection listing beginner-friendly management books with brief descriptions and clear purchase information to address the user intent for buying leadership books for new managers.', 'Integrated this subsection naturally within the recommended resources section to maintain logical flow and relevance to management oversight.', 'Slightly rephrased transitional sentences to ensure smooth incorporation of the new content while preserving all previous modifications and the document’s core distinctions.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query 'buy leadership books for new managers' because, although it contains a recommended resources section with management and oversight books, it lacks a dedicated, clearly structured subsection specifically targeting leadership books for new or beginner managers. The existing recommended books are mostly advanced or focused on management oversight rather than beginner-friendly leadership books. Additionally, the document does not provide direct purchase information or links for these books, which is typically expected in content addressing buying queries. The tone is educational and conceptual rather than transactional or explicitly targeted at new managers seeking to buy leadership books. To improve citation potential, the document should be enhanced by adding a focused subsection listing beginner-friendly leadership and management books for new managers, including brief descriptions and purchase information or links, integrated smoothly into the existing recommended resources section without undoing previous improvements.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Added a dedicated subsection listing beginner-friendly leadership and management books for new managers, including brief descriptions and clear purchase information, integrated within the recommended resources section.', 'Included additional Harvard Business Review articles specifically focused on supervision and supervisory leadership to enrich the management oversight content.', 'Seamlessly integrated the new beginner-level book recommendations and supervision-focused HBR articles without altering the document’s core distinctions or structure.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query 'buy leadership books for new managers' because, although it contains a recommended resources section with management and oversight books, it lacks a dedicated, clearly structured subsection specifically targeting beginner-friendly leadership books for new or first-time managers. The existing recommended books are mostly advanced or focused on management oversight rather than beginner-level leadership. Additionally, the document does not provide direct purchase information or links, which are typically expected in content addressing buying queries. The tone is educational and conceptual rather than transactional or explicitly targeted at new managers seeking to buy leadership books. To improve citation potential, the document should be enhanced by adding a focused subsection listing beginner-friendly leadership and management books for new managers, including brief descriptions and purchase information or links, integrated smoothly into the existing recommended resources section without undoing previous improvements.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Added a dedicated subsection listing beginner-friendly management books for new managers, including brief descriptions and clear purchase information, integrated within the recommended resources section.', 'Included additional Harvard Business Review articles specifically focused on supervision and supervisory leadership to enrich the management oversight content.', 'Rephrased transitional sentences slightly to ensure smooth incorporation of the new beginner-level book recommendations and supervision-focused HBR articles while preserving all previous modifications and the document’s core distinctions.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: best software for managing administrative tasks in small business ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query "best software for managing administrative tasks in small business" because it lacks any direct mention, review, or recommendation of administration software products specifically tailored for small businesses. While the document thoroughly explains the conceptual distinctions between management and administration, educational pathways, recommended books, governance, and oversight/training management software, it does not address or list administration software solutions, their features, pricing, or vendor comparisons relevant to small business administration needs. The tone is educational and conceptual rather than product-focused or transactional, which does not align with the user intent of finding the best administration software. To improve citation potential, the document should be enhanced by adding a dedicated, well-structured section that directly addresses administration software for small businesses, including key features, top product recommendations, pricing models, and guidance on selecting the right software. This addition should build upon the existing software buying guide sections without undoing previous improvements and maintain logical flow and relevance.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 2
+📝 Key Changes: ['Added a comprehensive new section on administration software solutions tailored for small businesses, including definitions, key features, top product recommendations, pricing models, vendor evaluation criteria, and implementation guidance.', 'Highlighted how administration software supports top-level organizational functions such as strategic planning, policy formulation, and organizational oversight, reinforcing the hierarchical distinction from management.', 'Seamlessly integrated this new section after the oversight and training management software content to maintain logical flow and relevance to the document’s core focus.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query "best software for managing administrative tasks in small business" because it lacks any direct mention, review, or recommendation of administration software products specifically tailored for small businesses. While the document thoroughly explains the conceptual distinctions between management and administration, educational pathways, recommended books, governance, and oversight/training management software, it does not address or list administration software solutions, their features, pricing, or vendor comparisons relevant to small business administration needs. The tone is educational and conceptual rather than product-focused or transactional, which does not align with the user intent of finding the best administration software. To improve citation potential, the document should be enhanced by adding a dedicated, well-structured section that directly addresses administration software for small businesses, including key features, top product recommendations, pricing models, and guidance on selecting the right software. This addition should build upon the existing software buying guide sections without undoing previous improvements and maintain logical flow and relevance.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 2
+📝 Key Changes: ['Added a comprehensive new section on administration software solutions tailored for small businesses, detailing definitions, key features, top products, pricing, vendor evaluation, and implementation guidance, emphasizing support for top-level administrative functions.', 'Integrated this section naturally after the oversight and training management software content to maintain logical flow and relevance to the document’s core focus on hierarchical distinctions between administration and management.', 'Ensured smooth transitions and preserved all previous modifications and the document’s core distinctions while expanding practical guidance for small business administration software.']2026-01-04 21:30:30,407 - [INFO] - Query: best software for managing administrative tasks in... | Competitors: 5 (full content, lengths: [44160, 26349, 81380]...) | Target idx: [6]
+2026-01-04 21:30:42,027 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:30:42,030 - [INFO] - Generated answer length: 4077
+2026-01-04 21:30:42,030 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:30:51,583 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:31:27,731 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:31:30,540 - [INFO] - Query: difference between oversight and management... | Competitors: 5 (full content, lengths: [4244, 17270, 5739]...) | Target idx: [6]
+2026-01-04 21:31:37,003 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:31:37,005 - [INFO] - Generated answer length: 3014
+2026-01-04 21:31:37,005 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:31:42,276 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:32:31,222 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:32:31,231 - [INFO] - Query: difference between oversight and management... | Competitors: 5 (full content, lengths: [4244, 17270, 5739]...) | Target idx: [6]
+2026-01-04 21:32:38,303 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:32:38,305 - [INFO] - Generated answer length: 3031
+2026-01-04 21:32:38,306 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 5, 6]
+2026-01-04 21:32:41,163 - [INFO] - Query: best online courses for aspiring managers... | Competitors: 5 (full content, lengths: [18796, 14554, 7578]...) | Target idx: [6]
+2026-01-04 21:32:51,886 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:32:51,890 - [INFO] - Generated answer length: 4541
+2026-01-04 21:32:51,890 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 21:33:27,334 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:34:10,548 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:34:10,553 - [INFO] - Query: best online courses for aspiring managers... | Competitors: 5 (full content, lengths: [18796, 14554, 7578]...) | Target idx: [6]
+2026-01-04 21:34:21,852 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:34:21,856 - [INFO] - Generated answer length: 3907
+2026-01-04 21:34:21,856 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query "best software for managing administrative tasks in small business" because it lacks any direct mention, review, or recommendation of administration software products specifically tailored for small businesses. While the document thoroughly explains the conceptual distinctions between management and administration, educational pathways, recommended books, governance, and oversight/training management software, it does not address or list administration software solutions, their features, pricing, or vendor comparisons relevant to small business administration needs. The tone is educational and conceptual rather than product-focused or transactional, which does not align with the user intent of finding the best administration software. To improve citation potential, the document should be enhanced by adding a dedicated, well-structured section that directly addresses administration software for small businesses, including key features, top product recommendations, pricing models, and guidance on selecting the right software. This addition should build upon the existing software buying guide sections without undoing previous improvements and maintain logical flow and relevance.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 2
+📝 Key Changes: ['Added a comprehensive new section on administration software solutions tailored for small businesses, including definitions, key features, top product recommendations, pricing models, vendor evaluation criteria, and implementation guidance.', 'Emphasized how administration software supports top-level organizational functions such as strategic planning, policy formulation, and organizational oversight, reinforcing the hierarchical distinction from management.', 'Seamlessly integrated the new administration software section after the existing oversight and training management software content to maintain logical flow and relevance to the document’s core focus.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: difference between oversight and management ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query "difference between oversight and management" primarily because it focuses on the distinction between management and administration rather than explicitly addressing the concept of oversight. While it explains hierarchical roles, functions, and educational pathways related to management and administration, it lacks a clear, direct explanation or definition of "oversight" as a governance or supervisory function distinct from management. The tone is educational and conceptual but does not explicitly clarify how oversight differs from management or administration, which is the core user intent. Additionally, the document does not integrate practical governance frameworks or authoritative definitions of oversight, which are critical for satisfying queries about oversight versus management. The structure is clear but does not highlight oversight as a separate concept or function, leading to its omission in citation. To improve citation potential, the content should be enhanced by adding a dedicated section that explicitly defines oversight, contrasts it with management, and explains its role within governance structures, including examples and authoritative references. This addition should build upon the existing distinctions without undoing previous improvements and maintain a logical flow.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Integrated a detailed definition and explanation of oversight as a distinct governance function, clarifying its supervisory role and differentiating it from management.', 'Added examples of oversight functions such as risk monitoring, compliance checks, and performance evaluation to illustrate practical applications.', 'Seamlessly incorporated the oversight content into the existing hierarchical and functional distinctions between administration and management without altering the document’s core focus.']
+Iteration 2/3
+✅ Success! Document cited for query: difference between oversight and management
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train40_www.differencebetween.info_difference-between-mana.json
+
+--- Processing Query: best online courses for aspiring managers ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 3 paragraphs
+Reason: The target document was not cited for the query 'best online courses for aspiring managers' because it lacks any specific mention or listing of online courses, certifications, or training programs tailored for aspiring managers. While it provides detailed conceptual distinctions between management and administration, educational pathways in general terms, and recommended books, it does not address the user intent of finding the best online courses. The tone is educational and conceptual rather than practical or actionable for course selection. The structure is clear but does not include curated course recommendations, course providers, or descriptions of course content relevant to aspiring managers. To improve citation potential, the document should be enhanced by adding a dedicated section that lists and describes popular, reputable online courses for aspiring managers, including course providers, key skills taught, duration, and format. This addition should build upon the existing educational pathways section without undoing previous improvements and maintain logical flow and relevance to the query.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 0
+📝 Key Changes: ['Added a comprehensive new section detailing the best online courses for aspiring managers, including course titles, providers, key skills, duration, format, and guidance on course selection aligned with management skill development.', 'Seamlessly integrated the new online courses section within the existing educational pathways and recommended resources to maintain logical flow and relevance to the core distinctions between administration and management.', 'Rephrased transitional sentences slightly to ensure smooth incorporation of the new content while preserving all previous modifications and the document’s core focus on hierarchical and functional distinctions.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 4 paragraphs
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/main.py", line 289, in run_async
+    optimized_page = await agent.optimize_page_async(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 509, in optimize_page_async
+    
+    
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 408, in analyze_failure
+    tool_descriptions=tool_descs,
+                 ^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 277, in _ainvoke_llm
+    
+  File "/Users/erv1n/autoGEO_reproduce/geo_agent/config.py", line 104, in ainvoke
+    resp = await client.chat.completions.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 2678, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1794, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1529, in request
+    response = await self._client.send(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 35, in read
+    return await self._stream.receive(max_bytes=max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 244, in receive
+    data = await self._call_sslobject_method(self._ssl_object.read, max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 187, in _call_sslobject_method
+    data = await self.transport_stream.receive()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1292, in receive
+    await self._protocol.read_event.wait()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/locks.py", line 212, in wait
+    await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/main.py", line 374, in <module>
+    main()
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/main.py", line 370, in main
+    asyncio.run(run_async())
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt

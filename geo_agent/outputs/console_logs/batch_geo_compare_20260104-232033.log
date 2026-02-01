@@ -1,0 +1,66 @@
+2026-01-04 23:20:37,195 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,195 - [INFO] - Query: order caesar costume for educational event... | Competitors: 8 (full content, lengths: [55043, 12247, 3364]...) | Target idx: [9]
+2026-01-04 23:20:37,542 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,542 - [INFO] - Query: comparison of audio guides for roman forum... | Competitors: 8 (full content, lengths: [8132, 3083, 5982]...) | Target idx: [9]
+2026-01-04 23:20:37,565 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,566 - [INFO] - Query: best documentaries on roman emperors... | Competitors: 8 (full content, lengths: [24561, 16308, 28126]...) | Target idx: [9]
+2026-01-04 23:20:37,580 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,580 - [INFO] - Query: order roman emperors poster... | Competitors: 8 (full content, lengths: [4911, 3022, 10673]...) | Target idx: [9]
+2026-01-04 23:20:37,594 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,594 - [INFO] - Query: bbc history roman rulers... | Competitors: 8 (full content, lengths: [5868, 18013, 14013]...) | Target idx: [9]
+2026-01-04 23:20:37,608 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,608 - [INFO] - Query: roman emperors and their impact on modern rome... | Competitors: 8 (full content, lengths: [9990, 18622, 8894]...) | Target idx: [9]
+2026-01-04 23:20:37,623 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,623 - [INFO] - Query: buy book 'the twelve caesars' by suetonius... | Competitors: 8 (full content, lengths: [86702, 11494, 23384]...) | Target idx: [9]
+2026-01-04 23:20:37,637 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,637 - [INFO] - Query: top podcasts on roman history and caesars... | Competitors: 8 (full content, lengths: [18669, 72700, 53662]...) | Target idx: [9]
+2026-01-04 23:20:37,652 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,652 - [INFO] - Query: roman emperors and their achievements... | Competitors: 8 (full content, lengths: [18931, 43464, 9990]...) | Target idx: [9]
+2026-01-04 23:20:37,666 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,666 - [INFO] - Query: roman emperors history tours... | Competitors: 8 (full content, lengths: [11813, 47103, 31853]...) | Target idx: [9]
+2026-01-04 23:20:37,679 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,680 - [INFO] - Query: purchase roman emperors documentary dvd... | Competitors: 8 (full content, lengths: [6731, 20369, 35275]...) | Target idx: [9]
+2026-01-04 23:20:37,693 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,693 - [INFO] - Query: why was nero considered a bad emperor?... | Competitors: 8 (full content, lengths: [50613, 19100, 13970]...) | Target idx: [9]
+2026-01-04 23:20:37,707 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,707 - [INFO] - Query: reviews of online courses on roman history... | Competitors: 8 (full content, lengths: [19971, 10778, 16278]...) | Target idx: [9]
+2026-01-04 23:20:37,721 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,721 - [INFO] - Query: buy caesars entertainment stock... | Competitors: 8 (full content, lengths: [6111, 10042, 5328]...) | Target idx: [9]
+2026-01-04 23:20:37,735 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:37,735 - [INFO] - Query: top-rated roman history courses... | Competitors: 8 (full content, lengths: [10778, 15098, 16278]...) | Target idx: [9]
+2026-01-04 23:20:39,272 - [ERROR] - Failed to fetch HTML for 70074da85f0550fa7122d38cce3be0e9: HTTPSConnectionPool(host='chatnoir-webcontent.chatnoir.eu', port=443): Max retries exceeded with url: /?uuid=70074da85f0550fa7122d38cce3be0e9&index=cw22&raw=&no-rewrite= (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)')))
+2026-01-04 23:20:39,272 - [WARNING] - Empty HTML content for 70074da85f0550fa7122d38cce3be0e9, skipping.
+2026-01-04 23:20:39,273 - [INFO] - Competitor contents: 7/10 (from 8 candidates)
+2026-01-04 23:20:39,273 - [INFO] - Query: buy roman empire documentary series... | Competitors: 7 (full content, lengths: [17057, 6571, 3817]...) | Target idx: [8]
+2026-01-04 23:20:48,214 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:20:48,230 - [INFO] - Generated answer length: 2491
+2026-01-04 23:20:48,232 - [INFO] - Citation check: target=[9] cited=True by index | All citations: [2, 4, 5, 7, 9]
+2026-01-04 23:20:48,234 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:48,234 - [INFO] - Query: history channel roman rulers... | Competitors: 8 (full content, lengths: [2298, 10151, 19851]...) | Target idx: [9]
+2026-01-04 23:20:48,956 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:20:48,957 - [INFO] - Generated answer length: 2270
+2026-01-04 23:20:48,957 - [INFO] - Citation check: target=[8] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7]
+2026-01-04 23:20:48,961 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:48,961 - [INFO] - Query: achievements of julius caesar... | Competitors: 8 (full content, lengths: [28484, 16042, 13078]...) | Target idx: [9]
+2026-01-04 23:20:49,074 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:20:49,075 - [INFO] - Generated answer length: 2522
+2026-01-04 23:20:49,075 - [INFO] - Citation check: target=[9] cited=True by index | All citations: [1, 2, 3, 4, 8, 9]
+2026-01-04 23:20:49,076 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:49,076 - [INFO] - Query: compare roman history courses... | Competitors: 8 (full content, lengths: [16278, 19971, 10778]...) | Target idx: [9]
+2026-01-04 23:20:49,288 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:20:49,290 - [INFO] - Generated answer length: 2983
+2026-01-04 23:20:49,290 - [INFO] - Citation check: target=[9] cited=False  | All citations: []
+2026-01-04 23:20:49,291 - [INFO] - Competitor contents: 8/10 (from 8 candidates)
+2026-01-04 23:20:49,291 - [INFO] - Query: purchase roman emperors chart... | Competitors: 8 (full content, lengths: [25799, 3479, 3479]...) | Target idx: [9]
+2026-01-04 23:20:49,617 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:20:49,619 - [INFO] - Generated answer length: 2765
+2026-01-04 23:20:49,620 - [INFO] - Citation check: target=[9] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 8]
+2026-01-04 23:20:50,050 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:20:50,051 - [INFO] - Generated answer length: 2695
+2026-01-04 23:20:50,051 - [INFO] - Citation check: target=[9] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 8]
+2026-01-04 23:20:50,400 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:20:50,401 - [INFO] - Generated answer length: 3134
+2026-01-04 23:20:50,401 - [INFO] - Citation check: target=[9] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 8]
+2026-01-04 23:20:51,228 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:20:51,230 - [INFO] - Generated answer length: 3611
+2026-01-04 23:20:51,230 - [INFO] - Citation check: target=[9] cited=False  | All citations: [1, 3, 4, 6, 7]

@@ -1,0 +1,131 @@
+# ============================================================
+# AgentGEO 统一优化配置文件
+# ============================================================
+#
+# 本配置文件支持三种优化方法:
+# 1. AutoGEO - 论文中的 baseline 方法
+# 2. AgentGEO - 我们的自主智能体方法
+# 3. Baseline - GEO-Bench 的 9 种优化方法
+#
+# ============================================================
+
+# 优化方式选择
+optimizer:
+  method: "agentgeo"  # 选项: autogeo, agentgeo, baseline, all
+
+# ============================================================
+# AutoGEO 配置（论文中的 baseline 方法）
+# ============================================================
+autogeo:
+  dataset_name: "GEO-Bench"
+  engine_llm: "claude-haiku-4-5-20251001"
+  rule_path: null
+
+# ============================================================
+# AgentGEO 配置（我们的智能体优化方法）
+# ============================================================
+agentgeo:
+  # 模块配置文件路径（包含 LLM、搜索引擎、HTML 解析器等配置）
+  config_path: "geo_agent/config.yaml"
+
+  # 批处理配置
+  batch_size: 10           # 批次大小
+  max_concurrency: 4       # 最大并发数
+
+  # ============================================================
+  # 引用检查方式（V2.2 新增）
+  # ============================================================
+  # 选项: "llm", "attr_evaluator", "both"
+  #
+  # - llm: 使用 LLM 检查引用（默认，最快）
+  #   适用场景: 快速原型、大批量处理
+  #   速度: 快 | 准确度: 中等
+  #
+  # - attr_evaluator: 使用 Attribute Evaluator 检查引用
+  #   适用场景: 生产环境（推荐）
+  #   速度: 中等 | 准确度: 高
+  #
+  # - both: 同时使用两种方法（复合模式）
+  #   适用场景: 需要最高准确度或召回率
+  #   速度: 慢 | 准确度: 最高
+  citation_method: "llm"
+
+  # ============================================================
+  # 复合模式策略（仅在 citation_method="both" 时有效）
+  # ============================================================
+  # 选项: "any", "all", "llm_primary", "attr_primary"
+  #
+  # - any: 任一方法检测到引用即为有引用
+  #   适用场景: 最大化召回率
+  #
+  # - all: 两种方法都检测到引用才为有引用
+  #   适用场景: 最大化准确率（最严格）
+  #
+  # - llm_primary: 以 LLM 结果为主，attr_evaluator 作为辅助
+  #   适用场景: 平衡速度和准确度
+  #
+  # - attr_primary: 以 attr_evaluator 结果为主，LLM 作为辅助
+  #   适用场景: 以准确度为主
+  citation_composite_strategy: "any"
+
+  # Attribute Evaluator 配置文件路径（使用 attr_evaluator 时需要）
+  # 如果为 null，使用默认配置
+  attr_evaluator_config: null
+
+  # 是否使用快速模式的 Attribute Evaluator
+  # true: 快速模式（适合大批量处理）
+  # false: 完整模式（更准确但较慢）
+  use_fast_mode: true
+
+  # ============================================================
+  # 性能对比参考
+  # ============================================================
+  #
+  # 方法                     | 速度  | 准确度 | 适用场景
+  # ------------------------|-------|--------|------------------
+  # llm                     | 快    | 中等   | 快速原型、大批量处理
+  # attr_evaluator (fast)   | 中等  | 高     | 生产环境（推荐）
+  # attr_evaluator (full)   | 慢    | 最高   | 高质量要求、小批量
+  # both (any)              | 慢    | 高     | 最大化召回率
+  # both (all)              | 慢    | 最高   | 最大化准确率
+  # both (attr_primary)     | 慢    | 最高   | 以准确度为主
+  # both (llm_primary)      | 中等  | 中等   | 平衡速度和准确度
+  #
+  # ============================================================
+
+  # 其他配置
+  enable_memory: true                      # 启用记忆功能
+  enable_history: true                     # 启用历史记录
+  chunks_per_orchestra: 2                  # 每次协同优化的文档块数
+  suggestion_merge_strategy: "diagnosis_aware"  # 建议合并策略
+
+  # 工具配置（V2.4 新增）
+  # 是否启用 autogeo_rephrase 工具（AutoGEO 论文方法）
+  enable_autogeo_rephrase: true
+
+# GEO-Bench Baseline 配置（9种优化方法）
+baseline:
+  provider: "openai"
+  model: "gpt-4.1-mini"
+  methods: null  # null = 全部9种, 或指定 ["cite_sources", "authoritative"]
+
+# 数据配置
+data:
+  input_type: "parquet"
+  input_path: "data/test_data.parquet"
+  required_fields:
+    - raw_html
+    - train_queries
+    - test_queries
+
+# 输出配置
+output:
+  base_dir: "outputs"
+  save_optimized_html: true
+  save_evaluation: true
+
+# 评估配置（可选）
+evaluation:
+  enable_citation: false
+  enable_geo_score: false
+  enable_similarity: false

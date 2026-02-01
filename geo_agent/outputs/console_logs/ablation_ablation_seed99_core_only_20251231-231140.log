@@ -1,0 +1,435 @@
+2025-12-31 23:41:00,647 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:00,682 - [INFO] - Generated answer length: 387
+2025-12-31 23:41:01,228 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:01,232 - [INFO] - Generated answer length: 661
+2025-12-31 23:41:01,274 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:01,279 - [INFO] - Generated answer length: 1056
+2025-12-31 23:41:01,297 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:01,301 - [INFO] - Generated answer length: 1068
+2025-12-31 23:41:01,479 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:01,491 - [INFO] - Generated answer length: 919
+2025-12-31 23:41:01,542 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:01,551 - [INFO] - Generated answer length: 776
+2025-12-31 23:41:01,874 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:01,883 - [INFO] - Generated answer length: 1109
+2025-12-31 23:41:02,123 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:02,134 - [INFO] - Generated answer length: 1054
+2025-12-31 23:41:02,336 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:02,346 - [INFO] - Generated answer length: 1853
+2025-12-31 23:41:02,467 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:02,478 - [INFO] - Generated answer length: 1181
+2025-12-31 23:41:02,572 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:02,578 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:02,590 - [INFO] - Generated answer length: 1736
+2025-12-31 23:41:02,591 - [INFO] - Generated answer length: 1558
+2025-12-31 23:41:02,644 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:02,652 - [INFO] - Generated answer length: 1824
+2025-12-31 23:41:02,683 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:02,691 - [INFO] - Generated answer length: 1295
+2025-12-31 23:41:02,775 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:02,786 - [INFO] - Generated answer length: 1566
+2025-12-31 23:41:02,808 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:02,816 - [INFO] - Generated answer length: 1048
+2025-12-31 23:41:03,169 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:03,181 - [INFO] - Generated answer length: 1735
+2025-12-31 23:41:03,655 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:03,664 - [INFO] - Generated answer length: 1994
+2025-12-31 23:41:04,141 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:04,153 - [INFO] - Generated answer length: 2226
+2025-12-31 23:41:04,481 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:04,492 - [INFO] - Generated answer length: 2871
+2025-12-31 23:41:11,596 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:14,557 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:14,565 - [INFO] - Generated answer length: 1367
+2025-12-31 23:41:17,592 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:40,569 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:43,637 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:41:43,642 - [INFO] - Generated answer length: 1025
+2025-12-31 23:41:47,728 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:42:15,590 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:42:17,675 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:42:17,684 - [INFO] - Generated answer length: 1147
+2025-12-31 23:42:20,762 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:42:47,450 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:42:50,208 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:42:50,211 - [INFO] - Generated answer length: 1339
+2025-12-31 23:42:54,380 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:43:25,289 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Random seed set to: 99
+=== Ablation Settings ===
+  Core-idea extraction: enabled
+  Optimization memory:  DISABLED
+=========================
+
+=== Baseline Evaluation ===
+
+=== Optimize ===
+Starting GEO for https://www.tandfonline.com/doi/full/10.1080/00913367.2021.1977737
+--------------------------------
+📌 Core idea: The document explores the concept of "influencer celebrification," detailing how social media influencers acquire celebrity capital—a form of sociocultural currency—through a dynamic, iterative process involving generative, collaborative, and evaluative practices within an interconnected advertising ecosystem. It highlights the distinct pathways influencers take compared to traditional celebrities, emphasizing the critical roles of audience engagement, platform agnosticism, and advertising practitioners as talent scouts, creative concierges, and impact analysts in cultivating and legitimizing influencer fame for commercial endorsement purposes.
+--------------------------------
+⚠️  Optimization memory DISABLED (ablation mode)
+
+--- Processing Query: instagram influencer top accounts ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document is a comprehensive, scholarly article that deeply analyzes the process by which social media influencers acquire celebrity capital, focusing on theoretical frameworks, qualitative methodology, and nuanced conceptual models. However, it was not cited for the query "instagram influencer top accounts" likely because it does not provide direct, practical, or up-to-date lists, rankings, or straightforward data about top Instagram influencer accounts. Instead, it offers an academic and theoretical perspective on influencer culture and advertising practices. The tone is academic and dense, which may not align with the typical informational or list-based content expected for such a query. Additionally, the HTML structure is complex and includes a large amount of metadata and references, which might hinder straightforward extraction or indexing for quick fact-based queries. To improve citation for such queries, the content should be restructured or summarized to highlight relevant, accessible insights about Instagram influencers, possibly including examples or data on top accounts, in a clearer, more concise format.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Restructured the content into clear, thematic sections to enhance clarity and facilitate extraction of key concepts related to influencer celebrification.', 'Condensed and rephrased lengthy paragraphs to focus on the core ideas without losing any critical information or nuance.', 'Organized empirical findings and theoretical discussions into distinct subsections with bullet points and tables for easier comprehension and reference.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a deep theoretical and conceptual analysis of influencer celebrification and celebrity capital acquisition, focusing on sociocultural and advertising ecosystem frameworks. However, it lacks direct, practical, and up-to-date information about specific 'top Instagram influencer accounts,' which is the core intent of the query. The tone is academic and conceptual rather than practical or list-based, which is typically favored for queries seeking rankings or top accounts. Additionally, the content does not include concrete examples or lists of top Instagram influencers or their follower metrics, which are commonly expected in such queries. The HTML/Markdown structure is clear and well-organized, so structure is not the issue. The main reason for non-citation is the mismatch between the query's practical, list-oriented intent and the document's theoretical, conceptual focus without explicit coverage of top Instagram influencer accounts.
+Tool Selected: knowledge_injection
+Key Changes (not recorded): ['Added a new appendix section listing top Instagram influencers with follower counts, engagement metrics, and brief profiles illustrating influencer celebrification in practice.', 'Integrated examples of how these influencers embody generative, collaborative, and evaluative practices central to acquiring celebrity capital.', 'Enhanced the summary to reflect the inclusion of contemporary influencer data, linking theory to real-world applications.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, scholarly conceptual framework on influencer celebrification and includes a detailed appendix listing top Instagram influencers with follower counts and engagement rates. However, it was not cited for the query 'instagram influencer top accounts' likely because the content is primarily academic and theoretical rather than a straightforward, up-to-date ranked list or practical guide focused solely on top Instagram influencer accounts. The tone is formal and research-oriented, which may not align with the more commercial, listicle-style content typically favored for such queries. Additionally, the detailed influencer profiles are embedded deep within the document rather than presented as a clear, standalone ranked list or summary that directly answers the query. The HTML/Markdown structure is well-organized but dense, which might reduce snippet extraction or direct citation likelihood. To improve citation potential, the content should be restructured to highlight and foreground the top Instagram influencer accounts with clear, concise, and accessible presentation, emphasizing current follower metrics and engagement in a format that matches user intent for this query.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content for clearer logical flow, grouping related concepts and practices under distinct headings.', 'Streamlined descriptions of influencer celebrification practices to emphasize their roles in acquiring celebrity capital.', 'Consolidated the Instagram influencer examples into a dedicated appendix section with clear linkage to the core concept.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: celebrification article on the new york times ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, scholarly conceptualization of 'influencer celebrification' with detailed theoretical frameworks, methodology, findings, and practical implications. However, it was not cited for the query 'celebrification article on the new york times' because it lacks direct connection or references to The New York Times or its content. The target content is academic and specialized, focusing on influencer culture and advertising ecosystems, whereas the cited competitor content is a New York Times blog post about grammar usage of 'whether or not.' The competitor content is directly from The New York Times and matches the query more literally. Additionally, the target document's tone is academic and dense, which may not align with the typical style or expectations for a New York Times article. The HTML/Markdown structure of the target content is clear and well-organized, so structure is not the issue. The main reason for non-citation is the lack of explicit relevance to The New York Times or its articles, and the query likely expects content either published by or directly about The New York Times. To improve citation likelihood, the target content should explicitly connect influencer celebrification to The New York Times coverage or include references to The New York Times as a media gatekeeper or platform in the discussion of celebrification.
+Tool Selected: knowledge_injection
+Key Changes (not recorded): ['Integrated explicit references to *The New York Times* throughout the document, linking its role in reporting and analyzing influencer celebrification and celebrity culture.', 'Added contextual examples of *The New York Times* coverage to illustrate generative, collaborative, and evaluative practices within influencer celebrification.', 'Included a concluding note on the significance of legacy media institutions in bridging traditional and digital celebrification narratives, enhancing the document’s relevance to media discourse.']2025-12-31 23:43:28,977 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:43:28,986 - [INFO] - Generated answer length: 1541
+2025-12-31 23:43:32,377 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:43:32,386 - [INFO] - Generated answer length: 1748
+2025-12-31 23:43:35,497 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:43:35,507 - [INFO] - Generated answer length: 2099
+2025-12-31 23:43:39,876 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:43:39,889 - [INFO] - Generated answer length: 2055
+2025-12-31 23:43:43,614 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:43:43,623 - [INFO] - Generated answer length: 1899
+2025-12-31 23:43:47,743 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:44:42,372 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:44:46,446 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:44:46,456 - [INFO] - Generated answer length: 1616
+2025-12-31 23:44:50,064 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:45:28,420 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:45:32,236 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:45:32,242 - [INFO] - Generated answer length: 1845
+2025-12-31 23:45:36,487 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:46:12,310 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:46:14,586 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:46:14,593 - [INFO] - Generated answer length: 1335
+2025-12-31 23:46:17,209 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:46:17,220 - [INFO] - Generated answer length: 1597
+2025-12-31 23:46:20,453 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Iteration 2/3
+✅ Success! Document cited for query: celebrification article on the new york times
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: celebrification success stories in brand marketing ---
+Iteration 1/3
+✅ Success! Document cited for query: celebrification success stories in brand marketing
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: best tools for measuring celebrity capital in influencers ---
+Iteration 1/3
+✅ Success! Document cited for query: best tools for measuring celebrity capital in influencers
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: history of influencer marketing ---
+Iteration 1/3
+✅ Success! Document cited for query: history of influencer marketing
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: reviews of digital influencer platforms ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, scholarly conceptual framework on influencer celebrification, focusing on how social media influencers acquire celebrity capital through generative, collaborative, and evaluative practices. However, it was not cited for the query 'reviews of digital influencer platforms' because it lacks direct, detailed reviews or comparative analyses of influencer marketing platforms or marketplaces. The content is more theoretical and conceptual, with some illustrative examples of influencers, but it does not evaluate or rank platforms, nor does it provide practical guidance or user-centric reviews of digital influencer platforms. Additionally, the tone is academic and analytical rather than practical or consumer-oriented, which is typically preferred for platform review queries. The HTML/Markdown structure is clear and well-organized, so structure is not a barrier. The main gap is the absence of explicit, detailed platform reviews or marketplace evaluations that match the query intent.
+Tool Selected: knowledge_injection
+Key Changes (not recorded): ['Integrated a detailed, practical review and comparative analysis of digital influencer platforms and marketplaces, including features, pros and cons, pricing models, and suitability for different brand sizes and campaign types.', 'Added specific platform examples with ratings and use cases to directly address the query about reviews of digital influencer platforms.', 'Seamlessly connected the platform analysis to the core influencer celebrification framework, emphasizing the role of these platforms in supporting talent scouting, creative collaboration, and impact analysis within the influencer ecosystem.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document contains comprehensive and detailed information about influencer celebrification and includes a dedicated section reviewing and comparing digital influencer platforms. However, it was not cited likely because the content is presented in a dense, academic style with extensive theoretical framing and lengthy tables, which may reduce immediate accessibility and quick extraction of practical platform reviews. The tone is more scholarly and less directly promotional or user-friendly compared to competitor content, which is structured as a straightforward, easy-to-scan marketplace review with clear pros, cons, and ratings. Additionally, the target's platform review section is embedded within a broader theoretical framework rather than being a standalone, clearly highlighted practical guide. The HTML/Markdown structure, while logically organized, may not be optimized for snippet extraction or quick reference by generative engines seeking concise, well-structured lists or summaries. To improve citation likelihood, restructuring the platform review section for clarity, emphasis, and ease of parsing is recommended.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content into clear, logically ordered sections with descriptive headings for improved clarity and extraction.', 'Converted dense paragraphs into concise bullet points where appropriate to enhance readability and highlight key concepts.', 'Grouped related content (e.g., platform reviews, influencer profiles) into dedicated sections to maintain focus on the core idea and facilitate easier navigation.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive and well-structured analysis of influencer celebrification and includes a detailed section reviewing digital influencer platforms. However, it was not cited likely because the query "reviews of digital influencer platforms" is very specifically focused on platform comparisons, user experience, pricing, and practical marketplace features. While the target content does include a comparative table and platform reviews, the tone is academic and conceptual, emphasizing influencer celebrification theory and ecosystem roles rather than a straightforward, practical, user-centric review of platforms. Additionally, the platform review section is embedded within a broader theoretical framework, which may reduce its direct discoverability or perceived relevance for purely practical platform review queries. The competitor content is more explicitly focused on practical, detailed, and updated platform reviews with clear pros, cons, pricing, and use cases, presented in a user-friendly, marketing-oriented style. To improve citation likelihood, the target content should restructure and highlight the platform review section more prominently, adopt a clearer practical review tone, and possibly expand on user-centric features and comparisons with more direct, actionable insights. The HTML/Markdown structure is generally clear, but emphasizing semantic headings and separating the platform review as a standalone, easily indexable section would help. Therefore, restructuring for clarity and relevance is the best next step.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized the content to group all platform reviews and analyses into a dedicated section for clearer focus on digital influencer platforms.', 'Streamlined the conceptual and theoretical sections to emphasize the core idea of influencer celebrification and its distinction from traditional celebrity capital acquisition.', 'Enhanced clarity by consolidating examples and *The New York Times* references within relevant sections to maintain coherence and relevance to the core idea.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: examples of celebrification in 2023 ---
+Iteration 1/3
+✅ Success! Document cited for query: examples of celebrification in 2023
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: impact of social media on communication ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, well-structured, and detailed conceptual framework on influencer celebrification and the acquisition of celebrity capital by social media influencers. However, it does not directly address the broader topic of the "impact of social media on communication," which is the focus of the query. The content is specialized on influencer marketing, celebrity culture, and advertising ecosystems rather than on interpersonal communication patterns, language changes, or social dynamics influenced by social media platforms. This topical mismatch likely caused the generative engine to ignore the target document in favor of sources that explicitly discuss social media's effects on communication styles, interpersonal interactions, and societal communication patterns. The tone and structure are appropriate and authoritative, but the core subject focus does not align with the query intent. Therefore, the main issue is topical relevance rather than missing facts or poor structure. To improve citation likelihood, the content would need to explicitly connect influencer celebrification to broader communication impacts or include sections on social media's influence on communication behaviors and patterns.2025-12-31 23:47:00,095 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:47:02,908 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:47:02,915 - [INFO] - Generated answer length: 1704
+2025-12-31 23:47:06,813 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:47:41,644 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:47:44,824 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:47:44,839 - [INFO] - Generated answer length: 1779
+2025-12-31 23:47:49,470 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:48:26,658 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:48:29,139 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:48:29,146 - [INFO] - Generated answer length: 1605
+2025-12-31 23:48:31,419 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:48:31,425 - [INFO] - Generated answer length: 1589
+2025-12-31 23:48:39,746 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:49:15,714 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:49:17,226 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:49:17,235 - [INFO] - Generated answer length: 762
+2025-12-31 23:49:21,464 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:50:01,920 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized sections for clearer logical flow, grouping related concepts and practices under thematic headings.', 'Streamlined language to enhance clarity and focus on the core idea of influencer celebrification without removing any relevant content.', 'Consolidated platform reviews and influencer profiles to better illustrate practical applications of the conceptual framework.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document was not cited for the query 'impact of social media on communication' primarily because it focuses on a specialized topic—'influencer celebrification' and the acquisition of celebrity capital by social media influencers—rather than directly addressing the broader, general impact of social media on communication patterns or interpersonal communication. The content is highly detailed and academic, emphasizing influencer marketing, advertising ecosystems, and celebrity culture, which may not align closely with the typical user intent behind the query. Additionally, the document does not explicitly discuss the effects of social media on communication styles, interpersonal dynamics, or language use, which are central to the query. The tone and structure are appropriate for an academic audience but may be too niche or specialized for general queries about social media's impact on communication. Therefore, the lack of direct relevance to the query topic led to it being ignored in favor of more directly relevant sources. To improve citation likelihood, the content could be restructured or supplemented to explicitly address social media's broader communication impacts, linking influencer celebrification to communication changes or patterns.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reordered sections for clearer logical flow, grouping conceptual, methodological, and practical content cohesively.', 'Condensed and clarified descriptions of generative, collaborative, and evaluative practices to enhance focus on their roles in influencer celebrification.', 'Streamlined platform reviews and influencer profiles to emphasize their direct connection to the core influencer celebrification framework and advertising ecosystem.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive and detailed conceptual framework on 'influencer celebrification' and the acquisition of celebrity capital by social media influencers, focusing on advertising ecosystems, influencer practices, and platform dynamics. However, it does not directly address the broader or general topic of the 'impact of social media on communication,' which is the query focus. The target content is specialized on influencer marketing and celebrity culture rather than interpersonal communication patterns or social media's effects on communication styles, language, or social interaction. Additionally, the tone and structure are academic and industry-focused, which may not align with the more general or sociological nature of the query. The competitor content cited is more directly relevant, discussing social media's impact on interpersonal communication, language, and social behavior, which matches the query better. Therefore, the target was ignored due to a mismatch in topical relevance rather than issues with tone or structure.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reordered and rephrased sections to enhance clarity and logical flow while preserving all original content related to influencer celebrification.', 'Consolidated platform analysis and influencer profiles to better illustrate practical applications of the conceptual framework.', 'Streamlined theoretical and practical implications to emphasize the distinct impact of social media on communication and celebrity capital acquisition.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: influencer to celebrity transition explained ---
+Iteration 1/3
+✅ Success! Document cited for query: influencer to celebrity transition explained
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: hootsuite social media fame tools ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive and scholarly framework on influencer celebrification and includes a detailed analysis of influencer platforms and marketplaces. However, it was not cited for the query 'hootsuite social media fame tools' because it lacks a focused, practical, and comparative review specifically of social media scheduling and posting tools like Hootsuite. The target content is heavily academic and conceptual, emphasizing influencer culture, celebrity capital, and advertising ecosystem roles, rather than providing actionable, tool-specific guidance or direct comparisons of social media management platforms. Additionally, the tone and structure are more suited for academic or industry research audiences rather than marketers or users seeking straightforward tool recommendations and feature breakdowns. The competitor content that was cited is highly practical, tool-focused, and includes detailed feature lists, pricing, use cases, and user reviews of Hootsuite and similar platforms, which directly address the query intent. To improve citation likelihood, the target document should incorporate a clearer, well-structured, and detailed section dedicated to social media scheduling and posting tools, including Hootsuite, with practical insights, feature comparisons, and user-centric evaluations. This would align better with the query's focus on 'social media fame tools' and scheduling platforms.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized sections for clearer logical flow, grouping conceptual, methodological, and practical content distinctly.', 'Streamlined platform reviews into a dedicated section emphasizing their roles in supporting influencer celebrification practices.', 'Enhanced clarity by consolidating *The New York Times* references to underscore media’s role without redundancy.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive and scholarly framework on influencer celebrification and includes a detailed section on digital influencer platforms. However, it was not cited for the query 'hootsuite social media fame tools' because it lacks a focused, dedicated, and clearly structured review or comparison specifically of social media scheduling and posting tools like Hootsuite. The document's tone is academic and conceptual rather than practical or tool-centric, which is the primary focus of the query. Additionally, the target content does not highlight Hootsuite or similar fame/scheduling tools in a way that directly addresses the operational features, pricing, or user benefits that the query implies. The HTML/Markdown structure is clear and well-organized, so structure is not the issue. The main gap is relevance and specificity to the query about social media scheduling tools, especially Hootsuite, which is extensively covered in the competitor content. To improve citation likelihood, the target should include a dedicated, clearly labeled, and detailed section or appendix focused on social media scheduling tools, including Hootsuite, with practical insights, feature comparisons, and user cases aligned with the query intent.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized sections for clearer logical flow, grouping conceptual, theoretical, methodological, and practical content cohesively.', 'Streamlined platform reviews to directly connect digital tools with influencer celebrification roles and practices.', 'Enhanced clarity by consolidating examples and *The New York Times* references to emphasize their role in documenting and analyzing influencer celebrification without redundancy.']2025-12-31 23:50:04,726 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:50:04,734 - [INFO] - Generated answer length: 1564
+2025-12-31 23:50:09,900 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:50:46,616 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:50:52,764 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:50:52,774 - [INFO] - Generated answer length: 2483
+2025-12-31 23:50:56,843 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:51:34,586 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:51:38,293 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:51:38,301 - [INFO] - Generated answer length: 1954
+2025-12-31 23:51:43,337 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:52:17,819 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:52:22,592 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:52:22,600 - [INFO] - Generated answer length: 1940
+2025-12-31 23:52:26,140 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:53:09,183 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:53:12,807 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:53:12,817 - [INFO] - Generated answer length: 1939
+
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive and detailed conceptual framework on influencer celebrification and includes a practical review of digital influencer platforms. However, it was not cited for the query "hootsuite social media fame tools" likely because it lacks a focused, dedicated section or detailed, comparative analysis specifically on social media scheduling and posting tools like Hootsuite. The competitor content extensively covers social media scheduling tools, including Hootsuite, with detailed features, pricing, use cases, and user testimonials, which directly matches the query intent. The target content's tone is academic and conceptual rather than practical and tool-focused, and it does not emphasize or highlight Hootsuite or similar fame tools in a way that aligns with the query. Additionally, the target content's structure is dense and broad, which may reduce its relevance for a query seeking specific tool recommendations and reviews. To improve citation likelihood, the target content should include a clearer, well-structured, and detailed section on social media scheduling tools, especially Hootsuite, with practical insights, comparisons, and user-centric benefits.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized sections for clearer logical flow, grouping conceptual, theoretical, methodological, and practical content cohesively.', 'Streamlined platform reviews into a dedicated section emphasizing their roles in supporting influencer celebrification practices.', 'Enhanced clarity by consolidating *The New York Times* references to underscore media’s role without redundancy.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: how to increase engagement on social media ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, scholarly framework on influencer celebrification and the acquisition of celebrity capital by social media influencers. However, it was not cited for the query "how to increase engagement on social media" because it primarily focuses on the theoretical and conceptual aspects of influencer fame and advertising ecosystems rather than practical, actionable tactics for boosting social media engagement. The tone is academic and analytical, lacking direct, step-by-step advice or easily digestible tips that marketers or social media managers typically seek for engagement growth. Additionally, the structure is dense and oriented toward research findings and conceptual models rather than quick, practical guidance. The competitor content that was cited offers clear, practical, and tactical advice on increasing social media engagement, including platform-specific strategies, timing, content types, and measurement, which aligns more closely with the query intent. To improve citation likelihood, the target content should be restructured to include a clear, practical section or summary focused on actionable engagement strategies, possibly with a more accessible tone and format.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reordered and rephrased sections to improve logical flow and clarity while preserving all original content related to influencer celebrification.', 'Consolidated platform reviews and use cases into a single, coherent section emphasizing their integration with the influencer celebrification process.', 'Streamlined the discussion and summary sections to highlight key distinctions, theoretical and practical implications, and the role of media institutions without losing detail.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, academic-style conceptual framework on influencer celebrification and the acquisition of celebrity capital by social media influencers. However, it does not directly address practical, actionable tactics or strategies specifically focused on "how to increase engagement on social media," which was the user query. The target content is more theoretical and industry-focused, emphasizing influencer culture, advertising ecosystem roles, and platform agnosticism rather than step-by-step engagement tactics or platform-specific advice. Additionally, the tone is formal and research-oriented, which may not align with the practical, how-to style expected for the query. The competitor content that was cited offers clear, actionable, and platform-specific tactics, tips, and best practices for increasing social media engagement, including timing, content types, interaction strategies, and measurement, which better matches the query intent. The target content also lacks direct, concise guidance or lists of engagement tactics, which are often favored in such queries. The HTML/Markdown structure of the target content is well-organized and unlikely to be a cause for non-citation. Therefore, the main issue is relevance and practical applicability rather than structure or missing facts. To improve citation likelihood, the target content should be restructured or supplemented with clear, practical engagement strategies and examples tailored to the query "how to increase engagement on social media."
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized sections for clearer logical flow, grouping related concepts and practices under thematic headings.', 'Streamlined language to enhance clarity and focus on the core idea of influencer celebrification without removing any relevant content.', 'Reformatted tables and lists for improved readability and emphasis on key distinctions and platform features.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive and scholarly framework on influencer celebrification and the acquisition of celebrity capital by social media influencers. However, it does not directly address practical, actionable tactics or strategies specifically focused on "how to increase engagement on social media," which was the query. The content is more theoretical, conceptual, and focused on influencer marketing ecosystem dynamics, roles of advertising practitioners, and platform strategies rather than step-by-step engagement tactics or platform-specific best practices. Additionally, the tone is academic and analytical rather than practical or instructional, which may reduce its relevance for a query seeking direct engagement improvement methods. The HTML/Markdown structure is clear and well-organized, so structural issues are not a factor. The main gap is the lack of explicit, practical engagement tactics and platform-specific advice that the competitor content provides in detail. To improve citation likelihood, the target content should incorporate more explicit, actionable social media engagement strategies, tips, and examples aligned with the query intent.
+Tool Selected: knowledge_injection
+Key Changes (not recorded): ['Integrated a comprehensive section detailing practical, actionable tactics and strategies for increasing social media engagement, including platform-specific tips, content creation advice, timing, interactive features, community building, and engagement measurement.', 'Seamlessly connected these engagement strategies to the core influencer celebrification framework, emphasizing their role in generative and collaborative practices and commercial endorsement success.', 'Enhanced the practical implications section to highlight the necessity of specialized engagement tactics alongside platform selection and advertising practitioner roles.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: celebrity capital consulting services ---
+Iteration 1/3
+✅ Success! Document cited for query: celebrity capital consulting services
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json2025-12-31 23:53:16,079 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:53:16,087 - [INFO] - Generated answer length: 1552
+2025-12-31 23:53:20,445 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:53:20,448 - [INFO] - Generated answer length: 2632
+2025-12-31 23:53:23,726 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:53:23,737 - [INFO] - Generated answer length: 1860
+2025-12-31 23:53:27,379 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:54:11,952 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:54:15,462 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:54:15,471 - [INFO] - Generated answer length: 1596
+2025-12-31 23:54:19,837 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:55:04,188 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:55:07,415 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:55:07,425 - [INFO] - Generated answer length: 1800
+2025-12-31 23:55:10,375 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:55:56,908 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:56:01,621 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:56:01,629 - [INFO] - Generated answer length: 2323
+2025-12-31 23:56:04,525 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:56:49,080 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:56:54,254 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:56:54,261 - [INFO] - Generated answer length: 2779
+2025-12-31 23:56:58,248 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+
+--- Processing Query: top strategies for influencers to gain fame ---
+Iteration 1/3
+✅ Success! Document cited for query: top strategies for influencers to gain fame
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: youtube channel for celebrity influencer case studies ---
+Iteration 1/3
+✅ Success! Document cited for query: youtube channel for celebrity influencer case studies
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: top documentaries about celebrity status ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, scholarly, and detailed analysis of influencer celebrification and the acquisition of celebrity capital by social media influencers. However, it does not address or mention documentaries, let alone top documentaries about celebrity status. The query "top documentaries about celebrity status" specifically seeks curated lists or reviews of documentaries focused on celebrity culture or status, which the target content does not provide. Instead, the target content is an academic-style conceptual framework and industry analysis, lacking any direct reference to documentaries or media recommendations. Additionally, the tone and structure are academic and theoretical rather than entertainment or media-list oriented, which likely caused the generative engine to ignore it for this query. Therefore, the main reason for non-citation is a mismatch in topical relevance and content focus rather than structural or authority issues.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized sections for clearer logical flow, grouping theoretical, methodological, and practical content distinctly.', 'Streamlined language to enhance clarity and focus on the core concept of influencer celebrification without removing any relevant content.', 'Consolidated platform-specific tactics and influencer platform reviews into dedicated sections to improve extraction and usability.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, scholarly, and detailed analysis of influencer celebrification and the acquisition of celebrity capital in the digital age. However, it was not cited for the query "top documentaries about celebrity status" because it does not focus on or list documentaries, nor does it provide direct recommendations or reviews of documentary films related to celebrity status. Instead, it is an academic and industry-focused exploration of influencer culture, advertising ecosystems, and social media engagement strategies. The tone and content are more theoretical and practical rather than entertainment or documentary-focused. Additionally, the competitor content directly addresses the query by listing and describing top documentaries, which is more aligned with user intent for that query. Therefore, the main reason for non-citation is a mismatch in topical focus and user intent rather than issues with structure or authority.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content to follow a clear logical flow from introduction, theory, methodology, findings, practical tactics, platform reviews, discussion, and appendices, enhancing clarity and extraction.', 'Consolidated and streamlined sections on generative, collaborative, and evaluative practices to emphasize their iterative and synergistic nature within influencer celebrification.', 'Integrated *The New York Times* references consistently to highlight media perspectives without disrupting the core conceptual narrative.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, scholarly, and detailed conceptual framework on influencer celebrification and celebrity capital acquisition by social media influencers. However, it was not cited for the query "top documentaries about celebrity status" because it does not address or list documentaries, nor does it focus on documentary content or recommendations. Instead, it is an academic and practical analysis of influencer culture, advertising ecosystems, and platform strategies. The tone is formal and research-oriented, which may not align with the more entertainment-focused, listicle-style content typically sought for documentary recommendations. Additionally, the document lacks direct references to or reviews of documentaries about celebrity status, which is the core intent of the query. The competitor content cited is a straightforward list of top documentaries, which directly matches the query intent. Therefore, the main issue is relevance and topical focus rather than structure or authority.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized sections for clearer logical flow, grouping conceptual, methodological, and practical content distinctly.', 'Condensed and clarified complex sentences to enhance readability while preserving all core ideas and examples.', 'Streamlined tables and lists for better extraction of key information without removing any relevant content.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: youtube influencer marketing trends ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, academic-style conceptual framework on influencer celebrification, focusing on how social media influencers acquire celebrity capital through generative, collaborative, and evaluative practices. However, it was not cited for the query 'youtube influencer marketing trends' likely because it lacks direct, up-to-date, practical trend information specifically about YouTube influencer marketing. The tone is scholarly and theoretical rather than trend-focused or actionable. Additionally, the document does not highlight specific current YouTube trends, platform-specific tactics for YouTube, or recent market data and forecasts that are typically sought in a 'trends' query. The structure is dense and oriented toward conceptual understanding rather than quick insights or lists of trends. Therefore, the content is less aligned with the query intent, which favors practical, current, and platform-specific influencer marketing trends, especially on YouTube. To improve relevance and citation likelihood, the content should be restructured and enhanced to include clear, up-to-date YouTube influencer marketing trends, practical examples, and data-driven insights while preserving the core conceptual framework.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content for clearer thematic flow, grouping related concepts and practices under distinct sections for improved clarity.', 'Streamlined platform-specific engagement tactics and practical strategies into a dedicated section aligned with generative and collaborative practices.', 'Consolidated platform reviews and influencer profiles to emphasize their roles within the influencer celebrification framework, enhancing relevance to the core idea.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, scholarly, and conceptual framework on influencer celebrification, focusing on how social media influencers acquire celebrity capital through generative, collaborative, and evaluative practices. However, it was not cited for the query 'youtube influencer marketing trends' likely because it lacks direct, up-to-date, and practical trend-focused content specifically about YouTube influencer marketing. The tone is academic and theoretical rather than trend-reporting or practical marketing advice oriented. Additionally, the document does not emphasize YouTube-specific trends, platform algorithm changes, or emerging content formats on YouTube, which are typically sought in such queries. The structure is clear and well-organized but oriented towards conceptual understanding rather than actionable trend insights. Therefore, the main reason for non-citation is the absence of explicit, current, and platform-specific influencer marketing trend information relevant to YouTube. To improve relevance and citation likelihood, the content should be enhanced with a dedicated section summarizing current YouTube influencer marketing trends, including data, examples, and practical tactics aligned with the query intent.2025-12-31 23:57:43,711 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:57:49,951 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:57:49,957 - [INFO] - Generated answer length: 2487
+2025-12-31 23:57:53,746 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:58:37,568 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:58:41,564 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:58:41,571 - [INFO] - Generated answer length: 1915
+2025-12-31 23:58:45,171 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:59:36,351 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:59:39,519 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:59:39,527 - [INFO] - Generated answer length: 1954
+2025-12-31 23:59:43,820 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 23:59:43,827 - [INFO] - Generated answer length: 1391
+2025-12-31 23:59:46,997 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:32,970 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:35,241 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:35,249 - [INFO] - Generated answer length: 844
+2026-01-01 00:00:37,953 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:37,961 - [INFO] - Generated answer length: 1351
+2026-01-01 00:00:41,665 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:41,672 - [INFO] - Generated answer length: 1587
+2026-01-01 00:00:43,623 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:43,633 - [INFO] - Generated answer length: 369
+2026-01-01 00:00:44,050 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:44,060 - [INFO] - Generated answer length: 1172
+2026-01-01 00:00:44,338 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:44,344 - [INFO] - Generated answer length: 1392
+2026-01-01 00:00:44,385 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:44,391 - [INFO] - Generated answer length: 1133
+2026-01-01 00:00:44,508 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:44,515 - [INFO] - Generated answer length: 1074
+2026-01-01 00:00:44,763 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:44,773 - [INFO] - Generated answer length: 1650
+2026-01-01 00:00:45,113 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:45,122 - [INFO] - Generated answer length: 1282
+2026-01-01 00:00:45,188 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:45,196 - [INFO] - Generated answer length: 1585
+2026-01-01 00:00:45,200 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:45,206 - [INFO] - Generated answer length: 1501
+2026-01-01 00:00:45,332 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:45,340 - [INFO] - Generated answer length: 1684
+2026-01-01 00:00:45,453 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:45,459 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:45,470 - [INFO] - Generated answer length: 1487
+2026-01-01 00:00:45,471 - [INFO] - Generated answer length: 1695
+2026-01-01 00:00:45,605 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:45,613 - [INFO] - Generated answer length: 1719
+2026-01-01 00:00:45,754 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:45,758 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:45,771 - [INFO] - Generated answer length: 1564
+2026-01-01 00:00:45,771 - [INFO] - Generated answer length: 2002
+2026-01-01 00:00:46,201 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:46,223 - [INFO] - Generated answer length: 1778
+2026-01-01 00:00:46,326 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:46,336 - [INFO] - Generated answer length: 1969
+2026-01-01 00:00:46,472 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:46,483 - [INFO] - Generated answer length: 2314
+2026-01-01 00:00:47,615 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:47,626 - [INFO] - Generated answer length: 2887
+2026-01-01 00:00:48,024 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-01 00:00:48,034 - [INFO] - Generated answer length: 2486
+
+Tool Selected: knowledge_injection
+Key Changes (not recorded): ['Integrated up-to-date, platform-specific influencer marketing trends for YouTube (2024-2025), including popular content formats (Shorts, live streams), algorithmic changes, emerging monetization methods, and practical growth tactics.', 'Seamlessly incorporated YouTube-specific strategies into the existing practical tactics section, emphasizing platform agnosticism and audience engagement consistent with the influencer celebrification framework.', 'Maintained all original content and structure while enhancing the document’s relevance with current platform dynamics critical to influencer celebrification.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, scholarly, and conceptual framework on influencer celebrification, focusing on how social media influencers acquire celebrity capital through generative, collaborative, and evaluative practices. However, it was not cited for the query "youtube influencer marketing trends" likely because it lacks a direct, concise, and up-to-date summary of specific YouTube influencer marketing trends, practical tips, or data-driven trend insights that are typically sought in such queries. The tone is academic and theoretical rather than trend-focused or practical, which may reduce its relevance for trend-centric queries. Additionally, the document is lengthy and dense, which may hinder quick extraction of actionable trend information. The competitor content, by contrast, explicitly lists and explains current influencer marketing trends, including YouTube-specific trends, with clear, numbered points and practical examples, making it more directly relevant and easier to cite for the query. To improve citation likelihood, the target content should be restructured to highlight and summarize key YouTube influencer marketing trends more explicitly and concisely, with a clearer focus on practical, current trends and data, while maintaining its authoritative framework.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content for clearer logical flow by grouping related concepts and practices under distinct sections (Conceptualization, Theoretical Framework, Findings, Practical Tactics, Platforms, Discussion).', 'Condensed and rephrased overlapping ideas to enhance clarity and focus on the core idea of influencer celebrification without removing any relevant content.', 'Streamlined platform-specific tactics and influencer platform reviews to better align with the generative, collaborative, and evaluative framework, improving extraction of actionable insights.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: how to monetize social media influence ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, scholarly, and nuanced framework on how social media influencers acquire and monetize celebrity capital through the process of influencer celebrification. However, it was not cited for the query "how to monetize social media influence" likely because it does not explicitly focus on direct monetization methods or straightforward 'how-to' guides for monetization. Instead, it emphasizes theoretical frameworks, influencer practices, platform strategies, and the roles of advertising practitioners in a more academic and conceptual tone. The content is dense, with a strong focus on the sociocultural and advertising ecosystem rather than practical monetization steps or clear, actionable monetization tactics. Additionally, the document's tone and structure are more academic and less aligned with typical commercial or marketing-focused content that generative engines often prioritize for monetization queries. The HTML/Markdown structure is well-organized but very detailed and lengthy, which might reduce its surface-level relevance for quick monetization answers. To improve citation likelihood, the content should be restructured or enhanced to highlight explicit monetization strategies, practical steps, and clearer calls to action related to monetizing social media influence, while maintaining its authoritative framework.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content to group all practical tactics and platform-specific strategies under a dedicated section for clearer guidance on monetizing social media influence.', 'Streamlined theoretical and conceptual sections to emphasize the core roles of audience engagement, platform agnosticism, and advertising practitioners without diluting original content.', 'Consolidated platform reviews and influencer profiles to better illustrate the ecosystem supporting influencer celebrification and its commercial implications.']
+Iteration 2/3
+✅ Success! Document cited for query: how to monetize social media influence
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: order celebrity status promotion package ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, well-structured, and authoritative exploration of influencer celebrification and the acquisition of celebrity capital by social media influencers. However, it was not cited for the query "order celebrity status promotion package" likely because it does not explicitly address or use the specific keywords "order," "celebrity status promotion package," or closely related commercial transactional language. The content is more academic and conceptual, focusing on processes, practices, and platform strategies rather than on direct promotional packages or ordering mechanisms. Additionally, the document's tone is formal and analytical rather than promotional or transactional, which may reduce its relevance for queries seeking practical ordering or package information. The HTML/Markdown structure is clear and semantic, so extraction issues are unlikely. To improve citation relevance, the content could be restructured or enhanced to explicitly include and highlight practical, transactional, or package-related information tied to celebrity status promotion, using clearer headings or summaries that match such queries.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reordered and rephrased sections to enhance logical flow and clarity while preserving all original content related to influencer celebrification.', 'Consolidated platform-specific engagement tactics under a dedicated section to improve relevance and accessibility.', 'Streamlined the conceptual and practical framework descriptions to emphasize the roles of audience engagement, platform agnosticism, and advertising practitioners without altering original meaning.']
+Iteration 2/3
+✅ Success! Document cited for query: order celebrity status promotion package
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: reviews of celebrity capital agencies ---
+Iteration 1/3
+✅ Success! Document cited for query: reviews of celebrity capital agencies
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: best tools to track celebrity status online ---
+Iteration 1/3
+✅ Success! Document cited for query: best tools to track celebrity status online
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_seed99_core_only_20251231-231140_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+=== Evaluation After Optimization ===
+
+========================================
+         Optimization Comparison
+========================================
+Baseline citation rate: 55.0% (11/20)
+Optimized citation rate: 70.0% (14/20)
+Improvement: +15.0% (+3 queries)
+========================================
+
+Compare log saved to: /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/compare_logs/ablation_seed99_core_only_20251231-231140_F4o8CSOgUYStpyWq5UIO2w_compare.json

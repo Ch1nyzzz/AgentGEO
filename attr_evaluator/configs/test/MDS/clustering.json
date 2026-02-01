@@ -1,0 +1,10 @@
+{
+    "split": "test",
+    "setting": "MDS",
+    "subtask": "clustering",
+    "model_name": "gpt-4.1-mini",
+    "n_demos": 0,
+    "num_retries": 10,
+    "temperature": 0.5,
+    "cut_surplus": true
+}

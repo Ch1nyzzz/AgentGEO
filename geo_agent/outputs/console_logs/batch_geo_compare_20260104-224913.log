@@ -1,0 +1,58 @@
+2026-01-04 22:49:20,872 - [INFO] - Query: linkedin profile page... | Competitors: 5 (full content, lengths: [10143, 3217, 7001]...) | Target idx: [6]
+2026-01-04 22:49:21,271 - [INFO] - Query: best courses for becoming a celebrity influencer... | Competitors: 5 (full content, lengths: [35541, 22995, 4490]...) | Target idx: [6]
+2026-01-04 22:49:21,286 - [INFO] - Query: courses on cultural analysis of celebrities... | Competitors: 5 (full content, lengths: [7797, 4476, 20672]...) | Target idx: [6]
+2026-01-04 22:49:21,317 - [INFO] - Query: influencer marketing software comparison... | Competitors: 5 (full content, lengths: [53076, 13802, 11671]...) | Target idx: [6]
+2026-01-04 22:49:21,333 - [INFO] - Query: celebrity capital management tools comparison... | Competitors: 5 (full content, lengths: [32989, 5974, 49366]...) | Target idx: [6]
+2026-01-04 22:49:21,346 - [INFO] - Query: influencer vs celebrity: how do they differ?... | Competitors: 5 (full content, lengths: [61526, 13328, 6522]...) | Target idx: [6]
+2026-01-04 22:49:21,358 - [INFO] - Query: history of online fame... | Competitors: 5 (full content, lengths: [80383, 22189, 18077]...) | Target idx: [6]
+2026-01-04 22:49:21,371 - [INFO] - Query: reviews of online fame courses... | Competitors: 5 (full content, lengths: [14940, 18808, 98257]...) | Target idx: [6]
+2026-01-04 22:49:21,385 - [INFO] - Query: subscribe to influencer growth service... | Competitors: 5 (full content, lengths: [63141, 43315, 10375]...) | Target idx: [6]
+2026-01-04 22:49:21,398 - [INFO] - Query: importance of celebrity capital for social media m... | Competitors: 5 (full content, lengths: [134154, 27778, 59442]...) | Target idx: [6]
+2026-01-04 22:49:21,411 - [INFO] - Query: comparison of celebrity influencer networks... | Competitors: 5 (full content, lengths: [101873, 16781, 89432]...) | Target idx: [6]
+2026-01-04 22:49:21,424 - [INFO] - Query: celebrification seminars 2023... | Competitors: 5 (full content, lengths: [1840, 426318, 11668]...) | Target idx: [6]
+2026-01-04 22:49:21,444 - [INFO] - Query: celebrity status youtube channel... | Competitors: 5 (full content, lengths: [7256, 6377, 36799]...) | Target idx: [6]
+2026-01-04 22:49:21,646 - [ERROR] - Failed to fetch HTML for b4425096c350b1ad6884b6ba2573dc87: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+2026-01-04 22:49:21,646 - [WARNING] - Empty HTML content for b4425096c350b1ad6884b6ba2573dc87, skipping.
+2026-01-04 22:49:22,130 - [ERROR] - Failed to fetch HTML for e780bf4ebdd0f0d08500d99eaa6629dd: HTTPSConnectionPool(host='chatnoir-webcontent.chatnoir.eu', port=443): Max retries exceeded with url: /?uuid=e780bf4ebdd0f0d08500d99eaa6629dd&index=cw22&raw=&no-rewrite= (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)')))
+2026-01-04 22:49:22,130 - [WARNING] - Empty HTML content for e780bf4ebdd0f0d08500d99eaa6629dd, skipping.
+2026-01-04 22:49:22,130 - [INFO] - Query: youtube channel of pewdiepie... | Competitors: 5 (full content, lengths: [357081, 10278, 17222]...) | Target idx: [6]
+Random seed set to: 42
+============================================================
+         Batch GEO Configuration
+============================================================
+  Batch size: 10
+  Paragraphs per orchestra: 2
+  Merge strategy: llm_merge
+  Max concurrency: 16
+============================================================
+
+=== Baseline Evaluation ===
+Traceback (most recent call last):
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Batch_geo/main.py", line 303, in <module>
+    main()
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Batch_geo/main.py", line 299, in main
+    asyncio.run(run_async())
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Batch_geo/main.py", line 230, in run_async
+    baseline_result = await eval_agent.evaluate_page_async(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 656, in evaluate_page_async
+    query, cited = await coro
+                   ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/tasks.py", line 631, in _wait_for_one
+    return f.result()  # May raise f.exception().
+           ^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 649, in evaluate_one
+    citation_result = await self.generator.generate_and_check(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 81, in generate_and_check
+    raise ValueError(
+ValueError: competitor_contents length 3 is less than retrieved_docs length 5.

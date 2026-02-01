@@ -1,0 +1,846 @@
+2026-01-05 23:40:41,654 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:41,655 - [INFO] - Query: best online courses for supervision skills... | Competitors: 10 (full content, lengths: [22541, 12173, 6277]...) | Target idx: [11]
+2026-01-05 23:40:42,080 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:42,080 - [INFO] - Query: best governance training programs for corporate tr... | Competitors: 10 (full content, lengths: [21162, 9366, 32324]...) | Target idx: [11]
+2026-01-05 23:40:42,957 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:42,957 - [INFO] - Query: best management training programs for corporate tr... | Competitors: 10 (full content, lengths: [19979, 20565, 10935]...) | Target idx: [11]
+2026-01-05 23:40:43,336 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:43,336 - [INFO] - Query: world bank governance resources... | Competitors: 10 (full content, lengths: [4014, 42543, 40223]...) | Target idx: [11]
+2026-01-05 23:40:51,364 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:51,386 - [INFO] - Generated answer length: 3766
+2026-01-05 23:40:51,387 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 8, 9, 10]
+2026-01-05 23:40:52,079 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:52,080 - [INFO] - Query: best books on management vs administration for tra... | Competitors: 10 (full content, lengths: [21646, 42979, 19736]...) | Target idx: [11]
+2026-01-05 23:40:55,310 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:55,312 - [INFO] - Generated answer length: 3622
+2026-01-05 23:40:55,312 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:40:55,815 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:55,820 - [INFO] - Generated answer length: 4152
+2026-01-05 23:40:55,820 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 7, 9, 10]
+2026-01-05 23:40:55,919 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:55,919 - [INFO] - Query: understanding management vs administration in busi... | Competitors: 10 (full content, lengths: [12041, 16403, 11743]...) | Target idx: [11]
+2026-01-05 23:40:56,948 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:56,964 - [INFO] - Generated answer length: 4174
+2026-01-05 23:40:56,965 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 5, 6, 8, 9, 10]
+2026-01-05 23:40:57,636 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:57,636 - [INFO] - Query: buy hr oversight tools... | Competitors: 10 (full content, lengths: [6284, 12609, 30956]...) | Target idx: [11]
+2026-01-05 23:40:59,470 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:59,470 - [INFO] - Query: what is the difference between management and admi... | Competitors: 10 (full content, lengths: [25856, 8905, 16872]...) | Target idx: [11]
+2026-01-05 23:41:02,797 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:02,801 - [INFO] - Generated answer length: 4562
+2026-01-05 23:41:02,801 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 6, 8, 11]
+2026-01-05 23:41:03,397 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:03,397 - [INFO] - Query: linkedin page for supervision training programs... | Competitors: 10 (full content, lengths: [13824, 32845, 22113]...) | Target idx: [11]
+2026-01-05 23:41:07,994 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:08,053 - [INFO] - Generated answer length: 3613
+2026-01-05 23:41:08,054 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 9, 10]
+2026-01-05 23:41:08,635 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:08,643 - [INFO] - Generated answer length: 2347
+2026-01-05 23:41:08,643 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 7, 9, 10]
+2026-01-05 23:41:10,029 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:10,029 - [INFO] - Query: buy corporate governance training materials... | Competitors: 10 (full content, lengths: [30006, 30006, 48271]...) | Target idx: [11]
+2026-01-05 23:41:10,552 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:10,553 - [INFO] - Query: difference between management and administration i... | Competitors: 10 (full content, lengths: [21370, 30469, 16741]...) | Target idx: [11]
+2026-01-05 23:41:11,186 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:11,189 - [INFO] - Generated answer length: 3100
+2026-01-05 23:41:11,189 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [2, 3, 11]
+2026-01-05 23:41:11,815 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:11,815 - [INFO] - Query: harvard business review leadership articles... | Competitors: 10 (full content, lengths: [250490, 7933, 5160]...) | Target idx: [11]
+2026-01-05 23:41:14,798 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:14,799 - [INFO] - Generated answer length: 4505
+2026-01-05 23:41:14,799 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 6, 7, 11]
+2026-01-05 23:41:16,514 - [WARNING] - No raw_content for Tavily result b1e21d5db2bd45b6da6035ecd1c85ee0, skipping.
+2026-01-05 23:41:16,514 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:16,515 - [INFO] - Query: difference between management and administration i... | Competitors: 10 (full content, lengths: [37050, 22983, 26435]...) | Target idx: [11]
+2026-01-05 23:41:22,467 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:22,469 - [INFO] - Generated answer length: 4739
+2026-01-05 23:41:22,470 - [INFO] - Citation check: target=[11] cited=False  | All citations: [2, 3, 4, 5, 6, 7]
+2026-01-05 23:41:24,754 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:24,757 - [INFO] - Generated answer length: 2466
+2026-01-05 23:41:24,757 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 5, 7, 11]
+2026-01-05 23:41:24,833 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:24,833 - [INFO] - Query: buy management and administration comparison textb... | Competitors: 10 (full content, lengths: [5711, 23413, 29844]...) | Target idx: [11]
+2026-01-05 23:41:25,344 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:25,344 - [INFO] - Query: what is corporate governance in business... | Competitors: 10 (full content, lengths: [17492, 14097, 27056]...) | Target idx: [11]
+2026-01-05 23:41:25,582 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:25,585 - [INFO] - Generated answer length: 4122
+2026-01-05 23:41:25,585 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 5, 6, 9, 10, 11]
+2026-01-05 23:41:26,266 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:26,266 - [INFO] - Query: best books on management vs administration... | Competitors: 10 (full content, lengths: [15486, 71463, 9953]...) | Target idx: [11]
+2026-01-05 23:41:26,323 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:26,324 - [INFO] - Generated answer length: 3964
+2026-01-05 23:41:26,324 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:41:26,914 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:26,915 - [INFO] - Query: best books on corporate governance for aspiring ma... | Competitors: 10 (full content, lengths: [10825, 26760, 14132]...) | Target idx: [11]
+2026-01-05 23:41:31,177 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:31,183 - [INFO] - Generated answer length: 1683
+2026-01-05 23:41:31,183 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [2, 3, 8, 11]
+2026-01-05 23:41:32,558 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:32,560 - [INFO] - Generated answer length: 2274
+2026-01-05 23:41:32,560 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 9]
+2026-01-05 23:41:33,084 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:33,085 - [INFO] - Query: best oversight software for small businesses... | Competitors: 10 (full content, lengths: [11981, 19117, 30476]...) | Target idx: [11]
+2026-01-05 23:41:33,556 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:33,584 - [INFO] - Generated answer length: 2665
+2026-01-05 23:41:33,584 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 8, 10, 11]
+2026-01-05 23:41:34,243 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:34,243 - [INFO] - Query: difference between governance and management in bu... | Competitors: 10 (full content, lengths: [2862, 3777, 17587]...) | Target idx: [11]
+2026-01-05 23:41:34,312 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:34,312 - [INFO] - Query: buy management and administration guide for small ... | Competitors: 10 (full content, lengths: [11369, 20493, 264107]...) | Target idx: [11]
+2026-01-05 23:41:40,892 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:40,895 - [INFO] - Generated answer length: 3383
+2026-01-05 23:41:40,895 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:41:41,049 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:41,051 - [INFO] - Generated answer length: 4938
+2026-01-05 23:41:41,051 - [INFO] - Citation check: target=[11] cited=False  | All citations: [2, 3, 5, 6, 8, 9, 10]
+2026-01-05 23:41:41,396 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:41,397 - [INFO] - Query: what are the key responsibilities of an administra... | Competitors: 10 (full content, lengths: [23918, 4461, 2519]...) | Target idx: [11]
+2026-01-05 23:41:41,485 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:41,485 - [INFO] - Query: harvard business school administration page... | Competitors: 10 (full content, lengths: [4758, 1773, 3806]...) | Target idx: [11]
+2026-01-05 23:41:44,788 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:44,790 - [INFO] - Generated answer length: 3275
+2026-01-05 23:41:44,790 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 5, 6, 9]
+2026-01-05 23:41:45,820 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:45,824 - [INFO] - Generated answer length: 2813
+2026-01-05 23:41:45,824 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 6, 7, 9, 10]
+2026-01-05 23:41:46,500 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:46,500 - [INFO] - Query: what is the role of oversight in hr management... | Competitors: 10 (full content, lengths: [5147, 4413, 51619]...) | Target idx: [11]
+2026-01-05 23:41:47,438 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:47,438 - [INFO] - Query: best leadership development books for trainers... | Competitors: 10 (full content, lengths: [13328, 5268, 25357]...) | Target idx: [11]
+2026-01-05 23:41:47,679 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:47,681 - [INFO] - Generated answer length: 2083
+2026-01-05 23:41:47,681 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 7, 8, 9]
+2026-01-05 23:41:50,186 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:50,187 - [INFO] - Query: buy management and administration comparison guide... | Competitors: 10 (full content, lengths: [5155, 15259, 16872]...) | Target idx: [11]
+2026-01-05 23:41:50,951 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:50,953 - [INFO] - Generated answer length: 3209
+2026-01-05 23:41:50,954 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 6, 7, 8, 9, 10]
+2026-01-05 23:41:51,637 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:51,637 - [INFO] - Query: best management software for small businesses... | Competitors: 10 (full content, lengths: [35022, 16913, 31692]...) | Target idx: [11]
+2026-01-05 23:42:00,874 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:00,879 - [INFO] - Generated answer length: 5057
+2026-01-05 23:42:00,879 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 4, 5, 7, 8, 9, 10, 11]
+2026-01-05 23:42:01,429 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:01,437 - [INFO] - Generated answer length: 2771
+2026-01-05 23:42:01,437 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 8]
+2026-01-05 23:42:02,698 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:02,698 - [INFO] - Query: best books on management and administration compar... | Competitors: 10 (full content, lengths: [12243, 15014, 18040]...) | Target idx: [11]
+2026-01-05 23:42:03,832 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:03,833 - [INFO] - Query: best governance software for small businesses... | Competitors: 10 (full content, lengths: [189456, 33135, 18490]...) | Target idx: [11]
+2026-01-05 23:42:08,473 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:08,478 - [INFO] - Generated answer length: 4566
+2026-01-05 23:42:08,479 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:42:09,077 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:09,077 - [INFO] - Query: best supervision training programs for hr professi... | Competitors: 10 (full content, lengths: [17955, 21493, 5480]...) | Target idx: [11]
+2026-01-05 23:42:14,221 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:14,224 - [INFO] - Generated answer length: 3584
+2026-01-05 23:42:14,224 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 5, 10]
+2026-01-05 23:42:16,066 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:16,066 - [INFO] - Query: best management textbooks for business students... | Competitors: 10 (full content, lengths: [17923, 45942, 7889]...) | Target idx: [11]
+2026-01-05 23:42:20,484 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:20,487 - [INFO] - Generated answer length: 4770
+2026-01-05 23:42:20,487 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:42:21,460 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:21,462 - [INFO] - Generated answer length: 4784
+2026-01-05 23:42:21,462 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 6, 7, 8, 9, 10]
+2026-01-05 23:42:22,612 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:22,613 - [INFO] - Query: best books on corporate oversight... | Competitors: 10 (full content, lengths: [14132, 26760, 33528]...) | Target idx: [11]
+2026-01-05 23:42:23,167 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:23,168 - [INFO] - Query: what is the difference between management and admi... | Competitors: 10 (full content, lengths: [7956, 26435, 29805]...) | Target idx: [11]
+2026-01-05 23:42:25,318 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:25,321 - [INFO] - Generated answer length: 3471
+2026-01-05 23:42:25,321 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:42:26,179 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:26,180 - [INFO] - Query: buy business administration books on amazon... | Competitors: 10 (full content, lengths: [463048, 318741, 405297]...) | Target idx: [11]
+2026-01-05 23:42:27,890 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:27,893 - [INFO] - Generated answer length: 4664
+2026-01-05 23:42:27,893 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 6, 7, 10, 11]
+2026-01-05 23:42:28,497 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:28,497 - [INFO] - Query: best books on management and administration roles... | Competitors: 10 (full content, lengths: [9953, 31255, 9574]...) | Target idx: [11]
+2026-01-05 23:42:30,612 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:30,615 - [INFO] - Generated answer length: 1172
+2026-01-05 23:42:30,615 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 7, 8, 10]
+2026-01-05 23:42:31,301 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:31,301 - [INFO] - Query: best administration software for corporate trainer... | Competitors: 10 (full content, lengths: [41885, 46172, 24316]...) | Target idx: [11]
+2026-01-05 23:42:32,599 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:32,600 - [INFO] - Generated answer length: 2145
+2026-01-05 23:42:32,600 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 4, 5, 6, 7, 9, 10, 11]
+2026-01-05 23:42:33,174 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:33,175 - [INFO] - Query: difference between management and administration... | Competitors: 10 (full content, lengths: [28411, 17871, 16872]...) | Target idx: [11]
+2026-01-05 23:42:41,822 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:41,826 - [INFO] - Generated answer length: 4781
+2026-01-05 23:42:41,826 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 6, 7, 8, 10]
+2026-01-05 23:42:42,579 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:42,580 - [INFO] - Query: buy business administration textbooks... | Competitors: 10 (full content, lengths: [9776, 463048, 17884]...) | Target idx: [11]
+2026-01-05 23:42:43,125 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:43,127 - [INFO] - Generated answer length: 3253
+2026-01-05 23:42:43,127 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [2, 3, 5, 9, 10, 11]
+2026-01-05 23:42:43,722 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:43,723 - [INFO] - Query: subscribe to management vs administration newslett... | Competitors: 10 (full content, lengths: [6537, 26435, 8905]...) | Target idx: [11]
+2026-01-05 23:42:44,484 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:44,486 - [INFO] - Generated answer length: 5049
+2026-01-05 23:42:44,486 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 6, 8, 9, 10, 11]
+2026-01-05 23:42:46,146 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:46,148 - [INFO] - Generated answer length: 4830
+2026-01-05 23:42:46,148 - [INFO] - Citation check: target=[11] cited=False  | All citations: []
+2026-01-05 23:42:46,877 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:46,878 - [INFO] - Query: best books on management and administration roles ... | Competitors: 10 (full content, lengths: [19715, 21253, 42979]...) | Target idx: [11]
+2026-01-05 23:42:49,234 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:49,234 - [INFO] - Query: buy management and administration books online... | Competitors: 10 (full content, lengths: [463048, 36473, 31195]...) | Target idx: [11]
+2026-01-05 23:42:49,757 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:49,761 - [INFO] - Generated answer length: 2222
+2026-01-05 23:42:49,761 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 8, 9, 10]
+2026-01-05 23:42:50,362 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:50,362 - [INFO] - Query: buy online course on management and administration... | Competitors: 10 (full content, lengths: [17871, 16741, 14879]...) | Target idx: [11]
+2026-01-05 23:42:52,008 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:52,011 - [INFO] - Generated answer length: 3094
+2026-01-05 23:42:52,011 - [INFO] - Citation check: target=[11] cited=False  | All citations: []
+2026-01-05 23:42:52,615 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:52,615 - [INFO] - Query: buy hr administration training course... | Competitors: 10 (full content, lengths: [13011, 5195, 78066]...) | Target idx: [11]
+2026-01-05 23:42:56,359 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:56,360 - [INFO] - Generated answer length: 2020
+2026-01-05 23:42:56,360 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+2026-01-05 23:42:58,742 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:42:58,743 - [INFO] - Generated answer length: 4173
+2026-01-05 23:42:58,743 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 7, 8]
+2026-01-05 23:42:59,346 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:42:59,346 - [INFO] - Query: best oversight tools for corporate training... | Competitors: 10 (full content, lengths: [28467, 23615, 22741]...) | Target idx: [11]
+2026-01-05 23:43:00,215 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:43:00,216 - [INFO] - Query: best books on management vs administration for ent... | Competitors: 10 (full content, lengths: [6431, 24077, 16212]...) | Target idx: [11]
+2026-01-05 23:43:08,944 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:08,947 - [INFO] - Generated answer length: 5148
+2026-01-05 23:43:08,947 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 9, 10, 11]
+2026-01-05 23:43:09,570 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:09,579 - [INFO] - Generated answer length: 4204
+2026-01-05 23:43:09,579 - [INFO] - Citation check: target=[11] cited=False  | All citations: [2, 4, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:43:11,462 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:43:11,464 - [INFO] - Query: wikipedia management vs administration... | Competitors: 10 (full content, lengths: [22983, 10971, 16403]...) | Target idx: [11]
+2026-01-05 23:43:11,493 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:43:11,493 - [INFO] - Query: buy governance training course for entrepreneurs... | Competitors: 10 (full content, lengths: [11407, 27785, 34982]...) | Target idx: [11]
+2026-01-05 23:43:18,567 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:18,570 - [INFO] - Generated answer length: 4981
+2026-01-05 23:43:18,570 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 4, 6, 8, 9, 11]
+2026-01-05 23:43:19,177 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:43:19,177 - [INFO] - Query: what are the key principles of effective administr... | Competitors: 10 (full content, lengths: [16591, 12485, 13588]...) | Target idx: [11]
+2026-01-05 23:43:19,378 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:19,382 - [INFO] - Generated answer length: 4237
+2026-01-05 23:43:19,383 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 8]
+2026-01-05 23:43:21,235 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:43:21,236 - [INFO] - Query: how to define management roles in a company... | Competitors: 10 (full content, lengths: [7313, 16665, 12981]...) | Target idx: [11]
+2026-01-05 23:43:21,831 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:21,835 - [INFO] - Generated answer length: 4349
+2026-01-05 23:43:21,835 - [INFO] - Citation check: target=[11] cited=False  | All citations: [2, 5, 6, 7, 8, 10]
+2026-01-05 23:43:22,222 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:22,225 - [INFO] - Generated answer length: 3708
+2026-01-05 23:43:22,225 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 6, 8, 11]
+2026-01-05 23:43:22,427 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:43:22,427 - [INFO] - Query: best leadership training programs for hr professio... | Competitors: 10 (full content, lengths: [18833, 6825, 8928]...) | Target idx: [11]
+2026-01-05 23:43:22,823 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:43:22,823 - [INFO] - Query: john maxwell leadership blog... | Competitors: 10 (full content, lengths: [32838, 9235, 22799]...) | Target idx: [11]
+2026-01-05 23:43:31,439 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:31,440 - [INFO] - Generated answer length: 2173
+2026-01-05 23:43:31,441 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 8, 10]
+2026-01-05 23:43:31,583 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:31,585 - [INFO] - Generated answer length: 3820
+2026-01-05 23:43:31,585 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 7, 8, 9, 10]
+2026-01-05 23:43:37,004 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:37,009 - [INFO] - Generated answer length: 5051
+2026-01-05 23:43:37,009 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 9]
+2026-01-05 23:43:38,189 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:38,193 - [INFO] - Generated answer length: 4998
+2026-01-05 23:43:38,193 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 3, 4, 6, 7, 10]
+2026-01-05 23:43:39,951 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:39,954 - [INFO] - [SuggestionCollector] Processing query: best books on management oversight...
+2026-01-05 23:43:39,954 - [INFO] - [SuggestionCollector] Processing query: top courses for management vs administration...
+2026-01-05 23:43:39,954 - [INFO] - [SuggestionCollector] Processing query: harvard business review management articles...
+2026-01-05 23:43:39,955 - [INFO] - [SuggestionCollector] Processing query: harvard business review roles of management and ad...
+2026-01-05 23:43:40,617 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:43:40,618 - [INFO] - [SuggestionCollector] Calling collect_for_query: best books on management oversight
+2026-01-05 23:43:40,618 - [INFO] - [SuggestionCollector] Calling generate_and_check for: best books on management oversight
+2026-01-05 23:43:40,619 - [INFO] - Query: best books on management oversight... | Competitors: 10 (full content, lengths: [12177, 14418, 104124]...) | Target idx: [11]
+2026-01-05 23:43:40,697 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:43:40,697 - [INFO] - [SuggestionCollector] Calling collect_for_query: harvard business review roles of management and ad
+2026-01-05 23:43:40,697 - [INFO] - [SuggestionCollector] Calling generate_and_check for: harvard business review roles of management and ad
+2026-01-05 23:43:40,697 - [INFO] - Query: harvard business review roles of management and ad... | Competitors: 10 (full content, lengths: [25547, 116924, 2026]...) | Target idx: [11]
+2026-01-05 23:43:41,549 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:43:41,549 - [INFO] - [SuggestionCollector] Calling collect_for_query: harvard business review management articles
+2026-01-05 23:43:41,550 - [INFO] - [SuggestionCollector] Calling generate_and_check for: harvard business review management articles
+2026-01-05 23:43:41,550 - [INFO] - Query: harvard business review management articles... | Competitors: 10 (full content, lengths: [21470, 11393, 2180]...) | Target idx: [11]
+2026-01-05 23:43:41,733 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:43:41,733 - [INFO] - [SuggestionCollector] Calling collect_for_query: top courses for management vs administration
+2026-01-05 23:43:41,733 - [INFO] - [SuggestionCollector] Calling generate_and_check for: top courses for management vs administration
+2026-01-05 23:43:41,733 - [INFO] - Query: top courses for management vs administration... | Competitors: 10 (full content, lengths: [11153, 11743, 16741]...) | Target idx: [11]
+2026-01-05 23:43:48,445 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:48,449 - [INFO] - Generated answer length: 2248
+2026-01-05 23:43:48,449 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+2026-01-05 23:43:48,449 - [INFO] - [SuggestionCollector] Citation result: is_cited=True for: harvard business review management articles
+2026-01-05 23:43:48,449 - [INFO] - [SuggestionCollector] Already cited, skipping suggestions for: harvard business review management articles
+2026-01-05 23:43:48,450 - [INFO] - [SuggestionCollector] Processing query: world bank governance page...
+2026-01-05 23:43:49,082 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:49,083 - [INFO] - Generated answer length: 3083
+2026-01-05 23:43:49,083 - [INFO] - Citation check: target=[11] cited=False  | All citations: []
+2026-01-05 23:43:49,083 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: harvard business review roles of management and ad
+2026-01-05 23:43:49,083 - [WARNING] - No valid cited indices, skipping this iteration.
+2026-01-05 23:43:51,113 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:43:51,113 - [INFO] - [SuggestionCollector] Calling collect_for_query: world bank governance page
+2026-01-05 23:43:51,113 - [INFO] - [SuggestionCollector] Calling generate_and_check for: world bank governance page
+2026-01-05 23:43:51,113 - [INFO] - Query: world bank governance page... | Competitors: 10 (full content, lengths: [42543, 17046, 6671]...) | Target idx: [11]
+2026-01-05 23:43:53,129 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:53,189 - [INFO] - Generated answer length: 3637
+2026-01-05 23:43:53,189 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 8, 9, 10]
+2026-01-05 23:43:53,189 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: best books on management oversight
+2026-01-05 23:43:54,409 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:54,416 - [INFO] - Generated answer length: 3428
+2026-01-05 23:43:54,416 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 7, 9, 10]
+2026-01-05 23:43:54,417 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: top courses for management vs administration
+2026-01-05 23:43:57,906 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:58,515 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:43:58,516 - [INFO] - Generated answer length: 2318
+2026-01-05 23:43:58,516 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:43:58,516 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: world bank governance page
+2026-01-05 23:44:04,844 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:12,579 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:12,584 - [WARNING] - Parse attempt 1/3 failed: Failed to parse AnalysisResult from completion null. Got: 1 validation error for AnalysisResult
+  Input should be a valid dictionary or instance of AnalysisResult [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-01-05 23:44:14,007 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:14,936 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:15,606 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:22,055 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:32,073 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:33,709 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:33,714 - [INFO] - [SuggestionCollector] Processing query: buy management and administration course for entre...
+2026-01-05 23:44:33,715 - [INFO] - [SuggestionCollector] Processing query: management vs administration workshops...
+2026-01-05 23:44:33,716 - [INFO] - [SuggestionCollector] Processing query: buy oversight software for training management...
+2026-01-05 23:44:33,717 - [INFO] - [SuggestionCollector] Processing query: buy 'the art of supervision' book...
+2026-01-05 23:44:36,713 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:44:36,713 - [INFO] - [SuggestionCollector] Calling collect_for_query: management vs administration workshops
+2026-01-05 23:44:36,713 - [INFO] - [SuggestionCollector] Calling generate_and_check for: management vs administration workshops
+2026-01-05 23:44:36,713 - [INFO] - Query: management vs administration workshops... | Competitors: 10 (full content, lengths: [21439, 1984, 17871]...) | Target idx: [11]
+2026-01-05 23:44:36,732 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:44:36,732 - [INFO] - [SuggestionCollector] Calling collect_for_query: buy 'the art of supervision' book
+2026-01-05 23:44:36,732 - [INFO] - [SuggestionCollector] Calling generate_and_check for: buy 'the art of supervision' book
+2026-01-05 23:44:36,732 - [INFO] - Query: buy 'the art of supervision' book... | Competitors: 10 (full content, lengths: [125807, 20368, 20825]...) | Target idx: [11]
+2026-01-05 23:44:38,329 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:44:38,329 - [INFO] - [SuggestionCollector] Calling collect_for_query: buy management and administration course for entre
+2026-01-05 23:44:38,329 - [INFO] - [SuggestionCollector] Calling generate_and_check for: buy management and administration course for entre
+2026-01-05 23:44:38,329 - [INFO] - Query: buy management and administration course for entre... | Competitors: 10 (full content, lengths: [4014, 6013, 6585]...) | Target idx: [11]
+2026-01-05 23:44:38,529 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:44:38,529 - [INFO] - [SuggestionCollector] Calling collect_for_query: buy oversight software for training management
+2026-01-05 23:44:38,529 - [INFO] - [SuggestionCollector] Calling generate_and_check for: buy oversight software for training management
+2026-01-05 23:44:38,529 - [INFO] - Query: buy oversight software for training management... | Competitors: 10 (full content, lengths: [28467, 39308, 24219]...) | Target idx: [11]
+2026-01-05 23:44:47,094 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:47,098 - [INFO] - Generated answer length: 2521
+2026-01-05 23:44:47,098 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 5, 8, 9, 10]
+2026-01-05 23:44:47,098 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: buy 'the art of supervision' book
+2026-01-05 23:44:47,320 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:47,322 - [INFO] - Generated answer length: 3602
+2026-01-05 23:44:47,322 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 3, 5, 6]
+2026-01-05 23:44:47,322 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: management vs administration workshops
+2026-01-05 23:44:48,683 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:48,685 - [INFO] - Generated answer length: 3749
+2026-01-05 23:44:48,685 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 5, 6, 8, 9]
+2026-01-05 23:44:48,686 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: buy oversight software for training management
+2026-01-05 23:44:48,930 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:48,934 - [INFO] - Generated answer length: 4042
+2026-01-05 23:44:48,934 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 6, 7, 8, 9, 10]
+2026-01-05 23:44:48,934 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: buy management and administration course for entre
+2026-01-05 23:44:52,823 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:56,405 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:56,727 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:44:58,273 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:45:08,347 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:45:08,349 - [INFO] - [SuggestionCollector] Processing query: harvard business review article on management vs a...
+2026-01-05 23:45:09,411 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:45:09,972 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:45:09,972 - [INFO] - [SuggestionCollector] Calling collect_for_query: harvard business review article on management vs a
+2026-01-05 23:45:09,972 - [INFO] - [SuggestionCollector] Calling generate_and_check for: harvard business review article on management vs a
+2026-01-05 23:45:09,972 - [INFO] - Query: harvard business review article on management vs a... | Competitors: 10 (full content, lengths: [12780, 17771, 53730]...) | Target idx: [11]
+2026-01-05 23:45:10,054 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:45:12,348 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:45:22,927 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:45:22,937 - [INFO] - Generated answer length: 4627
+2026-01-05 23:45:22,938 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+2026-01-05 23:45:22,938 - [INFO] - [SuggestionCollector] Citation result: is_cited=True for: harvard business review article on management vs a
+2026-01-05 23:45:22,938 - [INFO] - [SuggestionCollector] Already cited, skipping suggestions for: harvard business review article on management vs a
+2026-01-05 23:45:44,280 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:45:45,685 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:45:45,688 - [INFO] - [SuggestionCollector] Processing query: effective leadership strategies for corporate trai...
+2026-01-05 23:45:45,689 - [INFO] - [SuggestionCollector] Processing query: difference between management and administration r...
+2026-01-05 23:45:45,690 - [INFO] - [SuggestionCollector] Processing query: best books on management vs administration for sma...
+2026-01-05 23:45:45,691 - [INFO] - [SuggestionCollector] Processing query: harvard business review article on supervision...
+2026-01-05 23:45:49,249 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:45:49,249 - [INFO] - [SuggestionCollector] Calling collect_for_query: best books on management vs administration for sma
+2026-01-05 23:45:49,250 - [INFO] - [SuggestionCollector] Calling generate_and_check for: best books on management vs administration for sma
+2026-01-05 23:45:49,250 - [INFO] - Query: best books on management vs administration for sma... | Competitors: 10 (full content, lengths: [7089, 27361, 222260]...) | Target idx: [11]
+2026-01-05 23:45:52,052 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:45:52,052 - [INFO] - [SuggestionCollector] Calling collect_for_query: harvard business review article on supervision
+2026-01-05 23:45:52,052 - [INFO] - [SuggestionCollector] Calling generate_and_check for: harvard business review article on supervision
+2026-01-05 23:45:52,052 - [INFO] - Query: harvard business review article on supervision... | Competitors: 10 (full content, lengths: [1888, 2085, 2065]...) | Target idx: [11]
+2026-01-05 23:45:52,203 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:45:52,203 - [INFO] - [SuggestionCollector] Calling collect_for_query: effective leadership strategies for corporate trai
+2026-01-05 23:45:52,204 - [INFO] - [SuggestionCollector] Calling generate_and_check for: effective leadership strategies for corporate trai
+2026-01-05 23:45:52,204 - [INFO] - Query: effective leadership strategies for corporate trai... | Competitors: 10 (full content, lengths: [9342, 10665, 12589]...) | Target idx: [11]
+2026-01-05 23:45:52,707 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:45:52,707 - [INFO] - [SuggestionCollector] Calling collect_for_query: difference between management and administration r
+2026-01-05 23:45:52,707 - [INFO] - [SuggestionCollector] Calling generate_and_check for: difference between management and administration r
+2026-01-05 23:45:52,707 - [INFO] - Query: difference between management and administration r... | Competitors: 10 (full content, lengths: [16403, 37050, 16872]...) | Target idx: [11]
+2026-01-05 23:45:59,444 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:45:59,446 - [INFO] - Generated answer length: 2992
+2026-01-05 23:45:59,446 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 9]
+2026-01-05 23:45:59,446 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: harvard business review article on supervision
+2026-01-05 23:46:02,019 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:46:02,020 - [INFO] - Generated answer length: 4144
+2026-01-05 23:46:02,020 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 6, 7, 9]
+2026-01-05 23:46:02,020 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: effective leadership strategies for corporate trai
+2026-01-05 23:46:02,585 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:46:02,589 - [INFO] - Generated answer length: 3770
+2026-01-05 23:46:02,589 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 7, 9, 11]
+2026-01-05 23:46:02,590 - [INFO] - [SuggestionCollector] Citation result: is_cited=True for: best books on management vs administration for sma
+2026-01-05 23:46:02,590 - [INFO] - [SuggestionCollector] Already cited, skipping suggestions for: best books on management vs administration for sma
+2026-01-05 23:46:02,590 - [INFO] - [SuggestionCollector] Processing query: buy management books for beginners...
+2026-01-05 23:46:03,296 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:46:03,301 - [INFO] - Generated answer length: 2557
+2026-01-05 23:46:03,301 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 4, 11]
+2026-01-05 23:46:03,301 - [INFO] - [SuggestionCollector] Citation result: is_cited=True for: difference between management and administration r
+2026-01-05 23:46:03,301 - [INFO] - [SuggestionCollector] Already cited, skipping suggestions for: difference between management and administration r
+2026-01-05 23:46:04,014 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:46:06,216 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:46:06,224 - [WARNING] - Parse attempt 1/3 failed: Failed to parse AnalysisResult from completion null. Got: 1 validation error for AnalysisResult
+  Input should be a valid dictionary or instance of AnalysisResult [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-01-05 23:46:06,254 - [WARNING] - No raw_content for Tavily result 6a16acad482bca2251dd6b318b50bcf8, skipping.
+2026-01-05 23:46:06,254 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:46:06,254 - [INFO] - [SuggestionCollector] Calling collect_for_query: buy management books for beginners
+2026-01-05 23:46:06,254 - [INFO] - [SuggestionCollector] Calling generate_and_check for: buy management books for beginners
+2026-01-05 23:46:06,254 - [INFO] - Query: buy management books for beginners... | Competitors: 10 (full content, lengths: [30044, 13798, 12543]...) | Target idx: [11]
+2026-01-05 23:46:10,308 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:46:21,869 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:46:21,872 - [INFO] - Generated answer length: 3881
+2026-01-05 23:46:21,872 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 6, 7, 8, 9]
+2026-01-05 23:46:21,872 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: buy management books for beginners
+2026-01-05 23:46:22,344 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:46:27,172 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:46:29,119 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:46:45,052 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:47:07,746 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:47:09,333 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:47:09,335 - [INFO] - [SuggestionCollector] Processing query: difference between supervision and management in s...
+2026-01-05 23:47:09,336 - [INFO] - [SuggestionCollector] Processing query: what are the roles of management and administratio...
+2026-01-05 23:47:09,337 - [INFO] - [SuggestionCollector] Processing query: best oversight software for hr departments...
+2026-01-05 23:47:09,338 - [INFO] - [SuggestionCollector] Processing query: buy management vs administration course online...
+2026-01-05 23:47:11,757 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:47:11,757 - [INFO] - [SuggestionCollector] Calling collect_for_query: best oversight software for hr departments
+2026-01-05 23:47:11,757 - [INFO] - [SuggestionCollector] Calling generate_and_check for: best oversight software for hr departments
+2026-01-05 23:47:11,757 - [INFO] - Query: best oversight software for hr departments... | Competitors: 10 (full content, lengths: [65433, 11732, 15367]...) | Target idx: [11]
+2026-01-05 23:47:13,821 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:47:13,822 - [INFO] - [SuggestionCollector] Calling collect_for_query: what are the roles of management and administratio
+2026-01-05 23:47:13,822 - [INFO] - [SuggestionCollector] Calling generate_and_check for: what are the roles of management and administratio
+2026-01-05 23:47:13,822 - [INFO] - Query: what are the roles of management and administratio... | Competitors: 10 (full content, lengths: [16498, 6682, 8069]...) | Target idx: [11]
+2026-01-05 23:47:16,586 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:47:16,586 - [INFO] - [SuggestionCollector] Calling collect_for_query: buy management vs administration course online
+2026-01-05 23:47:16,586 - [INFO] - [SuggestionCollector] Calling generate_and_check for: buy management vs administration course online
+2026-01-05 23:47:16,586 - [INFO] - Query: buy management vs administration course online... | Competitors: 10 (full content, lengths: [17871, 16741, 18738]...) | Target idx: [11]
+2026-01-05 23:47:21,689 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:47:21,690 - [INFO] - [SuggestionCollector] Calling collect_for_query: difference between supervision and management in s
+2026-01-05 23:47:21,690 - [INFO] - [SuggestionCollector] Calling generate_and_check for: difference between supervision and management in s
+2026-01-05 23:47:21,690 - [INFO] - Query: difference between supervision and management in s... | Competitors: 10 (full content, lengths: [8645, 18090, 30107]...) | Target idx: [11]
+2026-01-05 23:47:24,790 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:47:24,793 - [INFO] - Generated answer length: 3077
+2026-01-05 23:47:24,793 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 8, 10, 11]
+2026-01-05 23:47:24,793 - [INFO] - [SuggestionCollector] Citation result: is_cited=True for: what are the roles of management and administratio
+2026-01-05 23:47:24,793 - [INFO] - [SuggestionCollector] Already cited, skipping suggestions for: what are the roles of management and administratio
+2026-01-05 23:47:24,794 - [INFO] - [SuggestionCollector] Processing query: best administration software for small businesses...
+2026-01-05 23:47:25,250 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:47:25,255 - [INFO] - Generated answer length: 4114
+2026-01-05 23:47:25,255 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 7, 10]
+2026-01-05 23:47:25,256 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: best oversight software for hr departments
+2026-01-05 23:47:29,739 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:47:29,740 - [INFO] - [SuggestionCollector] Calling collect_for_query: best administration software for small businesses
+2026-01-05 23:47:29,741 - [INFO] - [SuggestionCollector] Calling generate_and_check for: best administration software for small businesses
+2026-01-05 23:47:29,741 - [INFO] - Query: best administration software for small businesses... | Competitors: 10 (full content, lengths: [26148, 18170, 18609]...) | Target idx: [11]
+2026-01-05 23:47:31,302 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:47:31,306 - [INFO] - Generated answer length: 3049
+2026-01-05 23:47:31,306 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 5, 6, 7]
+2026-01-05 23:47:31,306 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: difference between supervision and management in s
+2026-01-05 23:47:37,583 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:47:37,586 - [INFO] - Generated answer length: 6215
+2026-01-05 23:47:37,586 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+2026-01-05 23:47:37,586 - [INFO] - [SuggestionCollector] Citation result: is_cited=True for: buy management vs administration course online
+2026-01-05 23:47:37,586 - [INFO] - [SuggestionCollector] Already cited, skipping suggestions for: buy management vs administration course online
+2026-01-05 23:47:46,788 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:47:46,791 - [INFO] - Generated answer length: 5036
+2026-01-05 23:47:46,791 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 6, 8, 9, 10]
+2026-01-05 23:47:46,792 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: best administration software for small businesses
+2026-01-05 23:47:51,099 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:47:56,189 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:47:57,932 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:48:13,574 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:48:24,970 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:48:29,513 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:00,401 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:00,420 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:00,421 - [INFO] - Query: best management training programs for corporate tr... | Competitors: 10 (full content, lengths: [19979, 20565, 10935]...) | Target idx: [11]
+2026-01-05 23:49:00,446 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:00,446 - [INFO] - Query: world bank governance resources... | Competitors: 10 (full content, lengths: [4014, 42543, 40223]...) | Target idx: [11]
+2026-01-05 23:49:00,464 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:00,464 - [INFO] - Query: best online courses for supervision skills... | Competitors: 10 (full content, lengths: [22541, 12173, 6277]...) | Target idx: [11]
+2026-01-05 23:49:00,479 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:00,479 - [INFO] - Query: best governance training programs for corporate tr... | Competitors: 10 (full content, lengths: [21162, 9366, 32324]...) | Target idx: [11]
+2026-01-05 23:49:10,547 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:10,558 - [INFO] - Generated answer length: 3673
+2026-01-05 23:49:10,558 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 6, 7, 8, 10]
+2026-01-05 23:49:10,558 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:10,558 - [INFO] - Query: best books on management vs administration for tra... | Competitors: 10 (full content, lengths: [21646, 42979, 19736]...) | Target idx: [11]
+2026-01-05 23:49:11,068 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:11,071 - [INFO] - Generated answer length: 4153
+2026-01-05 23:49:11,071 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 7, 9, 10]
+2026-01-05 23:49:11,072 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:11,072 - [INFO] - Query: understanding management vs administration in busi... | Competitors: 10 (full content, lengths: [12041, 16403, 11743]...) | Target idx: [11]
+2026-01-05 23:49:12,398 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:12,400 - [INFO] - Generated answer length: 4710
+2026-01-05 23:49:12,400 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 9, 10]
+2026-01-05 23:49:12,400 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:12,400 - [INFO] - Query: what is the difference between management and admi... | Competitors: 10 (full content, lengths: [25856, 8905, 16872]...) | Target idx: [11]
+2026-01-05 23:49:12,447 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:12,448 - [INFO] - Generated answer length: 4538
+2026-01-05 23:49:12,448 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 5, 6, 8, 9, 10]
+2026-01-05 23:49:12,448 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:12,448 - [INFO] - Query: buy hr oversight tools... | Competitors: 10 (full content, lengths: [6284, 12609, 30956]...) | Target idx: [11]
+2026-01-05 23:49:24,258 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:24,263 - [INFO] - Generated answer length: 3804
+2026-01-05 23:49:24,263 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [2, 3, 11]
+2026-01-05 23:49:24,263 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:24,263 - [INFO] - Query: linkedin page for supervision training programs... | Competitors: 10 (full content, lengths: [13824, 32845, 22113]...) | Target idx: [11]
+2026-01-05 23:49:27,120 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:27,126 - [INFO] - Generated answer length: 4057
+2026-01-05 23:49:27,126 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 7, 9, 10]
+2026-01-05 23:49:27,127 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:27,127 - [INFO] - Query: buy corporate governance training materials... | Competitors: 10 (full content, lengths: [30006, 30006, 48271]...) | Target idx: [11]
+2026-01-05 23:49:27,502 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:27,505 - [INFO] - Generated answer length: 4149
+2026-01-05 23:49:27,506 - [INFO] - Citation check: target=[11] cited=False  | All citations: []
+2026-01-05 23:49:27,506 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:27,506 - [INFO] - Query: difference between management and administration i... | Competitors: 10 (full content, lengths: [21370, 30469, 16741]...) | Target idx: [11]
+2026-01-05 23:49:30,096 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:30,099 - [INFO] - Generated answer length: 5360
+2026-01-05 23:49:30,099 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 6, 7, 11]
+2026-01-05 23:49:30,099 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:30,099 - [INFO] - Query: harvard business review leadership articles... | Competitors: 10 (full content, lengths: [250490, 7933, 5160]...) | Target idx: [11]
+2026-01-05 23:49:33,222 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:33,226 - [INFO] - Generated answer length: 2805
+2026-01-05 23:49:33,226 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 6, 7, 9, 10]
+2026-01-05 23:49:33,228 - [WARNING] - No raw_content for Tavily result b1e21d5db2bd45b6da6035ecd1c85ee0, skipping.
+2026-01-05 23:49:33,228 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:33,228 - [INFO] - Query: difference between management and administration i... | Competitors: 10 (full content, lengths: [37050, 22983, 26435]...) | Target idx: [11]
+2026-01-05 23:49:42,986 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:42,989 - [INFO] - Generated answer length: 3349
+2026-01-05 23:49:42,989 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 5, 7, 11]
+2026-01-05 23:49:42,990 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:42,990 - [INFO] - Query: buy management and administration comparison textb... | Competitors: 10 (full content, lengths: [5711, 23413, 29844]...) | Target idx: [11]
+2026-01-05 23:49:44,740 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:44,743 - [INFO] - Generated answer length: 4221
+2026-01-05 23:49:44,743 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 5, 6, 7, 9, 10, 11]
+2026-01-05 23:49:44,744 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:44,744 - [INFO] - Query: what is corporate governance in business... | Competitors: 10 (full content, lengths: [17492, 14097, 27056]...) | Target idx: [11]
+2026-01-05 23:49:47,230 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:47,232 - [INFO] - Generated answer length: 4903
+2026-01-05 23:49:47,233 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 6, 7]
+2026-01-05 23:49:47,233 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:47,233 - [INFO] - Query: best books on management vs administration... | Competitors: 10 (full content, lengths: [15486, 71463, 9953]...) | Target idx: [11]
+2026-01-05 23:49:52,190 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:52,193 - [INFO] - Generated answer length: 2498
+2026-01-05 23:49:52,193 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 8, 10, 11]
+2026-01-05 23:49:52,194 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:52,194 - [INFO] - Query: best books on corporate governance for aspiring ma... | Competitors: 10 (full content, lengths: [10825, 26760, 14132]...) | Target idx: [11]
+2026-01-05 23:49:52,501 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:52,503 - [INFO] - Generated answer length: 4489
+2026-01-05 23:49:52,504 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:49:52,504 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:52,504 - [INFO] - Query: best oversight software for small businesses... | Competitors: 10 (full content, lengths: [11981, 19117, 30476]...) | Target idx: [11]
+2026-01-05 23:49:58,305 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:49:58,307 - [INFO] - Generated answer length: 3752
+2026-01-05 23:49:58,307 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 8, 9, 11]
+2026-01-05 23:49:58,308 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:49:58,308 - [INFO] - Query: difference between governance and management in bu... | Competitors: 10 (full content, lengths: [2862, 3777, 17587]...) | Target idx: [11]
+2026-01-05 23:50:03,462 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:03,464 - [INFO] - Generated answer length: 3703
+2026-01-05 23:50:03,464 - [INFO] - Citation check: target=[11] cited=False  | All citations: [2, 3, 5, 6, 8, 9, 10]
+2026-01-05 23:50:03,465 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:03,465 - [INFO] - Query: buy management and administration guide for small ... | Competitors: 10 (full content, lengths: [11369, 20493, 264107]...) | Target idx: [11]
+2026-01-05 23:50:04,822 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:04,826 - [INFO] - Generated answer length: 3055
+2026-01-05 23:50:04,826 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 9]
+2026-01-05 23:50:04,828 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:04,828 - [INFO] - Query: what are the key responsibilities of an administra... | Competitors: 10 (full content, lengths: [23918, 4461, 2519]...) | Target idx: [11]
+2026-01-05 23:50:05,602 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:05,607 - [INFO] - Generated answer length: 4184
+2026-01-05 23:50:05,607 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:50:05,607 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:05,607 - [INFO] - Query: harvard business school administration page... | Competitors: 10 (full content, lengths: [4758, 1773, 3806]...) | Target idx: [11]
+2026-01-05 23:50:11,575 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:11,596 - [INFO] - Generated answer length: 3343
+2026-01-05 23:50:11,597 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 5, 6, 7, 9]
+2026-01-05 23:50:11,597 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:11,597 - [INFO] - Query: what is the role of oversight in hr management... | Competitors: 10 (full content, lengths: [5147, 4413, 51619]...) | Target idx: [11]
+2026-01-05 23:50:12,065 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:12,066 - [INFO] - Generated answer length: 2014
+2026-01-05 23:50:12,066 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 7, 9, 10]
+2026-01-05 23:50:12,066 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:12,066 - [INFO] - Query: best leadership development books for trainers... | Competitors: 10 (full content, lengths: [13328, 5268, 25357]...) | Target idx: [11]
+2026-01-05 23:50:15,312 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:15,315 - [INFO] - Generated answer length: 3847
+2026-01-05 23:50:15,315 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 7, 9, 10]
+2026-01-05 23:50:15,316 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:15,316 - [INFO] - Query: buy management and administration comparison guide... | Competitors: 10 (full content, lengths: [5155, 15259, 16872]...) | Target idx: [11]
+2026-01-05 23:50:15,623 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:15,625 - [INFO] - Generated answer length: 2945
+2026-01-05 23:50:15,626 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 6, 7, 10]
+2026-01-05 23:50:15,626 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:15,626 - [INFO] - Query: best management software for small businesses... | Competitors: 10 (full content, lengths: [35022, 16913, 31692]...) | Target idx: [11]
+2026-01-05 23:50:24,384 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:24,386 - [INFO] - Generated answer length: 3603
+2026-01-05 23:50:24,386 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 7, 8]
+2026-01-05 23:50:24,387 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:24,387 - [INFO] - Query: best books on management and administration compar... | Competitors: 10 (full content, lengths: [12243, 15014, 18040]...) | Target idx: [11]
+2026-01-05 23:50:27,477 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:27,480 - [INFO] - Generated answer length: 4141
+2026-01-05 23:50:27,480 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 9]
+2026-01-05 23:50:27,480 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:27,480 - [INFO] - Query: best governance software for small businesses... | Competitors: 10 (full content, lengths: [189456, 33135, 18490]...) | Target idx: [11]
+2026-01-05 23:50:32,532 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:32,535 - [INFO] - Generated answer length: 4918
+2026-01-05 23:50:32,535 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 4, 5, 11]
+2026-01-05 23:50:32,536 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:32,536 - [INFO] - Query: best supervision training programs for hr professi... | Competitors: 10 (full content, lengths: [17955, 21493, 5480]...) | Target idx: [11]
+2026-01-05 23:50:37,660 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:37,667 - [INFO] - Generated answer length: 5425
+2026-01-05 23:50:37,667 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:50:37,667 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:37,667 - [INFO] - Query: best management textbooks for business students... | Competitors: 10 (full content, lengths: [17923, 45942, 7889]...) | Target idx: [11]
+2026-01-05 23:50:37,708 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:37,730 - [INFO] - Generated answer length: 3285
+2026-01-05 23:50:37,731 - [INFO] - Citation check: target=[11] cited=False  | All citations: [2, 3, 4, 5, 10]
+2026-01-05 23:50:37,731 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:37,731 - [INFO] - Query: best books on corporate oversight... | Competitors: 10 (full content, lengths: [14132, 26760, 33528]...) | Target idx: [11]
+2026-01-05 23:50:40,629 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:40,632 - [INFO] - Generated answer length: 4054
+2026-01-05 23:50:40,632 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 7, 10, 11]
+2026-01-05 23:50:40,632 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:40,632 - [INFO] - Query: what is the difference between management and admi... | Competitors: 10 (full content, lengths: [7956, 26435, 29805]...) | Target idx: [11]
+2026-01-05 23:50:50,364 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:50,367 - [INFO] - Generated answer length: 3160
+2026-01-05 23:50:50,367 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 5, 7, 11]
+2026-01-05 23:50:50,367 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:50,367 - [INFO] - Query: buy business administration books on amazon... | Competitors: 10 (full content, lengths: [463048, 318741, 405297]...) | Target idx: [11]
+2026-01-05 23:50:50,550 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:50,555 - [INFO] - Generated answer length: 4048
+2026-01-05 23:50:50,555 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 4, 7, 8, 10]
+2026-01-05 23:50:50,555 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:50,555 - [INFO] - Query: best books on management and administration roles... | Competitors: 10 (full content, lengths: [9953, 31255, 9574]...) | Target idx: [11]
+2026-01-05 23:50:54,517 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:54,521 - [INFO] - Generated answer length: 3713
+2026-01-05 23:50:54,522 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 5, 6, 7, 8, 9, 10, 11]
+2026-01-05 23:50:54,522 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:54,522 - [INFO] - Query: best administration software for corporate trainer... | Competitors: 10 (full content, lengths: [41885, 46172, 24316]...) | Target idx: [11]
+2026-01-05 23:50:55,237 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:55,240 - [INFO] - Generated answer length: 1593
+2026-01-05 23:50:55,240 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 5, 7, 8, 10, 11]
+2026-01-05 23:50:55,240 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:55,241 - [INFO] - Query: difference between management and administration... | Competitors: 10 (full content, lengths: [28411, 17871, 16872]...) | Target idx: [11]
+2026-01-05 23:50:57,458 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:50:57,460 - [INFO] - Generated answer length: 5673
+2026-01-05 23:50:57,460 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+2026-01-05 23:50:57,461 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:50:57,461 - [INFO] - Query: buy business administration textbooks... | Competitors: 10 (full content, lengths: [9776, 463048, 17884]...) | Target idx: [11]
+2026-01-05 23:51:06,705 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:06,709 - [INFO] - Generated answer length: 4305
+2026-01-05 23:51:06,710 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 8, 9, 10, 11]
+2026-01-05 23:51:06,710 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:51:06,710 - [INFO] - Query: subscribe to management vs administration newslett... | Competitors: 10 (full content, lengths: [6537, 26435, 8905]...) | Target idx: [11]
+2026-01-05 23:51:08,875 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:08,878 - [INFO] - Generated answer length: 4518
+2026-01-05 23:51:08,878 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [2, 3, 5, 9, 10, 11]
+2026-01-05 23:51:08,878 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:51:08,878 - [INFO] - Query: best books on management and administration roles ... | Competitors: 10 (full content, lengths: [19715, 21253, 42979]...) | Target idx: [11]
+2026-01-05 23:51:10,644 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:10,647 - [INFO] - Generated answer length: 2678
+2026-01-05 23:51:10,647 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 8, 9, 10]
+2026-01-05 23:51:10,647 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:51:10,647 - [INFO] - Query: buy management and administration books online... | Competitors: 10 (full content, lengths: [463048, 36473, 31195]...) | Target idx: [11]
+2026-01-05 23:51:12,735 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:12,738 - [INFO] - Generated answer length: 5691
+2026-01-05 23:51:12,738 - [INFO] - Citation check: target=[11] cited=False  | All citations: []
+2026-01-05 23:51:12,738 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:51:12,738 - [INFO] - Query: buy online course on management and administration... | Competitors: 10 (full content, lengths: [17871, 16741, 14879]...) | Target idx: [11]
+2026-01-05 23:51:16,190 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:16,197 - [INFO] - Generated answer length: 3524
+2026-01-05 23:51:16,197 - [INFO] - Citation check: target=[11] cited=False  | All citations: []
+2026-01-05 23:51:16,198 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:51:16,198 - [INFO] - Query: buy hr administration training course... | Competitors: 10 (full content, lengths: [13011, 5195, 78066]...) | Target idx: [11]
+2026-01-05 23:51:17,498 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:17,502 - [INFO] - Generated answer length: 2299
+2026-01-05 23:51:17,502 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 5, 6, 7, 9, 10]
+2026-01-05 23:51:17,502 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:51:17,502 - [INFO] - Query: best books on management vs administration for ent... | Competitors: 10 (full content, lengths: [6431, 24077, 16212]...) | Target idx: [11]
+2026-01-05 23:51:26,913 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:26,916 - [INFO] - Generated answer length: 4115
+2026-01-05 23:51:26,916 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 9, 10, 11]
+2026-01-05 23:51:26,916 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:51:26,917 - [INFO] - Query: best oversight tools for corporate training... | Competitors: 10 (full content, lengths: [28467, 23615, 22741]...) | Target idx: [11]
+2026-01-05 23:51:27,793 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:27,796 - [INFO] - Generated answer length: 6191
+2026-01-05 23:51:27,796 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7]
+2026-01-05 23:51:27,798 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:51:27,798 - [INFO] - Query: wikipedia management vs administration... | Competitors: 10 (full content, lengths: [22983, 10971, 16403]...) | Target idx: [11]
+2026-01-05 23:51:30,113 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:30,115 - [INFO] - Generated answer length: 4439
+2026-01-05 23:51:30,115 - [INFO] - Citation check: target=[11] cited=False  | All citations: [2, 4, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:51:30,116 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:51:30,116 - [INFO] - Query: buy governance training course for entrepreneurs... | Competitors: 10 (full content, lengths: [11407, 27785, 34982]...) | Target idx: [11]
+2026-01-05 23:51:33,128 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:33,131 - [INFO] - Generated answer length: 4934
+2026-01-05 23:51:33,131 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 4, 6, 8, 9, 11]
+2026-01-05 23:51:33,131 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:51:33,131 - [INFO] - Query: what are the key principles of effective administr... | Competitors: 10 (full content, lengths: [16591, 12485, 13588]...) | Target idx: [11]
+2026-01-05 23:51:37,112 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:37,115 - [INFO] - Generated answer length: 3676
+2026-01-05 23:51:37,115 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 7, 8]
+2026-01-05 23:51:37,116 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:51:37,116 - [INFO] - Query: how to define management roles in a company... | Competitors: 10 (full content, lengths: [7313, 16665, 12981]...) | Target idx: [11]
+2026-01-05 23:51:41,317 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:41,320 - [INFO] - Generated answer length: 5426
+2026-01-05 23:51:41,320 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 6, 11]
+2026-01-05 23:51:41,320 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:51:41,320 - [INFO] - Query: best leadership training programs for hr professio... | Competitors: 10 (full content, lengths: [18833, 6825, 8928]...) | Target idx: [11]
+2026-01-05 23:51:45,263 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:45,266 - [INFO] - Generated answer length: 4289
+2026-01-05 23:51:45,267 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 7, 9, 10, 11]
+2026-01-05 23:51:45,267 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:51:45,267 - [INFO] - Query: john maxwell leadership blog... | Competitors: 10 (full content, lengths: [32838, 9235, 22799]...) | Target idx: [11]
+2026-01-05 23:51:51,800 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:51,805 - [INFO] - Generated answer length: 5006
+2026-01-05 23:51:51,805 - [INFO] - Citation check: target=[11] cited=False  | All citations: [8]
+2026-01-05 23:51:52,810 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:52,820 - [INFO] - Generated answer length: 6136
+2026-01-05 23:51:52,820 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 3, 4, 6, 7, 10]
+2026-01-05 23:51:55,274 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:55,275 - [INFO] - Generated answer length: 5631
+2026-01-05 23:51:55,275 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 4, 5, 6, 7, 9, 11]
+2026-01-05 23:51:55,494 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:51:55,497 - [INFO] - Generated answer length: 3822
+2026-01-05 23:51:55,497 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 8, 9, 10]
+Random seed set to: 42
+
+============================================================
+Batch GEO Scaling: rLoQYdiNXpyRmjbvJw8Z9w
+Train limit: 20, Test limit: 50
+============================================================
+Train queries: 20 / 85
+Test queries: 50 / 86
+
+========================================
+         [1/2] Baseline Evaluation
+========================================
+Baseline: 30.0% (15/50)
+
+========================================
+         [2/2] Batch GEO Optimization
+========================================
+
+============================================================
+  Batch GEO Agent
+  URL: https://www.differencebetween.info/difference-between-manage...
+============================================================
+
+==================================================
+Starting Batch GEO Processing
+Total queries: 20
+Batch size: 5
+Total batches: 4
+==================================================
+
+>>> Batch 1/4
+
+=== Processing Batch 03d6bdb4 ===
+Queries: 5
+Paragraphs: 1
+Orchestras: 1
+Collecting suggestions for 5 queries...
+Collected 3 suggestions
+Synthesizing modifications...
+Batch 03d6bdb4 completed:
+  - Suggestions collected: 3
+  - Modifications applied: 3
+  - Success rate before: 20.00%
+
+>>> Batch 2/4
+
+=== Processing Batch d18d4aa6 ===
+Queries: 5
+Paragraphs: 1
+Orchestras: 1
+Collecting suggestions for 5 queries...
+Collected 4 suggestions
+Synthesizing modifications...
+Batch d18d4aa6 completed:
+  - Suggestions collected: 4
+  - Modifications applied: 4
+  - Success rate before: 20.00%
+
+>>> Batch 3/4
+
+=== Processing Batch 815f07de ===
+Queries: 5
+Paragraphs: 1
+Orchestras: 1
+Collecting suggestions for 5 queries...
+Collected 3 suggestions
+Synthesizing modifications...
+Batch 815f07de completed:
+  - Suggestions collected: 3
+  - Modifications applied: 3
+  - Success rate before: 40.00%
+
+>>> Batch 4/4
+
+=== Processing Batch a554e7d1 ===
+Queries: 5
+Paragraphs: 1
+Orchestras: 1
+Collecting suggestions for 5 queries...
+Collected 3 suggestions
+Synthesizing modifications...
+Batch a554e7d1 completed:
+  - Suggestions collected: 3
+  - Modifications applied: 3
+  - Success rate before: 40.00%
+
+Results saved to: /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/batch_scaling_experiment/batch_www.differencebetween.info_difference-between-mana.json
+
+============================================================
+         Batch Processing Summary
+============================================================
+  Total batches: 4
+  Total queries processed: 20
+  Total suggestions collected: 13
+  Total modifications applied: 13
+============================================================
+Evaluating Batch GEO optimized page...
+Batch GEO: 36.0% (18/50) | Improvement: +6.0%
+
+============================================================
+                   SUMMARY
+============================================================
+Document: rLoQYdiNXpyRmjbvJw8Z9w
+Train queries: 20, Test queries: 50
+------------------------------------------------------------
+Method               Ratio      Count  Improvement
+------------------------------------------------------------
+Baseline            30.0%         15
+Batch GEO           36.0%         18       +6.0%
+============================================================
+
+Result saved to: /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/batch_scaling_experiment/train20_rLoQYdiNXpyRmjbvJw8Z9w_batch_scaling.json

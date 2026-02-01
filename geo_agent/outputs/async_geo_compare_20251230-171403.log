@@ -1,0 +1,99 @@
+2025-12-30 17:14:12,305 - [INFO] - === 开始处理 URL: https://creatormarketplace.tiktok.com/ ===
+2025-12-30 17:14:12,484 - [INFO] - === 开始处理 URL: https://www.amazon.co.uk/Working-Partnership-Family-Model/dp/0749121866 ===
+2025-12-30 17:14:12,909 - [INFO] - === 开始处理 URL: https://www.udemy.com/course/be-a-social-media-influencer/ ===
+2025-12-30 17:14:13,101 - [INFO] - === 开始处理 URL: https://www.influencer.in/blog/influencer-marketing-for-himalaya/ ===
+2025-12-30 17:14:13,187 - [INFO] - === 开始处理 URL: https://influencermarketinghub.com/influencer-marketing-platforms-instagram/ ===
+2025-12-30 17:14:13,341 - [INFO] - === 开始处理 URL: https://www.webfx.com/social-media/pricing/influencer-marketing/ ===
+2025-12-30 17:14:13,638 - [INFO] - === 开始处理 URL: https://grin.co/influencer-marketing-chrome-extension/ ===
+2025-12-30 17:14:13,679 - [INFO] - === 开始处理 URL: https://www.convinceandconvert.com/digital-marketing/influence-marketing-differs-from-celebrity-endorsement/ ===
+2025-12-30 17:14:13,713 - [INFO] - === 开始处理 URL: https://reputationprotectiononline.com/check-online-reputation/ ===
+2025-12-30 17:14:13,744 - [INFO] - === 开始处理 URL: https://influencermarketinghub.com/influencer-marketing-trends/ ===
+2025-12-30 17:14:14,501 - [WARNING] - Connection pool is full, discarding connection: www.chatnoir.eu. Connection pool size: 10
+2025-12-30 17:14:14,505 - [INFO] - === 开始处理 URL: https://www.influglue.com/blog/adidass-success-story-of-influencer-marketing-its-time-for-other-brands-to-learn ===
+2025-12-30 17:14:14,569 - [INFO] - 已保存 [html] -> outputs/html_source/influencermarketinghub.com_influencer-marketing-tr_playwright.html (187.80 KB)
+2025-12-30 17:14:14,570 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:14,581 - [INFO] - 已保存 [txt] -> outputs/clean_text/influencermarketinghub.com_influencer-marketing-tr_bs4.txt (30.50 KB)
+2025-12-30 17:14:14,581 - [INFO] - === 开始处理 URL: https://www.slideshare.net/ioanabarbu1/digital-marketing-trends-2020-206718264 ===
+2025-12-30 17:14:14,586 - [INFO] - 已保存 [html] -> outputs/html_source/www.udemy.com_course_be-a-social-media-influencer__playwright.html (389.85 KB)
+2025-12-30 17:14:14,586 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:14,604 - [INFO] - 已保存 [txt] -> outputs/clean_text/www.udemy.com_course_be-a-social-media-influencer__bs4.txt (10.35 KB)
+2025-12-30 17:14:14,604 - [INFO] - === 开始处理 URL: https://www.socialmediaexaminer.com/get-started-with-social-media/ ===
+2025-12-30 17:14:14,680 - [INFO] - 已保存 [html] -> outputs/html_source/www.webfx.com_social-media_pricing_influencer-mark_playwright.html (1038.62 KB)
+2025-12-30 17:14:14,680 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:14,706 - [INFO] - 已保存 [txt] -> outputs/clean_text/www.webfx.com_social-media_pricing_influencer-mark_bs4.txt (34.70 KB)
+2025-12-30 17:14:14,706 - [INFO] - === 开始处理 URL: https://marketingtochina.com/how-much-cost-a-kol-chinese-influencer/ ===
+2025-12-30 17:14:14,765 - [WARNING] - Connection pool is full, discarding connection: www.chatnoir.eu. Connection pool size: 10
+2025-12-30 17:14:14,767 - [INFO] - === 开始处理 URL: https://www.linkedin.com/pulse/how-become-linkedin-influencer-chantel-soumis ===
+2025-12-30 17:14:15,004 - [WARNING] - Connection pool is full, discarding connection: www.chatnoir.eu. Connection pool size: 10
+2025-12-30 17:14:15,006 - [INFO] - === 开始处理 URL: https://articleocity.com/impact-of-social-media-influencers-on-young-people/ ===
+2025-12-30 17:14:15,370 - [INFO] - 已保存 [html] -> outputs/html_source/www.amazon.co.uk_Working-Partnership-Family-Model__playwright.html (1145.20 KB)
+2025-12-30 17:14:15,370 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:15,429 - [INFO] - 已保存 [txt] -> outputs/clean_text/www.amazon.co.uk_Working-Partnership-Family-Model__bs4.txt (13.62 KB)
+2025-12-30 17:14:15,429 - [INFO] - === 开始处理 URL: https://www.crisis.org.uk/ending-homelessness/resources-for-practitioners/covid-19-transition-planning/ ===
+2025-12-30 17:14:15,473 - [INFO] - 已保存 [html] -> outputs/html_source/grin.co_influencer-marketing-chrome-extension__playwright.html (129.82 KB)
+2025-12-30 17:14:15,473 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:15,483 - [INFO] - 已保存 [txt] -> outputs/clean_text/grin.co_influencer-marketing-chrome-extension__bs4.txt (3.96 KB)
+2025-12-30 17:14:15,483 - [INFO] - === 开始处理 URL: https://thefinancialbrand.com/62981/top-banking-financial-fintech-influencers-leaders/ ===
+2025-12-30 17:14:15,675 - [INFO] - 已保存 [html] -> outputs/html_source/www.socialmediaexaminer.com_get-started-with-socia_playwright.html (84.25 KB)
+2025-12-30 17:14:15,676 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:15,687 - [INFO] - 已保存 [txt] -> outputs/clean_text/www.socialmediaexaminer.com_get-started-with-socia_bs4.txt (15.73 KB)
+2025-12-30 17:14:15,687 - [INFO] - === 开始处理 URL: https://rethinksocialmedia.com/rsm-webinar-replay ===
+2025-12-30 17:14:16,197 - [INFO] - 已保存 [html] -> outputs/html_source/www.linkedin.com_pulse_how-become-linkedin-influen_playwright.html (257.29 KB)
+2025-12-30 17:14:16,197 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:16,248 - [INFO] - 已保存 [txt] -> outputs/clean_text/www.linkedin.com_pulse_how-become-linkedin-influen_bs4.txt (17.68 KB)
+2025-12-30 17:14:16,249 - [INFO] - === 开始处理 URL: https://www.digitalmarketing.org/blog/how-to-become-a-social-media-influencer ===
+2025-12-30 17:14:16,287 - [INFO] - 已保存 [html] -> outputs/html_source/www.convinceandconvert.com_digital-marketing_influ_playwright.html (167.55 KB)
+2025-12-30 17:14:16,287 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:16,308 - [INFO] - 已保存 [txt] -> outputs/clean_text/www.convinceandconvert.com_digital-marketing_influ_bs4.txt (10.30 KB)
+2025-12-30 17:14:16,308 - [INFO] - === 开始处理 URL: https://www.tandfonline.com/doi/full/10.1080/00913367.2021.1977737 ===
+2025-12-30 17:14:16,319 - [INFO] - 已保存 [html] -> outputs/html_source/www.influglue.com_blog_adidass-success-story-of-in_playwright.html (652.76 KB)
+2025-12-30 17:14:16,319 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:16,338 - [INFO] - 已保存 [txt] -> outputs/clean_text/www.influglue.com_blog_adidass-success-story-of-in_bs4.txt (1.68 KB)
+2025-12-30 17:14:16,338 - [INFO] - === 开始处理 URL: https://sociallypowerful.com/post/top-celebrity-influencers-in-2021 ===
+2025-12-30 17:14:16,505 - [INFO] - 已保存 [html] -> outputs/html_source/creatormarketplace.tiktok.com__playwright.html (2278.18 KB)
+2025-12-30 17:14:16,505 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:16,519 - [INFO] - 已保存 [txt] -> outputs/clean_text/creatormarketplace.tiktok.com__bs4.txt (2.12 KB)
+2025-12-30 17:14:16,519 - [INFO] - === 开始处理 URL: https://creatormarketplace.tiktok.com/?from=tiktokads_homepage ===
+2025-12-30 17:14:16,850 - [INFO] - 已保存 [html] -> outputs/html_source/www.influencer.in_blog_influencer-marketing-for-hi_playwright.html (362.68 KB)
+2025-12-30 17:14:16,851 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:16,941 - [INFO] - 已保存 [html] -> outputs/html_source/thefinancialbrand.com_62981_top-banking-financial-_playwright.html (293.61 KB)
+2025-12-30 17:14:16,941 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:16,982 - [INFO] - 已保存 [txt] -> outputs/clean_text/www.influencer.in_blog_influencer-marketing-for-hi_bs4.txt (99.71 KB)
+2025-12-30 17:14:16,983 - [INFO] - === 开始处理 URL: https://grin.co/blog/8-influencer-marketing-case-studies-with-unbelievable-results/ ===
+2025-12-30 17:14:17,011 - [INFO] - 已保存 [html] -> outputs/html_source/marketingtochina.com_how-much-cost-a-kol-chinese-i_playwright.html (98.10 KB)
+2025-12-30 17:14:17,011 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:17,051 - [INFO] - 已保存 [txt] -> outputs/clean_text/marketingtochina.com_how-much-cost-a-kol-chinese-i_bs4.txt (18.28 KB)
+2025-12-30 17:14:17,051 - [INFO] - === 开始处理 URL: https://adage.com/article/digital-marketing-ad-tech-news/behind-cost-brands-hire-influencers-complex-math-explained/2358736 ===
+2025-12-30 17:14:17,073 - [INFO] - 已保存 [html] -> outputs/html_source/www.slideshare.net_ioanabarbu1_digital-marketing-t_playwright.html (1237.98 KB)
+2025-12-30 17:14:17,073 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:17,084 - [INFO] - 已保存 [txt] -> outputs/clean_text/thefinancialbrand.com_62981_top-banking-financial-_bs4.txt (10.46 KB)
+2025-12-30 17:14:17,084 - [INFO] - === 开始处理 URL: https://influencermarketinghub.com/free-influencer-marketing-tools/ ===
+2025-12-30 17:14:17,293 - [WARNING] - Connection pool is full, discarding connection: www.chatnoir.eu. Connection pool size: 10
+2025-12-30 17:14:17,295 - [INFO] - === 开始处理 URL: https://www.ukessays.com/essays/cultural-studies/how-celebrity-culture-affects-society-cultural-studies-essay.php ===
+2025-12-30 17:14:17,360 - [INFO] - 已保存 [txt] -> outputs/clean_text/www.slideshare.net_ioanabarbu1_digital-marketing-t_bs4.txt (80.18 KB)
+2025-12-30 17:14:17,361 - [INFO] - === 开始处理 URL: https://realtybiznews.com/digital-marketing-trends/98764992/ ===
+2025-12-30 17:14:17,370 - [INFO] - 已保存 [html] -> outputs/html_source/www.tandfonline.com_doi_full_10.1080_00913367.2021_playwright.html (8.06 KB)
+2025-12-30 17:14:17,371 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:17,375 - [INFO] - === 开始处理 URL: https://www.entrepreneur.com/article/249947 ===
+2025-12-30 17:14:17,630 - [INFO] - 已保存 [html] -> outputs/html_source/reputationprotectiononline.com_check-online-reputa_playwright.html (297.42 KB)
+2025-12-30 17:14:17,630 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:17,653 - [INFO] - 已保存 [txt] -> outputs/clean_text/reputationprotectiononline.com_check-online-reputa_bs4.txt (22.73 KB)
+2025-12-30 17:14:17,653 - [INFO] - === 开始处理 URL: https://brandequity.economictimes.indiatimes.com/news/marketing/brand-reputation-in-the-information-age/88306921 ===
+2025-12-30 17:14:17,846 - [WARNING] - Connection pool is full, discarding connection: www.chatnoir.eu. Connection pool size: 10
+2025-12-30 17:14:17,849 - [INFO] - === 开始处理 URL: https://www.tandfonline.com/doi/full/10.1080/00913367.2021.1977737 ===
+2025-12-30 17:14:17,913 - [INFO] - 已保存 [html] -> outputs/html_source/rethinksocialmedia.com_rsm-webinar-replay_playwright.html (305.35 KB)
+2025-12-30 17:14:17,913 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:17,971 - [INFO] - 已保存 [txt] -> outputs/clean_text/rethinksocialmedia.com_rsm-webinar-replay_bs4.txt (22.53 KB)
+2025-12-30 17:14:17,971 - [INFO] - === 开始处理 URL: https://brainstation.io/vancouver/social-media-marketing-course ===
+2025-12-30 17:14:17,985 - [INFO] - 已保存 [html] -> outputs/html_source/www.crisis.org.uk_ending-homelessness_resources-fo_playwright.html (121.26 KB)
+2025-12-30 17:14:17,986 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:18,023 - [INFO] - 已保存 [txt] -> outputs/clean_text/www.crisis.org.uk_ending-homelessness_resources-fo_bs4.txt (7.94 KB)
+2025-12-30 17:14:18,023 - [INFO] - === 开始处理 URL: https://www.mind.org.uk/workplace/corporate-partnerships/ ===
+2025-12-30 17:14:18,097 - [INFO] - 已保存 [html] -> outputs/html_source/influencermarketinghub.com_free-influencer-marketi_playwright.html (400.44 KB)
+2025-12-30 17:14:18,097 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:18,140 - [INFO] - 已保存 [txt] -> outputs/clean_text/influencermarketinghub.com_free-influencer-marketi_bs4.txt (56.78 KB)
+2025-12-30 17:14:18,141 - [INFO] - === 开始处理 URL: https://nealschaffer.com/influencer-management/ ===
+2025-12-30 17:14:18,505 - [INFO] - 已保存 [html] -> outputs/html_source/articleocity.com_impact-of-social-media-influencer_playwright.html (194.29 KB)
+2025-12-30 17:14:18,505 - [INFO] - --- 开始解析 HTML 为文档格式 ---
+2025-12-30 17:14:18,539 - [INFO] - 已保存 [txt] -> outputs/clean_text/articleocity.com_impact-of-social-media-influencer_bs4.txt (7.01 KB)
+2025-12-30 17:14:18,539 - [INFO] - === 开始处理 URL: https://www.coursehero.com/file/122996861/Social-media-influencers-8211-Impact-on-youthpdf/ ===

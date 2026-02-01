@@ -1,0 +1,120 @@
+{
+  "train_sizes": [
+    10,
+    20,
+    40,
+    60
+  ],
+  "results": {
+    "20": {
+      "Zk7V6NHIWZGiL86CP0QE4A": {
+        "baseline": 0.74,
+        "batch_geo": 0.72,
+        "improvement": -0.020000000000000018
+      },
+      "rLoQYdiNXpyRmjbvJw8Z9w": {
+        "baseline": 0.3,
+        "batch_geo": 0.36,
+        "improvement": 0.06
+      },
+      "F4o8CSOgUYStpyWq5UIO2w": {
+        "baseline": 0.26,
+        "batch_geo": 0.4,
+        "improvement": 0.14
+      },
+      "Sru5qOrxW3212wgWPObOew": {
+        "baseline": 0.58,
+        "batch_geo": 0.82,
+        "improvement": 0.24
+      }
+    },
+    "60": {
+      "F4o8CSOgUYStpyWq5UIO2w": {
+        "baseline": 0.0,
+        "batch_geo": 0.0,
+        "improvement": 0.0
+      },
+      "Sru5qOrxW3212wgWPObOew": {
+        "baseline": 0.0,
+        "batch_geo": 0.0,
+        "improvement": 0.0
+      },
+      "Zk7V6NHIWZGiL86CP0QE4A": {
+        "baseline": 0.0,
+        "batch_geo": 0.0,
+        "improvement": 0.0
+      },
+      "rLoQYdiNXpyRmjbvJw8Z9w": {
+        "baseline": 0.0,
+        "batch_geo": 0.0,
+        "improvement": 0.0
+      }
+    },
+    "40": {
+      "Sru5qOrxW3212wgWPObOew": {
+        "baseline": 0.58,
+        "batch_geo": 0.68,
+        "improvement": 0.10000000000000009
+      },
+      "F4o8CSOgUYStpyWq5UIO2w": {
+        "baseline": 0.32,
+        "batch_geo": 0.38,
+        "improvement": 0.06
+      },
+      "rLoQYdiNXpyRmjbvJw8Z9w": {
+        "baseline": 0.32,
+        "batch_geo": 0.34,
+        "improvement": 0.020000000000000018
+      },
+      "Zk7V6NHIWZGiL86CP0QE4A": {
+        "baseline": 0.72,
+        "batch_geo": 0.66,
+        "improvement": -0.05999999999999994
+      }
+    },
+    "10": {
+      "rLoQYdiNXpyRmjbvJw8Z9w": {
+        "baseline": 0.3,
+        "batch_geo": 0.32,
+        "improvement": 0.020000000000000018
+      },
+      "Zk7V6NHIWZGiL86CP0QE4A": {
+        "baseline": 0.68,
+        "batch_geo": 0.66,
+        "improvement": -0.020000000000000018
+      },
+      "Sru5qOrxW3212wgWPObOew": {
+        "baseline": 0.62,
+        "batch_geo": 0.7,
+        "improvement": 0.07999999999999996
+      },
+      "F4o8CSOgUYStpyWq5UIO2w": {
+        "baseline": 0.28,
+        "batch_geo": 0.46,
+        "improvement": 0.18
+      }
+    }
+  },
+  "averages": {
+    "10": {
+      "baseline": 0.47000000000000003,
+      "batch_geo": 0.535,
+      "improvement": 0.06499999999999999
+    },
+    "20": {
+      "baseline": 0.47,
+      "batch_geo": 0.575,
+      "improvement": 0.105
+    },
+    "40": {
+      "baseline": 0.485,
+      "batch_geo": 0.515,
+      "improvement": 0.03000000000000004
+    },
+    "60": {
+      "baseline": 0.0,
+      "batch_geo": 0.0,
+      "improvement": 0.0
+    }
+  }
+}

@@ -1,0 +1,444 @@
+2025-12-31 15:01:22,615 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:22,628 - [INFO] - Generated answer length: 451
+2025-12-31 15:01:22,699 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:22,705 - [INFO] - Generated answer length: 709
+2025-12-31 15:01:22,768 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:22,772 - [INFO] - Generated answer length: 898
+2025-12-31 15:01:23,536 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:23,540 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:23,542 - [INFO] - Generated answer length: 663
+2025-12-31 15:01:23,543 - [INFO] - Generated answer length: 920
+2025-12-31 15:01:24,128 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:24,132 - [INFO] - Generated answer length: 845
+2025-12-31 15:01:24,295 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:24,296 - [INFO] - Generated answer length: 993
+2025-12-31 15:01:24,442 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:24,445 - [INFO] - Generated answer length: 1328
+2025-12-31 15:01:24,764 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:24,769 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:24,773 - [INFO] - Generated answer length: 1185
+2025-12-31 15:01:24,773 - [INFO] - Generated answer length: 1469
+2025-12-31 15:01:24,776 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:24,780 - [INFO] - Generated answer length: 1465
+2025-12-31 15:01:25,328 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:25,330 - [INFO] - Generated answer length: 1339
+2025-12-31 15:01:25,389 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:25,393 - [INFO] - Generated answer length: 1586
+2025-12-31 15:01:25,529 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:25,534 - [INFO] - Generated answer length: 1514
+2025-12-31 15:01:25,648 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:25,652 - [INFO] - Generated answer length: 1396
+2025-12-31 15:01:26,236 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:26,238 - [INFO] - Generated answer length: 1493
+2025-12-31 15:01:26,914 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:26,918 - [INFO] - Generated answer length: 1839
+2025-12-31 15:01:26,931 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:26,938 - [INFO] - Generated answer length: 2190
+2025-12-31 15:01:27,732 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:27,733 - [INFO] - Generated answer length: 2046
+2025-12-31 15:01:28,268 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:28,273 - [INFO] - Generated answer length: 2018
+2025-12-31 15:01:32,691 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:36,259 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:01:36,264 - [INFO] - Generated answer length: 742
+2025-12-31 15:01:45,020 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:02:36,420 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:02:39,515 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:02:39,517 - [INFO] - Generated answer length: 967
+2025-12-31 15:02:45,390 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:03:32,835 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:03:36,261 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:03:36,265 - [INFO] - Generated answer length: 1070
+2025-12-31 15:03:40,651 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:04:21,510 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:04:27,857 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:04:27,859 - [INFO] - Generated answer length: 2204
+2025-12-31 15:04:32,671 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:04:32,674 - [INFO] - Generated answer length: 1778
+2025-12-31 15:04:38,608 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:05:09,741 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:05:14,142 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:05:14,144 - [INFO] - Generated answer length: 1486
+2025-12-31 15:05:22,539 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:06:11,297 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:06:14,488 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:06:14,491 - [INFO] - Generated answer length: 1098
+2025-12-31 15:06:19,177 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:06:19,183 - [INFO] - Generated answer length: 1835
+2025-12-31 15:06:24,500 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:06:24,504 - [INFO] - Generated answer length: 1855
+2025-12-31 15:06:30,126 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:07:13,472 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:07:18,869 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:07:18,872 - [INFO] - Generated answer length: 1950
+2025-12-31 15:07:25,254 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:08:09,393 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:08:14,370 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:08:14,372 - [INFO] - Generated answer length: 1813
+2025-12-31 15:08:19,192 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:09:00,388 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Random seed set to: 42
+=== Ablation Settings ===
+  Core-idea extraction: enabled
+  Optimization memory:  DISABLED
+=========================
+
+=== Baseline Evaluation ===
+
+=== Optimize ===
+Starting GEO for https://www.tandfonline.com/doi/full/10.1080/00913367.2021.1977737
+--------------------------------
+📌 Core idea: The document explores the concept of "influencer celebrification," detailing how social media influencers uniquely acquire celebrity capital—a form of sociocultural currency—through iterative generative, collaborative, and evaluative practices within an interconnected digital advertising ecosystem. It highlights the distinct roles advertising practitioners play as talent scouts, creative concierges, and impact analysts in facilitating this process, emphasizing the synergistic interplay between influencer content, audience engagement, and platform dynamics that differentiates influencers from traditional celebrities. This framework advances understanding of influencer advertising by focusing on the process of "becoming" celebrity rather than static fame, underscoring the importance of authenticity, community, and cross-platform adaptability.
+--------------------------------
+⚠️  Optimization memory DISABLED (ablation mode)
+
+--- Processing Query: aspireiq influencer marketing software ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document is a comprehensive, scholarly article focused on the theoretical and empirical process of how social media influencers acquire celebrity capital, termed 'influencer celebrification.' It is rich in qualitative research, conceptual frameworks, and detailed interviews, but it does not directly address or mention specific influencer marketing software platforms or tools such as AspireIQ. The query "aspireiq influencer marketing software" is highly transactional and product-focused, seeking information about a specific software solution, its features, pricing, and use cases. The target content is academic and conceptual, lacking direct references to commercial software products or practical software comparisons. Additionally, the document's structure is dense and lengthy, which may reduce its relevance for direct citation in software-focused queries. Therefore, the main reasons for non-citation are: (1) lack of direct mention or discussion of AspireIQ or similar software, (2) mismatch in content focus (academic theory vs. practical software information), and (3) the query's intent is commercial/product-oriented, which the target does not fulfill.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Restructured the content into clear, thematic sections to enhance clarity and extraction of key concepts related to influencer celebrification.', 'Condensed and rephrased lengthy paragraphs to focus on core ideas without losing essential details about the process and roles of advertising practitioners.', 'Organized empirical findings and theoretical implications into concise, digestible formats, including summary tables for participant information and celebrity vs. influencer distinctions.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a detailed, academic-style exploration of influencer celebrification, focusing on the sociocultural process by which influencers gain celebrity capital. However, it lacks direct, practical information about influencer marketing software platforms, which is the core focus of the query 'aspireiq influencer marketing software.' The target content does not mention AspireIQ or any influencer marketing software tools, features, pricing, or comparisons, which are critical for answering such a query. Additionally, the tone and structure are more theoretical and research-oriented rather than product- or solution-oriented, making it less relevant for software platform discovery or evaluation. The competitor content, by contrast, is a comprehensive, up-to-date, and practical review of influencer marketing software platforms, including AspireIQ, with detailed features, pricing, use cases, and integrations, which directly addresses the query intent. Therefore, the target was ignored due to missing key practical information about influencer marketing software and a mismatch in content focus and user intent.
+Tool Selected: knowledge_injection
+Key Changes (not recorded): ['Integrated a detailed section on AspireIQ, including its AI-driven influencer discovery, campaign management, content collaboration, reporting features, platform integrations, pricing, target users, and practical benefits.', 'Connected AspireIQ’s functionalities explicitly to the roles of advertising practitioners (talent scouts, creative concierges, impact analysts) and the generative, collaborative, and evaluative practices of influencer celebrification.', 'Added a concluding paragraph linking influencer marketing technology to the broader conceptual framework of influencer celebrification, preserving the document’s core focus on the process of acquiring celebrity capital.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document contains comprehensive and detailed information about AspireIQ influencer marketing software, including its features, roles it supports in influencer celebrification, integrations, pricing, and practical use cases. However, it was not cited likely because the content is embedded within a broader academic and theoretical discussion on influencer celebrification rather than presented as a straightforward, standalone product review or comparison. The tone is academic and analytical rather than commercial or directly promotional, which may reduce its visibility or relevance in typical commercial or software comparison queries. Additionally, the document is lengthy and dense, which might make it less accessible for quick extraction by generative engines focused on concise software feature summaries. The HTML/Markdown structure is well-organized but the AspireIQ section is nested within a large text block, which might hinder snippet extraction. To improve citation likelihood, restructuring the AspireIQ section to highlight key product features, benefits, and differentiators in a clearer, more concise, and SEO-friendly format would help. Also, adding meta-data or semantic tags emphasizing AspireIQ as an influencer marketing software solution would improve discoverability.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content for clearer logical flow, grouping related concepts and practices under distinct headings.', 'Streamlined AspireIQ section to directly connect its features and benefits to the core influencer celebrification framework.', 'Enhanced clarity by rephrasing complex sentences and emphasizing the iterative, synergistic nature of influencer celebrification and the roles of advertising practitioners.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: buy celebrity status analysis software ---
+Iteration 1/3
+✅ Success! Document cited for query: buy celebrity status analysis software
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: download influencer branding ebook ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document is a comprehensive, well-structured, and authoritative academic-style ebook on influencer celebrification, focusing on how social media influencers acquire celebrity capital. However, the query "download influencer branding ebook" likely triggered a search intent for a downloadable ebook specifically about influencer branding, possibly with a more direct focus on practical branding strategies or a simpler format. The target content, while highly relevant in topic, is more theoretical and research-oriented, and does not explicitly offer a downloadable ebook or direct download links, which may have caused the generative engine to overlook it. Additionally, the content is lengthy and dense, which might reduce its immediate relevance for users seeking a quick downloadable resource. The tone and structure are appropriate for academic or professional audiences but may not align with the typical expectations for an "ebook download" query, which often favors clear calls to action or download options. Therefore, the main issue is a mismatch between user intent (looking for a downloadable ebook) and the content presentation (a detailed research document without explicit download facilitation). To improve citation, the content should be restructured to highlight the availability of the ebook in a downloadable format, with clearer metadata or calls to action, making it more discoverable and aligned with the query intent.2025-12-31 15:09:05,877 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:09:05,881 - [INFO] - Generated answer length: 2057
+2025-12-31 15:09:11,265 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:10:09,370 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:10:15,512 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:10:15,516 - [INFO] - Generated answer length: 2137
+2025-12-31 15:10:32,203 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:11:00,980 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:11:09,273 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:11:09,278 - [INFO] - Generated answer length: 2581
+2025-12-31 15:11:15,868 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:12:04,368 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:12:07,967 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:12:07,975 - [INFO] - Generated answer length: 895
+2025-12-31 15:12:11,009 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:12:11,012 - [INFO] - Generated answer length: 1130
+2025-12-31 15:12:15,730 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:12:15,733 - [INFO] - Generated answer length: 1234
+2025-12-31 15:12:20,952 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:12:20,955 - [INFO] - Generated answer length: 1542
+2025-12-31 15:12:25,049 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:13:39,047 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized sections for clearer logical flow, grouping related concepts and practices together.', 'Streamlined language to enhance clarity and focus on the core idea of influencer celebrification without losing detail.', 'Consolidated the roles of advertising practitioners consistently across generative, collaborative, and evaluative practices for better coherence.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, research-based exploration of influencer celebrification and the roles of advertising practitioners, including a detailed section on AspireIQ as a supporting technology platform. However, it was not cited for the query 'download influencer branding ebook' likely because it does not offer a downloadable ebook format or direct download links, nor does it explicitly present itself as an 'influencer branding ebook.' The content is structured more as an academic or industry report rather than a downloadable guide or ebook, which may have caused the generative engine to overlook it for this specific query. Additionally, the document's tone is formal and academic, which might not align with typical user expectations for an ebook download. The HTML/Markdown structure is clear and well-organized, so structure is not the issue. To improve citation for such queries, the content could be enhanced by explicitly offering a downloadable ebook version or summary guide, with clear calls to action and metadata indicating ebook availability.
+Tool Selected: knowledge_injection
+Key Changes (not recorded): ['Added a dedicated section introducing and promoting a downloadable Influencer Branding eBook, including a direct download link and instructions for access.', 'Integrated references to the eBook in the Introduction and Conclusion to align with the document’s core focus on influencer celebrification and practical application.', 'Ensured the eBook content summary highlights its relevance to generative, collaborative, and evaluative practices, maintaining coherence with the document’s theoretical and practical framework.']
+Iteration 3/3
+✅ Success! Document cited for query: download influencer branding ebook
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: celebrity capital consulting services ---
+Iteration 1/3
+✅ Success! Document cited for query: celebrity capital consulting services
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: linkedin profile of social media influencer marketing agency ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document was not cited for the query "linkedin profile of social media influencer marketing agency" primarily because it does not directly address or provide specific information about LinkedIn profiles or detailed agency profiles. Instead, the content focuses on the theoretical and practical framework of influencer celebrification, influencer marketing processes, and the role of platforms like AspireIQ in influencer marketing. It lacks explicit, practical details or examples about social media influencer marketing agencies' LinkedIn profiles or how to find or evaluate them. Additionally, the tone is academic and research-oriented rather than promotional or agency-focused, which may not align with the typical intent behind the query. The structure is comprehensive but oriented towards influencer branding theory and technology support rather than agency marketing or LinkedIn presence. Therefore, the content is missing the specific facts and practical agency profile information that would make it relevant for the query. To improve citation likelihood, the content should include clear, structured sections or summaries about influencer marketing agencies, their LinkedIn presence, and how they present themselves professionally on LinkedIn or similar platforms.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content for clearer flow by grouping related concepts and roles under generative, collaborative, and evaluative practices.', 'Integrated AspireIQ’s LinkedIn profile information at the end to directly address the user query without disrupting the core narrative.', 'Streamlined sections to emphasize the iterative process of influencer celebrification and the distinct roles of advertising practitioners while preserving all original content and examples.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document contains comprehensive and authoritative content on influencer celebrification and influencer marketing agencies, including a specific section with a LinkedIn profile example for AspireIQ, a social media influencer marketing platform. However, it was not cited likely because the query "linkedin profile of social media influencer marketing agency" is very specific and expects a direct, concise listing or profile link rather than an in-depth academic or conceptual document. The target content is dense, academic in tone, and structured as a research report rather than a straightforward agency profile or directory. Additionally, the LinkedIn profile mention is embedded deep within a large document, which may reduce its visibility or relevance score for the query. The tone and structure are not optimized for quick extraction of such direct information, and the LinkedIn profile is only one example among many detailed insights, making it less prominent. To improve citation likelihood, the content should be restructured to highlight and foreground the LinkedIn profile information more clearly and concisely, possibly in a dedicated, easy-to-find section or summary. The HTML/Markdown structure could also be optimized for better extraction and snippet generation by search engines or generative engines.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content for clearer logical flow by grouping related concepts and roles under generative, collaborative, and evaluative practices.', 'Streamlined explanations to emphasize the iterative and synergistic nature of influencer celebrification while preserving all original details.', 'Enhanced clarity by explicitly linking advertising practitioners’ roles to each stage of the celebrification process and integrating AspireIQ’s features accordingly.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document contains highly relevant and detailed information about influencer marketing agencies, specifically highlighting AspireIQ as a key platform and agency with an active LinkedIn profile. However, the reason it was not cited for the query "linkedin profile of social media influencer marketing agency" likely stems from the fact that the relevant LinkedIn profile information is buried near the end of a very long, dense document. The LinkedIn profile mention is brief and not prominently structured or emphasized, making it less likely to be extracted or surfaced by the generative engine. Additionally, the document is primarily academic and conceptual in tone, focusing on influencer celebrification theory and methodology rather than directly promoting or profiling agencies. This may reduce its perceived direct relevance or authority for a straightforward query seeking LinkedIn profiles of influencer marketing agencies. The HTML/Markdown structure is generally clear but the LinkedIn profile section is a small subsection at the end, which may be overlooked. To improve citation likelihood, the content should be restructured to highlight and foreground the LinkedIn profile information more clearly and accessibly, possibly with a dedicated, well-labeled section or summary at the top or in a sidebar. This would improve relevance and extraction for such queries without losing the core academic content.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content for clearer logical flow, grouping related concepts and practices under distinct headings.', 'Enhanced clarity by simplifying complex sentences and emphasizing key roles and practices in influencer celebrification.', 'Integrated the AspireIQ platform description and LinkedIn profile information cohesively within the framework of influencer celebrification without adding new claims.']2025-12-31 15:13:44,412 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:13:44,415 - [INFO] - Generated answer length: 1528
+2025-12-31 15:13:46,971 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:15:09,075 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:15:14,077 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:15:14,084 - [INFO] - Generated answer length: 1772
+2025-12-31 15:15:19,441 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:15:19,443 - [INFO] - Generated answer length: 1704
+2025-12-31 15:15:23,228 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:15:23,231 - [INFO] - Generated answer length: 966
+2025-12-31 15:15:31,523 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:15:31,527 - [INFO] - Generated answer length: 1893
+2025-12-31 15:15:37,974 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:15:37,982 - [INFO] - Generated answer length: 1544
+2025-12-31 15:15:45,142 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:15:45,146 - [INFO] - Generated answer length: 1321
+2025-12-31 15:15:53,274 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:17:19,617 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:17:25,868 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:17:25,874 - [INFO] - Generated answer length: 1939
+2025-12-31 15:17:32,868 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:19:02,369 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:19:06,324 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:19:06,328 - [INFO] - Generated answer length: 1637
+2025-12-31 15:19:10,227 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: order social media management tools ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive and scholarly exploration of influencer celebrification and the roles of influencer marketing platforms like AspireIQ. However, it was not cited for the query 'order social media management tools' because it does not directly address or list social media management tools, scheduling features, or practical software solutions for managing social media accounts. Instead, it focuses on the theoretical framework, processes, and ecosystem of influencer marketing and celebrity capital acquisition, with AspireIQ mentioned as a supporting platform rather than a general social media management tool. The tone is academic and detailed, which may not align with the more practical, feature-focused content expected for the query. Additionally, the structure is dense and oriented toward influencer marketing theory rather than straightforward tool comparison or ordering information. To improve citation relevance, the content should include clearer, more explicit sections or summaries about social media management tools, their ordering or subscription processes, and practical usage scenarios, presented in a concise and accessible manner.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reordered and rephrased sections to improve logical flow and clarity while preserving all core content and emphasis on influencer celebrification.', 'Consolidated and streamlined descriptions of advertising practitioners’ roles and their integration with influencer practices for clearer understanding.', 'Enhanced the AspireIQ section by organizing features, pricing, and use cases distinctly to better align with the core framework of generative, collaborative, and evaluative practices.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive and scholarly exploration of influencer celebrification and the roles of influencer marketing platforms like AspireIQ. However, it does not directly address or list social media management tools in a practical, comparative, or feature-focused manner, which is the core intent behind the query 'order social media management tools.' The target content is more theoretical and focused on influencer marketing processes rather than providing actionable or comparative information about social media management software solutions. Additionally, the target content is lengthy and dense, with a structure oriented toward academic and industry insights rather than straightforward tool recommendations or feature lists. This makes it less relevant for a query seeking a ranked or ordered list of social media management tools. The cited competitor content, in contrast, directly addresses the query by listing, comparing, and reviewing social media management tools with clear features, pricing, and use cases, making it more immediately useful and relevant. Therefore, the target was ignored due to lack of direct relevance and practical tool comparison for the query, despite its depth and authority on influencer marketing topics.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized sections for clearer logical flow, grouping related concepts and roles together to enhance clarity.', 'Streamlined language to emphasize the iterative, process-oriented nature of influencer celebrification while preserving all original content.', 'Enhanced headings and subheadings to better reflect the core idea and facilitate quick extraction of key points.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive and scholarly exploration of influencer celebrification and the roles of influencer marketing platforms like AspireIQ. However, it was not cited for the query 'order social media management tools' because it does not directly address or list social media management tools, their features, or comparisons relevant to ordering or selecting such tools. The content is focused on influencer marketing theory, practices, and a specific platform (AspireIQ) supporting influencer marketing campaigns, rather than on general social media management software or tools for scheduling, monitoring, or managing social media accounts. Additionally, the tone and structure are academic and conceptual rather than practical or product-focused, which may reduce its relevance for a query seeking actionable information about social media management tools. The HTML/Markdown structure is clear and well-organized, so structural issues are not a cause. To improve citation likelihood, the content should explicitly include a clear, practical section or summary listing and comparing social media management tools, their ordering or subscription options, and use cases, aligning more closely with the query intent.
+Tool Selected: knowledge_injection
+Key Changes (not recorded): ['Added a new, clearly labeled section titled "Social Media Management Tools: Practical Guide to Ordering and Subscription" summarizing popular tools, their features, pricing, and subscription guidance to address practical needs related to influencer celebrification.', 'Integrated the new section naturally after the AspireIQ platform discussion to maintain thematic coherence around technology supporting influencer celebrification.', 'Ensured all original content and formatting were preserved while rephrasing minor transitions for smooth integration of the new information.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: how python developers can become tech influencers ---
+Iteration 1/3
+✅ Success! Document cited for query: how python developers can become tech influencers
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: forbes article on influencer celebrity capital ---
+Iteration 1/3
+✅ Success! Document cited for query: forbes article on influencer celebrity capital
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: celebrification online classes ---
+Iteration 1/3
+✅ Success! Document cited for query: celebrification online classes
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: role of algorithms in influencer popularity ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document comprehensively covers the role of algorithms and platform dynamics indirectly through concepts like platform agnosticism, content traversal, and community-centric KPIs, but it does not explicitly address the direct role or impact of algorithms in influencer popularity. The content focuses more on influencer practices, advertising practitioner roles, and community engagement rather than detailing how algorithms shape or influence popularity metrics. Additionally, the document is structured as a detailed report with extensive sections, which may dilute focus on algorithmic influence specifically. The tone and structure are appropriate and authoritative, but the absence of explicit discussion on algorithms as a driving factor in influencer popularity likely caused the generative engine to overlook it for the query. To improve citation relevance, the content should explicitly incorporate and highlight the role of algorithms in shaping influencer visibility and popularity, linking it clearly to the influencer celebrification process.
+Tool Selected: knowledge_injection
+Key Changes (not recorded): ['Integrated a detailed explanation of how social media platform algorithms influence influencer popularity by shaping content visibility, engagement prioritization, and audience reach, emphasizing their role in the celebrification process.', 'Expanded the discussion of platform agnosticism and attention labor to include strategic adaptation to differing algorithmic logics across platforms.', 'Added algorithmic biases and their impact on influencer success as a key theoretical and practical consideration, including a brief mention in the Related Topics section.']2025-12-31 15:19:51,613 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:19:56,865 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:19:56,869 - [INFO] - Generated answer length: 2023
+2025-12-31 15:20:04,424 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:21:14,630 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:21:21,533 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:21:21,537 - [INFO] - Generated answer length: 1880
+2025-12-31 15:21:27,512 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:22:17,034 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:22:22,972 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:22:22,975 - [INFO] - Generated answer length: 1900
+2025-12-31 15:22:26,455 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:23:07,722 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:23:13,252 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:23:13,254 - [INFO] - Generated answer length: 2342
+2025-12-31 15:23:17,245 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:24:32,101 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document comprehensively covers the role of social media platform algorithms in influencer popularity, including how algorithms shape content visibility, engagement prioritization, and audience reach. It discusses algorithmic biases, platform agnosticism, and the strategic adaptation influencers must undertake to optimize their celebrity capital acquisition. However, the document was likely ignored because the information is embedded within a very long, dense, and highly detailed text that may not have been easily extracted or recognized as directly relevant by the generative engine. The structure, while thorough, is complex and lengthy, which can reduce the likelihood of citation if the engine prioritizes more concise or explicitly focused content. Additionally, the tone is academic and descriptive rather than explicitly highlighting the algorithmic role in influencer popularity as a standalone, easily indexable section. There is no major factual gap or missing key information, but the presentation and structure may have hindered discoverability and direct citation.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized sections for clearer logical flow, grouping related concepts such as platform algorithms and practitioner roles within each practice.', 'Enhanced clarity by consolidating algorithmic influence details under relevant practices and emphasizing their role throughout the celebrification process.', 'Streamlined descriptions of practitioner roles and technological tools to better highlight their facilitative functions in influencer celebrification without adding new content.']
+Iteration 3/3
+✅ Success! Document cited for query: role of algorithms in influencer popularity
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: how does celebrification affect traditional celebrities ---
+Iteration 1/3
+✅ Success! Document cited for query: how does celebrification affect traditional celebrities
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: celebrification wikipedia ---
+Iteration 1/3
+✅ Success! Document cited for query: celebrification wikipedia
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: steps in the celebrification of influencers ---
+Iteration 1/3
+✅ Success! Document cited for query: steps in the celebrification of influencers
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: social media influencer celebrity interviews ---
+Iteration 1/3
+✅ Success! Document cited for query: social media influencer celebrity interviews
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: order social media influencer report ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document contains highly detailed, comprehensive, and well-structured content directly relevant to the query "order social media influencer report." It includes extensive theoretical frameworks, practical guides, and actionable resources such as an Influencer Branding eBook and social media management tool ordering instructions. However, the document was likely ignored because it is very lengthy and dense, which may have caused the generative engine to overlook it in favor of shorter, more directly query-matching content. Additionally, the document is formatted in Markdown with many sections and tables, which might have complicated extraction or ranking by the engine. The tone and content are authoritative and rich, but the lack of a concise, clearly labeled section explicitly titled or summarized as "How to order a social media influencer report" or a direct call-to-action for ordering such a report might have reduced its perceived relevance. The presence of extensive academic and conceptual discussion may have also made it less immediately accessible for a straightforward transactional query. To improve citation likelihood, restructuring the content to highlight ordering instructions or report acquisition in a dedicated, clearly marked section near the top, and optimizing the HTML/Markdown structure for better readability and extraction, would be beneficial.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content for clearer logical flow by grouping related concepts and emphasizing the iterative, synergistic nature of influencer celebrification.', 'Enhanced clarity by explicitly linking platform algorithms and their biases to each stage of the celebrification process and influencer strategies.', 'Streamlined sections on tools and resources to focus on their relevance to the core influencer celebrification framework without introducing new claims or removing essential content.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document contains highly relevant, detailed, and authoritative content directly addressing the query "order social media influencer report" by providing comprehensive insights into influencer celebrification, social media management tools, and practical guidance on ordering and subscription of such tools. However, it was likely ignored because the content is very lengthy and dense, which may have caused the generative engine to overlook it in favor of shorter, more directly transactional or list-based content. Additionally, the document is structured as a long-form report with academic tone and extensive theoretical framing, which might not match the more commercial or straightforward tone expected for an "order" query. The HTML/Markdown structure is clear and well-organized, so structure is not the issue. The main gap is that the content does not explicitly use direct commercial call-to-action phrases like "order now" or "purchase report" prominently, which might reduce its visibility for a transactional query. Also, the presence of a large amount of theoretical and methodological content may dilute the focus on the practical ordering aspect. To improve citation likelihood, the content should be restructured or enhanced to highlight ordering instructions and commercial intent more clearly and concisely, possibly with a dedicated, prominent section or summary focused on how to order or obtain the social media influencer report or related services.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reordered and rephrased sections to improve logical flow and clarity, grouping related concepts and practices cohesively.', 'Enhanced emphasis on the role of platform algorithms throughout the document to highlight their central influence on influencer celebrification.', 'Streamlined descriptions of practitioner roles and technological tools to clearly connect them with the generative, collaborative, and evaluative practices core to the influencer celebrification process.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document contains comprehensive, well-structured, and authoritative content highly relevant to the query 'order social media influencer report.' It covers influencer celebrification, social media management tools, ordering and subscription guidance, and practical resources like an Influencer Branding eBook. However, it was not cited likely because the query is transactional and specific ('order social media influencer report'), while the document is more educational and strategic rather than directly offering a purchasable report or a straightforward ordering process. The document's tone is academic and explanatory rather than sales-oriented or explicitly transactional, which may have caused the generative engine to overlook it for a query expecting a direct ordering or purchase pathway. Additionally, the document is lengthy and dense, which might reduce its immediate surface relevance for a quick transactional query. To improve citation likelihood, restructuring the content to highlight clear, concise ordering instructions or calls to action related to purchasing or accessing reports, and emphasizing transactional intent in metadata or summaries, would help. The HTML/Markdown structure is clear and well-organized, so no structural fixes are needed. Therefore, the best next step is to restructure the content to improve clarity and relevance for transactional queries.2025-12-31 15:24:40,601 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:24:40,605 - [INFO] - Generated answer length: 2711
+2025-12-31 15:24:46,029 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:25:40,595 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:25:46,957 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:25:46,960 - [INFO] - Generated answer length: 2510
+2025-12-31 15:25:50,818 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:26:28,957 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:26:37,047 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:26:37,054 - [INFO] - Generated answer length: 848
+2025-12-31 15:26:43,789 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:28:12,679 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:28:15,307 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:28:15,316 - [INFO] - Generated answer length: 874
+2025-12-31 15:28:20,740 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:29:40,381 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:29:42,686 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:29:42,698 - [INFO] - Generated answer length: 812
+2025-12-31 15:29:52,057 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content for clearer logical flow, grouping related concepts and practices under distinct sections for improved clarity.', 'Enhanced emphasis on the role of platform algorithms throughout generative, collaborative, and evaluative practices to highlight their central influence on influencer celebrification.', 'Streamlined descriptions of tools and resources (AspireIQ, social media management platforms, eBook) to directly connect their features and benefits to the core influencer celebrification framework.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: reviews of social media analytics tools ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, scholarly, and detailed exploration of influencer celebrification, focusing on how social media influencers acquire celebrity capital through generative, collaborative, and evaluative practices. However, it does not directly address or review specific social media analytics tools, which is the core focus of the query "reviews of social media analytics tools." The content is more theoretical and strategic, emphasizing influencer marketing processes, roles of advertising practitioners, and platform algorithm impacts rather than practical tool comparisons or reviews. Additionally, the document's tone is academic and conceptual rather than product-focused or consumer-oriented, which may reduce its relevance for queries seeking direct software reviews or tool recommendations. The HTML/Markdown structure is clear and well-organized, so structural issues are not a cause for non-citation. The main reason for omission is the lack of explicit, detailed, and comparative information about social media analytics tools themselves, which is what the query demands.
+Tool Selected: knowledge_injection
+Key Changes (not recorded): ['Added a detailed comparative review section of popular social media analytics tools, including features, pricing, user feedback, and suitability, to explicitly address influencer marketing analytics.', 'Integrated explanations of how these analytics tools support the evaluative practices and impact analyst role within influencer celebrification.', 'Enhanced the existing social media management tools section with clearer guidance on tool selection and subscription, linking it to the core practices of influencer celebrification.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document contains extensive, detailed, and well-structured information about influencer celebrification, social media analytics tools, and related practices. However, it was not cited for the query 'reviews of social media analytics tools' likely because the content is primarily academic and conceptual, focusing on influencer marketing theory and ecosystem rather than providing direct, user-focused, comparative reviews or rankings of social media analytics tools. Although it includes a section comparing social media analytics tools, the tone is more explanatory and less oriented towards practical, straightforward product reviews or buyer guidance that typical review aggregators or software advice sites provide. Additionally, the document is very long and dense, which may reduce its visibility or extraction as a concise review source. The HTML/Markdown structure is clear and semantic, so structure is not a major issue. To improve citation likelihood, the content should be restructured to highlight and summarize the social media analytics tools section more prominently, with clearer, concise, and review-style presentation emphasizing practical comparisons, user feedback, pricing, and suitability. This would align better with the intent behind the query and typical review content expectations.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized and consolidated content related to social media analytics and management tools for clearer extraction and relevance to influencer celebrification.', 'Enhanced emphasis on the role of platform algorithms and algorithmic biases throughout generative, collaborative, and evaluative practices.', 'Streamlined sections on practical tool usage and subscription guidance to maintain focus on their support for influencer celebrification without redundancy.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, well-structured, and authoritative overview of influencer celebrification, including detailed sections on social media management and analytics tools relevant to influencer marketing. However, it was not cited for the query 'reviews of social media analytics tools' likely because the content is presented primarily as an academic and conceptual framework with practical tool summaries rather than as a direct, user-focused review or comparison of social media analytics tools. The tone is scholarly and the tool descriptions are embedded within a broader influencer marketing context, which may have caused the generative engine to overlook it as a direct source for straightforward tool reviews. Additionally, the document does not use typical review language or star ratings, which are common signals for review content. The HTML/Markdown structure is clear and well-organized, so structure is not a major issue. To improve citation likelihood, the content could be restructured or enhanced to highlight explicit, standalone, and clearly labeled sections dedicated to social media analytics tool reviews, with more direct comparison language and user-centric evaluation criteria.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content for clearer thematic flow, grouping related concepts such as platform algorithms and their impact within theoretical and practical sections.', 'Enhanced clarity by explicitly linking social media analytics tools and management platforms to the generative, collaborative, and evaluative practices of influencer celebrification.', 'Streamlined descriptions of tools and methodologies to emphasize their relevance to influencer celebrification without adding new claims or removing core content.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: trends in social media influencer marketing 2023 ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document provides a comprehensive, well-structured, and authoritative exploration of influencer celebrification, focusing on how social media influencers acquire celebrity capital through generative, collaborative, and evaluative practices. However, it was not cited for the query "trends in social media influencer marketing 2023" likely because it lacks explicit, up-to-date coverage of specific 2023 social media marketing trends, such as the rise of short-form video, creator economy growth, social media SEO evolution, Gen Z consumer behavior, and financial pressures impacting marketing strategies. The tone and structure are academic and detailed, which may not align with the more trend-focused, practical, and concise style typically favored for such queries. Additionally, the document does not explicitly highlight or label current year-specific trends or actionable marketing tips for 2023, which are central to the competing content that was cited. To improve relevance and citation likelihood, the content should explicitly incorporate and foreground key 2023 influencer marketing trends, integrating them clearly within the existing framework without losing its core theoretical and practical insights.
+Tool Selected: knowledge_injection
+Key Changes (not recorded): ['Integrated explicit coverage of key 2023 influencer marketing trends including short-form video dominance, creator economy growth, social media SEO, Gen Z influence, financial pressures, and authenticity emphasis, weaving them naturally into relevant sections.', 'Added practical examples and actionable insights related to 2023 trends within generative, collaborative, and evaluative practices to enhance real-world applicability.', 'Expanded theoretical and practical implications to reflect the impact of 2023 trends on influencer celebrification, ensuring the document remains current and relevant without altering its core focus.']2025-12-31 15:31:26,126 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:31,537 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:31,541 - [INFO] - Generated answer length: 2150
+2025-12-31 15:31:35,020 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:35,024 - [INFO] - Generated answer length: 1669
+2025-12-31 15:31:37,375 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:37,381 - [INFO] - Generated answer length: 752
+2025-12-31 15:31:37,804 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:37,812 - [INFO] - Generated answer length: 1056
+2025-12-31 15:31:38,029 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:38,036 - [INFO] - Generated answer length: 1072
+2025-12-31 15:31:38,398 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:38,402 - [INFO] - Generated answer length: 388
+2025-12-31 15:31:38,846 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:38,853 - [INFO] - Generated answer length: 1169
+2025-12-31 15:31:39,050 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:39,054 - [INFO] - Generated answer length: 1268
+2025-12-31 15:31:39,195 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:39,199 - [INFO] - Generated answer length: 1715
+2025-12-31 15:31:39,364 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:39,371 - [INFO] - Generated answer length: 1475
+2025-12-31 15:31:39,454 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:39,465 - [INFO] - Generated answer length: 1676
+2025-12-31 15:31:39,489 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:39,494 - [INFO] - Generated answer length: 1759
+2025-12-31 15:31:39,751 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:39,757 - [INFO] - Generated answer length: 1595
+2025-12-31 15:31:39,818 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:39,823 - [INFO] - Generated answer length: 1836
+2025-12-31 15:31:39,890 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:39,896 - [INFO] - Generated answer length: 1755
+2025-12-31 15:31:40,022 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:40,030 - [INFO] - Generated answer length: 1759
+2025-12-31 15:31:40,310 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:40,315 - [INFO] - Generated answer length: 1689
+2025-12-31 15:31:40,340 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:40,343 - [INFO] - Generated answer length: 1878
+2025-12-31 15:31:40,809 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:40,815 - [INFO] - Generated answer length: 1228
+2025-12-31 15:31:42,597 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:42,599 - [INFO] - Generated answer length: 1909
+2025-12-31 15:31:43,216 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:43,222 - [INFO] - Generated answer length: 2493
+2025-12-31 15:31:44,443 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-31 15:31:44,449 - [INFO] - Generated answer length: 1973
+
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document is comprehensive and rich in detailed, up-to-date information about 2023 trends in social media influencer marketing, including short-form video dominance, creator economy monetization, social media SEO, Gen Z influence, and financial pressures. It also deeply explores the theoretical framework of influencer celebrification and the role of platform algorithms, which are highly relevant to the query. However, the document is very long and dense, with a complex structure and extensive detail that may hinder quick extraction or summarization by generative engines. The content is presented in a formal academic style with many sections and subsections, which might reduce its immediate accessibility or visibility in snippet-based retrieval. Additionally, the document lacks a concise, prominent executive summary or lead paragraph explicitly highlighting the key 2023 trends in influencer marketing in a succinct manner. This could cause retrieval or citation algorithms to overlook it in favor of more concise, directly query-matching content. The HTML/Markdown structure, while logically organized, is very extensive and might not be optimized for snippet extraction or quick scanning by generative engines. Therefore, the main reasons for non-citation are the lack of a clear, concise lead summary focused on the query, and the overly complex and lengthy structure that may reduce immediate relevance signals. To improve citation likelihood, restructuring the content to include a focused executive summary or lead section emphasizing 2023 influencer marketing trends, and optimizing the document structure for clarity and snippet extraction, would be beneficial.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Added a concise TL;DR summary at the beginning to provide a quick overview of the document’s core ideas.', 'Reorganized and rephrased sections for improved clarity and logical flow while preserving all original content and emphasis on the core concept of influencer celebrification.', 'Streamlined headings and bullet points to enhance readability and extraction of key insights without altering meaning or removing any relevant information.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document is comprehensive, authoritative, and highly relevant to the query "trends in social media influencer marketing 2023," covering detailed 2023 trends such as short-form video dominance, creator economy growth, social media SEO, Gen Z influence, and financial pressures. However, it was not cited likely due to its dense academic tone, extensive length, and complex structure, which may have made it less accessible or less directly aligned with the more concise, trend-focused style of the competitor content. Additionally, the competitor content is more straightforward, practical, and formatted as a clear list of trends with actionable tips, which aligns better with typical user expectations for trend summaries. The target document’s deep theoretical framing and detailed methodological sections, while valuable, may have reduced its immediate discoverability or perceived relevance in a quick trend overview context. To improve citation likelihood, restructuring the content for clarity and emphasis on the 2023 trends in a more concise, user-friendly format would help, without losing the authoritative depth.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content for clearer thematic flow, grouping related concepts such as theoretical framework, 2023 trends, and practitioner roles to enhance clarity and extraction.', 'Streamlined explanations of platform algorithms and their impact on influencer celebrification, emphasizing their central role without diluting core ideas.', 'Consolidated practical tool descriptions and usage guidance into distinct sections for social media management and analytics tools, improving usability and relevance to 2023 influencer marketing trends.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: celebrity net worth homepage ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+Reason: The target document was not cited for the query 'celebrity net worth homepage' primarily because it does not contain direct or explicit information about celebrity net worth figures, financial data, or a homepage-style listing of celebrity net worths. Instead, the content focuses on the sociocultural process of influencer celebrification, influencer marketing practices, platform algorithms, and tools like AspireIQ, which are conceptually and thematically distinct from straightforward celebrity net worth listings. The tone is academic and industry-focused rather than consumer-oriented or entertainment-focused, which is typical for net worth sites. Additionally, the document is lengthy and dense, with no clear, concise summary or metadata that would signal relevance to a net worth query. The HTML/Markdown structure is well-organized but does not emphasize or highlight financial net worth data, which is the core user intent behind the query. Therefore, the content lacks the specific factual data and user intent alignment needed to be cited for a query about celebrity net worth homepages.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized content for clearer thematic flow, grouping related concepts and practices under coherent headings.', 'Enhanced clarity by refining explanations of key concepts such as platform algorithms, attention labor, and practitioner roles without altering original meaning.', 'Streamlined sections on tools and practical guides to emphasize their relevance to the core influencer celebrification framework.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+Reason: The target document was not cited for the query "celebrity net worth homepage" primarily because it does not address or provide information related to individual celebrity net worth figures, financial valuations, or a homepage-style directory of celebrity wealth. Instead, the content focuses on the sociocultural process of influencer celebrification, influencer marketing practices, platform algorithms, and tools supporting influencer branding and campaign management. The tone is academic and industry-focused rather than consumer-oriented or entertainment-focused, which is typical for net worth queries. Additionally, the document's structure is comprehensive but oriented towards influencer marketing theory and practice, lacking direct, concise data or listings about celebrity net worth. Therefore, it lacks the factual content and user intent alignment necessary to be relevant for a query seeking a celebrity net worth homepage or database. To improve relevance, the content would need to include or link to actual celebrity net worth data or a homepage that aggregates such financial information.
+Tool Selected: content_restructure
+Key Changes (not recorded): ['Reorganized sections for clearer logical flow, grouping related concepts and practices to enhance clarity and extraction.', 'Rephrased and condensed complex sentences to improve readability while preserving all core ideas and details.', 'Streamlined tool descriptions and practical guides to focus on their relevance to influencer celebrification and the roles of advertising practitioners.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+Reason: The target document was not cited for the query "celebrity net worth homepage" primarily because it does not address or provide information related to individual celebrity net worth figures, financial data, or a homepage-style directory of celebrity wealth. Instead, the content focuses on the sociocultural process of influencer celebrification, influencer marketing practices, and industry tools, which is a different topical domain. Additionally, the tone and structure are academic and industry-focused rather than consumer-oriented or entertainment-focused, which is typical for net worth queries. The document lacks direct, factual data about celebrity net worth, which is the core information sought by the query. The HTML/Markdown structure is clear and well-organized, so structural issues are not the cause. To improve relevance for such queries, the content would need to incorporate explicit, factual celebrity net worth data or a clear homepage/index style presentation of such information.
+Tool Selected: knowledge_injection
+Key Changes (not recorded): ['Integrated explicit clarification that financial valuations and celebrity net worth data are outside the primary scope but relevant for certain brand partnership decisions, directing users to specialized platforms for such information.', 'Weaved references to celebrity net worth and financial rankings into the Introduction, Theoretical Framework, and Practical Implications sections to acknowledge user expectations for such data without detracting from the core focus on influencer celebrification as a sociocultural process.', 'Added a brief "Related Topics" subsection explicitly addressing celebrity net worth and financial valuation resources, ensuring completeness for queries related to "celebrity net worth homepage" while preserving the document’s original focus.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: tiktok influencer to celebrity case studies ---
+Iteration 1/3
+✅ Success! Document cited for query: tiktok influencer to celebrity case studies
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: workshops on understanding influencer impact ---
+Iteration 1/3
+✅ Success! Document cited for query: workshops on understanding influencer impact
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/ablation_core_only_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+=== Evaluation After Optimization ===
+
+========================================
+         Optimization Comparison
+========================================
+Baseline citation rate: 60.0% (12/20)
+Optimized citation rate: 65.0% (13/20)
+Improvement: +5.0% (+1 queries)
+========================================
+
+Compare log saved to: /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/compare_logs/ablation_core_only_F4o8CSOgUYStpyWq5UIO2w_compare.json

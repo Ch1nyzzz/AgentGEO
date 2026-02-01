@@ -1,0 +1,346 @@
+2026-01-04 20:37:52,290 - [INFO] - Query: best books on celebrity capital and media studies... | Competitors: 5 (full content, lengths: [21126, 13946, 4059]...) | Target idx: [6]
+2026-01-04 20:37:52,585 - [INFO] - Query: best platforms for finding influencers... | Competitors: 5 (full content, lengths: [29544, 43315, 63141]...) | Target idx: [6]
+2026-01-04 20:37:52,603 - [INFO] - Query: forbes celebrity status list... | Competitors: 5 (full content, lengths: [45086, 27269, 14567]...) | Target idx: [6]
+2026-01-04 20:37:53,354 - [INFO] - Query: buy influencer marketing research report... | Competitors: 5 (full content, lengths: [26007, 24612, 15767]...) | Target idx: [6]
+2026-01-04 20:38:01,056 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:01,070 - [INFO] - Generated answer length: 2794
+2026-01-04 20:38:01,071 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 5]
+2026-01-04 20:38:01,175 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:01,176 - [INFO] - Generated answer length: 2219
+2026-01-04 20:38:01,176 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:38:01,594 - [INFO] - Query: what is celebrity capital in social media?... | Competitors: 5 (full content, lengths: [27778, 134154, 8604]...) | Target idx: [6]
+2026-01-04 20:38:01,627 - [INFO] - Query: buy 'celebrity capital: the role of celebrities in... | Competitors: 0 (snippet only) | Target idx: [1]
+2026-01-04 20:38:03,780 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:03,782 - [INFO] - Generated answer length: 3699
+2026-01-04 20:38:03,782 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:38:04,769 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:04,770 - [INFO] - Generated answer length: 3255
+2026-01-04 20:38:04,770 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:38:05,201 - [INFO] - Query: buy influencer marketing services... | Competitors: 5 (full content, lengths: [14193, 7206, 5132]...) | Target idx: [6]
+2026-01-04 20:38:05,275 - [INFO] - Query: instagram official page of charli d'amelio... | Competitors: 5 (full content, lengths: [151029, 21540, 17135]...) | Target idx: [6]
+2026-01-04 20:38:05,711 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:05,717 - [INFO] - Generated answer length: 1213
+2026-01-04 20:38:05,717 - [INFO] - Citation check: target=[1] cited=True | All citations: [1]
+2026-01-04 20:38:06,116 - [INFO] - Query: buy course on becoming a celebrity from an influen... | Competitors: 5 (full content, lengths: [5939, 4490, 6204]...) | Target idx: [6]
+2026-01-04 20:38:06,991 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:06,992 - [INFO] - Generated answer length: 285
+2026-01-04 20:38:06,993 - [INFO] - Citation check: target=[6] cited=False | All citations: [2, 4]
+2026-01-04 20:38:07,422 - [INFO] - Query: best courses for becoming a social media influence... | Competitors: 5 (full content, lengths: [9740, 11859, 5076]...) | Target idx: [6]
+2026-01-04 20:38:08,312 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:08,314 - [INFO] - Generated answer length: 2277
+2026-01-04 20:38:08,315 - [INFO] - Citation check: target=[6] cited=True | All citations: [2, 3, 5, 6]
+2026-01-04 20:38:09,779 - [INFO] - Query: buy 'celebrity culture and the american dream' by ... | Competitors: 5 (full content, lengths: [27615, 35403, 3489]...) | Target idx: [6]
+2026-01-04 20:38:12,241 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:12,242 - [INFO] - Generated answer length: 3120
+2026-01-04 20:38:12,242 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:38:12,768 - [INFO] - Query: cultural impact of social media stars on youth... | Competitors: 5 (full content, lengths: [10417, 16930, 17519]...) | Target idx: [6]
+2026-01-04 20:38:14,614 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:14,615 - [INFO] - Generated answer length: 1310
+2026-01-04 20:38:14,615 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:38:14,764 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:14,765 - [INFO] - Generated answer length: 3467
+2026-01-04 20:38:14,765 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:38:15,133 - [INFO] - Query: top platforms for leveraging celebrity capital in ... | Competitors: 5 (full content, lengths: [21623, 68098, 43315]...) | Target idx: [6]
+2026-01-04 20:38:15,961 - [INFO] - Query: influencer marketing hub... | Competitors: 5 (full content, lengths: [19120, 19120, 13891]...) | Target idx: [6]
+2026-01-04 20:38:18,883 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:18,887 - [INFO] - Generated answer length: 3874
+2026-01-04 20:38:18,888 - [INFO] - Citation check: target=[6] cited=False | All citations: []
+2026-01-04 20:38:19,181 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:19,186 - [INFO] - Generated answer length: 2905
+2026-01-04 20:38:19,187 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:38:19,391 - [INFO] - Query: impact of influencers on consumer behavior... | Competitors: 0 (snippet only) | Target idx: [1]
+2026-01-04 20:38:19,637 - [INFO] - Query: best books on celebrification and social media... | Competitors: 5 (full content, lengths: [16279, 8686, 12161]...) | Target idx: [6]
+2026-01-04 20:38:22,515 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:22,518 - [INFO] - Generated answer length: 2510
+2026-01-04 20:38:22,518 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 5]
+2026-01-04 20:38:23,424 - [INFO] - Query: instagram influencer marketing platform... | Competitors: 5 (full content, lengths: [21809, 16782, 13891]...) | Target idx: [6]
+2026-01-04 20:38:24,711 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:24,714 - [INFO] - Generated answer length: 1494
+2026-01-04 20:38:24,714 - [INFO] - Citation check: target=[1] cited=True | All citations: [1]
+2026-01-04 20:38:26,185 - [INFO] - Query: top social media management tools for marketers... | Competitors: 5 (full content, lengths: [37411, 46148, 28077]...) | Target idx: [6]
+2026-01-04 20:38:27,279 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:27,282 - [INFO] - Generated answer length: 4956
+2026-01-04 20:38:27,283 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 3, 4, 5, 6]
+2026-01-04 20:38:28,644 - [INFO] - Query: buy social media analytics software... | Competitors: 5 (full content, lengths: [26028, 39080, 39080]...) | Target idx: [6]
+2026-01-04 20:38:29,409 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:29,412 - [INFO] - Generated answer length: 3356
+2026-01-04 20:38:29,412 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 6]
+2026-01-04 20:38:31,267 - [INFO] - Query: buy course on increasing celebrity capital... | Competitors: 5 (full content, lengths: [134154, 54732, 24334]...) | Target idx: [6]
+2026-01-04 20:38:32,377 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:32,379 - [INFO] - Generated answer length: 2957
+2026-01-04 20:38:32,379 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:38:33,891 - [INFO] - Query: how do influencers acquire celebrity capital... | Competitors: 5 (full content, lengths: [134154, 8604, 8528]...) | Target idx: [6]
+2026-01-04 20:38:38,554 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:38,556 - [INFO] - Generated answer length: 2985
+2026-01-04 20:38:38,556 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:38:39,258 - [INFO] - Query: buy 'the influencer code' book... | Competitors: 5 (full content, lengths: [1675, 3414, 7499]...) | Target idx: [6]
+2026-01-04 20:38:39,797 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:39,799 - [INFO] - Generated answer length: 3534
+2026-01-04 20:38:39,799 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:38:40,235 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:40,238 - [INFO] - Generated answer length: 2345
+2026-01-04 20:38:40,238 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 6]
+2026-01-04 20:38:40,857 - [INFO] - Query: best courses for building celebrity capital as an ... | Competitors: 5 (full content, lengths: [18779, 39303, 22995]...) | Target idx: [6]
+2026-01-04 20:38:40,988 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:41,006 - [INFO] - Generated answer length: 4475
+2026-01-04 20:38:41,006 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:38:41,022 - [INFO] - Query: instagram digital influencer page... | Competitors: 5 (full content, lengths: [14193, 11558, 7531]...) | Target idx: [6]
+2026-01-04 20:38:41,688 - [INFO] - Query: impact of social media influencer fame on consumer... | Competitors: 5 (full content, lengths: [4545, 43657, 51477]...) | Target idx: [6]
+2026-01-04 20:38:42,824 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:42,825 - [INFO] - Generated answer length: 946
+2026-01-04 20:38:42,826 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:38:43,414 - [INFO] - Query: buy book on becoming a social media influencer... | Competitors: 5 (full content, lengths: [16445, 17696, 144506]...) | Target idx: [6]
+2026-01-04 20:38:49,247 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:49,250 - [INFO] - Generated answer length: 2644
+2026-01-04 20:38:49,250 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:38:49,648 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:49,651 - [INFO] - Generated answer length: 3399
+2026-01-04 20:38:49,651 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:38:50,075 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:50,078 - [INFO] - Generated answer length: 2693
+2026-01-04 20:38:50,078 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 5, 6]
+2026-01-04 20:38:50,303 - [INFO] - Query: hootsuite digital influencer marketing page... | Competitors: 5 (full content, lengths: [4013, 33903, 20389]...) | Target idx: [6]
+2026-01-04 20:38:50,824 - [INFO] - Query: hire social media star for brand campaign... | Competitors: 5 (full content, lengths: [12169, 20601, 14193]...) | Target idx: [6]
+2026-01-04 20:38:51,740 - [INFO] - Query: buy influencer marketing guide... | Competitors: 5 (full content, lengths: [13588, 7709, 144506]...) | Target idx: [6]
+2026-01-04 20:38:53,896 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:53,898 - [INFO] - Generated answer length: 3023
+2026-01-04 20:38:53,898 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:38:55,227 - [INFO] - Query: how do people become famous on social media?... | Competitors: 5 (full content, lengths: [24201, 12940, 20124]...) | Target idx: [6]
+2026-01-04 20:38:57,459 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:57,462 - [INFO] - Generated answer length: 2796
+2026-01-04 20:38:57,462 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:38:57,901 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:57,904 - [INFO] - Generated answer length: 2921
+2026-01-04 20:38:57,904 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:38:58,065 - [INFO] - Query: impact of digital influencers on consumer behavior... | Competitors: 5 (full content, lengths: [30156, 145971, 51477]...) | Target idx: [6]
+2026-01-04 20:38:58,444 - [INFO] - Query: how do influencers become celebrities?... | Competitors: 5 (full content, lengths: [134154, 6061, 8528]...) | Target idx: [6]
+2026-01-04 20:38:59,895 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:38:59,898 - [INFO] - Generated answer length: 2245
+2026-01-04 20:38:59,898 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:39:00,652 - [INFO] - Query: buy digital influencer marketing course... | Competitors: 5 (full content, lengths: [17994, 2056, 11435]...) | Target idx: [6]
+2026-01-04 20:39:06,785 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:06,788 - [INFO] - Generated answer length: 3132
+2026-01-04 20:39:06,788 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:39:07,269 - [INFO] - Query: buy book on celebrification and social media... | Competitors: 5 (full content, lengths: [21758, 32659, 16213]...) | Target idx: [6]
+2026-01-04 20:39:07,547 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:07,556 - [INFO] - Generated answer length: 3666
+2026-01-04 20:39:07,556 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:39:08,431 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:08,436 - [INFO] - Generated answer length: 3097
+2026-01-04 20:39:08,437 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 6]
+2026-01-04 20:39:08,500 - [INFO] - Query: how to become a successful influencer as a senior ... | Competitors: 5 (full content, lengths: [5072, 28723, 6625]...) | Target idx: [6]
+2026-01-04 20:39:09,728 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:09,730 - [INFO] - Generated answer length: 2773
+2026-01-04 20:39:09,731 - [INFO] - Citation check: target=[6] cited=False | All citations: []
+2026-01-04 20:39:09,917 - [INFO] - Query: forbes article on celebrity capital for influencer... | Competitors: 0 (snippet only) | Target idx: [1]
+2026-01-04 20:39:10,631 - [INFO] - Query: best courses to learn social media fame strategies... | Competitors: 5 (full content, lengths: [18020, 16584, 9620]...) | Target idx: [6]
+2026-01-04 20:39:13,648 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:13,651 - [INFO] - Generated answer length: 2190
+2026-01-04 20:39:13,651 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 3, 4, 5]
+2026-01-04 20:39:14,175 - [INFO] - Query: top platforms for finding social media influencers... | Competitors: 5 (full content, lengths: [35085, 68098, 43315]...) | Target idx: [6]
+2026-01-04 20:39:14,607 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:14,609 - [INFO] - Generated answer length: 1757
+2026-01-04 20:39:14,609 - [INFO] - Citation check: target=[1] cited=True | All citations: [1]
+2026-01-04 20:39:15,594 - [INFO] - Query: best courses to become a social media influencer... | Competitors: 5 (full content, lengths: [15084, 9740, 11859]...) | Target idx: [6]
+2026-01-04 20:39:19,099 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:19,101 - [INFO] - Generated answer length: 2354
+2026-01-04 20:39:19,101 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 6]
+2026-01-04 20:39:19,622 - [INFO] - Query: top platforms for influencer marketing research... | Competitors: 5 (full content, lengths: [43315, 10597, 21809]...) | Target idx: [6]
+2026-01-04 20:39:23,249 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:23,250 - [INFO] - Generated answer length: 3514
+2026-01-04 20:39:23,250 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:39:23,755 - [INFO] - Query: hootsuite social media dashboard... | Competitors: 5 (full content, lengths: [18246, 16648, 12553]...) | Target idx: [6]
+2026-01-04 20:39:27,185 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:27,187 - [INFO] - Generated answer length: 3577
+2026-01-04 20:39:27,187 - [INFO] - Citation check: target=[6] cited=False | All citations: [2, 3, 4, 5]
+2026-01-04 20:39:27,637 - [INFO] - Query: instagram login page... | Competitors: 5 (full content, lengths: [3571, 22139, 22139]...) | Target idx: [6]
+2026-01-04 20:39:28,438 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:28,444 - [INFO] - Generated answer length: 3531
+2026-01-04 20:39:28,444 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 3, 4, 5]
+2026-01-04 20:39:28,947 - [INFO] - Query: impact of social media on celebrity status... | Competitors: 5 (full content, lengths: [8354, 11345, 8354]...) | Target idx: [6]
+2026-01-04 20:39:31,987 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:31,990 - [INFO] - Generated answer length: 2789
+2026-01-04 20:39:31,990 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 20:39:32,180 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:32,181 - [INFO] - Generated answer length: 4469
+2026-01-04 20:39:32,181 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 5]
+2026-01-04 20:39:32,496 - [INFO] - Query: buy social media growth tools... | Competitors: 5 (full content, lengths: [75928, 35528, 13127]...) | Target idx: [6]
+2026-01-04 20:39:33,591 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:33,593 - [INFO] - Generated answer length: 1590
+2026-01-04 20:39:33,593 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 4, 5]
+2026-01-04 20:39:33,728 - [INFO] - Query: bourdieu celebrity capital theory... | Competitors: 5 (full content, lengths: [66464, 4301, 7328]...) | Target idx: [6]
+2026-01-04 20:39:34,113 - [INFO] - Query: top courses for becoming a social media influencer... | Competitors: 5 (full content, lengths: [17994, 31737, 9740]...) | Target idx: [6]
+2026-01-04 20:39:36,699 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:36,701 - [INFO] - Generated answer length: 2737
+2026-01-04 20:39:36,701 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 5, 6]
+2026-01-04 20:39:37,283 - [INFO] - Query: buy book on celebrification and influencer marketi... | Competitors: 5 (full content, lengths: [3504, 189157, 21758]...) | Target idx: [6]
+2026-01-04 20:39:42,621 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:42,625 - [INFO] - Generated answer length: 2746
+2026-01-04 20:39:42,625 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:39:43,333 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:43,335 - [INFO] - Generated answer length: 2497
+2026-01-04 20:39:43,335 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 6]
+2026-01-04 20:39:44,038 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:44,060 - [INFO] - Generated answer length: 3424
+2026-01-04 20:39:44,060 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 5]
+2026-01-04 20:39:44,395 - [INFO] - Query: how digital influencers impact brand awareness... | Competitors: 5 (full content, lengths: [10904, 35989, 80362]...) | Target idx: [6]
+2026-01-04 20:39:44,497 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:44,498 - [INFO] - Generated answer length: 1897
+2026-01-04 20:39:44,498 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 6]
+2026-01-04 20:39:47,415 - [INFO] - Query: how do influencers transition to celebrities in di... | Competitors: 5 (full content, lengths: [134154, 16593, 11213]...) | Target idx: [6]
+2026-01-04 20:39:50,255 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:50,260 - [INFO] - Generated answer length: 2138
+2026-01-04 20:39:50,260 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 20:39:54,423 - [INFO] - Query: instagram profile of charli d'amelio... | Competitors: 5 (full content, lengths: [45574, 21491, 21540]...) | Target idx: [6]
+2026-01-04 20:39:58,808 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:39:58,809 - [INFO] - Generated answer length: 2451
+2026-01-04 20:39:58,809 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 6]
+2026-01-04 20:40:01,022 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:40:01,023 - [INFO] - Generated answer length: 508
+2026-01-04 20:40:01,023 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3]
+2026-01-04 20:40:04,418 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:40:05,013 - [INFO] - Query: top influencer marketing platforms for celebrity g... | Competitors: 5 (full content, lengths: [24746, 12574, 68098]...) | Target idx: [6]
+2026-01-04 20:40:13,845 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:40:13,847 - [INFO] - Generated answer length: 3653
+2026-01-04 20:40:13,848 - [INFO] - Citation check: target=[6] cited=True | All citations: [2, 4, 5, 6]
+2026-01-04 20:40:14,350 - [INFO] - Query: buy documentary on influencer to celebrity transit... | Competitors: 5 (full content, lengths: [52511, 60090, 13201]...) | Target idx: [6]
+2026-01-04 20:40:22,602 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:40:22,633 - [INFO] - Generated answer length: 3129
+2026-01-04 20:40:22,634 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 4, 5]
+2026-01-04 20:40:30,356 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:41:12,316 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:41:12,323 - [INFO] - Query: buy documentary on influencer to celebrity transit... | Competitors: 5 (full content, lengths: [52511, 60090, 13201]...) | Target idx: [6]
+2026-01-04 20:41:19,879 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:41:19,882 - [INFO] - Generated answer length: 2304
+2026-01-04 20:41:19,883 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:42:09,852 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:42:20,331 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:42:20,338 - [INFO] - Query: buy documentary on influencer to celebrity transit... | Competitors: 5 (full content, lengths: [52511, 60090, 13201]...) | Target idx: [6]
+2026-01-04 20:42:30,351 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:42:30,361 - [INFO] - Generated answer length: 2047
+2026-01-04 20:42:30,361 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 4, 5]
+2026-01-04 20:42:37,899 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:43:02,139 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:43:03,643 - [INFO] - Query: buy 'the fame game' book by justine bateman... | Competitors: 5 (full content, lengths: [27251, 44287, 103340]...) | Target idx: [6]
+2026-01-04 20:43:09,977 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:43:09,981 - [INFO] - Generated answer length: 1686
+2026-01-04 20:43:09,981 - [INFO] - Citation check: target=[6] cited=False | All citations: []
+2026-01-04 20:43:10,035 - [WARNING] - No valid cited indices, skipping this iteration.
+Random seed set to: 42
+
+=== Baseline Evaluation ===
+Tavily search error: 1 validation error for SearchResult
+raw_content
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+Tavily search error: 1 validation error for SearchResult
+raw_content
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+Tavily search error: 1 validation error for SearchResult
+raw_content
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+
+=== Optimize ===
+Starting GEO for https://www.tandfonline.com/doi/full/10.1080/00913367.2021.1977737
+--------------------------------
+📌 Core idea: The document primarily explores how social media influencers (SMIs) acquire and leverage "celebrity capital"—a form of sociocultural currency derived from media visibility—within the digital advertising ecosystem, a process termed "influencer celebrification." It identifies three iterative practices—generative (attention labor, platform agnosticism), collaborative (audience portability, creative ideation), and evaluative (community-centric KPIs, content traversal)—through which influencers build authentic, community-driven fame distinct from traditional celebrity pathways, with advertising practitioners playing key roles as talent scouts, creative concierges, and impact analysts. This framework advances understanding of influencer advertising by highlighting the dynamic, community-centered, and platform-fluid nature of influencer fame and its implications for theory and practice in marketing.
+--------------------------------
+
+--- Processing Query: top influencer marketing platforms for celebrity growth ---
+Iteration 1/3
+✅ Success! Document cited for query: top influencer marketing platforms for celebrity growth
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train10_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: buy documentary on influencer to celebrity transition ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 7 paragraphs
+Reason: The target document provides a comprehensive academic and theoretical framework on how social media influencers acquire celebrity capital through a process termed 'influencer celebrification.' It deeply analyzes the roles of advertising practitioners and the iterative practices involved in this process. However, it lacks direct references to or mentions of documentaries or media content that specifically depict or narrate the influencer to celebrity transition in a visual or narrative documentary format. The query 'buy documentary on influencer to celebrity transition' is seeking a documentary or film resource, which the target document does not provide or discuss. The tone and content are academic and research-focused rather than consumer-oriented or media-focused, which likely led to it being ignored for a query seeking documentary content. To better address such queries, the document would need to include references to relevant documentaries, media portrayals, or visual storytelling about influencer culture and their transition to celebrity status.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Added a new section on documentaries and visual media that explore the influencer celebrification process, highlighting their relevance to understanding influencer fame and marketing implications.', 'Integrated discussion of how these documentaries illustrate key theoretical concepts such as authenticity, platform fluidity, and community-driven fame.', 'Maintained the original document’s focus while enriching it with cultural and media representations of influencer celebrification for users interested in related visual content.']
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 8 paragraphs
+Reason: The target document was not cited for the query "buy documentary on influencer to celebrity transition" because it primarily presents an academic and theoretical framework on influencer celebrification, focusing on the processes and roles of advertising practitioners in acquiring celebrity capital. It lacks direct references, recommendations, or discussions of specific documentaries or visual media that depict or narrate the influencer to celebrity transition in a consumer-oriented or media-focused manner. The tone is scholarly and research-driven, not oriented toward providing documentary content or purchase options. To address this gap, the document should explicitly include a section discussing relevant documentaries and visual media that explore influencer celebrification, illustrating the transition from influencer to celebrity through cultural narratives and media portrayals. This addition would align with the previous modification that introduced such a section but could be enhanced with more concrete examples and clearer linkage to the query intent.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 5
+📝 Key Changes: ['Integrated a new subsection on documentaries and visual media that explore the influencer celebrification process, including specific examples like *Influencer: An Inside Look at the Digital Revolution*.', 'Connected these documentaries to key theoretical concepts such as authenticity, platform fluidity, and community-driven fame to enrich the academic discussion.', 'Maintained the original focus on influencer celebrification while enhancing the document with cultural and media representations relevant to users interested in visual content about influencer fame.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 8 paragraphs
+Reason: The target document was not cited for the query 'buy documentary on influencer to celebrity transition' because it primarily presents an academic and theoretical framework on influencer celebrification, focusing on the processes and roles of advertising practitioners in acquiring celebrity capital. It lacks direct references, recommendations, or discussions of specific documentaries or visual media that depict or narrate the influencer to celebrity transition in a consumer-oriented or media-focused manner. Although previous modifications added a section on documentaries and visual media, this section remains somewhat general and does not provide concrete examples, purchase options, or direct links to documentaries that users seeking to buy such content would find actionable. The tone remains scholarly and research-driven, which may not align well with consumer intent for documentary acquisition. To better address such queries, the document should be enhanced with more explicit, concrete examples of documentaries, including titles, brief descriptions, availability or purchase information, and clearer connections to the influencer celebrification process. This would improve relevance and usability for users seeking to buy documentaries on this topic.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 6
+📝 Key Changes: ['Added specific examples of documentaries such as *Influencer: An Inside Look at the Digital Revolution*, *The American Meme*, and *Social Animals* with brief descriptions linking them to influencer celebrification concepts.', 'Included information on where and how to access or purchase these documentaries to connect academic theory with consumer interest.', 'Enhanced the existing documentaries section to better illustrate the cultural and media representations of influencer celebrification, enriching the document’s relevance for both scholars and practitioners.']
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train10_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: buy 'the fame game' book by justine bateman ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 8 paragraphs
+⚠️ No valid competitor citations found, skipping this iteration.2026-01-04 20:43:10,036 - [INFO] - Query: buy 'the fame game' book by justine bateman... | Competitors: 5 (full content, lengths: [27251, 44287, 103340]...) | Target idx: [6]
+2026-01-04 20:43:15,636 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:43:15,637 - [INFO] - Generated answer length: 1487
+2026-01-04 20:43:15,637 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 20:43:23,627 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:43:49,489 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:43:49,528 - [INFO] - Query: buy 'the fame game' book by justine bateman... | Competitors: 5 (full content, lengths: [27251, 44287, 103340]...) | Target idx: [6]
+2026-01-04 20:43:55,609 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:43:55,612 - [INFO] - Generated answer length: 1334
+2026-01-04 20:43:55,612 - [INFO] - Citation check: target=[6] cited=False | All citations: []
+2026-01-04 20:43:55,666 - [WARNING] - No valid cited indices, skipping this iteration.
+2026-01-04 20:43:58,021 - [INFO] - Query: top tools for tracking celebrification in social m... | Competitors: 5 (full content, lengths: [29591, 44089, 58740]...) | Target idx: [6]
+2026-01-04 20:44:14,713 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 20:44:14,716 - [INFO] - Generated answer length: 4428
+2026-01-04 20:44:14,716 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 20:44:52,079 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Iteration 2/3
+❌ Not cited. Analyzing...
+📦 Document split into 8 paragraphs
+Reason: The target document is a detailed academic and theoretical analysis of influencer celebrification and the acquisition of celebrity capital, focusing on advertising industry practices and influencer culture. However, it does not mention or provide any information about Justine Bateman's book "Fame: The Hijacking of Reality," nor does it include consumer-oriented content such as where to buy this book or details about it. The tone and content are scholarly and research-focused, lacking direct references to specific books or purchase options that a user querying "buy 'the fame game' book by justine bateman" would expect. To address this gap, the document would need an explicit section or mention of Justine Bateman's book, including bibliographic details and purchasing information, to be relevant and cited for such a query. Since the document is chunked, the best place to add this information is in the section discussing documentaries and visual media (paragraph 6), as it already includes consumer-facing media references and could be expanded to include notable books related to fame and celebrity culture, including Bateman's work. This would build upon previous modifications that added media content references without contradicting them.
+Tool Selected: knowledge_injection
+📦 Target paragraph: 6
+📝 Key Changes: ['Integrated Justine Bateman’s book *Fame: The Hijacking of Reality* (2018) into the documentaries and visual media section to complement existing examples with a consumer-accessible literary resource on fame and celebrity.', 'Linked Bateman’s work to the core concepts of influencer celebrification, enhancing the cultural and theoretical discussion of fame’s psychological and societal dimensions.', 'Maintained all prior modifications and the document’s core focus while enriching the media representations section with a broader range of relevant cultural materials.']
+Iteration 3/3
+❌ Not cited. Analyzing...
+📦 Document split into 8 paragraphs
+⚠️ No valid competitor citations found, skipping this iteration.
+Saved progress to /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/optimization_logs/train10_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+--- Processing Query: top tools for tracking celebrification in social media ---
+Iteration 1/3
+❌ Not cited. Analyzing...
+📦 Document split into 8 paragraphs
+Reason: The target document was not cited for the query 'top tools for tracking celebrification in social media' because it primarily focuses on the academic and theoretical framework of influencer celebrification and the roles of advertising practitioners in acquiring celebrity capital. It lacks any mention or discussion of specific social media monitoring or influencer analytics tools that track influencer performance, audience engagement, or celebrification metrics. The document does not provide practical, consumer-oriented information about tools or software solutions that marketers or brands can use to track influencer celebrification or social media impact. To address this gap, the document should include a dedicated section summarizing and recommending top influencer analytics and social media monitoring tools relevant to tracking influencer celebrification, highlighting their features, capabilities, and relevance to the influencer celebrification process. This addition would build upon the existing academic content by bridging theory with practical tools used in the industry, thereby increasing the document's relevance and likelihood of being cited for queries about tracking tools.
+Tool Selected: knowledge_injection
+Traceback (most recent call last):
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 539, in optimize_page_async
+    raise ValueError("target_chunk_index is required when multiple paragraphs exist.")
+ValueError: target_chunk_index is required when multiple paragraphs exist.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/main.py", line 374, in <module>
+    main()
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/main.py", line 370, in main
+    asyncio.run(run_async())
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/main.py", line 289, in run_async
+    optimized_page = await agent.optimize_page_async(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 602, in optimize_page_async
+    raise RuntimeError(f"Tool execution failed: {exc}") from exc
+RuntimeError: Tool execution failed: target_chunk_index is required when multiple paragraphs exist.

@@ -1,0 +1,326 @@
+2026-01-04 23:04:40,694 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:04:40,694 - [INFO] - Query: linkedin profile page... | Competitors: 5 (full content, lengths: [10143, 3217, 7001]...) | Target idx: [6]
+2026-01-04 23:04:40,981 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:04:40,981 - [INFO] - Query: importance of celebrity capital for social media m... | Competitors: 5 (full content, lengths: [134154, 27778, 59442]...) | Target idx: [6]
+2026-01-04 23:04:41,004 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:04:41,004 - [INFO] - Query: reviews of online fame courses... | Competitors: 5 (full content, lengths: [14940, 18808, 98257]...) | Target idx: [6]
+2026-01-04 23:04:41,019 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:04:41,019 - [INFO] - Query: influencer marketing software comparison... | Competitors: 5 (full content, lengths: [53076, 13802, 11671]...) | Target idx: [6]
+2026-01-04 23:04:41,034 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:04:41,034 - [INFO] - Query: celebrity capital management tools comparison... | Competitors: 5 (full content, lengths: [32989, 5974, 49366]...) | Target idx: [6]
+2026-01-04 23:04:41,048 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:04:41,048 - [INFO] - Query: celebrity status youtube channel... | Competitors: 5 (full content, lengths: [7256, 6377, 36799]...) | Target idx: [6]
+2026-01-04 23:04:41,062 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:04:41,062 - [INFO] - Query: best courses for becoming a celebrity influencer... | Competitors: 5 (full content, lengths: [35541, 22995, 4490]...) | Target idx: [6]
+2026-01-04 23:04:41,075 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:04:41,075 - [INFO] - Query: influencer vs celebrity: how do they differ?... | Competitors: 5 (full content, lengths: [61526, 13328, 6522]...) | Target idx: [6]
+2026-01-04 23:04:41,088 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:04:41,088 - [INFO] - Query: comparison of celebrity influencer networks... | Competitors: 5 (full content, lengths: [101873, 16781, 89432]...) | Target idx: [6]
+2026-01-04 23:04:41,103 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:04:41,103 - [INFO] - Query: celebrification seminars 2023... | Competitors: 5 (full content, lengths: [1840, 426318, 11668]...) | Target idx: [6]
+2026-01-04 23:04:41,116 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:04:41,116 - [INFO] - Query: subscribe to influencer growth service... | Competitors: 5 (full content, lengths: [63141, 43315, 10375]...) | Target idx: [6]
+2026-01-04 23:04:41,129 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:04:41,129 - [INFO] - Query: courses on cultural analysis of celebrities... | Competitors: 5 (full content, lengths: [7797, 4476, 20672]...) | Target idx: [6]
+2026-01-04 23:04:41,143 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:04:41,143 - [INFO] - Query: history of online fame... | Competitors: 5 (full content, lengths: [80383, 22189, 18077]...) | Target idx: [6]
+2026-01-04 23:04:42,071 - [ERROR] - Failed to fetch HTML for e780bf4ebdd0f0d08500d99eaa6629dd: HTTPSConnectionPool(host='chatnoir-webcontent.chatnoir.eu', port=443): Max retries exceeded with url: /?uuid=e780bf4ebdd0f0d08500d99eaa6629dd&index=cw22&raw=&no-rewrite= (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)')))
+2026-01-04 23:04:42,071 - [WARNING] - Empty HTML content for e780bf4ebdd0f0d08500d99eaa6629dd, skipping.
+2026-01-04 23:04:42,314 - [ERROR] - Failed to fetch HTML for b4425096c350b1ad6884b6ba2573dc87: HTTPSConnectionPool(host='chatnoir-webcontent.chatnoir.eu', port=443): Max retries exceeded with url: /?uuid=b4425096c350b1ad6884b6ba2573dc87&index=cw22&raw=&no-rewrite= (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)')))
+2026-01-04 23:04:42,314 - [WARNING] - Empty HTML content for b4425096c350b1ad6884b6ba2573dc87, skipping.
+2026-01-04 23:04:42,314 - [INFO] - Competitor contents: 3/5 (from 5 candidates)
+2026-01-04 23:04:42,314 - [INFO] - Query: youtube channel of pewdiepie... | Competitors: 3 (full content, lengths: [357081, 10278, 17222]...) | Target idx: [4]
+2026-01-04 23:04:43,620 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:04:43,620 - [INFO] - Query: order 'the fame game' documentary... | Competitors: 5 (full content, lengths: [15552, 34206, 31407]...) | Target idx: [6]
+2026-01-04 23:04:46,569 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:04:46,579 - [INFO] - Generated answer length: 326
+2026-01-04 23:04:46,579 - [INFO] - Citation check: target=[4] cited=False | All citations: [2, 3]
+2026-01-04 23:04:47,451 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:04:47,451 - [INFO] - Query: comparative analysis of celebrity influence tools... | Competitors: 5 (full content, lengths: [21502, 20946, 61526]...) | Target idx: [6]
+2026-01-04 23:04:49,510 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:04:49,513 - [INFO] - Generated answer length: 2160
+2026-01-04 23:04:49,513 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 6]
+2026-01-04 23:04:50,811 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:04:50,816 - [INFO] - Generated answer length: 2517
+2026-01-04 23:04:50,816 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 5, 6]
+2026-01-04 23:04:50,968 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:04:50,968 - [INFO] - Query: best books on influencer celebrification... | Competitors: 5 (full content, lengths: [16445, 134154, 15049]...) | Target idx: [6]
+2026-01-04 23:04:51,973 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:04:51,975 - [INFO] - Generated answer length: 2392
+2026-01-04 23:04:51,975 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 23:04:52,032 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:04:52,033 - [INFO] - Generated answer length: 1706
+2026-01-04 23:04:52,033 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 3, 4, 5]
+2026-01-04 23:04:53,455 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:04:53,458 - [INFO] - Generated answer length: 2504
+2026-01-04 23:04:53,458 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 6]
+2026-01-04 23:04:54,049 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:04:54,049 - [INFO] - Query: how to grow followers on instagram... | Competitors: 5 (full content, lengths: [20207, 16876, 4493]...) | Target idx: [6]
+2026-01-04 23:04:54,878 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:04:54,878 - [INFO] - Query: what is celebrification in media studies... | Competitors: 5 (full content, lengths: [60352, 134154, 30586]...) | Target idx: [6]
+2026-01-04 23:04:56,005 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:04:56,007 - [INFO] - Generated answer length: 2739
+2026-01-04 23:04:56,008 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 23:04:56,722 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:04:56,723 - [INFO] - Query: what is celebrification in modern culture... | Competitors: 5 (full content, lengths: [33605, 47837, 11185]...) | Target idx: [6]
+2026-01-04 23:04:57,548 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:04:57,561 - [INFO] - Generated answer length: 3568
+2026-01-04 23:04:57,561 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 23:04:58,717 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:04:58,720 - [INFO] - Generated answer length: 2906
+2026-01-04 23:04:58,720 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 23:04:59,244 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:04:59,261 - [INFO] - Generated answer length: 3610
+2026-01-04 23:04:59,261 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 5, 6]
+2026-01-04 23:04:59,757 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:04:59,759 - [INFO] - Generated answer length: 2250
+2026-01-04 23:04:59,759 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3]
+2026-01-04 23:05:00,133 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:00,134 - [INFO] - Generated answer length: 4981
+2026-01-04 23:05:00,135 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 23:05:02,294 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:02,307 - [INFO] - Generated answer length: 4316
+2026-01-04 23:05:02,307 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 23:05:03,441 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:03,442 - [INFO] - Generated answer length: 3041
+2026-01-04 23:05:03,443 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 5, 6]
+2026-01-04 23:05:04,774 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:04,776 - [INFO] - Generated answer length: 4972
+2026-01-04 23:05:04,777 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 5, 6]
+2026-01-04 23:05:05,451 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:05,453 - [INFO] - Generated answer length: 2862
+2026-01-04 23:05:05,454 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 23:05:05,861 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:05,868 - [INFO] - Generated answer length: 3574
+2026-01-04 23:05:05,868 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 23:05:05,879 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:05,900 - [INFO] - Generated answer length: 5147
+2026-01-04 23:05:05,900 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 6]
+2026-01-04 23:05:08,816 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:08,821 - [INFO] - Generated answer length: 2697
+2026-01-04 23:05:08,821 - [INFO] - Citation check: target=[6] cited=True | All citations: [2, 6]
+2026-01-04 23:05:12,370 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:12,373 - [INFO] - Generated answer length: 3968
+2026-01-04 23:05:12,373 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 23:05:14,457 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:14,601 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:15,012 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:15,201 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:17,907 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:17,907 - [INFO] - Query: buy celebrity status analysis software... | Competitors: 5 (full content, lengths: [30827, 26711, 22189]...) | Target idx: [6]
+2026-01-04 23:05:17,955 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:17,955 - [INFO] - Query: linkedin profile of social media influencer market... | Competitors: 5 (full content, lengths: [7318, 7318, 7318]...) | Target idx: [6]
+2026-01-04 23:05:17,979 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:17,979 - [INFO] - Query: order social media management tools... | Competitors: 5 (full content, lengths: [46148, 36320, 24553]...) | Target idx: [6]
+2026-01-04 23:05:18,786 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:18,786 - [INFO] - Query: celebrification online classes... | Competitors: 5 (full content, lengths: [59389, 21385, 8586]...) | Target idx: [6]
+2026-01-04 23:05:18,829 - [ERROR] - Failed to fetch HTML for 537e5ee6b3ef0ae38b543f48866e2ffc: HTTPSConnectionPool(host='chatnoir-webcontent.chatnoir.eu', port=443): Max retries exceeded with url: /?uuid=537e5ee6b3ef0ae38b543f48866e2ffc&index=cw22&raw=&no-rewrite= (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)')))
+2026-01-04 23:05:18,830 - [WARNING] - Empty HTML content for 537e5ee6b3ef0ae38b543f48866e2ffc, skipping.
+2026-01-04 23:05:18,830 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:18,830 - [INFO] - Query: forbes article on influencer celebrity capital... | Competitors: 5 (full content, lengths: [134154, 4102, 44044]...) | Target idx: [6]
+2026-01-04 23:05:19,241 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:19,242 - [INFO] - Query: celebrity capital consulting services... | Competitors: 5 (full content, lengths: [54732, 4054, 54356]...) | Target idx: [6]
+2026-01-04 23:05:19,551 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:19,552 - [INFO] - Query: aspireiq influencer marketing software... | Competitors: 5 (full content, lengths: [7279, 9445, 8839]...) | Target idx: [6]
+2026-01-04 23:05:20,506 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:20,506 - [INFO] - Query: role of algorithms in influencer popularity... | Competitors: 5 (full content, lengths: [63077, 3893, 40398]...) | Target idx: [6]
+2026-01-04 23:05:20,820 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:20,820 - [INFO] - Query: download influencer branding ebook... | Competitors: 5 (full content, lengths: [8209, 2049, 564720]...) | Target idx: [6]
+2026-01-04 23:05:21,965 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:21,965 - [INFO] - Query: how python developers can become tech influencers... | Competitors: 5 (full content, lengths: [16681, 10970, 70210]...) | Target idx: [6]
+2026-01-04 23:05:22,390 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:22,392 - [INFO] - Generated answer length: 1016
+2026-01-04 23:05:22,392 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5]
+2026-01-04 23:05:27,469 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:27,470 - [INFO] - Generated answer length: 2516
+2026-01-04 23:05:27,471 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 5, 6]
+2026-01-04 23:05:28,870 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:28,874 - [INFO] - Generated answer length: 3273
+2026-01-04 23:05:28,875 - [INFO] - Citation check: target=[6] cited=True | All citations: [2, 3, 4, 5, 6]
+2026-01-04 23:05:29,510 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:29,511 - [INFO] - Generated answer length: 3236
+2026-01-04 23:05:29,512 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 23:05:29,724 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:29,725 - [INFO] - Generated answer length: 2716
+2026-01-04 23:05:29,725 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 5, 6]
+2026-01-04 23:05:30,464 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:30,465 - [INFO] - Generated answer length: 3647
+2026-01-04 23:05:30,466 - [INFO] - Citation check: target=[6] cited=True | All citations: []
+2026-01-04 23:05:30,955 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:30,959 - [INFO] - Generated answer length: 3328
+2026-01-04 23:05:30,959 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5]
+2026-01-04 23:05:31,036 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:31,038 - [INFO] - Generated answer length: 1898
+2026-01-04 23:05:31,038 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4]
+2026-01-04 23:05:31,966 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:31,969 - [INFO] - Generated answer length: 2404
+2026-01-04 23:05:31,969 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4]
+2026-01-04 23:05:34,383 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:34,386 - [INFO] - Generated answer length: 3494
+2026-01-04 23:05:34,386 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5]
+2026-01-04 23:05:34,399 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:05:34,399 - [INFO] - Query: linkedin profile page... | Competitors: 5 (full content, lengths: [10143, 3217, 7001]...) | Target idx: [6]
+2026-01-04 23:05:34,425 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:05:34,425 - [INFO] - Query: importance of celebrity capital for social media m... | Competitors: 5 (full content, lengths: [134154, 27778, 59442]...) | Target idx: [6]
+2026-01-04 23:05:34,442 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:05:34,442 - [INFO] - Query: reviews of online fame courses... | Competitors: 5 (full content, lengths: [14940, 18808, 98257]...) | Target idx: [6]
+2026-01-04 23:05:34,457 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:05:34,457 - [INFO] - Query: influencer marketing software comparison... | Competitors: 5 (full content, lengths: [53076, 13802, 11671]...) | Target idx: [6]
+2026-01-04 23:05:34,471 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:05:34,471 - [INFO] - Query: celebrity capital management tools comparison... | Competitors: 5 (full content, lengths: [32989, 5974, 49366]...) | Target idx: [6]
+2026-01-04 23:05:34,484 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:05:34,484 - [INFO] - Query: celebrity status youtube channel... | Competitors: 5 (full content, lengths: [7256, 6377, 36799]...) | Target idx: [6]
+2026-01-04 23:05:34,497 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:05:34,497 - [INFO] - Query: best courses for becoming a celebrity influencer... | Competitors: 5 (full content, lengths: [35541, 22995, 4490]...) | Target idx: [6]
+2026-01-04 23:05:34,510 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:05:34,510 - [INFO] - Query: influencer vs celebrity: how do they differ?... | Competitors: 5 (full content, lengths: [61526, 13328, 6522]...) | Target idx: [6]
+2026-01-04 23:05:34,523 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:34,523 - [INFO] - Query: order 'the fame game' documentary... | Competitors: 5 (full content, lengths: [15552, 34206, 31407]...) | Target idx: [6]
+2026-01-04 23:05:34,535 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:05:34,535 - [INFO] - Query: comparison of celebrity influencer networks... | Competitors: 5 (full content, lengths: [101873, 16781, 89432]...) | Target idx: [6]
+2026-01-04 23:05:34,548 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:05:34,548 - [INFO] - Query: celebrification seminars 2023... | Competitors: 5 (full content, lengths: [1840, 426318, 11668]...) | Target idx: [6]
+2026-01-04 23:05:34,560 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:05:34,561 - [INFO] - Query: subscribe to influencer growth service... | Competitors: 5 (full content, lengths: [63141, 43315, 10375]...) | Target idx: [6]
+2026-01-04 23:05:34,573 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:05:34,573 - [INFO] - Query: courses on cultural analysis of celebrities... | Competitors: 5 (full content, lengths: [7797, 4476, 20672]...) | Target idx: [6]
+2026-01-04 23:05:34,586 - [INFO] - Competitor contents: 5/5 (from 5 candidates)
+2026-01-04 23:05:34,586 - [INFO] - Query: history of online fame... | Competitors: 5 (full content, lengths: [80383, 22189, 18077]...) | Target idx: [6]
+2026-01-04 23:05:34,598 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:34,598 - [INFO] - Query: comparative analysis of celebrity influence tools... | Competitors: 5 (full content, lengths: [21502, 20946, 61526]...) | Target idx: [6]
+2026-01-04 23:05:34,719 - [ERROR] - Failed to fetch HTML for e780bf4ebdd0f0d08500d99eaa6629dd: HTTPSConnectionPool(host='chatnoir-webcontent.chatnoir.eu', port=443): Max retries exceeded with url: /?uuid=e780bf4ebdd0f0d08500d99eaa6629dd&index=cw22&raw=&no-rewrite= (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)')))
+2026-01-04 23:05:34,719 - [WARNING] - Empty HTML content for e780bf4ebdd0f0d08500d99eaa6629dd, skipping.
+2026-01-04 23:05:35,259 - [ERROR] - Failed to fetch HTML for b4425096c350b1ad6884b6ba2573dc87: HTTPSConnectionPool(host='chatnoir-webcontent.chatnoir.eu', port=443): Max retries exceeded with url: /?uuid=b4425096c350b1ad6884b6ba2573dc87&index=cw22&raw=&no-rewrite= (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)')))
+2026-01-04 23:05:35,259 - [WARNING] - Empty HTML content for b4425096c350b1ad6884b6ba2573dc87, skipping.
+2026-01-04 23:05:35,259 - [INFO] - Competitor contents: 3/5 (from 5 candidates)
+2026-01-04 23:05:35,259 - [INFO] - Query: youtube channel of pewdiepie... | Competitors: 3 (full content, lengths: [357081, 10278, 17222]...) | Target idx: [4]
+2026-01-04 23:05:38,156 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:38,158 - [INFO] - Generated answer length: 449
+2026-01-04 23:05:38,158 - [INFO] - Citation check: target=[4] cited=False | All citations: [1, 2, 3]
+2026-01-04 23:05:38,158 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:38,158 - [INFO] - Query: best books on influencer celebrification... | Competitors: 5 (full content, lengths: [16445, 134154, 15049]...) | Target idx: [6]
+2026-01-04 23:05:42,502 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:42,505 - [INFO] - Generated answer length: 2509
+2026-01-04 23:05:42,505 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 5, 6]
+2026-01-04 23:05:42,506 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:42,506 - [INFO] - Query: how to grow followers on instagram... | Competitors: 5 (full content, lengths: [20207, 16876, 4493]...) | Target idx: [6]
+2026-01-04 23:05:42,702 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:42,705 - [INFO] - Generated answer length: 2103
+2026-01-04 23:05:42,705 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 5, 6]
+2026-01-04 23:05:42,705 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:42,706 - [INFO] - Query: what is celebrification in media studies... | Competitors: 5 (full content, lengths: [60352, 134154, 30586]...) | Target idx: [6]
+2026-01-04 23:05:43,174 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:43,176 - [INFO] - Generated answer length: 2692
+2026-01-04 23:05:43,177 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 23:05:43,177 - [INFO] - Competitor contents: 5/5 (from 8 candidates)
+2026-01-04 23:05:43,177 - [INFO] - Query: what is celebrification in modern culture... | Competitors: 5 (full content, lengths: [33605, 47837, 11185]...) | Target idx: [6]
+2026-01-04 23:05:44,711 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:44,714 - [INFO] - Generated answer length: 2676
+2026-01-04 23:05:44,714 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 3, 5]
+2026-01-04 23:05:44,715 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:44,716 - [INFO] - Generated answer length: 2662
+2026-01-04 23:05:44,716 - [INFO] - Citation check: target=[6] cited=False | All citations: []
+2026-01-04 23:05:45,196 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:45,198 - [INFO] - Generated answer length: 1942
+2026-01-04 23:05:45,198 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 3, 4, 5]
+2026-01-04 23:05:45,461 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:45,476 - [INFO] - Generated answer length: 3373
+2026-01-04 23:05:45,476 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 5, 6]
+2026-01-04 23:05:47,169 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:47,172 - [INFO] - Generated answer length: 3114
+2026-01-04 23:05:47,172 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 23:05:48,153 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:48,154 - [INFO] - Generated answer length: 3675
+2026-01-04 23:05:48,155 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 23:05:49,216 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:49,219 - [INFO] - Generated answer length: 3711
+2026-01-04 23:05:49,219 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 23:05:49,727 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:49,729 - [INFO] - Generated answer length: 3764
+2026-01-04 23:05:49,730 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 23:05:50,342 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:50,345 - [INFO] - Generated answer length: 2240
+2026-01-04 23:05:50,345 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 5, 6]
+2026-01-04 23:05:51,518 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:51,521 - [INFO] - Generated answer length: 2534
+2026-01-04 23:05:51,521 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 5, 6]
+2026-01-04 23:05:51,981 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:51,983 - [INFO] - Generated answer length: 2709
+2026-01-04 23:05:51,983 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 23:05:52,046 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:52,049 - [INFO] - Generated answer length: 5068
+2026-01-04 23:05:52,049 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 5, 6]
+2026-01-04 23:05:52,492 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:52,506 - [INFO] - Generated answer length: 5208
+2026-01-04 23:05:52,506 - [INFO] - Citation check: target=[6] cited=False | All citations: []
+2026-01-04 23:05:53,444 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:53,447 - [INFO] - Generated answer length: 3413
+2026-01-04 23:05:53,447 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 5, 6]
+2026-01-04 23:05:54,133 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:54,136 - [INFO] - Generated answer length: 3418
+2026-01-04 23:05:54,136 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4]
+2026-01-04 23:05:55,902 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 23:05:55,904 - [INFO] - Generated answer length: 3807
+2026-01-04 23:05:55,905 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+Random seed set to: 42
+============================================================
+         Batch GEO Configuration
+============================================================
+  Batch size: 10
+  Paragraphs per orchestra: 2
+  Merge strategy: llm_merge
+  Max concurrency: 16
+============================================================
+
+=== Baseline Evaluation ===
+
+=== Batch Optimize ===
+
+============================================================
+  Batch GEO Agent
+  URL: https://www.tandfonline.com/doi/full/10.1080/00913367.2021.1...
+============================================================
+
+==================================================
+Starting Batch GEO Processing
+Total queries: 10
+Batch size: 10
+Total batches: 1
+==================================================
+
+>>> Batch 1/1
+
+=== Processing Batch 387b9802 ===
+Queries: 10
+Paragraphs: 7
+Orchestras: 4
+Collecting suggestions for 10 queries...
+Collected 0 suggestions
+Synthesizing modifications...
+Batch 387b9802 completed:
+  - Suggestions collected: 0
+  - Modifications applied: 0
+  - Success rate before: 100.00%
+
+Results saved to: /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/batch_logs/batch_www.tandfonline.com_doi_full_10.1080_00913367.2021.json
+
+============================================================
+         Batch Processing Summary
+============================================================
+  Total batches: 1
+  Total queries processed: 10
+  Total suggestions collected: 0
+  Total modifications applied: 0
+============================================================
+
+=== Evaluation After Optimization ===
+
+========================================
+         Optimization Comparison
+========================================
+Baseline citation rate: 65.0% (13/20)
+Optimized citation rate: 50.0% (10/20)
+Improvement: -15.0% (-3 queries)
+========================================
+
+Compare log saved to: /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/batch_logs/batch_F4o8CSOgUYStpyWq5UIO2w_batch_compare.json

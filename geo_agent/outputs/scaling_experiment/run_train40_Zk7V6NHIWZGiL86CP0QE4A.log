@@ -1,0 +1,182 @@
+2026-01-04 21:05:59,771 - [INFO] - Query: hire a lawyer for judgement collection... | Competitors: 5 (full content, lengths: [5914, 7780, 35576]...) | Target idx: [6]
+2026-01-04 21:06:00,746 - [INFO] - Query: calgary legal guidance website... | Competitors: 5 (full content, lengths: [14294, 7637, 3899]...) | Target idx: [6]
+2026-01-04 21:06:01,996 - [INFO] - Query: hire garnishee lawyer in calgary... | Competitors: 5 (full content, lengths: [7541, 5870, 10409]...) | Target idx: [6]
+2026-01-04 21:06:02,030 - [INFO] - Query: compare calgary law firms for debt enforcement... | Competitors: 5 (full content, lengths: [10409, 28185, 11104]...) | Target idx: [6]
+2026-01-04 21:06:05,602 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:05,614 - [INFO] - Generated answer length: 2096
+2026-01-04 21:06:05,615 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 4, 5]
+2026-01-04 21:06:06,422 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:06,425 - [INFO] - Generated answer length: 1430
+2026-01-04 21:06:06,425 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:06:07,815 - [INFO] - Query: government of alberta debt collection... | Competitors: 5 (full content, lengths: [18884, 23132, 14750]...) | Target idx: [6]
+2026-01-04 21:06:10,574 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:10,577 - [INFO] - Generated answer length: 2911
+2026-01-04 21:06:10,577 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:06:11,723 - [INFO] - Query: how does judgment collection work... | Competitors: 5 (full content, lengths: [10890, 13539, 8418]...) | Target idx: [6]
+2026-01-04 21:06:13,784 - [INFO] - Query: purchase a guide on collecting court judgements in... | Competitors: 5 (full content, lengths: [35595, 1270, 5261]...) | Target idx: [6]
+2026-01-04 21:06:16,416 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:16,418 - [INFO] - Generated answer length: 3308
+2026-01-04 21:06:16,418 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:06:16,528 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:16,531 - [INFO] - Generated answer length: 5088
+2026-01-04 21:06:16,531 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 6]
+2026-01-04 21:06:20,148 - [INFO] - Query: calgary legal services for small business debt col... | Competitors: 5 (full content, lengths: [4236, 3065, 11104]...) | Target idx: [6]
+2026-01-04 21:06:20,508 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:20,511 - [INFO] - Generated answer length: 2224
+2026-01-04 21:06:20,512 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 6]
+2026-01-04 21:06:20,551 - [INFO] - Query: hire a lawyer for judgement collection in calgary... | Competitors: 5 (full content, lengths: [7859, 5356, 5354]...) | Target idx: [6]
+2026-01-04 21:06:25,014 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:25,016 - [INFO] - Generated answer length: 3643
+2026-01-04 21:06:25,016 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:06:28,141 - [INFO] - Query: alberta courts garnishee process page... | Competitors: 5 (full content, lengths: [43688, 7004, 16097]...) | Target idx: [6]
+2026-01-04 21:06:30,358 - [INFO] - Query: hire a lawyer for garnishment issues in alberta... | Competitors: 5 (full content, lengths: [5870, 21285, 18837]...) | Target idx: [6]
+2026-01-04 21:06:32,008 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:32,026 - [INFO] - Generated answer length: 3300
+2026-01-04 21:06:32,026 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:06:32,694 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:32,697 - [INFO] - Generated answer length: 3038
+2026-01-04 21:06:32,697 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:06:34,451 - [INFO] - Query: best legal aid services in calgary for debt issues... | Competitors: 5 (full content, lengths: [10409, 7446, 22573]...) | Target idx: [6]
+2026-01-04 21:06:34,575 - [INFO] - Query: nolo judgement collection guide... | Competitors: 5 (full content, lengths: [19504, 24179, 20832]...) | Target idx: [6]
+2026-01-04 21:06:40,493 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:40,496 - [INFO] - Generated answer length: 2248
+2026-01-04 21:06:40,496 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 6]
+2026-01-04 21:06:43,055 - [INFO] - Query: dunphy best blocksom llp calgary... | Competitors: 5 (full content, lengths: [5230, 9507, 9327]...) | Target idx: [6]
+2026-01-04 21:06:43,264 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:43,267 - [INFO] - Generated answer length: 3979
+2026-01-04 21:06:43,267 - [INFO] - Citation check: target=[6] cited=True | All citations: [2, 6]
+2026-01-04 21:06:43,619 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:43,622 - [INFO] - Generated answer length: 2663
+2026-01-04 21:06:43,622 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:06:45,482 - [INFO] - Query: what to do after winning a court judgement in calg... | Competitors: 5 (full content, lengths: [7859, 9999, 4869]...) | Target idx: [6]
+2026-01-04 21:06:46,747 - [INFO] - Query: calgary legal guidance official website... | Competitors: 5 (full content, lengths: [4449, 1516, 10024]...) | Target idx: [6]
+2026-01-04 21:06:47,104 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:47,107 - [INFO] - Generated answer length: 4496
+2026-01-04 21:06:47,107 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:06:47,379 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:47,383 - [INFO] - Generated answer length: 2160
+2026-01-04 21:06:47,383 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:06:50,668 - [INFO] - Query: book a consultation with a calgary debt recovery l... | Competitors: 5 (full content, lengths: [8814, 3065, 4915]...) | Target idx: [6]
+2026-01-04 21:06:51,242 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:51,244 - [INFO] - Generated answer length: 913
+2026-01-04 21:06:51,244 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 3, 4, 5]
+2026-01-04 21:06:52,212 - [INFO] - Query: best services for judgement collection assistance... | Competitors: 5 (full content, lengths: [6381, 2762, 36167]...) | Target idx: [6]
+2026-01-04 21:06:55,342 - [INFO] - Query: alberta courts garnishment forms... | Competitors: 5 (full content, lengths: [43688, 36718, 7004]...) | Target idx: [6]
+2026-01-04 21:06:58,173 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:58,175 - [INFO] - Generated answer length: 3094
+2026-01-04 21:06:58,175 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 3, 4, 6]
+2026-01-04 21:06:58,882 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:06:58,885 - [INFO] - Generated answer length: 2558
+2026-01-04 21:06:58,885 - [INFO] - Citation check: target=[6] cited=False | All citations: [2, 5]
+2026-01-04 21:07:01,421 - [INFO] - Query: hire lawyer for garnishee process in alberta... | Competitors: 5 (full content, lengths: [5870, 6109, 21285]...) | Target idx: [6]
+2026-01-04 21:07:01,564 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:01,590 - [INFO] - Generated answer length: 4054
+2026-01-04 21:07:01,590 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:07:03,362 - [INFO] - Query: buy garnishee order enforcement service... | Competitors: 5 (full content, lengths: [17681, 7194, 14254]...) | Target idx: [6]
+2026-01-04 21:07:05,731 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:05,738 - [INFO] - Generated answer length: 3397
+2026-01-04 21:07:05,739 - [INFO] - Citation check: target=[6] cited=True | All citations: [2, 3, 4, 6]
+2026-01-04 21:07:05,740 - [INFO] - Query: how to collect a judgement in alberta... | Competitors: 5 (full content, lengths: [35595, 7859, 9761]...) | Target idx: [6]
+2026-01-04 21:07:08,146 - [INFO] - Query: hire a lawyer for debt garnishment in calgary... | Competitors: 5 (full content, lengths: [5870, 3907, 5354]...) | Target idx: [6]
+2026-01-04 21:07:11,325 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:11,326 - [INFO] - Generated answer length: 2736
+2026-01-04 21:07:11,326 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 6]
+2026-01-04 21:07:13,224 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:13,227 - [INFO] - Generated answer length: 3330
+2026-01-04 21:07:13,227 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 4, 5, 6]
+2026-01-04 21:07:14,213 - [INFO] - Query: alberta court garnishee forms... | Competitors: 5 (full content, lengths: [43688, 7004, 8297]...) | Target idx: [6]
+2026-01-04 21:07:15,663 - [INFO] - Query: how does wage garnishment work after winning a cou... | Competitors: 5 (full content, lengths: [14618, 5533, 12573]...) | Target idx: [6]
+2026-01-04 21:07:17,189 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:17,192 - [INFO] - Generated answer length: 3023
+2026-01-04 21:07:17,192 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:07:19,032 - [INFO] - Query: hire a lawyer to enforce court judgement... | Competitors: 5 (full content, lengths: [9837, 13764, 5545]...) | Target idx: [6]
+2026-01-04 21:07:19,491 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:19,493 - [INFO] - Generated answer length: 3947
+2026-01-04 21:07:19,493 - [INFO] - Citation check: target=[6] cited=True | All citations: [2, 3, 6]
+2026-01-04 21:07:21,926 - [INFO] - Query: calgary legal aid for judgement collection... | Competitors: 5 (full content, lengths: [7859, 4408, 5370]...) | Target idx: [6]
+2026-01-04 21:07:24,410 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:24,412 - [INFO] - Generated answer length: 2685
+2026-01-04 21:07:24,412 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 5]
+2026-01-04 21:07:25,636 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:25,639 - [INFO] - Generated answer length: 3399
+2026-01-04 21:07:25,639 - [INFO] - Citation check: target=[6] cited=True | All citations: [2, 3, 6]
+2026-01-04 21:07:26,510 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:26,519 - [INFO] - Generated answer length: 2100
+2026-01-04 21:07:26,519 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 3, 4, 6]
+2026-01-04 21:07:27,318 - [INFO] - Query: nolo wage garnishment page... | Competitors: 5 (full content, lengths: [13326, 20655, 19417]...) | Target idx: [6]
+2026-01-04 21:07:27,363 - [INFO] - Query: best legal services for garnishment advice in albe... | Competitors: 5 (full content, lengths: [16404, 5354, 10964]...) | Target idx: [6]
+2026-01-04 21:07:29,992 - [INFO] - Query: hire lawyer for wage garnishment enforcement... | Competitors: 5 (full content, lengths: [20413, 9121, 8781]...) | Target idx: [6]
+2026-01-04 21:07:31,698 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:31,701 - [INFO] - Generated answer length: 3271
+2026-01-04 21:07:31,701 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:07:34,735 - [INFO] - Query: best legal firms in calgary for garnishment... | Competitors: 5 (full content, lengths: [5870, 5356, 10409]...) | Target idx: [6]
+2026-01-04 21:07:37,961 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:37,963 - [INFO] - Generated answer length: 2175
+2026-01-04 21:07:37,963 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:07:38,058 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:38,060 - [INFO] - Generated answer length: 2525
+2026-01-04 21:07:38,060 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:07:39,755 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:39,757 - [INFO] - Generated answer length: 3731
+2026-01-04 21:07:39,757 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:07:39,759 - [INFO] - Query: what are my rights if my wages are being garnished... | Competitors: 5 (full content, lengths: [12329, 43216, 16859]...) | Target idx: [6]
+2026-01-04 21:07:41,413 - [INFO] - Query: download alberta court forms for judgement collect... | Competitors: 5 (full content, lengths: [35595, 23472, 36423]...) | Target idx: [6]
+2026-01-04 21:07:43,661 - [INFO] - Query: how long does it take to collect a court judgement... | Competitors: 5 (full content, lengths: [7859, 47507, 9597]...) | Target idx: [6]
+2026-01-04 21:07:44,274 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:44,276 - [INFO] - Generated answer length: 2493
+2026-01-04 21:07:44,276 - [INFO] - Citation check: target=[6] cited=False | All citations: [1, 2, 3, 4, 5]
+2026-01-04 21:07:46,796 - [INFO] - Query: how long does it take to collect a court judgement... | Competitors: 5 (full content, lengths: [47507, 7859, 8903]...) | Target idx: [6]
+2026-01-04 21:07:49,290 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:49,293 - [INFO] - Generated answer length: 2040
+2026-01-04 21:07:49,293 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 2, 3, 4, 5, 6]
+2026-01-04 21:07:49,985 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:49,988 - [INFO] - Generated answer length: 3017
+2026-01-04 21:07:49,988 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 3, 4, 6]
+2026-01-04 21:07:52,634 - [INFO] - Query: best judgement collection services in calgary... | Competitors: 5 (full content, lengths: [7859, 7740, 1835]...) | Target idx: [6]
+2026-01-04 21:07:54,884 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-04 21:07:54,887 - [INFO] - Generated answer length: 2919
+2026-01-04 21:07:54,887 - [INFO] - Citation check: target=[6] cited=True | All citations: [1, 5, 6]
+2026-01-04 21:07:56,451 - [ERROR] - Failed to fetch HTML for d01564660cf4e3cd0aa5af860a270476: HTTPSConnectionPool(host='chatnoir-webcontent.chatnoir.eu', port=443): Max retries exceeded with url: /?uuid=d01564660cf4e3cd0aa5af860a270476&index=cw22&raw=&no-rewrite= (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)')))
+2026-01-04 21:07:56,451 - [ERROR] - Error fetching full content for d01564660cf4e3cd0aa5af860a270476: Empty HTML content for d01564660cf4e3cd0aa5af860a270476.
+Random seed set to: 42
+
+=== Baseline Evaluation ===
+Traceback (most recent call last):
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 260, in _get_competitor_full_content
+    raise RuntimeError(f"Empty HTML content for {doc.uuid}.")
+RuntimeError: Empty HTML content for d01564660cf4e3cd0aa5af860a270476.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/main.py", line 374, in <module>
+    main()
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/main.py", line 370, in main
+    asyncio.run(run_async())
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/main.py", line 277, in run_async
+    baseline_result = await agent.evaluate_page_async(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 646, in evaluate_page_async
+    query, cited = await coro
+                   ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/tasks.py", line 631, in _wait_for_one
+    return f.result()  # May raise f.exception().
+           ^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 638, in evaluate_one
+    competitor_contents = await self._get_all_competitor_contents(retrieved_docs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 273, in _get_all_competitor_contents
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/erv1n/autoGEO_reproduce/Async_pipeline/Async_geo/async_agent.py", line 266, in _get_competitor_full_content
+    raise RuntimeError(f"Error fetching full content for {doc.uuid}.") from e
+RuntimeError: Error fetching full content for d01564660cf4e3cd0aa5af860a270476.

@@ -1,0 +1,10 @@
+{
+    "split": "test",
+    "setting": "LFQA",
+    "subtask": "content_selection",
+    "model_name": "gpt-4.1-mini",
+    "n_demos": 0,
+    "num_retries": 5,
+    "temperature": 0.3,
+    "always_with_question": true
+}

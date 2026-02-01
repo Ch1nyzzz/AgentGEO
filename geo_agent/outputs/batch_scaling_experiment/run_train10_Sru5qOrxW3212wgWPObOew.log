@@ -1,0 +1,692 @@
+2026-01-05 23:31:42,265 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:31:42,266 - [INFO] - Query: best employee management software for legal compli... | Competitors: 10 (full content, lengths: [31729, 14168, 18853]...) | Target idx: [11]
+2026-01-05 23:31:42,979 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:31:42,980 - [INFO] - Query: purchase colorado paid sick leave compliance guide... | Competitors: 10 (full content, lengths: [16692, 5939, 6346]...) | Target idx: [11]
+2026-01-05 23:31:43,009 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:31:43,010 - [INFO] - Query: buy employee handbook templates for employers... | Competitors: 10 (full content, lengths: [10469, 14730, 17180]...) | Target idx: [11]
+2026-01-05 23:31:53,481 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:31:53,515 - [INFO] - Generated answer length: 3654
+2026-01-05 23:31:53,516 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 5, 6, 7, 9, 10]
+2026-01-05 23:31:53,883 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:31:53,884 - [INFO] - Query: current trends in employee rights legislation... | Competitors: 10 (full content, lengths: [9811, 37342, 13817]...) | Target idx: [11]
+2026-01-05 23:31:54,139 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:31:54,139 - [INFO] - Query: compare employee benefits packages in colorado... | Competitors: 10 (full content, lengths: [55442, 8723, 14469]...) | Target idx: [11]
+2026-01-05 23:31:55,559 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:31:55,562 - [INFO] - Generated answer length: 4020
+2026-01-05 23:31:55,562 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 9, 10]
+2026-01-05 23:31:59,038 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:31:59,039 - [INFO] - Query: employer responsibilities for sick leave under fml... | Competitors: 10 (full content, lengths: [10788, 73624, 10103]...) | Target idx: [11]
+2026-01-05 23:32:04,797 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:04,800 - [INFO] - Generated answer length: 5523
+2026-01-05 23:32:04,801 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 5, 6, 8, 9, 10, 11]
+2026-01-05 23:32:05,365 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:32:05,365 - [INFO] - Query: apply for paid sick leave in colorado... | Competitors: 10 (full content, lengths: [5939, 6346, 6327]...) | Target idx: [11]
+2026-01-05 23:32:11,937 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:11,939 - [INFO] - Generated answer length: 5181
+2026-01-05 23:32:11,939 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
+2026-01-05 23:32:15,670 - [INFO] - Competitor contents: 10/10 (from 13 candidates)
+2026-01-05 23:32:15,671 - [INFO] - Query: colorado department of labor and employment websit... | Competitors: 10 (full content, lengths: [21517, 9721, 5258]...) | Target idx: [11]
+2026-01-05 23:32:20,797 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:20,799 - [INFO] - Generated answer length: 3915
+2026-01-05 23:32:20,800 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 7, 9, 11]
+2026-01-05 23:32:22,679 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:32:22,680 - [INFO] - Query: best software for managing paid sick leave for emp... | Competitors: 10 (full content, lengths: [40568, 45318, 8710]...) | Target idx: [11]
+2026-01-05 23:32:27,551 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:27,554 - [INFO] - Generated answer length: 2238
+2026-01-05 23:32:27,554 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 5, 6, 11]
+2026-01-05 23:32:28,158 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:28,160 - [INFO] - Generated answer length: 3971
+2026-01-05 23:32:28,161 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 9]
+2026-01-05 23:32:28,769 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:32:28,769 - [INFO] - Query: how do employers comply with labor laws... | Competitors: 10 (full content, lengths: [48987, 22386, 18076]...) | Target idx: [11]
+2026-01-05 23:32:29,121 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:32:29,122 - [INFO] - Query: best resources for understanding employer obligati... | Competitors: 10 (full content, lengths: [16692, 8103, 5294]...) | Target idx: [11]
+2026-01-05 23:32:30,160 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:30,162 - [INFO] - Generated answer length: 5776
+2026-01-05 23:32:30,162 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 10]
+2026-01-05 23:32:31,779 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:32:31,779 - [INFO] - Query: best companies in colorado offering paid sick leav... | Competitors: 10 (full content, lengths: [16314, 21883, 24641]...) | Target idx: [11]
+2026-01-05 23:32:33,445 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:33,447 - [INFO] - Generated answer length: 4179
+2026-01-05 23:32:33,448 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 3, 5, 6, 9, 10]
+2026-01-05 23:32:34,042 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:32:34,043 - [INFO] - Query: u.s. department of labor employee rights page... | Competitors: 10 (full content, lengths: [2926, 30249, 22482]...) | Target idx: [11]
+2026-01-05 23:32:37,361 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:37,384 - [INFO] - Generated answer length: 3332
+2026-01-05 23:32:37,384 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 10, 11]
+2026-01-05 23:32:37,837 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:37,840 - [INFO] - Generated answer length: 3200
+2026-01-05 23:32:37,840 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 6, 7, 8, 9, 10, 11]
+2026-01-05 23:32:39,021 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:32:39,021 - [INFO] - Query: how to manage employee benefits effectively... | Competitors: 10 (full content, lengths: [8818, 7899, 6985]...) | Target idx: [11]
+2026-01-05 23:32:39,380 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:32:39,380 - [INFO] - Query: shrm employer resources page... | Competitors: 10 (full content, lengths: [27516, 5417, 12629]...) | Target idx: [11]
+2026-01-05 23:32:40,546 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:40,551 - [INFO] - Generated answer length: 2346
+2026-01-05 23:32:40,552 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 7, 8, 9, 10, 11]
+2026-01-05 23:32:47,451 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:47,455 - [INFO] - Generated answer length: 2939
+2026-01-05 23:32:47,455 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 10]
+2026-01-05 23:32:48,016 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:32:48,016 - [INFO] - Query: best resources for understanding colorado sick lea... | Competitors: 10 (full content, lengths: [10364, 5294, 12615]...) | Target idx: [11]
+2026-01-05 23:32:49,511 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:32:49,511 - [INFO] - Query: current federal laws on paid sick leave... | Competitors: 10 (full content, lengths: [54633, 37835, 60159]...) | Target idx: [11]
+2026-01-05 23:32:50,240 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:50,242 - [INFO] - Generated answer length: 3121
+2026-01-05 23:32:50,242 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 3, 4, 5, 6, 7, 8, 10]
+2026-01-05 23:32:50,783 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:32:50,783 - [INFO] - Query: colorado department of labor and employment benefi... | Competitors: 10 (full content, lengths: [49459, 2168, 33106]...) | Target idx: [11]
+2026-01-05 23:32:52,251 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:52,252 - [INFO] - Generated answer length: 3980
+2026-01-05 23:32:52,252 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+2026-01-05 23:32:57,368 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:32:57,373 - [INFO] - Generated answer length: 2812
+2026-01-05 23:32:57,373 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 4, 5, 6, 7, 9, 10]
+2026-01-05 23:32:57,966 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:32:57,966 - [INFO] - Query: buy employee handbook template with paid sick leav... | Competitors: 10 (full content, lengths: [61622, 46592, 16332]...) | Target idx: [11]
+2026-01-05 23:33:03,573 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:03,574 - [INFO] - Query: current colorado labor laws for businesses... | Competitors: 10 (full content, lengths: [16814, 54014, 5939]...) | Target idx: [11]
+2026-01-05 23:33:04,323 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:33:04,325 - [INFO] - Generated answer length: 3586
+2026-01-05 23:33:04,326 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 6, 7, 8, 10]
+2026-01-05 23:33:06,544 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:06,544 - [INFO] - Query: purchase employee benefits package for colorado em... | Competitors: 10 (full content, lengths: [55442, 18936, 10324]...) | Target idx: [11]
+2026-01-05 23:33:07,774 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:33:07,777 - [INFO] - Generated answer length: 4469
+2026-01-05 23:33:07,778 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:33:09,324 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:09,327 - [INFO] - Query: best resources for understanding employee rights f... | Competitors: 10 (full content, lengths: [19794, 15671, 6799]...) | Target idx: [11]
+2026-01-05 23:33:15,438 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:33:15,440 - [INFO] - Generated answer length: 4193
+2026-01-05 23:33:15,440 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 6, 7, 10, 11]
+2026-01-05 23:33:16,013 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:16,013 - [INFO] - Query: best legal compliance software for colorado labor ... | Competitors: 10 (full content, lengths: [17236, 12552, 5820]...) | Target idx: [11]
+2026-01-05 23:33:20,023 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:33:20,028 - [INFO] - Generated answer length: 4438
+2026-01-05 23:33:20,028 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+2026-01-05 23:33:20,257 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:33:20,259 - [INFO] - Generated answer length: 3863
+2026-01-05 23:33:20,259 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 10, 11]
+2026-01-05 23:33:20,926 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:20,927 - [INFO] - Query: what are the basic employee rights under federal l... | Competitors: 10 (full content, lengths: [10044, 25459, 6758]...) | Target idx: [11]
+2026-01-05 23:33:25,306 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:33:25,307 - [INFO] - Generated answer length: 4829
+2026-01-05 23:33:25,307 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+2026-01-05 23:33:25,894 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:25,894 - [INFO] - Query: buy a guide on employer obligations for sick leave... | Competitors: 10 (full content, lengths: [16692, 58576, 6327]...) | Target idx: [11]
+2026-01-05 23:33:28,596 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:33:28,598 - [INFO] - Generated answer length: 4819
+2026-01-05 23:33:28,598 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 5, 6, 8, 9, 10, 11]
+2026-01-05 23:33:29,191 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:29,191 - [INFO] - Query: best platforms for managing employee benefits... | Competitors: 10 (full content, lengths: [29945, 11981, 15755]...) | Target idx: [11]
+2026-01-05 23:33:32,537 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:32,538 - [INFO] - Query: current employee benefits requirements in colorado... | Competitors: 10 (full content, lengths: [42436, 59400, 50365]...) | Target idx: [11]
+2026-01-05 23:33:38,742 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:33:38,750 - [INFO] - Generated answer length: 3570
+2026-01-05 23:33:38,751 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 6, 7, 8, 9, 10]
+2026-01-05 23:33:39,421 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:39,421 - [INFO] - Query: purchase colorado labor law compliance guide... | Competitors: 10 (full content, lengths: [15103, 11522, 15862]...) | Target idx: [11]
+2026-01-05 23:33:41,009 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:33:41,011 - [INFO] - Generated answer length: 3686
+2026-01-05 23:33:41,011 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 6, 7, 8, 10, 11]
+2026-01-05 23:33:43,549 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:43,549 - [INFO] - Query: colorado department of labor employee rights page... | Competitors: 10 (full content, lengths: [26592, 31748, 83064]...) | Target idx: [11]
+2026-01-05 23:33:44,718 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:33:44,738 - [INFO] - Generated answer length: 4545
+2026-01-05 23:33:44,738 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:33:45,258 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:45,258 - [INFO] - Query: purchase employer compliance training materials... | Competitors: 10 (full content, lengths: [5094, 4917, 14167]...) | Target idx: [11]
+2026-01-05 23:33:50,665 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:33:50,667 - [INFO] - Generated answer length: 3362
+2026-01-05 23:33:50,667 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:33:51,193 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:51,193 - [INFO] - Query: colorado department of labor worker benefits page... | Competitors: 10 (full content, lengths: [5327, 2168, 6038]...) | Target idx: [11]
+2026-01-05 23:33:52,628 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:33:52,631 - [INFO] - Generated answer length: 4325
+2026-01-05 23:33:52,631 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 5, 6, 7, 9, 10, 11]
+2026-01-05 23:33:53,263 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:53,263 - [INFO] - Query: buy employee rights compliance posters for colorad... | Competitors: 10 (full content, lengths: [15103, 28333, 8589]...) | Target idx: [11]
+2026-01-05 23:33:55,370 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:33:55,371 - [INFO] - Generated answer length: 4550
+2026-01-05 23:33:55,371 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 11]
+2026-01-05 23:33:57,408 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:33:57,408 - [INFO] - Query: purchase colorado sick leave compliance guide... | Competitors: 10 (full content, lengths: [27154, 5939, 58576]...) | Target idx: [11]
+2026-01-05 23:34:00,810 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:00,814 - [INFO] - Generated answer length: 4438
+2026-01-05 23:34:00,814 - [INFO] - Citation check: target=[11] cited=False  | All citations: []
+2026-01-05 23:34:01,178 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:01,180 - [INFO] - Generated answer length: 3210
+2026-01-05 23:34:01,181 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 4, 8, 9, 10, 11]
+2026-01-05 23:34:01,385 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:01,385 - [INFO] - Query: comprehensive guide to worker benefits compliance... | Competitors: 10 (full content, lengths: [13523, 21735, 8818]...) | Target idx: [11]
+2026-01-05 23:34:03,064 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:03,064 - [INFO] - Query: purchase employee sick leave policy templates... | Competitors: 10 (full content, lengths: [36472, 5034, 17100]...) | Target idx: [11]
+2026-01-05 23:34:08,341 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:08,347 - [INFO] - Generated answer length: 3406
+2026-01-05 23:34:08,347 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 5, 7, 8, 9, 10, 11]
+2026-01-05 23:34:09,650 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:09,651 - [INFO] - Generated answer length: 4000
+2026-01-05 23:34:09,651 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 9, 10]
+2026-01-05 23:34:10,166 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:10,166 - [INFO] - Query: department of labor employer compliance page... | Competitors: 10 (full content, lengths: [7278, 14011, 10376]...) | Target idx: [11]
+2026-01-05 23:34:10,212 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:10,212 - [INFO] - Query: colorado department of labor and employment paid s... | Competitors: 10 (full content, lengths: [7655, 7841, 5939]...) | Target idx: [11]
+2026-01-05 23:34:14,988 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:14,990 - [INFO] - Generated answer length: 4036
+2026-01-05 23:34:14,991 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 6, 7, 8]
+2026-01-05 23:34:17,186 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:17,186 - [INFO] - Query: shrm employee benefits page... | Competitors: 10 (full content, lengths: [20952, 14551, 198480]...) | Target idx: [11]
+2026-01-05 23:34:18,098 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:18,101 - [INFO] - Generated answer length: 3263
+2026-01-05 23:34:18,101 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 6, 7, 8, 9, 10]
+2026-01-05 23:34:18,390 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:18,392 - [INFO] - Generated answer length: 5444
+2026-01-05 23:34:18,392 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 10, 11]
+2026-01-05 23:34:18,687 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:18,688 - [INFO] - Query: department of labor paid sick leave guidelines... | Competitors: 10 (full content, lengths: [9338, 13423, 39262]...) | Target idx: [11]
+2026-01-05 23:34:20,122 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:20,139 - [INFO] - Generated answer length: 3491
+2026-01-05 23:34:20,140 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 5, 7, 8, 9, 10, 11]
+2026-01-05 23:34:20,415 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:20,415 - [INFO] - Query: best resources for understanding colorado employme... | Competitors: 10 (full content, lengths: [19843, 21927, 22468]...) | Target idx: [11]
+2026-01-05 23:34:22,042 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:22,043 - [INFO] - Query: best platforms for employee rights training... | Competitors: 10 (full content, lengths: [23177, 67584, 15898]...) | Target idx: [11]
+2026-01-05 23:34:29,919 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:29,929 - [INFO] - Generated answer length: 4256
+2026-01-05 23:34:29,929 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 5, 6, 7, 9, 10, 11]
+2026-01-05 23:34:31,757 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:31,758 - [INFO] - Generated answer length: 4060
+2026-01-05 23:34:31,758 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 5, 6, 7, 11]
+2026-01-05 23:34:32,426 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:32,427 - [INFO] - Query: purchase mandatory sick leave compliance handbook... | Competitors: 10 (full content, lengths: [14566, 11509, 10627]...) | Target idx: [11]
+2026-01-05 23:34:32,925 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:32,927 - [INFO] - Generated answer length: 4371
+2026-01-05 23:34:32,927 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 7, 10]
+2026-01-05 23:34:34,474 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:34,477 - [INFO] - Generated answer length: 3639
+2026-01-05 23:34:34,477 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 6, 7, 8, 10]
+2026-01-05 23:34:34,946 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:34,946 - [INFO] - Query: best resources for understanding colorado employme... | Competitors: 10 (full content, lengths: [19843, 21927, 42635]...) | Target idx: [11]
+2026-01-05 23:34:36,293 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:36,296 - [INFO] - Query: best software for managing paid sick leave policie... | Competitors: 10 (full content, lengths: [44350, 41829, 8710]...) | Target idx: [11]
+2026-01-05 23:34:42,987 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:42,987 - [INFO] - Query: current state labor laws for employee benefits... | Competitors: 10 (full content, lengths: [73523, 67225, 107890]...) | Target idx: [11]
+2026-01-05 23:34:45,176 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:45,179 - [INFO] - Generated answer length: 3603
+2026-01-05 23:34:45,180 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 6, 8, 9, 10, 11]
+2026-01-05 23:34:46,051 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:46,057 - [INFO] - Generated answer length: 4054
+2026-01-05 23:34:46,057 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 6, 9, 10, 11]
+2026-01-05 23:34:46,941 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:46,941 - [INFO] - Query: overview of colorado paid sick leave law for hr pr... | Competitors: 10 (full content, lengths: [16692, 35295, 5939]...) | Target idx: [11]
+2026-01-05 23:34:52,307 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:34:52,310 - [INFO] - Generated answer length: 4556
+2026-01-05 23:34:52,311 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 6, 7, 8, 10, 11]
+2026-01-05 23:34:52,908 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:34:52,908 - [INFO] - Query: best companies in colorado for paid sick leave ben... | Competitors: 10 (full content, lengths: [36049, 12615, 16314]...) | Target idx: [11]
+2026-01-05 23:35:00,144 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:35:00,145 - [INFO] - Query: current employer obligations under state labor law... | Competitors: 10 (full content, lengths: [17044, 28627, 42396]...) | Target idx: [11]
+2026-01-05 23:35:00,178 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:00,180 - [INFO] - Generated answer length: 3898
+2026-01-05 23:35:00,180 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 5, 6, 7, 8, 10, 11]
+2026-01-05 23:35:01,843 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:01,845 - [INFO] - Generated answer length: 3017
+2026-01-05 23:35:01,846 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 6, 7, 8, 11]
+2026-01-05 23:35:02,121 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:35:02,121 - [INFO] - Query: what are the mandatory employee benefits in colora... | Competitors: 10 (full content, lengths: [55442, 49510, 42436]...) | Target idx: [11]
+2026-01-05 23:35:02,443 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:35:02,443 - [INFO] - Query: department of labor mandatory sick leave guideline... | Competitors: 10 (full content, lengths: [13423, 9518, 10011]...) | Target idx: [11]
+2026-01-05 23:35:06,644 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:06,647 - [INFO] - Generated answer length: 5678
+2026-01-05 23:35:06,647 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 5, 6, 9, 11]
+2026-01-05 23:35:14,771 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:14,774 - [INFO] - Generated answer length: 4222
+2026-01-05 23:35:14,774 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 11]
+2026-01-05 23:35:17,422 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:17,424 - [INFO] - Generated answer length: 3610
+2026-01-05 23:35:17,424 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 4, 5, 6, 7, 8, 10, 11]
+2026-01-05 23:35:20,344 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:20,344 - [INFO] - Generated answer length: 4909
+2026-01-05 23:35:20,345 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 5, 6, 7, 9, 10, 11]
+2026-01-05 23:35:22,380 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:22,387 - [INFO] - [SuggestionCollector] Processing query: purchase employee handbook templates...
+2026-01-05 23:35:22,387 - [INFO] - [SuggestionCollector] Processing query: new employment laws in colorado 2023 for small bus...
+2026-01-05 23:35:22,388 - [INFO] - [SuggestionCollector] Processing query: buy employee handbook template for colorado busine...
+2026-01-05 23:35:22,389 - [INFO] - [SuggestionCollector] Processing query: best resources for understanding colorado paid sic...
+2026-01-05 23:35:24,073 - [WARNING] - No raw_content for Tavily result ec197bf8151733c5bcd4e92bcc90d187, skipping.
+2026-01-05 23:35:24,074 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:35:24,074 - [INFO] - [SuggestionCollector] Calling collect_for_query: purchase employee handbook templates
+2026-01-05 23:35:24,074 - [INFO] - [SuggestionCollector] Calling generate_and_check for: purchase employee handbook templates
+2026-01-05 23:35:24,074 - [INFO] - Query: purchase employee handbook templates... | Competitors: 10 (full content, lengths: [1958, 14730, 6822]...) | Target idx: [11]
+2026-01-05 23:35:24,252 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:35:24,252 - [INFO] - [SuggestionCollector] Calling collect_for_query: best resources for understanding colorado paid sic
+2026-01-05 23:35:24,252 - [INFO] - [SuggestionCollector] Calling generate_and_check for: best resources for understanding colorado paid sic
+2026-01-05 23:35:24,252 - [INFO] - Query: best resources for understanding colorado paid sic... | Competitors: 10 (full content, lengths: [32659, 16063, 11879]...) | Target idx: [11]
+2026-01-05 23:35:24,281 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:35:24,284 - [INFO] - [SuggestionCollector] Calling collect_for_query: buy employee handbook template for colorado busine
+2026-01-05 23:35:24,284 - [INFO] - [SuggestionCollector] Calling generate_and_check for: buy employee handbook template for colorado busine
+2026-01-05 23:35:24,284 - [INFO] - Query: buy employee handbook template for colorado busine... | Competitors: 10 (full content, lengths: [7054, 14836, 4230]...) | Target idx: [11]
+2026-01-05 23:35:24,354 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:35:24,354 - [INFO] - [SuggestionCollector] Calling collect_for_query: new employment laws in colorado 2023 for small bus
+2026-01-05 23:35:24,354 - [INFO] - [SuggestionCollector] Calling generate_and_check for: new employment laws in colorado 2023 for small bus
+2026-01-05 23:35:24,354 - [INFO] - Query: new employment laws in colorado 2023 for small bus... | Competitors: 10 (full content, lengths: [6522, 25984, 8135]...) | Target idx: [11]
+2026-01-05 23:35:33,440 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:33,442 - [INFO] - Generated answer length: 3067
+2026-01-05 23:35:33,443 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 4, 7, 8, 11]
+2026-01-05 23:35:33,443 - [INFO] - [SuggestionCollector] Citation result: is_cited=True for: buy employee handbook template for colorado busine
+2026-01-05 23:35:33,443 - [INFO] - [SuggestionCollector] Already cited, skipping suggestions for: buy employee handbook template for colorado busine
+2026-01-05 23:35:33,443 - [INFO] - [SuggestionCollector] Processing query: new employee legal requirements in colorado 2023...
+2026-01-05 23:35:33,872 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:33,878 - [INFO] - Generated answer length: 3568
+2026-01-05 23:35:33,878 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 9, 10]
+2026-01-05 23:35:33,878 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: purchase employee handbook templates
+2026-01-05 23:35:34,070 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:35:34,070 - [INFO] - [SuggestionCollector] Calling collect_for_query: new employee legal requirements in colorado 2023
+2026-01-05 23:35:34,070 - [INFO] - [SuggestionCollector] Calling generate_and_check for: new employee legal requirements in colorado 2023
+2026-01-05 23:35:34,070 - [INFO] - Query: new employee legal requirements in colorado 2023... | Competitors: 10 (full content, lengths: [9517, 32610, 25984]...) | Target idx: [11]
+2026-01-05 23:35:35,202 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:35,204 - [INFO] - Generated answer length: 3250
+2026-01-05 23:35:35,204 - [INFO] - Citation check: target=[11] cited=False  | All citations: [2, 3, 4, 5, 6, 7, 10]
+2026-01-05 23:35:35,204 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: best resources for understanding colorado paid sic
+2026-01-05 23:35:40,226 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:47,568 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:47,572 - [INFO] - Generated answer length: 5661
+2026-01-05 23:35:47,573 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 7, 8, 9]
+2026-01-05 23:35:47,574 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: new employment laws in colorado 2023 for small bus
+2026-01-05 23:35:52,141 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:52,145 - [INFO] - Generated answer length: 5863
+2026-01-05 23:35:52,145 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+2026-01-05 23:35:52,145 - [INFO] - [SuggestionCollector] Citation result: is_cited=True for: new employee legal requirements in colorado 2023
+2026-01-05 23:35:52,145 - [INFO] - [SuggestionCollector] Already cited, skipping suggestions for: new employee legal requirements in colorado 2023
+2026-01-05 23:35:54,585 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:35:57,865 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:36:12,145 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:36:15,034 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:36:44,974 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:37:13,221 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:37:14,896 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:37:14,900 - [INFO] - [SuggestionCollector] Processing query: shrm paid sick leave policy page...
+2026-01-05 23:37:14,900 - [INFO] - [SuggestionCollector] Processing query: what are the new worker benefits requirements in c...
+2026-01-05 23:37:14,901 - [INFO] - [SuggestionCollector] Processing query: best employee benefits management software for col...
+2026-01-05 23:37:14,901 - [INFO] - [SuggestionCollector] Processing query: current state laws on mandatory sick leave for bus...
+2026-01-05 23:37:15,576 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:37:15,576 - [INFO] - [SuggestionCollector] Calling collect_for_query: what are the new worker benefits requirements in c
+2026-01-05 23:37:15,576 - [INFO] - [SuggestionCollector] Calling generate_and_check for: what are the new worker benefits requirements in c
+2026-01-05 23:37:15,576 - [INFO] - Query: what are the new worker benefits requirements in c... | Competitors: 10 (full content, lengths: [11386, 42436, 6522]...) | Target idx: [11]
+2026-01-05 23:37:16,789 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:37:16,789 - [INFO] - [SuggestionCollector] Calling collect_for_query: best employee benefits management software for col
+2026-01-05 23:37:16,789 - [INFO] - [SuggestionCollector] Calling generate_and_check for: best employee benefits management software for col
+2026-01-05 23:37:16,789 - [INFO] - Query: best employee benefits management software for col... | Competitors: 10 (full content, lengths: [41396, 13595, 20031]...) | Target idx: [11]
+2026-01-05 23:37:16,826 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:37:16,826 - [INFO] - [SuggestionCollector] Calling collect_for_query: shrm paid sick leave policy page
+2026-01-05 23:37:16,826 - [INFO] - [SuggestionCollector] Calling generate_and_check for: shrm paid sick leave policy page
+2026-01-05 23:37:16,826 - [INFO] - Query: shrm paid sick leave policy page... | Competitors: 10 (full content, lengths: [26614, 46794, 14862]...) | Target idx: [11]
+2026-01-05 23:37:28,331 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:37:28,334 - [INFO] - Generated answer length: 3411
+2026-01-05 23:37:28,334 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 4, 6, 7, 9, 10, 11]
+2026-01-05 23:37:28,335 - [INFO] - [SuggestionCollector] Citation result: is_cited=True for: shrm paid sick leave policy page
+2026-01-05 23:37:28,335 - [INFO] - [SuggestionCollector] Already cited, skipping suggestions for: shrm paid sick leave policy page
+2026-01-05 23:37:28,335 - [INFO] - [SuggestionCollector] Processing query: current trends in worker benefits 2023...
+2026-01-05 23:37:28,898 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:37:28,898 - [INFO] - [SuggestionCollector] Calling collect_for_query: current state laws on mandatory sick leave for bus
+2026-01-05 23:37:28,899 - [INFO] - [SuggestionCollector] Calling generate_and_check for: current state laws on mandatory sick leave for bus
+2026-01-05 23:37:28,899 - [INFO] - Query: current state laws on mandatory sick leave for bus... | Competitors: 10 (full content, lengths: [54556, 75198, 39262]...) | Target idx: [11]
+2026-01-05 23:37:36,301 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:37:36,304 - [INFO] - Generated answer length: 5392
+2026-01-05 23:37:36,304 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+2026-01-05 23:37:36,304 - [INFO] - [SuggestionCollector] Citation result: is_cited=True for: what are the new worker benefits requirements in c
+2026-01-05 23:37:36,304 - [INFO] - [SuggestionCollector] Already cited, skipping suggestions for: what are the new worker benefits requirements in c
+2026-01-05 23:37:38,398 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:37:38,402 - [INFO] - Generated answer length: 5066
+2026-01-05 23:37:38,402 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 4, 5, 6, 7, 10, 11]
+2026-01-05 23:37:38,402 - [INFO] - [SuggestionCollector] Citation result: is_cited=True for: best employee benefits management software for col
+2026-01-05 23:37:38,402 - [INFO] - [SuggestionCollector] Already cited, skipping suggestions for: best employee benefits management software for col
+2026-01-05 23:37:40,423 - [INFO] - Competitor contents: 10/10 (from 13 candidates)
+2026-01-05 23:37:40,423 - [INFO] - [SuggestionCollector] Calling collect_for_query: current trends in worker benefits 2023
+2026-01-05 23:37:40,423 - [INFO] - [SuggestionCollector] Calling generate_and_check for: current trends in worker benefits 2023
+2026-01-05 23:37:40,423 - [INFO] - Query: current trends in worker benefits 2023... | Competitors: 10 (full content, lengths: [22965, 70693, 13524]...) | Target idx: [11]
+2026-01-05 23:37:42,894 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:37:42,897 - [INFO] - Generated answer length: 3403
+2026-01-05 23:37:42,898 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 6, 8, 9, 11]
+2026-01-05 23:37:42,898 - [INFO] - [SuggestionCollector] Citation result: is_cited=True for: current state laws on mandatory sick leave for bus
+2026-01-05 23:37:42,898 - [INFO] - [SuggestionCollector] Already cited, skipping suggestions for: current state laws on mandatory sick leave for bus
+2026-01-05 23:37:54,393 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:37:54,395 - [INFO] - Generated answer length: 3184
+2026-01-05 23:37:54,396 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 3, 4, 5, 6, 8]
+2026-01-05 23:37:54,396 - [INFO] - [SuggestionCollector] Citation result: is_cited=False for: current trends in worker benefits 2023
+2026-01-05 23:38:00,205 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:38:37,689 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:38:37,719 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:38:37,719 - [INFO] - Query: buy employee handbook templates for employers... | Competitors: 10 (full content, lengths: [10469, 14730, 17180]...) | Target idx: [11]
+2026-01-05 23:38:37,748 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:38:37,749 - [INFO] - Query: current trends in employee rights legislation... | Competitors: 10 (full content, lengths: [9811, 37342, 13817]...) | Target idx: [11]
+2026-01-05 23:38:37,765 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:38:37,765 - [INFO] - Query: best employee management software for legal compli... | Competitors: 10 (full content, lengths: [31729, 14168, 18853]...) | Target idx: [11]
+2026-01-05 23:38:37,780 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:38:37,780 - [INFO] - Query: purchase colorado paid sick leave compliance guide... | Competitors: 10 (full content, lengths: [16692, 5939, 6346]...) | Target idx: [11]
+2026-01-05 23:38:53,674 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:38:53,680 - [INFO] - Generated answer length: 4119
+2026-01-05 23:38:53,680 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 5, 6, 7, 10, 11]
+2026-01-05 23:38:53,681 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:38:53,681 - [INFO] - Query: compare employee benefits packages in colorado... | Competitors: 10 (full content, lengths: [55442, 8723, 14469]...) | Target idx: [11]
+2026-01-05 23:38:53,720 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:38:53,726 - [INFO] - Generated answer length: 4679
+2026-01-05 23:38:53,726 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 10, 11]
+2026-01-05 23:38:53,727 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:38:53,727 - [INFO] - Query: employer responsibilities for sick leave under fml... | Competitors: 10 (full content, lengths: [10788, 73624, 10103]...) | Target idx: [11]
+2026-01-05 23:38:53,870 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:38:53,874 - [INFO] - Generated answer length: 4822
+2026-01-05 23:38:53,874 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 6, 8, 9, 11]
+2026-01-05 23:38:53,874 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:38:53,874 - [INFO] - Query: apply for paid sick leave in colorado... | Competitors: 10 (full content, lengths: [5939, 6346, 6327]...) | Target idx: [11]
+2026-01-05 23:38:54,019 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:38:54,022 - [INFO] - Generated answer length: 4308
+2026-01-05 23:38:54,022 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 9, 10]
+2026-01-05 23:38:54,023 - [INFO] - Competitor contents: 10/10 (from 13 candidates)
+2026-01-05 23:38:54,024 - [INFO] - Query: colorado department of labor and employment websit... | Competitors: 10 (full content, lengths: [21517, 9721, 5258]...) | Target idx: [11]
+2026-01-05 23:39:00,988 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:00,992 - [INFO] - Generated answer length: 2007
+2026-01-05 23:39:00,992 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 6, 7, 8]
+2026-01-05 23:39:00,993 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:00,993 - [INFO] - Query: best software for managing paid sick leave for emp... | Competitors: 10 (full content, lengths: [40568, 45318, 8710]...) | Target idx: [11]
+2026-01-05 23:39:04,039 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:04,045 - [INFO] - Generated answer length: 2674
+2026-01-05 23:39:04,046 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 7, 9, 11]
+2026-01-05 23:39:04,046 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:04,046 - [INFO] - Query: best resources for understanding employer obligati... | Competitors: 10 (full content, lengths: [16692, 8103, 5294]...) | Target idx: [11]
+2026-01-05 23:39:11,834 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:11,836 - [INFO] - Generated answer length: 4428
+2026-01-05 23:39:11,837 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5]
+2026-01-05 23:39:11,837 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:11,837 - [INFO] - Query: how do employers comply with labor laws... | Competitors: 10 (full content, lengths: [48987, 22386, 18076]...) | Target idx: [11]
+2026-01-05 23:39:11,875 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:11,879 - [INFO] - Generated answer length: 5139
+2026-01-05 23:39:11,879 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
+2026-01-05 23:39:11,879 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:11,879 - [INFO] - Query: best companies in colorado offering paid sick leav... | Competitors: 10 (full content, lengths: [16314, 21883, 24641]...) | Target idx: [11]
+2026-01-05 23:39:14,911 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:14,913 - [INFO] - Generated answer length: 3924
+2026-01-05 23:39:14,913 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 3, 5, 6, 8, 9, 10]
+2026-01-05 23:39:14,913 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:14,913 - [INFO] - Query: u.s. department of labor employee rights page... | Competitors: 10 (full content, lengths: [2926, 30249, 22482]...) | Target idx: [11]
+2026-01-05 23:39:19,338 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:19,340 - [INFO] - Generated answer length: 3320
+2026-01-05 23:39:19,341 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 8, 9, 10, 11]
+2026-01-05 23:39:19,341 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:19,341 - [INFO] - Query: how to manage employee benefits effectively... | Competitors: 10 (full content, lengths: [8818, 7899, 6985]...) | Target idx: [11]
+2026-01-05 23:39:21,308 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:21,313 - [INFO] - Generated answer length: 2798
+2026-01-05 23:39:21,313 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 11]
+2026-01-05 23:39:21,313 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:21,313 - [INFO] - Query: shrm employer resources page... | Competitors: 10 (full content, lengths: [27516, 5417, 12629]...) | Target idx: [11]
+2026-01-05 23:39:23,011 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:23,016 - [INFO] - Generated answer length: 3141
+2026-01-05 23:39:23,016 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 6, 7, 8, 10, 11]
+2026-01-05 23:39:23,016 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:23,017 - [INFO] - Query: current federal laws on paid sick leave... | Competitors: 10 (full content, lengths: [54633, 37835, 60159]...) | Target idx: [11]
+2026-01-05 23:39:23,717 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:23,719 - [INFO] - Generated answer length: 2461
+2026-01-05 23:39:23,719 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:39:23,719 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:23,720 - [INFO] - Query: best resources for understanding colorado sick lea... | Competitors: 10 (full content, lengths: [10364, 5294, 12615]...) | Target idx: [11]
+2026-01-05 23:39:32,183 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:32,186 - [INFO] - Generated answer length: 3137
+2026-01-05 23:39:32,186 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 4, 5, 6, 7, 8, 10]
+2026-01-05 23:39:32,186 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:32,187 - [INFO] - Query: colorado department of labor and employment benefi... | Competitors: 10 (full content, lengths: [49459, 2168, 33106]...) | Target idx: [11]
+2026-01-05 23:39:33,289 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:33,292 - [INFO] - Generated answer length: 5110
+2026-01-05 23:39:33,293 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+2026-01-05 23:39:33,293 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:33,293 - [INFO] - Query: current colorado labor laws for businesses... | Competitors: 10 (full content, lengths: [16814, 54014, 5939]...) | Target idx: [11]
+2026-01-05 23:39:33,568 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:33,571 - [INFO] - Generated answer length: 3280
+2026-01-05 23:39:33,572 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 6, 7, 8, 10]
+2026-01-05 23:39:33,572 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:33,572 - [INFO] - Query: buy employee handbook template with paid sick leav... | Competitors: 10 (full content, lengths: [61622, 46592, 16332]...) | Target idx: [11]
+2026-01-05 23:39:43,447 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:43,450 - [INFO] - Generated answer length: 3095
+2026-01-05 23:39:43,450 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 4, 6, 7, 9, 10]
+2026-01-05 23:39:43,450 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:43,450 - [INFO] - Query: purchase employee benefits package for colorado em... | Competitors: 10 (full content, lengths: [55442, 18936, 10324]...) | Target idx: [11]
+2026-01-05 23:39:50,048 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:50,052 - [INFO] - Generated answer length: 6170
+2026-01-05 23:39:50,052 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 5, 9, 10, 11]
+2026-01-05 23:39:50,052 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:50,052 - [INFO] - Query: best resources for understanding employee rights f... | Competitors: 10 (full content, lengths: [19794, 15671, 6799]...) | Target idx: [11]
+2026-01-05 23:39:50,136 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:50,138 - [INFO] - Generated answer length: 4610
+2026-01-05 23:39:50,138 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 5, 6, 8, 9, 10, 11]
+2026-01-05 23:39:50,138 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:50,138 - [INFO] - Query: best legal compliance software for colorado labor ... | Competitors: 10 (full content, lengths: [17236, 12552, 5820]...) | Target idx: [11]
+2026-01-05 23:39:50,722 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:39:50,727 - [INFO] - Generated answer length: 3642
+2026-01-05 23:39:50,727 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 6, 7, 10, 11]
+2026-01-05 23:39:50,728 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:39:50,728 - [INFO] - Query: current employee benefits requirements in colorado... | Competitors: 10 (full content, lengths: [42436, 59400, 50365]...) | Target idx: [11]
+2026-01-05 23:40:03,185 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:03,188 - [INFO] - Generated answer length: 3907
+2026-01-05 23:40:03,188 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 5, 6, 7, 9, 10, 11]
+2026-01-05 23:40:03,189 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:03,189 - [INFO] - Query: what are the basic employee rights under federal l... | Competitors: 10 (full content, lengths: [10044, 25459, 6758]...) | Target idx: [11]
+2026-01-05 23:40:04,063 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:04,066 - [INFO] - Generated answer length: 4355
+2026-01-05 23:40:04,067 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 10, 11]
+2026-01-05 23:40:04,067 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:04,067 - [INFO] - Query: buy a guide on employer obligations for sick leave... | Competitors: 10 (full content, lengths: [16692, 58576, 6327]...) | Target idx: [11]
+2026-01-05 23:40:05,989 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:05,989 - [INFO] - Generated answer length: 5368
+2026-01-05 23:40:05,990 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 11]
+2026-01-05 23:40:05,990 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:05,990 - [INFO] - Query: best platforms for managing employee benefits... | Competitors: 10 (full content, lengths: [29945, 11981, 15755]...) | Target idx: [11]
+2026-01-05 23:40:12,515 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:12,519 - [INFO] - Generated answer length: 5209
+2026-01-05 23:40:12,519 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+2026-01-05 23:40:12,520 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:12,520 - [INFO] - Query: purchase colorado labor law compliance guide... | Competitors: 10 (full content, lengths: [15103, 11522, 15862]...) | Target idx: [11]
+2026-01-05 23:40:13,995 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:13,996 - [INFO] - Generated answer length: 3736
+2026-01-05 23:40:13,997 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 6, 7, 8, 9]
+2026-01-05 23:40:13,997 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:13,997 - [INFO] - Query: colorado department of labor employee rights page... | Competitors: 10 (full content, lengths: [26592, 31748, 83064]...) | Target idx: [11]
+2026-01-05 23:40:16,725 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:16,729 - [INFO] - Generated answer length: 4228
+2026-01-05 23:40:16,729 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 5, 7, 10, 11]
+2026-01-05 23:40:16,730 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:16,730 - [INFO] - Query: purchase employer compliance training materials... | Competitors: 10 (full content, lengths: [5094, 4917, 14167]...) | Target idx: [11]
+2026-01-05 23:40:23,308 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:23,310 - [INFO] - Generated answer length: 3625
+2026-01-05 23:40:23,311 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:40:23,311 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:23,311 - [INFO] - Query: colorado department of labor worker benefits page... | Competitors: 10 (full content, lengths: [5327, 2168, 6038]...) | Target idx: [11]
+2026-01-05 23:40:27,002 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:27,005 - [INFO] - Generated answer length: 5790
+2026-01-05 23:40:27,005 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:40:27,006 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:27,006 - [INFO] - Query: buy employee rights compliance posters for colorad... | Competitors: 10 (full content, lengths: [15103, 28333, 8589]...) | Target idx: [11]
+2026-01-05 23:40:30,423 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:30,427 - [INFO] - Generated answer length: 3735
+2026-01-05 23:40:30,427 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 6, 7, 8, 9, 11]
+2026-01-05 23:40:30,427 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:30,427 - [INFO] - Query: purchase colorado sick leave compliance guide... | Competitors: 10 (full content, lengths: [27154, 5939, 58576]...) | Target idx: [11]
+2026-01-05 23:40:31,730 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:31,732 - [INFO] - Generated answer length: 4562
+2026-01-05 23:40:31,732 - [INFO] - Citation check: target=[11] cited=False  | All citations: []
+2026-01-05 23:40:31,732 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:31,732 - [INFO] - Query: comprehensive guide to worker benefits compliance... | Competitors: 10 (full content, lengths: [13523, 21735, 8818]...) | Target idx: [11]
+2026-01-05 23:40:34,241 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:34,243 - [INFO] - Generated answer length: 3504
+2026-01-05 23:40:34,243 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 8, 9, 10, 11]
+2026-01-05 23:40:34,243 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:34,243 - [INFO] - Query: purchase employee sick leave policy templates... | Competitors: 10 (full content, lengths: [36472, 5034, 17100]...) | Target idx: [11]
+2026-01-05 23:40:42,859 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:42,867 - [INFO] - Generated answer length: 4312
+2026-01-05 23:40:42,867 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 9, 10, 11]
+2026-01-05 23:40:42,868 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:42,868 - [INFO] - Query: colorado department of labor and employment paid s... | Competitors: 10 (full content, lengths: [7655, 7841, 5939]...) | Target idx: [11]
+2026-01-05 23:40:43,021 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:43,023 - [INFO] - Generated answer length: 3173
+2026-01-05 23:40:43,023 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 5, 7, 9, 11]
+2026-01-05 23:40:43,023 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:43,023 - [INFO] - Query: department of labor employer compliance page... | Competitors: 10 (full content, lengths: [7278, 14011, 10376]...) | Target idx: [11]
+2026-01-05 23:40:44,329 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:44,333 - [INFO] - Generated answer length: 3558
+2026-01-05 23:40:44,333 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [2, 3, 4, 6, 7, 8, 10, 11]
+2026-01-05 23:40:44,334 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:44,334 - [INFO] - Query: shrm employee benefits page... | Competitors: 10 (full content, lengths: [20952, 14551, 198480]...) | Target idx: [11]
+2026-01-05 23:40:47,173 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:47,176 - [INFO] - Generated answer length: 5785
+2026-01-05 23:40:47,176 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 4, 5, 7, 9, 10, 11]
+2026-01-05 23:40:47,176 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:47,177 - [INFO] - Query: department of labor paid sick leave guidelines... | Competitors: 10 (full content, lengths: [9338, 13423, 39262]...) | Target idx: [11]
+2026-01-05 23:40:52,907 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:52,910 - [INFO] - Generated answer length: 2918
+2026-01-05 23:40:52,910 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 5, 6, 7, 8, 9, 10, 11]
+2026-01-05 23:40:52,911 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:52,911 - [INFO] - Query: best resources for understanding colorado employme... | Competitors: 10 (full content, lengths: [19843, 21927, 22468]...) | Target idx: [11]
+2026-01-05 23:40:57,589 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:57,595 - [INFO] - Generated answer length: 3757
+2026-01-05 23:40:57,595 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 5, 7, 11]
+2026-01-05 23:40:57,595 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:57,595 - [INFO] - Query: best platforms for employee rights training... | Competitors: 10 (full content, lengths: [23177, 67584, 15898]...) | Target idx: [11]
+2026-01-05 23:40:57,703 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:40:57,705 - [INFO] - Generated answer length: 4103
+2026-01-05 23:40:57,705 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 5, 7, 8, 9, 10, 11]
+2026-01-05 23:40:57,705 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:40:57,705 - [INFO] - Query: current state labor laws for employee benefits... | Competitors: 10 (full content, lengths: [73523, 67225, 107890]...) | Target idx: [11]
+2026-01-05 23:41:01,233 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:01,236 - [INFO] - Generated answer length: 4179
+2026-01-05 23:41:01,236 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 5, 6, 7, 9, 10, 11]
+2026-01-05 23:41:01,237 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:01,237 - [INFO] - Query: purchase mandatory sick leave compliance handbook... | Competitors: 10 (full content, lengths: [14566, 11509, 10627]...) | Target idx: [11]
+2026-01-05 23:41:04,885 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:04,887 - [INFO] - Generated answer length: 4130
+2026-01-05 23:41:04,887 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 5, 6, 8, 10]
+2026-01-05 23:41:04,888 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:04,888 - [INFO] - Query: best resources for understanding colorado employme... | Competitors: 10 (full content, lengths: [19843, 21927, 42635]...) | Target idx: [11]
+2026-01-05 23:41:08,228 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:08,232 - [INFO] - Generated answer length: 4135
+2026-01-05 23:41:08,232 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 6, 7, 8, 10, 11]
+2026-01-05 23:41:08,232 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:08,232 - [INFO] - Query: best software for managing paid sick leave policie... | Competitors: 10 (full content, lengths: [44350, 41829, 8710]...) | Target idx: [11]
+2026-01-05 23:41:10,343 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:10,345 - [INFO] - Generated answer length: 3244
+2026-01-05 23:41:10,345 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 9, 11]
+2026-01-05 23:41:10,345 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:10,345 - [INFO] - Query: overview of colorado paid sick leave law for hr pr... | Competitors: 10 (full content, lengths: [16692, 35295, 5939]...) | Target idx: [11]
+2026-01-05 23:41:13,517 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:13,519 - [INFO] - Generated answer length: 3940
+2026-01-05 23:41:13,519 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 3, 4, 6, 7, 8, 10]
+2026-01-05 23:41:13,520 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:13,520 - [INFO] - Query: current employer obligations under state labor law... | Competitors: 10 (full content, lengths: [17044, 28627, 42396]...) | Target idx: [11]
+2026-01-05 23:41:15,992 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:15,996 - [INFO] - Generated answer length: 4521
+2026-01-05 23:41:15,997 - [INFO] - Citation check: target=[11] cited=False  | All citations: [1, 2, 4, 5, 6, 7, 8, 9, 10]
+2026-01-05 23:41:15,998 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:15,998 - [INFO] - Query: best companies in colorado for paid sick leave ben... | Competitors: 10 (full content, lengths: [36049, 12615, 16314]...) | Target idx: [11]
+2026-01-05 23:41:23,761 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:23,768 - [INFO] - Generated answer length: 4958
+2026-01-05 23:41:23,768 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 4, 6, 9, 11]
+2026-01-05 23:41:23,769 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:23,769 - [INFO] - Query: what are the mandatory employee benefits in colora... | Competitors: 10 (full content, lengths: [55442, 49510, 42436]...) | Target idx: [11]
+2026-01-05 23:41:25,468 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:25,471 - [INFO] - Generated answer length: 3739
+2026-01-05 23:41:25,472 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 10, 11]
+2026-01-05 23:41:25,472 - [INFO] - Competitor contents: 10/10 (from 14 candidates)
+2026-01-05 23:41:25,472 - [INFO] - Query: department of labor mandatory sick leave guideline... | Competitors: 10 (full content, lengths: [13423, 9518, 10011]...) | Target idx: [11]
+2026-01-05 23:41:25,700 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:25,701 - [INFO] - Generated answer length: 5232
+2026-01-05 23:41:25,701 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 8, 10, 11]
+2026-01-05 23:41:26,532 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:26,534 - [INFO] - Generated answer length: 3485
+2026-01-05 23:41:26,535 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 6, 7, 11]
+2026-01-05 23:41:37,370 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:37,376 - [INFO] - Generated answer length: 4301
+2026-01-05 23:41:37,376 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 2, 3, 4, 5, 6, 7, 9, 10, 11]
+2026-01-05 23:41:45,618 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-05 23:41:45,622 - [INFO] - Generated answer length: 4545
+2026-01-05 23:41:45,623 - [INFO] - Citation check: target=[11] cited=True by index | All citations: [1, 3, 4, 5, 6, 7, 8, 10, 11]
+Random seed set to: 42
+
+============================================================
+Batch GEO Scaling: Sru5qOrxW3212wgWPObOew
+Train limit: 10, Test limit: 50
+============================================================
+Train queries: 10 / 69
+Test queries: 50 / 70
+
+========================================
+         [1/2] Baseline Evaluation
+========================================
+Baseline: 62.0% (31/50)
+
+========================================
+         [2/2] Batch GEO Optimization
+========================================
+
+============================================================
+  Batch GEO Agent
+  URL: https://www.jacksonlewis.com/publication/colorado-enacts-leg...
+============================================================
+
+==================================================
+Starting Batch GEO Processing
+Total queries: 10
+Batch size: 5
+Total batches: 2
+==================================================
+
+>>> Batch 1/2
+
+=== Processing Batch 3218268e ===
+Queries: 5
+Paragraphs: 2
+Orchestras: 1
+Collecting suggestions for 5 queries...
+Collected 3 suggestions
+Synthesizing modifications...
+Batch 3218268e completed:
+  - Suggestions collected: 3
+  - Modifications applied: 3
+  - Success rate before: 40.00%
+
+>>> Batch 2/2
+
+=== Processing Batch 014d3147 ===
+Queries: 5
+Paragraphs: 1
+Orchestras: 1
+Collecting suggestions for 5 queries...
+Collected 1 suggestions
+Synthesizing modifications...
+Batch 014d3147 completed:
+  - Suggestions collected: 1
+  - Modifications applied: 1
+  - Success rate before: 80.00%
+
+Results saved to: /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/batch_scaling_experiment/batch_www.jacksonlewis.com_publication_colorado-enacts-l.json
+
+============================================================
+         Batch Processing Summary
+============================================================
+  Total batches: 2
+  Total queries processed: 10
+  Total suggestions collected: 4
+  Total modifications applied: 4
+============================================================
+Evaluating Batch GEO optimized page...
+Batch GEO: 70.0% (35/50) | Improvement: +8.0%
+
+============================================================
+                   SUMMARY
+============================================================
+Document: Sru5qOrxW3212wgWPObOew
+Train queries: 10, Test queries: 50
+------------------------------------------------------------
+Method               Ratio      Count  Improvement
+------------------------------------------------------------
+Baseline            62.0%         31
+Batch GEO           70.0%         35       +8.0%
+============================================================
+
+Result saved to: /Users/erv1n/autoGEO_reproduce/geo_agent/outputs/batch_scaling_experiment/train10_Sru5qOrxW3212wgWPObOew_batch_scaling.json
