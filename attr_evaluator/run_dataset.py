@@ -133,52 +133,51 @@ def main(args):
 
     # define and create outdir
     pipeline_subdir = "full_CoT_pipeline" if "fusion_in_context" in set([elem['subtask'] for elem in full_configs]) else "full_pipeline"
-    outdir = args.outdir if args.outdir else  f"results/{all_splits[0]}/{all_settings[0]}/{args.test_target}"
+    outdir = args.outdir if args.outdir else  f"results/{all_splits[0]}/{all_settings[0]}"
     logging.info(f"saving results to {outdir}")
     path = Path(outdir)
-    path.mkdir(parents=True, exist_ok=True) # create outdir if doesn't exist
+    path.mkdir(parents=True, exist_ok=True) 
 
-    intermediate_outdir = os.path.join(outdir, args.task) # subdir with results of intermediate subtasks
+    intermediate_outdir = os.path.join(outdir, args.task) 
     path = Path(intermediate_outdir)
-    path.mkdir(parents=True, exist_ok=True) # create outdir if doesn't exist
+    path.mkdir(parents=True, exist_ok=True) 
 
     
-    if args.test_target == "all_counts":
-        choose_idx =  [i for i in range(200)]
-        content_selection_outdir = os.path.join(intermediate_outdir, "content_selection")
-        logging.info("running content seletion:")
-        pipe1 = run_subtask(full_configs=full_configs, 
-                    subtask_name="content_selection", 
-                    curr_outdir=content_selection_outdir, 
-                    original_args_dict=original_args_dict, 
-                    indir_alignments=args.indir_alignments,
-                    choose_idx=choose_idx)
-        # clustering
-        clustering_outdir = os.path.join(intermediate_outdir, "clustering")
-        logging.info("running clustering:")
-        pipe2 = run_subtask(full_configs=full_configs, 
-                    subtask_name="clustering", 
-                    curr_outdir=clustering_outdir, 
-                    original_args_dict=original_args_dict,
-                    indir_alignments=os.path.join(content_selection_outdir, "pipeline_format_results.json")) # the alignments are the outputs of the previous subtask (content_selection)
+    choose_idx =  [i for i in range(200)]
+    content_selection_outdir = os.path.join(intermediate_outdir, "content_selection")
+    logging.info("running content seletion:")
+    pipe1 = run_subtask(full_configs=full_configs, 
+                subtask_name="content_selection", 
+                curr_outdir=content_selection_outdir, 
+                original_args_dict=original_args_dict, 
+                indir_alignments=args.indir_alignments,
+                choose_idx=choose_idx)
+    # clustering
+    clustering_outdir = os.path.join(intermediate_outdir, "clustering")
+    logging.info("running clustering:")
+    pipe2 = run_subtask(full_configs=full_configs, 
+                subtask_name="clustering", 
+                curr_outdir=clustering_outdir, 
+                original_args_dict=original_args_dict,
+                indir_alignments=os.path.join(content_selection_outdir, "pipeline_format_results.json")) 
 
-        fully_cited_count, incomplete_cite_list = compute_citation(pipe2)
-        results_to_save = {
-            "all_counts": len(pipe2),
-            "fully_cited_count": fully_cited_count,
-            "incomplete_cite_list": incomplete_cite_list  # incomplete_cite_list 本身可能也是一个字典或列表
-        }
-        filename = 'filtered_question.json'
-        os.makedirs(intermediate_outdir, exist_ok=True)
-        filepath = os.path.join(intermediate_outdir, filename)
-        try:
-            with open(filepath, 'w', encoding='utf-8') as f:
-                json.dump(results_to_save, f, indent=4, ensure_ascii=False)
-            print(f"结果已成功保存到: {filepath}")
-        except Exception as e:
-            print(f"保存文件时出错: {e}")
-        print(f"Fully Cited Count: {fully_cited_count}")
-        # logging.info(f"Total Citations (All): {cite_all}, Citation Indices: {cite_idx}")
+    fully_cited_count, incomplete_cite_list = compute_citation(pipe2)
+    results_to_save = {
+        "all_counts": len(pipe2),
+        "fully_cited_count": fully_cited_count,
+        "incomplete_cite_list": incomplete_cite_list  
+    }
+    filename = 'filtered_question.json'
+    os.makedirs(intermediate_outdir, exist_ok=True)
+    filepath = os.path.join(intermediate_outdir, filename)
+    try:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(results_to_save, f, indent=4, ensure_ascii=False)
+        print(f"结果已成功保存到: {filepath}")
+    except Exception as e:
+        print(f"保存文件时出错: {e}")
+    print(f"Fully Cited Count: {fully_cited_count}")
+    # logging.info(f"Total Citations (All): {cite_all}, Citation Indices: {cite_idx}")
     
 def count_citations(example):
     """
@@ -305,33 +304,29 @@ def return_res(id, query, rewritten_docs, args=None):
         final_alignment_path = os.path.join(clustering_outdir, "pipeline_format_results.json")
 
     if "iterative_sentence_generation" in subtasks:
-        # logging.info("\n=== 开始 Iterative Sentence Generation 阶段 ===")
-        # logging.info(f"使用 Clustering 结果路径: {final_alignment_path}")
+        logging.info("\n=== 开始 Iterative Sentence Generation 阶段 ===")
+        logging.info(f"使用 Clustering 结果路径: {final_alignment_path}")
         
-        # run_subtask(
-        #     full_configs=full_configs,
-        #     subtask_name="iterative_sentence_generation",
-        #     curr_outdir=outdir,
-        #     original_args_dict=original_args_dict,
-        #     indir_alignments=final_alignment_path,
-        # )
-        
-        logging.info("✅ Iterative Sentence Generation 阶段不做")
-        # final_alignment_path = os.path.join(outdir, "pipeline_format_results.json")
+        run_subtask(
+            full_configs=full_configs,
+            subtask_name="iterative_sentence_generation",
+            curr_outdir=outdir,
+            original_args_dict=original_args_dict,
+            indir_alignments=final_alignment_path,
+        )
+        final_alignment_path = os.path.join(outdir, "pipeline_format_results.json")
     elif "fusion_in_context" in subtasks:
-        # logging.info("\n=== 开始 Fusion in Context 阶段 ===")
-        # logging.info(f"使用 Clustering 结果路径: {final_alignment_path}")
+        logging.info("\n=== 开始 Fusion in Context 阶段 ===")
+        logging.info(f"使用 Clustering 结果路径: {final_alignment_path}")
         
-        # run_subtask(
-        #     full_configs=full_configs,
-        #     subtask_name="fusion_in_context",
-        #     curr_outdir=outdir,
-        #     original_args_dict=original_args_dict,
-        #     indir_alignments=final_alignment_path,
-        # )
-        
-        logging.info("✅ Fusion in Context 阶段不做")
-        # final_alignment_path = os.path.join(outdir, "pipeline_format_results.json")
+        run_subtask(
+            full_configs=full_configs,
+            subtask_name="fusion_in_context",
+            curr_outdir=outdir,
+            original_args_dict=original_args_dict,
+            indir_alignments=final_alignment_path,
+        )
+        final_alignment_path = os.path.join(outdir, "pipeline_format_results.json")
 
     logging.info("\n=== 开始生成最终答案阶段 ===")
     logging.info(f"读取最终结果路径: {final_alignment_path}")

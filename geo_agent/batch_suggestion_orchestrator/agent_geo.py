@@ -174,8 +174,8 @@ class AgentGEOV2:
         )
 
         # 搜索引擎类型
-        config = load_config(self.config_path)
-        search_config = config.get("search", {})
+        self.config = load_config(self.config_path)
+        search_config = self.config.get("search", {})
         self._search_provider = search_config.get("provider", "chatnoir")
 
         if self._search_provider == "chatnoir":

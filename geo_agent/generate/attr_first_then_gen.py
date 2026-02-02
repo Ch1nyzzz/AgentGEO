@@ -19,11 +19,10 @@ class AttrFirstThenGenerate(BaseGenerator):
         gen_config = load_config(config_path).get('generator', {})
         
         self.llm = get_llm_from_config(config_path)
-        self.max_snippet_length = gen_config.get('max_snippet_length', 2000)
+        self.max_snippet_length = gen_config.get('max_snippet_length', 4000)
         self.content_loader = ContentLoader(config_path)
         logger.info("Initialized AttrFirstThenGenerate")
         
-        # 直接使用 fast_return_res，不需要 pre_init
         self.attr_evaluator = None
         try:
             # Import fast_return_res

@@ -23,7 +23,7 @@ from pathlib import Path
 from typing import Dict, Any, List
 
 # 添加项目路径
-REPO_ROOT = Path(__file__).resolve().parent
+REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from optimizers import create_optimizer

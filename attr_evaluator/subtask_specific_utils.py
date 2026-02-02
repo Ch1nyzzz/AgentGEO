@@ -11,19 +11,6 @@ COSINE_SIMILARITY_THR = 0.6
 
 
 def extract_json_from_response(response: str, expect_array: bool = True) -> str:
-    """
-    从 LLM 响应中提取 JSON 部分，处理常见的格式问题。
-
-    Args:
-        response: LLM 的原始响应文本
-        expect_array: 是否期望 JSON 数组（True）或对象（False）
-
-    Returns:
-        提取的 JSON 字符串
-
-    Raises:
-        ValueError: 如果无法提取有效的 JSON
-    """
     if not response or not response.strip():
         raise ValueError("Empty response")
 

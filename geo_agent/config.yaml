@@ -47,4 +47,4 @@ html_parser:
 data:
   mode: cw22 # online or cw22
   # 使用相对路径（相对于项目根目录）或设置为绝对路径
-  html_db_path: "../../experiments/cache" # Path to store/retrieve HTML files
+  html_db_path: "./cache" # Path to store/retrieve HTML files

@@ -40,18 +40,7 @@ def main(args):
 
     # get subtask related prompt structures (instructions and answer-related)
     specific_prompt_details = get_subtask_prompt_structures(prompt_dict=prompt_dict, setting=args.setting, subtask=args.subtask, CoT=args.CoT, always_with_question=args.always_with_question)
-    # if("content_selection" in args.subtask):
-    #     used_demos, prompts, additional_data = construct_prompts_new(prompt_dict=prompt_dict, 
-    #                                                             alignments_dict=alignments_dict, 
-    #                                                             n_demos=args.n_demos, 
-    #                                                             debugging=args.debugging, 
-    #                                                             merge_cross_sents_highlights=args.merge_cross_sents_highlights, 
-    #                                                             specific_prompt_details=specific_prompt_details,
-    #                                                             tkn_counter=get_token_counter(args.model_name),
-    #                                                             no_highlights=args.subtask in SUBTASK_WITHOUT_GIVEN_HIGHLIGHTS,
-    #                                                             cut_surplus=args.cut_surplus,
-    #                                                             prct_surplus=args.prct_surplus)
-    # else:
+    
     used_demos, prompts, additional_data = construct_prompts(prompt_dict=prompt_dict, 
                                                              alignments_dict=alignments_dict, 
                                                              n_demos=args.n_demos, 
@@ -69,8 +58,6 @@ def main(args):
                              num_retries=args.num_retries, 
                              temperature=args.temperature)
 
-    ############# SAVE #############
-    # combine results with all instances' details
     final_results = {key:dict() for key in responses.keys()}
     for instance_name, resp in responses.items():
         final_results[instance_name].update(additional_data[instance_name])
@@ -87,7 +74,6 @@ def main(args):
             logging.error(f"The conversion to the pipeline format wasn't successful: {e}")
 
     
-    # 保存结果文件，以便后续阶段使用
     save_results(outdir, used_demos, final_results, pipeline_format_results)
     return pipeline_format_results
 

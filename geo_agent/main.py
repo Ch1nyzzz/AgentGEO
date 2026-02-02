@@ -12,7 +12,7 @@ from geo_agent.core.models import WebPage
 def main(task="optimize"):
     # 模拟输入
     html_dir = "cw22_search_dataset/data/html_samples"
-    queries_dir = "query_generator/data/processed_dedup"
+    queries_dir = "data/processed_dedup"
     loc_doc_path = "cw22_search_dataset/data/geo_bench_unique_docs.json"
     with open(loc_doc_path, "r", encoding="utf-8") as f:
         loc_docs = json.load(f)
@@ -131,4 +131,4 @@ def main(task="optimize"):
             print(f"\n对比结果已保存至: {compare_log_path}")
 
 if __name__ == "__main__":
-    main(task="optimize")
+    main(task="evaluate")
