@@ -1,7 +1,8 @@
 # Data and outputs
 outputs/
 geo_agent/outputs/
-data/
+data/*
+!data/input.parquet
 cw22_search_dataset/
 
 # Python

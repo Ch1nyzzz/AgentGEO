@@ -170,18 +170,15 @@ AgentGEO/
 
 ### Data Preparation
 
-#### Option 1: Using HuggingFace Dataset (Recommended)
+#### Using the Provided Dataset
 
-AgentGEO supports the pre-built dataset from HuggingFace:
+The dataset is included in the repository:
 
 ```python
-from datasets import load_dataset
+import pandas as pd
 
 # Load the dataset
-dataset = load_dataset("GeoAgent/GEO_Agent_with_queries")
-
-# Save to parquet format
-dataset['train'].to_parquet("data/input.parquet")
+dataset = pd.read_parquet("data/input.parquet")
 ```
 
 The dataset contains:
