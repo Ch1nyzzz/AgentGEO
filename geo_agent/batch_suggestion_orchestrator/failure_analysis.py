@@ -126,18 +126,18 @@ async def diagnose_root_cause_async(
     truncation_info: Optional[str] = None,
 ) -> DiagnosisResult:
     """
-    Phase 1: 异步诊断（Diagnosis）
-    识别文档未被引用的根本原因
+    Phase 1: Async Diagnosis
+    Identify the root cause of why the document was not cited
 
     Args:
-        llm: LLM 实例
-        query: 用户查询
-        target_content_preview: 目标文档预览
-        competitor_content: 竞争对手文档内容
-        truncation_info: 截断信息（可选）
+        llm: LLM instance
+        query: User query
+        target_content_preview: Target document preview
+        competitor_content: Competitor document content
+        truncation_info: Truncation information (optional)
 
     Returns:
-        DiagnosisResult: 诊断结果
+        DiagnosisResult: Diagnosis result
     """
     # Fast path: if truncation detected, return directly
     if truncation_info:
@@ -219,22 +219,22 @@ async def select_tool_strategy_async(
     enable_autogeo_policy: bool = True,
 ) -> AnalysisResult:
     """
-    Phase 2: 异步策略选择（Tool Selection）
-    基于诊断结果选择最佳工具
+    Phase 2: Async Tool Selection
+    Select the best tool based on diagnosis results
 
     Args:
-        llm: LLM 实例
-        query: 用户查询
-        diagnosis: 诊断结果
-        target_content_indexed: 带索引的目标文档内容
-        available_tools_desc: 可用工具描述
-        history_context: 历史上下文
-        memory: 优化记忆
-        policy_injection: 策略注入
-        num_chunks: chunk 数量（用于 Batch 模式）
+        llm: LLM instance
+        query: User query
+        diagnosis: Diagnosis result
+        target_content_indexed: Indexed target document content
+        available_tools_desc: Available tool descriptions
+        history_context: History context
+        memory: Optimization memory
+        policy_injection: Policy injection
+        num_chunks: Chunk count (for Batch mode)
 
     Returns:
-        AnalysisResult: 分析结果
+        AnalysisResult: Analysis result
     """
     # If PolicyEngine has injected rules, use them preferentially
     if policy_injection:
@@ -352,24 +352,24 @@ async def analyze_failure_async(
     excluded_tools: Optional[List[str]] = None,
 ) -> Tuple[AnalysisResult, DiagnosisResult]:
     """
-    完整的两阶段异步失败分析
+    Complete two-phase async failure analysis
 
-    1. 诊断（Diagnose）- 识别失败根因
-    2. 策略选择（Select Tool Strategy）- 选择最佳工具
+    1. Diagnose - Identify failure root cause
+    2. Select Tool Strategy - Select the best tool
 
     Args:
-        llm: LLM 实例
-        query: 用户查询
-        indexed_target_doc: 带索引的目标文档
-        competitor_doc: 竞争对手文档
-        memory: 优化记忆（可选）
-        truncation_audit_summary: 截断审计摘要（可选）
-        policy_injection: 策略注入（可选）
-        num_chunks: chunk 数量（用于 Batch 模式）
-        excluded_tools: 要排除的工具名列表（如 ["autogeo_rephrase"]）
+        llm: LLM instance
+        query: User query
+        indexed_target_doc: Indexed target document
+        competitor_doc: Competitor document
+        memory: Optimization memory (optional)
+        truncation_audit_summary: Truncation audit summary (optional)
+        policy_injection: Policy injection (optional)
+        num_chunks: Chunk count (for Batch mode)
+        excluded_tools: Tool names to exclude (e.g., ["autogeo_rephrase"])
 
     Returns:
-        Tuple[AnalysisResult, DiagnosisResult]: (分析结果, 诊断结果)
+        Tuple[AnalysisResult, DiagnosisResult]: (analysis result, diagnosis result)
     """
     # 1. Diagnose
     diagnosis = await diagnose_root_cause_async(
@@ -428,22 +428,22 @@ async def regenerate_tool_args_async(
     num_chunks: Optional[int] = None,
 ) -> AnalysisResult:
     """
-    Policy Override 后重新生成工具参数
+    Regenerate tool arguments after Policy Override
 
-    当 Policy Engine 强制切换工具时，原始参数可能不匹配新工具的 schema。
-    此函数重新调用 LLM，专门为指定工具生成正确格式的参数。
+    When Policy Engine forces a tool switch, original arguments may not match the new tool's schema.
+    This function re-invokes LLM to generate correctly formatted arguments for the specified tool.
 
     Args:
-        llm: LLM 实例
-        forced_tool: Policy 强制指定的工具名
-        diagnosis: 诊断结果
-        query: 用户查询
-        target_content_indexed: 带索引的目标文档
-        history_context: 历史上下文
-        num_chunks: chunk 数量
+        llm: LLM instance
+        forced_tool: Tool name forced by Policy
+        diagnosis: Diagnosis result
+        query: User query
+        target_content_indexed: Indexed target document
+        history_context: History context
+        num_chunks: Chunk count
 
     Returns:
-        AnalysisResult: 包含正确参数格式的分析结果
+        AnalysisResult: Analysis result with correctly formatted arguments
     """
     # Get schema for specified tool
     tool = registry.get_tool(forced_tool)

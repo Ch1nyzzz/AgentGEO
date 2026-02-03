@@ -341,7 +341,7 @@ class AgentGEOV2:
                     # If connection error, wait and retry
                     if isinstance(e, (ConnectionResetError, requests.exceptions.ConnectionError, requests.exceptions.Timeout, requests.exceptions.SSLError)) and api_retry < max_api_retries - 1:
                         logger.info(f"Waiting 3 seconds before retry for {doc.uuid}...")
-                        await asyncio.sleep(3)  # 等待3秒后重试
+                        await asyncio.sleep(3)  # Wait 3 seconds before retry
                         continue
             
             # 4. All attempts failed, raise error

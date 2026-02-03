@@ -16,8 +16,8 @@ from .models import (
     SuggestionV2,
     OrchestraGroupV2,
     QueryResultV2,
-    OptimizationResultV2,      # 改名
-    AgentGEOConfigV2,          # 改名
+    OptimizationResultV2,      # Renamed
+    AgentGEOConfigV2,          # Renamed
     # Multi-document types
     MultiDocConfigV2,
     DocumentOptimizationResult,

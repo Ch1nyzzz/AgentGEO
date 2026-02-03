@@ -1,9 +1,9 @@
 """
 Policy Engine for GEO Agent
-将诊断结果 + 历史信号 → 工具选择的显式规则
-替代纯 Prompt 依赖，提供更强的约束力
+Converts diagnosis results + historical signals → explicit rules for tool selection
+Replaces pure Prompt dependency with stronger constraints
 
-基于完整的失败分类体系设计策略映射
+Strategy mapping designed based on complete failure classification system
 """
 from typing import Optional, List, Dict, Tuple
 from dataclasses import dataclass
@@ -13,17 +13,17 @@ from geo_agent.core.telemetry import TelemetryStore, FailureCategory, ToolInvoca
 
 
 class PolicyDecision(Enum):
-    """策略决策类型"""
-    FORCE_TOOL = "force_tool"       # 强制使用某工具
-    SUGGEST_TOOL = "suggest_tool"   # 建议使用某工具
-    BLOCK_TOOL = "block_tool"       # 禁止使用某工具
-    ESCALATE = "escalate"           # 升级策略（尝试更激进的方法）
-    SKIP = "skip"                   # 跳过优化（无法修复）
+    """Policy decision type"""
+    FORCE_TOOL = "force_tool"       # Force use of a specific tool
+    SUGGEST_TOOL = "suggest_tool"   # Suggest use of a specific tool
+    BLOCK_TOOL = "block_tool"       # Block use of a specific tool
+    ESCALATE = "escalate"           # Escalate strategy (try more aggressive approach)
+    SKIP = "skip"                   # Skip optimization (cannot be fixed)
 
 
 @dataclass
 class PolicyRule:
-    """单条策略规则"""
+    """Single policy rule"""
     name: str
     priority: int  # 数字越小优先级越高
     decision: PolicyDecision
@@ -33,13 +33,13 @@ class PolicyRule:
 
 @dataclass
 class PolicyEvaluation:
-    """策略评估结果"""
+    """Policy evaluation result"""
     forced_tool: Optional[str] = None
     suggested_tools: List[str] = None
     blocked_tools: List[str] = None
     applied_rules: List[PolicyRule] = None
-    injection_prompt: str = ""  # 注入到 LLM 的策略提示
-    should_skip: bool = False   # 是否应跳过优化
+    injection_prompt: str = ""  # Policy prompt injected into LLM
+    should_skip: bool = False   # Whether optimization should be skipped
     skip_reason: str = ""
     
     def __post_init__(self):
@@ -48,9 +48,9 @@ class PolicyEvaluation:
         self.applied_rules = self.applied_rules or []
 
 
-# 失败类型 -> 推荐工具的映射
+# Failure type -> Recommended tool mapping
 FAILURE_TO_TOOL_MAP = {
-    # Technical Issues - 部分可修复
+    # Technical Issues - Partially fixable
     FailureCategory.PARSING_FAILURE: {
         "tools": ["noise_isolation", "structure_optimization"],
         "priority": "suggest",
@@ -98,7 +98,7 @@ FAILURE_TO_TOOL_MAP = {
         "note": "Improve document structure and segmentation"
     },
     
-    # Relevance Issues - 可能需要跳过
+    # Relevance Issues - May need to skip
     FailureCategory.SEMANTIC_IRRELEVANCE: {
         "tools": ["intent_realignment"],
         "priority": "suggest",
@@ -140,15 +140,15 @@ FAILURE_TO_TOOL_MAP = {
 
 class PolicyEngine:
     """
-    策略引擎 - 基于诊断和历史做出决策
-    
-    设计原则：
-    1. 硬性规则优先（如截断→必须重定位）
-    2. 去重规则其次（避免重复失败）
-    3. 升级规则最后（尝试不同策略）
+    Policy Engine - Makes decisions based on diagnosis and history
+
+    Design principles:
+    1. Hard rules first (e.g., truncation → must relocate)
+    2. Deduplication rules second (avoid repeated failures)
+    3. Escalation rules last (try different strategies)
     """
-    
-    # 工具分类
+
+    # Tool categories
     RESTRUCTURE_TOOLS = ["content_relocation", "structure_optimization", "noise_isolation"]
     CONTENT_TOOLS = ["entity_injection", "data_serialization"]
     STRATEGY_TOOLS = ["persuasive_rewriting", "historical_redteam", "intent_realignment"]
@@ -157,7 +157,7 @@ class PolicyEngine:
         self.telemetry = telemetry
     
     def evaluate(
-        self, 
+        self,
         diagnosis_category: FailureCategory,
         diagnosis_explanation: str,
         has_truncation_alert: bool = False,
@@ -165,21 +165,21 @@ class PolicyEngine:
         severity: str = "medium"
     ) -> PolicyEvaluation:
         """
-        评估当前状态，返回策略决策
-        基于完整的失败分类体系
+        Evaluate current state and return policy decision
+        Based on complete failure classification system
         """
         evaluation = PolicyEvaluation()
-        
-        # 收集所有适用的规则
+
+        # Collect all applicable rules
         rules = []
-        
-        # ========== 0. 不可修复情况检测 ==========
-        
-        # 语义完全无关 + 高严重性 → 可能需要跳过
+
+        # ========== 0. Unfixable Situation Detection ==========
+
+        # Completely semantically irrelevant + high severity → may need to skip
         if diagnosis_category == FailureCategory.SEMANTIC_IRRELEVANCE and severity == "critical":
             evaluation.should_skip = True
             evaluation.skip_reason = "Document is fundamentally irrelevant to the query - optimization may not help"
-            # 仍然尝试一次
+            # Still try once
             rules.append(PolicyRule(
                 name="LAST_RESORT_REALIGNMENT",
                 priority=10,
@@ -188,7 +188,7 @@ class PolicyEngine:
                 reason="Attempting intent realignment as last resort for irrelevant content"
             ))
         
-        # ========== 1. 基于诊断类型的工具映射 ==========
+        # ========== 1. Tool Mapping Based on Diagnosis Type ==========
         
         if diagnosis_category in FAILURE_TO_TOOL_MAP:
             mapping = FAILURE_TO_TOOL_MAP[diagnosis_category]
@@ -196,7 +196,7 @@ class PolicyEngine:
             priority_type = mapping["priority"]
             note = mapping["note"]
             
-            # 选择第一个未被过度使用的工具
+            # Select the first tool that hasn't been overused
             selected_tool = None
             for tool in tool_list:
                 if self.telemetry.get_tool_usage_count(tool) < 3:
@@ -221,20 +221,20 @@ class PolicyEngine:
                         reason=f"{note}. Diagnosis: {diagnosis_category.value}"
                     ))
         
-        # ========== 2. 截断特殊处理（覆盖其他规则） ==========
+        # ========== 2. Special Truncation Handling (Overrides Other Rules) ==========
         
         if has_truncation_alert and hidden_content_summary:
             rules.append(PolicyRule(
                 name="TRUNCATION_FORCE_RELOCATION",
-                priority=0,  # 最高优先级
+                priority=0,  # Highest priority
                 decision=PolicyDecision.FORCE_TOOL,
                 target_tool="content_relocation",
                 reason=f"Hidden relevant content detected: {hidden_content_summary[:100]}..."
             ))
         
-        # ========== 3. 去重规则 ==========
-        
-        # Rule 3.1: 同一工具连续失败 2 次 → 禁止
+        # ========== 3. Deduplication Rules ==========
+
+        # Rule 3.1: Same tool failed consecutively 2 times → block
         recent_tools = self.telemetry.get_recent_tools(n=2)
         if len(recent_tools) >= 2 and recent_tools[-1] == recent_tools[-2]:
             failed_tool = recent_tools[-1]
@@ -246,7 +246,7 @@ class PolicyEngine:
                 reason=f"Tool '{failed_tool}' failed consecutively, blocking to force strategy change"
             ))
         
-        # Rule 3.2: 某工具已尝试 3 次以上 → 禁止
+        # Rule 3.2: A tool has been tried 3+ times → block
         all_tools = self.RESTRUCTURE_TOOLS + self.CONTENT_TOOLS + self.STRATEGY_TOOLS
         for tool_name in all_tools:
             if self.telemetry.get_tool_usage_count(tool_name) >= 3:
@@ -258,9 +258,9 @@ class PolicyEngine:
                     reason=f"Tool '{tool_name}' has been tried {self.telemetry.get_tool_usage_count(tool_name)} times without success"
                 ))
         
-        # ========== 4. 升级规则 ==========
-        
-        # Rule 4.1: 内容工具失败 + 信息缺失类问题 → 升级到策略工具
+        # ========== 4. Escalation Rules ==========
+
+        # Rule 4.1: Content tools failed + info-missing issue → escalate to strategy tools
         content_attempts = sum(self.telemetry.get_tool_usage_count(t) for t in self.CONTENT_TOOLS)
         info_related = diagnosis_category in [
             FailureCategory.MISSING_INFO, 
@@ -278,7 +278,7 @@ class PolicyEngine:
                     reason="Content injection tools exhausted, escalating to persuasive_rewriting strategy"
                 ))
         
-        # Rule 4.2: 结构工具失败 + 答案定位问题 → 尝试 BLUF
+        # Rule 4.2: Structure tools failed + answer positioning issue → try BLUF
         restructure_attempts = sum(self.telemetry.get_tool_usage_count(t) for t in self.RESTRUCTURE_TOOLS)
         if restructure_attempts >= 2 and diagnosis_category == FailureCategory.BURIED_ANSWER:
             if self.telemetry.get_tool_usage_count("bluf_optimization") == 0:
@@ -290,7 +290,7 @@ class PolicyEngine:
                     reason="Restructure tools failed for buried answer, trying BLUF optimization"
                 ))
         
-        # Rule 4.3: 多次截断警报 → 考虑移除噪音
+        # Rule 4.3: Multiple truncation alerts → consider removing noise
         if self.telemetry.get_truncation_alerts_count() >= 2:
             rules.append(PolicyRule(
                 name="REPEATED_TRUNCATION_ALERT",
@@ -300,9 +300,9 @@ class PolicyEngine:
                 reason="Multiple truncation alerts - consider removing noise to fit more content"
             ))
         
-        # ========== 应用规则 ==========
-        
-        # 按优先级排序
+        # ========== Apply Rules ==========
+
+        # Sort by priority
         rules.sort(key=lambda r: r.priority)
         
         for rule in rules:
@@ -317,13 +317,13 @@ class PolicyEngine:
                 if rule.target_tool not in evaluation.blocked_tools:
                     evaluation.blocked_tools.append(rule.target_tool)
         
-        # ========== 生成注入 Prompt ==========
+        # ========== Generate Injection Prompt ==========
         evaluation.injection_prompt = self._build_injection_prompt(evaluation)
         
         return evaluation
     
     def _build_injection_prompt(self, evaluation: PolicyEvaluation) -> str:
-        """构建注入到 LLM 的策略提示"""
+        """Build policy prompt to inject into LLM"""
         lines = ["### 🎯 OPTIMIZATION POLICY (SYSTEM ENFORCED)"]
         
         if evaluation.forced_tool:
@@ -342,12 +342,12 @@ class PolicyEngine:
             suggested_str = ", ".join(f"`{t}`" for t in evaluation.suggested_tools)
             lines.append(f"**RECOMMENDED TOOLS** (Prefer these): {suggested_str}")
         
-        # Skip 警告
+        # Skip warning
         if evaluation.should_skip:
             lines.append(f"\n⚠️ **WARNING**: {evaluation.skip_reason}")
             lines.append("This optimization attempt may have limited effectiveness.")
         
-        # 通用规则
+        # General rules
         lines.append("\n**GENERAL RULES**:")
         lines.append("1. NEVER repeat the exact same tool + target_chunk combination that previously failed.")
         lines.append("2. If content injection failed twice, switch to persuasion or restructuring.")
@@ -359,7 +359,7 @@ class PolicyEngine:
     
     def check_duplicate_invocation(self, tool_name: str, args_hash: str) -> Tuple[bool, str]:
         """
-        检查是否为重复调用
+        Check if this is a duplicate invocation
         Returns: (is_duplicate, warning_message)
         """
         if self.telemetry.has_repeated_tool_args(tool_name, args_hash):
@@ -368,7 +368,7 @@ class PolicyEngine:
     
     def get_recommended_tools_for_category(self, category: FailureCategory) -> List[str]:
         """
-        获取特定失败类型的推荐工具列表
+        Get recommended tool list for a specific failure type
         """
         if category in FAILURE_TO_TOOL_MAP:
             return FAILURE_TO_TOOL_MAP[category]["tools"]
@@ -376,15 +376,15 @@ class PolicyEngine:
     
     def is_category_fixable(self, category: FailureCategory) -> Tuple[bool, str]:
         """
-        判断某个失败类型是否可以通过工具修复
+        Determine if a failure type can be fixed with tools
         Returns: (is_fixable, reason)
         """
-        # 完全无法修复的情况
+        # Completely unfixable cases
         unfixable = {
             FailureCategory.SEMANTIC_IRRELEVANCE: "Document is fundamentally off-topic",
         }
-        
-        # 困难但可尝试的情况
+
+        # Difficult but worth trying cases
         difficult = {
             FailureCategory.PARSING_FAILURE: "Parsing issues may require manual intervention",
             FailureCategory.OUTDATED_CONTENT: "Cannot automatically update temporal information",

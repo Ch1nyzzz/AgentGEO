@@ -1,16 +1,16 @@
 """
-优化器封装模块
+Optimizer wrapper module
 
-提供统一接口来使用三种优化方式：
-- AutoGEO: 论文中的基于规则的重写方法
-- AgentGEO: 基于建议编排的智能优化系统
-- Baseline: GEO-Bench 提供的 9 种 baseline 方法
+Provides a unified interface for three optimization methods:
+- AutoGEO: Rule-based rewriting method from the paper
+- AgentGEO: Intelligent optimization system based on suggestion orchestration
+- Baseline: 9 baseline methods provided by GEO-Bench
 """
 from typing import Dict, Any
 from pathlib import Path
 import sys
 
-# 添加路径
+# Add path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
@@ -20,14 +20,14 @@ from .baseline_optimizer import BaselineOptimizers
 
 
 def create_optimizer(method: str, config: Dict) -> Dict[str, Any]:
-    """根据方法创建优化器
+    """Create optimizer based on method
 
     Args:
-        method: 优化方法 (autogeo, agentgeo, baseline, all)
-        config: 配置字典
+        method: Optimization method (autogeo, agentgeo, baseline, all)
+        config: Configuration dictionary
 
     Returns:
-        优化器字典 {name: optimizer}
+        Optimizer dictionary {name: optimizer}
     """
     optimizers = {}
 

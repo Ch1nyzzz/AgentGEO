@@ -229,7 +229,7 @@ class HistoryManagerV2:
             if suggestion.suggestion_id in result.applied_modifications:
                 entry = HistoryEntryV2(
                     batch_id=result.batch_id,
-                    orchestra_id=0,  # 需要从外部传入
+                    orchestra_id=0,  # Needs to be passed from outside
                     segment_index=suggestion.target_segment_index,
                     tool_name=suggestion.tool_name,
                     key_changes=suggestion.key_changes,

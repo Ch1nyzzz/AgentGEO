@@ -1,6 +1,6 @@
 """
 Paragraph Module for GEO Optimization
-使用 RecursiveCharacterTextSplitter 按语义边界分段
+Uses RecursiveCharacterTextSplitter to split by semantic boundaries
 """
 from typing import List, Optional, Tuple
 from dataclasses import dataclass
@@ -10,22 +10,22 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 @dataclass
 class Paragraph:
-    """段落"""
+    """Paragraph"""
     index: int
     content: str
     token_estimate: int
-    start_pos: int = 0  # 在原文中的起始位置
-    end_pos: int = 0    # 在原文中的结束位置
+    start_pos: int = 0  # Start position in original text
+    end_pos: int = 0    # End position in original text
 
 
 class ParagraphManager:
-    """段落管理器 - 使用 tiktoken 按语义边界分段"""
+    """Paragraph Manager - Uses tiktoken to split by semantic boundaries"""
 
     def __init__(self, chunk_size: int = 2500, chunk_overlap: int = 0):
         """
         Args:
-            chunk_size: 目标段落大小 (tokens)
-            chunk_overlap: 段落重叠大小 (tokens)
+            chunk_size: Target paragraph size (tokens)
+            chunk_overlap: Paragraph overlap size (tokens)
         """
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
@@ -37,7 +37,7 @@ class ParagraphManager:
         )
 
     def estimate_tokens(self, text: str) -> int:
-        """估算 token 数（使用 tiktoken）"""
+        """Estimate token count (using tiktoken)"""
         try:
             import tiktoken
             enc = tiktoken.encoding_for_model("gpt-4")
@@ -46,18 +46,18 @@ class ParagraphManager:
             return int(len(text) / 4.0)
 
     def split(self, text: str) -> List[Paragraph]:
-        """按语义边界分段（优先段落 > 行 > 句子 > 单词）"""
-        self._original_text = text  # 保存原文用于 merge_back
+        """Split by semantic boundaries (priority: paragraph > line > sentence > word)"""
+        self._original_text = text  # Save original text for merge_back
         chunks = self._splitter.split_text(text)
         paragraphs = []
 
-        # 记录每个 chunk 在原文中的位置（处理 overlap）
+        # Record position of each chunk in original text (handle overlap)
         search_start = 0
         for i, chunk in enumerate(chunks):
-            # 在原文中查找 chunk 的位置
+            # Find chunk position in original text
             start_pos = text.find(chunk, search_start)
             if start_pos == -1:
-                # 如果找不到完整匹配（可能因为 overlap），从头找
+                # If no complete match found (possibly due to overlap), search from beginning
                 start_pos = text.find(chunk[:100], search_start)
                 if start_pos == -1:
                     start_pos = search_start
@@ -71,7 +71,7 @@ class ParagraphManager:
                 end_pos=end_pos,
             ))
 
-            # 下一个 chunk 从当前结束位置减去 overlap 开始搜索
+            # Next chunk search starts from current end position minus overlap
             search_start = max(start_pos + 1, end_pos - self.chunk_overlap * 4)
 
         return paragraphs
@@ -81,7 +81,7 @@ class ParagraphManager:
         paragraphs: List[Paragraph],
         target_index: int
     ) -> Tuple[Optional[str], str, Optional[str]]:
-        """获取目标段落及上下文"""
+        """Get target paragraph and context"""
         if not paragraphs or target_index < 0 or target_index >= len(paragraphs):
             raise ValueError(f"Invalid target_index: {target_index}")
 
@@ -97,9 +97,9 @@ class ParagraphManager:
         target_index: int,
         modified_content: str
     ) -> str:
-        """将修改后的段落合并回原文（使用位置信息精确替换）"""
+        """Merge modified paragraph back into original text (using position info for precise replacement)"""
         if not hasattr(self, '_original_text'):
-            # 兼容：如果没有原文，直接拼接
+            # Compatibility: if no original text, concatenate directly
             result = []
             for p in paragraphs:
                 if p.index == target_index:
@@ -108,13 +108,13 @@ class ParagraphManager:
                     result.append(p.content)
             return ''.join(result)
 
-        # 使用位置信息在原文中替换
+        # Use position info to replace in original text
         target = paragraphs[target_index]
         original = self._original_text
         return original[:target.start_pos] + modified_content + original[target.end_pos:]
 
     def get_summary(self, paragraphs: List[Paragraph]) -> str:
-        """生成段落摘要，用于 LLM 选择"""
+        """Generate paragraph summary for LLM selection"""
         parts = []
         for p in paragraphs:
             preview = p.content[:100].replace('\n', ' ').strip()
@@ -125,12 +125,12 @@ class ParagraphManager:
         return "\n".join(parts)
 
     def format_for_prompt(self, paragraphs: List[Paragraph]) -> str:
-        """生成带标注的完整段落列表，用于 LLM prompt"""
+        """Generate annotated complete paragraph list for LLM prompt"""
         parts = []
         for p in paragraphs:
             parts.append(f"=== Paragraph {p.index} ===\n{p.content}")
         return "\n\n".join(parts)
 
 
-# 兼容旧接口
+# Compatibility with old interface
 ContentChunk = Paragraph

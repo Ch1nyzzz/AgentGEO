@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-AgentGEO 统一优化脚本
+AgentGEO Unified Optimization Script
 
-支持三种优化方式：
-1. AutoGEO - 基于规则的重写（论文baseline）
-2. AgentGEO - 我们的方法（建议编排优化）
-3. GEO-Bench - 9种baseline优化方法
+Supports three optimization methods:
+1. AutoGEO - Rule-based rewriting (paper baseline)
+2. AgentGEO - Our method (suggestion-orchestrated optimization)
+3. GEO-Bench - 9 baseline optimization methods
 
-用法:
+Usage:
     python run_optimization.py --config optimization_config.yaml
     python run_optimization.py --method agentgeo
     python run_optimization.py --method all --data test.parquet
@@ -22,7 +22,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, List
 
-# 添加项目路径
+# Add project path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
@@ -41,7 +41,7 @@ async def process_document(
     optimizers: Dict[str, Any],
     config: Dict[str, Any]
 ) -> Dict[str, Any]:
-    """处理单个文档"""
+    """Process a single document"""
     doc_id = doc.get("doc_id", "unknown")
     logger.info(f"Processing document: {doc_id}")
 
@@ -51,7 +51,7 @@ async def process_document(
         "original_text_length": len(doc.get("raw_html", "")),
     }
 
-    # 运行每个优化器
+    # Run each optimizer
     for name, optimizer in optimizers.items():
         try:
             logger.info(f"  Running {name}...")
@@ -76,29 +76,29 @@ async def process_document(
 
 
 async def main():
-    parser = argparse.ArgumentParser(description="AgentGEO 统一优化脚本")
+    parser = argparse.ArgumentParser(description="AgentGEO Unified Optimization Script")
     parser.add_argument(
         "--config",
         default="optimization_config.yaml",
-        help="配置文件路径"
+        help="Configuration file path"
     )
     parser.add_argument(
         "--method",
         choices=["autogeo", "agentgeo", "baseline", "all"],
-        help="优化方法（覆盖配置文件）"
+        help="Optimization method (overrides config file)"
     )
     parser.add_argument(
         "--data",
-        help="数据文件路径（覆盖配置文件）"
+        help="Data file path (overrides config file)"
     )
     parser.add_argument(
         "--output-dir",
-        help="输出目录（覆盖配置文件）"
+        help="Output directory (overrides config file)"
     )
 
     args = parser.parse_args()
 
-    # 1. 加载配置
+    # 1. Load configuration
     config_path = Path(args.config)
     if not config_path.exists():
         config_path = REPO_ROOT / args.config
@@ -106,7 +106,7 @@ async def main():
     with open(config_path) as f:
         config = yaml.safe_load(f)
 
-    # 命令行参数覆盖
+    # Command line arguments override config
     if args.method:
         config["optimizer"]["method"] = args.method
     if args.data:
@@ -115,28 +115,28 @@ async def main():
         config["output"]["base_dir"] = args.output_dir
 
     logger.info("=" * 60)
-    logger.info("AgentGEO 优化系统")
+    logger.info("AgentGEO Optimization System")
     logger.info("=" * 60)
-    logger.info(f"优化方法: {config['optimizer']['method']}")
+    logger.info(f"Optimization method: {config['optimizer']['method']}")
 
-    # 2. 初始化数据加载器
+    # 2. Initialize data loader
     data_loader = DataLoader(config["data"])
     documents = data_loader.load()
-    logger.info(f"加载了 {len(documents)} 个文档")
+    logger.info(f"Loaded {len(documents)} documents")
 
-    # 3. 创建优化器
+    # 3. Create optimizers
     method = config["optimizer"]["method"]
     optimizers = create_optimizer(method, config)
-    logger.info(f"创建了 {len(optimizers)} 个优化器")
+    logger.info(f"Created {len(optimizers)} optimizers")
 
-    # 4. 处理文档
+    # 4. Process documents
     results = []
     for i, doc in enumerate(documents):
-        logger.info(f"\n[{i+1}/{len(documents)}] 处理文档...")
+        logger.info(f"\n[{i+1}/{len(documents)}] Processing document...")
         result = await process_document(doc, optimizers, config)
         results.append(result)
 
-    # 5. 保存结果
+    # 5. Save results
     output_dir = Path(config["output"]["base_dir"])
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -147,9 +147,9 @@ async def main():
         json.dump(results, f, indent=2, ensure_ascii=False)
 
     logger.info("=" * 60)
-    logger.info(f"优化完成！")
-    logger.info(f"处理了 {len(results)} 个文档")
-    logger.info(f"结果保存到: {output_file}")
+    logger.info(f"Optimization complete!")
+    logger.info(f"Processed {len(results)} documents")
+    logger.info(f"Results saved to: {output_file}")
     logger.info("=" * 60)
 
 

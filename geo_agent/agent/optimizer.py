@@ -185,7 +185,7 @@ class GEOAgent:
                 )
                 
                 # --- Policy Evaluation (Pre-Analysis) ---
-                # 先用 truncation 信息做初步诊断分类
+                # First use truncation info for preliminary diagnosis classification
                 pre_diagnosis_category = FailureCategory.CONTENT_TRUNCATED if has_truncation_alert else FailureCategory.UNKNOWN
                 policy_eval = policy_engine.evaluate(
                     diagnosis_category=pre_diagnosis_category,
@@ -204,7 +204,7 @@ class GEOAgent:
                     policy_injection=policy_eval.injection_prompt
                 )
                 
-                # 打印诊断信息
+                # Print diagnosis info
                 diagnosis_category = diagnosis.to_category() if diagnosis else FailureCategory.UNKNOWN
                 severity = getattr(diagnosis, 'severity', 'medium') if diagnosis else 'medium'
                 print(f"🧐 Diagnosis: {diagnosis_category.value} (Severity: {severity})")
@@ -231,7 +231,7 @@ class GEOAgent:
                         print(f"🎯 Policy Override: {analysis.selected_tool_name} -> {policy_eval.forced_tool}")
                         original_tool = analysis.selected_tool_name
 
-                        # 重新生成适配新工具的参数（修复参数不匹配问题）
+                        # Regenerate arguments adapted to new tool (fix argument mismatch issue)
                         try:
                             history_context = memory.get_history_summary() if memory and memory.modifications else ""
                             analysis = regenerate_tool_args(
@@ -245,7 +245,7 @@ class GEOAgent:
                             print(f"✅ Regenerated args for {policy_eval.forced_tool}")
                         except Exception as e:
                             print(f"❌ Failed to regenerate args for {policy_eval.forced_tool}: {e}")
-                            # 回退到原始工具
+                            # Fall back to original tool
                             analysis.selected_tool_name = original_tool
                             print(f"⚠️ Falling back to original tool: {original_tool}")
 
@@ -264,7 +264,7 @@ class GEOAgent:
                     
                     # Add extra args for content_relocation tool
                     if analysis.selected_tool_name == "content_relocation":
-                        # 仅当 truncation_summary 有实际内容时才覆盖，否则保留 LLM 可能生成的值
+                        # Only override when truncation_summary has actual content, otherwise keep LLM-generated value
                         if truncation_summary:
                             tool_args["hidden_content_summary"] = truncation_summary
                         elif "hidden_content_summary" not in tool_args:

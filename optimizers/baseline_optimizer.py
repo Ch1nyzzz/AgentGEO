@@ -1,8 +1,8 @@
 """
-GEO-Bench Baseline 优化器封装
+GEO-Bench Baseline optimizer wrapper
 
-支持 9 种 baseline 优化方法
-参考: GEO: Generative Engine Optimization (2311.09735v3) Section 2.2.2
+Supports 9 baseline optimization methods
+Reference: GEO: Generative Engine Optimization (2311.09735v3) Section 2.2.2
 """
 import asyncio
 import logging
@@ -11,7 +11,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional
 
-# 添加项目路径
+# Add project path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
@@ -25,7 +25,7 @@ from geo_agent.utils.structural_parser import StructuralHtmlParser
 
 logger = logging.getLogger(__name__)
 
-# GEO-Bench 支持的 9 种优化方法
+# 9 optimization methods supported by GEO-Bench
 BASELINE_METHODS = [
     "authoritative",
     "cite_sources",
@@ -38,7 +38,7 @@ BASELINE_METHODS = [
     "technical_terms",
 ]
 
-# 9 种 GEO 方法的 Prompt 模板
+# Prompt templates for 9 GEO methods
 PROMPTS = {
     "authoritative": (
         "You are given a website source text. "
@@ -112,7 +112,7 @@ PROMPTS = {
 
 @dataclass
 class BaselineResult:
-    """Baseline 优化结果"""
+    """Baseline optimization result"""
     optimized_text: str
     optimized_html: str
     original_text: str
@@ -121,18 +121,18 @@ class BaselineResult:
 
 class BaselineOptimizers:
     """
-    GEO-Bench Baseline 优化器
+    GEO-Bench Baseline optimizer
 
-    支持 9 种 baseline 优化方法：
-    - authoritative: 使文本更权威
-    - cite_sources: 添加引用来源
-    - statistics_addition: 添加统计数据
-    - keyword_stuffing: 关键词增强
-    - quotation_addition: 添加引用语
-    - easy_to_understand: 简化理解
-    - fluency_optimization: 流畅度优化
-    - unique_words: 独特词汇
-    - technical_terms: 技术术语
+    Supports 9 baseline optimization methods:
+    - authoritative: Make text more authoritative
+    - cite_sources: Add citation sources
+    - statistics_addition: Add statistical data
+    - keyword_stuffing: Keyword enhancement
+    - quotation_addition: Add quotations
+    - easy_to_understand: Simplify for understanding
+    - fluency_optimization: Fluency optimization
+    - unique_words: Unique vocabulary
+    - technical_terms: Technical terminology
     """
 
     def __init__(
@@ -145,14 +145,14 @@ class BaselineOptimizers:
         **kwargs
     ):
         """
-        初始化 Baseline 优化器
+        Initialize Baseline optimizer
 
         Args:
-            method_name: 优化方法名称
-            provider: LLM 提供商 (openai, anthropic, gemini)
-            model: 模型名称
-            config_path: 配置文件路径
-            temperature: 生成温度
+            method_name: Optimization method name
+            provider: LLM provider (openai, anthropic, gemini)
+            model: Model name
+            config_path: Configuration file path
+            temperature: Generation temperature
         """
         if method_name not in BASELINE_METHODS:
             raise ValueError(
@@ -165,18 +165,18 @@ class BaselineOptimizers:
         self.temperature = temperature
         self._parser = StructuralHtmlParser()
 
-        # 加载配置
+        # Load configuration
         config_file = Path(config_path)
         if not config_file.is_absolute():
             config_file = (REPO_ROOT / config_file).resolve()
         self._config = load_config(str(config_file))
 
-        # 初始化 LLM
+        # Initialize LLM
         self._llm = self._create_llm()
         logger.info(f"BaselineOptimizers initialized with method: {method_name}")
 
     def _create_llm(self):
-        """创建 LLM 客户端"""
+        """Create LLM client"""
         if self.provider == "openai" or "gpt" in self.model.lower():
             return OpenAIChatLLM(model=self.model, temperature=self.temperature)
         elif self.provider == "anthropic" or "claude" in self.model.lower():
@@ -184,15 +184,15 @@ class BaselineOptimizers:
         elif self.provider == "gemini" or "gemini" in self.model.lower():
             return GeminiChatLLM(model=self.model, temperature=self.temperature)
         else:
-            # 默认使用 OpenAI
+            # Default to OpenAI
             return OpenAIChatLLM(model="gpt-4.1-mini", temperature=self.temperature)
 
     def _build_prompt(self, text: str) -> str:
-        """构建优化提示"""
+        """Build optimization prompt"""
         return PROMPTS[self.method_name].format(content=text)
 
     def extract_clean_text(self, raw_html: str) -> str:
-        """从 raw_html 提取纯文本"""
+        """Extract plain text from raw_html"""
         try:
             structure = self._parser.parse(raw_html)
             return structure.get_clean_text()
@@ -206,8 +206,8 @@ class BaselineOptimizers:
         train_queries: List[str] = None,
         url: str = ""
     ) -> BaselineResult:
-        """异步优化文档"""
-        # 提取原始文本
+        """Async document optimization"""
+        # Extract original text
         original_text = self.extract_clean_text(raw_html)
 
         if not original_text.strip():
@@ -221,7 +221,7 @@ class BaselineOptimizers:
 
         logger.info(f"Optimizing with {self.method_name} (text length: {len(original_text)})")
 
-        # 构建提示并调用 LLM
+        # Build prompt and call LLM
         prompt = self._build_prompt(original_text)
 
         try:
@@ -250,5 +250,5 @@ class BaselineOptimizers:
         train_queries: List[str] = None,
         url: str = ""
     ) -> BaselineResult:
-        """同步优化接口"""
+        """Sync optimization interface"""
         return asyncio.run(self.optimize_async(raw_html, train_queries, url))

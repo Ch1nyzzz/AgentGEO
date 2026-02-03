@@ -314,7 +314,7 @@ class LLMCitationChecker(BaseCitationChecker):
         cited_indices = list({int(m) for m in re.findall(r"\[(\d+)\]", answer)})
 
         # Calculate GEO Score (LLM answer has standard [n] format)
-        num_sources = len(competitor_contents) + 1  # 竞争文档 + 目标文档
+        num_sources = len(competitor_contents) + 1  # Competitor docs + target doc
         geo_score_info = compute_geo_score(answer, target_idx, num_sources)
 
         return CitationResult(

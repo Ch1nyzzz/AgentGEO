@@ -501,11 +501,11 @@ class HtmlStructureManager:
                 geo_id = el_data.get('id')
 
                 if geo_id and geo_id in live_structure._node_map:
-                    # 从活跃结构获取最新文本
+                    # Get latest text from live structure
                     live_tag = live_structure._node_map[geo_id]
                     text = live_tag.get_text(strip=True)
                 else:
-                    # 回退到冻结结构的原始文本
+                    # Fallback to original text from frozen structure
                     text = el_data.get('text_content', '')
 
                 if text:
@@ -520,19 +520,19 @@ class HtmlStructureManager:
         self, live_structure: 'HtmlStructureManager', frozen_index: int
     ) -> Dict[str, str]:
         """
-        使用冻结索引定位，从活跃结构提取工具参数。
+        Use frozen index for positioning, extract tool arguments from live structure.
 
         Args:
-            live_structure: 活跃结构（包含最新修改的 DOM）
-            frozen_index: 冻结结构中的 chunk 索引
+            live_structure: Live structure (DOM with latest modifications)
+            frozen_index: Chunk index in frozen structure
 
         Returns:
-            Dict: 包含 target_content, context_before, context_after
+            Dict: Contains target_content, context_before, context_after
 
-        工作原理：
-        - 使用 self（冻结结构）的 _chunks 确定哪些 geo-id 属于目标 chunk
-        - 从 live_structure 的 _node_map 中提取这些元素的最新 HTML/文本
-        - 上下文也从 live_structure 获取（如果 geo-id 存在）
+        How it works:
+        - Use self (frozen structure)'s _chunks to determine which geo-ids belong to target chunk
+        - Extract latest HTML/text for these elements from live_structure's _node_map
+        - Context is also obtained from live_structure (if geo-id exists)
         """
         if not self._chunks:
             return {"target_content": "", "context_before": "", "context_after": ""}
@@ -545,19 +545,19 @@ class HtmlStructureManager:
         next_chunk = self._chunks[idx + 1] if idx < len(self._chunks) - 1 else None
 
         def get_chunk_html_from_live(chunk: ContentChunk) -> str:
-            """从活跃结构获取 chunk 的 HTML"""
+            """Get chunk HTML from live structure"""
             html_parts = []
             for el_data in chunk._elements_data:
                 geo_id = el_data.get('id')
                 if geo_id and geo_id in live_structure._node_map:
                     html_parts.append(str(live_structure._node_map[geo_id]))
                 else:
-                    # 回退到原始 HTML
+                    # Fallback to original HTML
                     html_parts.append(el_data.get('original_html', ''))
             return "\n".join(html_parts)
 
         def get_chunk_text_from_live(chunk: ContentChunk) -> str:
-            """从活跃结构获取 chunk 的文本"""
+            """Get chunk text from live structure"""
             text_parts = []
             for el_data in chunk._elements_data:
                 geo_id = el_data.get('id')
@@ -577,21 +577,21 @@ class HtmlStructureManager:
         self, live_structure: 'HtmlStructureManager', frozen_index: int, new_html: str, highlight: bool = False
     ) -> bool:
         """
-        在活跃结构上应用修改，位置由冻结索引确定。
+        Apply modification to live structure, position determined by frozen index.
 
         Args:
-            live_structure: 活跃结构（将被修改）
-            frozen_index: 冻结结构中的 chunk 索引
-            new_html: 新的 HTML 内容
-            highlight: 是否高亮修改区域
+            live_structure: Live structure (will be modified)
+            frozen_index: Chunk index in frozen structure
+            new_html: New HTML content
+            highlight: Whether to highlight modified area
 
         Returns:
-            bool: 是否成功应用修改
+            bool: Whether modification was successfully applied
 
-        工作原理：
-        - 使用 self（冻结结构）的 _chunks 确定哪些 geo-id 需要被替换
-        - 在 live_structure 中查找这些 geo-id 对应的元素
-        - 用 new_html 替换第一个元素，删除其余元素
+        How it works:
+        - Use self (frozen structure)'s _chunks to determine which geo-ids need to be replaced
+        - Find the elements corresponding to these geo-ids in live_structure
+        - Replace first element with new_html, delete remaining elements
         """
         if not self._chunks:
             logger.warning("No chunks in frozen structure")
@@ -606,14 +606,14 @@ class HtmlStructureManager:
             return False
 
         try:
-            # 1. 准备新内容（使用 lxml 保持与初始解析一致）
+            # 1. Prepare new content (use lxml to maintain consistency with initial parsing)
             new_soup = BeautifulSoup(new_html, 'lxml')
             if new_soup.body:
                 new_tags = list(new_soup.body.contents)
             else:
                 new_tags = list(new_soup.contents)
 
-            # 2. 查找第一个元素（锚点）在活跃结构中的位置
+            # 2. Find first element (anchor) position in live structure
             first_el_data = target_chunk._elements_data[0]
             first_geo_id = first_el_data.get('id')
 
@@ -626,7 +626,7 @@ class HtmlStructureManager:
                 logger.error(f"Anchor tag {first_geo_id} not found in live structure or already removed")
                 return False
 
-            # 3. 替换第一个元素
+            # 3. Replace first element
             if highlight:
                 container = live_structure.soup.new_tag("div", attrs={
                     "class": "geo-modified-chunk",
@@ -636,12 +636,12 @@ class HtmlStructureManager:
                     container.append(t)
                 first_tag_ref.replace_with(container)
             else:
-                # 插入新内容，然后删除原元素
+                # Insert new content, then delete original element
                 for t in new_tags:
                     first_tag_ref.insert_before(t)
                 first_tag_ref.decompose()
 
-            # 4. 删除 chunk 中其余元素（在活跃结构中）
+            # 4. Delete remaining elements in chunk (in live structure)
             for el_data in target_chunk._elements_data[1:]:
                 geo_id = el_data.get('id')
                 if geo_id and geo_id in live_structure._node_map:

@@ -1,10 +1,10 @@
 """
-数据加载器
+Data Loader
 
-支持从多种数据源加载文档：
-- Parquet 文件
-- JSON 文件
-- CSV 文件
+Supports loading documents from multiple data sources:
+- Parquet files
+- JSON files
+- CSV files
 """
 import json
 import logging
@@ -16,23 +16,23 @@ logger = logging.getLogger(__name__)
 
 class DataLoader:
     """
-    统一数据加载器
+    Unified Data Loader
 
-    支持加载包含以下字段的数据：
-    - raw_html: 原始 HTML
-    - train_queries: 训练查询列表
-    - test_queries: 测试查询列表（可选）
-    - doc_id: 文档 ID
-    - url: 文档 URL（可选）
+    Supports loading data with the following fields:
+    - raw_html: Original HTML
+    - train_queries: List of training queries
+    - test_queries: List of test queries (optional)
+    - doc_id: Document ID
+    - url: Document URL (optional)
     """
 
     def __init__(self, config: Dict[str, Any]):
         """
         Args:
-            config: 数据配置
-                - input_type: 输入类型 (parquet, json, csv)
-                - input_path: 输入文件路径
-                - required_fields: 必需字段列表
+            config: Data configuration
+                - input_type: Input type (parquet, json, csv)
+                - input_path: Input file path
+                - required_fields: List of required fields
         """
         self.config = config
         self.input_path = Path(config["input_path"])
@@ -43,7 +43,7 @@ class DataLoader:
             raise FileNotFoundError(f"Input file not found: {self.input_path}")
 
     def load(self) -> List[Dict[str, Any]]:
-        """加载数据"""
+        """Load data"""
         if self.input_type == "parquet":
             return self._load_parquet()
         elif self.input_type == "json":
@@ -54,7 +54,7 @@ class DataLoader:
             raise ValueError(f"Unsupported input type: {self.input_type}")
 
     def _load_parquet(self) -> List[Dict[str, Any]]:
-        """加载 Parquet 文件"""
+        """Load Parquet file"""
         try:
             import pandas as pd
         except ImportError:
@@ -63,20 +63,20 @@ class DataLoader:
         df = pd.read_parquet(self.input_path)
         logger.info(f"Loaded {len(df)} rows from {self.input_path}")
 
-        # 转换为字典列表
+        # Convert to list of dictionaries
         documents = df.to_dict(orient="records")
 
-        # 验证必需字段
+        # Validate required fields
         self._validate_documents(documents)
 
         return documents
 
     def _load_json(self) -> List[Dict[str, Any]]:
-        """加载 JSON 文件"""
+        """Load JSON file"""
         with open(self.input_path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
-        # 支持两种格式：单个文档或文档列表
+        # Support two formats: single document or list of documents
         if isinstance(data, dict):
             documents = [data]
         else:
@@ -84,13 +84,13 @@ class DataLoader:
 
         logger.info(f"Loaded {len(documents)} documents from {self.input_path}")
 
-        # 验证必需字段
+        # Validate required fields
         self._validate_documents(documents)
 
         return documents
 
     def _load_csv(self) -> List[Dict[str, Any]]:
-        """加载 CSV 文件"""
+        """Load CSV file"""
         try:
             import pandas as pd
         except ImportError:
@@ -99,16 +99,16 @@ class DataLoader:
         df = pd.read_csv(self.input_path)
         logger.info(f"Loaded {len(df)} rows from {self.input_path}")
 
-        # 转换为字典列表
+        # Convert to list of dictionaries
         documents = df.to_dict(orient="records")
 
-        # 验证必需字段
+        # Validate required fields
         self._validate_documents(documents)
 
         return documents
 
     def _validate_documents(self, documents: List[Dict[str, Any]]) -> None:
-        """验证文档是否包含必需字段"""
+        """Validate that documents contain required fields"""
         for i, doc in enumerate(documents):
             missing_fields = [field for field in self.required_fields if field not in doc]
             if missing_fields:
@@ -116,14 +116,14 @@ class DataLoader:
                     f"Document {i} is missing required fields: {missing_fields}"
                 )
 
-            # 确保 train_queries 是列表
+            # Ensure train_queries is a list
             if "train_queries" in doc and isinstance(doc["train_queries"], str):
                 try:
                     doc["train_queries"] = json.loads(doc["train_queries"])
                 except json.JSONDecodeError:
                     doc["train_queries"] = [doc["train_queries"]]
 
-            # 确保 test_queries 是列表（如果存在）
+            # Ensure test_queries is a list (if present)
             if "test_queries" in doc and isinstance(doc["test_queries"], str):
                 try:
                     doc["test_queries"] = json.loads(doc["test_queries"])

@@ -379,7 +379,7 @@ class MultiDocumentOptimizer:
                 queries=queries,
                 doc_index=doc_index,
                 total_docs=total_docs,
-                on_progress=on_progress if attempt == 0 else None,  # 只在首次报告进度
+                on_progress=on_progress if attempt == 0 else None,  # Only report progress on first attempt
             )
 
             if result.success:

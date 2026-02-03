@@ -1,14 +1,14 @@
 """
-HTML 内容修改系统 - 完整重写版本
+HTML Content Modification System - Complete Rewrite Version
 
-功能：
-1. 从复杂 HTML 中智能提取结构化内容
-2. 使用 GPT-4o-mini 分析 content 与 HTML 的对应关系
-3. 支持添加、修改、删除句子操作
-4. 返回修改后的完整 HTML
+Features:
+1. Intelligently extract structured content from complex HTML
+2. Use GPT-4o-mini to analyze the mapping between content and HTML
+3. Support add, modify, and delete sentence operations
+4. Return the modified complete HTML
 
-作者: AI Assistant
-日期: 2025-12-27
+Author: AI Assistant
+Date: 2025-12-27
 """
 
 import json
@@ -25,10 +25,10 @@ from langchain_core.output_parsers import PydanticOutputParser
 from pydantic import BaseModel, Field
 
 from geo_agent.utils.html_parser import HtmlParser
-# HTML 处理
+# HTML processing
 from bs4 import BeautifulSoup, NavigableString
 
-# 配置日志
+# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
@@ -37,11 +37,11 @@ logger = logging.getLogger(__name__)
 
 
 # ============================================================================
-# 数据模型定义
+# Data Model Definitions
 # ============================================================================
 
 class Change(BaseModel):
-    """单个变更操作"""
+    """Single change operation"""
     type: str = Field(..., description="Change type: 'add', 'modify', or 'delete'")
     anchor_sentence: str = Field(..., description="The sentence before the change (for locating in HTML)")
     new_sentence: Optional[str] = Field(None, description="New sentence for 'add' or 'modify' operations")
@@ -50,101 +50,101 @@ class Change(BaseModel):
 
 
 class ChangesOutput(BaseModel):
-    """LLM 返回的变更列表"""
+    """List of changes returned by LLM"""
     changes: List[Change] = Field(..., description="List of identified changes")
     summary: Optional[str] = Field(None, description="Summary of all changes")
 
 
 
 # ============================================================================
-# HTML 修改引擎
+# HTML Modification Engine
 # ============================================================================
 
 class HTMLModificationEngine:
     """
-    使用 LLM 分析变更，并在 HTML 中应用修改。
+    Use LLM to analyze changes and apply modifications in HTML.
     """
-    
+
     def __init__(self, model: str = "gpt-4.1-mini", temperature: float = 0):
-        """初始化 LLM"""
+        """Initialize LLM"""
         self.llm = ChatOpenAI(model=model, temperature=temperature)
         self.parser = PydanticOutputParser(pydantic_object=ChangesOutput)
     
     def analyze_changes(self, original_text: str, new_content: str) -> List[Change]:
         """
-        使用 LLM 分析原始文本和新内容的差异。
-        
+        Use LLM to analyze differences between original text and new content.
+
         Args:
-            original_text: 从 HTML 提取的原始文本
-            new_content: 新的内容文本
-        
+            original_text: Original text extracted from HTML
+            new_content: New content text
+
         Returns:
-            变更列表
+            List of changes
         """
-        logger.info("开始使用 LLM 分析内容差异...")
-        
-        # 截断过长的文本以避免 token 超限
+        logger.info("Starting LLM content difference analysis...")
+
+        # Truncate text to avoid token limit
         max_length = 8000
         original_snippet = original_text[:max_length]
         new_snippet = new_content[:max_length]
-        
-        prompt = f"""你是一个内容对比专家。我有原始 HTML 页面提取的文本和新的内容文本，需要你识别变更。
 
-任务：
-1. 识别在"新内容"中但不在"原始文本"中的新增句子（type: "add"）。
-2. 识别"新内容"中相比"原始文本"有明显修改的句子（type: "modify"）。
-3. 识别在"原始文本"中但不在"新内容"中的删除句子（type: "delete"）。
-4. 对于每个变更，找到"原始文本"中紧邻该变更前面的句子作为"anchor_sentence"。
-5. anchor_sentence 必须完全存在于原始文本中。
+        prompt = f"""You are a content comparison expert. I have text extracted from the original HTML page and new content text, and I need you to identify changes.
 
-重要规则：
-- 对于 "add" 和 "modify"，提供 "new_sentence"。
-- 对于 "delete"，提供 "deleted_sentence"。
-- anchor_sentence 应该是前一个完整的句子，用于在 HTML 中定位。
-- 如果找不到合适的 anchor_sentence，使用最接近的前文。
+Tasks:
+1. Identify new sentences that are in "new content" but not in "original text" (type: "add").
+2. Identify sentences in "new content" that have been significantly modified compared to "original text" (type: "modify").
+3. Identify sentences that are in "original text" but not in "new content" (type: "delete").
+4. For each change, find the sentence immediately preceding the change in "original text" as the "anchor_sentence".
+5. anchor_sentence must exist completely in the original text.
 
-原始文本：
+Important rules:
+- For "add" and "modify", provide "new_sentence".
+- For "delete", provide "deleted_sentence".
+- anchor_sentence should be the previous complete sentence, used for locating in HTML.
+- If no suitable anchor_sentence can be found, use the closest preceding text.
+
+Original text:
 {original_snippet}
 
-新内容：
+New content:
 {new_snippet}
 
-请以 JSON 格式输出，遵循以下结构：
+Please output in JSON format, following this structure:
 {self.parser.get_format_instructions()}
 """
-        
+
         try:
             response = self.llm.invoke(prompt)
             parsed = self.parser.parse(response.content)
             changes = parsed.changes
-            logger.info(f"识别到 {len(changes)} 个变更")
+            logger.info(f"Identified {len(changes)} changes")
             return changes
         except Exception as e:
-            logger.error(f"LLM 分析失败: {e}")
-            logger.error(f"LLM 响应: {response.content if 'response' in locals() else 'N/A'}")
+            logger.error(f"LLM analysis failed: {e}")
+            logger.error(f"LLM response: {response.content if 'response' in locals() else 'N/A'}")
             return []
     
     def apply_changes_to_html(self, html: str, changes: List[Change]) -> str:
         """
-        将变更应用到 HTML 中。
-        
-        策略：
-        1. 对于 "add"：在 anchor_sentence 后插入新句子（用特殊 span 包装）
-        2. 对于 "modify"：找到对应句子并替换（用特殊 span 包装）
-        3. 对于 "delete"：找到对应句子并标记为删除（用删除线 span 包装）
-        
+        Apply changes to HTML.
+
+        Strategy:
+        1. For "add": Insert new sentence after anchor_sentence (wrapped in special span)
+        2. For "modify": Find and replace the corresponding sentence (wrapped in special span)
+        3. For "delete": Find and mark the corresponding sentence as deleted (wrapped in strikethrough span)
+
         Args:
-            html: 原始 HTML
-            changes: 变更列表
-        
+            html: Original HTML
+            changes: List of changes
+
         Returns:
-            修改后的 HTML
+            Modified HTML
         """
-        logger.info(f"开始应用 {len(changes)} 个变更到 HTML...")
-        
+        logger.info(f"Starting to apply {len(changes)} changes to HTML...")
+
         soup = BeautifulSoup(html, 'html.parser')
-        
-        # 按位置倒序处理，避免位置偏移
+
+        # Process in reverse order by position to avoid position offset
         for change in sorted(changes, key=lambda c: c.position if hasattr(c, 'position') else 0, reverse=True):
             try:
                 if change.type == "add":
@@ -154,270 +154,270 @@ class HTMLModificationEngine:
                 elif change.type == "delete":
                     self._apply_delete(soup, change)
             except Exception as e:
-                logger.warning(f"应用变更失败 ({change.type}): {e}")
-        
+                logger.warning(f"Failed to apply change ({change.type}): {e}")
+
         return str(soup.prettify())
     
     def _apply_add(self, soup: BeautifulSoup, change: Change) -> None:
-        """应用 "add" 变更：在 anchor 后插入新句子"""
+        """Apply "add" change: Insert new sentence after anchor"""
         anchor = change.anchor_sentence.strip()
         new_text = change.new_sentence.strip()
-        
+
         if not anchor or not new_text:
             return
-        
-        # 查找 anchor 句子
+
+        # Find anchor sentence
         target_node = self._find_text_node(soup, anchor)
-        
+
         if target_node:
-            # 创建新的 span 元素（黄色背景，表示新增）
+            # Create new span element (yellow background, indicating addition)
             new_span = soup.new_tag("span")
             new_span['class'] = "html-modifier-added"
             new_span['style'] = "background-color: #FFFF00; color: #000000; font-weight: bold; border: 2px solid #FFA500; padding: 3px; margin: 2px; display: inline-block;"
-            new_span.string = f"[新增] {new_text}"
-            
-            # 在 anchor 节点后插入
+            new_span.string = f"[Added] {new_text}"
+
+            # Insert after anchor node
             if target_node.parent:
                 target_node.insert_after(new_span)
-                logger.info(f"已添加: {new_text[:50]}...")
+                logger.info(f"Added: {new_text[:50]}...")
             else:
-                logger.warning(f"无法定位 anchor 的父节点")
+                logger.warning(f"Cannot locate anchor's parent node")
         else:
-            logger.warning(f"未找到 anchor 句子: {anchor[:50]}...")
+            logger.warning(f"Anchor sentence not found: {anchor[:50]}...")
     
     def _apply_modify(self, soup: BeautifulSoup, change: Change) -> None:
-        """应用 "modify" 变更：替换对应的句子"""
+        """Apply "modify" change: Replace the corresponding sentence"""
         anchor = change.anchor_sentence.strip()
         new_text = change.new_sentence.strip()
-        
+
         if not anchor or not new_text:
             return
-        
-        # 查找需要修改的句子（通常是 anchor 后的下一个句子）
-        # 这里我们采用更智能的方法：查找包含 anchor 的元素，然后修改其后的内容
+
+        # Find the sentence to modify (usually the sentence after anchor)
+        # Here we use a smarter approach: find the element containing anchor, then modify content after it
         target_node = self._find_text_node(soup, anchor)
-        
+
         if target_node:
-            # 查找下一个文本节点或元素
+            # Find next text node or element
             next_node = target_node.find_next(string=True)
-            
+
             if next_node and next_node.parent:
-                # 创建修改后的 span（蓝色背景，表示修改）
+                # Create modified span (blue background, indicating modification)
                 modified_span = soup.new_tag("span")
                 modified_span['class'] = "html-modifier-modified"
                 modified_span['style'] = "background-color: #87CEEB; color: #000000; font-weight: bold; border: 2px solid #0000FF; padding: 3px; margin: 2px; display: inline-block;"
-                modified_span.string = f"[修改] {new_text}"
-                
+                modified_span.string = f"[Modified] {new_text}"
+
                 next_node.replace_with(modified_span)
-                logger.info(f"已修改: {new_text[:50]}...")
+                logger.info(f"Modified: {new_text[:50]}...")
             else:
-                # 如果找不到下一个节点，直接在 anchor 后插入
+                # If next node not found, insert directly after anchor
                 new_span = soup.new_tag("span")
                 new_span['class'] = "html-modifier-modified"
                 new_span['style'] = "background-color: #87CEEB; color: #000000; font-weight: bold; border: 2px solid #0000FF; padding: 3px; margin: 2px; display: inline-block;"
-                new_span.string = f"[修改] {new_text}"
-                
+                new_span.string = f"[Modified] {new_text}"
+
                 if target_node.parent:
                     target_node.replace_with(new_span)
-                    logger.info(f"已修改（插入）: {new_text[:50]}...")
+                    logger.info(f"Modified (inserted): {new_text[:50]}...")
         else:
-            logger.warning(f"未找到 anchor 句子用于修改: {anchor[:50]}...")
+            logger.warning(f"Anchor sentence not found for modification: {anchor[:50]}...")
     
     def _apply_delete(self, soup: BeautifulSoup, change: Change) -> None:
-        """应用 "delete" 变更：标记删除的句子"""
+        """Apply "delete" change: Mark the deleted sentence"""
         deleted_text = change.deleted_sentence.strip()
-        
+
         if not deleted_text:
             return
-        
-        # 查找被删除的句子
+
+        # Find the deleted sentence
         target_node = self._find_text_node(soup, deleted_text)
-        
+
         if target_node:
-            # 创建删除标记 span（红色背景 + 删除线）
+            # Create deletion marker span (red background + strikethrough)
             del_span = soup.new_tag("span")
             del_span['class'] = "html-modifier-deleted"
             del_span['style'] = "background-color: #FF6B6B; color: #FFFFFF; font-weight: bold; text-decoration: line-through; border: 2px solid #FF0000; padding: 3px; margin: 2px; display: inline-block;"
-            del_span.string = f"[删除] {deleted_text}"
-            
+            del_span.string = f"[Deleted] {deleted_text}"
+
             target_node.replace_with(del_span)
-            logger.info(f"已删除: {deleted_text[:50]}...")
+            logger.info(f"Deleted: {deleted_text[:50]}...")
         else:
-            logger.warning(f"未找到删除句子: {deleted_text[:50]}...")
+            logger.warning(f"Deleted sentence not found: {deleted_text[:50]}...")
     
     def _find_text_node(self, soup: BeautifulSoup, text: str) -> Optional[Any]:
         """
-        在 HTML 中查找包含指定文本的节点。
-        使用模糊匹配以处理空格和格式差异。
+        Find a node containing the specified text in HTML.
+        Use fuzzy matching to handle whitespace and formatting differences.
         """
-        # 规范化搜索文本
+        # Normalize search text
         normalized_search = text.strip().lower()
-        
-        # 首先尝试精确匹配
+
+        # First try exact match
         for node in soup.find_all(string=True):
             if isinstance(node, NavigableString) and not isinstance(node, str):
                 continue
-            
+
             node_text = str(node).strip().lower()
-            
-            # 精确匹配
+
+            # Exact match
             if node_text == normalized_search:
                 return node
-            
-            # 包含匹配（用于部分句子）
+
+            # Contains match (for partial sentences)
             if len(normalized_search) > 20 and normalized_search in node_text:
                 return node
-        
-        # 如果没有找到，尝试模糊匹配（查找包含关键词的节点）
-        keywords = normalized_search.split()[:3]  # 取前3个关键词
-        
+
+        # If not found, try fuzzy matching (find nodes containing keywords)
+        keywords = normalized_search.split()[:3]  # Take first 3 keywords
+
         for node in soup.find_all(string=True):
             if isinstance(node, NavigableString) and not isinstance(node, str):
                 continue
-            
+
             node_text = str(node).strip().lower()
-            
+
             if all(keyword in node_text for keyword in keywords):
                 return node
-        
+
         return None
 
 
 # ============================================================================
-# 主控制器
+# Main Controller
 # ============================================================================
 
 class HTMLContentModifier:
     """
-    主控制器：协调整个 HTML 修改流程。
+    Main controller: Coordinates the entire HTML modification workflow.
     """
-    
+
     OUTPUT_DIR = "refined_pages"
-    
+
     def __init__(self, model: str = "gpt-4.1-mini", temperature: float = 0):
-        """初始化修改器"""
+        """Initialize modifier"""
         self.engine = HTMLModificationEngine(model=model, temperature=temperature)
         self.parser = HtmlParser()
-        
+
         if not os.path.exists(self.OUTPUT_DIR):
             os.makedirs(self.OUTPUT_DIR)
-            logger.info(f"创建输出目录: {self.OUTPUT_DIR}")
+            logger.info(f"Created output directory: {self.OUTPUT_DIR}")
     
     def _get_output_path(self, hint: Optional[str] = None) -> str:
-        """生成输出文件路径"""
+        """Generate output file path"""
         if not hint:
             filename = f"modified_{uuid.uuid4().hex[:8]}.html"
         else:
-            # 使用 hint 的 MD5 哈希作为文件名
+            # Use MD5 hash of hint as filename
             filename = f"modified_{hashlib.md5(hint.encode()).hexdigest()}.html"
-        
+
         return os.path.join(self.OUTPUT_DIR, filename)
     
     def modify(self, html: str, content: str, filename_hint: Optional[str] = None) -> Dict[str, Any]:
         """
-        执行完整的 HTML 修改流程。
-        
+        Execute the complete HTML modification workflow.
+
         Args:
-            html: 原始 HTML 内容
-            content: 新的内容文本
-            filename_hint: 输出文件名提示
-        
+            html: Original HTML content
+            content: New content text
+            filename_hint: Output filename hint
+
         Returns:
-            包含修改结果的字典
+            Dictionary containing modification results
         """
         logger.info("=" * 60)
-        logger.info("开始 HTML 内容修改流程")
+        logger.info("Starting HTML content modification workflow")
         logger.info("=" * 60)
-        
+
         if not html or not html.strip():
-            logger.error("HTML 内容为空")
+            logger.error("HTML content is empty")
             return {
                 "status": "error",
-                "message": "HTML 内容为空",
+                "message": "HTML content is empty",
                 "html": html
             }
-        
+
         if not content or not content.strip():
-            logger.error("新内容为空")
+            logger.error("New content is empty")
             return {
                 "status": "error",
-                "message": "新内容为空",
+                "message": "New content is empty",
                 "html": html
             }
-        
+
         try:
-            # 1. 从 HTML 提取原始文本
-            logger.info("步骤 1: 提取原始文本...")
+            # 1. Extract original text from HTML
+            logger.info("Step 1: Extracting original text...")
             original_text = self.parser.to_clean_text_bs4(html)
-            logger.info(f"提取到 {len(original_text)} 个字符的文本")
-            
-            # 2. 使用 LLM 分析变更
-            logger.info("步骤 2: 使用 LLM 分析变更...")
+            logger.info(f"Extracted {len(original_text)} characters of text")
+
+            # 2. Use LLM to analyze changes
+            logger.info("Step 2: Using LLM to analyze changes...")
             changes = self.engine.analyze_changes(original_text, content)
-            
+
             if not changes:
-                logger.warning("未识别到任何变更")
+                logger.warning("No changes identified")
                 return {
                     "status": "no_changes",
-                    "message": "未识别到任何变更",
+                    "message": "No changes identified",
                     "changes_count": 0,
                     "html": html
                 }
-            
-            logger.info(f"识别到 {len(changes)} 个变更")
-            
-            # 3. 应用变更到 HTML
-            logger.info("步骤 3: 应用变更到 HTML...")
+
+            logger.info(f"Identified {len(changes)} changes")
+
+            # 3. Apply changes to HTML
+            logger.info("Step 3: Applying changes to HTML...")
             modified_html = self.engine.apply_changes_to_html(html, changes)
-            
-            # 4. 保存修改后的 HTML
-            logger.info("步骤 4: 保存修改后的 HTML...")
+
+            # 4. Save modified HTML
+            logger.info("Step 4: Saving modified HTML...")
             output_path = self._get_output_path(filename_hint)
-            
+
             with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(modified_html)
-            
+
             abs_path = str(Path(output_path).resolve())
-            logger.info(f"文件已保存: {abs_path}")
-            
-            # 5. 返回结果
+            logger.info(f"File saved: {abs_path}")
+
+            # 5. Return results
             logger.info("=" * 60)
-            logger.info("HTML 修改完成")
+            logger.info("HTML modification completed")
             logger.info("=" * 60)
-            
+
             return {
                 "status": "success",
-                "message": "HTML 修改成功",
+                "message": "HTML modification successful",
                 "changes_count": len(changes),
                 "changes": [c.dict() for c in changes],
                 "local_file_path": abs_path,
                 "html": modified_html
             }
-        
+
         except Exception as e:
-            logger.error(f"修改过程出错: {e}", exc_info=True)
+            logger.error(f"Modification process error: {e}", exc_info=True)
             return {
                 "status": "error",
-                "message": f"修改过程出错: {str(e)}",
+                "message": f"Modification process error: {str(e)}",
                 "html": html
             }
 
 
 # ============================================================================
-# 导出函数
+# Export Functions
 # ============================================================================
 
 def modify_html(html: str, content: str, filename_hint: str = "doc") -> str:
     """
-    修改 HTML 内容的主函数。
-    
+    Main function to modify HTML content.
+
     Args:
-        html: 原始 HTML 内容
-        content: 新的内容文本
-        filename_hint: 输出文件名提示
-    
+        html: Original HTML content
+        content: New content text
+        filename_hint: Output filename hint
+
     Returns:
-        JSON 格式的结果字符串
+        JSON formatted result string
     """
     modifier = HTMLContentModifier()
     result = modifier.modify(html, content, filename_hint)
@@ -425,23 +425,23 @@ def modify_html(html: str, content: str, filename_hint: str = "doc") -> str:
 
 
 # ============================================================================
-# 测试代码
+# Test Code
 # ============================================================================
 
 if __name__ == "__main__":
-    # 检查 API Key
+    # Check API Key
     if "OPENAI_API_KEY" not in os.environ:
-        logger.error("请设置环境变量 OPENAI_API_KEY")
+        logger.error("Please set environment variable OPENAI_API_KEY")
         exit(1)
-    
+
     print("\n" + "=" * 70)
-    print("HTML 内容修改系统 - 复杂测试用例")
+    print("HTML Content Modification System - Complex Test Cases")
     print("=" * 70 + "\n")
-    
+
     # ========================================================================
-    # 测试用例 1: 基础测试（添加、修改、删除）
+    # Test Case 1: Basic Test (Add, Modify, Delete)
     # ========================================================================
-    print("\n【测试用例 1】基础功能测试（添加、修改、删除）")
+    print("\n[Test Case 1] Basic Functionality Test (Add, Modify, Delete)")
     print("-" * 70)
     
     html_test1 = """
@@ -480,26 +480,26 @@ if __name__ == "__main__":
     
     modifier = HTMLContentModifier()
     result1 = modifier.modify(html_test1, content_test1, "test_case_1")
-    
-    print(f"状态: {result1['status']}")
-    print(f"变更数: {result1.get('changes_count', 0)}")
+
+    print(f"Status: {result1['status']}")
+    print(f"Changes count: {result1.get('changes_count', 0)}")
     if result1.get('changes'):
-        print(f"变更详情:")
+        print(f"Change details:")
         for i, change in enumerate(result1['changes'], 1):
-            print(f"  {i}. 类型: {change['type']}")
+            print(f"  {i}. Type: {change['type']}")
             print(f"     Anchor: {change['anchor_sentence'][:50]}...")
             if change.get('new_sentence'):
-                print(f"     新句子: {change['new_sentence'][:50]}...")
+                print(f"     New sentence: {change['new_sentence'][:50]}...")
             if change.get('deleted_sentence'):
-                print(f"     删除句子: {change['deleted_sentence'][:50]}...")
-    
+                print(f"     Deleted sentence: {change['deleted_sentence'][:50]}...")
+
     if result1['status'] == 'success':
-        print(f"✓ 文件已保存: {result1['local_file_path']}")
-    
+        print(f"✓ File saved: {result1['local_file_path']}")
+
     # ========================================================================
-    # 测试用例 2: 复杂网页结构
+    # Test Case 2: Complex Web Page Structure
     # ========================================================================
-    print("\n\n【测试用例 2】复杂网页结构测试")
+    print("\n\n[Test Case 2] Complex Web Page Structure Test")
     print("-" * 70)
     
     html_test2 = """
@@ -572,26 +572,26 @@ if __name__ == "__main__":
     """
     
     result2 = modifier.modify(html_test2, content_test2, "test_case_2")
-    
-    print(f"状态: {result2['status']}")
-    print(f"变更数: {result2.get('changes_count', 0)}")
+
+    print(f"Status: {result2['status']}")
+    print(f"Changes count: {result2.get('changes_count', 0)}")
     if result2.get('changes'):
-        print(f"变更详情:")
+        print(f"Change details:")
         for i, change in enumerate(result2['changes'], 1):
-            print(f"  {i}. 类型: {change['type']}")
+            print(f"  {i}. Type: {change['type']}")
             print(f"     Anchor: {change['anchor_sentence'][:50]}...")
             if change.get('new_sentence'):
-                print(f"     新句子: {change['new_sentence'][:50]}...")
+                print(f"     New sentence: {change['new_sentence'][:50]}...")
             if change.get('deleted_sentence'):
-                print(f"     删除句子: {change['deleted_sentence'][:50]}...")
-    
+                print(f"     Deleted sentence: {change['deleted_sentence'][:50]}...")
+
     if result2['status'] == 'success':
-        print(f"✓ 文件已保存: {result2['local_file_path']}")
-    
+        print(f"✓ File saved: {result2['local_file_path']}")
+
     # ========================================================================
-    # 测试用例 3: 大量文本修改
+    # Test Case 3: Large Text Modification
     # ========================================================================
-    print("\n\n【测试用例 3】大量文本修改测试")
+    print("\n\n[Test Case 3] Large Text Modification Test")
     print("-" * 70)
     
     html_test3 = """
@@ -627,28 +627,28 @@ if __name__ == "__main__":
     """
     
     result3 = modifier.modify(html_test3, content_test3, "test_case_3")
-    
-    print(f"状态: {result3['status']}")
-    print(f"变更数: {result3.get('changes_count', 0)}")
+
+    print(f"Status: {result3['status']}")
+    print(f"Changes count: {result3.get('changes_count', 0)}")
     if result3.get('changes'):
-        print(f"前 5 个变更:")
+        print(f"First 5 changes:")
         for i, change in enumerate(result3['changes'][:5], 1):
-            print(f"  {i}. 类型: {change['type']}")
+            print(f"  {i}. Type: {change['type']}")
             print(f"     Anchor: {change['anchor_sentence'][:50]}...")
             if change.get('new_sentence'):
-                print(f"     新句子: {change['new_sentence'][:50]}...")
-    
+                print(f"     New sentence: {change['new_sentence'][:50]}...")
+
     if result3['status'] == 'success':
-        print(f"✓ 文件已保存: {result3['local_file_path']}")
-    
+        print(f"✓ File saved: {result3['local_file_path']}")
+
     # ========================================================================
-    # 总结
+    # Summary
     # ========================================================================
     print("\n" + "=" * 70)
-    print("所有测试完成")
+    print("All tests completed")
     print("=" * 70)
-    print(f"\n输出目录: {os.path.abspath(HTMLContentModifier.OUTPUT_DIR)}")
-    print("\n你可以在浏览器中打开生成的 HTML 文件查看修改效果：")
-    print("- 黄色背景 = 新增内容")
-    print("- 蓝色背景 = 修改内容")
-    print("- 红色背景 + 删除线 = 删除内容")
+    print(f"\nOutput directory: {os.path.abspath(HTMLContentModifier.OUTPUT_DIR)}")
+    print("\nYou can open the generated HTML files in a browser to view the modification results:")
+    print("- Yellow background = Added content")
+    print("- Blue background = Modified content")
+    print("- Red background + strikethrough = Deleted content")

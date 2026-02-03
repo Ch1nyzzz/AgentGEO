@@ -1,20 +1,20 @@
 # ============================================================
-# AgentGEO 统一优化配置文件
+# AgentGEO Unified Optimization Configuration File
 # ============================================================
 #
-# 本配置文件支持三种优化方法:
-# 1. AutoGEO - 论文中的 baseline 方法
-# 2. AgentGEO - 我们的自主智能体方法
-# 3. Baseline - GEO-Bench 的 9 种优化方法
+# This configuration file supports three optimization methods:
+# 1. AutoGEO - The baseline method from the paper
+# 2. AgentGEO - Our autonomous agent method
+# 3. Baseline - 9 optimization methods from GEO-Bench
 #
 # ============================================================
 
-# 优化方式选择
+# Optimization method selection
 optimizer:
-  method: "agentgeo"  # 选项: autogeo, agentgeo, baseline, all
+  method: "agentgeo"  # Options: autogeo, agentgeo, baseline, all
 
 # ============================================================
-# AutoGEO 配置（论文中的 baseline 方法）
+# AutoGEO Configuration (baseline method from the paper)
 # ============================================================
 autogeo:
   dataset_name: "GEO-Bench"
@@ -22,94 +22,94 @@ autogeo:
   rule_path: null
 
 # ============================================================
-# AgentGEO 配置（我们的智能体优化方法）
+# AgentGEO Configuration (our agent-based optimization method)
 # ============================================================
 agentgeo:
-  # 模块配置文件路径（包含 LLM、搜索引擎、HTML 解析器等配置）
+  # Module configuration file path (contains LLM, search engine, HTML parser configurations)
   config_path: "geo_agent/config.yaml"
 
-  # 批处理配置
-  batch_size: 10           # 批次大小
-  max_concurrency: 4       # 最大并发数
+  # Batch processing configuration
+  batch_size: 10           # Batch size
+  max_concurrency: 4       # Maximum concurrency
 
   # ============================================================
-  # 引用检查方式（V2.2 新增）
+  # Citation Checking Method (V2.2 new feature)
   # ============================================================
-  # 选项: "llm", "attr_evaluator", "both"
+  # Options: "llm", "attr_evaluator", "both"
   #
-  # - llm: 使用 LLM 检查引用（默认，最快）
-  #   适用场景: 快速原型、大批量处理
-  #   速度: 快 | 准确度: 中等
+  # - llm: Use LLM to check citations (default, fastest)
+  #   Use case: Rapid prototyping, large-scale batch processing
+  #   Speed: Fast | Accuracy: Medium
   #
-  # - attr_evaluator: 使用 Attribute Evaluator 检查引用
-  #   适用场景: 生产环境（推荐）
-  #   速度: 中等 | 准确度: 高
+  # - attr_evaluator: Use Attribute Evaluator to check citations
+  #   Use case: Production environment (recommended)
+  #   Speed: Medium | Accuracy: High
   #
-  # - both: 同时使用两种方法（复合模式）
-  #   适用场景: 需要最高准确度或召回率
-  #   速度: 慢 | 准确度: 最高
+  # - both: Use both methods (composite mode)
+  #   Use case: When highest accuracy or recall is needed
+  #   Speed: Slow | Accuracy: Highest
   citation_method: "llm"
 
   # ============================================================
-  # 复合模式策略（仅在 citation_method="both" 时有效）
+  # Composite Mode Strategy (only effective when citation_method="both")
   # ============================================================
-  # 选项: "any", "all", "llm_primary", "attr_primary"
+  # Options: "any", "all", "llm_primary", "attr_primary"
   #
-  # - any: 任一方法检测到引用即为有引用
-  #   适用场景: 最大化召回率
+  # - any: Citation detected if either method finds it
+  #   Use case: Maximize recall
   #
-  # - all: 两种方法都检测到引用才为有引用
-  #   适用场景: 最大化准确率（最严格）
+  # - all: Citation detected only if both methods agree
+  #   Use case: Maximize precision (strictest)
   #
-  # - llm_primary: 以 LLM 结果为主，attr_evaluator 作为辅助
-  #   适用场景: 平衡速度和准确度
+  # - llm_primary: LLM result is primary, attr_evaluator as auxiliary
+  #   Use case: Balance speed and accuracy
   #
-  # - attr_primary: 以 attr_evaluator 结果为主，LLM 作为辅助
-  #   适用场景: 以准确度为主
+  # - attr_primary: attr_evaluator result is primary, LLM as auxiliary
+  #   Use case: Prioritize accuracy
   citation_composite_strategy: "any"
 
-  # Attribute Evaluator 配置文件路径（使用 attr_evaluator 时需要）
-  # 如果为 null，使用默认配置
+  # Attribute Evaluator configuration file path (required when using attr_evaluator)
+  # If null, use default configuration
   attr_evaluator_config: null
 
-  # 是否使用快速模式的 Attribute Evaluator
-  # true: 快速模式（适合大批量处理）
-  # false: 完整模式（更准确但较慢）
+  # Whether to use fast mode for Attribute Evaluator
+  # true: Fast mode (suitable for large-scale batch processing)
+  # false: Full mode (more accurate but slower)
   use_fast_mode: true
 
   # ============================================================
-  # 性能对比参考
+  # Performance Comparison Reference
   # ============================================================
   #
-  # 方法                     | 速度  | 准确度 | 适用场景
-  # ------------------------|-------|--------|------------------
-  # llm                     | 快    | 中等   | 快速原型、大批量处理
-  # attr_evaluator (fast)   | 中等  | 高     | 生产环境（推荐）
-  # attr_evaluator (full)   | 慢    | 最高   | 高质量要求、小批量
-  # both (any)              | 慢    | 高     | 最大化召回率
-  # both (all)              | 慢    | 最高   | 最大化准确率
-  # both (attr_primary)     | 慢    | 最高   | 以准确度为主
-  # both (llm_primary)      | 中等  | 中等   | 平衡速度和准确度
+  # Method                     | Speed  | Accuracy | Use Case
+  # ---------------------------|--------|----------|------------------
+  # llm                        | Fast   | Medium   | Rapid prototyping, batch processing
+  # attr_evaluator (fast)      | Medium | High     | Production (recommended)
+  # attr_evaluator (full)      | Slow   | Highest  | High quality requirements, small batch
+  # both (any)                 | Slow   | High     | Maximize recall
+  # both (all)                 | Slow   | Highest  | Maximize precision
+  # both (attr_primary)        | Slow   | Highest  | Prioritize accuracy
+  # both (llm_primary)         | Medium | Medium   | Balance speed and accuracy
   #
   # ============================================================
 
-  # 其他配置
-  enable_memory: true                      # 启用记忆功能
-  enable_history: true                     # 启用历史记录
-  chunks_per_orchestra: 2                  # 每次协同优化的文档块数
-  suggestion_merge_strategy: "diagnosis_aware"  # 建议合并策略
+  # Other configurations
+  enable_memory: true                      # Enable memory feature
+  enable_history: true                     # Enable history logging
+  chunks_per_orchestra: 2                  # Number of document chunks per orchestration
+  suggestion_merge_strategy: "diagnosis_aware"  # Suggestion merge strategy
 
-  # 工具配置（V2.4 新增）
-  # 是否启用 autogeo_rephrase 工具（AutoGEO 论文方法）
+  # Tool configuration (V2.4 new feature)
+  # Whether to enable autogeo_rephrase tool (AutoGEO paper method)
   enable_autogeo_rephrase: true
 
-# GEO-Bench Baseline 配置（9种优化方法）
+# GEO-Bench Baseline Configuration (9 optimization methods)
 baseline:
   provider: "openai"
   model: "gpt-4.1-mini"
-  methods: null  # null = 全部9种, 或指定 ["cite_sources", "authoritative"]
+  methods: null  # null = all 9 methods, or specify ["cite_sources", "authoritative"]
 
-# 数据配置
+# Data configuration
 data:
   input_type: "parquet"
   input_path: "data/test_data.parquet"
@@ -118,13 +118,13 @@ data:
     - train_queries
     - test_queries
 
-# 输出配置
+# Output configuration
 output:
   base_dir: "outputs"
   save_optimized_html: true
   save_evaluation: true
 
-# 评估配置（可选）
+# Evaluation configuration (optional)
 evaluation:
   enable_citation: false
   enable_geo_score: false

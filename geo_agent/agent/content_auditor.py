@@ -9,57 +9,57 @@ class TruncationAuditResult(BaseModel):
     recommended_action: Optional[str] = Field(default=None, description="The recommended strategy (e.g., 'Move hidden content to top').")
 
 def audit_content_truncation(
-    llm, 
-    query: str, 
-    full_text: str, 
+    llm,
+    query: str,
+    full_text: str,
     visible_chunks_text: str
 ) -> TruncationAuditResult:
     """
     Checks if the content that was truncated (not in visible_chunks) contains pertinent info for the query.
-    
-    改进的实现：
-    1. 更准确地计算 hidden_text
-    2. 对 visible_chunks_text 做预处理（移除 CHUNK_ID 标记）
+
+    Improved implementation:
+    1. More accurate calculation of hidden_text
+    2. Preprocess visible_chunks_text (remove CHUNK_ID markers)
     """
-    
-    # 预处理：从 visible_chunks_text 中提取纯文本（移除 >> [CHUNK_ID: X] 标记）
+
+    # Preprocessing: Extract pure text from visible_chunks_text (remove >> [CHUNK_ID: X] markers)
     import re
     visible_clean = re.sub(r'>>\s*\[CHUNK_ID:\s*\d+\]\n?', '', visible_chunks_text).strip()
-    
-    # 1. 判断是否需要审计
-    # 如果 visible 和 full 长度相近，说明没有截断
+
+    # 1. Determine if audit is needed
+    # If visible and full lengths are similar, no truncation occurred
     len_diff = len(full_text) - len(visible_clean)
-    if len_diff < 200:  # 差异小于 200 字符，认为无需审计
+    if len_diff < 200:  # Difference less than 200 characters, no audit needed
         return TruncationAuditResult(
             has_hidden_relevant_content=False, 
             summary_of_hidden_info="", 
             recommended_action=None
         )
 
-    # 2. 提取 hidden_text
-    # 策略：找到 visible_clean 在 full_text 中的位置，取后面的部分
-    # 由于 visible 是从头开始的（按 calculate_chunks 逻辑），我们取 full_text 的尾部
-    
-    # 使用 visible_clean 的前 300 字符作为锚点确认对齐
+    # 2. Extract hidden_text
+    # Strategy: Find position of visible_clean in full_text, take the part after it
+    # Since visible starts from the beginning (per calculate_chunks logic), we take the tail of full_text
+
+    # Use first 300 characters of visible_clean as anchor to confirm alignment
     anchor_length = min(300, len(visible_clean))
     anchor = visible_clean[:anchor_length]
-    
-    # 简化：如果前 300 字符匹配，说明 visible 是 full 的前缀
-    # 直接取 full_text[len(visible_clean):] 作为 hidden
+
+    # Simplification: If first 300 characters match, visible is a prefix of full
+    # Directly take full_text[len(visible_clean):] as hidden
     if full_text[:anchor_length] == anchor or anchor in full_text[:anchor_length + 100]:
-        # 大致对齐，取尾部
-        # 但 visible_clean 可能比实际更短（因为换行处理等），我们取一个保守估计
-        estimated_visible_end = int(len(visible_clean) * 0.9)  # 保守估计
+        # Roughly aligned, take tail
+        # But visible_clean may be shorter than actual (due to newline handling etc.), use conservative estimate
+        estimated_visible_end = int(len(visible_clean) * 0.9)  # Conservative estimate
         hidden_text = full_text[estimated_visible_end:]
     else:
-        # 无法确定对齐，使用尾部 30%
+        # Cannot determine alignment, use last 30%
         hidden_text = full_text[int(len(full_text) * 0.7):]
         
     if len(hidden_text) < 100:
         return TruncationAuditResult(has_hidden_relevant_content=False, summary_of_hidden_info="", recommended_action=None)
 
-    # 3. 调用 LLM 验证相关性
-    # 限制 hidden_text 长度以节省 token
+    # 3. Call LLM to verify relevance
+    # Limit hidden_text length to save tokens
     hidden_text_preview = hidden_text[:12000]
 
     parser = PydanticOutputParser(pydantic_object=TruncationAuditResult)

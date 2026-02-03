@@ -1,7 +1,7 @@
 """
 Telemetry Store for GEO Agent
-采集、存储、查询每次优化循环中的结构化信号
-设计灵感来自 OpenTelemetry 的 Span/Metric 模型
+Collect, store, and query structured signals from each optimization loop
+Design inspired by OpenTelemetry's Span/Metric model
 """
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -12,45 +12,45 @@ import json
 
 class FailureCategory(Enum):
     """
-    失败根因分类 - 基于大规模文档分析总结
-    分为技术问题、内容问题、相关性问题三大类
+    Failure root cause classification - summarized from large-scale document analysis
+    Divided into three main categories: technical issues, content issues, relevance issues
     """
-    # === 技术/解析问题 (Technical Issues) ===
-    PARSING_FAILURE = "parsing_failure"  # 技术上不可读，解析/渲染/格式化失败
-    CONTENT_TRUNCATED = "content_truncated"  # 内容不完整、截断、部分缺失
-    DATA_INTEGRITY = "data_integrity"  # 数据完整性问题，爬取/提取失败
-    
-    # === 内容噪音问题 (Noise Issues) ===
-    WEB_NOISE = "web_noise"  # 主要是非信息性网页噪音、样板、导航元素
-    LOW_SIGNAL_RATIO = "low_signal_ratio"  # 信噪比低，语义质量差
-    
-    # === 信息密度问题 (Density Issues) ===
-    LOW_INFO_DENSITY = "low_info_density"  # 信息密度不足，内容稀疏、轶事性
-    MISSING_INFO = "missing_info"  # 缺少关键信息（传统分类，保留兼容）
-    
-    # === 结构问题 (Structure Issues) ===
-    STRUCTURAL_WEAKNESS = "structural_weakness"  # 结构不良，缺乏分段、逻辑流
-    
-    # === 语义相关性问题 (Relevance Issues) ===
-    SEMANTIC_IRRELEVANCE = "semantic_irrelevance"  # 语义无关，离题，与查询不匹配
-    ATTRIBUTE_MISMATCH = "attribute_mismatch"  # 实体正确但属性/指标不匹配
-    
-    # === 答案定位问题 (Answer Positioning) ===
-    BURIED_ANSWER = "buried_answer"  # 答案埋在冗长内容深处，未直接呈现
-    
-    # === 内容质量问题 (Quality Issues) ===
-    NON_FACTUAL_CONTENT = "non_factual_content"  # 仅含问题、猜测、意见、营销内容
-    TRUST_CREDIBILITY = "trust_credibility"  # 权威性/可信度不足
-    
-    # === 时效性问题 (Temporal Issues) ===
-    OUTDATED_CONTENT = "outdated_content"  # 内容过时，时间不匹配
-    
-    # === 其他 ===
+    # === Technical/Parsing Issues ===
+    PARSING_FAILURE = "parsing_failure"  # Technically unreadable, parsing/rendering/formatting failure
+    CONTENT_TRUNCATED = "content_truncated"  # Incomplete content, truncated, partially missing
+    DATA_INTEGRITY = "data_integrity"  # Data integrity issues, crawling/extraction failure
+
+    # === Noise Issues ===
+    WEB_NOISE = "web_noise"  # Mainly non-informational web noise, boilerplate, navigation elements
+    LOW_SIGNAL_RATIO = "low_signal_ratio"  # Low signal-to-noise ratio, poor semantic quality
+
+    # === Information Density Issues ===
+    LOW_INFO_DENSITY = "low_info_density"  # Insufficient information density, sparse or anecdotal content
+    MISSING_INFO = "missing_info"  # Missing key information (legacy classification, kept for compatibility)
+
+    # === Structure Issues ===
+    STRUCTURAL_WEAKNESS = "structural_weakness"  # Poor structure, lacking segmentation and logical flow
+
+    # === Semantic Relevance Issues ===
+    SEMANTIC_IRRELEVANCE = "semantic_irrelevance"  # Semantically irrelevant, off-topic, mismatched with query
+    ATTRIBUTE_MISMATCH = "attribute_mismatch"  # Correct entity but mismatched attributes/metrics
+
+    # === Answer Positioning Issues ===
+    BURIED_ANSWER = "buried_answer"  # Answer buried deep in verbose content, not directly presented
+
+    # === Content Quality Issues ===
+    NON_FACTUAL_CONTENT = "non_factual_content"  # Contains only questions, speculation, opinions, marketing content
+    TRUST_CREDIBILITY = "trust_credibility"  # Insufficient authority/credibility
+
+    # === Temporal Issues ===
+    OUTDATED_CONTENT = "outdated_content"  # Content is outdated, temporal mismatch
+
+    # === Other ===
     UNKNOWN = "unknown"
 
 
 class ToolOutcome(Enum):
-    """工具执行结果"""
+    """Tool execution result"""
     SUCCESS = "success"
     FAILED = "failed"
     PARTIAL = "partial"
@@ -59,7 +59,7 @@ class ToolOutcome(Enum):
 
 @dataclass
 class ToolInvocationSpan:
-    """单次工具调用的 Span 记录"""
+    """Span record for a single tool invocation"""
     tool_name: str
     target_chunk_index: int
     arguments_hash: str  # 参数摘要的哈希，用于去重检测
@@ -84,28 +84,28 @@ class ToolInvocationSpan:
 
 @dataclass
 class IterationMetrics:
-    """单次迭代的指标采集"""
+    """Metrics collection for a single iteration"""
     iteration_index: int
     query: str
-    
-    # 文档指标
+
+    # Document metrics
     full_doc_length: int
     visible_chunk_length: int
-    truncation_ratio: float  # 截断比例 = 1 - (visible/full)
+    truncation_ratio: float  # Truncation ratio = 1 - (visible/full)
     chunk_count: int
-    
-    # 诊断结果
+
+    # Diagnosis results
     diagnosis_category: FailureCategory
     diagnosis_explanation: str
-    
-    # 截断审计
+
+    # Truncation audit
     has_hidden_relevant_content: bool = False
     hidden_content_summary: str = ""
-    
-    # 工具调用
+
+    # Tool invocation
     tool_span: Optional[ToolInvocationSpan] = None
-    
-    # 结果
+
+    # Result
     was_cited: bool = False
     
     timestamp: str = field(default_factory=lambda: datetime.now().isoformat())
@@ -130,9 +130,9 @@ class IterationMetrics:
 
 class TelemetryStore:
     """
-    Telemetry 存储器
-    - 收集每次迭代的指标
-    - 提供查询接口供 Policy 层使用
+    Telemetry Store
+    - Collect metrics for each iteration
+    - Provide query interface for Policy layer
     """
     
     def __init__(self, url: str = "", core_idea: str = ""):
@@ -142,47 +142,47 @@ class TelemetryStore:
         self._tool_invocation_history: List[ToolInvocationSpan] = []
     
     def record_iteration(self, metrics: IterationMetrics) -> None:
-        """记录一次迭代"""
+        """Record one iteration"""
         self.iterations.append(metrics)
         if metrics.tool_span:
             self._tool_invocation_history.append(metrics.tool_span)
     
-    # ========== 查询接口 ==========
-    
+    # ========== Query Interface ==========
+
     def get_tool_usage_count(self, tool_name: str) -> int:
-        """获取某工具被调用的次数"""
+        """Get the number of times a tool has been called"""
         return sum(1 for span in self._tool_invocation_history if span.tool_name == tool_name)
     
     def get_failed_tool_invocations(self) -> List[ToolInvocationSpan]:
-        """获取所有失败的工具调用"""
+        """Get all failed tool invocations"""
         return [span for span in self._tool_invocation_history if span.outcome == ToolOutcome.FAILED]
     
     def get_recent_tools(self, n: int = 3) -> List[str]:
-        """获取最近 n 次调用的工具名"""
+        """Get the names of the last n tools called"""
         return [span.tool_name for span in self._tool_invocation_history[-n:]]
     
     def has_repeated_tool_args(self, tool_name: str, args_hash: str) -> bool:
-        """检测是否有相同工具+参数的重复调用"""
+        """Detect if there are duplicate calls with the same tool and arguments"""
         for span in self._tool_invocation_history:
             if span.tool_name == tool_name and span.arguments_hash == args_hash:
                 return True
         return False
     
     def get_diagnosis_history(self) -> List[FailureCategory]:
-        """获取诊断历史"""
+        """Get diagnosis history"""
         return [it.diagnosis_category for it in self.iterations]
     
     def get_truncation_alerts_count(self) -> int:
-        """获取截断警报次数"""
+        """Get the count of truncation alerts"""
         return sum(1 for it in self.iterations if it.has_hidden_relevant_content)
     
     def get_average_truncation_ratio(self) -> float:
-        """获取平均截断比例"""
+        """Get average truncation ratio"""
         if not self.iterations:
             return 0.0
         return sum(it.truncation_ratio for it in self.iterations) / len(self.iterations)
     
-    # ========== 导出 ==========
+    # ========== Export ==========
     
     def to_dict(self) -> Dict:
         return {
@@ -198,31 +198,31 @@ class TelemetryStore:
         }
     
     def _get_tool_usage_summary(self) -> Dict[str, int]:
-        """工具使用统计"""
+        """Tool usage statistics"""
         usage = {}
         for span in self._tool_invocation_history:
             usage[span.tool_name] = usage.get(span.tool_name, 0) + 1
         return usage
     
     def export_json(self, path: str) -> None:
-        """导出为 JSON 文件"""
+        """Export to JSON file"""
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(self.to_dict(), f, indent=2, ensure_ascii=False)
 
 
 def compute_args_hash(tool_args: Dict[str, Any], exclude_keys: List[str] = None) -> str:
     """
-    计算工具参数的哈希值，用于去重检测
-    排除动态字段如 previous_modifications
+    Compute hash of tool arguments for duplicate detection
+    Excludes dynamic fields like previous_modifications
     """
     import hashlib
-    
+
     exclude_keys = exclude_keys or ["previous_modifications", "core_idea"]
     filtered_args = {k: v for k, v in tool_args.items() if k not in exclude_keys}
-    
-    # 只取 target_content 的前 500 字符
+
+    # Only take the first 500 characters of target_content
     if "target_content" in filtered_args:
         filtered_args["target_content"] = filtered_args["target_content"][:500]
-    
+
     arg_str = json.dumps(filtered_args, sort_keys=True, ensure_ascii=False)
     return hashlib.md5(arg_str.encode()).hexdigest()[:12]

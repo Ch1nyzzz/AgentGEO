@@ -1,7 +1,7 @@
 """
-AutoGEO 优化器封装
+AutoGEO optimizer wrapper
 
-基于 AutoGEO 论文的规则重写方法
+Rule-based rewriting method based on AutoGEO paper
 """
 import asyncio
 import glob
@@ -14,7 +14,7 @@ from enum import Enum
 from pathlib import Path
 from typing import List, Optional, Tuple
 
-# 添加项目路径
+# Add project path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
@@ -30,14 +30,14 @@ logger = logging.getLogger(__name__)
 
 
 class Dataset(str, Enum):
-    """数据集类型"""
+    """Dataset type"""
     RESEARCHY_GEO = "Researchy-GEO"
     GEO_BENCH = "GEO-Bench"
     ECOMMERCE = "E-commerce"
 
 
 class LLMName(str, Enum):
-    """LLM 类型"""
+    """LLM type"""
     GEMINI = "gemini"
     GPT = "gpt"
     CLAUDE = "claude"
@@ -45,14 +45,14 @@ class LLMName(str, Enum):
 
 @dataclass
 class AutoGEOResult:
-    """AutoGEO 优化结果"""
+    """AutoGEO optimization result"""
     optimized_text: str
     optimized_html: str
     original_text: str
     rules_applied: List[str]
 
 
-# ============== 规则定义 ==============
+# ============== Rule definitions ==============
 
 # Default rules for GEO-Bench (research queries) gemini
 AUTOGEO_GEO_BENCH_GEMINI_RULES = [
@@ -144,7 +144,7 @@ AUTOGEO_ECOMMERCE_GEMINI_RULES = [
     "Write concisely, eliminating verbose language, filler content, and unnecessary repetition."
 ]
 
-# 规则映射表
+# Rule mapping table
 DATASET_RULES_MAP = {
     (Dataset.GEO_BENCH, LLMName.GEMINI): AUTOGEO_GEO_BENCH_GEMINI_RULES,
     (Dataset.GEO_BENCH, LLMName.GPT): AUTOGEO_GEO_BENCH_GPT_RULES,
@@ -163,7 +163,7 @@ def _load_rules_from_file(
     engine_llm: str,
     rule_path: Optional[str] = None
 ) -> Tuple[Optional[List[str]], Optional[str]]:
-    """从文件加载规则"""
+    """Load rules from file"""
     if rule_path:
         try:
             with open(rule_path, 'r', encoding='utf-8') as f:
@@ -175,7 +175,7 @@ def _load_rules_from_file(
         except Exception as exc:
             logger.warning(f"Failed to load rules from {rule_path}: {exc}")
 
-    # 尝试自动发现规则文件
+    # Try to auto-discover rule files
     possible_paths = [
         f"data/{dataset}/rule_sets/{engine_llm}*/merged_rules.json",
         str(REPO_ROOT / f"data/{dataset}/rule_sets/{engine_llm}*/merged_rules.json"),
@@ -199,15 +199,15 @@ def _load_rules_from_file(
 
 
 def _get_default_rules(dataset: str, engine_llm: str) -> List[str]:
-    """获取默认规则"""
+    """Get default rules"""
     try:
         dataset_enum = Dataset(dataset)
     except ValueError:
         dataset_enum = Dataset.GEO_BENCH
 
-    # 从 engine_llm 提取 LLM 类型
+    # Extract LLM type from engine_llm
     engine_llm_lower = engine_llm.lower()
-    llm_enum = LLMName.GEMINI  # 默认
+    llm_enum = LLMName.GEMINI  # default
 
     for llm_name in LLMName:
         if llm_name.value in engine_llm_lower:
@@ -222,9 +222,9 @@ def _get_default_rules(dataset: str, engine_llm: str) -> List[str]:
 
 class AutoGEOOptimizer:
     """
-    AutoGEO 优化器
+    AutoGEO optimizer
 
-    基于规则的文档重写方法，使用 LLM 根据预定义规则优化文档
+    Rule-based document rewriting method that uses LLM to optimize documents according to predefined rules
     """
 
     def __init__(
@@ -236,13 +236,13 @@ class AutoGEOOptimizer:
         **kwargs
     ):
         """
-        初始化 AutoGEO 优化器
+        Initialize AutoGEO optimizer
 
         Args:
-            dataset_name: 数据集名称 (GEO-Bench, Researchy-GEO, E-commerce)
-            engine_llm: LLM 类型 (gemini, gpt, claude)
-            rule_path: 可选的自定义规则路径
-            config_path: 配置文件路径
+            dataset_name: Dataset name (GEO-Bench, Researchy-GEO, E-commerce)
+            engine_llm: LLM type (gemini, gpt, claude)
+            rule_path: Optional custom rule path
+            config_path: Configuration file path
         """
         self.dataset_name = dataset_name
         self.engine_llm = engine_llm
@@ -250,16 +250,16 @@ class AutoGEOOptimizer:
         self.config_path = config_path
         self._parser = StructuralHtmlParser()
 
-        # 加载配置
+        # Load configuration
         config_file = Path(config_path)
         if not config_file.is_absolute():
             config_file = (REPO_ROOT / config_file).resolve()
         self._config = load_config(str(config_file))
 
-        # 初始化 LLM
+        # Initialize LLM
         self._llm = self._create_llm()
 
-        # 加载规则
+        # Load rules
         self.rules, self._rule_file = _load_rules_from_file(
             dataset_name, engine_llm, rule_path
         )
@@ -270,10 +270,10 @@ class AutoGEOOptimizer:
             logger.info(f"Loaded rules from {self._rule_file}")
 
     def _create_llm(self):
-        """创建 LLM 客户端"""
+        """Create LLM client"""
         engine_llm_lower = self.engine_llm.lower()
 
-        # 从配置文件获取默认参数
+        # Get default parameters from config file
         llm_config = self._config.get('llm', {})
         temperature = llm_config.get('temperature', 0.7)
 
@@ -285,7 +285,7 @@ class AutoGEOOptimizer:
             return GeminiChatLLM(model="gemini-2.5-flash", temperature=temperature)
 
     def _build_prompt(self, document: str) -> str:
-        """构建重写提示"""
+        """Build rewrite prompt"""
         rules_string = "- " + "\n- ".join(self.rules)
 
         return f"""Here is the source:
@@ -302,7 +302,7 @@ You can regenerate the provided source so that it strictly adheres to the "Quali
 Output only the rewritten document text, without any explanations or preamble."""
 
     def extract_clean_text(self, raw_html: str) -> str:
-        """从 raw_html 提取纯文本"""
+        """Extract plain text from raw_html"""
         try:
             structure = self._parser.parse(raw_html)
             return structure.get_clean_text()
@@ -316,8 +316,8 @@ Output only the rewritten document text, without any explanations or preamble.""
         train_queries: List[str] = None,
         url: str = ""
     ) -> AutoGEOResult:
-        """异步优化文档"""
-        # 提取原始文本
+        """Async document optimization"""
+        # Extract original text
         original_text = self.extract_clean_text(raw_html)
 
         if not original_text.strip():
@@ -331,7 +331,7 @@ Output only the rewritten document text, without any explanations or preamble.""
 
         logger.info(f"Optimizing document with AutoGEO (text length: {len(original_text)})")
 
-        # 构建提示并调用 LLM
+        # Build prompt and call LLM
         prompt = self._build_prompt(original_text)
 
         try:
@@ -360,5 +360,5 @@ Output only the rewritten document text, without any explanations or preamble.""
         train_queries: List[str] = None,
         url: str = ""
     ) -> AutoGEOResult:
-        """同步优化接口"""
+        """Sync optimization interface"""
         return asyncio.run(self.optimize_async(raw_html, train_queries, url))

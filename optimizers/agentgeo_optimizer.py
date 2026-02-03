@@ -1,5 +1,5 @@
 """
-AgentGEO 优化器封装
+AgentGEO optimizer wrapper
 """
 import asyncio
 import logging
@@ -8,7 +8,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional
 
-# 添加项目路径
+# Add project path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class AgentGEOResult:
-    """AgentGEO 优化结果"""
+    """AgentGEO optimization result"""
     optimized_text: str
     optimized_html: str
     optimization_results: List
@@ -31,9 +31,9 @@ class AgentGEOResult:
 
 class AgentGEOOptimizer:
     """
-    AgentGEO 优化器封装
+    AgentGEO optimizer wrapper
 
-    统一使用 StructuralHtmlParser 解析 HTML
+    Uses StructuralHtmlParser uniformly to parse HTML
     """
 
     def __init__(
@@ -59,7 +59,7 @@ class AgentGEOOptimizer:
         self._agent: Optional[AgentGEOV2] = None
 
     def _get_agent(self) -> AgentGEOV2:
-        """获取或创建 AgentGEOV2 实例"""
+        """Get or create AgentGEOV2 instance"""
         if self._agent is None:
             self._agent = AgentGEOV2(
                 config_path=self.config_path,
@@ -74,14 +74,14 @@ class AgentGEOOptimizer:
         train_queries: List[str],
         url: str = ""
     ) -> AgentGEOResult:
-        """异步优化文档"""
+        """Async document optimization"""
         agent = self._get_agent()
 
-        # 提取原始文本
+        # Extract original text
         structure = self._parser.parse(raw_html)
         original_text = structure.get_clean_text()
 
-        # 创建 WebPage
+        # Create WebPage
         webpage = WebPage(
             url=url,
             raw_html=raw_html,
@@ -90,13 +90,13 @@ class AgentGEOOptimizer:
 
         logger.info(f"Optimizing with AgentGEO (queries: {len(train_queries)})")
 
-        # 调用优化
+        # Call optimization
         optimized_page, results = await agent.optimize_page_batch_async(
             webpage=webpage,
             queries=train_queries
         )
 
-        # 汇总诊断统计
+        # Aggregate diagnosis statistics
         diagnosis_stats = {}
         for result in results:
             for cause, count in result.diagnosis_stats.items():
@@ -111,5 +111,5 @@ class AgentGEOOptimizer:
         )
 
     def optimize(self, raw_html: str, train_queries: List[str], url: str = "") -> AgentGEOResult:
-        """同步优化接口（内部调用异步方法）"""
+        """Sync optimization interface (internally calls async method)"""
         return asyncio.run(self.optimize_async(raw_html, train_queries, url))

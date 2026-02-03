@@ -12,14 +12,14 @@ class SearchResult(BaseModel):
     title: str
     snippet: str
     url: str
-    uuid: str = ""  # 可选，兼容旧缓存
+    uuid: str = ""  # Optional, for backward compatibility with old cache
     raw_content: str = ""  # Tavily raw_content (Markdown 格式)
 
 class CitationCheckResult(BaseModel):
     is_cited: bool
     generated_answer: str
     citations_found_idx: List[int]
-    # GEO Score（可选字段，用于评测）
+    # GEO Score (optional field, for evaluation)
     geo_score: Optional[Any] = None
 
 class AnalysisResult(BaseModel):
