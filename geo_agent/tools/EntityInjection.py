@@ -13,16 +13,16 @@ class EntityInjectionInput(BaseModel):
     core_idea: str = Field("", description="The core topic of the document that must be preserved.")
     previous_modifications: str = Field("", description="Summary of previous modifications.")
 
-def inject_entities(missing_entities: str, target_content: str, context_before: str = "", context_after: str = "", core_idea: str = "", previous_modifications: str = "") -> str:
+def inject_entities(missing_entities: str, target_content: str, context_before: str = "", context_after: str = "", core_idea: str = "", previous_modifications: str = "", config_path: str = "geo_agent/config.yaml") -> str:
     """Weaves missing specific entities/facts naturally into the HTML content."""
-    llm = get_llm_from_config('geo_agent/config.yaml')
+    llm = get_llm_from_config(config_path)
     
-    # 1. 预处理：确保 target_content 是有效的 HTML 片段
-    # EntityInjection 需要上下文来决定插入位置，所以我们传递 HTML 给 LLM
-    # 但我们使用 Processor 来确保最终输出的规范性
+    # 1. Preprocessing: ensure target_content is a valid HTML fragment
+    # EntityInjection needs context to decide insertion position, so we pass HTML to LLM
+    # But we use Processor to ensure final output normalization
     processor = HTMLFragmentProcessor(target_content)
-    # 获取纯文本供 LLM 参考（可选，但有时候 LLM看 HTML 结构更好定位）
-    # 这里我们直接把 HTML 给 LLM，因为需要保留原有标签结构
+    # Get plain text for LLM reference (optional, but sometimes LLM can better locate with HTML structure)
+    # Here we pass HTML directly to LLM because we need to preserve original tag structure
     
     context_section = build_context_section(context_before, context_after)
 
@@ -76,11 +76,12 @@ first output the enhanced HTML content, then the summary.
         history_section=history_section
     ))
     
-    # 2. 解析 & 验证
+    # 2. Parse & validate
     # modified_html, mod_summary = parse_tool_output(response.content)
-    
-    # 这里我们直接返回 LLM 修改后的 HTML，因为是“微创手术”，Python 很难帮它定位插入点。
-    # 但我们可以用 Processor 简单清洗一下确保它是闭合的（可选）
+
+    # Here we return the LLM modified HTML directly because it's a "minimally invasive" operation,
+    # Python cannot easily locate the insertion point.
+    # But we can optionally use Processor to clean and ensure it's properly closed
     # processor_out = HTMLFragmentProcessor(modified_html)
     # final_html = processor_out.to_html()
     

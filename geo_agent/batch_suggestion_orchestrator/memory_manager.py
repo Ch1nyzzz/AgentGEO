@@ -1,6 +1,6 @@
 """
-Batch GEO V2 内存管理器
-统一管理优化历史、跨 Batch 历史和策略注入
+Batch GEO V2 Memory Manager
+Unified management of optimization history, cross-batch history, and policy injection
 """
 import json
 import logging
@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 
 class ModificationRecordV2:
-    """V2 修改记录"""
+    """V2 Modification record"""
 
     def __init__(
         self,
@@ -52,39 +52,39 @@ class ModificationRecordV2:
 
 class OptimizationMemoryV2:
     """
-    V2 优化记忆模块
+    V2 Optimization memory module
 
-    扩展功能：
-    - 支持诊断信息记录
-    - 支持 chunk 级别的修改追踪
-    - 支持策略注入生成
+    Extended features:
+    - Supports diagnostic information recording
+    - Supports chunk-level modification tracking
+    - Supports policy injection generation
     """
 
     def __init__(self, core_idea: str = ""):
         self.core_idea = core_idea
         self.modifications: List[ModificationRecordV2] = []
-        # 按 chunk 索引组织的修改历史
+        # Modification history organized by chunk index
         self.chunk_history: Dict[int, List[ModificationRecordV2]] = {}
-        # 诊断统计
+        # Diagnosis statistics
         self.diagnosis_stats: Dict[str, int] = {}
 
     def add_modification(self, record: ModificationRecordV2) -> None:
-        """添加修改记录"""
+        """Add modification record"""
         self.modifications.append(record)
 
-        # 更新 chunk 历史
+        # Update chunk history
         if record.chunk_index is not None:
             if record.chunk_index not in self.chunk_history:
                 self.chunk_history[record.chunk_index] = []
             self.chunk_history[record.chunk_index].append(record)
 
-        # 更新诊断统计
+        # Update diagnosis statistics
         if record.diagnosis:
             cause = record.diagnosis.root_cause
             self.diagnosis_stats[cause] = self.diagnosis_stats.get(cause, 0) + 1
 
     def get_history_summary(self) -> str:
-        """生成历史修改摘要"""
+        """Generate history modification summary"""
         if not self.modifications:
             return "No previous modifications."
 
@@ -105,7 +105,7 @@ class OptimizationMemoryV2:
         return "\n\n".join(summary_parts)
 
     def get_preservation_rules(self) -> str:
-        """生成保护之前修改的规则"""
+        """Generate rules to protect previous modifications"""
         if not self.modifications:
             return ""
 
@@ -123,11 +123,11 @@ class OptimizationMemoryV2:
         return rules
 
     def get_chunk_history(self, chunk_index: int) -> List[ModificationRecordV2]:
-        """获取特定 chunk 的修改历史"""
+        """Get modification history for specific chunk"""
         return self.chunk_history.get(chunk_index, [])
 
     def get_failed_tools_for_diagnosis(self, diagnosis_cause: str) -> List[str]:
-        """获取对某种诊断类型已经尝试过的工具"""
+        """Get tools already tried for a specific diagnosis type"""
         tools = []
         for mod in self.modifications:
             if mod.diagnosis and mod.diagnosis.root_cause == diagnosis_cause:
@@ -135,7 +135,7 @@ class OptimizationMemoryV2:
         return tools
 
     def to_dict(self) -> Dict:
-        """序列化"""
+        """Serialize"""
         return {
             "core_idea": self.core_idea,
             "modifications": [m.to_dict() for m in self.modifications],
@@ -145,23 +145,23 @@ class OptimizationMemoryV2:
 
 class HistoryManagerV2:
     """
-    V2 跨 Batch 历史管理器
+    V2 Cross-batch history manager
 
-    扩展功能：
-    - 诊断信息持久化
-    - 策略注入生成
+    Extended features:
+    - Diagnostic information persistence
+    - Policy injection generation
     """
 
     def __init__(self, persist_path: Optional[Path] = None):
         self.persist_path = persist_path
         self.entries: List[HistoryEntryV2] = []
         self.batch_results: List[OptimizationResultV2] = []
-        # 加载历史
+        # Load history
         if persist_path and persist_path.exists():
             self._load()
 
     def _load(self) -> None:
-        """从文件加载历史"""
+        """Load history from file"""
         if not self.persist_path or not self.persist_path.exists():
             return
 
@@ -190,7 +190,7 @@ class HistoryManagerV2:
             logger.warning(f"Failed to load history: {e}")
 
     def _save(self) -> None:
-        """保存历史到文件"""
+        """Save history to file"""
         if not self.persist_path:
             return
 
@@ -217,12 +217,12 @@ class HistoryManagerV2:
             logger.warning(f"Failed to save history: {e}")
 
     def add_entry(self, entry: HistoryEntryV2) -> None:
-        """添加历史条目"""
+        """Add history entry"""
         self.entries.append(entry)
         self._save()
 
     def add_batch_result(self, result: OptimizationResultV2) -> None:
-        """从 BatchResult 添加历史条目"""
+        """Add history entry from BatchResult"""
         self.batch_results.append(result)
 
         for suggestion in result.all_suggestions:
@@ -241,7 +241,7 @@ class HistoryManagerV2:
         self._save()
 
     def get_preservation_rules(self) -> str:
-        """生成保护规则"""
+        """Generate preservation rules"""
         if not self.entries:
             return ""
 
@@ -253,16 +253,16 @@ class HistoryManagerV2:
             return ""
 
         rules = "CROSS-BATCH HISTORY (MUST PRESERVE):\n"
-        for change in all_changes[-20:]:  # 最近 20 条
+        for change in all_changes[-20:]:  # Last 20 entries
             rules += f"- {change}\n"
         return rules
 
     def get_segment_history(self, segment_index: int) -> List[HistoryEntryV2]:
-        """获取特定段落的历史"""
+        """Get history for specific segment"""
         return [e for e in self.entries if e.segment_index == segment_index]
 
     def get_diagnosis_stats(self) -> Dict[str, int]:
-        """获取诊断统计"""
+        """Get diagnosis statistics"""
         stats: Dict[str, int] = {}
         for entry in self.entries:
             if entry.diagnosis:
@@ -273,13 +273,13 @@ class HistoryManagerV2:
 
 class PolicyEngine:
     """
-    策略引擎
+    Policy Engine
 
-    基于历史诊断结果生成策略注入
+    Generate policy injection based on historical diagnosis results
 
-    消融实验支持：
-    - enable_memory=False: 跳过单 query 修改历史相关的策略
-    - enable_history=False: 跳过跨 batch 历史相关的策略
+    Ablation experiment support:
+    - enable_memory=False: Skip single query modification history related policies
+    - enable_history=False: Skip cross-batch history related policies
     """
 
     def __init__(
@@ -300,24 +300,24 @@ class PolicyEngine:
         current_chunk_index: Optional[int] = None,
     ) -> str:
         """
-        生成策略注入
+        Generate policy injection
 
-        基于：
-        - 当前诊断
-        - 历史诊断统计
-        - 已尝试的工具
+        Based on:
+        - Current diagnosis
+        - Historical diagnosis statistics
+        - Previously tried tools
 
-        消融实验：
-        - enable_memory=False: 跳过基于 memory 的规则（tried_tools 检查）
-        - enable_history=False: 跳过基于 history_manager 的规则
+        Ablation experiments:
+        - enable_memory=False: Skip memory-based rules (tried_tools check)
+        - enable_history=False: Skip history_manager-based rules
         """
         policy_parts = []
 
-        # 1. 基于当前诊断的规则（需要 enable_memory）
+        # 1. Rules based on current diagnosis (requires enable_memory)
         if current_diagnosis:
             cause = current_diagnosis.root_cause
 
-            # 检查是否已经尝试过某些工具（仅当 enable_memory=True 时）
+            # Check if certain tools have been tried (only when enable_memory=True)
             if self.enable_memory:
                 tried_tools = self.memory.get_failed_tools_for_diagnosis(cause)
                 if tried_tools:
@@ -328,16 +328,16 @@ class PolicyEngine:
                         f"Try a DIFFERENT tool or approach."
                     )
 
-            # 基于诊断类型的特定规则（不依赖 memory 或 history）
+            # Diagnosis type specific rules (independent of memory or history)
             diagnosis_rules = self._get_diagnosis_specific_rules(cause)
             if diagnosis_rules:
                 policy_parts.append(diagnosis_rules)
 
-        # 2. 基于历史的全局规则（仅当 enable_history=True 时）
+        # 2. Global rules based on history (only when enable_history=True)
         if self.enable_history:
             diagnosis_stats = self.history_manager.get_diagnosis_stats()
             if diagnosis_stats:
-                # 找出最常见的失败类型
+                # Find most common failure type
                 most_common = max(diagnosis_stats, key=diagnosis_stats.get)
                 count = diagnosis_stats[most_common]
                 if count >= 3:
@@ -347,7 +347,7 @@ class PolicyEngine:
                         f"Consider a more aggressive strategy for this issue type."
                     )
 
-        # 3. 段落特定历史（仅当 enable_history=True 时）
+        # 3. Segment-specific history (only when enable_history=True)
         if self.enable_history and current_chunk_index is not None:
             segment_history = self.history_manager.get_segment_history(current_chunk_index)
             if len(segment_history) >= 2:
@@ -365,7 +365,7 @@ class PolicyEngine:
         return "\n\n".join(policy_parts)
 
     def _get_diagnosis_specific_rules(self, diagnosis_cause: str) -> str:
-        """获取诊断特定规则"""
+        """Get diagnosis-specific rules"""
         rules = {
             "PARSING_FAILURE": (
                 "### PARSING_FAILURE POLICY:\n"

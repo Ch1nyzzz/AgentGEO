@@ -10,7 +10,7 @@ from geo_agent.agent.optimizer import GEOAgent
 from geo_agent.core.models import WebPage
 
 def main(task="optimize"):
-    # 模拟输入
+    # Simulated input
     html_dir = "cw22_search_dataset/data/html_samples"
     queries_dir = "data/processed_dedup"
     loc_doc_path = "cw22_search_dataset/data/geo_bench_unique_docs.json"
@@ -52,13 +52,13 @@ def main(task="optimize"):
             print(optimized_page.cleaned_content[:500])
         
         elif task == "evaluate":
-            # 单独 evaluate 时，对原始 page 进行评估
+            # When running evaluate alone, evaluate the original page
             random.shuffle(test_queries)
             result = agent.evaluate_page(page, test_queries[:20])
             print(f"\nEvaluation Results for {file_uuid}: {result}")
 
         elif task == "both":
-            # 先优化，再用 test 集评估优化后的页面
+            # First optimize, then evaluate optimized page with test set
             random.shuffle(train_queries)
             optimized_page = agent.optimize_page(page, train_queries[:20])
             print("\nFinal Optimized Content Preview:")
@@ -69,39 +69,39 @@ def main(task="optimize"):
             print(f"\nEvaluation Results for {file_uuid} (optimized): {result}")
 
         elif task == "compare":
-            # 保存原始内容
+            # Save original content
             original_content = page.cleaned_content
 
-            # 1. 评估原始页面 (baseline)
+            # 1. Evaluate original page (baseline)
             random.shuffle(test_queries)
             test_subset = test_queries[:20]
-            print("\n=== 评估原始页面 ===")
+            print("\n=== Evaluating Original Page ===")
             baseline_result = agent.evaluate_page(page, test_subset)
             baseline_ratio = baseline_result['ratio']
             baseline_count = sum(v for k, v in baseline_result.items() if k != 'ratio')
 
-            # 2. 优化页面
-            print("\n=== 开始优化 ===")
+            # 2. Optimize page
+            print("\n=== Starting Optimization ===")
             random.shuffle(train_queries)
             optimized_page = agent.optimize_page(page, train_queries[:20])
 
-            # 3. 评估优化后页面 (用相同的 test_subset)
-            print("\n=== 评估优化后页面 ===")
+            # 3. Evaluate optimized page (using the same test_subset)
+            print("\n=== Evaluating Optimized Page ===")
             optimized_result = agent.evaluate_page(optimized_page, test_subset)
             optimized_ratio = optimized_result['ratio']
             optimized_count = sum(v for k, v in optimized_result.items() if k != 'ratio')
 
-            # 4. 输出对比结果
+            # 4. Output comparison results
             total_queries = len(test_subset)
             print("\n" + "=" * 40)
-            print("         优化效果对比")
+            print("    Optimization Effect Comparison")
             print("=" * 40)
-            print(f"原始页面引用率:   {baseline_ratio:.1%} ({baseline_count}/{total_queries})")
-            print(f"优化后引用率:     {optimized_ratio:.1%} ({optimized_count}/{total_queries})")
-            print(f"提升幅度:         {optimized_ratio - baseline_ratio:+.1%} ({optimized_count - baseline_count:+d} queries)")
+            print(f"Original citation rate:   {baseline_ratio:.1%} ({baseline_count}/{total_queries})")
+            print(f"Optimized citation rate:  {optimized_ratio:.1%} ({optimized_count}/{total_queries})")
+            print(f"Improvement:              {optimized_ratio - baseline_ratio:+.1%} ({optimized_count - baseline_count:+d} queries)")
             print("=" * 40)
 
-            # 5. 保存完整对比结果到 log
+            # 5. Save full comparison results to log
             compare_log = {
                 "file_uuid": file_uuid,
                 "url": page.url,
@@ -128,7 +128,7 @@ def main(task="optimize"):
             compare_log_path = os.path.join(compare_log_dir, f"{file_uuid}_compare.json")
             with open(compare_log_path, 'w', encoding='utf-8') as f:
                 json.dump(compare_log, f, indent=2, ensure_ascii=False)
-            print(f"\n对比结果已保存至: {compare_log_path}")
+            print(f"\nComparison results saved to: {compare_log_path}")
 
 if __name__ == "__main__":
     main(task="evaluate")

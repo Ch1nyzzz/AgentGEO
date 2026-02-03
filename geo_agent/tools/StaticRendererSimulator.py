@@ -12,9 +12,9 @@ class StaticRenderingInput(BaseModel):
     core_idea: str = Field("", description="The core topic of the document that must be preserved.")
     previous_modifications: str = Field("", description="Summary of previous modifications.")
 
-def simulate_static_render(target_content: str, context_before: str = "", context_after: str = "", core_idea: str = "", previous_modifications: str = "") -> str:
+def simulate_static_render(target_content: str, context_before: str = "", context_after: str = "", core_idea: str = "", previous_modifications: str = "", config_path: str = "geo_agent/config.yaml") -> str:
     """Simulates Server-Side Rendering (SSR) by converting JS/Placeholders to static HTML."""
-    llm = get_llm_from_config('geo_agent/config.yaml')
+    llm = get_llm_from_config(config_path)
     context_section = build_context_section(context_before, context_after)
 
     # Build history section

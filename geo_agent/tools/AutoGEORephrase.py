@@ -247,7 +247,8 @@ def autogeo_rephrase(
     context_after: str = "",
     core_idea: str = "",
     previous_modifications: str = "",
-    custom_rule_path: Optional[str] = None
+    custom_rule_path: Optional[str] = None,
+    config_path: str = "geo_agent/config.yaml"
 ) -> str:
     """
     Comprehensively rewrite document using AutoGEO methodology with validated rule sets.
@@ -255,7 +256,7 @@ def autogeo_rephrase(
     This meta-tool applies 12-19 optimization rules derived from the AutoGEO paper,
     performing holistic document transformation for maximum visibility in generative search.
     """
-    llm = get_llm_from_config('geo_agent/config.yaml')
+    llm = get_llm_from_config(config_path)
 
     # Select rules: custom > default based on dataset/engine combo
     rules = None

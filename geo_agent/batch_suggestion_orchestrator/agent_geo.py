@@ -1,14 +1,14 @@
 """
-AgentGEO V2 - 主入口
-基于建议编排的智能 GEO 优化系统
+AgentGEO V2 - Main Entry Point
+Intelligent GEO optimization system based on suggestion orchestration
 
-主要特性：
-1. 使用 geo_agent 的两阶段失败分析（diagnose + select_tool_strategy）
-2. 支持 14 类故障分类法（FAILURE_TAXONOMY）
-3. 异步并行处理多个 query
-4. 支持 HTML DOM 分块（StructuralHtmlParser）
-5. 智能建议合并（基于诊断结果）
-6. 完整的历史记录和策略注入支持
+Key Features:
+1. Two-phase failure analysis from geo_agent (diagnose + select_tool_strategy)
+2. Support for 14 failure categories (FAILURE_TAXONOMY)
+3. Async parallel processing of multiple queries
+4. HTML DOM chunking support (StructuralHtmlParser)
+5. Intelligent suggestion merging (diagnosis-aware)
+6. Complete history tracking and policy injection support
 """
 import asyncio
 import hashlib
@@ -19,8 +19,8 @@ import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
-# 设置路径
-REPO_ROOT = Path(__file__).resolve().parents[1]
+# Setup paths
+REPO_ROOT = Path(__file__).resolve().parents[2]
 GEO_AGENT_ROOT = REPO_ROOT / "geo_agent"
 if str(GEO_AGENT_ROOT) not in sys.path:
     sys.path.insert(0, str(GEO_AGENT_ROOT))
@@ -49,9 +49,9 @@ logger = logging.getLogger(__name__)
 
 class AsyncInContextGeneratorV2:
     """
-    V2 异步生成器
+    V2 Async Generator
 
-    支持插件化引用检查器架构，可通过 citation_checker 参数注入不同的检查方式。
+    Supports pluggable citation checker architecture, allowing different check methods via citation_checker parameter.
     """
 
     def __init__(
@@ -60,11 +60,11 @@ class AsyncInContextGeneratorV2:
         max_snippet_length: int = 2000,
         citation_checker: Optional[BaseCitationChecker] = None,
     ):
-        # 使用 GENERATION 任务配置的 LLM
+        # Use LLM configured for GENERATION task
         self.llm = get_llm_for_task(config_path, LLMTask.GENERATION)
         self.max_snippet_length = max_snippet_length
 
-        # 如果未提供，创建默认 LLM checker（向后兼容）
+        # If not provided, create default LLM checker (backward compatible)
         if citation_checker is None:
             self._citation_checker = LLMCitationChecker(self.llm, max_snippet_length)
         else:
@@ -78,16 +78,16 @@ class AsyncInContextGeneratorV2:
         competitor_contents: Optional[List[str]] = None,
     ) -> CitationCheckResult:
         """
-        生成答案并检查引用（委托给 citation_checker）
+        Generate answer and check citations (delegated to citation_checker)
 
         Args:
-            query: 查询问题
-            target_doc: 目标文档
-            retrieved_docs: 检索到的竞争文档
-            competitor_contents: 竞争文档内容列表
+            query: Query question
+            target_doc: Target document
+            retrieved_docs: Retrieved competitor documents
+            competitor_contents: Competitor document content list
 
         Returns:
-            CitationCheckResult: 引用检查结果（保持向后兼容）
+            CitationCheckResult: Citation check result (backward compatible)
         """
         num_competitors = len(retrieved_docs)
         target_idx = num_competitors + 1
@@ -95,7 +95,7 @@ class AsyncInContextGeneratorV2:
         if competitor_contents is None or len(competitor_contents) < len(retrieved_docs):
             raise ValueError("competitor_contents is required")
 
-        # 委托给 citation_checker
+        # Delegate to citation_checker
         result = await self._citation_checker.check(
             query=query,
             target_content=target_doc.cleaned_content or "",
@@ -105,7 +105,7 @@ class AsyncInContextGeneratorV2:
             competitor_contents=competitor_contents,
         )
 
-        # 返回 CitationCheckResult 保持向后兼容
+        # Return CitationCheckResult for backward compatibility
         return CitationCheckResult(
             is_cited=result.is_cited,
             generated_answer=result.generated_answer,
@@ -115,23 +115,23 @@ class AsyncInContextGeneratorV2:
 
     @property
     def citation_checker(self) -> BaseCitationChecker:
-        """获取当前的引用检查器"""
+        """Get the current citation checker"""
         return self._citation_checker
 
 
 class AgentGEOV2:
     """
-    AgentGEO V2 - 基于建议编排的智能 GEO 优化系统
+    AgentGEO V2 - Intelligent GEO Optimization System based on Suggestion Orchestration
 
-    完全基于 geo_agent 架构的异步并行批处理版本
+    Async parallel batch processing version fully based on geo_agent architecture
 
-    主要特性：
-    - 两阶段失败分析（diagnose + select_tool_strategy）
-    - 14 类故障分类法
-    - 异步并行处理
-    - HTML DOM 分块
-    - 智能建议合并
-    - 策略注入支持
+    Key Features:
+    - Two-phase failure analysis (diagnose + select_tool_strategy)
+    - 14 failure categories
+    - Async parallel processing
+    - HTML DOM chunking
+    - Intelligent suggestion merging
+    - Policy injection support
     """
 
     def __init__(
@@ -148,15 +148,15 @@ class AgentGEOV2:
             config_file = (REPO_ROOT / config_file).resolve()
         self.config_path = str(config_file)
 
-        # 配置（先初始化，后续创建 citation_checker 需要用）
+        # Config (initialize first, needed for creating citation_checker later)
         self.batch_config = batch_config or AgentGEOConfigV2()
 
-        # LLM 和搜索引擎
-        # 主 LLM 用于诊断分析
+        # LLM and search engine
+        # Main LLM used for diagnosis analysis
         self.llm = get_llm_for_task(self.config_path, LLMTask.DIAGNOSIS)
         self.search_engine = SearchManager(self.config_path)
 
-        # 创建引用检查器
+        # Create citation checker
         generation_llm = get_llm_for_task(self.config_path, LLMTask.GENERATION)
         self._citation_checker = create_citation_checker(
             method=CitationMethod(self.batch_config.citation_method),
@@ -167,13 +167,13 @@ class AgentGEOV2:
             use_fast_mode=self.batch_config.use_fast_mode,
         )
 
-        # 生成器使用独立的 GENERATION 配置和 citation_checker
+        # Generator uses independent GENERATION config and citation_checker
         self.generator = AsyncInContextGeneratorV2(
             self.config_path,
             citation_checker=self._citation_checker,
         )
 
-        # 搜索引擎类型
+        # Search engine type
         self.config = load_config(self.config_path)
         search_config = self.config.get("search", {})
         self._search_provider = search_config.get("provider", "chatnoir")
@@ -185,12 +185,12 @@ class AgentGEOV2:
 
         self._html_parser = HtmlParser(self.config_path)
 
-        # 缓存
+        # Cache
         self._html_content_cache: Dict[str, str] = {}
         self._search_cache: Dict[str, List[SearchResult]] = {}
         self._cache_lock = asyncio.Lock()
 
-        # 磁盘缓存
+        # Disk cache
         self._disk_cache_dir: Optional[Path] = None
         if disk_cache_dir:
             cache_path = Path(disk_cache_dir)
@@ -199,7 +199,7 @@ class AgentGEOV2:
             cache_path.mkdir(parents=True, exist_ok=True)
             self._disk_cache_dir = cache_path
 
-        # 日志目录
+        # Log directory
         self._optimization_log_dir: Optional[Path] = None
         if optimization_log_dir:
             log_path = Path(optimization_log_dir)
@@ -210,7 +210,7 @@ class AgentGEOV2:
         self._output_prefix = output_prefix
         self._run_id = run_id or os.getenv("DASHBOARD_RUN_ID")
 
-        # 历史管理器
+        # History manager
         history_path = None
         if self.batch_config.history_persist_path:
             history_path = Path(self.batch_config.history_persist_path)
@@ -225,7 +225,7 @@ class AgentGEOV2:
         return self._disk_cache_dir / f"{self._cache_key(query)}.json"
 
     async def _get_search_results(self, query: str) -> List[SearchResult]:
-        """获取搜索结果（带缓存）"""
+        """Get search results (with caching)"""
         async with self._cache_lock:
             cached = self._search_cache.get(query)
         if cached is not None:
@@ -257,7 +257,7 @@ class AgentGEOV2:
         return results
 
     async def _get_competitor_full_content(self, doc: SearchResult) -> Optional[str]:
-        """获取竞争对手完整内容（必须获取HTML，不允许回退到snippet）"""
+        """Get competitor full content (must fetch HTML, no fallback to snippet allowed)"""
         if not doc.uuid:
             raise RuntimeError(f"Competitor doc has no uuid, cannot fetch HTML: url={doc.url}")
 
@@ -270,7 +270,7 @@ class AgentGEOV2:
                 return doc.raw_content
             raise RuntimeError(f"Tavily doc has no raw_content, cannot fallback to snippet: uuid={doc.uuid}, url={doc.url}")
         else:
-            # 1. 首先检查本地数据集是否有对应UUID的HTML文件
+            # 1. First check if local dataset has HTML file for this UUID
             local_html_path = Path(self._disk_cache_dir) / f"{doc.uuid}.html" if self._disk_cache_dir else None
             if local_html_path and local_html_path.exists():
                 try:
@@ -283,7 +283,7 @@ class AgentGEOV2:
                 except Exception as e:
                     logger.warning(f"Failed to read local HTML for {doc.uuid}: {e}")
             
-            # 2. 检查原始HTML数据库（cw22模式）
+            # 2. Check original HTML database (cw22 mode)
             import os
             html_db_path = self.config.get("data", {}).get("html_db_path", "")
             if html_db_path:
@@ -302,8 +302,8 @@ class AgentGEOV2:
                 except Exception as e:
                     logger.warning(f"Failed to read cw22 HTML for {doc.uuid}: {e}")
             
-            # 3. 如果本地没有，再调用ChatNoir API获取
-            # 增加重试机制，确保有足够的时间运行
+            # 3. If not available locally, fetch from ChatNoir API
+            # Add retry mechanism to ensure sufficient time for execution
             import requests
             max_api_retries = 2
             for api_retry in range(max_api_retries):
@@ -314,7 +314,7 @@ class AgentGEOV2:
                     if html_content:
                         parsed_content = self._html_parser.parse(html_content)
                         self._html_content_cache[doc.uuid] = parsed_content
-                        # 保存到本地，以便下次使用
+                        # Save locally for future use
                         if self._disk_cache_dir and local_html_path:
                             try:
                                 local_html_path.parent.mkdir(parents=True, exist_ok=True)
@@ -326,7 +326,7 @@ class AgentGEOV2:
                         return parsed_content
                     else:
                         logger.warning(f"ChatNoir returned empty HTML for {doc.uuid}")
-                        # 如果返回空内容，尝试使用plain=True模式获取
+                        # If empty content returned, try with plain=True mode
                         if api_retry < max_api_retries - 1:
                             logger.info(f"Retrying with plain mode for {doc.uuid}...")
                             html_content = await asyncio.to_thread(
@@ -338,19 +338,19 @@ class AgentGEOV2:
                                 return parsed_content
                 except Exception as e:
                     logger.warning(f"ChatNoir fetch failed for {doc.uuid} (attempt {api_retry+1}/{max_api_retries}): {e}")
-                    # 如果是连接错误，等待后重试
+                    # If connection error, wait and retry
                     if isinstance(e, (ConnectionResetError, requests.exceptions.ConnectionError, requests.exceptions.Timeout, requests.exceptions.SSLError)) and api_retry < max_api_retries - 1:
                         logger.info(f"Waiting 3 seconds before retry for {doc.uuid}...")
                         await asyncio.sleep(3)  # 等待3秒后重试
                         continue
             
-            # 4. 所有尝试都失败，报错退出
+            # 4. All attempts failed, raise error
             raise RuntimeError(f"All attempts to fetch HTML failed for competitor: uuid={doc.uuid}, url={doc.url}")
 
     async def _get_all_competitor_contents(
         self, docs: List[SearchResult], target_count: int = 10
     ) -> Tuple[List[SearchResult], List[str]]:
-        """获取所有竞争对手内容"""
+        """Get all competitor contents"""
         filtered_docs = []
         filtered_contents = []
 
@@ -371,43 +371,43 @@ class AgentGEOV2:
         queries: List[str],
     ) -> Tuple[WebPage, List[OptimizationResultV2]]:
         """
-        使用批处理优化页面
+        Optimize page using batch processing
 
         Args:
-            webpage: 要优化的网页
-            queries: 查询列表
+            webpage: WebPage to optimize
+            queries: List of queries
 
         Returns:
-            Tuple[WebPage, List[OptimizationResultV2]]: (优化后的网页, 批次结果列表)
+            Tuple[WebPage, List[OptimizationResultV2]]: (optimized webpage, batch results list)
         """
         print(f"Starting Batch GEO V2 for {webpage.url}")
         print("=" * 50)
 
-        # 创建批处理器
+        # Create batch processor
         processor = SuggestionProcessorV2(
             llm=self.llm,
             generator=self.generator,
             config=self.batch_config,
             history_manager=self.history_manager,
             search_func=self._get_search_results,
-            competitor_content_func=self._get_all_competitor_contents,  # 返回元组 (filtered_docs, contents)
+            competitor_content_func=self._get_all_competitor_contents,  # Returns tuple (filtered_docs, contents)
         )
 
-        # 处理所有批次
+        # Process all batches
         results = await processor.process_all_batches(
             content=webpage.cleaned_content,
             all_queries=queries,
             raw_html=webpage.raw_html if webpage.raw_html else None,
         )
 
-        # 更新网页内容
+        # Update webpage content
         if results:
             final_result = results[-1]
             webpage.cleaned_content = final_result.content_after
             if final_result.html_after:
                 webpage.raw_html = final_result.html_after
 
-        # 保存日志
+        # Save logs
         await self._save_optimization_log(webpage, queries, results)
 
         return webpage, results
@@ -418,7 +418,7 @@ class AgentGEOV2:
         queries: List[str],
         results: List[OptimizationResultV2],
     ) -> None:
-        """保存优化日志"""
+        """Save optimization logs"""
         if not self._optimization_log_dir:
             return
 
@@ -431,7 +431,7 @@ class AgentGEOV2:
         )
         output_file = self._optimization_log_dir / f"{self._output_prefix}{safe_filename}_v2.json"
 
-        # 汇总诊断统计
+        # Aggregate diagnosis statistics
         overall_diagnosis_stats: Dict[str, int] = {}
         for r in results:
             for cause, count in r.diagnosis_stats.items():
@@ -477,7 +477,7 @@ class AgentGEOV2:
         webpage: WebPage,
         queries: List[str],
     ) -> Tuple[WebPage, List[OptimizationResultV2]]:
-        """同步包装器"""
+        """Sync wrapper"""
         try:
             asyncio.get_running_loop()
         except RuntimeError:
@@ -492,13 +492,13 @@ class AgentGEOV2:
         queries: List[str],
         concurrency: Optional[int] = None,
     ) -> Dict[str, object]:
-        """评估页面"""
+        """Evaluate page"""
         results: Dict[str, bool] = {}
         concurrency = concurrency or self.batch_config.max_concurrency
         semaphore = asyncio.Semaphore(concurrency)
         
-        # 确保queries是Python列表
-        if hasattr(queries, 'tolist'):  # 检查是否为numpy数组
+        # Ensure queries is a Python list
+        if hasattr(queries, 'tolist'):  # Check if numpy array
             queries = queries.tolist()
         elif not isinstance(queries, list):
             queries = list(queries)
@@ -522,7 +522,7 @@ class AgentGEOV2:
             query, cited = await coro
             results[query] = cited
 
-        # 安全计算ratio，避免numpy数组导致的问题
+        # Safely compute ratio, avoiding numpy array issues
         if not queries:
             ratio = 0.0
         else:
@@ -534,7 +534,7 @@ class AgentGEOV2:
         return results
 
 
-# 便捷函数
+# Convenience functions
 async def run_batch_geo_v2(
     url: str,
     content: str,
@@ -543,17 +543,17 @@ async def run_batch_geo_v2(
     batch_config: Optional[AgentGEOConfigV2] = None,
 ) -> Tuple[str, List[OptimizationResultV2]]:
     """
-    运行 Batch GEO V2 优化
+    Run Batch GEO V2 optimization
 
     Args:
-        url: 网页 URL
-        content: 网页内容
-        queries: 查询列表
-        config_path: 配置文件路径
-        batch_config: 批处理配置
+        url: Webpage URL
+        content: Webpage content
+        queries: List of queries
+        config_path: Config file path
+        batch_config: Batch processing config
 
     Returns:
-        Tuple[str, List[OptimizationResultV2]]: (优化后的内容, 批次结果列表)
+        Tuple[str, List[OptimizationResultV2]]: (optimized content, batch results list)
     """
     webpage = WebPage(url=url, raw_html="", cleaned_content=content)
     agent = AgentGEOV2(config_path=config_path, batch_config=batch_config)

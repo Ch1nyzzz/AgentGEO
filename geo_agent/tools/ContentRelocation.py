@@ -1,7 +1,7 @@
 """
 Content Relocation Tool
-专门处理"关键信息被截断"的场景
-通过重组文档结构，将隐藏的高价值内容移动到文档前部
+Specifically handles "critical information truncated" scenarios
+by restructuring documents to move hidden high-value content to the front
 """
 from pydantic import BaseModel, Field
 from langchain_core.prompts import ChatPromptTemplate
@@ -21,13 +21,14 @@ class ContentRelocationInput(BaseModel):
 
 
 def relocate_content(
-    target_content: str, 
+    target_content: str,
     hidden_content_summary: str,
     query: str,
-    context_before: str = "", 
-    context_after: str = "", 
-    core_idea: str = "", 
-    previous_modifications: str = ""
+    context_before: str = "",
+    context_after: str = "",
+    core_idea: str = "",
+    previous_modifications: str = "",
+    config_path: str = "geo_agent/config.yaml"
 ) -> str:
     """
     Restructures the document to surface hidden relevant content.
@@ -38,7 +39,7 @@ def relocate_content(
     3. Create a summary section at the TOP matching the page's tone
     4. Keep the original structure intact below
     """
-    llm = get_llm_from_config('geo_agent/config.yaml')
+    llm = get_llm_from_config(config_path)
     context_section = build_context_section(context_before, context_after)
 
     history_section = ""

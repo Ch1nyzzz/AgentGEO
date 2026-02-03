@@ -3,36 +3,36 @@ llm:
   model: gpt-4.1-mini # options: gpt-4.1-mini, claude-haiku-4-5-20251001, gemini-2.5-flash
   temperature: 0
 
-# 细粒度任务配置（可选，不指定则使用上面的 llm 默认配置）
+# Fine-grained task configuration (optional, uses llm default config above if not specified)
 llm_tasks:
-  # 答案生成（需要高质量）
+  # Answer generation (requires high quality)
   generation:
     provider: openai
     model: gpt-4.1-mini
 
-  # 引用检查（不指定则使用 llm 默认）
+  # Citation checking (uses llm default if not specified)
   # citation_check:
   #   provider: openai
   #   model: gpt-4.1-mini
 
-  # 诊断分析
+  # Diagnostic analysis
   diagnosis:
     provider: openai
     model: gpt-4.1-mini
 
-  # 工具策略选择
+  # Tool strategy selection
   tool_strategy:
     provider: openai
     model: gpt-4.1-mini
 
-  # GEO 评分评估
+  # GEO score evaluation
   geo_score:
     provider: openai
     model: gpt-4.1-mini
 
 search:
   provider: chatnoir # tavily or chatnoir
-  max_results: 10 # 搜索返回的结果数量（过搜索以应对部分获取失败）
+  max_results: 10 # Number of search results to return (over-fetch to handle partial retrieval failures)
 
 generator:
   method: in-context  # options: in-context, attr_evaluator
@@ -46,5 +46,5 @@ html_parser:
 
 data:
   mode: cw22 # online or cw22
-  # 使用相对路径（相对于项目根目录）或设置为绝对路径
+  # Use relative path (relative to project root) or set as absolute path
   html_db_path: "./cache" # Path to store/retrieve HTML files

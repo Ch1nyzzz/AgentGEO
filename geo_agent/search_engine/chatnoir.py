@@ -13,7 +13,7 @@ class ChatNoirClient:
     def __init__(self, pool_size: int = 20, max_results: int = 14):
         self.session = requests.Session()
         self.max_results = max_results
-        # 增加连接池大小，避免 "Connection pool is full" 警告
+        # Increase connection pool size to avoid "Connection pool is full" warning
         adapter = HTTPAdapter(pool_connections=pool_size, pool_maxsize=pool_size)
         self.session.mount('https://', adapter)
         self.session.mount('http://', adapter)
@@ -39,13 +39,13 @@ class ChatNoirClient:
             "explain": False
         }
 
-        # 增加重试机制
+        # Add retry mechanism
         max_retries = 3
         retry_delay = 2
         
         for retry in range(max_retries):
             try:
-                # 设置会话的SSL验证为False，避免SSL错误
+                # Disable SSL verification to avoid SSL errors
                 self.session.verify = False
                 response = self.session.post(url, json=payload, timeout=30)
                 json_resp = response.json()
@@ -74,7 +74,7 @@ class ChatNoirClient:
                     time.sleep(retry_delay)
                     continue
                 return []
-            except requests.exceptions.ConnectionResetError as e:
+            except ConnectionResetError as e:
                 logger.error(f"Connection Reset Error for search query '{query}': {e}")
                 if retry < max_retries - 1:
                     logger.info(f"Retrying search for query '{query}' ({retry+1}/{max_retries})...")
@@ -109,16 +109,16 @@ class ChatNoirClient:
         
     def get_html_content(self, uuid: str, plain: bool = False) -> str:
         """
-        通过 UUID 获取 HTML 内容
+        Get HTML content by UUID
 
-        注意：ChatNoir webcontent 服务器的 HTTPS 有 SSL 证书问题，
-        因此直接使用 HTTP 协议访问 chatnoir-webcontent.chatnoir.eu
+        Note: ChatNoir webcontent server has SSL certificate issues,
+        so we use HTTP protocol to access chatnoir-webcontent.chatnoir.eu directly
 
         Args:
-            uuid: 文档 UUID
-            plain: 是否获取纯文本版本（更小更快）
+            uuid: Document UUID
+            plain: Whether to get plain text version (smaller and faster)
         """
-        # 直接访问 webcontent 服务器（使用 HTTP 避免 SSL 问题）
+        # Access webcontent server directly (using HTTP to avoid SSL issues)
         webcontent_base = "http://chatnoir-webcontent.chatnoir.eu"
 
         params = {
@@ -128,10 +128,10 @@ class ChatNoirClient:
         if plain:
             params["plain"] = ""
         
-        # 增加重试机制和更长的超时时间
+        # Add retry mechanism with longer timeout
         max_retries = 3
-        timeout = 180  # 增加超时时间到60秒
-        retry_delay = 2  # 重试间隔2秒
+        timeout = 180  # Extended timeout to 180 seconds
+        retry_delay = 2  # 2 seconds delay between retries
 
         for retry in range(max_retries):
             try:
@@ -139,8 +139,8 @@ class ChatNoirClient:
                     webcontent_base,
                     params=params,
                     timeout=timeout,
-                    verify=False,  # 忽略 SSL 验证
-                    stream=True,  # 使用流传输，减少内存占用
+                    verify=False,  # Skip SSL verification
+                    stream=True,  # Use streaming to reduce memory usage
                 )
 
                 if response.status_code == 200:
@@ -150,7 +150,7 @@ class ChatNoirClient:
                     return ""
                 else:
                     logger.warning(f"Cache API Error {response.status_code} for UUID: {uuid}")
-                    # 非404错误，重试
+                    # Retry for non-404 errors
                     if retry < max_retries - 1:
                         logger.info(f"Retrying {retry+1}/{max_retries} in {retry_delay} seconds...")
                         import time
@@ -160,7 +160,7 @@ class ChatNoirClient:
 
             except ConnectionResetError as e:
                 logger.error(f"Connection reset error for {uuid}: {e}")
-                # 连接重置错误，重试
+                # Connection reset error, retry
                 if retry < max_retries - 1:
                     logger.info(f"Retrying {retry+1}/{max_retries} in {retry_delay} seconds...")
                     import time
@@ -169,7 +169,7 @@ class ChatNoirClient:
                 return ""
             except requests.exceptions.Timeout as e:
                 logger.error(f"Timeout error for {uuid}: {e}")
-                # 超时错误，重试
+                # Timeout error, retry
                 if retry < max_retries - 1:
                     logger.info(f"Retrying {retry+1}/{max_retries} in {retry_delay} seconds...")
                     import time
@@ -178,7 +178,7 @@ class ChatNoirClient:
                 return ""
             except Exception as e:
                 logger.error(f"Failed to fetch HTML for {uuid}: {e}")
-                # 其他错误，重试
+                # Other errors, retry
                 if retry < max_retries - 1:
                     logger.info(f"Retrying {retry+1}/{max_retries} in {retry_delay} seconds...")
                     import time

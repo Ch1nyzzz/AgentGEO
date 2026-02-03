@@ -26,7 +26,7 @@ class AttrFirstThenGenerate(BaseGenerator):
         self.attr_evaluator = None
         try:
             # Import fast_return_res
-            from src.attr_evaluator.fast_return_res import fast_return_res
+            from attr_evaluator.fast_return_res import fast_return_res
             
             self.attribute_return_res = fast_return_res
             logger.info("Successfully initialized fast_return_res")

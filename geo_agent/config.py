@@ -10,19 +10,22 @@ load_dotenv()
 
 
 class LLMTask(str, Enum):
-    """LLM 任务类型枚举"""
-    GENERATION = "generation"          # 答案生成
-    CITATION_CHECK = "citation_check"  # 引用检查
-    DIAGNOSIS = "diagnosis"            # 诊断分析
-    TOOL_STRATEGY = "tool_strategy"    # 工具策略选择
-    GEO_SCORE = "geo_score"            # GEO 评分评估
+    """LLM task type enumeration"""
+    GENERATION = "generation"          # Answer generation
+    CITATION_CHECK = "citation_check"  # Citation checking
+    DIAGNOSIS = "diagnosis"            # Diagnostic analysis
+    TOOL_STRATEGY = "tool_strategy"    # Tool strategy selection
+    GEO_SCORE = "geo_score"            # GEO score evaluation
 
 os.environ.setdefault("KMP_USE_SHM", "0")
 
-API_KEY = os.getenv("CHATNOIR_API_KEY", "YOUR_API_KEY_HERE")
+API_KEY = os.getenv("CHATNOIR_API_KEY")
+if not API_KEY:
+    import warnings
+    warnings.warn("CHATNOIR_API_KEY environment variable not set. ChatNoir search will not work.")
 API_BASE_URL = "https://www.chatnoir.eu"
 
-# 搜索配置
+# Search configuration
 INDEX_NAME = "cw22"  # ClueWeb22
 TOP_K = 10
 
@@ -31,19 +34,19 @@ TOP_K = 10
 def load_config(config_path='config.yaml'):
     from pathlib import Path
 
-    # 尝试直接打开
+    # Try to open directly
     if os.path.exists(config_path):
         with open(config_path, 'r') as f:
             return yaml.safe_load(f)
 
-    # 尝试从 geo_agent 目录加载
+    # Try to load from geo_agent directory
     geo_agent_dir = Path(__file__).parent
     alt_path = geo_agent_dir / Path(config_path).name
     if alt_path.exists():
         with open(alt_path, 'r') as f:
             return yaml.safe_load(f)
 
-    # 尝试从项目根目录加载
+    # Try to load from project root directory
     repo_root = geo_agent_dir.parent
     alt_path2 = repo_root / config_path
     if alt_path2.exists():
@@ -70,10 +73,10 @@ class LLMResponse:
 
 def _normalize_chat_messages(prompt_input):
     """
-    兼容 LangChain 风格输入：
+    Compatible with LangChain-style input:
     - str
-    - List[Tuple[role, content]]，role 可为 system/human/user/ai/assistant
-    - 具有 `.content`/`.type` 的 message 对象（尽力适配）
+    - List[Tuple[role, content]], role can be system/human/user/ai/assistant
+    - Message objects with `.content`/`.type` attributes (best effort adaptation)
     """
     if isinstance(prompt_input, str):
         return [{"role": "user", "content": prompt_input}]
@@ -109,7 +112,7 @@ def _normalize_chat_messages(prompt_input):
 
 
 class OpenAIChatLLM:
-    """OpenAI SDK 封装，提供 `.invoke`/`.ainvoke` 接口。"""
+    """OpenAI SDK wrapper providing `.invoke`/`.ainvoke` interface."""
 
     def __init__(self, model: str, temperature: float = 0.0):
         self.model = model
@@ -143,7 +146,7 @@ class OpenAIChatLLM:
 
 
 class AnthropicChatLLM:
-    """Anthropic SDK 封装，提供 `.invoke`/`.ainvoke` 接口。"""
+    """Anthropic SDK wrapper providing `.invoke`/`.ainvoke` interface."""
 
     def __init__(self, model: str, temperature: float = 0.0):
         self.model = model
@@ -200,7 +203,7 @@ class AnthropicChatLLM:
 
 
 class GeminiChatLLM:
-    """Gemini SDK 封装，提供 `.invoke`/`.ainvoke` 接口（简单拼接消息）。"""
+    """Gemini SDK wrapper providing `.invoke`/`.ainvoke` interface (simple message concatenation)."""
 
     def __init__(self, model: str, temperature: float = 0.0):
         self.model = model
@@ -224,14 +227,14 @@ class GeminiChatLLM:
         return LLMResponse((getattr(resp, "text", "") or "").strip())
 
     async def ainvoke(self, prompt_input):
-        # 旧版 google.generativeai 多数为同步实现；这里用线程封装。
+        # Older google.generativeai versions are mostly synchronous; wrapping with thread here.
         import asyncio
 
         return await asyncio.to_thread(self.invoke, prompt_input)
 
 
 def get_llm_from_config(config_path='config.yaml'):
-    """从 config.yaml 读取 LLM 配置并返回可 `.invoke`/`.ainvoke` 的客户端。"""
+    """Read LLM configuration from config.yaml and return a client with `.invoke`/`.ainvoke` interface."""
     config = load_config(config_path)
     llm_config = config.get('llm', {})
     provider = llm_config.get('provider', 'openai')
@@ -250,26 +253,26 @@ def get_llm_from_config(config_path='config.yaml'):
 
 def get_llm_for_task(config_path: str = 'config.yaml', task: Optional[LLMTask] = None):
     """
-    获取特定任务的 LLM 客户端
+    Get LLM client for a specific task
 
-    优先级：llm_tasks.{task} > llm（全局默认）
+    Priority: llm_tasks.{task} > llm (global default)
 
     Args:
-        config_path: 配置文件路径
-        task: LLM 任务类型，为 None 时使用全局默认配置
+        config_path: Configuration file path
+        task: LLM task type, uses global default configuration when None
 
     Returns:
-        LLM 客户端实例
+        LLM client instance
     """
     config = load_config(config_path)
 
-    # 尝试获取任务特定配置
+    # Try to get task-specific configuration
     task_config = None
     if task:
         llm_tasks = config.get('llm_tasks', {})
         task_config = llm_tasks.get(task.value)
 
-    # 回退到全局配置
+    # Fall back to global configuration
     if not task_config:
         task_config = config.get('llm', {})
 

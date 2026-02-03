@@ -33,3 +33,17 @@ env/
 # Cache
 .cache/
 cache/
+
+# Environment variables
+.env
+.env.*
+.env.local
+
+# Secrets
+*.key
+*.pem
+credentials.json
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,11 +1,11 @@
 """
-Batch GEO V2 建议收集器
-使用两阶段分析（诊断 + 策略选择）收集优化建议
+Batch GEO V2 Suggestion Collector
+Collects optimization suggestions using two-phase analysis (diagnosis + strategy selection)
 
-V2.1 更新：
-- 实现与 GEO Agent 完全一致的 retry 验证机制
-- 在临时结构上测试修改，检查是否生效
-- 只返回最终生效的建议
+V2.1 Updates:
+- Implements retry validation mechanism identical to GEO Agent
+- Tests modifications on temporary structure, checks if effective
+- Only returns suggestions that finally took effect
 """
 import asyncio
 import logging
@@ -14,7 +14,7 @@ import uuid
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
-# 设置路径
+# Setup paths
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GEO_AGENT_ROOT = REPO_ROOT / "geo_agent"
 if str(GEO_AGENT_ROOT) not in sys.path:
@@ -27,7 +27,7 @@ from geo_agent.core.memory import parse_tool_output
 from geo_agent.utils.structural_parser import ContentChunk, StructuralHtmlParser
 from geo_agent.tools import registry
 
-# 复用 geo_agent 核心模块（与 geo_agent 对齐）
+# Reuse geo_agent core modules (aligned with geo_agent)
 from geo_agent.agent.content_auditor import audit_content_truncation, TruncationAuditResult
 from geo_agent.agent.policy_engine import PolicyEngine as GeoAgentPolicyEngine
 from geo_agent.core.telemetry import (
@@ -50,17 +50,17 @@ logger = logging.getLogger(__name__)
 
 class SuggestionCollectorV2:
     """
-    V2 建议收集器
+    V2 Suggestion Collector
 
-    使用两阶段分析：
-    1. 诊断（Diagnose）- 识别失败根因
-    2. 策略选择（Select Tool Strategy）- 选择最佳工具
+    Uses two-phase analysis:
+    1. Diagnose - Identify failure root cause
+    2. Select Tool Strategy - Choose optimal tool
 
-    支持：
-    - 并行处理多个 query
-    - 每个 query 多次重试
-    - 诊断信息记录
-    - 策略注入
+    Supports:
+    - Parallel processing of multiple queries
+    - Multiple retries per query
+    - Diagnostic information recording
+    - Strategy injection
     """
 
     def __init__(
@@ -90,11 +90,11 @@ class SuggestionCollectorV2:
         self.enable_history = enable_history
         self.excluded_tools = excluded_tools or []
 
-        # 每个 query 的内存（用于追踪重试）
+        # Memory for each query (for tracking retries)
         self._query_memories: Dict[str, OptimizationMemoryV2] = {}
 
     def _get_chunks_summary(self) -> str:
-        """生成 chunks 摘要（用于 LLM 选择目标 chunk）"""
+        """Generate chunks summary (for LLM to select target chunk)"""
         summary_parts = []
         for i, chunk in enumerate(self.chunks):
             text_preview = chunk.text[:200] + "..." if len(chunk.text) > 200 else chunk.text
@@ -102,13 +102,13 @@ class SuggestionCollectorV2:
         return "\n\n".join(summary_parts)
 
     def _format_indexed_content(self) -> str:
-        """生成带索引的完整内容"""
+        """Generate full content with indexes"""
         return "\n\n".join(
             [f">> [CHUNK_ID: {i}]\n{chunk.text}" for i, chunk in enumerate(self.chunks)]
         )
 
     def _sanitize_for_logging(self, tool_args: Dict[str, Any]) -> Dict[str, Any]:
-        """脱敏工具参数，移除过长内容（与 geo_agent 对齐）"""
+        """Sanitize tool arguments, remove lengthy content (aligned with geo_agent)"""
         sanitized = {}
         for key, value in tool_args.items():
             if key in ["target_content", "context_before", "context_after"]:
@@ -121,14 +121,14 @@ class SuggestionCollectorV2:
         return sanitized
 
     def _str_to_failure_category(self, diagnosis_str: str) -> FailureCategory:
-        """将字符串诊断转换为 FailureCategory 枚举"""
+        """Convert string diagnosis to FailureCategory enum"""
         try:
             return FailureCategory(diagnosis_str.lower())
         except ValueError:
             return FailureCategory.UNKNOWN
 
     def _get_orchestra_core_idea(self, chunk_index: int) -> str:
-        """获取 chunk 所属 orchestra 的核心思想"""
+        """Get core idea for the orchestra that chunk belongs to"""
         orchestra_id = chunk_index // self.chunks_per_orchestra
         return self.core_ideas.get(orchestra_id, "")
 
@@ -143,31 +143,31 @@ class SuggestionCollectorV2:
         check_citation_func: Optional[Callable] = None,
     ) -> QueryResultV2:
         """
-        为单个 query 收集建议（与 GEO Agent 完全一致的 retry 验证机制）
+        Collect suggestions for a single query (retry validation mechanism identical to GEO Agent)
 
-        V2.2 更新（与 geo_agent 对齐）：
-        - 复用截断审计 audit_content_truncation()
-        - 复用策略引擎 PolicyEngine 和遥测存储 TelemetryStore
-        - 两阶段策略评估和工具覆盖
-        - 快速失败检测
+        V2.2 Updates (aligned with geo_agent):
+        - Reuse truncation audit audit_content_truncation()
+        - Reuse policy engine PolicyEngine and telemetry store TelemetryStore
+        - Two-phase strategy evaluation and tool override
+        - Fast fail detection
 
-        核心逻辑：
-        1. 创建临时 HTML 结构用于测试修改
-        2. 每次迭代：导出HTML → 重新解析 → 获取纯文本 → 检查引用
-        3. 失败则执行工具，更新临时结构
-        4. 成功则退出，返回最终建议
+        Core logic:
+        1. Create temporary HTML structure for testing modifications
+        2. Each iteration: export HTML -> reparse -> get plain text -> check citation
+        3. If failed, execute tool, update temporary structure
+        4. If successful, exit and return final suggestion
 
         Args:
-            query: 用户查询
-            original_content: 原始文档内容（纯文本，不变）
-            original_html: 原始 HTML（用于创建临时结构）
-            retrieved_docs: 检索到的竞争文档
-            competitor_contents: 竞争对手完整内容
-            max_retries: 最大重试次数
-            check_citation_func: 引用检查函数
+            query: User query
+            original_content: Original document content (plain text, unchanged)
+            original_html: Original HTML (for creating temporary structure)
+            retrieved_docs: Retrieved competitor documents
+            competitor_contents: Competitor full contents
+            max_retries: Maximum retry count
+            check_citation_func: Citation check function
 
         Returns:
-            QueryResultV2: 查询结果（包含最终生效的建议和 final_html）
+            QueryResultV2: Query result (containing final effective suggestion and final_html)
         """
         import time
 
@@ -176,18 +176,18 @@ class SuggestionCollectorV2:
         final_diagnosis: Optional[DiagnosisInfo] = None
         final_suggestion: Optional[SuggestionV2] = None
         iterations_used = 0
-        # GEO Score 信息（V2.3 新增）
+        # GEO Score info (V2.3 new)
         final_geo_score: Optional[GEOScoreInfo] = None
 
-        # 为该 query 创建内存
+        # Create memory for this query
         memory = OptimizationMemoryV2()
         self._query_memories[query] = memory
 
-        # ========== 初始化遥测存储和策略引擎（复用 geo_agent）==========
+        # ========== Initialize telemetry store and policy engine (reuse geo_agent) ==========
         telemetry = TelemetryStore(url="", core_idea=self.core_ideas.get(0, ""))
         geo_policy_engine = GeoAgentPolicyEngine(telemetry)
 
-        # 保留原有的 BatchPolicyEngine 用于策略注入 prompt 生成
+        # Keep original BatchPolicyEngine for strategy injection prompt generation
         batch_policy_engine = BatchPolicyEngine(
             self.history_manager,
             memory,
@@ -195,24 +195,24 @@ class SuggestionCollectorV2:
             enable_history=self.enable_history,
         )
 
-        # ========== 双结构策略：frozen_structure（索引稳定）+ temp_structure（内容最新）==========
+        # ========== Dual structure strategy: frozen_structure (stable index) + temp_structure (latest content) ==========
         struct_parser = StructuralHtmlParser(min_length=50)
 
-        # frozen_structure: 只计算一次 chunks，用于稳定的索引映射
+        # frozen_structure: calculate chunks only once, used for stable index mapping
         frozen_structure = struct_parser.parse(original_html)
         frozen_structure.calculate_chunks(max_chunk_length=2000)
         frozen_num_chunks = len(frozen_structure._chunks)
 
-        # JS Fallback: 当 chunks=0 时，创建虚拟 chunk 包含整个 HTML
-        # 这样 static_rendering 工具可以尝试从 JS/JSON 中提取内容
+        # JS Fallback: when chunks=0, create virtual chunk containing entire HTML
+        # This allows static_rendering tool to try extracting content from JS/JSON
         js_fallback_mode = False
         if frozen_num_chunks == 0 and original_html:
             from geo_agent.utils.structural_parser import ContentChunk
-            # 注意：使用 'id' 键名（不是 'geo_id'）以匹配 apply_modification_to_live 的期望
+            # Note: use 'id' key name (not 'geo_id') to match apply_modification_to_live expectations
             virtual_element = {
                 'text_content': original_content if original_content else '',
                 'original_html': original_html,
-                'id': 'virtual-js-chunk-0',  # 用于标识虚拟 chunk
+                'id': 'virtual-js-chunk-0',  # For identifying virtual chunk
             }
             virtual_chunk = ContentChunk(index=0, elements=[virtual_element])
             frozen_structure._chunks = [virtual_chunk]
@@ -220,13 +220,13 @@ class SuggestionCollectorV2:
             js_fallback_mode = True
             logger.info(f"[JS Fallback] Created virtual chunk from raw HTML ({len(original_html)} chars)")
 
-        # temp_structure: 动态更新的 DOM，用于内容最新状态
+        # temp_structure: dynamically updated DOM, for latest content state
         temp_structure = struct_parser.parse(original_html)
         if js_fallback_mode:
-            # 同步 temp_structure 的虚拟 chunk
+            # Sync temp_structure's virtual chunk
             temp_structure._chunks = frozen_structure._chunks.copy()
 
-        # 截断审计信息（跨迭代共享）
+        # Truncation audit info (shared across iterations)
         truncation_summary: Optional[str] = None
         has_truncation_alert = False
 
@@ -240,16 +240,16 @@ class SuggestionCollectorV2:
             logger.info(f"Query '{query[:50]}...' - Iteration {iteration}/{max_retries}")
 
             try:
-                # ========== 1. 刷新结构（和 GEO Agent 完全一致）==========
+                # ========== 1. Refresh structure (identical to GEO Agent) ==========
                 current_raw_html = temp_structure.export_html()
-                temp_structure = struct_parser.parse(current_raw_html)  # 重新解析
-                temp_content = temp_structure.get_clean_text()  # HTML → 纯文本
+                temp_structure = struct_parser.parse(current_raw_html)  # Reparse
+                temp_content = temp_structure.get_clean_text()  # HTML -> plain text
 
-                # 如果解析后内容为空，使用原始内容并跳过引用检查
+                # If parsed content is empty, use original content and skip citation check
                 content_empty = not temp_content or not temp_content.strip()
                 if content_empty:
                     logger.warning(f"Empty content after parsing at iteration {iteration}, using original for analysis")
-                    temp_content = original_content  # 用于后续截断审计
+                    temp_content = original_content  # For subsequent truncation audit
                     is_cited = False
                     cited_indices = []
                 elif check_citation_func:
@@ -260,10 +260,10 @@ class SuggestionCollectorV2:
                     generated_answer = citation_result.generated_answer
                     cited_indices = citation_result.citations_found_idx
 
-                    # 计算 GEO Score（V2.3 新增）
-                    # target_idx 默认为 competitor_contents 数量 + 1（目标文档在最后）
+                    # Calculate GEO Score (V2.3 new)
+                    # target_idx defaults to competitor_contents count + 1 (target document at the end)
                     num_sources = len(competitor_contents) + 1
-                    target_idx = num_sources  # 假设目标文档是最后一个
+                    target_idx = num_sources  # Assume target document is the last one
                     final_geo_score = compute_geo_score(generated_answer, target_idx, num_sources)
 
                     if is_cited:
@@ -273,13 +273,13 @@ class SuggestionCollectorV2:
                 else:
                     cited_indices = []
 
-                # ========== 3. 准备分析所需内容 ==========
-                # 使用双结构策略：索引来自 frozen_structure（稳定），内容来自 temp_structure（最新）
+                # ========== 3. Prepare content needed for analysis ==========
+                # Use dual structure strategy: index from frozen_structure (stable), content from temp_structure (latest)
                 indexed_content = frozen_structure.format_indexed_content_with_live_dom(temp_structure)
-                num_chunks = frozen_num_chunks  # 始终使用冻结的 chunk 数量
+                num_chunks = frozen_num_chunks  # Always use frozen chunk count
 
-                # ========== 3.1 截断审计（复用 geo_agent）==========
-                if iteration == 0:  # 只在第一次迭代执行截断审计
+                # ========== 3.1 Truncation audit (reuse geo_agent) ==========
+                if iteration == 0:  # Only execute truncation audit on first iteration
                     try:
                         audit_res = audit_content_truncation(
                             self.llm,
@@ -294,21 +294,21 @@ class SuggestionCollectorV2:
                     except Exception as e:
                         logger.warning(f"Truncation audit failed: {e}")
 
-                # 准备竞争对手内容
-                # 注意: cited_indices 是 1-based (LLM 生成 [1], [2] 等)
+                # Prepare competitor content
+                # Note: cited_indices is 1-based (LLM generates [1], [2], etc.)
                 if cited_indices and competitor_contents:
                     valid_indices = [i for i in cited_indices if 1 <= i <= len(competitor_contents)]
                     if valid_indices:
                         competitor_content = "\n---\n".join(
-                            [competitor_contents[i - 1][:3000] for i in valid_indices[:3]]  # i-1 转为 0-based
+                            [competitor_contents[i - 1][:3000] for i in valid_indices[:3]]  # i-1 converts to 0-based
                         )
                     else:
                         competitor_content = competitor_contents[0][:3000] if competitor_contents else ""
                 else:
                     competitor_content = competitor_contents[0][:3000] if competitor_contents else ""
 
-                # ========== 4. Phase 1 策略评估（诊断前，基于截断信息）==========
-                # JS Fallback 模式：强制使用 PARSING_FAILURE 诊断
+                # ========== 4. Phase 1 strategy evaluation (before diagnosis, based on truncation info) ==========
+                # JS Fallback mode: force use PARSING_FAILURE diagnosis
                 if js_fallback_mode:
                     pre_diagnosis_category = FailureCategory.PARSING_FAILURE
                     logger.info("[JS Fallback] Using PARSING_FAILURE diagnosis for JS/JSON content")
@@ -324,47 +324,47 @@ class SuggestionCollectorV2:
                     hidden_content_summary=truncation_summary or ""
                 )
 
-                # ========== 4.1 生成策略注入（合并 geo_agent 策略和 batch 策略）==========
+                # ========== 4.1 Generate strategy injection (merge geo_agent strategy and batch strategy) ==========
                 policy_injection = ""
                 if self.enable_policy_injection:
-                    # 优先使用 geo_agent 策略引擎的注入
+                    # Prioritize geo_agent policy engine injection
                     if pre_policy_eval.injection_prompt:
                         policy_injection = pre_policy_eval.injection_prompt
                     elif self.enable_memory:
-                        # Fallback 到 batch_policy_engine（仅当 enable_memory=True 时）
+                        # Fallback to batch_policy_engine (only when enable_memory=True)
                         policy_injection = batch_policy_engine.generate_policy_injection(
                             current_diagnosis=final_diagnosis,
                             current_chunk_index=None,
                         )
 
-                # ========== 5. 两阶段分析 ==========
+                # ========== 5. Two-phase analysis ==========
                 analysis, diagnosis = await analyze_failure_async(
                     llm=self.llm,
                     query=query,
                     indexed_target_doc=indexed_content,
                     competitor_doc=competitor_content,
                     memory=memory,
-                    truncation_audit_summary=truncation_summary,  # 传递截断信息
+                    truncation_audit_summary=truncation_summary,  # Pass truncation info
                     policy_injection=policy_injection,
                     num_chunks=num_chunks,
                     excluded_tools=self.excluded_tools,
                 )
 
-                # 记录诊断
+                # Record diagnosis
                 diagnosis_info = diagnosis.to_diagnosis_info()
                 final_diagnosis = diagnosis_info
                 logger.info(f"Diagnosis: {diagnosis.root_cause} - {diagnosis.key_deficiency}")
 
-                # JS Fallback 模式：强制使用 static_rendering 工具（仅第一次迭代）
+                # JS Fallback mode: force use static_rendering tool (first iteration only)
                 if js_fallback_mode and iteration == 0 and "static_rendering" not in self.excluded_tools:
                     original_tool = analysis.selected_tool_name
                     analysis.selected_tool_name = "static_rendering"
-                    analysis.tool_arguments = {}  # static_rendering 不需要额外参数
+                    analysis.tool_arguments = {}  # static_rendering doesn't need extra parameters
                     logger.info(f"[JS Fallback] Overriding tool: {original_tool} -> static_rendering")
 
                 logger.info(f"Tool Selected: {analysis.selected_tool_name}")
 
-                # ========== 5.1 Phase 2 策略评估（诊断后）==========
+                # ========== 5.1 Phase 2 strategy evaluation (after diagnosis) ==========
                 diagnosis_category = self._str_to_failure_category(diagnosis.root_cause)
 
                 policy_eval = geo_policy_engine.evaluate(
@@ -375,14 +375,14 @@ class SuggestionCollectorV2:
                     severity=diagnosis.severity
                 )
 
-                # ========== 5.2 应用强制工具覆盖（修复：重新生成参数）==========
-                # 注意：JS Fallback 模式下的 static_rendering 工具不应被覆盖
+                # ========== 5.2 Apply forced tool override (fix: regenerate arguments) ==========
+                # Note: static_rendering tool in JS Fallback mode should not be overridden
                 original_tool = analysis.selected_tool_name
                 skip_policy_override = (js_fallback_mode and analysis.selected_tool_name == "static_rendering")
                 if policy_eval.forced_tool and policy_eval.forced_tool != analysis.selected_tool_name and not skip_policy_override:
                     logger.info(f"🎯 Policy Override: {analysis.selected_tool_name} -> {policy_eval.forced_tool}")
 
-                    # 重新生成适配新工具的参数（修复参数不匹配问题）
+                    # Regenerate arguments adapted to new tool (fix argument mismatch issue)
                     try:
                         history_context = memory.get_history_summary() if self.enable_memory and memory else ""
                         analysis = await regenerate_tool_args_async(
@@ -397,17 +397,17 @@ class SuggestionCollectorV2:
                         logger.info(f"✅ Regenerated args for {policy_eval.forced_tool}")
                     except Exception as e:
                         logger.error(f"Failed to regenerate args for {policy_eval.forced_tool}: {e}")
-                        # 回退到原始工具
+                        # Fall back to original tool
                         analysis.selected_tool_name = original_tool
                         logger.warning(f"⚠️ Falling back to original tool: {original_tool}")
 
-                # ========== 5.3 检查工具是否被禁止 ==========
+                # ========== 5.3 Check if tool is blocked ==========
                 if analysis.selected_tool_name in policy_eval.blocked_tools:
                     logger.warning(f"Tool {analysis.selected_tool_name} is blocked by policy, trying next iteration")
                     tool_outcome = ToolOutcome.SKIPPED
                     continue
 
-                # ========== 5.4 快速失败检测（复用 geo_agent 的判断逻辑）==========
+                # ========== 5.4 Fast fail detection (reuse geo_agent judgment logic) ==========
                 is_fixable, fixable_reason = geo_policy_engine.is_category_fixable(diagnosis_category)
                 if not is_fixable and diagnosis.severity == "critical":
                     logger.warning(f"⚡ Unfixable diagnosis: {diagnosis.root_cause} - {fixable_reason}")
@@ -415,42 +415,42 @@ class SuggestionCollectorV2:
 
                 if policy_eval.should_skip:
                     logger.warning(f"⚡ Policy suggests skip: {policy_eval.skip_reason}")
-                    if iteration >= 1:  # 已尝试至少一次
+                    if iteration >= 1:  # Already tried at least once
                         break
 
-                # ========== 6. 准备工具参数（双结构策略）==========
+                # ========== 6. Prepare tool arguments (dual structure strategy) ==========
                 target_chunk_index = analysis.target_chunk_index or 0
                 if target_chunk_index >= num_chunks:
                     target_chunk_index = num_chunks - 1
 
-                # 使用双结构策略：frozen_structure 的索引定位，temp_structure 的最新内容
+                # Use dual structure strategy: frozen_structure index for positioning, temp_structure's latest content
                 tool_args = analysis.tool_arguments.copy()
                 tool_args.update(frozen_structure.get_chunk_tool_args_from_live(temp_structure, target_chunk_index))
 
-                # 获取 orchestra 的核心思想
+                # Get orchestra's core idea
                 orchestra_id = target_chunk_index // self.chunks_per_orchestra
                 core_idea = self.core_ideas.get(orchestra_id, "")
                 tool_args['core_idea'] = core_idea
                 tool_args['previous_modifications'] = memory.get_preservation_rules() if self.enable_memory else ""
 
-                # 为 content_relocation 工具添加必需参数 (和 geo_agent 一致)
+                # Add required parameters for content_relocation tool (aligned with geo_agent)
                 if analysis.selected_tool_name == "content_relocation":
-                    # 仅当 truncation_summary 有实际内容时才覆盖，否则保留 LLM 可能生成的值
+                    # Only override when truncation_summary has actual content, otherwise keep LLM's possibly generated value
                     if truncation_summary:
                         tool_args["hidden_content_summary"] = truncation_summary
                     elif "hidden_content_summary" not in tool_args:
                         tool_args["hidden_content_summary"] = ""
                     tool_args["query"] = query
 
-                # 为 intent_realignment 工具添加必需的 user_query 参数
+                # Add required user_query parameter for intent_realignment tool
                 if analysis.selected_tool_name == "intent_realignment":
                     tool_args["user_query"] = query
 
-                # 为 historical_redteam 工具添加必需的 target_query 参数
+                # Add required target_query parameter for historical_redteam tool
                 if analysis.selected_tool_name == "historical_redteam":
                     tool_args["target_query"] = query
 
-                # ========== 6.1 检查重复调用（与 geo_agent 完全一致）==========
+                # ========== 6.1 Check duplicate invocation (identical to geo_agent) ==========
                 args_hash = compute_args_hash(tool_args)
                 is_dup, dup_msg = geo_policy_engine.check_duplicate_invocation(analysis.selected_tool_name, args_hash)
                 if is_dup:
@@ -458,7 +458,7 @@ class SuggestionCollectorV2:
                     tool_outcome = ToolOutcome.SKIPPED
                     continue
 
-                # ========== 7. 执行工具 ==========
+                # ========== 7. Execute tool ==========
                 tool = registry.get_tool(analysis.selected_tool_name)
                 if not tool:
                     logger.error(f"Tool {analysis.selected_tool_name} not found.")
@@ -471,10 +471,10 @@ class SuggestionCollectorV2:
                     modified_chunk_html, key_changes = parse_tool_output(raw_output)
                     tool_outcome = ToolOutcome.SUCCESS
 
-                    # ========== 8. 更新临时结构（双结构策略：通过 frozen 索引定位，在 temp 上修改）==========
+                    # ========== 8. Update temporary structure (dual structure strategy: locate via frozen index, modify on temp) ==========
                     if js_fallback_mode:
-                        # JS Fallback 模式：虚拟 chunk 没有真正的 DOM 锚点
-                        # 直接用工具输出的新 HTML 替换整个结构
+                        # JS Fallback mode: virtual chunk has no real DOM anchor
+                        # Replace entire structure with tool output's new HTML directly
                         wrapped_html = f"<html><body>{modified_chunk_html}</body></html>"
                         temp_structure = struct_parser.parse(wrapped_html)
                         temp_structure.calculate_chunks(max_chunk_length=2000)
@@ -485,12 +485,12 @@ class SuggestionCollectorV2:
                         logger.warning(f"Failed to update DOM at frozen chunk index {target_chunk_index}")
                         tool_outcome = ToolOutcome.PARTIAL
 
-                    # 创建建议记录（包含新增字段）
+                    # Create suggestion record (including new fields)
                     final_suggestion = SuggestionV2(
                         suggestion_id=str(uuid.uuid4())[:8],
                         query=query,
                         tool_name=analysis.selected_tool_name,
-                        tool_arguments=analysis.tool_arguments,  # LLM 原始输出
+                        tool_arguments=analysis.tool_arguments,  # LLM original output
                         target_segment_index=target_chunk_index,
                         reasoning=analysis.reasoning,
                         proposed_content=modified_chunk_html,
@@ -498,14 +498,14 @@ class SuggestionCollectorV2:
                         diagnosis=diagnosis_info,
                         iteration=iteration,
                         confidence=self._calculate_confidence(diagnosis_info),
-                        executed_arguments=self._sanitize_for_logging(tool_args),  # 实际执行参数（脱敏）
+                        executed_arguments=self._sanitize_for_logging(tool_args),  # Actual executed arguments (sanitized)
                         truncation_info={
                             "has_alert": has_truncation_alert,
                             "summary": truncation_summary
                         } if has_truncation_alert else None,
                     )
 
-                    # 更新内存（仅当 enable_memory=True 时）
+                    # Update memory (only when enable_memory=True)
                     if self.enable_memory:
                         from .memory_manager import ModificationRecordV2
                         record = ModificationRecordV2(
@@ -527,7 +527,7 @@ class SuggestionCollectorV2:
                     tool_outcome = ToolOutcome.FAILED
                     tool_error_msg = str(e)
 
-                # ========== 9. 记录遥测数据（与 geo_agent 完全一致）==========
+                # ========== 9. Record telemetry data (identical to geo_agent) ==========
                 tool_duration = (time.time() - tool_start_time) * 1000
                 tool_span = ToolInvocationSpan(
                     tool_name=analysis.selected_tool_name,
@@ -561,7 +561,7 @@ class SuggestionCollectorV2:
                 traceback.print_exc()
                 continue
 
-        # 获取最终的 HTML
+        # Get final HTML
         final_html = temp_structure.export_html() if final_suggestion else None
 
         return QueryResultV2(
@@ -572,7 +572,7 @@ class SuggestionCollectorV2:
             diagnosis=final_diagnosis,
             iterations_used=iterations_used,
             final_html=final_html,
-            # GEO Score 字段（V2.3 新增）
+            # GEO Score fields (V2.3 new)
             geo_score_word=final_geo_score.word if final_geo_score else 0.0,
             geo_score_position=final_geo_score.position if final_geo_score else 0.0,
             geo_score_wordpos=final_geo_score.wordpos if final_geo_score else 0.0,
@@ -581,7 +581,7 @@ class SuggestionCollectorV2:
         )
 
     def _calculate_confidence(self, diagnosis: DiagnosisInfo) -> float:
-        """根据诊断计算置信度"""
+        """Calculate confidence based on diagnosis"""
         severity_scores = {
             "critical": 0.9,
             "high": 0.8,
@@ -602,31 +602,31 @@ class SuggestionCollectorV2:
         max_retries_per_query: int = 3,
     ) -> List[QueryResultV2]:
         """
-        批量收集建议
+        Batch collect suggestions
 
-        V2.1 更新：
-        - 传递 original_html 给每个 query 的处理
-        - 每个 query 独立在临时结构上测试修改
+        V2.1 Updates:
+        - Pass original_html to each query's processing
+        - Each query independently tests modifications on temporary structure
 
         Args:
-            queries: 查询列表
-            current_content: 当前内容（纯文本）
-            current_html: 当前 HTML（必需，用于创建临时结构）
-            retrieved_docs_func: 获取检索文档的函数 (query) -> List[SearchResult]
-            competitor_contents_func: 获取竞争对手内容的函数 (docs) -> List[str]
-            check_citation_func: 检查引用的函数
-            max_concurrency: 最大并发数
-            max_retries_per_query: 每个 query 的最大重试次数
+            queries: List of queries
+            current_content: Current content (plain text)
+            current_html: Current HTML (required, for creating temporary structure)
+            retrieved_docs_func: Function to get retrieved documents (query) -> List[SearchResult]
+            competitor_contents_func: Function to get competitor contents (docs) -> List[str]
+            check_citation_func: Citation check function
+            max_concurrency: Maximum concurrency
+            max_retries_per_query: Maximum retries per query
 
         Returns:
-            List[QueryResultV2]: 查询结果列表（每个包含 final_html）
+            List[QueryResultV2]: List of query results (each containing final_html)
         """
         semaphore = asyncio.Semaphore(max_concurrency)
 
         async def process_query(query: str) -> QueryResultV2:
             async with semaphore:
                 try:
-                    # 获取检索文档
+                    # Get retrieved documents
                     retrieved_docs = await retrieved_docs_func(query)
                     if not retrieved_docs:
                         return QueryResultV2(
@@ -637,7 +637,7 @@ class SuggestionCollectorV2:
                             error="No retrieved documents",
                         )
 
-                    # 获取竞争对手内容（返回过滤后的 docs 和 contents）
+                    # Get competitor contents (returns filtered docs and contents)
                     result = await competitor_contents_func(retrieved_docs)
                     if isinstance(result, tuple) and len(result) == 2:
                         retrieved_docs, competitor_contents = result
@@ -652,7 +652,7 @@ class SuggestionCollectorV2:
                             error="No competitor contents",
                         )
 
-                    # 收集建议（传递 HTML）
+                    # Collect suggestions (pass HTML)
                     return await self.collect_for_query(
                         query=query,
                         original_content=current_content,
@@ -680,15 +680,15 @@ class SuggestionCollectorV2:
         return results
 
     def get_all_suggestions(self) -> List[SuggestionV2]:
-        """获取所有收集到的建议"""
+        """Get all collected suggestions"""
         all_suggestions = []
         for memory in self._query_memories.values():
-            # 从内存中提取建议
+            # Extract suggestions from memory
             pass
         return all_suggestions
 
     def get_diagnosis_stats(self) -> Dict[str, int]:
-        """获取诊断统计"""
+        """Get diagnosis statistics"""
         stats: Dict[str, int] = {}
         for memory in self._query_memories.values():
             for cause, count in memory.diagnosis_stats.items():

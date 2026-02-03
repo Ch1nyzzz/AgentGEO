@@ -15,7 +15,7 @@ class ContentLoader:
         self.config = load_config(config_path)
         self.browser = HtmlBrowser(config_path)
         self.parser = HtmlParser()
-        # 使用与 HtmlBrowser 相同的缓存目录
+        # Use the same cache directory as HtmlBrowser
         data_config = self.config.get('data', {})
         cache_dir = data_config.get('html_db_path', 'outputs')
         self.saver = DataSaver(base_dir=cache_dir)
@@ -32,7 +32,7 @@ class ContentLoader:
         else:
             file_alias = self.saver.clean_filename(url)
 
-        # 先尝试从 parsed_content 缓存加载
+        # First try to load from parsed_content cache
         for suffix in ['trafilatura_parsed', 'readability_parsed', 'parsed']:
             cached_content = self.saver.load(f"parsed_content/{file_alias}_{suffix}", ext="txt")
             if cached_content:

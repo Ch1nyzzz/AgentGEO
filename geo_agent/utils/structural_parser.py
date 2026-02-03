@@ -92,35 +92,35 @@ class HtmlStructureManager:
 
     def _is_noise_match(self, ident: str, keyword: str) -> bool:
         """
-        精确匹配噪声关键词，支持边界检测。
+        Precise noise keyword matching with boundary detection.
 
-        匹配规则：
-        - 完全匹配: sidebar == sidebar ✓
-        - 前缀匹配: sidebar-left ✓ (keyword 在开头，后接分隔符)
-        - 排除中间位置: content-sidebar-wrap ✗
-        - 排除无边界: theiastickysidebar ✗
-        - 排除布局修饰词: with-sidebar, has-sidebar ✗ (表示容器属性而非元素本身)
+        Matching rules:
+        - Exact match: sidebar == sidebar ✓
+        - Prefix match: sidebar-left ✓ (keyword at start, followed by separator)
+        - Exclude middle position: content-sidebar-wrap ✗
+        - Exclude no boundary: theiastickysidebar ✗
+        - Exclude layout modifiers: with-sidebar, has-sidebar ✗ (indicates container property, not element itself)
         """
         if ident == keyword:
             return True
 
-        # 排除布局修饰前缀（表示"包含X"而非"是X"）
+        # Exclude layout modifier prefixes (indicates "contains X" rather than "is X")
         layout_prefixes = ['with', 'has', 'no', 'without', 'content']
 
-        # 只匹配 keyword 在开头的情况（前缀匹配）
-        # 例如：sidebar-left, sidebar_nav
+        # Only match when keyword is at the beginning (prefix match)
+        # Examples: sidebar-left, sidebar_nav
         prefix_pattern = rf'^{re.escape(keyword)}([-_]|$)'
         if re.search(prefix_pattern, ident):
             return True
 
-        # 对于后缀位置（left-sidebar），检查前缀不是布局修饰词
+        # For suffix position (left-sidebar), check prefix is not a layout modifier
         suffix_pattern = rf'(^|[-_]){re.escape(keyword)}$'
         if re.search(suffix_pattern, ident):
-            # 提取 keyword 之前的部分
+            # Extract the part before keyword
             idx = ident.rfind(keyword)
             if idx > 0:
                 prefix_part = ident[:idx].rstrip('-_')
-                # 如果前缀是布局修饰词，不匹配
+                # If prefix is a layout modifier, don't match
                 if prefix_part in layout_prefixes:
                     return False
             return True
@@ -139,23 +139,23 @@ class HtmlStructureManager:
         # 2. Mark Semantic & Heuristic Noise (Headers/Footers/Widgets)
         
         # A. Semantic tags to ignore (Mark instead of decompose)
-        # 注意：检查内容量，避免误杀包含主内容的异常 HTML 结构
+        # Note: Check content volume to avoid false positives on abnormal HTML structures containing main content
         for tag in self.soup(['nav', 'iframe']):
-            # 如果 nav 包含大量文本或段落，可能是主内容误放
+            # If nav contains large amounts of text or paragraphs, main content may be misplaced
             text_len = len(tag.get_text(strip=True))
             p_count = len(tag.find_all('p'))
             if text_len > 5000 or p_count > 10:
                 continue
             tag['data-geo-ignore'] = 'true'
 
-        # 对于 header/footer，只在不包含 main/article 等主内容时才忽略
+        # For header/footer, only ignore when not containing main/article and other main content
         for tag in self.soup(['header', 'footer']):
-            # 如果 header/footer 包含 main 或 article，说明是异常的 HTML 结构，不应忽略
+            # If header/footer contains main or article, it's an abnormal HTML structure, should not ignore
             if tag.find(['main', 'article', 'section']):
                 continue
-            # 新增：如果包含大量文本内容，可能是主内容误放在 header 中
+            # Additional: if contains large text content, main content may be misplaced in header
             text_len = len(tag.get_text(strip=True))
-            if text_len > 5000:  # 阈值：超过 5000 字符认为是主内容
+            if text_len > 5000:  # Threshold: over 5000 characters considered main content
                 continue
             tag['data-geo-ignore'] = 'true'
 
@@ -263,10 +263,10 @@ class HtmlStructureManager:
                 # Filter logic: Skip empty p or very short content
                 text = tag.get_text(strip=True)
                 if len(text) > 0: # Can add min_length check here
-                    # 复用已有 geo-id（如果存在且有效），否则生成新 ID
+                    # Reuse existing geo-id (if exists and valid), otherwise generate new ID
                     existing_id = tag.get('data-geo-id')
                     if existing_id and existing_id.startswith('geo-') and existing_id not in self._node_map:
-                        geo_id = existing_id  # 复用已有 ID，且无冲突
+                        geo_id = existing_id  # Reuse existing ID, no conflict
                     else:
                         geo_id = self._generate_id()
                         tag['data-geo-id'] = geo_id
@@ -302,10 +302,10 @@ class HtmlStructureManager:
 
     def get_current_text(self) -> str:
         """
-        从当前 DOM 状态获取文本（非快照）。
+        Get text from current DOM state (not snapshot).
 
-        与 get_clean_text() 不同，此方法直接从当前 DOM 读取文本，
-        能够反映所有已应用的修改。在 extracted_elements 可能过时的场景下使用。
+        Unlike get_clean_text(), this method reads text directly from current DOM,
+        reflecting all applied modifications. Use when extracted_elements may be outdated.
         """
         if self.soup.body:
             return self.soup.body.get_text(separator="\n\n", strip=True)
@@ -401,7 +401,7 @@ class HtmlStructureManager:
             return False
 
         try:
-            # 1. Prepare New Content (使用 lxml 保持与初始解析一致)
+            # 1. Prepare New Content (use lxml to maintain consistency with initial parsing)
             new_soup = BeautifulSoup(new_html, 'lxml')
             # Extract actual elements from body if present
             if new_soup.body:
@@ -472,22 +472,22 @@ class HtmlStructureManager:
             [f">> [CHUNK_ID: {i}]\n{chunk_text.text}" for i, chunk_text in enumerate(self._chunks)]
         )
 
-    # ---------------- 双结构策略 API（用于 Batch GEO Agent）----------------
+    # ---------------- Dual Structure Strategy API (for Batch GEO Agent) ----------------
 
     def format_indexed_content_with_live_dom(self, live_structure: 'HtmlStructureManager') -> str:
         """
-        使用冻结索引 + 活跃内容生成 indexed_content。
+        Generate indexed_content using frozen index + live content.
 
         Args:
-            live_structure: 活跃结构（包含最新修改的 DOM）
+            live_structure: Active structure (DOM with latest modifications)
 
         Returns:
-            str: 带索引的内容，索引来自 self（冻结结构），文本内容来自 live_structure
+            str: Indexed content, indexes from self (frozen structure), text content from live_structure
 
-        工作原理：
-        - self（冻结结构）的 _chunks 提供稳定的索引
-        - 通过 geo-id 在 live_structure 中查找对应元素获取最新文本
-        - 如果 geo-id 在 live_structure 中不存在，使用冻结结构的原始文本
+        How it works:
+        - self (frozen structure)'s _chunks provide stable indexes
+        - Lookup corresponding elements in live_structure via geo-id to get latest text
+        - If geo-id doesn't exist in live_structure, use original text from frozen structure
         """
         if not self._chunks:
             return ""

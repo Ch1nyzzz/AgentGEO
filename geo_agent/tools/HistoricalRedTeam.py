@@ -178,13 +178,14 @@ def apply_historical_redteam(
     target_query: str,
     previous_modifications: str = "",
     context_before: str = "",
-    context_after: str = ""
+    context_after: str = "",
+    config_path: str = "geo_agent/config.yaml"
 ) -> str:
     """
     Red Team Attack: Makes content containing outdated information more likely to be cited by LLMs.
     Rewrites content using specific strategies to make LLMs perceive historical context as an essential part of a complete answer.
     """
-    llm = get_llm_from_config('geo_agent/config.yaml')
+    llm = get_llm_from_config(config_path)
 
     prompt_template = REDTEAM_ATTACK_PROMPTS.get(attack_strategy)
     if not prompt_template:

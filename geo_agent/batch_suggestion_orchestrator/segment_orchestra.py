@@ -1,6 +1,6 @@
 """
-Batch GEO V2 分段编排器
-基于诊断结果的智能建议合并和修改综合
+Batch GEO V2 Segment Orchestrator
+Intelligent suggestion merging and modification synthesis based on diagnostic results
 """
 import asyncio
 import logging
@@ -10,7 +10,7 @@ from typing import Any, Dict, List, Optional
 
 from langchain_core.prompts import ChatPromptTemplate
 
-# 设置路径
+# Setup paths
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GEO_AGENT_ROOT = REPO_ROOT / "geo_agent"
 if str(GEO_AGENT_ROOT) not in sys.path:
@@ -28,17 +28,17 @@ logger = logging.getLogger(__name__)
 
 class SegmentOrchestraV2:
     """
-    V2 分段编排器
+    V2 Segment Orchestrator
 
-    负责：
-    1. 管理一组 chunks 的修改建议
-    2. 基于诊断结果智能合并建议
-    3. 执行综合后的修改
+    Responsible for:
+    1. Managing modification suggestions for a group of chunks
+    2. Intelligent merging of suggestions based on diagnostic results
+    3. Executing synthesized modifications
 
-    新增特性：
-    - 诊断感知的建议优先级排序
-    - 冲突检测和解决
-    - 增量修改支持
+    New features:
+    - Diagnosis-aware suggestion priority ranking
+    - Conflict detection and resolution
+    - Incremental modification support
     """
 
     def __init__(
@@ -56,36 +56,36 @@ class SegmentOrchestraV2:
         self.llm = llm
         self.tool_executor = ToolExecutor()
 
-        # 按 chunk 索引组织的建议
+        # Suggestions organized by chunk index
         self._suggestions_by_chunk: Dict[int, List[SuggestionV2]] = {}
 
     def add_suggestions(self, suggestions: List[SuggestionV2]) -> None:
-        """添加建议到编排器"""
+        """Add suggestions to orchestrator"""
         for suggestion in suggestions:
-            # 只接受属于该分区的建议
+            # Only accept suggestions belonging to this partition
             if suggestion.target_segment_index in self.orchestra_group.segment_indices:
                 self.orchestra_group.add_suggestion(suggestion)
 
-                # 按 chunk 索引组织
+                # Organize by chunk index
                 idx = suggestion.target_segment_index
                 if idx not in self._suggestions_by_chunk:
                     self._suggestions_by_chunk[idx] = []
                 self._suggestions_by_chunk[idx].append(suggestion)
 
     def get_suggestions_for_chunk(self, chunk_index: int) -> List[SuggestionV2]:
-        """获取特定 chunk 的所有建议"""
+        """Get all suggestions for specific chunk"""
         return self._suggestions_by_chunk.get(chunk_index, [])
 
     def _rank_suggestions_by_diagnosis(
         self, suggestions: List[SuggestionV2]
     ) -> List[SuggestionV2]:
         """
-        根据诊断结果对建议进行排序
+        Rank suggestions based on diagnostic results
 
-        排序依据：
-        1. 严重程度 (severity)
-        2. 置信度 (confidence)
-        3. 迭代次数（越晚越优先，因为已经尝试过早期方案）
+        Ranking criteria:
+        1. Severity
+        2. Confidence
+        3. Iteration count (later preferred, as earlier approaches already tried)
         """
         def priority_key(s: SuggestionV2) -> float:
             return s.get_priority_score()
@@ -96,18 +96,18 @@ class SegmentOrchestraV2:
         self, suggestions: List[SuggestionV2]
     ) -> Dict[str, List[SuggestionV2]]:
         """
-        检测冲突的建议
+        Detect conflicting suggestions
 
-        冲突类型：
-        - same_tool: 同一工具被多次选择
-        - opposite_diagnosis: 诊断结果相反（例如 MISSING_INFO vs LOW_INFO_DENSITY）
+        Conflict types:
+        - same_tool: Same tool selected multiple times
+        - opposite_diagnosis: Opposite diagnostic results (e.g., MISSING_INFO vs LOW_INFO_DENSITY)
         """
         conflicts: Dict[str, List[SuggestionV2]] = {
             "same_tool": [],
             "same_chunk": [],
         }
 
-        # 按工具分组
+        # Group by tool
         by_tool: Dict[str, List[SuggestionV2]] = {}
         for s in suggestions:
             if s.tool_name not in by_tool:
@@ -118,7 +118,7 @@ class SegmentOrchestraV2:
             if len(group) > 1:
                 conflicts["same_tool"].extend(group)
 
-        # 同一 chunk 的多个建议
+        # Multiple suggestions for same chunk
         for idx, group in self._suggestions_by_chunk.items():
             if len(group) > 1:
                 conflicts["same_chunk"].extend(group)
@@ -131,18 +131,18 @@ class SegmentOrchestraV2:
         max_per_segment: int = 3,
     ) -> Dict[int, str]:
         """
-        综合多个建议，生成最终修改
+        Synthesize multiple suggestions to generate final modifications
 
         Args:
-            strategy: 合并策略
-                - "diagnosis_aware": 基于诊断结果的智能合并
-                - "priority": 按优先级选择最高的
-                - "vote": 投票选择最常见的工具
-                - "llm_merge": 使用 LLM 合并
-            max_per_segment: 每个段落最多应用的建议数
+            strategy: Merge strategy
+                - "diagnosis_aware": Intelligent merging based on diagnostic results
+                - "priority": Select highest priority
+                - "vote": Vote for most common tool
+                - "llm_merge": Use LLM to merge
+            max_per_segment: Max suggestions to apply per segment
 
         Returns:
-            Dict[int, str]: chunk_index -> 修改后的内容
+            Dict[int, str]: chunk_index -> modified content
         """
         modifications: Dict[int, str] = {}
         applied_ids: List[str] = []
@@ -153,14 +153,14 @@ class SegmentOrchestraV2:
             if not chunk_suggestions:
                 continue
 
-            # 1. 排序建议
+            # 1. Rank suggestions
             ranked = self._rank_suggestions_by_diagnosis(chunk_suggestions)
 
-            # 2. 根据策略选择要应用的建议
+            # 2. Select suggestions to apply based on strategy
             if strategy == "diagnosis_aware":
                 selected = self._select_diagnosis_aware(ranked, max_per_segment)
             elif strategy == "priority":
-                selected = ranked[:1]  # 只选最高优先级
+                selected = ranked[:1]  # Only select highest priority
             elif strategy == "vote":
                 selected = self._select_by_vote(ranked)
             elif strategy == "llm_merge":
@@ -171,8 +171,8 @@ class SegmentOrchestraV2:
             if not selected:
                 continue
 
-            # 3. 应用选中的建议
-            # 使用第一个（最高优先级）建议的内容
+            # 3. Apply selected suggestions
+            # Use content from first (highest priority) suggestion
             best = selected[0]
             if best.proposed_content:
                 modifications[chunk_idx] = best.proposed_content
@@ -189,12 +189,12 @@ class SegmentOrchestraV2:
         self, suggestions: List[SuggestionV2], max_count: int
     ) -> List[SuggestionV2]:
         """
-        基于诊断结果的智能选择
+        Intelligent selection based on diagnostic results
 
-        规则：
-        1. 优先选择高严重程度的建议
-        2. 避免选择相同诊断类型的多个建议
-        3. 考虑工具多样性
+        Rules:
+        1. Prioritize high severity suggestions
+        2. Avoid selecting multiple suggestions with same diagnosis type
+        3. Consider tool diversity
         """
         selected: List[SuggestionV2] = []
         seen_diagnoses: set = set()
@@ -207,12 +207,12 @@ class SegmentOrchestraV2:
             diagnosis = s.diagnosis.root_cause if s.diagnosis else "UNKNOWN"
             tool = s.tool_name
 
-            # 避免重复诊断类型（除非是高严重程度）
+            # Avoid duplicate diagnosis types (unless high severity)
             if diagnosis in seen_diagnoses:
                 if s.diagnosis and s.diagnosis.severity not in ["critical", "high"]:
                     continue
 
-            # 避免重复工具（除非诊断不同）
+            # Avoid duplicate tools (unless diagnosis is different)
             if tool in seen_tools and diagnosis in seen_diagnoses:
                 continue
 
@@ -223,7 +223,7 @@ class SegmentOrchestraV2:
         return selected
 
     def _select_by_vote(self, suggestions: List[SuggestionV2]) -> List[SuggestionV2]:
-        """通过投票选择最常见的工具"""
+        """Select most common tool by voting"""
         tool_counts: Dict[str, int] = {}
         tool_suggestions: Dict[str, List[SuggestionV2]] = {}
 
@@ -237,18 +237,18 @@ class SegmentOrchestraV2:
         if not tool_counts:
             return []
 
-        # 选择票数最高的工具
+        # Select tool with most votes
         best_tool = max(tool_counts, key=tool_counts.get)
         return tool_suggestions[best_tool][:1]
 
     async def _select_by_llm(
         self, suggestions: List[SuggestionV2], chunk_idx: int
     ) -> List[SuggestionV2]:
-        """使用 LLM 智能选择"""
+        """Intelligent selection using LLM"""
         if not self.llm or len(suggestions) <= 1:
             return suggestions[:1]
 
-        # 准备建议描述
+        # Prepare suggestion descriptions
         suggestions_desc = []
         for i, s in enumerate(suggestions):
             diagnosis_info = ""
@@ -297,7 +297,7 @@ Output only the index number (e.g., "0" or "1").
             else:
                 response = await asyncio.to_thread(self.llm.invoke, final_prompt)
 
-            # 解析索引
+            # Parse index
             idx_str = response.content.strip()
             idx = int(idx_str)
             if 0 <= idx < len(suggestions):
@@ -308,11 +308,11 @@ Output only the index number (e.g., "0" or "1").
         return suggestions[:1]
 
     def get_diagnosis_summary(self) -> Dict[str, int]:
-        """获取该分区的诊断摘要"""
+        """Get diagnosis summary for this partition"""
         return self.orchestra_group.diagnosis_summary
 
     def get_dominant_failure(self) -> Optional[str]:
-        """获取最常见的失败类型"""
+        """Get most common failure type"""
         return self.orchestra_group.get_dominant_failure()
 
 
@@ -324,17 +324,17 @@ async def create_orchestras_from_chunks(
     llm = None,
 ) -> List[SegmentOrchestraV2]:
     """
-    从 chunks 创建 orchestras
+    Create orchestras from chunks
 
     Args:
-        chunks: ContentChunk 列表
-        chunks_per_orchestra: 每个 orchestra 的 chunk 数量
-        history_context: 历史上下文
-        config_path: 配置路径
-        llm: LLM 实例
+        chunks: ContentChunk list
+        chunks_per_orchestra: Number of chunks per orchestra
+        history_context: History context
+        config_path: Config path
+        llm: LLM instance
 
     Returns:
-        List[SegmentOrchestraV2]: orchestra 列表
+        List[SegmentOrchestraV2]: Orchestra list
     """
     orchestras = []
     n = len(chunks)
@@ -342,7 +342,7 @@ async def create_orchestras_from_chunks(
     for i in range(0, n, chunks_per_orchestra):
         indices = list(range(i, min(i + chunks_per_orchestra, n)))
 
-        # 收集内容
+        # Collect content
         original_content = "\n".join(chunks[idx].text for idx in indices)
         original_html = "\n".join(chunks[idx].html for idx in indices)
 

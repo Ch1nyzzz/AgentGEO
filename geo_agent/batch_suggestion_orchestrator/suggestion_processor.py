@@ -1,6 +1,6 @@
 """
-AgentGEO V2 建议处理协调器
-协调完整的批量处理流程，完全基于 geo_agent 架构
+AgentGEO V2 Suggestion Processing Coordinator
+Coordinates complete batch processing workflow, fully based on geo_agent architecture
 """
 import asyncio
 import logging
@@ -9,7 +9,7 @@ import uuid
 from pathlib import Path
 from typing import Callable, Dict, List, Optional, Tuple
 
-# 设置路径
+# Setup paths
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GEO_AGENT_ROOT = REPO_ROOT / "geo_agent"
 if str(GEO_AGENT_ROOT) not in sys.path:
@@ -35,14 +35,14 @@ logger = logging.getLogger(__name__)
 
 
 class CoreIdeaManagerV2:
-    """V2 核心思想管理器"""
+    """V2 Core idea manager"""
 
     def __init__(self, llm):
         self.llm = llm
         self.core_ideas: Dict[int, str] = {}
 
     async def extract_core_idea(self, content: str) -> str:
-        """提取核心思想"""
+        """Extract core idea"""
         from langchain_core.prompts import ChatPromptTemplate
 
         prompt = ChatPromptTemplate.from_template(
@@ -78,7 +78,7 @@ CORE IDEA (2-3 sentences):
         chunks: List[ContentChunk],
         orchestras: List[OrchestraGroupV2],
     ) -> None:
-        """为所有 orchestras 提取核心思想"""
+        """Extract core ideas for all orchestras"""
 
         async def extract_one(orch: OrchestraGroupV2) -> Tuple[int, str]:
             content = "\n".join(
@@ -92,7 +92,7 @@ CORE IDEA (2-3 sentences):
 
         for orch_id, core_idea in results:
             self.core_ideas[orch_id] = core_idea
-            # 更新 orchestra
+            # Update orchestra
             for orch in orchestras:
                 if orch.orchestra_id == orch_id:
                     orch.core_idea = core_idea
@@ -103,18 +103,18 @@ CORE IDEA (2-3 sentences):
 
 class SuggestionProcessorV2:
     """
-    V2 建议处理协调器 - AgentGEO 核心处理流程
+    V2 Suggestion Processing Coordinator - AgentGEO core processing workflow
 
-    完全基于 geo_agent 架构，使用两阶段失败分析
+    Fully based on geo_agent architecture, uses two-phase failure analysis
 
-    流程：
-    1. 解析 HTML 并获取 chunks
-    2. 动态创建 Orchestras
-    3. 并行提取核心思想
-    4. 并行收集 suggestions（使用两阶段分析）
-    5. 通过 Orchestra 并行综合决策
-    6. 应用修改
-    7. 更新历史记录
+    Workflow:
+    1. Parse HTML and get chunks
+    2. Dynamically create Orchestras
+    3. Extract core ideas in parallel
+    4. Collect suggestions in parallel (using two-phase analysis)
+    5. Synthesize decisions through Orchestra in parallel
+    6. Apply modifications
+    7. Update history records
     """
 
     def __init__(
@@ -132,7 +132,7 @@ class SuggestionProcessorV2:
         self.struct_parser = StructuralHtmlParser(min_length=50)
         self.core_idea_manager = CoreIdeaManagerV2(llm)
 
-        # 历史管理器
+        # History manager
         if history_manager:
             self.history_manager = history_manager
         elif config.history_persist_path:
@@ -142,14 +142,14 @@ class SuggestionProcessorV2:
         else:
             self.history_manager = HistoryManagerV2()
 
-        # 搜索和内容获取函数
+        # Search and content retrieval functions
         self.search_func = search_func
         self.competitor_content_func = competitor_content_func
 
     def _create_orchestras(
         self, chunks: List[ContentChunk]
     ) -> List[OrchestraGroupV2]:
-        """根据 ContentChunk 动态创建 Orchestras"""
+        """Dynamically create Orchestras from ContentChunks"""
         n = len(chunks)
         orchestras = []
         ppo = self.config.chunks_per_orchestra
@@ -177,42 +177,42 @@ class SuggestionProcessorV2:
         raw_html: Optional[str] = None,
     ) -> OptimizationResultV2:
         """
-        处理一个 batch 的 queries
+        Process a batch of queries
 
         Args:
-            content: 当前文档内容（纯文本）
-            queries: 要处理的 query 列表
-            raw_html: HTML 内容（优先使用）
+            content: Current document content (plain text)
+            queries: List of queries to process
+            raw_html: HTML content (used preferentially)
 
         Returns:
-            OptimizationResultV2: 批次结果
+            OptimizationResultV2: Batch result
         """
         batch_id = str(uuid.uuid4())[:8]
         print(f"\n=== Processing Batch {batch_id} (V2) ===")
         print(f"Queries: {len(queries)}")
 
-        # 1. 解析 HTML 并获取 chunks
-        js_fallback_mode = False  # 标记是否使用 JS fallback 模式
+        # 1. Parse HTML and get chunks
+        js_fallback_mode = False  # Flag for JS fallback mode
         if raw_html:
             current_structure = self.struct_parser.parse(raw_html)
             current_structure.calculate_chunks(max_chunk_length=2000)
             chunks = current_structure._chunks
             current_text = current_structure.get_clean_text()
 
-            # JS Fallback: 当 chunks=0 时，创建虚拟 chunk 包含整个 HTML
-            # 这样 static_rendering 工具可以尝试从 JS/JSON 中提取内容
+            # JS Fallback: when chunks=0, create virtual chunk containing entire HTML
+            # This allows static_rendering tool to try extracting content from JS/JSON
             if not chunks and raw_html:
                 from geo_agent.utils.structural_parser import ContentChunk
-                # 创建虚拟 chunk，包含整个 HTML
-                # 注意：使用 'id' 键名（不是 'geo_id'）以匹配 apply_modification_to_live 的期望
+                # Create virtual chunk containing entire HTML
+                # Note: use 'id' key name (not 'geo_id') to match apply_modification_to_live expectations
                 virtual_element = {
-                    'text_content': content if content else '',  # 使用传入的 content 作为文本
-                    'original_html': raw_html,  # 保留完整 HTML 供工具处理
-                    'id': 'virtual-js-chunk-0',  # 用于标识虚拟 chunk
+                    'text_content': content if content else '',  # Use passed content as text
+                    'original_html': raw_html,  # Keep complete HTML for tool processing
+                    'id': 'virtual-js-chunk-0',  # Identifier for virtual chunk
                 }
                 virtual_chunk = ContentChunk(index=0, elements=[virtual_element])
                 chunks = [virtual_chunk]
-                current_structure._chunks = chunks  # 更新结构中的 chunks
+                current_structure._chunks = chunks  # Update chunks in structure
                 js_fallback_mode = True
                 print(f"[JS Fallback] Created virtual chunk from raw HTML ({len(raw_html)} chars)")
         else:
@@ -224,19 +224,19 @@ class SuggestionProcessorV2:
 
         print(f"Chunks: {len(chunks)}{' (JS fallback)' if js_fallback_mode else ''}")
 
-        # 2. 动态创建 Orchestras
+        # 2. Dynamically create Orchestras
         orchestras = self._create_orchestras(chunks)
         print(f"Orchestras: {len(orchestras)}")
 
-        # 3. 并行提取核心思想
+        # 3. Extract core ideas in parallel
         await self.core_idea_manager.extract_all_orchestra_core_ideas(chunks, orchestras)
         core_ideas = self.core_idea_manager.get_all_core_ideas()
 
-        # 4. 获取历史上下文（仅当 enable_history=True 时）
+        # 4. Get history context (only when enable_history=True)
         history_context = self.history_manager.get_preservation_rules() if self.config.enable_history else ""
 
-        # 5. 创建 SuggestionCollector
-        # 根据配置决定是否排除 autogeo_rephrase 工具
+        # 5. Create SuggestionCollector
+        # Decide whether to exclude autogeo_rephrase tool based on config
         excluded_tools = [] if self.config.enable_autogeo_rephrase else ["autogeo_rephrase"]
 
         collector = SuggestionCollectorV2(
@@ -253,7 +253,7 @@ class SuggestionProcessorV2:
             excluded_tools=excluded_tools,
         )
 
-        # 6. 定义检索和引用检查函数
+        # 6. Define retrieval and citation check functions
         async def get_retrieved_docs(query: str):
             if self.search_func:
                 return await self.search_func(query)
@@ -262,10 +262,10 @@ class SuggestionProcessorV2:
         async def get_competitor_contents(docs):
             if self.competitor_content_func:
                 result = await self.competitor_content_func(docs)
-                # 兼容元组返回 (filtered_docs, contents)
+                # Compatible with tuple return (filtered_docs, contents)
                 if isinstance(result, tuple) and len(result) == 2:
                     return result
-                return (docs, result)  # 兼容旧格式
+                return (docs, result)  # Compatible with old format
             return ([], [])
 
         async def check_citation(query, current_content, retrieved_docs, competitor_contents):
@@ -279,9 +279,9 @@ class SuggestionProcessorV2:
                 query, temp_page, retrieved_docs, competitor_contents
             )
 
-        # 7. 并行收集 suggestions（传递 HTML 用于临时结构测试）
+        # 7. Collect suggestions in parallel (pass HTML for temporary structure testing)
         print(f"Collecting suggestions for {len(queries)} queries...")
-        # V2.1: 始终提供 HTML，用于每个 query 的临时结构测试
+        # V2.1: Always provide HTML for temporary structure testing per query
         current_html_for_test = current_structure.export_html()
         query_results = await collector.collect_batch(
             queries=queries,
@@ -294,14 +294,14 @@ class SuggestionProcessorV2:
             max_retries_per_query=self.config.max_retries_per_query,
         )
 
-        # 8. 收集所有 suggestions
+        # 8. Collect all suggestions
         all_suggestions: List[SuggestionV2] = []
         for qr in query_results:
             all_suggestions.extend(qr.suggestions)
 
         print(f"Collected {len(all_suggestions)} suggestions")
 
-        # 9. 创建 SegmentOrchestras 并分配 suggestions
+        # 9. Create SegmentOrchestras and assign suggestions
         segment_orchestras: List[SegmentOrchestraV2] = []
         for orch in orchestras:
             segment_orch = SegmentOrchestraV2(
@@ -311,7 +311,7 @@ class SuggestionProcessorV2:
                 llm=self.llm,
             )
 
-            # 过滤属于该分区的 suggestions
+            # Filter suggestions belonging to this partition
             relevant = [
                 s
                 for s in all_suggestions
@@ -320,7 +320,7 @@ class SuggestionProcessorV2:
             segment_orch.add_suggestions(relevant)
             segment_orchestras.append(segment_orch)
 
-        # 10. 并行综合决策生成最终修改
+        # 10. Synthesize decisions in parallel to generate final modifications
         print("Synthesizing modifications...")
         synthesis_tasks = [
             orch.synthesize_modifications(
@@ -331,7 +331,7 @@ class SuggestionProcessorV2:
         ]
         synthesis_results = await asyncio.gather(*synthesis_tasks)
 
-        # 合并所有修改
+        # Merge all modifications
         all_modifications: Dict[int, str] = {}
         applied_suggestion_ids: List[str] = []
 
@@ -339,22 +339,22 @@ class SuggestionProcessorV2:
             all_modifications.update(modifications)
             applied_suggestion_ids.extend(orch.orchestra_group.applied_suggestions)
 
-        # V2.4: 收集应用的工具详细信息
+        # V2.4: Collect applied tool details
         suggestion_map = {s.suggestion_id: s for s in all_suggestions}
         applied_tools: List[AppliedToolInfo] = []
         for sid in applied_suggestion_ids:
             if sid in suggestion_map:
                 applied_tools.append(AppliedToolInfo.from_suggestion(suggestion_map[sid]))
 
-        # 11. 应用修改到 HTML 结构
+        # 11. Apply modifications to HTML structure
         if js_fallback_mode:
-            # JS Fallback 模式：直接使用 query_results 中的 final_html
-            # 因为虚拟 chunk 没有真正的 DOM 锚点，无法做 chunk 替换
+            # JS Fallback mode: directly use final_html from query_results
+            # Virtual chunks have no real DOM anchors, cannot do chunk replacement
             final_html_from_results = None
             for qr in query_results:
                 if qr.final_html:
                     final_html_from_results = qr.final_html
-                    break  # 只有一个 query，取第一个有效的
+                    break  # Only one query, take first valid one
 
             if final_html_from_results:
                 current_structure = self.struct_parser.parse(final_html_from_results)
@@ -364,7 +364,7 @@ class SuggestionProcessorV2:
             else:
                 print(f"[JS Fallback] No final_html available, content unchanged")
         else:
-            # 普通模式：倒序遍历避免索引漂移
+            # Normal mode: reverse traversal to avoid index drift
             for seg_idx in sorted(all_modifications.keys(), reverse=True):
                 if seg_idx < len(chunks):
                     modified_html = all_modifications[seg_idx]
@@ -372,22 +372,22 @@ class SuggestionProcessorV2:
                         seg_idx, modified_html, highlight=True
                     )
 
-            # 所有修改完成后，重新解析 HTML 以更新 extracted_elements
-            # 这是关键步骤：replace_chunk_by_index 只修改 DOM，不更新 extracted_elements
-            # 必须重新 parse 才能让 get_clean_text() 返回最新内容
+            # After all modifications, re-parse HTML to update extracted_elements
+            # This is critical: replace_chunk_by_index only modifies DOM, doesn't update extracted_elements
+            # Must re-parse for get_clean_text() to return latest content
             current_structure = self.struct_parser.parse(current_structure.export_html())
             current_structure.calculate_chunks(max_chunk_length=2000)
             chunks = current_structure._chunks
 
-        # 获取最终内容
+        # Get final content
         new_html = current_structure.export_html()
         new_content = current_structure.get_clean_text()
 
-        # 12. 计算成功率
+        # 12. Calculate success rate
         cited_count = sum(1 for qr in query_results if qr.is_cited)
         success_before = cited_count / len(query_results) if query_results else 0
 
-        # 13. 创建结果
+        # 13. Create result
         result = OptimizationResultV2(
             batch_id=batch_id,
             queries=queries,
@@ -398,15 +398,15 @@ class SuggestionProcessorV2:
             content_after=new_content,
             success_rate_before=success_before,
             html_after=new_html,
-            applied_tools=applied_tools,  # V2.4: 添加工具详情
+            applied_tools=applied_tools,  # V2.4: Add tool details
         )
 
-        # 计算诊断统计
+        # Calculate diagnosis statistics
         result.compute_diagnosis_stats()
-        # 计算 GEO Score 统计（V2.3 新增）
+        # Calculate GEO Score statistics (V2.3 addition)
         result.compute_geo_score_stats()
 
-        # 14. 更新历史（仅当 enable_history=True 时）
+        # 14. Update history (only when enable_history=True)
         if self.config.enable_cross_batch_history and self.config.enable_history:
             self.history_manager.add_batch_result(result)
 
@@ -427,15 +427,15 @@ class SuggestionProcessorV2:
         raw_html: Optional[str] = None,
     ) -> List[OptimizationResultV2]:
         """
-        处理所有 queries，自动分批
+        Process all queries with automatic batching
 
         Args:
-            content: 纯文本内容
-            all_queries: 所有 query 列表
-            raw_html: HTML 内容（优先使用）
+            content: Plain text content
+            all_queries: All query list
+            raw_html: HTML content (used preferentially)
 
         Returns:
-            List[OptimizationResultV2]: 所有批次结果
+            List[OptimizationResultV2]: All batch results
         """
         results: List[OptimizationResultV2] = []
         current_content = content
@@ -465,12 +465,12 @@ class SuggestionProcessorV2:
             )
             results.append(result)
 
-            # 更新内容用于下一个 batch
+            # Update content for next batch
             current_content = result.content_after
             if result.html_after:
                 current_html = result.html_after
 
-        # 汇总统计
+        # Aggregate statistics
         total_suggestions = sum(len(r.all_suggestions) for r in results)
         total_applied = sum(len(r.applied_modifications) for r in results)
         overall_diagnosis_stats: Dict[str, int] = {}
@@ -478,7 +478,7 @@ class SuggestionProcessorV2:
             for cause, count in r.diagnosis_stats.items():
                 overall_diagnosis_stats[cause] = overall_diagnosis_stats.get(cause, 0) + count
 
-        # GEO Score 汇总（V2.3 新增）
+        # GEO Score aggregation (V2.3 addition)
         total_queries = sum(len(r.query_results) for r in results)
         if total_queries > 0:
             avg_geo_overall = sum(r.avg_geo_score_overall * len(r.query_results) for r in results) / total_queries

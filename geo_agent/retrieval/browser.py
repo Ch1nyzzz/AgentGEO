@@ -154,5 +154,5 @@ class HtmlBrowser:
             logging.error("ClueWeb22 database path invalid or does not exist.")
             return None
 
-        # uuid 作为文件名，ext="html" 会自动添加 .html 后缀
+        # uuid as filename, ext="html" will automatically add .html suffix
         return self.saver.load(uuid, ext="html")

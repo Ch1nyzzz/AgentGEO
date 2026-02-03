@@ -13,7 +13,7 @@ from .Persuasion import apply_persuasion
 from .ContentRelocation import relocate_content
 from .AutoGEORephrase import autogeo_rephrase
 
-# 可以在这里定义导出的内容
+# Can define exports here
 __all__ = [
     "registry",
     "optimize_bluf",

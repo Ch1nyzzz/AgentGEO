@@ -1,6 +1,6 @@
 """
 Memory Module for GEO Optimization
-记录修改历史，防止后续优化覆盖之前的改进
+Records modification history to prevent subsequent optimizations from overwriting previous improvements
 """
 from datetime import datetime
 from typing import List, Tuple
@@ -8,27 +8,27 @@ from pydantic import BaseModel, Field
 
 
 class ModificationRecord(BaseModel):
-    """单次修改记录"""
-    query: str = Field(..., description="为哪个 query 做的修改")
-    tool_name: str = Field(..., description="使用的工具")
-    reasoning: str = Field("", description="为什么做这个修改")
-    key_changes: List[str] = Field(default_factory=list, description="关键改动摘要")
+    """Single modification record"""
+    query: str = Field(..., description="The query this modification was made for")
+    tool_name: str = Field(..., description="The tool used")
+    reasoning: str = Field("", description="Why this modification was made")
+    key_changes: List[str] = Field(default_factory=list, description="Summary of key changes")
     timestamp: str = Field(default_factory=lambda: datetime.now().isoformat())
 
 
 class OptimizationMemory:
-    """优化记忆模块 - 管理修改历史"""
+    """Optimization memory module - manages modification history"""
 
     def __init__(self, core_idea: str = ""):
         self.core_idea = core_idea
         self.modifications: List[ModificationRecord] = []
 
     def add_modification(self, record: ModificationRecord) -> None:
-        """添加一条修改记录"""
+        """Add a modification record"""
         self.modifications.append(record)
 
     def get_history_summary(self) -> str:
-        """生成历史修改摘要，用于注入到 prompt 中"""
+        """Generate historical modification summary for injection into prompts"""
         if not self.modifications:
             return "No previous modifications."
 
@@ -44,7 +44,7 @@ class OptimizationMemory:
         return "\n\n".join(summary_parts)
 
     def get_preservation_rules(self) -> str:
-        """生成保护之前修改的规则，注入到工具 prompt 中"""
+        """Generate rules for preserving previous modifications, injected into tool prompts"""
         if not self.modifications:
             return ""
 
@@ -62,11 +62,11 @@ class OptimizationMemory:
         return rules
 
     def get_recent_modifications(self, n: int = 3) -> List[ModificationRecord]:
-        """获取最近 n 条修改记录"""
+        """Get the most recent n modification records"""
         return self.modifications[-n:] if self.modifications else []
 
     def to_dict(self) -> dict:
-        """序列化为字典，用于日志保存"""
+        """Serialize to dictionary for log storage"""
         return {
             "core_idea": self.core_idea,
             "modifications": [
@@ -82,20 +82,20 @@ class OptimizationMemory:
         }
 
 
-# 工具输出分隔符
+# Tool output separator
 MODIFICATION_SUMMARY_SEPARATOR = "---MODIFICATION_SUMMARY---"
 
 
 def _clean_html_content(content: str) -> str:
     """
-    清洗 LLM 输出的 HTML 内容
+    Clean HTML content from LLM output
 
-    处理以下情况：
-    - 移除代码块标记（```html ... ```）
-    - 验证是否有 HTML 标签
-    - 纯文本包装成 <p> 标签
+    Handles the following cases:
+    - Remove code block markers (```html ... ```)
+    - Validate presence of HTML tags
+    - Wrap plain text in <p> tags
     """
-    # 移除代码块标记
+    # Remove code block markers
     if content.startswith("```html"):
         content = content[7:]
     elif content.startswith("```"):
@@ -104,16 +104,16 @@ def _clean_html_content(content: str) -> str:
         content = content[:-3]
     content = content.strip()
 
-    # 如果内容为空，返回空
+    # If content is empty, return empty
     if not content:
         return ""
 
-    # 验证是否有 HTML 标签，如果是纯文本则包装
+    # Validate HTML tags, wrap in tags if plain text
     from bs4 import BeautifulSoup
     soup = BeautifulSoup(content, 'html.parser')
-    # 检查是否有任何标签
+    # Check if there are any tags
     if not soup.find():
-        # 纯文本，包装成 <p>
+        # Plain text, wrap in <p>
         content = f"<p>{content}</p>"
 
     return content
@@ -121,18 +121,18 @@ def _clean_html_content(content: str) -> str:
 
 def parse_tool_output(raw_output: str) -> Tuple[str, List[str]]:
     """
-    解析工具输出，分离内容和改动摘要
+    Parse tool output, separate content and modification summary
 
     Args:
-        raw_output: 工具的原始输出，格式为:
-            [修改后的完整内容]
+        raw_output: Raw output from tool, format:
+            [Modified complete content]
 
             ---MODIFICATION_SUMMARY---
-            - 改动1
-            - 改动2
+            - Change 1
+            - Change 2
 
     Returns:
-        Tuple[str, List[str]]: (纯净内容, 关键改动列表)
+        Tuple[str, List[str]]: (Clean content, list of key changes)
     """
     if MODIFICATION_SUMMARY_SEPARATOR in raw_output:
         parts = raw_output.split(MODIFICATION_SUMMARY_SEPARATOR, 1)
@@ -142,16 +142,16 @@ def parse_tool_output(raw_output: str) -> Tuple[str, List[str]]:
         content = raw_output.strip()
         summary_section = ""
 
-    # 清洗代码块标记（LLM 可能返回 ```html ... ```）
+    # Clean code block markers (LLM may return ```html ... ```)
     content = _clean_html_content(content)
 
-    # 解析改动列表
+    # Parse list of changes
     key_changes = []
     if summary_section:
         for line in summary_section.split("\n"):
             line = line.strip()
             if line:
-                # 移除常见的列表标记
+                # Remove common list markers
                 clean_line = line.lstrip("-•*").strip()
                 if clean_line:
                     key_changes.append(clean_line)

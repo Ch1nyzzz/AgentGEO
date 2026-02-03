@@ -1,6 +1,6 @@
 """
-Batch GEO V2 工具执行器
-异步执行 geo_agent 工具，支持 Batch 模式的上下文注入
+Batch GEO V2 Tool Executor
+Async execution of geo_agent tools with Batch mode context injection support
 """
 import asyncio
 import logging
@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-# 设置路径
+# Setup paths
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GEO_AGENT_ROOT = REPO_ROOT / "geo_agent"
 if str(GEO_AGENT_ROOT) not in sys.path:
@@ -24,23 +24,23 @@ logger = logging.getLogger(__name__)
 
 class ToolExecutor:
     """
-    异步工具执行器
+    Async Tool Executor
 
-    负责：
-    1. 注入上下文参数（target_content, context_before, context_after 等）
-    2. 异步执行工具
-    3. 解析工具输出
+    Responsible for:
+    1. Injecting context parameters (target_content, context_before, context_after, etc.)
+    2. Async tool execution
+    3. Parsing tool output
     """
 
     def __init__(self):
         self.tools_map = registry.tools
 
     def get_tool(self, tool_name: str):
-        """获取工具实例"""
+        """Get tool instance"""
         return registry.get_tool(tool_name)
 
     def get_all_tools(self):
-        """获取所有工具"""
+        """Get all tools"""
         return registry.get_all_tools()
 
     async def execute_tool_async(
@@ -54,25 +54,25 @@ class ToolExecutor:
         previous_modifications: str = "",
     ) -> Tuple[str, List[str]]:
         """
-        异步执行工具
+        Async tool execution
 
         Args:
-            tool_name: 工具名称
-            tool_arguments: 工具参数（来自 LLM）
-            target_content: 目标内容
-            context_before: 前文上下文
-            context_after: 后文上下文
-            core_idea: 核心思想
-            previous_modifications: 之前的修改记录
+            tool_name: Tool name
+            tool_arguments: Tool arguments (from LLM)
+            target_content: Target content
+            context_before: Context before target
+            context_after: Context after target
+            core_idea: Core idea
+            previous_modifications: Previous modification records
 
         Returns:
-            Tuple[str, List[str]]: (修改后的内容, 关键改动列表)
+            Tuple[str, List[str]]: (Modified content, list of key changes)
         """
         tool = self.get_tool(tool_name)
         if not tool:
             raise ValueError(f"Tool '{tool_name}' not found in registry")
 
-        # 注入上下文参数
+        # Inject context parameters
         args = tool_arguments.copy()
         args["target_content"] = target_content
         args["context_before"] = context_before
@@ -80,14 +80,14 @@ class ToolExecutor:
         args["core_idea"] = core_idea
         args["previous_modifications"] = previous_modifications
 
-        # 异步执行工具
+        # Async tool execution
         try:
             raw_output = await asyncio.to_thread(tool.run, args)
         except Exception as e:
             logger.error(f"Tool execution failed: {tool_name}, error: {e}")
             raise RuntimeError(f"Tool execution failed: {e}") from e
 
-        # 解析输出
+        # Parse output
         modified_content, key_changes = parse_tool_output(raw_output)
 
         return modified_content, key_changes
@@ -96,38 +96,38 @@ class ToolExecutor:
         self,
         tool_name: str,
         tool_arguments: Dict[str, Any],
-        chunks: List[Any],  # ContentChunk 列表
+        chunks: List[Any],  # ContentChunk list
         target_chunk_index: int,
         core_idea: str = "",
         previous_modifications: str = "",
     ) -> Tuple[str, List[str], int]:
         """
-        执行工具并自动注入上下文
+        Execute tool with automatic context injection
 
-        从 chunks 列表中提取目标内容和上下文
+        Extracts target content and context from chunks list
 
         Args:
-            tool_name: 工具名称
-            tool_arguments: 工具参数
-            chunks: ContentChunk 列表
-            target_chunk_index: 目标 chunk 索引
-            core_idea: 核心思想
-            previous_modifications: 之前的修改记录
+            tool_name: Tool name
+            tool_arguments: Tool arguments
+            chunks: ContentChunk list
+            target_chunk_index: Target chunk index
+            core_idea: Core idea
+            previous_modifications: Previous modification records
 
         Returns:
-            Tuple[str, List[str], int]: (修改后的内容, 关键改动列表, 目标索引)
+            Tuple[str, List[str], int]: (Modified content, list of key changes, target index)
         """
         if not chunks:
             raise ValueError("Empty chunks list")
 
-        # 边界检查
+        # Boundary check
         target_idx = max(0, min(target_chunk_index, len(chunks) - 1))
 
-        # 提取目标内容
+        # Extract target content
         target_chunk = chunks[target_idx]
         target_content = target_chunk.html if hasattr(target_chunk, "html") else target_chunk.text
 
-        # 提取上下文
+        # Extract context
         context_before = ""
         context_after = ""
 
@@ -139,7 +139,7 @@ class ToolExecutor:
             next_chunk = chunks[target_idx + 1]
             context_after = next_chunk.text if hasattr(next_chunk, "text") else str(next_chunk)
 
-        # 执行工具
+        # Execute tool
         modified_content, key_changes = await self.execute_tool_async(
             tool_name=tool_name,
             tool_arguments=tool_arguments,
@@ -155,12 +155,12 @@ class ToolExecutor:
 
 class BatchToolExecutor(ToolExecutor):
     """
-    批量工具执行器
+    Batch Tool Executor
 
-    支持：
-    1. 并行执行多个工具调用
-    2. 冲突检测和解决
-    3. 结果聚合
+    Supports:
+    1. Parallel execution of multiple tool calls
+    2. Conflict detection and resolution
+    3. Result aggregation
     """
 
     def __init__(self, max_concurrency: int = 4):
@@ -176,20 +176,20 @@ class BatchToolExecutor(ToolExecutor):
         previous_modifications: str = "",
     ) -> List[Tuple[str, List[str], int, Optional[Exception]]]:
         """
-        批量执行工具调用
+        Batch execute tool calls
 
         Args:
-            tool_calls: 工具调用列表，每个元素包含：
+            tool_calls: List of tool calls, each containing:
                 - tool_name: str
                 - tool_arguments: Dict
                 - target_chunk_index: int
-            chunks: ContentChunk 列表
-            core_idea: 核心思想
-            previous_modifications: 之前的修改记录
+            chunks: ContentChunk list
+            core_idea: Core idea
+            previous_modifications: Previous modification records
 
         Returns:
             List[Tuple[str, List[str], int, Optional[Exception]]]:
-                每个元素为 (修改后内容, 关键改动, 目标索引, 异常或 None)
+                Each element is (modified content, key changes, target index, exception or None)
         """
 
         async def execute_one(call: Dict[str, Any]) -> Tuple[str, List[str], int, Optional[Exception]]:
@@ -217,15 +217,15 @@ class BatchToolExecutor(ToolExecutor):
         self, tool_calls: List[Dict[str, Any]]
     ) -> List[List[Dict[str, Any]]]:
         """
-        检测冲突的工具调用（同一 chunk 的多个修改）
+        Detect conflicting tool calls (multiple modifications to same chunk)
 
         Args:
-            tool_calls: 工具调用列表
+            tool_calls: List of tool calls
 
         Returns:
-            List[List[Dict]]: 冲突组列表
+            List[List[Dict]]: List of conflict groups
         """
-        # 按 target_chunk_index 分组
+        # Group by target_chunk_index
         by_chunk: Dict[int, List[Dict[str, Any]]] = {}
         for call in tool_calls:
             idx = call.get("target_chunk_index", 0)
@@ -233,7 +233,7 @@ class BatchToolExecutor(ToolExecutor):
                 by_chunk[idx] = []
             by_chunk[idx].append(call)
 
-        # 返回有冲突的组（同一 chunk 有多个调用）
+        # Return conflicting groups (same chunk has multiple calls)
         conflicts = [calls for calls in by_chunk.values() if len(calls) > 1]
 
         return conflicts
@@ -247,28 +247,28 @@ class BatchToolExecutor(ToolExecutor):
         resolution_strategy: str = "priority",
     ) -> Dict[int, Tuple[str, List[str]]]:
         """
-        执行工具调用并解决冲突
+        Execute tool calls and resolve conflicts
 
         Args:
-            tool_calls: 工具调用列表
-            chunks: ContentChunk 列表
-            core_idea: 核心思想
-            previous_modifications: 之前的修改记录
-            resolution_strategy: 冲突解决策略
-                - "priority": 使用优先级最高的调用
-                - "first": 使用第一个调用
-                - "merge": 尝试合并（暂未实现）
+            tool_calls: List of tool calls
+            chunks: ContentChunk list
+            core_idea: Core idea
+            previous_modifications: Previous modification records
+            resolution_strategy: Conflict resolution strategy
+                - "priority": Use highest priority call
+                - "first": Use first call
+                - "merge": Try to merge (not yet implemented)
 
         Returns:
-            Dict[int, Tuple[str, List[str]]]: chunk_index -> (修改内容, 关键改动)
+            Dict[int, Tuple[str, List[str]]]: chunk_index -> (modified content, key changes)
         """
-        # 检测冲突
+        # Detect conflicts
         conflicts = self.detect_conflicts(tool_calls)
 
         if conflicts:
             logger.warning(f"Detected {len(conflicts)} conflict groups")
 
-        # 解决冲突：选择每个 chunk 的最佳调用
+        # Resolve conflicts: select best call for each chunk
         resolved_calls: Dict[int, Dict[str, Any]] = {}
 
         for call in tool_calls:
@@ -277,24 +277,24 @@ class BatchToolExecutor(ToolExecutor):
             if idx not in resolved_calls:
                 resolved_calls[idx] = call
             else:
-                # 冲突解决
+                # Conflict resolution
                 if resolution_strategy == "priority":
-                    # 比较优先级分数
+                    # Compare priority scores
                     existing_priority = call.get("priority_score", 0.5)
                     new_priority = call.get("priority_score", 0.5)
                     if new_priority > existing_priority:
                         resolved_calls[idx] = call
                 elif resolution_strategy == "first":
-                    # 保持第一个
+                    # Keep the first one
                     pass
 
-        # 执行解决后的调用
+        # Execute resolved calls
         final_calls = list(resolved_calls.values())
         results = await self.execute_batch_async(
             final_calls, chunks, core_idea, previous_modifications
         )
 
-        # 组织结果
+        # Organize results
         output: Dict[int, Tuple[str, List[str]]] = {}
         for modified, changes, idx, error in results:
             if error is None:

@@ -1,23 +1,23 @@
 """
-多文档并行优化器 (Multi-Document Optimizer)
+Multi-Document Optimizer
 
-实现文档（WebPage）级别的并行处理能力，可控制同时优化的文档数量。
+Implements document (WebPage) level parallel processing capability with control over concurrent document count.
 
-架构设计：
+Architecture:
 ```
-MultiDocumentOptimizer (顶层控制)
-├── doc_semaphore: 控制文档级并发
-├── 共享资源池: llm, search_engine, generator, 缓存
+MultiDocumentOptimizer (top-level control)
+├── doc_semaphore: controls document-level concurrency
+├── shared resource pool: llm, search_engine, generator, cache
 └── optimize_documents_async()
-        └── 并行调度多个 AgentGEOV2
+        └── parallel scheduling of multiple AgentGEOV2
 ```
 
-主要特性：
-1. 文档级并行：通过 semaphore 控制同时处理的文档数
-2. 资源共享：LLM、搜索引擎、缓存在所有文档间共享
-3. 错误隔离：单个文档失败不影响其他文档（可配置 fail_fast）
-4. 进度回调：支持实时进度通知
-5. 灵活的 query 分配：支持每文档独立 queries 或共享 queries
+Key Features:
+1. Document-level parallelism: control concurrent documents via semaphore
+2. Resource sharing: LLM, search engine, cache shared across all documents
+3. Error isolation: single document failure doesn't affect others (configurable fail_fast)
+4. Progress callback: supports real-time progress notification
+5. Flexible query assignment: supports per-document or shared queries
 """
 
 import asyncio
@@ -46,16 +46,16 @@ from .models import (
 logger = logging.getLogger(__name__)
 
 
-# 进度回调类型
+# Progress callback type
 ProgressCallback = Callable[[int, int, str, Optional[str]], None]
-# 签名: (completed_count, total_count, current_url, status_message)
+# Signature: (completed_count, total_count, current_url, status_message)
 
 
 class MultiDocumentOptimizer:
     """
-    多文档并行优化器
+    Multi-document parallel optimizer
 
-    用于同时优化多个 WebPage，控制文档级并发数量，共享资源以提高效率。
+    Optimizes multiple WebPages simultaneously, controls document-level concurrency, shares resources for efficiency.
 
     Example:
         ```python
@@ -71,7 +71,7 @@ class MultiDocumentOptimizer:
             webpages=[page1, page2, page3],
             shared_queries=["query1", "query2", ...],
         )
-        print(f"成功: {result.success_count}/{result.total_count}")
+        print(f"Success: {result.success_count}/{result.total_count}")
         ```
     """
 
@@ -84,30 +84,30 @@ class MultiDocumentOptimizer:
         output_prefix: str = "",
     ):
         """
-        初始化多文档优化器
+        Initialize multi-document optimizer
 
         Args:
-            config_path: 配置文件路径
-            multi_config: 多文档配置，默认 MultiDocConfigV2()
-            disk_cache_dir: 磁盘缓存目录（跨文档共享）
-            optimization_log_dir: 优化日志目录
-            output_prefix: 输出文件前缀
+            config_path: Config file path
+            multi_config: Multi-document config, default MultiDocConfigV2()
+            disk_cache_dir: Disk cache directory (shared across documents)
+            optimization_log_dir: Optimization log directory
+            output_prefix: Output file prefix
         """
-        # 配置路径
+        # Config path
         config_file = Path(config_path)
         if not config_file.is_absolute():
             config_file = (REPO_ROOT / config_file).resolve()
         self.config_path = str(config_file)
 
-        # 多文档配置
+        # Multi-document config
         self.multi_config = multi_config or MultiDocConfigV2()
 
-        # 共享资源初始化
+        # Initialize shared resources
         self.llm = get_llm_from_config(self.config_path)
         self.search_engine = SearchManager(self.config_path)
         self.generator = AsyncInContextGeneratorV2(self.config_path)
 
-        # 搜索引擎类型
+        # Search engine type
         config = load_config(self.config_path)
         search_config = config.get("search", {})
         self._search_provider = search_config.get("provider", "chatnoir")
@@ -119,12 +119,12 @@ class MultiDocumentOptimizer:
 
         self._html_parser = HtmlParser(self.config_path)
 
-        # 共享缓存
+        # Shared cache
         self._html_content_cache: Dict[str, str] = {}
         self._search_cache: Dict[str, List[SearchResult]] = {}
         self._cache_lock = asyncio.Lock()
 
-        # 磁盘缓存
+        # Disk cache
         self._disk_cache_dir: Optional[Path] = None
         if disk_cache_dir:
             cache_path = Path(disk_cache_dir)
@@ -133,7 +133,7 @@ class MultiDocumentOptimizer:
             cache_path.mkdir(parents=True, exist_ok=True)
             self._disk_cache_dir = cache_path
 
-        # 日志目录
+        # Log directory
         self._optimization_log_dir: Optional[Path] = None
         if optimization_log_dir:
             log_path = Path(optimization_log_dir)
@@ -143,17 +143,17 @@ class MultiDocumentOptimizer:
 
         self._output_prefix = output_prefix
 
-        # 文档级信号量（控制并发）
+        # Document-level semaphore (controls concurrency)
         self._doc_semaphore: Optional[asyncio.Semaphore] = None
 
-        # 共享历史管理器
+        # Shared history manager
         history_path = None
         if self.multi_config.batch_config.history_persist_path:
             history_path = Path(self.multi_config.batch_config.history_persist_path)
         self._shared_history_manager = HistoryManagerV2(persist_path=history_path)
 
     def _get_semaphore(self) -> asyncio.Semaphore:
-        """获取或创建信号量（每个事件循环需要新建）"""
+        """Get or create semaphore (need new one for each event loop)"""
         if self._doc_semaphore is None:
             self._doc_semaphore = asyncio.Semaphore(
                 self.multi_config.max_doc_concurrency
@@ -161,7 +161,7 @@ class MultiDocumentOptimizer:
         return self._doc_semaphore
 
     async def _get_search_results(self, query: str) -> List[SearchResult]:
-        """获取搜索结果（带共享缓存）"""
+        """Get search results (with shared cache)"""
         import hashlib
         import json
 
@@ -170,7 +170,7 @@ class MultiDocumentOptimizer:
         if cached is not None:
             return cached
 
-        # 检查磁盘缓存
+        # Check disk cache
         cache_key = hashlib.sha256(query.encode("utf-8")).hexdigest()
         cache_path = self._disk_cache_dir / f"{cache_key}.json" if self._disk_cache_dir else None
 
@@ -185,12 +185,12 @@ class MultiDocumentOptimizer:
             except Exception as exc:
                 logger.warning("Failed to load disk cache: %s", exc)
 
-        # 执行搜索
+        # Execute search
         results = await asyncio.to_thread(self.search_engine.search, query)
         async with self._cache_lock:
             self._search_cache[query] = results
 
-        # 写入磁盘缓存
+        # Write to disk cache
         if cache_path:
             try:
                 with open(cache_path, "w", encoding="utf-8") as f:
@@ -206,7 +206,7 @@ class MultiDocumentOptimizer:
         return results
 
     async def _get_competitor_full_content(self, doc: SearchResult) -> Optional[str]:
-        """获取竞争对手完整内容（共享缓存）"""
+        """Get competitor full content (shared cache)"""
         if not doc.uuid:
             return doc.snippet or None
 
@@ -234,7 +234,7 @@ class MultiDocumentOptimizer:
     async def _get_all_competitor_contents(
         self, docs: List[SearchResult], target_count: int = 10
     ) -> Tuple[List[SearchResult], List[str]]:
-        """获取所有竞争对手内容"""
+        """Get all competitor contents"""
         filtered_docs = []
         filtered_contents = []
 
@@ -258,14 +258,14 @@ class MultiDocumentOptimizer:
         on_progress: Optional[ProgressCallback] = None,
     ) -> DocumentOptimizationResult:
         """
-        处理单个文档（带信号量控制）
+        Process single document (with semaphore control)
 
         Args:
-            webpage: 要优化的网页
-            queries: 该文档的查询列表
-            doc_index: 文档索引
-            total_docs: 总文档数
-            on_progress: 进度回调
+            webpage: WebPage to optimize
+            queries: Query list for this document
+            doc_index: Document index
+            total_docs: Total document count
+            on_progress: Progress callback
 
         Returns:
             DocumentOptimizationResult
@@ -281,7 +281,7 @@ class MultiDocumentOptimizer:
                 on_progress(doc_index, total_docs, webpage.url, "starting")
 
             try:
-                # 创建批处理器（注入共享资源）
+                # Create batch processor (inject shared resources)
                 processor = SuggestionProcessorV2(
                     llm=self.llm,
                     generator=self.generator,
@@ -291,14 +291,14 @@ class MultiDocumentOptimizer:
                     competitor_content_func=self._get_all_competitor_contents,
                 )
 
-                # 执行优化
+                # Execute optimization
                 results = await processor.process_all_batches(
                     content=webpage.cleaned_content,
                     all_queries=queries,
                     raw_html=webpage.raw_html if webpage.raw_html else None,
                 )
 
-                # 更新网页内容
+                # Update webpage content
                 if results:
                     final_result = results[-1]
                     webpage.cleaned_content = final_result.content_after
@@ -353,14 +353,14 @@ class MultiDocumentOptimizer:
         on_progress: Optional[ProgressCallback] = None,
     ) -> DocumentOptimizationResult:
         """
-        带重试的文档处理
+        Document processing with retry
 
         Args:
-            webpage: 要优化的网页
-            queries: 查询列表
-            doc_index: 文档索引
-            total_docs: 总文档数
-            on_progress: 进度回调
+            webpage: WebPage to optimize
+            queries: Query list
+            doc_index: Document index
+            total_docs: Total document count
+            on_progress: Progress callback
 
         Returns:
             DocumentOptimizationResult
@@ -387,7 +387,7 @@ class MultiDocumentOptimizer:
 
             last_result = result
 
-            # 短暂延迟后重试
+            # Brief delay before retry
             if attempt < max_retries:
                 await asyncio.sleep(1.0 * (attempt + 1))
 
@@ -408,18 +408,18 @@ class MultiDocumentOptimizer:
         on_progress: Optional[ProgressCallback] = None,
     ) -> MultiDocOptimizationResult:
         """
-        并行优化多个文档（每个文档有独立的 queries）
+        Parallel optimization of multiple documents (each with independent queries)
 
         Args:
-            webpages: WebPage 列表
-            queries_per_page: 每个文档对应的 queries 列表，长度必须与 webpages 相同
-            on_progress: 进度回调 (completed, total, url, status)
+            webpages: WebPage list
+            queries_per_page: Queries list for each document, length must match webpages
+            on_progress: Progress callback (completed, total, url, status)
 
         Returns:
             MultiDocOptimizationResult
 
         Raises:
-            ValueError: 如果 webpages 和 queries_per_page 长度不匹配
+            ValueError: If webpages and queries_per_page lengths don't match
         """
         if len(webpages) != len(queries_per_page):
             raise ValueError(
@@ -430,7 +430,7 @@ class MultiDocumentOptimizer:
         if not webpages:
             return MultiDocOptimizationResult(results=[], total_duration_ms=0)
 
-        # 重置信号量（新的事件循环）
+        # Reset semaphore (new event loop)
         self._doc_semaphore = asyncio.Semaphore(self.multi_config.max_doc_concurrency)
 
         start_time = time.time()
@@ -441,7 +441,7 @@ class MultiDocumentOptimizer:
             f"max_concurrency={self.multi_config.max_doc_concurrency}"
         )
 
-        # 创建所有任务
+        # Create all tasks
         tasks = [
             self._process_document_with_retry(
                 webpage=wp,
@@ -453,15 +453,15 @@ class MultiDocumentOptimizer:
             for idx, (wp, queries) in enumerate(zip(webpages, queries_per_page))
         ]
 
-        # 并发执行
+        # Concurrent execution
         if self.multi_config.fail_fast:
-            # fail_fast: 任一失败则取消全部
+            # fail_fast: cancel all if any fails
             results = []
             for coro in asyncio.as_completed(tasks):
                 try:
                     result = await coro
                     if not result.success:
-                        # 取消剩余任务
+                        # Cancel remaining tasks
                         for task in tasks:
                             if isinstance(task, asyncio.Task) and not task.done():
                                 task.cancel()
@@ -470,7 +470,7 @@ class MultiDocumentOptimizer:
                 except asyncio.CancelledError:
                     break
         else:
-            # 默认：收集所有结果（包括失败）
+            # Default: collect all results (including failures)
             results = await asyncio.gather(*tasks, return_exceptions=False)
 
         total_duration_ms = (time.time() - start_time) * 1000
@@ -491,14 +491,14 @@ class MultiDocumentOptimizer:
         on_progress: Optional[ProgressCallback] = None,
     ) -> MultiDocOptimizationResult:
         """
-        并行优化多个文档（所有文档共用同一组 queries）
+        Parallel optimization of multiple documents (all share same queries)
 
-        这是更常见的使用场景：一组 queries 用于测试/优化多个目标文档。
+        This is the more common use case: one set of queries for testing/optimizing multiple target documents.
 
         Args:
-            webpages: WebPage 列表
-            shared_queries: 所有文档共用的 queries
-            on_progress: 进度回调
+            webpages: WebPage list
+            shared_queries: Queries shared by all documents
+            on_progress: Progress callback
 
         Returns:
             MultiDocOptimizationResult
@@ -517,12 +517,12 @@ class MultiDocumentOptimizer:
         on_progress: Optional[ProgressCallback] = None,
     ) -> MultiDocOptimizationResult:
         """
-        同步包装器：并行优化多个文档
+        Sync wrapper: parallel optimization of multiple documents
 
         Args:
-            webpages: WebPage 列表
-            queries_per_page: 每个文档对应的 queries 列表
-            on_progress: 进度回调
+            webpages: WebPage list
+            queries_per_page: Queries list for each document
+            on_progress: Progress callback
 
         Returns:
             MultiDocOptimizationResult
@@ -545,12 +545,12 @@ class MultiDocumentOptimizer:
         on_progress: Optional[ProgressCallback] = None,
     ) -> MultiDocOptimizationResult:
         """
-        同步包装器：使用共享 queries 优化多个文档
+        Sync wrapper: optimize multiple documents with shared queries
 
         Args:
-            webpages: WebPage 列表
-            shared_queries: 共享的 queries
-            on_progress: 进度回调
+            webpages: WebPage list
+            shared_queries: Shared queries
+            on_progress: Progress callback
 
         Returns:
             MultiDocOptimizationResult
@@ -569,20 +569,20 @@ class MultiDocumentOptimizer:
         )
 
     def get_cache_stats(self) -> Dict[str, int]:
-        """获取缓存统计"""
+        """Get cache statistics"""
         return {
             "search_cache_size": len(self._search_cache),
             "html_cache_size": len(self._html_content_cache),
         }
 
     def clear_cache(self) -> None:
-        """清空所有缓存"""
+        """Clear all cache"""
         self._search_cache.clear()
         self._html_content_cache.clear()
         logger.info("Cache cleared")
 
 
-# 便捷函数
+# Convenience functions
 async def optimize_multiple_documents(
     webpages: List[WebPage],
     queries: List[str],
@@ -591,14 +591,14 @@ async def optimize_multiple_documents(
     disk_cache_dir: Optional[str] = None,
 ) -> MultiDocOptimizationResult:
     """
-    便捷函数：优化多个文档
+    Convenience function: optimize multiple documents
 
     Args:
-        webpages: WebPage 列表
-        queries: 共享的 queries
-        config_path: 配置文件路径
-        max_doc_concurrency: 文档并发数
-        disk_cache_dir: 磁盘缓存目录
+        webpages: WebPage list
+        queries: Shared queries
+        config_path: Config file path
+        max_doc_concurrency: Document concurrency
+        disk_cache_dir: Disk cache directory
 
     Returns:
         MultiDocOptimizationResult

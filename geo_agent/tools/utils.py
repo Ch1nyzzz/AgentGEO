@@ -48,7 +48,7 @@ def build_context_section(context_before: str, context_after: str) -> str:
             section += f"\n--- CONTENT AFTER (READ-ONLY) ---\n{context_after}\n--- END CONTENT AFTER ---\n"
     return section
 
-# 标准的防丢失 Prompt 片段
+# Standard preservation prompt fragment
 PRESERVATION_RULES = """
 ⚠️ CRITICAL PRESERVATION RULES:
 1. **CORE FOCUS**: The document MUST remain focused on the core idea - DO NOT drift to other topics. NEVER change what the document is fundamentally about.

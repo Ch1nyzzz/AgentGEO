@@ -14,9 +14,9 @@ class IntentRealignmentInput(BaseModel):
 
     
 
-def realign_intent(user_query: str, target_content: str, context_before: str = "", context_after: str = "", core_idea: str = "", previous_modifications: str = "") -> str:
+def realign_intent(user_query: str, target_content: str, context_before: str = "", context_after: str = "", core_idea: str = "", previous_modifications: str = "", config_path: str = "geo_agent/config.yaml") -> str:
     """Rewrites the content start to directly address the user intent."""
-    llm = get_llm_from_config('geo_agent/config.yaml')
+    llm = get_llm_from_config(config_path)
     context_section = build_context_section(context_before, context_after)
 
     # Build history section

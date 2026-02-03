@@ -8,10 +8,11 @@
 
 - **🧠 Competitor Gap Analysis**: Integrates with search APIs (ChatNoir) to compare target pages against top-ranked competitors, identifying content gaps, tone issues, and structural deficiencies.
 
-- **🛠️ Modular Tool System**:
-  - **Content Tools**: Knowledge injection, style rewriting, persuasive writing strategies
-  - **Technical Tools**: HTML semantic restructuring, metadata optimization
-  - **AutoGEO Integration**: Includes AutoGEO paper methods via the `autogeo_rephrase` tool
+- **🛠️ Modular Tool System** (11 registered tools):
+  - **Content Tools**: `entity_injection`, `bluf_optimization`, `intent_realignment`, `content_relocation`
+  - **Structure Tools**: `structure_optimization`, `data_serialization`, `noise_isolation`, `static_rendering`
+  - **Persuasion Tools**: `persuasive_rewriting` (6 strategies), `historical_redteam` (5 attack strategies)
+  - **Meta Tool**: `autogeo_rephrase` (9 rule sets from AutoGEO paper for comprehensive rewriting)
 
 - **🛡️ Type-Safe Architecture**: Built with **Pydantic** for robust schema validation, ensuring structured LLM outputs are accurate and reliable.
 
@@ -42,6 +43,7 @@
   - [Query Generation](#1-generate_queriespy)
   - [Optimization Runner](#2-run_optimizationpy)
 - [FAQ](#-faq)
+- [Changelog](#-changelog)
 - [License](#-license)
 
 ## 🏗️ Architecture Overview
@@ -85,6 +87,10 @@ AgentGEO/
 │   ├── agent/
 │   │   ├── optimizer.py        # Main optimization loop (the "Brain")
 │   │   └── __init__.py
+│   ├── batch_suggestion_orchestrator/
+│   │   ├── agent_geo.py        # AgentGEO V2 main entry
+│   │   ├── citation_checker.py # Pluggable citation checking (LLM/AttrEvaluator/Both)
+│   │   └── ...
 │   ├── core/
 │   │   ├── models.py           # Pydantic data models (WebPage, AnalysisResult, etc.)
 │   │   └── __init__.py
@@ -94,18 +100,40 @@ AgentGEO/
 │   │   └── __init__.py
 │   ├── generate/
 │   │   └── attr_first_then_gen.py  # Answer generation with attribution
-│   ├── tools/
+│   ├── search_engine/
+│   │   ├── chatnoir.py         # ChatNoir API client
+│   │   └── manager.py          # Search engine manager
+│   ├── tools/                  # 11 registered optimization tools
 │   │   ├── __init__.py         # Auto-loads and registers all tools
 │   │   ├── registry.py         # Tool registration center
-│   │   ├── content_tools.py    # Content optimization strategies
-│   │   └── tech_tools.py       # Technical optimization strategies
+│   │   ├── AutoGEORephrase.py  # AutoGEO methodology (9 rule sets)
+│   │   ├── EntityInjection.py  # Missing entity injection
+│   │   ├── BlufOptimization.py # Bottom Line Up Front
+│   │   ├── IntentRealignment.py # Query intent alignment
+│   │   ├── ContentRelocation.py # Surface hidden content
+│   │   ├── StructureOptimization.py # Semantic HTML structure
+│   │   ├── DataSerializer.py   # Narrative to table conversion
+│   │   ├── NoiseIsolator.py    # Semantic noise wrapping
+│   │   ├── StaticRendererSimulator.py # JS to static HTML
+│   │   ├── Persuasion.py       # Persuasive writing strategies
+│   │   └── HistoricalRedTeam.py # Outdated content optimization
 │   ├── utils/
+│   │   ├── html_parser.py      # Multi-method HTML parsing
 │   │   └── storage.py          # Data persistence utilities
 │   └── config.yaml             # Module configuration (LLM, search, parsing)
 │
+├── autogeo/                    # AutoGEO evaluation module (from AutoGEO paper)
+│   ├── evaluation/
+│   │   ├── metrics/            # GEO/GEU score calculation
+│   │   │   ├── geo_score.py    # Visibility metrics
+│   │   │   └── geu_score.py    # Utility metrics
+│   │   └── ...
+│   ├── rewriters/              # Rule-based rewriting
+│   └── ...
+│
 ├── attr_evaluator/             # Attribution evaluation module
 │   ├── run_dataset.py          # Main evaluation interface
-│   ├── run_script.py           # Script runner for subtasks
+│   ├── fast_return_res.py      # Fast mode interface
 │   └── ...                     # Subtask-specific utilities
 │
 ├── scripts/                    # Utility scripts
@@ -619,6 +647,54 @@ Ensure the corresponding API key is set in `.env`.
 - **Optional**: `url` (str), `doc_id` (str)
 
 Use `generate_queries.py` to add queries if you only have `raw_html`.
+
+## 📋 Changelog
+
+### v2.1.0 (2026-02-03)
+
+#### Bug Fixes
+
+**High Priority Fixes:**
+
+| Issue | File | Fix |
+|-------|------|-----|
+| `src.attr_evaluator` import error | `geo_agent/generate/attr_first_then_gen.py:29` | Changed to `attr_evaluator` |
+| Same import error | `geo_agent/batch_suggestion_orchestrator/citation_checker.py:362,369` | Changed to `attr_evaluator` |
+| `AutoGEO` package not found | `citation_checker.py:85` | Copied `autogeo/` to project root, changed import to `autogeo.evaluation.metrics.geo_score` |
+
+**Medium Priority Fixes:**
+
+| Issue | File | Fix |
+|-------|------|-----|
+| `REPO_ROOT` path miscalculation | `agent_geo.py:23` | Changed `parents[1]` to `parents[2]` |
+| `requests.exceptions.ConnectionResetError` doesn't exist | `chatnoir.py:77` | Changed to built-in `ConnectionResetError` |
+| `trafilatura` module-level import blocks graceful degradation | `html_parser.py:7` | Moved import inside `TrafilaturaParser.parse()` method |
+| Hardcoded config paths in 11 tool files | `geo_agent/tools/*.py` | Added `config_path` parameter with default value |
+
+**AutoGEO Integration Fixes:**
+
+| Issue | File | Fix |
+|-------|------|-----|
+| OpenAI client initialization at import time | `autogeo/evaluation/__init__.py` | Changed to lazy imports via `__getattr__` |
+| Same issue in metrics | `autogeo/evaluation/metrics/__init__.py` | GEO score direct import, GEU score lazy import |
+
+#### New Features
+
+- **11 Registered Optimization Tools**: All tools now support custom `config_path` parameter
+- **AutoGEO Rule Sets**: 9 combinations (3 datasets × 3 engines) with 10-19 rules each
+  - Datasets: `researchy`, `ecommerce`, `geo_bench`
+  - Engines: `gemini`, `gpt`, `claude`
+- **GEO Score Calculation**: Integrated `autogeo.evaluation.metrics.geo_score` for visibility metrics
+
+#### Verified Imports
+
+```bash
+✓ geo_agent.utils.html_parser.HtmlParser
+✓ geo_agent.search_engine.chatnoir.ChatNoirClient
+✓ geo_agent.batch_suggestion_orchestrator.citation_checker.compute_geo_score
+✓ geo_agent.batch_suggestion_orchestrator.agent_geo.AgentGEOV2
+✓ autogeo.evaluation.metrics.geo_score (extract_citations_new, impression_*_simple)
+```
 
 ## 📄 License
 

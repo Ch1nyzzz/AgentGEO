@@ -9,7 +9,7 @@ from geo_agent.core.telemetry import FailureCategory
 from geo_agent.tools import registry
 
 
-# 定义允许的失败类型字面量
+# Define allowed failure type literals
 FAILURE_CATEGORY_LITERAL = Literal[
     "PARSING_FAILURE",
     "CONTENT_TRUNCATED", 
@@ -41,14 +41,14 @@ class DiagnosisResult(BaseModel):
     )
     
     def to_category(self) -> FailureCategory:
-        """直接映射字符串到枚举，无需关键词匹配"""
+        """Direct mapping from string to enum, no keyword matching needed"""
         try:
             return FailureCategory(self.root_cause.lower())
         except ValueError:
             return FailureCategory.UNKNOWN
 
 
-# 完整的失败原因分类表（用于 Prompt）
+# Complete failure reason taxonomy (for Prompt)
 FAILURE_TAXONOMY = """
 ### FAILURE CATEGORY TAXONOMY (Choose ONE that best describes the root cause):
 
@@ -176,14 +176,14 @@ def select_tool_strategy(
     Uses 'Framework Injection' to guide the agent based on Diagnosis + History.
     
     Args:
-        policy_injection: 来自 PolicyEngine 的强制规则注入
+        policy_injection: Mandatory rules injected from PolicyEngine
     """
-    
-    # 如果有 PolicyEngine 注入的规则，优先使用
+
+    # If there are rules injected from PolicyEngine, use them first
     if policy_injection:
         policy_guidelines = policy_injection
     else:
-        # Fallback: 默认的 Prompt 规则
+        # Fallback: Default prompt rules
         policy_guidelines = """
         ### OPTIMIZATION POLICY (Follow Strictly):
         1. IF Diagnosis is 'Content Truncated' -> YOU MUST use 'content_relocation' to surface hidden content.
@@ -245,23 +245,23 @@ def regenerate_tool_args(
     history_context: str = "",
 ) -> AnalysisResult:
     """
-    Policy Override 后重新生成工具参数
+    Regenerate tool arguments after Policy Override
 
-    当 Policy Engine 强制切换工具时，原始参数可能不匹配新工具的 schema。
-    此函数重新调用 LLM，专门为指定工具生成正确格式的参数。
+    When Policy Engine forces a tool switch, original arguments may not match the new tool's schema.
+    This function re-invokes LLM to generate correctly formatted arguments for the specified tool.
 
     Args:
-        llm: LLM 实例
-        forced_tool: Policy 强制指定的工具名
-        diagnosis: 诊断结果
-        query: 用户查询
-        target_content_indexed: 带索引的目标文档
-        history_context: 历史上下文
+        llm: LLM instance
+        forced_tool: Tool name mandated by Policy
+        diagnosis: Diagnosis result
+        query: User query
+        target_content_indexed: Target document with index
+        history_context: History context
 
     Returns:
-        AnalysisResult: 包含正确参数格式的分析结果
+        AnalysisResult: Analysis result with correctly formatted arguments
     """
-    # 获取指定工具的 schema
+    # Get schema for the specified tool
     tool = registry.get_tool(forced_tool)
     if not tool:
         raise ValueError(f"Tool {forced_tool} not found in registry")
@@ -327,7 +327,7 @@ def regenerate_tool_args(
             res = llm.invoke(final_prompt)
             result = analysis_parser.parse(res.content)
 
-            # 验证工具名是否正确
+            # Verify tool name is correct
             if result.selected_tool_name != forced_tool:
                 print(f"⚠️ LLM returned wrong tool {result.selected_tool_name}, forcing to {forced_tool}")
                 result.selected_tool_name = forced_tool
@@ -361,9 +361,9 @@ def analyze_failure(
     3. Act (Tool Selection)
     
     Returns:
-        tuple: (AnalysisResult, DiagnosisResult) - 同时返回诊断结果供 Telemetry 记录
+        tuple: (AnalysisResult, DiagnosisResult) - Returns both results for Telemetry recording
     """
-    
+
     # 1. Diagnose
     diagnosis = diagnose_root_cause(
         llm, query, indexed_target_doc, competitor_doc, truncation_audit_summary

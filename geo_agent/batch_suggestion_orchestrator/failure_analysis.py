@@ -1,8 +1,8 @@
 """
-Batch GEO V2 失败分析模块
-异步版本的两阶段分析：诊断（Diagnose）+ 策略选择（Select Tool Strategy）
+Batch GEO V2 Failure Analysis Module
+Async version of two-phase analysis: Diagnose + Select Tool Strategy
 
-完全基于 geo_agent/agent/failure_analysis.py 实现
+Fully based on geo_agent/agent/failure_analysis.py implementation
 """
 import asyncio
 import logging
@@ -14,7 +14,7 @@ from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from pydantic import BaseModel, Field
 
-# 设置路径
+# Setup paths
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GEO_AGENT_ROOT = REPO_ROOT / "geo_agent"
 if str(GEO_AGENT_ROOT) not in sys.path:
@@ -31,7 +31,7 @@ from .models import DiagnosisInfo
 logger = logging.getLogger(__name__)
 
 
-# 定义允许的失败类型字面量（与 geo_agent 保持一致）
+# Define allowed failure type literals (consistent with geo_agent)
 FAILURE_CATEGORY_LITERAL = [
     "PARSING_FAILURE",
     "CONTENT_TRUNCATED",
@@ -52,7 +52,7 @@ FAILURE_CATEGORY_LITERAL = [
 
 
 class DiagnosisResult(BaseModel):
-    """诊断结果模型"""
+    """Diagnosis result model"""
 
     root_cause: str = Field(
         description="The failure category. MUST be one of the predefined values: "
@@ -66,7 +66,7 @@ class DiagnosisResult(BaseModel):
     severity: str = Field(default="medium", description="Severity level: low, medium, high, critical")
 
     def to_diagnosis_info(self) -> DiagnosisInfo:
-        """转换为 DiagnosisInfo 数据类"""
+        """Convert to DiagnosisInfo dataclass"""
         return DiagnosisInfo(
             root_cause=self.root_cause,
             explanation=self.explanation,
@@ -75,7 +75,7 @@ class DiagnosisResult(BaseModel):
         )
 
 
-# 完整的失败原因分类表（用于 Prompt）
+# Complete failure category taxonomy (for Prompt)
 FAILURE_TAXONOMY = """
 ### FAILURE CATEGORY TAXONOMY (Choose ONE that best describes the root cause):
 
@@ -112,7 +112,7 @@ FAILURE_TAXONOMY = """
 
 
 async def _ainvoke_llm(llm, prompt_input: str):
-    """异步调用 LLM"""
+    """Async LLM invocation"""
     if hasattr(llm, "ainvoke"):
         return await llm.ainvoke(prompt_input)
     return await asyncio.to_thread(llm.invoke, prompt_input)
@@ -139,7 +139,7 @@ async def diagnose_root_cause_async(
     Returns:
         DiagnosisResult: 诊断结果
     """
-    # Fast path: 如果检测到截断，直接返回
+    # Fast path: if truncation detected, return directly
     if truncation_info:
         return DiagnosisResult(
             root_cause="CONTENT_TRUNCATED",
@@ -236,11 +236,11 @@ async def select_tool_strategy_async(
     Returns:
         AnalysisResult: 分析结果
     """
-    # 如果有 PolicyEngine 注入的规则，优先使用
+    # If PolicyEngine has injected rules, use them preferentially
     if policy_injection:
         policy_guidelines = policy_injection
     else:
-        # Fallback: 默认的 Prompt 规则
+        # Fallback: Default Prompt rules
         policy_guidelines = """
         ### OPTIMIZATION POLICY (Follow Strictly):
         0. IF Diagnosis is 'PARSING_FAILURE' (JS/JSON content) -> YOU MUST use 'static_rendering' to extract readable content from embedded data.
@@ -251,7 +251,7 @@ async def select_tool_strategy_async(
         5. IF Diagnosis is 'LOW_INFO_DENSITY' -> Use 'entity_injection' to add specific facts.
         6. NEVER repeat the exact same tool and arguments if it failed previously.
         """
-        # 只有启用 autogeo_rephrase 时才添加相关策略
+        # Only add related policies when autogeo_rephrase is enabled
         if enable_autogeo_policy:
             policy_guidelines += """
         ### AUTOGEO META-TOOL POLICY:
@@ -262,7 +262,7 @@ async def select_tool_strategy_async(
 
     analysis_parser = PydanticOutputParser(pydantic_object=AnalysisResult)
 
-    # 根据是否有多个 chunks 调整 prompt
+    # Adjust prompt based on whether there are multiple chunks
     chunk_instruction = ""
     if num_chunks and num_chunks > 1:
         chunk_instruction = f"""
@@ -319,7 +319,7 @@ async def select_tool_strategy_async(
         format_instructions=analysis_parser.get_format_instructions(),
     )
 
-    # 重试逻辑
+    # Retry logic
     max_retries = 3
     last_error = None
 
@@ -336,7 +336,7 @@ async def select_tool_strategy_async(
                     "reasoning, selected_tool_name, AND tool_arguments (as a JSON object with the tool's required parameters)."
                 )
 
-    # 如果所有重试都失败，抛出异常
+    # If all retries fail, raise exception
     raise last_error
 
 
@@ -371,24 +371,24 @@ async def analyze_failure_async(
     Returns:
         Tuple[AnalysisResult, DiagnosisResult]: (分析结果, 诊断结果)
     """
-    # 1. 诊断
+    # 1. Diagnose
     diagnosis = await diagnose_root_cause_async(
         llm, query, indexed_target_doc, competitor_doc, truncation_audit_summary
     )
     logger.info(f"Diagnosis: {diagnosis.root_cause} - {diagnosis.key_deficiency}")
 
-    # 2. 准备上下文
+    # 2. Prepare context
     history_context = ""
     if memory and memory.modifications:
         history_context = memory.get_history_summary()
 
-    # 工具过滤
+    # Tool filtering
     tool_descs = get_tool_descriptions(excluded_tools)
 
-    # 判断是否启用 autogeo_rephrase 策略
+    # Determine if autogeo_rephrase policy is enabled
     enable_autogeo = excluded_tools is None or "autogeo_rephrase" not in excluded_tools
 
-    # 3. 选择工具（带策略注入）
+    # 3. Select tool (with policy injection)
     analysis = await select_tool_strategy_async(
         llm,
         query,
@@ -406,10 +406,10 @@ async def analyze_failure_async(
 
 
 def get_tool_descriptions(excluded_tools: Optional[List[str]] = None) -> str:
-    """获取所有工具的描述
+    """Get descriptions of all tools
 
     Args:
-        excluded_tools: 要排除的工具名列表（如 ["autogeo_rephrase"]）
+        excluded_tools: Tool names to exclude (e.g., ["autogeo_rephrase"])
     """
     excluded = set(excluded_tools or [])
     tools = [t for t in registry.get_all_tools() if t.name not in excluded]
@@ -445,7 +445,7 @@ async def regenerate_tool_args_async(
     Returns:
         AnalysisResult: 包含正确参数格式的分析结果
     """
-    # 获取指定工具的 schema
+    # Get schema for specified tool
     tool = registry.get_tool(forced_tool)
     if not tool:
         raise ValueError(f"Tool {forced_tool} not found in registry")
@@ -524,7 +524,7 @@ async def regenerate_tool_args_async(
             res = await _ainvoke_llm(llm, final_prompt)
             result = analysis_parser.parse(res.content)
 
-            # 验证工具名是否正确
+            # Verify tool name is correct
             if result.selected_tool_name != forced_tool:
                 logger.warning(f"LLM returned wrong tool {result.selected_tool_name}, forcing to {forced_tool}")
                 result.selected_tool_name = forced_tool

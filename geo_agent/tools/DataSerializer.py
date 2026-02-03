@@ -12,9 +12,9 @@ class DataSerializationInput(BaseModel):
     core_idea: str = Field("", description="The core topic of the document that must be preserved.")
     previous_modifications: str = Field("", description="Summary of previous modifications.")
 
-def serialize_data(target_content: str, context_before: str = "", context_after: str = "", core_idea: str = "", previous_modifications: str = "") -> str:
+def serialize_data(target_content: str, context_before: str = "", context_after: str = "", core_idea: str = "", previous_modifications: str = "", config_path: str = "geo_agent/config.yaml") -> str:
     """Converts narrative data (sentences) into HTML tables or definition lists."""
-    llm = get_llm_from_config('geo_agent/config.yaml')
+    llm = get_llm_from_config(config_path)
     context_section = build_context_section(context_before, context_after)
 
     # Build history section

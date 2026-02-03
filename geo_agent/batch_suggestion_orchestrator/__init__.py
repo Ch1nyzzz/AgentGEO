@@ -1,15 +1,15 @@
 """
-AgentGEO Batch Suggestion Orchestrator - 基于建议编排的智能优化系统
+AgentGEO Batch Suggestion Orchestrator - Intelligent optimization system based on suggestion orchestration
 
-主要特性：
-1. 使用两阶段失败分析（diagnose + select_tool_strategy）
-2. 支持 14 类故障分类法（FAILURE_TAXONOMY）
-3. 异步并行处理多个 query
-4. 支持 HTML DOM 分块（StructuralHtmlParser）
-5. 智能建议合并（基于诊断结果）
-6. 完整的历史记录和策略注入支持
-7. 文档级并行处理（MultiDocumentOptimizer）
-8. 多引用检查方式支持（LLM, AttrEvaluator, Both）
+Key Features:
+1. Two-phase failure analysis (diagnose + select_tool_strategy)
+2. Support for 14 failure categories (FAILURE_TAXONOMY)
+3. Async parallel processing of multiple queries
+4. HTML DOM chunking support (StructuralHtmlParser)
+5. Intelligent suggestion merging (diagnosis-aware)
+6. Complete history tracking and policy injection support
+7. Document-level parallel processing (MultiDocumentOptimizer)
+8. Multiple citation checking methods (LLM, AttrEvaluator, Both)
 """
 
 from .models import (
@@ -23,8 +23,8 @@ from .models import (
     DocumentOptimizationResult,
     MultiDocOptimizationResult,
 )
-from .agent_geo import AgentGEOV2              # 改名
-from .suggestion_processor import SuggestionProcessorV2  # 改名
+from .agent_geo import AgentGEOV2              # Renamed
+from .suggestion_processor import SuggestionProcessorV2  # Renamed
 from .multi_doc_optimizer import (
     MultiDocumentOptimizer,
     optimize_multiple_documents,
@@ -42,14 +42,14 @@ from .citation_checker import (
 
 __all__ = [
     # Core classes
-    "AgentGEOV2",                    # 改名
-    "SuggestionProcessorV2",         # 改名
+    "AgentGEOV2",                    # Renamed
+    "SuggestionProcessorV2",         # Renamed
     # Single-document models
     "SuggestionV2",
     "OrchestraGroupV2",
     "QueryResultV2",
-    "OptimizationResultV2",          # 改名
-    "AgentGEOConfigV2",              # 改名
+    "OptimizationResultV2",          # Renamed
+    "AgentGEOConfigV2",              # Renamed
     # Multi-document classes
     "MultiDocumentOptimizer",
     "MultiDocConfigV2",
@@ -68,4 +68,4 @@ __all__ = [
     "ProgressCallback",
 ]
 
-__version__ = "2.3.0"  # 版本号更新
+__version__ = "2.3.0"  # Version update

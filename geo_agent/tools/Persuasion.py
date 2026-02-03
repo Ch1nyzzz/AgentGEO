@@ -65,13 +65,13 @@ class PersuasionInput(BaseModel):
     context_before: str = Field("", description="Read-only context before the target content (DO NOT modify).")
     context_after: str = Field("", description="Read-only context after the target content (DO NOT modify).")
 
-def apply_persuasion(strategy: str, target_content: str, core_idea: str = "", previous_modifications: str = "", context_before: str = "", context_after: str = "") -> str:
+def apply_persuasion(strategy: str, target_content: str, core_idea: str = "", previous_modifications: str = "", context_before: str = "", context_after: str = "", config_path: str = "geo_agent/config.yaml") -> str:
     """Enhances content to be more persuasive using specific strategies while preserving the core idea."""
-    llm = get_llm_from_config('geo_agent/config.yaml')
+    llm = get_llm_from_config(config_path)
 
     strategy_instruction = PERSUASION_STRATEGIES.get(strategy, PERSUASION_STRATEGIES["authoritative_tone"])
 
-    # 1. 构建上下文部分
+    # 1. Build context section
     context_section = ""
     if context_before or context_after:
         context_section = """
@@ -90,7 +90,7 @@ def apply_persuasion(strategy: str, target_content: str, core_idea: str = "", pr
 --- END CONTENT AFTER ---
 """
 
-    # 2. 构建历史修改记录部分
+    # 2. Build history modification section
     history_section = ""
     if previous_modifications:
         history_section = f"""
