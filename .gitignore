@@ -1,5 +1,6 @@
 # Data and outputs
 outputs/
+geo_agent/outputs/
 data/
 cw22_search_dataset/
 
