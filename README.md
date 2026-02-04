@@ -136,6 +136,20 @@ AgentGEO/
 │   ├── fast_return_res.py      # Fast mode interface
 │   └── ...                     # Subtask-specific utilities
 │
+├── optimizers/                 # Optimizer implementations
+│   ├── agentgeo_optimizer.py   # AgentGEO optimizer wrapper
+│   ├── autogeo_optimizer.py    # AutoGEO optimizer wrapper
+│   └── baseline_optimizer.py   # GEO-Bench baseline optimizer
+│
+├── query_generator/            # Query generation module
+│   ├── config.py               # Configuration
+│   ├── generator.py            # Query generator
+│   ├── models.py               # Data models
+│   └── prompts.py              # LLM prompts
+│
+├── geo_bench/                  # GEO-Bench baseline
+│   └── optimizers/             # Baseline optimizer implementations
+│
 ├── scripts/                    # Utility scripts
 │   ├── generate_queries.py     # Generate train/test queries from HTML
 │   ├── run_optimization.py     # Unified optimization runner
@@ -151,6 +165,7 @@ AgentGEO/
 │   └── checkpoints/            # Progress checkpoints
 │
 ├── optimization_config.yaml    # Main configuration file
+├── requirements.txt            # Python dependencies
 └── README.md                   # This file
 ```
 
@@ -165,11 +180,10 @@ AgentGEO/
 
 ### Installation
 
-1. **Clone the repository**
+1. **Navigate to the project directory**
 
    ```bash
-   git clone https://github.com/your-username/autoGEO_reproduce.git
-   cd autoGEO_reproduce/AgentGEO
+   cd AgentGEO
    ```
 
 2. **Create virtual environment and install dependencies**
@@ -698,10 +712,8 @@ Use `generate_queries.py` to add queries if you only have `raw_html`.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
 
 ---
 
-**Need Help?** Open an issue on GitHub or check the configuration examples in `optimization_config.yaml`.
-
-**Contributing:** Contributions are welcome! Please submit pull requests or create issues for bugs/feature requests.
+**Need Help?** Check the configuration examples in `optimization_config.yaml`.
