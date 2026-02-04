@@ -125,7 +125,8 @@ output:
   save_evaluation: true
 
 # Evaluation configuration (optional)
+# When enable_citation=true, evaluates citation rate on test_queries before and after optimization
 evaluation:
-  enable_citation: false
+  enable_citation: true   # Enable held-out (test_queries) citation evaluation
   enable_geo_score: false
   enable_similarity: false

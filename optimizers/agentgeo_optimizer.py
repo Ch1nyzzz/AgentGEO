@@ -113,3 +113,35 @@ class AgentGEOOptimizer:
     def optimize(self, raw_html: str, train_queries: List[str], url: str = "") -> AgentGEOResult:
         """Sync optimization interface (internally calls async method)"""
         return asyncio.run(self.optimize_async(raw_html, train_queries, url))
+
+    async def evaluate_page_async(
+        self,
+        raw_html: str,
+        test_queries: List[str],
+        url: str = ""
+    ) -> dict:
+        """
+        Evaluate page citation rate using test queries (held-out evaluation)
+
+        Args:
+            raw_html: HTML content
+            test_queries: Test queries for evaluation
+            url: Page URL
+
+        Returns:
+            Dict with 'ratio' (citation rate) and per-query results
+        """
+        agent = self._get_agent()
+
+        # Parse HTML and create WebPage
+        structure = self._parser.parse(raw_html)
+        text = structure.get_clean_text()
+        webpage = WebPage(
+            url=url,
+            raw_html=raw_html,
+            cleaned_content=text
+        )
+
+        logger.info(f"Evaluating with {len(test_queries)} test queries")
+        result = await agent.evaluate_page_async(webpage, test_queries)
+        return result

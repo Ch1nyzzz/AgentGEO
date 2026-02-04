@@ -41,7 +41,7 @@ async def process_document(
     optimizers: Dict[str, Any],
     config: Dict[str, Any]
 ) -> Dict[str, Any]:
-    """Process a single document"""
+    """Process a single document with optional held-out evaluation"""
     doc_id = doc.get("doc_id", "unknown")
     logger.info(f"Processing document: {doc_id}")
 
@@ -51,10 +51,31 @@ async def process_document(
         "original_text_length": len(doc.get("raw_html", "")),
     }
 
+    # Get evaluation config
+    eval_config = config.get("evaluation", {})
+    enable_citation_eval = eval_config.get("enable_citation", False)
+    test_queries = doc.get("test_queries", [])
+
     # Run each optimizer
     for name, optimizer in optimizers.items():
         try:
             logger.info(f"  Running {name}...")
+
+            # 1. Pre-optimization evaluation (baseline) with test_queries
+            if enable_citation_eval and test_queries and hasattr(optimizer, 'evaluate_page_async'):
+                logger.info(f"    Evaluating baseline with {len(test_queries)} test queries...")
+                baseline_eval = await optimizer.evaluate_page_async(
+                    raw_html=doc["raw_html"],
+                    test_queries=test_queries,
+                    url=doc.get("url", "")
+                )
+                baseline_citation_rate = baseline_eval.get("ratio", 0.0)
+                result[f"{name}_baseline_citation_rate"] = baseline_citation_rate
+                logger.info(f"    Baseline citation rate: {baseline_citation_rate:.2%}")
+            else:
+                baseline_citation_rate = None
+
+            # 2. Run optimization with train_queries
             optimized = await optimizer.optimize_async(
                 raw_html=doc["raw_html"],
                 train_queries=doc.get("train_queries", []),
@@ -64,8 +85,28 @@ async def process_document(
             if hasattr(optimized, 'optimized_text'):
                 result[f"{name}_text"] = optimized.optimized_text
                 result[f"{name}_html"] = optimized.optimized_html
+                optimized_html = optimized.optimized_html
             else:
                 result[f"{name}_text"] = optimized
+                optimized_html = optimized
+
+            # 3. Post-optimization evaluation with test_queries
+            if enable_citation_eval and test_queries and hasattr(optimizer, 'evaluate_page_async'):
+                logger.info(f"    Evaluating optimized page with {len(test_queries)} test queries...")
+                optimized_eval = await optimizer.evaluate_page_async(
+                    raw_html=optimized_html,
+                    test_queries=test_queries,
+                    url=doc.get("url", "")
+                )
+                optimized_citation_rate = optimized_eval.get("ratio", 0.0)
+                result[f"{name}_optimized_citation_rate"] = optimized_citation_rate
+                logger.info(f"    Optimized citation rate: {optimized_citation_rate:.2%}")
+
+                # 4. Calculate delta
+                if baseline_citation_rate is not None:
+                    delta = optimized_citation_rate - baseline_citation_rate
+                    result[f"{name}_delta_citation_rate"] = delta
+                    logger.info(f"    Delta: {delta:+.2%}")
 
             logger.info(f"  ✓ {name} completed")
         except Exception as e:
