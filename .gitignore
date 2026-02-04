@@ -4,7 +4,7 @@ geo_agent/outputs/
 data/*
 !data/input.parquet
 cw22_search_dataset/
-
+AgentGEO.pdf
 # Python
 __pycache__/
 *.py[cod]
