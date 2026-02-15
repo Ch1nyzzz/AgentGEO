@@ -38,6 +38,8 @@ class DataLoader:
         self.input_path = Path(config["input_path"])
         self.input_type = config.get("input_type", "parquet")
         self.required_fields = config.get("required_fields", ["raw_html", "train_queries"])
+        self.doc_limit = config.get("doc_limit", None)
+        self.doc_offset = config.get("doc_offset", 0)
 
         if not self.input_path.exists():
             raise FileNotFoundError(f"Input file not found: {self.input_path}")
@@ -45,13 +47,20 @@ class DataLoader:
     def load(self) -> List[Dict[str, Any]]:
         """Load data"""
         if self.input_type == "parquet":
-            return self._load_parquet()
+            documents = self._load_parquet()
         elif self.input_type == "json":
-            return self._load_json()
+            documents = self._load_json()
         elif self.input_type == "csv":
-            return self._load_csv()
+            documents = self._load_csv()
         else:
             raise ValueError(f"Unsupported input type: {self.input_type}")
+
+        if self.doc_offset:
+            documents = documents[self.doc_offset:]
+        if self.doc_limit and self.doc_limit > 0:
+            documents = documents[:self.doc_limit]
+        logger.info(f"After slicing: {len(documents)} documents (offset={self.doc_offset}, limit={self.doc_limit})")
+        return documents
 
     def _load_parquet(self) -> List[Dict[str, Any]]:
         """Load Parquet file"""
@@ -115,6 +124,11 @@ class DataLoader:
                 raise ValueError(
                     f"Document {i} is missing required fields: {missing_fields}"
                 )
+
+            # Convert numpy arrays to lists
+            for field_name in ("train_queries", "test_queries"):
+                if field_name in doc and hasattr(doc[field_name], 'tolist'):
+                    doc[field_name] = doc[field_name].tolist()
 
             # Ensure train_queries is a list
             if "train_queries" in doc and isinstance(doc["train_queries"], str):

@@ -4,6 +4,8 @@ geo_agent/outputs/
 data/*
 !data/input.parquet
 cw22_search_dataset/
+scripts/rerun_uncitable.py
+scripts/analyze_uncitable.py
 AgentGEO.pdf
 # Python
 __pycache__/

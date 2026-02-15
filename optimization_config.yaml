@@ -30,7 +30,7 @@ agentgeo:
 
   # Batch processing configuration
   batch_size: 10           # Batch size
-  max_concurrency: 4       # Maximum concurrency
+  max_concurrency: 5       # Maximum concurrency
 
   # ============================================================
   # Citation Checking Method (V2.2 new feature)
@@ -103,6 +103,12 @@ agentgeo:
   # Whether to enable autogeo_rephrase tool (AutoGEO paper method)
   enable_autogeo_rephrase: true
 
+  # Disk cache directory (reuse existing search cache)
+  disk_cache_dir: "/Users/erv1n/autoGEO_reproduce/experiments/cache"
+
+  # Optimization log directory
+  optimization_log_dir: "outputs/logs"
+
 # GEO-Bench Baseline Configuration (9 optimization methods)
 baseline:
   provider: "openai"
@@ -112,7 +118,9 @@ baseline:
 # Data configuration
 data:
   input_type: "parquet"
-  input_path: "data/test_data.parquet"
+  input_path: "data/input.parquet"
+  doc_limit: 50
+  doc_offset: 0
   required_fields:
     - raw_html
     - train_queries
@@ -127,6 +135,6 @@ output:
 # Evaluation configuration (optional)
 # When enable_citation=true, evaluates citation rate on test_queries before and after optimization
 evaluation:
-  enable_citation: true   # Enable held-out (test_queries) citation evaluation
+  enable_citation: true   # Evaluate test_queries citation rate before/after optimization
   enable_geo_score: false
   enable_similarity: false

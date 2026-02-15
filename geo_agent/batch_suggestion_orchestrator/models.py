@@ -69,6 +69,7 @@ class SuggestionV2:
     reasoning: str
     proposed_content: str
     key_changes: List[str]
+    original_content: str = ""  # Original chunk content before modification
     # V2 new fields
     diagnosis: Optional[DiagnosisInfo] = None
     iteration: int = 0

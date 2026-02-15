@@ -294,12 +294,19 @@ class SuggestionProcessorV2:
             max_retries_per_query=self.config.max_retries_per_query,
         )
 
-        # 8. Collect all suggestions
+        # 8. Collect suggestions for two purposes:
+        #    a) suggestions_for_aggregation: only cited (for applying to document, per paper)
+        #    b) all_suggestions: all queries (for analysis and debugging)
+        suggestions_for_aggregation: List[SuggestionV2] = []
         all_suggestions: List[SuggestionV2] = []
-        for qr in query_results:
-            all_suggestions.extend(qr.suggestions)
 
-        print(f"Collected {len(all_suggestions)} suggestions")
+        for qr in query_results:
+            all_suggestions.extend(qr.suggestions)  # All for analysis
+            if qr.is_cited:
+                suggestions_for_aggregation.extend(qr.suggestions)  # Cited only for aggregation
+
+        print(f"Collected {len(suggestions_for_aggregation)} suggestions for aggregation "
+              f"({len(all_suggestions)} total including uncited)")
 
         # 9. Create SegmentOrchestras and assign suggestions
         segment_orchestras: List[SegmentOrchestraV2] = []
@@ -311,10 +318,10 @@ class SuggestionProcessorV2:
                 llm=self.llm,
             )
 
-            # Filter suggestions belonging to this partition
+            # Filter suggestions belonging to this partition (use cited only for aggregation)
             relevant = [
                 s
-                for s in all_suggestions
+                for s in suggestions_for_aggregation
                 if s.target_segment_index in orch.segment_indices
             ]
             segment_orch.add_suggestions(relevant)
