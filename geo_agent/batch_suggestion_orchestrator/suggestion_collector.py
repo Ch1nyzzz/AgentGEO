@@ -175,6 +175,7 @@ class SuggestionCollectorV2:
         generated_answer = ""
         final_diagnosis: Optional[DiagnosisInfo] = None
         final_suggestion: Optional[SuggestionV2] = None
+        all_suggestions: List[SuggestionV2] = []  # Accumulate all iteration suggestions
         iterations_used = 0
         # GEO Score info (V2.3 new)
         final_geo_score: Optional[GEOScoreInfo] = None
@@ -467,6 +468,9 @@ class SuggestionCollectorV2:
                     continue
 
                 try:
+                    # Save original chunk content before modification
+                    original_chunk_content = tool_args.get('target_content', '')
+
                     raw_output = await asyncio.to_thread(tool.run, tool_args)
                     modified_chunk_html, key_changes = parse_tool_output(raw_output)
                     tool_outcome = ToolOutcome.SUCCESS
@@ -494,6 +498,7 @@ class SuggestionCollectorV2:
                         target_segment_index=target_chunk_index,
                         reasoning=analysis.reasoning,
                         proposed_content=modified_chunk_html,
+                        original_content=original_chunk_content,
                         key_changes=key_changes,
                         diagnosis=diagnosis_info,
                         iteration=iteration,
@@ -504,6 +509,7 @@ class SuggestionCollectorV2:
                             "summary": truncation_summary
                         } if has_truncation_alert else None,
                     )
+                    all_suggestions.append(final_suggestion)
 
                     # Update memory (only when enable_memory=True)
                     if self.enable_memory:
@@ -568,7 +574,7 @@ class SuggestionCollectorV2:
             query=query,
             is_cited=is_cited,
             generated_answer=generated_answer,
-            suggestions=[final_suggestion] if final_suggestion else [],
+            suggestions=all_suggestions,
             diagnosis=final_diagnosis,
             iterations_used=iterations_used,
             final_html=final_html,

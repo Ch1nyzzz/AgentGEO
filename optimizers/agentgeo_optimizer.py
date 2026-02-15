@@ -44,9 +44,13 @@ class AgentGEOOptimizer:
         citation_method: str = "llm",
         enable_memory: bool = True,
         enable_history: bool = True,
+        disk_cache_dir: str = None,
+        optimization_log_dir: str = None,
         **kwargs
     ):
         self.config_path = config_path
+        self.disk_cache_dir = disk_cache_dir
+        self.optimization_log_dir = optimization_log_dir
         self.batch_config = AgentGEOConfigV2(
             batch_size=batch_size,
             max_concurrency=max_concurrency,
@@ -64,6 +68,8 @@ class AgentGEOOptimizer:
             self._agent = AgentGEOV2(
                 config_path=self.config_path,
                 batch_config=self.batch_config,
+                disk_cache_dir=self.disk_cache_dir,
+                optimization_log_dir=self.optimization_log_dir,
             )
             logger.info("AgentGEOV2 initialized")
         return self._agent
