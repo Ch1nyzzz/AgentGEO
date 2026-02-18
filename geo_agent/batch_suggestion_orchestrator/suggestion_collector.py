@@ -231,6 +231,12 @@ class SuggestionCollectorV2:
         truncation_summary: Optional[str] = None
         has_truncation_alert = False
 
+        # ========== Idempotency Guard (Paper D.2.2) ==========
+        # Track (diagnosis_category -> set of tool_names) that failed under that diagnosis
+        failed_tools_by_diagnosis: Dict[str, set] = {}
+        # Info from previous iteration for recording failures
+        prev_iteration_info: Optional[tuple] = None  # (diagnosis_category, tool_name)
+
         for iteration in range(max_retries):
             iterations_used = iteration + 1
             tool_start_time = time.time()
@@ -273,6 +279,15 @@ class SuggestionCollectorV2:
                         break
                 else:
                     cited_indices = []
+
+                # ========== 2.1 Idempotency Guard: record previous iteration's failed tool ==========
+                if prev_iteration_info and not is_cited:
+                    prev_diag, prev_tool = prev_iteration_info
+                    failed_tools_by_diagnosis.setdefault(prev_diag, set()).add(prev_tool)
+                    logger.info(
+                        f"Idempotency Guard: masking tool '{prev_tool}' for diagnosis '{prev_diag}'"
+                    )
+                prev_iteration_info = None  # Reset, will be set after tool execution
 
                 # ========== 3. Prepare content needed for analysis ==========
                 # Use dual structure strategy: index from frozen_structure (stable), content from temp_structure (latest)
@@ -349,12 +364,20 @@ class SuggestionCollectorV2:
                     policy_injection=policy_injection,
                     num_chunks=num_chunks,
                     excluded_tools=self.excluded_tools,
+                    failed_tools_by_diagnosis=failed_tools_by_diagnosis,
                 )
 
                 # Record diagnosis
                 diagnosis_info = diagnosis.to_diagnosis_info()
                 final_diagnosis = diagnosis_info
                 logger.info(f"Diagnosis: {diagnosis.root_cause} - {diagnosis.key_deficiency}")
+
+                # Idempotency Guard: all tools exhausted for this diagnosis
+                if analysis.selected_tool_name == "__no_tool__":
+                    logger.warning(
+                        f"All tools exhausted for diagnosis '{diagnosis.root_cause}', stopping retry loop"
+                    )
+                    break
 
                 # JS Fallback mode: force use static_rendering tool (first iteration only)
                 if js_fallback_mode and iteration == 0 and "static_rendering" not in self.excluded_tools:
@@ -456,6 +479,10 @@ class SuggestionCollectorV2:
                 is_dup, dup_msg = geo_policy_engine.check_duplicate_invocation(analysis.selected_tool_name, args_hash)
                 if is_dup:
                     logger.warning(dup_msg)
+                    # Idempotency Guard: also record as failed so next iteration excludes it
+                    failed_tools_by_diagnosis.setdefault(
+                        diagnosis.root_cause, set()
+                    ).add(analysis.selected_tool_name)
                     tool_outcome = ToolOutcome.SKIPPED
                     continue
 
@@ -526,12 +553,17 @@ class SuggestionCollectorV2:
 
                     logger.info(f"Tool '{analysis.selected_tool_name}' executed, changes: {key_changes}")
 
+                    # Record for Idempotency Guard: will be checked at start of next iteration
+                    prev_iteration_info = (diagnosis.root_cause, analysis.selected_tool_name)
+
                 except Exception as e:
                     logger.error(f"Tool execution failed: {e}")
                     import traceback
                     traceback.print_exc()
                     tool_outcome = ToolOutcome.FAILED
                     tool_error_msg = str(e)
+                    # Tool execution failed — also record for Idempotency Guard
+                    prev_iteration_info = (diagnosis.root_cause, analysis.selected_tool_name)
 
                 # ========== 9. Record telemetry data (identical to geo_agent) ==========
                 tool_duration = (time.time() - tool_start_time) * 1000
