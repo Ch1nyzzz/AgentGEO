@@ -8,7 +8,7 @@ import asyncio
 import logging
 import sys
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import ChatPromptTemplate
@@ -350,6 +350,7 @@ async def analyze_failure_async(
     policy_injection: str = "",
     num_chunks: Optional[int] = None,
     excluded_tools: Optional[List[str]] = None,
+    failed_tools_by_diagnosis: Optional[Dict[str, set]] = None,
 ) -> Tuple[AnalysisResult, DiagnosisResult]:
     """
     Complete two-phase async failure analysis
@@ -367,6 +368,10 @@ async def analyze_failure_async(
         policy_injection: Policy injection (optional)
         num_chunks: Chunk count (for Batch mode)
         excluded_tools: Tool names to exclude (e.g., ["autogeo_rephrase"])
+        failed_tools_by_diagnosis: Idempotency Guard - maps diagnosis_category to
+            set of tool names that already failed under that diagnosis.
+            These tools will be excluded from the candidate set when the
+            same diagnosis category recurs.
 
     Returns:
         Tuple[AnalysisResult, DiagnosisResult]: (analysis result, diagnosis result)
@@ -382,11 +387,33 @@ async def analyze_failure_async(
     if memory and memory.modifications:
         history_context = memory.get_history_summary()
 
+    # Idempotency Guard: merge diagnosis-specific failed tools with excluded_tools
+    merged_excluded = list(set(excluded_tools or []))
+    if failed_tools_by_diagnosis:
+        diag_failed = failed_tools_by_diagnosis.get(diagnosis.root_cause, set())
+        if diag_failed:
+            merged_excluded = list(set(merged_excluded) | diag_failed)
+            logger.info(
+                f"Idempotency Guard: excluding {diag_failed} for diagnosis {diagnosis.root_cause}"
+            )
+
     # Tool filtering
-    tool_descs = get_tool_descriptions(excluded_tools)
+    tool_descs = get_tool_descriptions(merged_excluded)
+
+    # Safety check: if all tools are excluded, return early with a no-op result
+    if not tool_descs.strip():
+        logger.warning("Idempotency Guard: all tools exhausted, no tools available")
+        return (
+            AnalysisResult(
+                reasoning="All available tools have been exhausted for this diagnosis.",
+                selected_tool_name="__no_tool__",
+                tool_arguments={},
+            ),
+            diagnosis,
+        )
 
     # Determine if autogeo_rephrase policy is enabled
-    enable_autogeo = excluded_tools is None or "autogeo_rephrase" not in excluded_tools
+    enable_autogeo = "autogeo_rephrase" not in merged_excluded
 
     # 3. Select tool (with policy injection)
     analysis = await select_tool_strategy_async(
