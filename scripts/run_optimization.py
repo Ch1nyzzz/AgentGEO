@@ -15,10 +15,10 @@ Features:
 - Summary analysis report
 
 Usage:
-    python run_optimization.py --config optimization_config.yaml
-    python run_optimization.py --doc-limit 2  # quick test
-    python run_optimization.py --force-restart  # ignore checkpoints
-    python run_optimization.py --doc-concurrency 3  # 3 docs in parallel
+    python scripts/run_optimization.py --config optimization_config.yaml
+    python scripts/run_optimization.py --doc-limit 2  # quick test
+    python scripts/run_optimization.py --force-restart  # ignore checkpoints
+    python scripts/run_optimization.py --doc-concurrency 3  # 3 docs in parallel
 """
 import argparse
 import asyncio

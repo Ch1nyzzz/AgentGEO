@@ -160,9 +160,10 @@ AgentGEO/
 │   └── ...
 │
 ├── outputs/                    # Output directory (auto-created)
-│   ├── optimized_html/         # Optimized web pages
-│   ├── reports/                # Evaluation reports
-│   └── checkpoints/            # Progress checkpoints
+│   ├── documents/              # Per-document optimization results (checkpoints)
+│   ├── logs/                   # Optimization logs
+│   ├── analysis_report_*.json  # Summary analysis reports
+│   └── optimization_results_*.json  # Aggregated optimization results
 │
 ├── optimization_config.yaml    # Main configuration file
 ├── requirements.txt            # Python dependencies
@@ -203,7 +204,8 @@ AgentGEO/
    OPENAI_API_KEY=sk-proj-...
    # OR
    ANTHROPIC_API_KEY=sk-ant-...
-   # OR
+   # OR (for Gemini — both names are supported, GEMINI_API_KEY takes priority)
+   GEMINI_API_KEY=...
    GOOGLE_API_KEY=...
 
    # Optional: For competitor retrieval
@@ -307,7 +309,7 @@ optimized_page = agent.optimize_page(page, queries)
 
 # 4. Access results
 print(optimized_page.cleaned_content)
-print(f"Citation rate: {optimized_page.citation_rate}")
+print(optimized_page.raw_html)
 ```
 
 ## ⚙️ Configuration Guide
@@ -325,7 +327,7 @@ optimizer:
 agentgeo:
   config_path: "geo_agent/config.yaml"
   batch_size: 10
-  max_concurrency: 4
+  max_concurrency: 5
 
   # Citation checking method
   citation_method: "llm"  # Options: llm, attr_evaluator, both
@@ -345,7 +347,7 @@ agentgeo:
 # Data configuration
 data:
   input_type: "parquet"
-  input_path: "data/test_data.parquet"
+  input_path: "data/input.parquet"
   required_fields:
     - raw_html
     - train_queries
@@ -377,20 +379,35 @@ llm_tasks:
   diagnosis:
     provider: openai
     model: gpt-4.1-mini
+  tool_strategy:
+    provider: openai
+    model: gpt-4.1-mini
+  geo_score:
+    provider: openai
+    model: gpt-4.1-mini
 
 # Search engine configuration
 search:
   provider: chatnoir  # Options: tavily, chatnoir
   max_results: 10
 
+# Answer generation configuration
+generator:
+  method: in-context  # Options: in-context, attr_evaluator
+  max_snippet_length: 10000
+
+# HTML fetching method
+html_browser:
+  method: requests  # Options: requests, playwright
+
 # HTML parsing configuration
 html_parser:
-  method: trafilatura  # Options: bs4, markdown, html2text, trafilatura
+  method: trafilatura  # Options: bs4, markdown, html2text, newspaper, readability, trafilatura
 
 # Data mode
 data:
   mode: cw22  # Options: online, cw22
-  html_db_path: "../../experiments/cache"
+  html_db_path: "./cache"
 ```
 
 ## 📚 Usage Guide
@@ -610,6 +627,19 @@ python scripts/run_optimization.py \
     --data data/input.parquet \
     --output-dir results/
 ```
+
+#### Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--config` | str | `optimization_config.yaml` | Configuration file path |
+| `--method` | str | None | Optimization method (`autogeo`, `agentgeo`, `baseline`, `all`; overrides config) |
+| `--data` | str | None | Data file path (overrides config) |
+| `--output-dir` | str | None | Output directory (overrides config) |
+| `--doc-limit` | int | None | Limit number of documents (overrides config) |
+| `--doc-offset` | int | None | Document offset (overrides config) |
+| `--doc-concurrency` | int | `1` | Number of documents to process in parallel |
+| `--force-restart` | flag | False | Ignore existing checkpoints and start fresh |
 
 ## ❓ FAQ
 
