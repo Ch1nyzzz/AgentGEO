@@ -9,7 +9,7 @@
 
 ## 📰 News
 
-- [2026.01.21] We release the paper, code and project pages
+- [2026.3.10] We release the paper, code and project pages
 
 ## ✅ TODO
 
@@ -19,18 +19,33 @@
 
 ## 🧭 Overveiw
 
-
 AgentGEO is a diagnostic framework for Generative Engine Optimization (GEO). Instead of applying generic rewrites, it diagnoses why a page is not cited and applies targeted repairs.
 
-### What problem this solves
-
-Generative engines often answer questions without citing many relevant pages. For creators, no citation means no referral traffic.
-
-AgentGEO focuses on **citation failures**: it asks why a page is not cited, then iteratively repairs likely failure points across the citation pipeline.
-
-
-### Workflow
 ![AgentGEO Diagnose-Then-Repair Workflow](artifacts/workflow_r2.png)
+
+
+## ❓ What problem this solves
+
+Generative engines **read your page — then silently ignore it.**
+A page can be retrieved into the model's context and still receive zero citations in the final response. For creators, this is a silent traffic drain: the engine saw your work, understood it, and chose not to attribute it.
+**AgentGEO** targets this gap between retrieved and cited — diagnosing why pages get dropped from citations and iteratively repairing failure points across the citation pipeline.
+
+
+## 🌟 Key Features
+
+- **🔄 Adaptive Optimization Loop**: Implements an `Assess → Analyze → Act` cycle that automatically evaluates citation performance, diagnoses issues, and applies fixes iteratively until success.
+
+- **🧠 Competitor Gap Analysis**: Integrates with search APIs (ChatNoir) to compare target pages against top-ranked competitors, identifying content gaps, tone issues, and structural deficiencies.
+
+- **🛠️ Modular Tool System** (11 registered tools):
+  - **Content Tools**: `entity_injection`, `bluf_optimization`, `intent_realignment`, `content_relocation`
+  - **Structure Tools**: `structure_optimization`, `data_serialization`, `noise_isolation`, `static_rendering`
+  - **Persuasion Tools**: `persuasive_rewriting` (6 strategies), `historical_redteam` (5 attack strategies)
+  - **Meta Tool**: `autogeo_rephrase` (9 rule sets from AutoGEO paper for comprehensive rewriting)
+
+- **🛡️ Type-Safe Architecture**: Built with **Pydantic** for robust schema validation, ensuring structured LLM outputs are accurate and reliable.
+
+- **🔗 Extensible Design**: Based on **LangChain** with a `Registry` pattern for easy custom tool registration.
 
 ## 🚀 Quick Start
 
