@@ -18,12 +18,7 @@ lxml>=4.9.0
 
 # Data
 pandas>=2.0.0
-numpy>=1.24.0
 scikit-learn>=1.0.0
-
-# NLP
-nltk>=3.8.0
-langchain-text-splitters>=0.0.1
 
 # Utils
 python-dotenv>=1.0.0
