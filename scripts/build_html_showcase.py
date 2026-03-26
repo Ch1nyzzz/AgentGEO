@@ -16,7 +16,7 @@ import pandas as pd
 # ── Config ──
 NUM_DOCS = 20
 NUM_QUERIES = 2
-NUM_COMPETITORS = 3
+NUM_COMPETITORS = 10
 CACHE_DIR = Path("/Users/erv1n/autoGEO_reproduce/experiments/cache")
 OUTPUT_DIR = Path("docs/showcase")
 
