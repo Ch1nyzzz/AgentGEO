@@ -1,0 +1,2603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-P2LW8JP');</script>
+	<!-- End Google Tag Manager -->
+
+	
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"],distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"1588826869",accountID:"1969074",trustKey:"1969074",xpid:"VQ8BWFZUDBABUVRWBQgDV1YD",licenseKey:"2e5b8f4dc3",applicationID:"1554294122",browserID:"1588826869"};;/*! For license information please see nr-loader-spa-1.313.1.min.js.LICENSE.txt */
+(()=>{var e,t,r={384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>a,Zm:()=>c,bQ:()=>u,dV:()=>d,pV:()=>l});var n=r(6154),i=r(1863),s=r(944),o=r(1910);const a={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function d(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,o.i)(...Object.values(e.o))),e}function u(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,s.R)(69)}function l(){return function(){let e=c();const t=e.info||{};e.info={beacon:a.beacon,errorBeacon:a.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),d(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>c,P3:()=>d,XX:()=>i,Yy:()=>a,df:()=>s,qY:()=>n,v4:()=>o});const n="events",i="jserrors",s="browser/blobs",o="rum",a="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations"},d={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.softNav]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.sessionReplay]:8,[c.logging]:9,[c.genericEvents]:10},u={[c.pageViewEvent]:o,[c.pageViewTiming]:n,[c.ajax]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:s,[c.sessionReplay]:s,[c.logging]:a,[c.genericEvents]:"ins"}},944:(e,t,r)=>{"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},993:(e,t,r)=>{"use strict";r.d(t,{A$:()=>s,ET:()=>o,TZ:()=>a,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},s={OFF:0,ERROR:1,WARN:2,INFO:3,DEBUG:4,TRACE:5},o="log",a=n.K7.logging},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>a,Ze:()=>d,x3:()=>c});var n=r(3241),i=r(3606),s=r(860),o=r(2646);function a(e,t){if(!e)return;const r={staged:!1,priority:s.P3[t]||0};e.runtime.drainRegistry.get(t)||e.runtime.drainRegistry.set(t,r)}function c(e,t){if(!e)return;const r=e.runtime.drainRegistry;r&&(r.get(t)&&r.delete(t),l(e,t,!1),r.size&&u(e))}function d(e,t="feature",r=!1){if(e){if(!e.runtime.drainRegistry.get(t)||r)return l(e,t);e.runtime.drainRegistry.get(t).staged=!0,u(e)}}function u(e){if(!e)return;const t=Array.from(e.runtime.drainRegistry);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{e.runtime.drainRegistry.delete(t),l(e,t)}))}function l(e,t,r=!0){if(!e)return;const s=e.ee,a=i.i.handlers;if(s&&!s.aborted&&s.backlog&&a){if((0,n.W)({type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=a[t];if(r){for(let t=0;e&&t<e.length;++t)f(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof o.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}s.isolatedBacklog||delete a[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function f(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],s=e[2];n.apply(i,s)}})}},1738:(e,t,r)=>{"use strict";r.d(t,{U:()=>f,Y:()=>l});var n=r(3241),i=r(9908),s=r(1863),o=r(944),a=r(3969),c=r(8362),d=r(860),u=r(4261);function l(e,t,r,s){const l=s||r;!l||l[e]&&l[e]!==c.d.prototype[e]||(l[e]=function(){(0,i.p)(a.xV,["API/"+e+"/called"],void 0,d.K7.metrics,r.ee),(0,n.W)({drained:!!r.runtime?.activatedFeatures,type:"data",name:"api",feature:u.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,o.R)(23,e)}})}function f(e,t,r,n,o){const a=e.info;null===r?delete a.jsAttributes[t]:a.jsAttributes[t]=r,(o||null===r)&&(0,i.p)(u.Pl+n,[(0,s.t)(),t,r],void 0,"session",e.ee)}},1741:(e,t,r)=>{"use strict";r.d(t,{W:()=>s});var n=r(944),i=r(4261);class s{#e(e,...t){if(this[e]!==s.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},1910:(e,t,r)=>{"use strict";r.d(t,{i:()=>s});var n=r(944);const i=new Map;function s(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),s=t.includes("nrWrapper");return r||s||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},2555:(e,t,r)=>{"use strict";r.d(t,{D:()=>a,f:()=>o});var n=r(384),i=r(8122);const s={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function o(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const a=e=>(0,i.a)(e,s)},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>o,H3:()=>n,g:()=>d,iL:()=>c,tS:()=>a,uh:()=>i,wk:()=>s});const n="NRBA",i="SESSION",s=144e5,o=18e5,a={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},d={OFF:0,FULL:1,ERROR:2}},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},2843:(e,t,r)=>{"use strict";r.d(t,{G:()=>s,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function s(e,t,r){(0,n.sp)("pagehide",e,t,r)}},3241:(e,t,r)=>{"use strict";r.d(t,{W:()=>s});var n=r(6154);const i="newrelic";function s(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},3304:(e,t,r)=>{"use strict";r.d(t,{A:()=>s});var n=r(7836);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function s(e){try{return JSON.stringify(e,i())??""}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}return""}}},3333:(e,t,r)=>{"use strict";r.d(t,{$v:()=>u,TZ:()=>n,Xh:()=>c,Zp:()=>i,kd:()=>d,mq:()=>a,nf:()=>o,qN:()=>s});const n=r(860).K7.genericEvents,i=["auxclick","click","copy","keydown","paste","scrollend"],s=["focus","blur"],o=4,a=1e3,c=2e3,d=["PageAction","UserAction","BrowserPerformance"],u={RESOURCES:"experimental.resources",REGISTER:"register"}},3434:(e,t,r)=>{"use strict";r.d(t,{Jt:()=>o,YM:()=>u});var n=r(7836),i=r(5607),s=r(5732);const o="nr@original:".concat(i.W),a=50;var c=Object.prototype.hasOwnProperty,d=!1;function u(e,t,r){return e||(e=n.ee),i.inPlace=function(e,t,r,n,s,o){r||(r="");const a="-"===r.charAt(0);for(let c=0;c<t.length;c++){const d=t[c],u=e[d];f(u)||(e[d]=i(u,a?d+r:r,n,d,s,o))}},i.flag=o,i;function i(t,n,i,d,h,p){return f(t)?t:(n||(n=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach(function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})}),t}catch(e){l([e],r)}for(var n in e)c.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,c,f,g;let m,v;try{c=this,o=[...arguments],v=p?(0,s.$5)(r):[void 0],f="function"==typeof i?i(o,c):i||{}}catch(t){l([t,"",[o,c,d],f],e)}u(n+"start",[o,c,d,v],f,h);const y=performance.now();let b;try{return g=t.apply(c,o),b=performance.now(),g}catch(e){throw b=performance.now(),u(n+"err",[o,c,e,v],f,h),m=e,m}finally{const e=b-y,t={start:y,end:b,duration:e,isLongTask:e>=a,methodName:d,thrownError:m};t.isLongTask&&u("long-task",[t,c,v],f,h),u(n+"end",[o,c,g,v],f,h)}}}function u(r,n,i,s){if(!d||t){var o=d;d=!0;try{e.emit(r,n,i,t,s)}catch(t){l([t,r,n,i],e)}d=o}}}function l(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function f(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>s});var n=r(9908);s.on=o;var i=s.handlers={};function s(e,t,r,s){o(s||n.d,i,e,t,r)}function o(e,t,r,i,s){s||(s="feature"),e||(e=n.d);var o=t[s]=t[s]||{};(o[r]=o[r]||[]).push([e,i])}},3738:(e,t,r)=>{"use strict";r.d(t,{He:()=>i,Kp:()=>a,Lc:()=>d,Rz:()=>u,TZ:()=>n,bD:()=>s,d3:()=>o,jx:()=>l,sl:()=>f,uP:()=>c});const n=r(860).K7.sessionTrace,i="bstResource",s="resource",o="-start",a="-end",c="fn"+o,d="fn"+a,u="pushState",l=1e3,f=3e4},3785:(e,t,r)=>{"use strict";r.d(t,{R:()=>c,b:()=>d});var n=r(9908),i=r(1863),s=r(860),o=r(3969),a=r(993);function c(e,t,r={},c=a.p_.INFO,d=!0,u,l=(0,i.t)()){(0,n.p)(o.xV,["API/logging/".concat(c.toLowerCase(),"/called")],void 0,s.K7.metrics,e),(0,n.p)(a.ET,[l,t,r,c,d,u],void 0,s.K7.logging,e)}function d(e){return"string"==typeof e&&Object.values(a.p_).some(t=>t===e.toUpperCase().trim())}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function s(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>s,jT:()=>n,sp:()=>i})},3962:(e,t,r)=>{"use strict";r.d(t,{AM:()=>o,O2:()=>l,OV:()=>s,Qu:()=>f,TZ:()=>c,ih:()=>h,pP:()=>a,t1:()=>u,tC:()=>i,wD:()=>d});var n=r(860);const i=["click","keydown","submit"],s="popstate",o="api",a="initialPageLoad",c=n.K7.softNav,d=5e3,u=500,l={INITIAL_PAGE_LOAD:"",ROUTE_CHANGE:1,UNSPECIFIED:2},f={INTERACTION:1,AJAX:2,CUSTOM_END:3,CUSTOM_TRACER:4},h={IP:"in progress",PF:"pending finish",FIN:"finished",CAN:"cancelled"}},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>a,rs:()=>i,xV:()=>o,z_:()=>s});const n=r(860).K7.metrics,i="sm",s="cm",o="storeSupportabilityMetrics",a="storeEventMetrics"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(1687);class i{constructor(e,t){this.agentRef=e,this.ee=e?.ee,this.featureName=t,this.blocked=!1}deregisterDrain(){(0,n.x3)(this.agentRef,this.featureName)}}},4261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>u,BL:()=>c,CH:()=>p,Dl:()=>R,Fw:()=>w,PA:()=>v,Pl:()=>n,Pv:()=>x,Tb:()=>f,U2:()=>o,V1:()=>A,Wb:()=>T,bt:()=>b,cD:()=>y,d3:()=>E,dT:()=>d,eY:()=>g,fF:()=>h,hG:()=>s,hw:()=>i,k6:()=>a,nb:()=>m,o5:()=>l});const n="api-",i=n+"ixn-",s="addPageAction",o="addToTrace",a="addRelease",c="finished",d="interaction",u="log",l="noticeError",f="pauseReplay",h="recordCustomEvent",p="recordReplay",g="register",m="setApplicationVersion",v="setCurrentRouteName",y="setCustomAttribute",b="setErrorHandler",w="setPageViewName",R="setUserId",E="start",T="wrapLogger",A="measure",x="consent"},5205:(e,t,r)=>{"use strict";r.d(t,{j:()=>x});var n=r(384),i=r(1741);var s=r(2555),o=r(3333);const a=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var c=r(2614),d=r(944),u=r(8122);const l="[data-nr-mask]",f=e=>(0,u.a)(e,(()=>{const e={feature_flags:[],experimental:{register:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{register:{get enabled(){return e.feature_flags.includes(o.$v.REGISTER)||e.experimental.register},set enabled(t){e.experimental.register=t},duplicate_data_to_container:!1}},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(o.$v.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:c.wk,inactiveMs:c.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){a(t)?e.mask_selector="".concat(t,",").concat(l):""===t||null===t?e.mask_selector=l:(0,d.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){a(t)?e.block_selector+=",".concat(t):""!==t&&(0,d.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,d.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var h=r(6154),p=r(9324);let g=0;const m={buildEnv:p.F3,distMethod:p.Xs,version:p.xv,originTime:h.WN},v={consented:!1},y={activatedFeatures:void 0,appMetadata:{},configured:!1,get consented(){return this.session?.state?.consent||v.consented},set consented(e){v.consented=e},customTransaction:void 0,denyList:[],disabled:!1,drainRegistry:new Map,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++g}},b=e=>{const t=(0,u.a)(e,y),r=Object.keys(m).reduce((e,t)=>(e[t]={value:m[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)},w=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var R=r(7836),E=r(3241);const T={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A=e=>(0,u.a)(e,T);function x(e,t={},r,o){let{init:a,info:c,loader_config:d,runtime:u={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();a=e.init,c=e.info,d=e.loader_config}e.init=f(a||{}),e.loader_config=A(d||{}),c.jsAttributes??={},h.bv&&(c.jsAttributes.isWorker=!0),e.info=(0,s.D)(c);const p=e.init;e.runtime??=b(u),p.proxy.assets&&w(p.proxy.assets),e.runtime.configured||(Object.defineProperty(e,"beacons",{get:()=>[e.info.beacon,e.info.errorBeacon,e.init.proxy.assets,e.init.proxy.beacon].filter(Boolean)}),Object.defineProperty(e.runtime,"denyList",{get:()=>[...e.init.ajax.deny_list||[],...e.init.ajax.block_internal?e.beacons:[]]}),e.runtime.ptid=e.agentIdentifier,function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach(r=>{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let s=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return s?s(...t):n})})}(e),e.runtime.loaderType=r,e.ee=R.ee.get(e.agentIdentifier),e.exposed=l,(0,E.W)({drained:!!e.runtime.activatedFeatures,type:"lifecycle",name:"initialize",feature:void 0,data:e.config}),e.runtime.configured=!0)}},5270:(e,t,r)=>{"use strict";r.d(t,{Aw:()=>o,SR:()=>s,rF:()=>a});var n=r(384),i=r(7767);function s(e){return!!(0,n.dV)().o.MO&&(0,i.V)(e)&&!0===e?.session_trace.enabled}function o(e){return!0===e?.session_replay.preload&&s(e)}function a(e,t){try{if("string"==typeof t?.type){if("password"===t.type.toLowerCase())return"*".repeat(e?.length||0);if(void 0!==t?.dataset?.nrUnmask||t?.classList?.contains("nr-unmask"))return e}}catch(e){}return"string"==typeof e?e.replace(/[\S]/g,"*"):"*".repeat(e?.length||0)}},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,Qr:()=>c,sB:()=>a});var n=r(3878),i=r(6389);function s(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(s())return e();const r=(0,i.J)(e),o=setInterval(()=>{s()&&(clearInterval(o),r())},500);(0,n.sp)("load",r,t)}function a(e){if(s())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(s())return e();(0,n.sp)("popstate",e)}},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},5732:(e,t,r)=>{"use strict";r.d(t,{$5:()=>d,B5:()=>c,Ux:()=>o,YA:()=>a,fQ:()=>i,yx:()=>s});var n=r(7508);const i={MFE:"MFE",BA:"BA"};function s(e,t){if(!e||!t?.init.api.register.enabled)return[];const r=t.runtime.registeredEntities;return r?.filter(t=>t.metadata.timings?.asset?.endsWith(e)).map(e=>e.metadata.target)||[]}function o(e,t){if(!u(t))return{};const r=t.agentRef.runtime.appMetadata.agents[0].entityGuid;return e?e.attributes:{"entity.guid":r,appId:t.agentRef.info.applicationID}}function a(e,t){return c(e,t)?{"child.id":e.id,"child.type":e.type,...o(void 0,t)}:{}}function c(e,t){return!!e&&!!u(t)&&t.agentRef.init.api.register.duplicate_data_to_container}function d(e){if(!e?.init.api.register.enabled)return[void 0];const t=[];try{var r=(0,n.AZ)((0,n.QL)());let i=r.length-1;for(;r[i];)t.push(...s(r[i--],e))}catch(e){}return t.length||t.push(void 0),t}function u(e){return 2===e?.harvestEndpointVersion}},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>d,RI:()=>i,WN:()=>f,bv:()=>s,gm:()=>o,lR:()=>l,m:()=>c,mw:()=>a,sb:()=>u,zk:()=>h});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,s="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),c=""+o?.location,d=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),u=d&&"undefined"==typeof SharedWorker,l=(()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);return Array.isArray(e)&&e.length>=2?+e[1]:0})(),f=Date.now()-(0,n.t)(),h=()=>{const e=o?.performance?.getEntriesByType?.("navigation")?.[0];if(e&&e.responseStart>0&&e.responseStart<o.performance.now())return e}},6344:(e,t,r)=>{"use strict";r.d(t,{BB:()=>u,Qb:()=>l,TZ:()=>i,Ug:()=>o,Vh:()=>s,_s:()=>a,bc:()=>d,yP:()=>c});var n=r(2614);const i=r(860).K7.sessionReplay,s="errorDuringReplay",o=.12,a={DomContentLoaded:0,Load:1,FullSnapshot:2,IncrementalSnapshot:3,Meta:4,Custom:5},c={[n.g.ERROR]:15e3,[n.g.FULL]:3e5,[n.g.OFF]:0},d={RESET:{message:"Session was reset",sm:"Reset"},IMPORT:{message:"Recorder failed to import",sm:"Import"},TOO_MANY:{message:"429: Too Many Requests",sm:"Too-Many"},TOO_BIG:{message:"Payload was too large",sm:"Too-Big"},CROSS_TAB:{message:"Session Entity was set to OFF on another tab",sm:"Cross-Tab"},ENTITLEMENTS:{message:"Session Replay is not allowed and will not be started",sm:"Entitlement"}},u=5e3,l={API:"api",RESUME:"resume",SWITCH_TO_FULL:"switchToFull",INITIALIZE:"initialize",PRELOAD:"preload"}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},6774:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.jserrors},7295:(e,t,r)=>{"use strict";r.d(t,{Xv:()=>o,gX:()=>i,iW:()=>s});var n=[];function i(e){if(!e||s(e))return!1;if(0===n.length)return!0;if("*"===n[0].hostname)return!1;for(var t=0;t<n.length;t++){var r=n[t];if(r.hostname.test(e.hostname)&&r.pathname.test(e.pathname))return!1}return!0}function s(e){return void 0===e.hostname}function o(e){if(n=[],e&&e.length)for(var t=0;t<e.length;t++){let r=e[t];if(!r)continue;if("*"===r)return void(n=[{hostname:"*"}]);0===r.indexOf("http://")?r=r.substring(7):0===r.indexOf("https://")&&(r=r.substring(8));const i=r.indexOf("/");let s,o;i>0?(s=r.substring(0,i),o=r.substring(i)):(s=r,o="*");let[c]=s.split(":");n.push({hostname:a(c),pathname:a(o,!0)})}}function a(e,t=!1){const r=e.replace(/[.+?^${}()|[\]\\]/g,e=>"\\"+e).replace(/\*/g,".*?");return new RegExp((t?"^":"")+r+"$")}},7485:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(6154);function i(e){if(0===(e||"").indexOf("data:"))return{protocol:"data"};try{const t=new URL(e,location.href),r={port:t.port,hostname:t.hostname,pathname:t.pathname,search:t.search,protocol:t.protocol.slice(0,t.protocol.indexOf(":")),sameOrigin:t.protocol===n.gm?.location?.protocol&&t.host===n.gm?.location?.host};return r.port&&""!==r.port||("http:"===t.protocol&&(r.port="80"),"https:"===t.protocol&&(r.port="443")),r.pathname&&""!==r.pathname?r.pathname.startsWith("/")||(r.pathname="/".concat(r.pathname)):r.pathname="/",r}catch(e){return{}}}},7508:(e,t,r)=>{"use strict";r.d(t,{AZ:()=>g,Qr:()=>b,QL:()=>m});var n=r(6154),i=r(1863),s=r(9119),o=r(7866);class a{dom=new c;performance=new c;constructor(e){this.url=e}get script(){const e=Math.max(this.dom.start,this.performance.end);return{start:e,end:Math.max(this.dom.end,this.performance.end,e)}}}class c{start=0;end=0;value=void 0}let d;try{d=g(m())[0]}catch(e){d=g(e)[0]}const u=e=>"script"===e.initiatorType||["link","fetch"].includes(e.initiatorType)&&e.name.endsWith(".js"),l=new Map;let f=[];function h(e){return l.get(e)}function p(e){const t=h(e);if(t)return t;const r=new a(e);if(l.set(e,r),l.size>1e3){const e=l.keys().next().value;l.delete(e)}return r}if(n.gm.MutationObserver&&n.gm.document){new MutationObserver(e=>{e.forEach(e=>{e.addedNodes.forEach(e=>{if("SCRIPT"===e.nodeName&&e.src){const t=p((0,s.L)(e.src));t.dom.start=(0,i.t)(),t.dom.value=e;const r=()=>{t.dom.end=(0,i.t)()};["load","error"].forEach(t=>e.addEventListener(t,r,{once:!0}))}})})}).observe(n.gm.document,{childList:!0,subtree:!0})}if(n.gm.PerformanceObserver?.supportedEntryTypes.includes("resource")){new PerformanceObserver(e=>{e.getEntries().filter(u).forEach(e=>{const t=p((0,s.L)(e.name));t.performance.start=Math.floor(e.startTime),t.performance.end=Math.floor(e.responseEnd),t.performance.value=e;const r=[];f.forEach(({test:t,addedAt:n},s)=>{(t(e)||(0,i.t)()-n>1e4)&&r.push(s)}),f=f.filter((e,t)=>!r.includes(t))})}).observe({type:"resource",buffered:!0})}function g(e){if(!e||"string"!=typeof e)return[];const t=new Set,r=e.split("\n");for(const e of r){const r=e.match(o.cn)||e.match(o.hB)||e.match(o.fL);if(r&&r[2])t.add((0,s.L)(r[2]));else{const r=e.match(/\(([^)]+\.js):\d+:\d+\)/)||e.match(/^\s+at\s+([^\s(]+\.js):\d+:\d+/);r&&r[1]&&t.add((0,s.L)(r[1]))}}return[...t]}function m(){let e;try{const t=Error.stackTraceLimit;Error.stackTraceLimit=50,e=(new Error).stack,Error.stackTraceLimit=t}catch(t){e=(new Error).stack}return e}function v(e,t){return(0,s.L)(e.name)===t}function y(e,t){e.fetchStart=Math.floor(t.startTime),e.fetchEnd=Math.floor(t.responseEnd),e.asset=t.name,e.type=t.initiatorType}function b(){const e={registeredAt:(0,i.t)(),reportedAt:void 0,fetchStart:0,fetchEnd:0,scriptStart:0,scriptEnd:0,asset:void 0,type:"unknown"},t=m();if(!t)return e;const r=n.gm.performance?.getEntriesByType("navigation")?.[0]?.name||"";try{const o=g(t),a=(o.length>1?o.filter(e=>d!==e):o)[0];if(!a)return e;if(r.includes(a))return e.asset=(0,s.L)(r),e.type="inline",e;e.correlation=h(a);const c=e.correlation?.performance.value||performance.getEntriesByType("resource").find(e=>v(e,a));c?y(e,c):function(e){if(!e||!n.gm.document)return!1;try{const t=n.gm.document.querySelectorAll('link[rel="preload"][as="script"]');for(const r of t)if((0,s.L)(r.href)===e)return!0}catch(e){}return!1}(a)&&(e.asset=a,e.type="preload",f.push({addedAt:(0,i.t)(),test:t=>!!v(t,a)&&(y(e,t),!0)})),Object.defineProperty(e,"scriptStart",{get:()=>e.correlation?.script.start||e.fetchEnd}),Object.defineProperty(e,"scriptEnd",{get:()=>e.correlation?.script.end||e.registeredAt})}catch(e){}return e}},7699:(e,t,r)=>{"use strict";r.d(t,{It:()=>s,KC:()=>a,No:()=>i,qh:()=>o});var n=r(860);const i=16e3,s=1e6,o="SESSION_ERROR",a={[n.K7.logging]:!0,[n.K7.genericEvents]:!0,[n.K7.jserrors]:!0,[n.K7.ajax]:!0}},7767:(e,t,r)=>{"use strict";r.d(t,{V:()=>i});var n=r(6154);const i=e=>n.RI&&!0===e?.privacy.cookies_enabled},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>a,ee:()=>c});var n=r(384),i=r(8990),s=r(2646),o=r(5607);const a="nr@context:".concat(o.W),c=function e(t,r){var n={},o={},u={},l=!1;try{l=16===r.length&&d.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,s){!1!==s&&(s=!0);if(c.aborted&&!i)return;t&&s&&t.emit(e,r,n);var a=h(n);g(e).forEach(e=>{e.apply(a,r)});var d=v()[o[e]];d&&d.push([f,e,r,a]);return a},get:m,listeners:g,context:h,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{o[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[o[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function h(e){return e&&e instanceof s.y?e:e?(0,i.I)(e,a,()=>new s.y(a)):new s.y(a)}function p(e,t){n[e]=g(e).concat(t)}function g(e){return n[e]||[]}function m(t){return u[t]=u[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=c)},7866:(e,t,r)=>{"use strict";r.d(t,{Nc:()=>s,cn:()=>a,fL:()=>i,h3:()=>n,hB:()=>o});const n=/function (.+?)\s*\(/,i=/^\s*at .+ \(eval at \S+ \((?:(?:file|http|https):[^)]+)?\)(?:, [^:]*:\d+:\d+)?\)$/i,s=/^\s*at Function code \(Function code:\d+:\d+\)\s*/i,o=/^\s*at (?:((?:\[object object\])?(?:[^(]*\([^)]*\))*[^()]*(?: \[as \S+\])?) )?\(?((?:file|http|https|chrome-extension):.*?)?:(\d+)(?::(\d+))?\)?\s*$/i,a=/^\s*(?:([^@]*)(?:\(.*?\))?@)?((?:file|http|https|chrome|safari-extension).*?):(\d+)(?::(\d+))?\s*$/i},8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),s=0===Object.keys(r).length?e:r;for(let o in s)if(void 0!==e[o])try{if(null===e[o]){r[o]=null;continue}Array.isArray(e[o])&&Array.isArray(t[o])?r[o]=Array.from(new Set([...e[o],...t[o]])):e[o]instanceof Map||e[o]instanceof Set||e[o]instanceof Date||e[o]instanceof RegExp?r[o]=e[o]:"object"==typeof e[o]&&"object"==typeof t[o]?r[o]=i(e[o],t[o]):r[o]=e[o]}catch(e){r[o]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},8139:(e,t,r)=>{"use strict";r.d(t,{u:()=>f});var n=r(7836),i=r(3434),s=r(8990),o=r(6154);const a={},c=o.gm.XMLHttpRequest,d="addEventListener",u="removeEventListener",l="nr@wrapped:".concat(n.P);function f(e){var t=function(e){return(e||n.ee).get("events")}(e);if(a[t.debugId]++)return t;a[t.debugId]=1;var r=(0,i.YM)(t,!0);function f(e){r.inPlace(e,[d,u],"-",p)}function p(e,t){return e[1]}return"getPrototypeOf"in Object&&(o.RI&&h(document,f),c&&h(c.prototype,f),h(o.gm,f)),t.on(d+"-start",function(e,t){var n=e[1];if(null!==n&&("function"==typeof n||"object"==typeof n)&&"newrelic"!==e[0]){var i=(0,s.I)(n,l,function(){var e={object:function(){if("function"!=typeof n.handleEvent)return;return n.handleEvent.apply(n,arguments)},function:n}[typeof n];return e?r(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=e[1]=i}}),t.on(u+"-start",function(e){e[1]=this.wrapped||e[1]}),t}function h(e,t,...r){let n=e;for(;"object"==typeof n&&!Object.prototype.hasOwnProperty.call(n,d);)n=Object.getPrototypeOf(n);n&&t(n,...r)}},8362:(e,t,r)=>{"use strict";r.d(t,{d:()=>s});var n=r(9566),i=r(1741);class s extends i.W{agentIdentifier=(0,n.LA)(16)}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},9119:(e,t,r)=>{"use strict";r.d(t,{L:()=>s});var n=/([^?#]*)[^#]*(#[^?]*|$).*/,i=/([^?#]*)().*/;function s(e,t){return e?e.replace(t?n:i,"$1$2"):e}},9300:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.ajax},9324:(e,t,r)=>{"use strict";r.d(t,{AJ:()=>o,F3:()=>i,Xs:()=>s,Yq:()=>a,xv:()=>n});const n="1.313.1",i="PROD",s="CDN",o="@newrelic/rrweb",a="1.1.0"},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>a,ZF:()=>c,bz:()=>o,el:()=>d});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function s(e,t){return e?15&e[t]:16*Math.random()|0}function o(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map(e=>"x"===e?s(t,r++).toString(16):"y"===e?(3&s()|8).toString(16):e).join("")}function a(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const o=[];for(var a=0;a<e;a++)o.push(s(r,i++).toString(16));return o.join("")}function c(){return a(16)}function d(){return a(32)}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,s){s?(s.buffer([e],i),s.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var s=n[e]={exports:{}};return r[e](s,s.exports,i),s.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce((t,r)=>(i.f[r](e,t),t),[])),i.u=e=>({212:"nr-spa-compressor",249:"nr-spa-recorder",478:"nr-spa"}[e]+"-1.313.1.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.313.1.PROD:",i.l=(r,n,s,o)=>{if(e[r])e[r].push(n);else{var a,c;if(void 0!==s)for(var d=document.getElementsByTagName("script"),u=0;u<d.length;u++){var l=d[u];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+s){a=l;break}}if(!a){c=!0;var f={478:"sha512-/9l9ZhNQoyI1Aj0GOsHHrbCo/rjGQPYuKrz+qTo7jMK0J2ZChW9rZIzC4rWZ3aDprAyy3ORdgy+LpBQTK97JQQ==",249:"sha512-a/Apw1AGPQLoLS3GcBGmuJMcF53T8GoREi+bouJiiUCw+tTH9GfJrNLU6xN83ClwBg3O+ZUMtOQ0j7kFOIs0Kg==",212:"sha512-2GhRYmZ19Tul2VVrSHZ5+Si0FDRyXu+4jsuNCPf+ui6g0gqwE3lgchmNA9bHOPs9IQ0gLUC1p48MDuV2lCGI2g=="};(a=document.createElement("script")).charset="utf-8",i.nc&&a.setAttribute("nonce",i.nc),a.setAttribute("data-webpack",t+s),a.src=r,0!==a.src.indexOf(window.location.origin+"/")&&(a.crossOrigin="anonymous"),f[o]&&(a.integrity=f[o])}e[r]=[n];var h=(t,n)=>{a.onerror=a.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],a.parentNode&&a.parentNode.removeChild(a),i&&i.forEach(e=>e(n)),t)return t(n)},p=setTimeout(h.bind(null,void 0,{type:"timeout",target:a}),12e4);a.onerror=h.bind(null,a.onerror),a.onload=h.bind(null,a.onload),c&&document.head.appendChild(a)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={38:0,788:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var s=new Promise((r,i)=>n=e[t]=[r,i]);r.push(n[2]=s);var o=i.p+i.u(t),a=new Error;i.l(o,r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var s=r&&("load"===r.type?"missing":r.type),o=r&&r.target&&r.target.src;a.message="Loading chunk "+t+" failed: ("+s+": "+o+")",a.name="ChunkLoadError",a.type=s,a.request=o,n[1](a)}},"chunk-"+t,t)}};var t=(t,r)=>{var n,s,[o,a,c]=r,d=0;if(o.some(t=>0!==e[t])){for(n in a)i.o(a,n)&&(i.m[n]=a[n]);if(c)c(i)}for(t&&t(r);d<o.length;d++)s=o[d],i.o(e,s)&&e[s]&&e[s][0](),e[s]=0},r=self["webpackChunk:NRBA-1.313.1.PROD"]=self["webpackChunk:NRBA-1.313.1.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(8362),t=i(860);const r=Object.values(t.K7);var n=i(5205);var s=i(9908),o=i(1863),a=i(4261),c=i(1738);var d=i(1687),u=i(4234),l=i(5289),f=i(6154),h=i(944),p=i(5270),g=i(7767),m=i(6389),v=i(7699);class y extends u.W{constructor(e,t){super(e,t),this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,m.J)(()=>{(0,d.Ak)(e,this.featureName),t()}))}):(0,d.Ak)(e,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;const n=async()=>{let n;await this.deferred;try{if((0,g.V)(e.init)){const{setupAgentSession:t}=await i.e(478).then(i.bind(i,8766));n=t(e)}}catch(e){(0,h.R)(20,e),this.ee.emit("internal-error",[e]),(0,s.p)(v.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#t(this.featureName,n,e.init))return(0,d.Ze)(this.agentRef,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:i}=await t();this.featAggregate=new i(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,h.R)(34,e),this.abortHandler?.(),(0,d.Ze)(this.agentRef,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};f.RI?(0,l.GG)(()=>n(),!0):n()}#t(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return(0,p.SR)(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}}var b=i(6630),w=i(2614),R=i(3241);class E extends y{static featureName=b.T;constructor(e){var t;super(e,b.T),this.setupInspectionEvents(),t=e,(0,c.Y)(a.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,s.p)(a.Pl+a.Fw,[(0,o.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>i.e(478).then(i.bind(i,5839)))}setupInspectionEvents(){const e=(e,t)=>{e&&(0,R.W)({timeStamp:e.timeStamp,loaded:"complete"===e.target.readyState,type:"window",name:t,data:e.target.location+""})};(0,l.sB)(t=>{e(t,"DOMContentLoaded")}),(0,l.GG)(t=>{e(t,"load")}),(0,l.Qr)(t=>{e(t,"navigate")}),this.ee.on(w.tS.UPDATE,(e,t)=>{(0,R.W)({type:"lifecycle",name:"session",data:t})})}}var T=i(384);class A extends e.d{constructor(e){var t;(super(),f.gm)?(this.features={},(0,T.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(E),(0,n.j)(this,e,e.loaderType||"agent"),t=this,(0,c.Y)(a.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,c.U)(t,e,r,a.cD,n);(0,h.R)(40,typeof r)}else(0,h.R)(39,typeof e)},t),function(e){(0,c.Y)(a.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,h.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,s.p)(a.Pl+"setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,c.U)(e,"enduser.id",t,a.Dl,!0)},e)}(this),function(e){(0,c.Y)(a.nb,function(t){if("string"==typeof t||null===t)return(0,c.U)(e,"application.version",t,a.nb,!1);(0,h.R)(42,typeof t)},e)}(this),function(e){(0,c.Y)(a.d3,function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,c.Y)(a.Pv,function(t=!0){if("boolean"==typeof t){if((0,s.p)(a.Pl+a.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,h.R)(65,typeof t)},e)}(this),this.run()):(0,h.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return r.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),n=[...this.desiredFeatures];n.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),n.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,h.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,h.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,T.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var x=i(2843),S=i(782);class _ extends y{static featureName=S.T;constructor(e){super(e,S.T),f.RI&&((0,x.u)(()=>(0,s.p)("docHidden",[(0,o.t)()],void 0,S.T,this.ee),!0),(0,x.G)(()=>(0,s.p)("winPagehide",[(0,o.t)()],void 0,S.T,this.ee)),this.importAggregator(e,()=>i.e(478).then(i.bind(i,9917))))}}var O=i(3969);class P extends y{static featureName=O.TZ;constructor(e){super(e,O.TZ),this.importAggregator(e,()=>i.e(478).then(i.bind(i,6555)))}}var k=i(6774),N=i(3878),j=i(3304);class D{constructor(e,t,r,n,i){this.name="UncaughtError",this.message="string"==typeof e?e:(0,j.A)(e),this.sourceURL=t,this.line=r,this.column=n,this.__newrelic=i}}function C(e){return M(e)?e:new D(void 0!==e?.message?e.message:e,e?.filename||e?.sourceURL,e?.lineno||e?.line,e?.colno||e?.col,e?.__newrelic,e?.cause)}function L(e){const t="Unhandled Promise Rejection: ";if(!e?.reason)return;if(M(e.reason)){try{e.reason.message.startsWith(t)||(e.reason.message=t+e.reason.message)}catch(e){}return C(e.reason)}const r=C(e.reason);return(r.message||"").startsWith(t)||(r.message=t+r.message),r}function I(e){if(e.error instanceof SyntaxError&&!/:\d+$/.test(e.error.stack?.trim())){const t=new D(e.message,e.filename,e.lineno,e.colno,e.error.__newrelic,e.cause);return t.name=SyntaxError.name,t}return M(e.error)?e.error:C(e)}function M(e){return e instanceof Error&&!!e.stack}function B(e,r,n,i,a=(0,o.t)()){"string"==typeof e&&(e=new Error(e)),(0,s.p)("err",[e,a,!1,r,n.runtime.isRecording,void 0,i],void 0,t.K7.jserrors,n.ee),(0,s.p)("uaErr",[],void 0,t.K7.genericEvents,n.ee)}var H=i(5732),K=i(993),W=i(3785);function F(e,{customAttributes:t={},level:r=K.p_.INFO}={},n,i,s=(0,o.t)()){(0,W.R)(n.ee,e,t,r,!1,i,s)}function U(e,r,n,i,c=(0,o.t)()){(0,s.p)(a.Pl+a.hG,[c,e,r,i],void 0,t.K7.genericEvents,n.ee)}function V(e,r,n,i,c=(0,o.t)()){const{start:d,end:u,customAttributes:l}=r||{},f={customAttributes:l||{}};if("object"!=typeof f.customAttributes||"string"!=typeof e||0===e.length)return void(0,h.R)(57);const p=(e,t)=>null==e?t:"number"==typeof e?e:e instanceof PerformanceMark?e.startTime:Number.NaN;if(f.start=p(d,0),f.end=p(u,c),Number.isNaN(f.start)||Number.isNaN(f.end))(0,h.R)(57);else{if(f.duration=f.end-f.start,!(f.duration<0))return(0,s.p)(a.Pl+a.V1,[f,e,i],void 0,t.K7.genericEvents,n.ee),f;(0,h.R)(58)}}function z(e,r={},n,i,c=(0,o.t)()){(0,s.p)(a.Pl+a.fF,[c,e,r,i],void 0,t.K7.genericEvents,n.ee)}var G=i(7508),Y=i(9566);const Z=["name","id","type"],q=new Map([[U,"addPageAction"],[F,"log"],[V,"measure"],[B,"noticeError"],[z,"recordCustomEvent"]]),X={experimental:(0,m.J)(()=>(0,h.R)(54,"newrelic.register")),disabled:(0,m.J)(()=>(0,h.R)(55)),invalidTarget:(0,m.J)(e=>(0,h.R)(48,e)),deregistered:(0,m.J)(()=>(0,h.R)(68))};function Q(e){(0,c.Y)(a.eY,function(t){return J(e,t)},e)}function J(e,r){X.experimental(),r||={},r.instance=(0,Y.LA)(8),r.type=H.fQ.MFE,r.licenseKey||=e.info.licenseKey,r.blocked=!1,("object"!=typeof r.tags||null===r.tags||Array.isArray(r.tags))&&(r.tags={}),r.parent??={get id(){return e.runtime.appMetadata.agents[0].entityGuid},type:H.fQ.BA};const n=(0,G.Qr)(),i={};Object.prototype.hasOwnProperty.call(r,"attributes")||Object.defineProperty(r,"attributes",{get:()=>({...i,"source.id":r.id,"source.name":r.name,"source.type":r.type,"parent.type":r.parent?.type||H.fQ.BA,"parent.id":r.parent?.id})}),Object.entries(r.tags).forEach(([e,t])=>{Z.includes(e)||(i["source.".concat(e)]=t)});let a=()=>{};const c=e.runtime.registeredEntities,d=e=>{r.blocked=!0,a=e};function u(e){return"string"==typeof e&&!!e.trim()&&e.trim().length<501}e.init.api.register.enabled||d(X.disabled),u(r.id)&&u(r.name)||d(()=>X.invalidTarget(r));const l={addPageAction:(t,n={})=>m(U,[t,{...i,...n},e],r),deregister:()=>{p(),d(X.deregistered)},log:(t,n={})=>m(F,[t,{...n,customAttributes:{...i,...n.customAttributes||{}}},e],r),measure:(t,n={})=>m(V,[t,{...n,customAttributes:{...i,...n.customAttributes||{}}},e],r),noticeError:(t,n={})=>m(B,[t,{...i,...n},e],r),recordCustomEvent:(t,n={})=>m(z,[t,{...i,...n},e],r),setApplicationVersion:e=>g("application.version",e),setCustomAttribute:(e,t)=>g(e,t),setUserId:e=>g("enduser.id",e),metadata:{get customAttributes(){return i},target:r,timings:n}},f=()=>(r.blocked&&a(),r.blocked);function p(){if(n.reportedAt)return;n.reportedAt=(0,o.t)();const e=n.fetchEnd-n.fetchStart,t=n.scriptEnd-n.scriptStart;l.recordCustomEvent("MicroFrontEndTiming",{assetUrl:n.asset,assetType:n.type,timeAlive:n.reportedAt-n.registeredAt,timeToBeRequested:n.fetchStart,timeToExecute:t,timeToFetch:e,timeToLoad:e+t,timeToRegister:n.registeredAt})}f()||(c.push(l),(0,x.G)(p));const g=(e,t)=>{f()||(i[e]=t)},m=(r,n,i)=>{if(f()&&r!==J)return;const a=(0,o.t)(),c=q.get(r)||"unknown";(0,s.p)(O.xV,["API/register/".concat(c,"/called")],void 0,t.K7.metrics,e.ee);try{return r(...n,i,a)}catch(e){(0,h.R)(50,e)}};return l}class ee extends y{static featureName=k.T;constructor(e){var t;super(e,k.T),t=e,(0,c.Y)(a.o5,(e,r)=>B(e,r,t),t),function(e){(0,c.Y)(a.bt,function(t){e.runtime.onerror=t},e)}(e),function(e){let t=0;(0,c.Y)(a.k6,function(e,r){++t>10||(this.runtime.releaseIds[e.slice(-200)]=(""+r).slice(-200))},e)}(e),Q(e);try{this.removeOnAbort=new AbortController}catch(e){}this.ee.on("internal-error",(t,r)=>{this.abortHandler&&(0,s.p)("ierr",[C(t),(0,o.t)(),!0,{},e.runtime.isRecording,r],void 0,this.featureName,this.ee)}),f.gm.addEventListener("unhandledrejection",t=>{this.abortHandler&&(0,s.p)("err",[L(t),(0,o.t)(),!1,{unhandledPromiseRejection:1},e.runtime.isRecording],void 0,this.featureName,this.ee)},(0,N.jT)(!1,this.removeOnAbort?.signal)),f.gm.addEventListener("error",t=>{this.abortHandler&&(0,s.p)("err",[I(t),(0,o.t)(),!1,{},e.runtime.isRecording],void 0,this.featureName,this.ee)},(0,N.jT)(!1,this.removeOnAbort?.signal)),this.abortHandler=this.#r,this.importAggregator(e,()=>i.e(478).then(i.bind(i,9377)))}#r(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var te=i(8990);let re=1;function ne(e){const t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===f.gm?0:(0,te.I)(e,"nr@id",function(){return re++})}function ie(e){if("string"==typeof e&&e.length)return e.length;if("object"==typeof e){if("undefined"!=typeof ArrayBuffer&&e instanceof ArrayBuffer&&e.byteLength)return e.byteLength;if("undefined"!=typeof Blob&&e instanceof Blob&&e.size)return e.size;if(!("undefined"!=typeof FormData&&e instanceof FormData))try{return(0,j.A)(e).length}catch(e){return}}}var se=i(8139),oe=i(7836),ae=i(3434);const ce={},de=["open","send"];function ue(e,t){var r=e||oe.ee;const n=function(e){return(e||oe.ee).get("xhr")}(r);if(void 0===f.gm.XMLHttpRequest)return n;if(ce[n.debugId]++)return n;ce[n.debugId]=1,(0,se.u)(r);var i=(0,ae.YM)(n),s=f.gm.XMLHttpRequest,o=f.gm.MutationObserver,a=f.gm.Promise,c=f.gm.setInterval,d="readystatechange",u=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],l=[],p=f.gm.XMLHttpRequest=function(e){const r=new s(e),o=n.context(r);o.targets=(0,H.$5)(t);try{n.emit("new-xhr",[r],o),r.addEventListener(d,(a=o,function(){var e=this;e.readyState>3&&!a.resolved&&(a.resolved=!0,n.emit("xhr-resolved",[],e)),i.inPlace(e,u,"fn-",w)}),(0,N.jT)(!1))}catch(e){(0,h.R)(15,e);try{n.emit("internal-error",[e])}catch(e){}}var a;return r};function g(e,t){i.inPlace(t,["onreadystatechange"],"fn-",w)}if(function(e,t){for(var r in e)t[r]=e[r]}(s,p),p.prototype=s.prototype,i.inPlace(p.prototype,de,"-xhr-",w),n.on("send-xhr-start",function(e,t){g(e,t),function(e){l.push(e),o&&(m?m.then(b):c?c(b):(v=-v,y.data=v))}(t)}),n.on("open-xhr-start",g),o){var m=a&&a.resolve();if(!c&&!a){var v=1,y=document.createTextNode(v);new o(b).observe(y,{characterData:!0})}}else r.on("fn-end",function(e){e[0]&&e[0].type===d||b()});function b(){for(var e=0;e<l.length;e++)g(0,l[e]);l.length&&(l=[])}function w(e,t){return t}return n}var le="fetch-",fe=le+"body-",he=["arrayBuffer","blob","json","text","formData"],pe=f.gm.Request,ge=f.gm.Response,me="prototype";const ve={};function ye(e,t){const r=function(e){return(e||oe.ee).get("fetch")}(e);if(!(pe&&ge&&f.gm.fetch))return r;if(ve[r.debugId]++)return r;function n(e,n,i){var s=e[n];"function"==typeof s&&(e[n]=function(){var e=[...arguments];const n={},o=(0,H.$5)(t);var a;r.emit(i+"before-start",[e],n),n[oe.P]&&n[oe.P].dt&&(a=n[oe.P].dt);var c=s.apply(this,e);return r.emit(i+"start",[e,a],c),c.then(function(e){return r.emit(i+"end",[null,e,o],c),e},function(e){throw r.emit(i+"end",[e,void 0,o],c),e})})}return ve[r.debugId]=1,he.forEach(e=>{n(pe[me],e,fe),n(ge[me],e,fe)}),n(f.gm,"fetch",le),r.on(le+"end",function(e,t,n){var i=this;if(i.targets=n||[void 0],t){var s=t.headers.get("content-length");null!==s&&(i.rxSize=s),r.emit(le+"done",[null,t],i)}else r.emit(le+"done",[e],i)}),r}var be=i(7485);class we{constructor(e){this.agentRef=e}generateTracePayload(e){const t=this.agentRef.loader_config;if(!this.shouldGenerateTrace(e)||!t)return null;var r=(t.accountID||"").toString()||null,n=(t.agentID||"").toString()||null,i=(t.trustKey||"").toString()||null;if(!r||!n)return null;var s=(0,Y.ZF)(),o=(0,Y.el)(),a=Date.now(),c={spanId:s,traceId:o,timestamp:a};return(e.sameOrigin||this.isAllowedOrigin(e)&&this.useTraceContextHeadersForCors())&&(c.traceContextParentHeader=this.generateTraceContextParentHeader(s,o),c.traceContextStateHeader=this.generateTraceContextStateHeader(s,a,r,n,i)),(e.sameOrigin&&!this.excludeNewrelicHeader()||!e.sameOrigin&&this.isAllowedOrigin(e)&&this.useNewrelicHeaderForCors())&&(c.newrelicHeader=this.generateTraceHeader(s,o,a,r,n,i)),c}generateTraceContextParentHeader(e,t){return"00-"+t+"-"+e+"-01"}generateTraceContextStateHeader(e,t,r,n,i){return i+"@nr=0-1-"+r+"-"+n+"-"+e+"----"+t}generateTraceHeader(e,t,r,n,i,s){if(!("function"==typeof f.gm?.btoa))return null;var o={v:[0,1],d:{ty:"Browser",ac:n,ap:i,id:e,tr:t,ti:r}};return s&&n!==s&&(o.d.tk=s),btoa((0,j.A)(o))}shouldGenerateTrace(e){return this.agentRef.init?.distributed_tracing?.enabled&&this.isAllowedOrigin(e)}isAllowedOrigin(e){var t=!1;const r=this.agentRef.init?.distributed_tracing;if(e.sameOrigin)t=!0;else if(r?.allowed_origins instanceof Array)for(var n=0;n<r.allowed_origins.length;n++){var i=(0,be.D)(r.allowed_origins[n]);if(e.hostname===i.hostname&&e.protocol===i.protocol&&e.port===i.port){t=!0;break}}return t}excludeNewrelicHeader(){var e=this.agentRef.init?.distributed_tracing;return!!e&&!!e.exclude_newrelic_header}useNewrelicHeaderForCors(){var e=this.agentRef.init?.distributed_tracing;return!!e&&!1!==e.cors_use_newrelic_header}useTraceContextHeadersForCors(){var e=this.agentRef.init?.distributed_tracing;return!!e&&!!e.cors_use_tracecontext_headers}}var Re=i(9300),Ee=i(7295);function Te(e){return"string"==typeof e?e:e instanceof(0,T.dV)().o.REQ?e.url:f.gm?.URL&&e instanceof URL?e.href:void 0}var Ae=["load","error","abort","timeout"],xe=Ae.length,Se=(0,T.dV)().o.REQ,_e=(0,T.dV)().o.XHR;const Oe="X-NewRelic-App-Data";class Pe extends y{static featureName=Re.T;constructor(e){super(e,Re.T),this.dt=new we(e),this.handler=(e,t,r,n)=>(0,s.p)(e,t,r,n,this.ee);try{const e={xmlhttprequest:"xhr",fetch:"fetch",beacon:"beacon"};f.gm?.performance?.getEntriesByType("resource").forEach(r=>{if(r.initiatorType in e&&0!==r.responseStatus){const n={status:r.responseStatus},i={rxSize:r.transferSize,duration:Math.floor(r.duration),cbTime:0};ke(n,r.name),this.handler("xhr",[n,i,r.startTime,r.responseEnd,e[r.initiatorType]],void 0,t.K7.ajax)}})}catch(e){}ye(this.ee,e),ue(this.ee,e),function(e,r,n,i){function a(e){var t=this;t.totalCbs=0,t.called=0,t.cbTime=0,t.end=T,t.ended=!1,t.xhrGuids={},t.lastSize=null,t.loadCaptureCalled=!1,t.params=this.params||{},t.metrics=this.metrics||{},t.latestLongtaskEnd=0,e.addEventListener("load",function(r){x(t,e)},(0,N.jT)(!1)),f.lR||e.addEventListener("progress",function(e){t.lastSize=e.loaded},(0,N.jT)(!1))}function c(e){this.params={method:e[0]},ke(this,e[1]),this.metrics={}}function d(t,r){e.loader_config.xpid&&this.sameOrigin&&r.setRequestHeader("X-NewRelic-ID",e.loader_config.xpid);var n=i.generateTracePayload(this.parsedOrigin);if(n){var s=!1;n.newrelicHeader&&(r.setRequestHeader("newrelic",n.newrelicHeader),s=!0),n.traceContextParentHeader&&(r.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&r.setRequestHeader("tracestate",n.traceContextStateHeader),s=!0),s&&(this.dt=n)}}function u(e,t){var n=this.metrics,i=e[0],s=this;if(n&&i){var a=ie(i);a&&(n.txSize=a)}this.startTime=(0,o.t)(),this.body=i,this.listener=function(e){try{"abort"!==e.type||s.loadCaptureCalled||(s.params.aborted=!0),("load"!==e.type||s.called===s.totalCbs&&(s.onloadCalled||"function"!=typeof t.onload)&&"function"==typeof s.end)&&s.end(t)}catch(e){try{r.emit("internal-error",[e])}catch(e){}}};for(var c=0;c<xe;c++)t.addEventListener(Ae[c],this.listener,(0,N.jT)(!1))}function l(e,t,r){this.cbTime+=e,t?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof r.onload||"function"!=typeof this.end||this.end(r)}function h(e,t){var r=""+ne(e)+!!t;this.xhrGuids&&!this.xhrGuids[r]&&(this.xhrGuids[r]=!0,this.totalCbs+=1)}function p(e,t){var r=""+ne(e)+!!t;this.xhrGuids&&this.xhrGuids[r]&&(delete this.xhrGuids[r],this.totalCbs-=1)}function g(){this.endTime=(0,o.t)()}function m(e,t){t instanceof _e&&"load"===e[0]&&r.emit("xhr-load-added",[e[1],e[2]],t)}function v(e,t){t instanceof _e&&"load"===e[0]&&r.emit("xhr-load-removed",[e[1],e[2]],t)}function y(e,t,r){t instanceof _e&&("onload"===r&&(this.onload=!0),("load"===(e[0]&&e[0].type)||this.onload)&&(this.xhrCbStart=(0,o.t)()))}function b(e,t){this.xhrCbStart&&r.emit("xhr-cb-time",[(0,o.t)()-this.xhrCbStart,this.onload,t],t)}function w(e){var t,r=e[1]||{};if("string"==typeof e[0]?0===(t=e[0]).length&&f.RI&&(t=""+f.gm.location.href):e[0]&&e[0].url?t=e[0].url:f.gm?.URL&&e[0]&&e[0]instanceof URL?t=e[0].href:"function"==typeof e[0].toString&&(t=e[0].toString()),"string"==typeof t&&0!==t.length){t&&(this.parsedOrigin=(0,be.D)(t),this.sameOrigin=this.parsedOrigin.sameOrigin);var n=i.generateTracePayload(this.parsedOrigin);if(n&&(n.newrelicHeader||n.traceContextParentHeader))if(e[0]&&e[0].headers)a(e[0].headers,n)&&(this.dt=n);else{var s={};for(var o in r)s[o]=r[o];s.headers=new Headers(r.headers||{}),a(s.headers,n)&&(this.dt=n),e.length>1?e[1]=s:e.push(s)}}function a(e,t){var r=!1;return t.newrelicHeader&&(e.set("newrelic",t.newrelicHeader),r=!0),t.traceContextParentHeader&&(e.set("traceparent",t.traceContextParentHeader),t.traceContextStateHeader&&e.set("tracestate",t.traceContextStateHeader),r=!0),r}}function R(e,t){this.params={},this.metrics={},this.startTime=(0,o.t)(),this.dt=t;let[r,n={}]=e;ke(this,Te(r));const i=(""+(r&&r instanceof Se&&r.method||n.method||"GET")).toUpperCase();this.params.method=i,this.body=n.body,this.txSize=ie(n.body)||0}function E(e,t){if(this.endTime=(0,o.t)(),this.params||(this.params={}),(0,Ee.iW)(this.params))return;let r;this.params.status=t?t.status:0,"string"==typeof this.rxSize&&this.rxSize.length>0&&(r=+this.rxSize);const n={txSize:this.txSize,rxSize:r,duration:(0,o.t)()-this.startTime},i=[this.params,n,this.startTime,this.endTime,"fetch"];this.targets.forEach(e=>A(i,this,e))}function T(e){const t=this.params,r=this.metrics;if(this.ended)return;this.ended=!0;for(let t=0;t<xe;t++)e.removeEventListener(Ae[t],this.listener,!1);if(t.aborted)return;if((0,Ee.iW)(t))return;r.duration=(0,o.t)()-this.startTime,this.loadCaptureCalled||4!==e.readyState?null==t.status&&(t.status=0):x(this,e),r.cbTime=this.cbTime;const n=[t,r,this.startTime,this.endTime,"xhr"];this.targets.forEach(e=>A(n,this,e))}function A(e,r,i){n("xhr",[...e,i],r,t.K7.ajax)}function x(e,n){e.params.status=n.status;var i=function(e,t){var r=e.responseType;return"json"===r&&null!==t?t:"arraybuffer"===r||"blob"===r||"json"===r?ie(e.response):"text"===r||""===r||void 0===r?ie(e.responseText):void 0}(n,e.lastSize);if(i&&(e.metrics.rxSize=i),e.sameOrigin&&n.getAllResponseHeaders().indexOf(Oe)>=0){var o=n.getResponseHeader(Oe);o&&((0,s.p)(O.rs,["Ajax/CrossApplicationTracing/Header/Seen"],void 0,t.K7.metrics,r),e.params.cat=o.split(", ").pop())}e.loadCaptureCalled=!0}r.on("new-xhr",a),r.on("open-xhr-start",c),r.on("open-xhr-end",d),r.on("send-xhr-start",u),r.on("xhr-cb-time",l),r.on("xhr-load-added",h),r.on("xhr-load-removed",p),r.on("xhr-resolved",g),r.on("addEventListener-end",m),r.on("removeEventListener-end",v),r.on("fn-end",b),r.on("fetch-before-start",w),r.on("fetch-start",R),r.on("fn-start",y),r.on("fetch-done",E)}(e,this.ee,this.handler,this.dt),this.importAggregator(e,()=>i.e(478).then(i.bind(i,3845)))}}function ke(e,t){var r=(0,be.D)(t),n=e.params||e;n.hostname=r.hostname,n.port=r.port,n.protocol=r.protocol,n.host=r.hostname+":"+r.port,n.pathname=r.pathname,e.parsedOrigin=r,e.sameOrigin=r.sameOrigin}const Ne={},je=["pushState","replaceState"];function De(e){const t=function(e){return(e||oe.ee).get("history")}(e);return!f.RI||Ne[t.debugId]++||(Ne[t.debugId]=1,(0,ae.YM)(t).inPlace(window.history,je,"-")),t}var Ce=i(3738);function Le(e){(0,c.Y)(a.BL,function(r=Date.now()){const n=r-f.WN;n<0&&(0,h.R)(62,r),(0,s.p)(O.XG,[a.BL,{time:n}],void 0,t.K7.metrics,e.ee),e.addToTrace({name:a.BL,start:r,origin:"nr"}),(0,s.p)(a.Pl+a.hG,[n,a.BL],void 0,t.K7.genericEvents,e.ee)},e)}const{He:Ie,bD:Me,d3:Be,Kp:He,TZ:Ke,Lc:We,uP:Fe,Rz:Ue}=Ce;class Ve extends y{static featureName=Ke;constructor(e){var r;super(e,Ke),r=e,(0,c.Y)(a.U2,function(e){if(!(e&&"object"==typeof e&&e.name&&e.start))return;const n={n:e.name,s:e.start-f.WN,e:(e.end||e.start)-f.WN,o:e.origin||"",t:"api"};n.s<0||n.e<0||n.e<n.s?(0,h.R)(61,{start:n.s,end:n.e}):(0,s.p)("bstApi",[n],void 0,t.K7.sessionTrace,r.ee)},r),Le(e);if(!(0,g.V)(e.init))return void this.deregisterDrain();const n=this.ee;let d;De(n),this.eventsEE=(0,se.u)(n),this.eventsEE.on(Fe,function(e,t){this.bstStart=(0,o.t)()}),this.eventsEE.on(We,function(e,r){(0,s.p)("bst",[e[0],r,this.bstStart,(0,o.t)()],void 0,t.K7.sessionTrace,n)}),n.on(Ue+Be,function(e){this.time=(0,o.t)(),this.startPath=location.pathname+location.hash}),n.on(Ue+He,function(e){(0,s.p)("bstHist",[location.pathname+location.hash,this.startPath,this.time],void 0,t.K7.sessionTrace,n)});try{d=new PerformanceObserver(e=>{const r=e.getEntries();(0,s.p)(Ie,[r],void 0,t.K7.sessionTrace,n)}),d.observe({type:Me,buffered:!0})}catch(e){}this.importAggregator(e,()=>i.e(478).then(i.bind(i,6974)),{resourceObserver:d})}}var ze=i(6344);class Ge extends y{static featureName=ze.TZ;#n;recorder;constructor(e){var r;let n;super(e,ze.TZ),r=e,(0,c.Y)(a.CH,function(){(0,s.p)(a.CH,[],void 0,t.K7.sessionReplay,r.ee)},r),function(e){(0,c.Y)(a.Tb,function(){(0,s.p)(a.Tb,[],void 0,t.K7.sessionReplay,e.ee)},e)}(e);try{n=JSON.parse(localStorage.getItem("".concat(w.H3,"_").concat(w.uh)))}catch(e){}(0,p.SR)(e.init)&&this.ee.on(a.CH,()=>this.#i()),this.#s(n)&&this.importRecorder().then(e=>{e.startRecording(ze.Qb.PRELOAD,n?.sessionReplayMode)}),this.importAggregator(this.agentRef,()=>i.e(478).then(i.bind(i,6167)),this),this.ee.on("err",e=>{this.blocked||this.agentRef.runtime.isRecording&&(this.errorNoticed=!0,(0,s.p)(ze.Vh,[e],void 0,this.featureName,this.ee))})}#s(e){return e&&(e.sessionReplayMode===w.g.FULL||e.sessionReplayMode===w.g.ERROR)||(0,p.Aw)(this.agentRef.init)}importRecorder(){return this.recorder?Promise.resolve(this.recorder):(this.#n??=Promise.all([i.e(478),i.e(249)]).then(i.bind(i,4866)).then(({Recorder:e})=>(this.recorder=new e(this),this.recorder)).catch(e=>{throw this.ee.emit("internal-error",[e]),this.blocked=!0,e}),this.#n)}#i(){this.blocked||(this.featAggregate?this.featAggregate.mode!==w.g.FULL&&this.featAggregate.initializeRecording(w.g.FULL,!0,ze.Qb.API):this.importRecorder().then(()=>{this.recorder.startRecording(ze.Qb.API,w.g.FULL)}))}}var Ye=i(3962);class Ze extends y{static featureName=Ye.TZ;constructor(e){if(super(e,Ye.TZ),function(e){const r=e.ee.get("tracer");function n(){}(0,c.Y)(a.dT,function(e){return(new n).get("object"==typeof e?e:{})},e);const i=n.prototype={createTracer:function(n,i){var a={},c=this,d="function"==typeof i;return(0,s.p)(O.xV,["API/createTracer/called"],void 0,t.K7.metrics,e.ee),function(){if(r.emit((d?"":"no-")+"fn-start",[(0,o.t)(),c,d],a),d)try{return i.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw r.emit("fn-err",[arguments,this,t],a),t}finally{r.emit("fn-end",[(0,o.t)()],a)}}}};["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach(r=>{c.Y.apply(this,[r,function(){return(0,s.p)(a.hw+r,[performance.now(),...arguments],this,t.K7.softNav,e.ee),this},e,i])}),(0,c.Y)(a.PA,function(){(0,s.p)(a.hw+"routeName",[performance.now(),...arguments],void 0,t.K7.softNav,e.ee)},e)}(e),!f.RI||!(0,T.dV)().o.MO)return;const r=De(this.ee);try{this.removeOnAbort=new AbortController}catch(e){}Ye.tC.forEach(e=>{(0,N.sp)(e,e=>{l(e)},!0,this.removeOnAbort?.signal)});const n=()=>(0,s.p)("newURL",[(0,o.t)(),""+window.location],void 0,this.featureName,this.ee);r.on("pushState-end",n),r.on("replaceState-end",n),(0,N.sp)(Ye.OV,e=>{l(e),(0,s.p)("newURL",[e.timeStamp,""+window.location],void 0,this.featureName,this.ee)},!0,this.removeOnAbort?.signal);let d=!1;const u=new((0,T.dV)().o.MO)((e,t)=>{d||(d=!0,requestAnimationFrame(()=>{(0,s.p)("newDom",[(0,o.t)()],void 0,this.featureName,this.ee),d=!1}))}),l=(0,m.s)(e=>{"loading"!==document.readyState&&((0,s.p)("newUIEvent",[e],void 0,this.featureName,this.ee),u.observe(document.body,{attributes:!0,childList:!0,subtree:!0,characterData:!0}))},100,{leading:!0});this.abortHandler=function(){this.removeOnAbort?.abort(),u.disconnect(),this.abortHandler=void 0},this.importAggregator(e,()=>i.e(478).then(i.bind(i,4393)),{domObserver:u})}}var qe=i(3333),Xe=i(9119);const $e={},Qe=new Set;function Je(e){return"string"==typeof e?{type:"string",size:(new TextEncoder).encode(e).length}:e instanceof ArrayBuffer?{type:"ArrayBuffer",size:e.byteLength}:e instanceof Blob?{type:"Blob",size:e.size}:e instanceof DataView?{type:"DataView",size:e.byteLength}:ArrayBuffer.isView(e)?{type:"TypedArray",size:e.byteLength}:{type:"unknown",size:0}}class et{constructor(e,t){this.timestamp=(0,o.t)(),this.currentUrl=(0,Xe.L)(window.location.href),this.socketId=(0,Y.LA)(8),this.requestedUrl=(0,Xe.L)(e),this.requestedProtocols=Array.isArray(t)?t.join(","):t||"",this.openedAt=void 0,this.protocol=void 0,this.extensions=void 0,this.binaryType=void 0,this.messageOrigin=void 0,this.messageCount=0,this.messageBytes=0,this.messageBytesMin=0,this.messageBytesMax=0,this.messageTypes=void 0,this.sendCount=0,this.sendBytes=0,this.sendBytesMin=0,this.sendBytesMax=0,this.sendTypes=void 0,this.closedAt=void 0,this.closeCode=void 0,this.closeReason="unknown",this.closeWasClean=void 0,this.connectedDuration=0,this.hasErrors=void 0}}class tt extends y{static featureName=qe.TZ;constructor(e){super(e,qe.TZ);const r=e.init.feature_flags.includes("websockets"),n=!e.init.feature_flags.includes("no_spv"),d=[e.init.page_action.enabled,e.init.performance.capture_marks,e.init.performance.capture_measures,e.init.performance.resources.enabled,e.init.user_actions.enabled,r,n];var u;let l;if(u=e,(0,c.Y)(a.hG,(e,t)=>U(e,t,u),u),function(e){(0,c.Y)(a.fF,(t,r)=>z(t,r,e),e)}(e),Le(e),Q(e),function(e){(0,c.Y)(a.V1,(t,r)=>V(t,r,e),e)}(e),this.removeOnAbort=new AbortController,this.abortHandler=()=>{this.removeOnAbort.abort(),this.abortHandler=void 0},r){const h=function(e){if(!(0,T.dV)().o.WS)return e;const t=e.get("websockets");if($e[t.debugId]++)return t;$e[t.debugId]=1,(0,x.G)(()=>{const e=(0,o.t)();Qe.forEach(r=>{r.nrData.closedAt=e,r.nrData.closeCode=1001,r.nrData.closeReason="Page navigating away",r.nrData.closeWasClean=!1,r.nrData.openedAt&&(r.nrData.connectedDuration=e-r.nrData.openedAt),t.emit("ws",[r.nrData],r)})});class r extends WebSocket{static name="WebSocket";static toString(){return"function WebSocket() { [native code] }"}toString(){return"[object WebSocket]"}get[Symbol.toStringTag](){return r.name}#o(e){(e.__newrelic??={}).socketId=this.nrData.socketId,this.nrData.hasErrors??=!0}constructor(...e){super(...e),this.nrData=new et(e[0],e[1]),this.addEventListener("open",()=>{this.nrData.openedAt=(0,o.t)(),["protocol","extensions","binaryType"].forEach(e=>{this.nrData[e]=this[e]}),Qe.add(this)}),this.addEventListener("message",e=>{const{type:t,size:r}=Je(e.data);this.nrData.messageOrigin??=(0,Xe.L)(e.origin),this.nrData.messageCount++,this.nrData.messageBytes+=r,this.nrData.messageBytesMin=Math.min(this.nrData.messageBytesMin||1/0,r),this.nrData.messageBytesMax=Math.max(this.nrData.messageBytesMax,r),(this.nrData.messageTypes??"").includes(t)||(this.nrData.messageTypes=this.nrData.messageTypes?"".concat(this.nrData.messageTypes,",").concat(t):t)}),this.addEventListener("close",e=>{this.nrData.closedAt=(0,o.t)(),this.nrData.closeCode=e.code,e.reason&&(this.nrData.closeReason=e.reason),this.nrData.closeWasClean=e.wasClean,this.nrData.connectedDuration=this.nrData.closedAt-this.nrData.openedAt,Qe.delete(this),t.emit("ws",[this.nrData],this)})}addEventListener(e,t,...r){const n=this,i="function"==typeof t?function(...e){try{return t.apply(this,e)}catch(e){throw n.#o(e),e}}:t?.handleEvent?{handleEvent:function(...e){try{return t.handleEvent.apply(t,e)}catch(e){throw n.#o(e),e}}}:t;return super.addEventListener(e,i,...r)}send(e){if(this.readyState===WebSocket.OPEN){const{type:t,size:r}=Je(e);this.nrData.sendCount++,this.nrData.sendBytes+=r,this.nrData.sendBytesMin=Math.min(this.nrData.sendBytesMin||1/0,r),this.nrData.sendBytesMax=Math.max(this.nrData.sendBytesMax,r),(this.nrData.sendTypes??"").includes(t)||(this.nrData.sendTypes=this.nrData.sendTypes?"".concat(this.nrData.sendTypes,",").concat(t):t)}try{return super.send(e)}catch(e){throw this.#o(e),e}}close(...e){try{super.close(...e)}catch(e){throw this.#o(e),e}}}return f.gm.WebSocket=r,t}(this.ee);h.on("ws",e=>{(0,s.p)("ws-complete",[e],void 0,this.featureName,this.ee)})}if(n&&f.gm.addEventListener("securitypolicyviolation",e=>{(0,s.p)("spv",[e],void 0,t.K7.genericEvents,this.ee)},(0,N.jT)(!1,this.removeOnAbort.signal)),f.RI){if(ye(this.ee,e),ue(this.ee,e),l=De(this.ee),e.init.user_actions.enabled){function p(t){const r=(0,be.D)(t);return e.beacons.includes(r.hostname+":"+r.port)}function g(){l.emit("navChange")}qe.Zp.forEach(e=>(0,N.sp)(e,e=>(0,s.p)("ua",[e],void 0,this.featureName,this.ee),!0)),qe.qN.forEach(e=>{const t=(0,m.s)(e=>{(0,s.p)("ua",[e],void 0,this.featureName,this.ee)},500,{leading:!0});(0,N.sp)(e,t)}),f.gm.addEventListener("error",()=>{(0,s.p)("uaErr",[],void 0,t.K7.genericEvents,this.ee)},(0,N.jT)(!1,this.removeOnAbort.signal)),this.ee.on("open-xhr-start",(e,r)=>{p(e[1])||r.addEventListener("readystatechange",()=>{2===r.readyState&&(0,s.p)("uaXhr",[],void 0,t.K7.genericEvents,this.ee)},(0,N.jT)(void 0,this.removeOnAbort.signal))}),this.ee.on("fetch-start",e=>{e.length>=1&&!p(Te(e[0]))&&(0,s.p)("uaXhr",[],void 0,t.K7.genericEvents,this.ee)}),l.on("pushState-end",g),l.on("replaceState-end",g),window.addEventListener("hashchange",g,(0,N.jT)(!0,this.removeOnAbort.signal)),window.addEventListener("popstate",g,(0,N.jT)(!0,this.removeOnAbort.signal))}if(e.init.performance.resources.enabled&&f.gm.PerformanceObserver?.supportedEntryTypes.includes("resource")){new PerformanceObserver(e=>{e.getEntries().forEach(e=>{(0,s.p)("browserPerformance.resource",[e],void 0,this.featureName,this.ee)})}).observe({type:"resource",buffered:!0})}}d.some(e=>e)?this.importAggregator(e,()=>i.e(478).then(i.bind(i,8019))):this.deregisterDrain()}}var rt=i(2646);const nt=new Map;function it(e,t,r,n,i=!0,s){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,h.R)(29);const o=function(e){return(e||oe.ee).get("logger")}(e),a=(0,ae.YM)(o,void 0,s),c=new rt.y(oe.P);c.level=n.level,c.customAttributes=n.customAttributes,c.autoCaptured=i;const d=t[r]?.[ae.Jt]||t[r];return nt.set(d,c),a.inPlace(t,[r],"wrap-logger-",()=>nt.get(d),void 0,!0),o}var st=i(1910);class ot extends y{static featureName=K.TZ;constructor(e){var t;super(e,K.TZ),t=e,(0,c.Y)(a.$9,(e,r)=>F(e,r,t),t),function(e){(0,c.Y)(a.Wb,(t,r,{customAttributes:n={},level:i=K.p_.INFO}={})=>{it(e.ee,t,r,{customAttributes:n,level:i},!1,e)},e)}(e),Q(e);const r=this.ee;["log","error","warn","info","debug","trace"].forEach(t=>{(0,st.i)(f.gm.console[t]),it(r,f.gm.console,t,{level:"log"===t?"info":t},void 0,e)}),this.ee.on("wrap-logger-end",function([e],t,n,i=[]){const{level:s,customAttributes:o,autoCaptured:a}=this;i.forEach(t=>{(0,W.R)(r,e,o,s,a,t)})}),this.importAggregator(e,()=>i.e(478).then(i.bind(i,5288)))}}new A({features:[Pe,E,_,Ve,Ge,P,ee,tt,ot,Ze],loaderType:"spa"})})()})();</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+
+<link rel="preconnect" crossorigin href="//www.google-analytics.com">
+<link rel="preconnect" crossorigin href="//www.googletagmanager.com">
+<link rel="preconnect" crossorigin href="//connect.facebook.net">
+<link rel="dns-prefetch" href="https://s3service.hitbullseye.com/"> 
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/"> 
+<link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com/">
+
+<!-- Below valuse should be based on Domain -->
+<meta property="fb:pages" content="555298671195180" />
+<meta property="fb:page_id" content="555298671195180" />
+<meta property="twitter:account_id" content="532889011" />
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+
+<meta property="og:image:width" content="auto" />
+<meta property="og:image:height" content="auto" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@hitbullseye" />
+<meta name="twitter:creator" content="@hitbullseye">
+
+<meta name="twitter:image:width" content="auto" />
+<meta name="twitter:image:height" content="auto" />
+
+
+<link rel="icon" href="https://mba.hitbullseye.com/sites/all/themes/exblog/images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://mba.hitbullseye.com/sites/all/themes/exblog/favicon.ico" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://s3service.hitbullseye.com/assets/logos/hitbullseye_logo_144x144.png"/> 
+<link rel="apple-touch-icon" sizes="114x114" href="https://s3service.hitbullseye.com/assets/logos/hitbullseye_logo_114x114.png"/> 
+<link rel="apple-touch-icon" sizes="72x72" href="https://s3service.hitbullseye.com/assets/logos/hitbullseye_logo_72x72.png"/> 
+<link rel="apple-touch-icon" sizes="57x57" href="https://s3service.hitbullseye.com/assets/logos/hitbullseye_logo_57x57.png"/> 
+<link rel="apple-touch-icon-precomposed" href="https://s3service.hitbullseye.com/assets/logos/hitbullseye_logo_57x57.png"/>
+<title>Case Study Examples | case study sample | Solved Case Study Examples</title>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<style>
+
+.cc-window.cc-floating.cc-type-info.cc-theme-classic.cc-bottom.cc-color-override--1945169999{text-align:center;background:rgba(0,68,128,0.8)!important;right:auto;}
+.cc-window.cc-banner.cc-type-info.cc-theme-classic.cc-bottom.cc-color-override--1945169999{text-align:center;background:rgba(0,68,128,0.8)!important;right:auto;}
+
+.cc-window.cc-banner.cc-type-info.cc-theme-classic.cc-bottom.cc-color-override--1945169999 {width:auto!important;max-width:none!important;}
+.cc-window.cc-floating.cc-type-info.cc-theme-classic.cc-bottom.cc-color-override--1945169999{width:auto!important;max-width:none!important;}
+.cookie-txt,.cc-compliance{display:inline-block;}
+.cc-revoke, .cc-window{font-size:14px;}
+.cc-theme-classic .cc-btn{padding:3px 5px;}
+.cc-theme-classic .cc-btn:last-child{min-width:70px;background-color:#ffdf0f;}
+@media screen and (max-width:549px){
+.cc-floating.cc-theme-classic,.cc-window.cc-bottom{bottom:0px!important;}
+}
+div#hdfc-gateway-loader{ 
+	background: #f6f6f6;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    margin-top: 0;
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: url(/img/hdfc-getway-loader.gif) 50% 50% no-repeat #f2f2f2;
+    -webkit-background-size: 25% 25%;
+    background-size: 25%;
+    opacity: .7;
+}
+
+.hbe-ps-lazy{
+    width: auto;
+}
+.hbe-ps-lazy-nv{
+    width: auto;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+    function cookiePopUpDD(){
+        window.cookieconsent.initialise({
+            window: '<div role="dialog" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window {{classes}}">'
+            + '<div class="cookie-bottom">{{children}}</div></div>',
+            elements: {
+                messagelink: '<div class="cookie-txt"><span id="cookieconsent:desc" class="cc-message" style="margin-bottom:0px">{{message}} '
+                + '<a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a></span></div>'
+            },
+            compliance: {
+                info: '<div class="cc-compliance">{{dismiss}}</div>',
+                "opt-in":'<div class="cc-compliance cc-highlight">{{dismiss}}{{allow}}</div>',
+                "opt-out": '<div class="cc-compliance cc-highlight">{{deny}}{{dismiss}}</div>'
+            },	
+            "palette": {
+                "popup": {
+                "background": "#333333",
+                "text": "#cfcfe8"
+                },
+                "button": {
+                "background": "#fff"
+                }
+            },
+            "cookie": { "domain": ".hitbullseye.com"},
+            "theme": "classic",
+            "content": {
+                "message": "In order to show you relevant content according to your preferences, this website will use cookies",
+                "href": "https://hitbullseye.com/Privacy-Policy.php"
+            }
+        })
+    }
+</script>
+	<style type="text/css" media="all">
+@import url("http://gdpi.hitbullseye.com/modules/system/system.base.css?tar3gk");
+@import url("http://gdpi.hitbullseye.com/modules/system/system.messages.css?tar3gk");
+</style>
+<style type="text/css" media="all">
+@import url("http://gdpi.hitbullseye.com/modules/field/theme/field.css?tar3gk");
+@import url("http://gdpi.hitbullseye.com/sites/all/modules/field_hidden/field_hidden.css?tar3gk");
+@import url("http://gdpi.hitbullseye.com/modules/node/node.css?tar3gk");
+@import url("http://gdpi.hitbullseye.com/modules/user/user.css?tar3gk");
+@import url("http://gdpi.hitbullseye.com/sites/all/modules/views/css/views.css?tar3gk");
+@import url("http://gdpi.hitbullseye.com/sites/all/modules/ckeditor/css/ckeditor.css?tar3gk");
+</style>
+<style type="text/css" media="all">
+@import url("http://gdpi.hitbullseye.com/sites/all/modules/ctools/css/ctools.css?tar3gk");
+@import url("http://gdpi.hitbullseye.com/sites/all/modules/custompage/custompage.css?tar3gk");
+@import url("http://gdpi.hitbullseye.com/sites/all/themes/exblog/css/popup.css?tar3gk");
+</style>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" media="all" />
+<style type="text/css" media="all">
+@import url("http://gdpi.hitbullseye.com/sites/all/themes/exblog/css/bootstrap.css?tar3gk");
+@import url("http://gdpi.hitbullseye.com/sites/all/themes/exblog/css/w3-css.css?tar3gk");
+@import url("http://gdpi.hitbullseye.com/sites/all/themes/exblog/css/jquery.dataTables.min.css?tar3gk");
+@import url("http://gdpi.hitbullseye.com/sites/all/themes/exblog/css/font-awesome.min.css?tar3gk");
+@import url("http://gdpi.hitbullseye.com/sites/all/themes/exblog/css/newcodestyle.css?tar3gk");
+@import url("http://gdpi.hitbullseye.com/sites/all/themes/exblog/css/newcode-responsive.css?tar3gk");
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Robots" content="INDEX,FOLLOW" />
+<meta name="Author" content="BULLSEYE" />
+<link rel="canonical" href="https://gdpi.hitbullseye.com/MBA/Case-Study-Examples.php" />
+<link rel="amphtml" href="https://gdpi.hitbullseye.com/MBA/Case-Study-Examples.php?amp=1" />
+<meta name="description" content="Given is the list of long case studies for your practice. Enhance your level of proficiency in this section by preparing these case studies well.
+" />
+<meta name="keywords" content="practice case studies,case study practice practice case interviews ,short case studies" />
+<meta name="og:image" content="https://s3service.hitbullseye.com/s3fs-public/long-case-study-sig.jpg?null" />
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ['tex2jax.js'],
+  jax: ['input/TeX','output/HTML-CSS'],
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true,
+    processClass: 'tex2jax',
+    ignoreClass: 'html'
+  },
+  showProcessingMessages: false,
+  messageStyle: 'none'
+});
+</script><link rel="shortcut icon" href="http://gdpi.hitbullseye.com/sites/all/themes/exblog/favicon.ico" type="image/vnd.microsoft.icon" />
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/misc/drupal.js?tar3gk"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/modules/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/modules/jquery_update/replace/misc/jquery.form.min.js?v=2.69"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/misc/ajax.js?v=7.35"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/modules/jquery_update/js/jquery_update.js?v=0.0.1"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/modules/admin_menu/admin_devel/admin_devel.js?tar3gk"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/modules/mathjax/mathjax.js?tar3gk"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/modules/prevent_js_alerts/prevent_js_alerts.js?tar3gk"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/misc/autocomplete.js?v=7.35"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/js/jquery-popup.js?tar3gk"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/modules/views/js/base.js?tar3gk"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/misc/progress.js?v=7.35"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/modules/views/js/ajax_view.js?tar3gk"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/js/jquery/jquery-migrate.min.js?tar3gk"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/js/jquery.dataTables.js?tar3gk"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/js/jquery.once.min.js?tar3gk"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/js/scripts.js?tar3gk"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/js/jquery-cookie/jquery.cookie.min.js?tar3gk"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/js/core.min.js?tar3gk"></script>
+<script type="text/javascript" src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/js/update.js?tar3gk"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"exblog","theme_token":"Ibi3nzolB0QO2Z9CNFbSw4b7DhClMlKWV-L8U5pzGv8","jquery_version":"1.10","js":{"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.10.2\/jquery.min.js":1,"0":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/all\/modules\/mathjax\/mathjax.js":1,"sites\/all\/modules\/prevent_js_alerts\/prevent_js_alerts.js":1,"misc\/autocomplete.js":1,"sites\/all\/themes\/exblog\/js\/jquery-popup.js":1,"sites\/all\/modules\/views\/js\/base.js":1,"misc\/progress.js":1,"sites\/all\/modules\/views\/js\/ajax_view.js":1,"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.0\/MathJax.js?config=TeX-AMS-MML_HTMLorMML":1,"sites\/all\/themes\/exblog\/js\/jquery\/jquery-migrate.min.js":1,"sites\/all\/themes\/exblog\/js\/jquery.dataTables.js":1,"sites\/all\/themes\/exblog\/js\/jquery.once.min.js":1,"sites\/all\/themes\/exblog\/js\/scripts.js":1,"sites\/all\/themes\/exblog\/js\/jquery-cookie\/jquery.cookie.min.js":1,"sites\/all\/themes\/exblog\/js\/core.min.js":1,"sites\/all\/themes\/exblog\/js\/update.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/field_hidden\/field_hidden.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/custompage\/custompage.css":1,"sites\/all\/themes\/exblog\/css\/popup.css":1,"https:\/\/maxcdn.bootstrapcdn.com\/font-awesome\/4.4.0\/css\/font-awesome.min.css":1,"sites\/all\/themes\/exblog\/css\/bootstrap.css":1,"sites\/all\/themes\/exblog\/css\/styles.css":1,"sites\/all\/themes\/exblog\/css\/style.css":1,"sites\/all\/themes\/exblog\/css\/style2.css":1,"sites\/all\/themes\/exblog\/css\/responsive.css":1,"sites\/all\/themes\/exblog\/css\/w3-css.css":1,"sites\/all\/themes\/exblog\/css\/new-nav.css":1,"sites\/all\/themes\/exblog\/css\/bootstrap-min-nav.css":1,"sites\/all\/themes\/exblog\/css\/footer.css":1,"sites\/all\/themes\/exblog\/css\/gdpi-new.css":1,"sites\/all\/themes\/exblog\/css\/jquery.dataTables.min.css":1,"sites\/all\/themes\/exblog\/css\/font-awesome.min.css":1,"sites\/all\/themes\/exblog\/css\/newcodestyle.css":1,"sites\/all\/themes\/exblog\/css\/newcode-responsive.css":1}},"prevent_js_alerts":{"module_path":"sites\/all\/modules\/prevent_js_alerts"},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:5d7b67f5f6af0dfde74c380c508adc18":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"792","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"5d7b67f5f6af0dfde74c380c508adc18","pager_element":0},"views_dom_id:07059017587c6f0368d037d36b902736":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"28952","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"07059017587c6f0368d037d36b902736","pager_element":0},"views_dom_id:f10256d48085f06f2126af82b4b73827":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"15614","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"f10256d48085f06f2126af82b4b73827","pager_element":0},"views_dom_id:da99c4fe3a5e6170d8b7d46f057e4751":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"635","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"da99c4fe3a5e6170d8b7d46f057e4751","pager_element":0},"views_dom_id:63a0a2577c51b643db09f7ac374f3b1a":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"3549","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"63a0a2577c51b643db09f7ac374f3b1a","pager_element":0},"views_dom_id:8625983e0b45a6686cdaa1639ddb4634":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"611","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"8625983e0b45a6686cdaa1639ddb4634","pager_element":0},"views_dom_id:e8c7caa68ba331eb886bdf9d8bf22839":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"612","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"e8c7caa68ba331eb886bdf9d8bf22839","pager_element":0},"views_dom_id:95d30150c3c26789e4d51e5c12319c2f":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"3339","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"95d30150c3c26789e4d51e5c12319c2f","pager_element":0},"views_dom_id:382580ddb197582a14b13dd4988743bf":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"613","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"382580ddb197582a14b13dd4988743bf","pager_element":0},"views_dom_id:526eb9744782adea31c961a854373d3a":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"614","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"526eb9744782adea31c961a854373d3a","pager_element":0},"views_dom_id:28b84b333efe38da3f1d771a9a9639f1":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"615","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"28b84b333efe38da3f1d771a9a9639f1","pager_element":0},"views_dom_id:f1dc7f48934fcbfa76a115392634aef7":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"616","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"f1dc7f48934fcbfa76a115392634aef7","pager_element":0},"views_dom_id:e9237c92133e55d5cc4dea8886aa0929":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"617","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"e9237c92133e55d5cc4dea8886aa0929","pager_element":0},"views_dom_id:1d565f7232faa539bba3a50c266e96f0":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"3540","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"1d565f7232faa539bba3a50c266e96f0","pager_element":0},"views_dom_id:b7767142fd1c8d5b90d67857e259c120":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"3546","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"b7767142fd1c8d5b90d67857e259c120","pager_element":0},"views_dom_id:3c5528e8d30dce81623a0f5f08e3ed3e":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"3592","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"3c5528e8d30dce81623a0f5f08e3ed3e","pager_element":0},"views_dom_id:8e94e4818f1d9cb4105cba7d21880836":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"3634","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"8e94e4818f1d9cb4105cba7d21880836","pager_element":0},"views_dom_id:93312ff48f11e2544320833878c86df3":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"3704","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"93312ff48f11e2544320833878c86df3","pager_element":0},"views_dom_id:f78b81cd618386157b33cf7b8bb41c6f":{"view_name":"sidebar_content_view","view_display_id":"page","view_args":"15609","view_path":"node\/616","view_base_path":"sidebar_view","view_dom_id":"f78b81cd618386157b33cf7b8bb41c6f","pager_element":0}}}});
+//--><!]]>
+</script>
+
+<link type="text/css" rel="stylesheet" href="https://mba.hitbullseye.com/sites/all/themes/exblog/css/newcode-responsive.min.css" media="all" />
+	<link href="https://gdpi.hitbullseye.com/MBA/Case-Study-Examples.php" rel="canonical">
+</head>
+
+<body id="gdpi_newheaderarticle" class="home bloghtml not-front not-logged-in no-sidebars page-node page-node- page-node-616 node-type-blog">
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2LW8JP"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div id="background">
+		<div id="main-menu-toggle">
+			<div class="toggle-menu-top"><span class="toggle-menu-close"><i class="fa fa-arrow-left"></i></span></div>
+			<div class="menu-toggle-menu-container">
+			</div>
+		</div>
+		<div id="back_top"><i class="fa fa-angle-up"></i></div>
+		<div id="page">
+										
+				  <div class="region region-content">
+    <style>
+        /* new icon css*/
+    header.latest-header .header-right .free-dsk {
+        display: inline-block;
+    }
+
+    header.latest-header .header-right .free-mob {
+        display: none;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon>li.free-dsk a {
+        transition: all ease 0.5s;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon>li.free-dsk a:hover {
+        color: #f27f7a
+    }
+
+    /* new icon css*/
+    .inner-banner .navbar {
+        display: none;
+    }
+
+    .inner-banner {
+        min-height: 200px;
+    }
+
+    .innerbanner-text .innerbanner-heading {
+        top: 1.0em;
+    }
+
+    header.latest-header .dropdown-menu {
+        margin-top: 15px;
+        padding: 0;
+    }
+
+    .header-banner {
+        padding: 0px 0px 80px 0px
+    }
+
+    .header-banner header {
+        display: none;
+    }
+
+    .header-banner .banner {
+        margin-top: 0;
+        padding-top: 80px;
+    }
+
+    .header-banner header.latest-header {
+        display: block;
+    }
+
+    header.latest-header .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    header.latest-header .top-nav button {
+        padding: 0;
+        border: none;
+        background: transparent;
+        background-image: none;
+        text-shadow: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+
+    header.latest-header .top-nav button .icon-bar {
+        display: block;
+        width: 18px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #000;
+    }
+
+    header.latest-header .top-nav button .icon-bar+.icon-bar {
+        margin-top: 3px;
+    }
+
+    header.latest-header .menu-logo .top-nav {
+        float: left;
+        width: 40px;
+        margin-top: 14px;
+    }
+
+    header.latest-header .menu-logo .logo {
+        width: 160px !important;
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    header.latest-header .menu-logo .logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    header.latest-header a.logo.logo-mobile {
+        display: none;
+    }
+
+    header.latest-header .top-nav button:focus,
+    header .top-nav button:active {
+        outline: none;
+    }
+
+    header.latest-header .header-right .navbar-nav {
+        float: right;
+    }
+
+    header.latest-header .header-right .navbar-nav li a {
+        border: none;
+        padding: 0;
+        text-shadow: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+
+    header.latest-header .nav .open>a,
+    header.latest-header .nav .open>a:hover,
+    header.latest-header .nav .open>a:focus {
+        background-color: transparent;
+    }
+
+    header.latest-header .header-right {
+        text-align: right;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon {
+        padding: 9px 0 0 0;
+        width: 100%;
+        float: left;
+    }
+
+    header.latest-header .nav>li>a:hover,
+    header.latest-header .nav>li>a:focus {
+        background-color: transparent;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon>li:first-child {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon>li:first-child a {
+        margin-top: -3px;
+        padding-right: 0;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon>li {
+        float: right;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon li.dropdown {
+        margin-right: 15px;
+        float: right;
+        margin-left: 0;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon>li a {
+        font-size: 15px;
+        padding: 2px 5px;
+        color: #000;
+        text-shadow: none;
+        border: none;
+        font-family: 'Lato', sans-serif;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon i img {
+        width: 18px;
+        margin: -6px 0 0 0;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon>li a.free-sign-btn {
+        background: #044645;
+        border-radius: 5px;
+        color: #fff;
+        padding: 2px 5px;
+    }
+
+    header.latest-header .header-right .navbar-nav>li>.dropdown-menu {
+        margin-top: 0px;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon>li.learning-home-drop-down .dropdown-menu.sec,
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon>li>.dropdown-menu.sec {
+        right: -50px;
+        border: none;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon>li.learning-home-drop-down .dropdown-menu.sec {
+        right: -50px;
+        top: 41px;
+    }
+
+    header.latest-header .header-right .navbar-nav>li>.dropdown-menu.sec {
+        min-width: 120px;
+        padding: 0;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon>li>.dropdown-menu.sec {
+        left: inherit;
+        right: 1px;
+        top: 40px;
+        border-radius: 5px;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon li.sign-in-email {
+        background: #e34134;
+    }
+
+    header.latest-header .header-right .navbar-nav>li>.dropdown-menu.sec li:first-child {
+        border: none;
+    }
+
+    header.latest-header .header-right .navbar-nav>li>.dropdown-menu.sec li {
+        padding: 5px;
+        margin-right: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    header.latest-header li.dropdown.learning-home-drop-down.courses-dropdown i img {
+        width: 25px;
+        margin-top: -1px;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon li.dropdown.power-drop-down.dashboad-drop-down a i img {
+        width: 25px;
+        margin-top: -6px;
+        margin-right: 15px;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon li.dropdown.power-drop-down a i img {
+        width: 22px;
+        margin-top: 0px;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon li.dropdown.power-drop-down {
+        margin-right: 0;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon .dropdown-menu>li:hover {
+        background: #000;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon .dropdown-menu>li>a:hover {
+        background: #000;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon .dropdown-menu>li>a:focus {
+        background-color: #000;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon .dropdown-menu>li>a {
+        color: #fff;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon li.existing-usr-login {
+        background: #067519;
+    }
+
+    header.latest-header .header-right .navbar-nav.pwr-dash-icon li.existing-usr-login a {
+        padding: 5px 15px;
+    }
+
+    header .header-right .navbar-nav>li>.dropdown-menu.sec li.mycourses_list {
+        color: #fff;
+        background: #e34134;
+        padding: 10px;
+    }
+
+    header li.dropdown.learning-home-drop-down.courses-dropdown li {
+        background: #013b49;
+        margin: 0;
+    }
+
+    .banner-inner .navbar.navbar-default {
+        display: none;
+    }
+
+    #wrapper1 .new-popup {
+        width: 500px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    #wrapper1 .new-popup a.closedd {
+        top: -15px;
+        right: -15px;
+    }
+
+    header.latest-header .dropdown .btn {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    header.latest-header .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+        min-height: auto;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header.latest-header .navbar-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    header.latest-header .navbar-brand {
+        padding: 0 15px;
+    }
+
+    header.latest-header .navbar-brand img {}
+
+    header.latest-header .navbar-nav {
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    header.latest-header .navbar-nav>li>a {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    header.latest-header .navbar-right {
+        margin-left: auto;
+    }
+
+    header.latest-header .navbar-right li a {
+        display: inline-block;
+        line-height: 51px;
+    }
+
+    header.latest-header .dropdown-menu {
+        position: absolute;
+        left: 0;
+        display: none;
+        background-color: #fff;
+        box-shadow: none;
+        border: none;
+        width: 200px;
+        padding: 0;
+        margin: 16px 0 0;
+        border-radius: 0;
+    }
+
+    header.latest-header .dropdown-menu>li>a {
+        padding: 10px 15px;
+    }
+
+    header.latest-header .dropdown-menu>li>a:hover,
+    header.latest-header .dropdown-menu>li>a:focus {
+        background-color: #ac2626;
+        color: #fff;
+        background-image: none;
+    }
+
+    header.latest-header .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    header.latest-header .navbar-toggle {
+        border: none;
+        background: transparent;
+    }
+
+    header.latest-header .icon-bar {
+        background-color: #ac2626;
+        height: 3px;
+        width: 25px;
+        margin: 4px auto;
+        display: block;
+    }
+
+    header.latest-header .navbar-nav>li>a.free-sign-btn span {
+        padding: 8px 15px;
+        border-radius: 5px;
+        background-color: #163a76;
+        line-height: 20px;
+        color: #fff;
+    }
+
+    header.latest-header .navbar-nav>li>a:hover,
+    header.latest-header .navbar-nav>li>a:focus {
+        background-color: transparent;
+    }
+
+    header.latest-header .navbar-nav>li>a.login {
+        color: #000;
+        padding: 0
+    }
+
+    header.latest-header .navbar-nav>li>a.login:hover {
+        color: #ac2626
+    }
+
+    header.latest-header .navbar-nav>li>a:hover span {
+        background-color: #ac2626
+    }
+
+    header.latest-header .navbar-nav.navbar-right:last-child {
+        margin-right: 0
+    }
+
+    header.latest-header .navbar-right {
+        float: right !important;
+    }
+
+    .mk-login-with-otp-btn {
+        font-weight: normal;
+    }
+
+    .siup-submit {
+        font-weight: normal;
+    }
+
+    .siup-p-relative .form-group {
+        font-weight: normal;
+    }
+
+    .siup-box-1 .logo-box {
+        float: none;
+    }
+
+    @media screen and (max-width: 767px) {
+
+        /* new icon css*/
+        header.latest-header .header-right .free-dsk {
+            display: none;
+        }
+
+        header.latest-header .header-right .free-mob {
+            display: block;
+        }
+
+        #wrapper1 .new-popup {
+            width: 100%;
+        }
+
+        /* new icon css*/
+    }
+
+    @media screen and (max-width: 479px) {
+        header.latest-header .dropdown-menu {
+            margin-top: 10px;
+        }
+
+        header.latest-header .menu-logo .top-nav {
+            width: 28px;
+            margin: 9px 0 0 -8px;
+        }
+
+        header.latest-header .menu-logo .logo {
+            width: 115px !important;
+            margin-top: 3px;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon .learning-home-drop-down.courses-dropdown i img {
+            width: 21px;
+            margin-top: -1px;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon>li.learning-home-drop-down .dropdown-menu.sec {
+            top: 32px;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon>li.dropdown.power-drop-down.dashboad-drop-down>.dropdown-menu.sec {
+            right: -26px;
+            top: 33px;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon>li.dropdown.power-drop-down>.dropdown-menu.sec {
+            right: -9px;
+            top: 33px;
+        }
+
+        header.latest-header .header-right .navbar-nav {
+            margin: 0;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon>li a {
+            font-size: 13px;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon li.dropdown {
+            margin-right: 4px;
+            top: -2.5px
+        }
+
+        header.latest-header .container {
+            padding: 0 15px;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon li.dropdown.power-drop-down.dashboad-drop-down a i img {
+            margin-right: 0;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon .learning-home-drop-down i img {
+            width: 15.5px;
+            margin-top: -3px;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon li.dropdown.power-drop-down.dashboad-drop-down a i img {
+            width: 23px;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon li.dropdown.power-drop-down a i img {
+            width: 20px;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon>li {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon>li a.free-sign-btn {
+            padding: 0 4px;
+            margin: 0 0 0 1px;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon>li>.dropdown-menu.sec {
+            position: absolute;
+        }
+
+        /* new icon css*/
+        header .header-right .navbar-nav.pwr-dash-icon li.learning-home-drop-down .dropdown-menu li a {
+            padding: 0;
+            font-size: 12px;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon li.existing-usr-login a {
+            padding: 0;
+            font-size: 12px;
+        }
+
+        header.latest-header .header-right .navbar-nav>li>.dropdown-menu.sec {
+            min-width: 100px
+        }
+
+        header.latest-header .menu-logo {
+            width: 43%;
+            padding-right: 5px;
+        }
+
+        header.latest-header .header-right {
+            width: 57%;
+            padding-left: 5px;
+        }
+
+        /* new icon css*/
+    }
+
+    @media screen and (max-width: 360px) {
+        header.latest-header .menu-logo .logo {
+            width: 110px !important;
+            margin-top: 4px;
+        }
+    }
+
+    @media screen and (max-width: 359px) {
+        header.latest-header .menu-logo .logo {
+            width: 100px !important;
+            margin-top: 4px;
+        }
+
+        header.latest-header .header-right .navbar-nav.pwr-dash-icon>li a {
+            font-size: 12px;
+        }
+
+        header.latest-header .menu-logo {
+            padding-right: 5px;
+        }
+
+        header.latest-header .header-right {
+            padding-left: 5px;
+        }
+    }
+
+    div#second-level-coaching-cat-ads-107 {
+        display: none;
+    }
+</style>
+                <div id="wrapper1" class="Ash-Img-popup" style="display:none">
+                    <a href="javascript:void(0)" class="closedd" data-dismiss="alert" color="#333">&times;</a>
+                    <a href="https://www.hitbullseye.com/b-school/counselling.php" target="_blank">
+                        <img class="hbe-ps-lazy-nv" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="https://s3service.hitbullseye.com/s3fs-public/College Cashback (500 x 500 px)_0.jpg?null"/>                    </a>
+                </div>
+                <!--Header Starts-->
+        <header class="latest-header">
+                <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 menu-logo">
+                    <!-- Single button -->
+                    <div class="btn-group top-nav">
+                        <button type="button" class="btn btn-default loadnew_codenavbar" id="toggle-btn">
+                            <!--<i class="fa fa-bars" aria-hidden="true"></i>-->
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <ul class="dropdown-menu slide-menu" style="display:none;">
+                            <li><a href="https://www.hitbullseye.com/">Hitbullseye</a></li>
+                            <li><a href="https://www.hitbullseye.com/about-us.php">About</a></li>
+                            <li><a href="https://schools.hitbullseye.com/">Schools</a></li>
+                            <!--li><a href="https://www.hitbullseye.com/testimonial.php">Testimonial</a></li-->
+                            <li><a href="https://www.hitbullseye.com/courses.php">Courses</a></li>
+                            <li><a href="https://www.hitbullseye.com/careers.php">Careers</a></li>
+                            <li><a href="https://www.hitbullseye.com/b2b-colleges.php">College Technical</a></li>
+                            <li><a href="https://www.hitbullseye.com/college-branding.php">College Branding</a></li>
+                            <li><a href="https://www.hitbullseye.com/investors.php">Investors</a></li>
+                            <li><a href="https://www.hitbullseye.com/contact.php">Contact</a></li>
+                            <li><a href="https://stories.hitbullseye.com/">Web Stories</a></li>
+                        </ul>
+                    </div>
+                    <a href="http://gdpi.hitbullseye.com" data-target="http://gdpi.hitbullseye.com class=" logo
+                        logo-desktop"><img src="/new-code/images/hitbullseye-logo.png" alt="Hitbullseye Logo"
+                            width="160" height="43" /></a>
+                    <a href="https://www.hitbullseye.com/" class="logo logo-mobile"><img
+                            src="/new-code/images/hitbullseye-logo.png" alt="Hitbullseye Logo" width="110"
+                            height="30" /></a>
+                </div>
+                                        <div class="col-lg-5 col-md-6 col-sm-12 header-search">
+                                                <div class="search">
+                            <form action="//mba.hitbullseye.com/both_home_search" method="get" class="search_key1"
+                                id='myForm'>
+                                <input type="text" class="form-control" name="searcharticle" id="search_Bar"
+                                    placeholder="Search from 10,000+ Articles &amp; Videos..." required value="">
+                                <button onclick='submit_SearchForm()'><i class="fa fa-search"
+                                        aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <input type="hidden" name="redirecturi"
+                        value="aHR0cDovL2dkcGkuaGl0YnVsbHNleWUuY29tL01CQS9DYXNlLVN0dWR5LUV4YW1wbGVzLnBocA=="
+                        id="redirecturi" />
+                    <input type="hidden" name="redirecturiLSQ" value="aHR0cDovL2dkcGkuaGl0YnVsbHNleWUuY29tL01CQS9DYXNlLVN0dWR5LUV4YW1wbGVzLnBocA=="
+                        id="redirecturiLSQ" />
+                                            <div class="col-lg-4 col-md-3 col-sm-6 col-xs-6 header-right common-header-widget"
+                            id="common-header-widget"></div>
+                                    </div>
+            </div>
+    </header>
+    <!--Header Ends-->
+    <div class="clear"></div>
+    <div class="clear"></div>
+    <!--------Ads------------->
+                <div class="container">
+                        <div class="row">
+                <div class="col-lg-12">
+                    <div class="header_add">
+                        <a href="https://www.hitbullseye.com/b-school/counselling.php" target="_blank">
+                            <img class="hbe-ps-lazy" src="https://www.hitbullseye.com/images/img-lazy-temp-ad.png" data-src="https://s3service.hitbullseye.com/s3fs-public/Save upto Rs 5,000 (970 x 90 px) (1)_1.jpg?null"/>                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!--------Ads------------->
+        <!--Navigation Starts-->
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="navigation-inner">
+                            <div class="nav-left learn-icon-white">
+                                <a href="//www.hitbullseye.com/learning-home.php">
+                                    <img src="/new-code/images/learn-home-white.svg" alt="learn icon" />
+                                    <h3>Learning Home</h3>
+                                </a>
+                            </div>
+                            <div class="nav-right">
+                                <div class="nav-top">
+                                    <div class="navrht">
+	<div class="navbar">
+		<div class="mmbb">
+			<a href="/MBA/Interview-Prepration.php"  class="active">MBA</a><a href="/CPT/Campus-Interview.php" >Placement Training</a><a href="/GRAD/Interview.php" >Careers After +2</a>			</div>
+			<div class="CL"></div>
+		</div>
+	</div>
+<div class="clear"></div>
+<div class="tab-content1 newnav">
+	<div id="cat" class="tab-pane fade in active">
+		<div class="navbar2">
+			<div class="mmbb"><a href="/MBA/Group-Discussion.php"  class="active">Group Discussion</a><a href="/MBA/Interview-Prepration.php" >Interview</a><a href="/MBA/Personality-Development.php" >Personality</a><a href="/MBA/MBA-Colleges-GDPI.php" >Past Experiences</a><a href="/MBA/Essay-Writing.php" >Essay / WAT</a><a href="/MBA/MBA-Tools.php" >Other Tools</a><a href="/MBA/Ebook.php" >E-books</a>		</div>
+	</div>
+</div>
+</div>
+<div class="clear"></div>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <!--Navigation Ends-->
+    </div>
+    </div>
+    <script type="text/javascript">
+        jQuery(document).on('click', '.loadnew_codenavbar', function () {
+            jQuery(".slide-menu").slideToggle();
+        });
+        function loadnew_codeusernavbar() {
+            jQuery(".userblopen").slideToggle();
+            jQuery(".userblopenhomemenu").slideUp();
+            jQuery(".userblopendashboard").slideUp();
+            jQuery(".mycourseshomemenu").slideUp();
+            event.stopPropagation();
+        }
+        function homemenulinkopen() {
+            jQuery(".userblopenhomemenu").slideToggle();
+            jQuery(".userblopen").slideUp();
+            jQuery(".userblopendashboard").slideUp();
+            jQuery(".mycourseshomemenu").slideUp();
+            event.stopPropagation();
+        }
+        function userblopendashboard() {
+            jQuery(".userblopendashboard").slideToggle();
+            jQuery(".userblopen").slideUp();
+            jQuery(".userblopenhomemenu").slideUp();
+            jQuery(".mycourseshomemenu").slideUp();
+            event.stopPropagation();
+        }
+        function mycourseslinkopen() {
+            jQuery(".mycourseshomemenu").slideToggle();
+            jQuery(".userblopendashboard").slideUp();
+            jQuery(".userblopen").slideUp();
+            jQuery(".userblopenhomemenu").slideUp();
+            event.stopPropagation();
+        }
+        /*jQuery(document).on("click", function(event){
+        var trigger = jQuery("#toggle-btn");
+        if(trigger !== event.target && !trigger.has(event.target).length){
+        jQuery(".slide-menu").slideUp();
+        }
+        });
+        jQuery(document).on("click", function(event){
+        var trigger = jQuery("#userblopendashboard");
+        if(trigger !== event.target && !trigger.has(event.target).length){
+        jQuery(".userblopendashboard").slideUp();
+        }
+        });
+        jQuery(document).on("click", function(event){
+        var trigger = jQuery("#userblopenhomemenu");
+        if(trigger !== event.target && !trigger.has(event.target).length){
+        jQuery(".userblopenhomemenu").slideUp();
+        }
+        });
+        jQuery(document).on("click", function(event){
+        var trigger = jQuery("#mycourseshomemenu");
+        if(trigger !== event.target && !trigger.has(event.target).length){
+        jQuery(".mycourseshomemenu").slideUp();
+        }
+        });
+        jQuery(document).on("click", function(event){
+        var trigger = jQuery("#userblopen");
+        if(trigger !== event.target && !trigger.has(event.target).length){
+        jQuery(".userblopen").slideUp();
+        }
+        });
+        */
+        function showMenu() {
+            $('.menuopen').slideToggle();
+        }
+        function loginsOpen() {
+            $('.userblopen').slideToggle();
+        }
+        function showlogoutdivz() {
+            $('#logoutDIVZ').slideToggle();
+        }
+        function submit_SearchForm() {
+            var searchText = $('#search_Bar').val();
+            if (searchText == '') {
+                $('#search_Bar').css('border', '1px solid red');
+            } else {
+                $('#search_Bar').css('border', '1px solid #dddddd');
+                $('#myForm').submit();
+            }
+        }
+    </script><div class="container" style="display:none!important;">
+<input type="hidden" id="pageid" value="500" />
+    <div id="overlay-back"style="background-color:#4C9ED9; height:1500px;position:fixed;"></div>   
+    <div id="popup1" style="display:none;">
+     <a id="hide_after_90_seconds"></a>
+    <div class="modal-content">
+	<div class="mn"style="position:fixed;">
+	<div class="clear"></div>
+	
+<center class="rta2">Rate this Article<img src="//mba.hitbullseye.com/icj/line.png"></center>
+
+<fieldset class="rating2">	
+	<div class="demo-table">	
+	<div id="tutorial-500">			
+	<input type="hidden" name="rating" id="rating" value="3" />	
+	<ul onMouseOut="resetRating(500);" class="cookiesexists">								
+	<li class='' onmouseover="highlightStar(this,500);" onmouseout="removeHighlight(500);" onClick="CountRating(this,500);">&#9733;</li>  								
+	<li class='' onmouseover="highlightStar(this,500);" onmouseout="removeHighlight(500);" onClick="CountRating(this,500);">&#9733;</li>  								
+	<li class='' onmouseover="highlightStar(this,500);" onmouseout="removeHighlight(500);" onClick="CountRating(this,500);">&#9733;</li>  								
+	<li class='' onmouseover="highlightStar(this,500);" onmouseout="removeHighlight(500);" onClick="CountRating(this,500);">&#9733;</li>  								
+	<li class='' onmouseover="highlightStar(this,500);" onmouseout="removeHighlight(500);" onClick="CountRating(this,500);">&#9733;</li>  					
+	</ul>	
+	</div>
+	</div>
+</fieldset>
+
+<div class="close-image" id="close-image">
+<h6 class="nnwrt">Not Now! Will rate later</h6>
+</div>
+  <div class="rttst">	
+  
+	<span id="shownotyes">   
+    <h6 class="rttstp" onClick="addRating(500);">Rate</h6>
+	</div>
+	</span>
+	</div> 
+	</div>
+    </div> 
+	
+	<div id="popupalready" style="display:none;">	
+	<div class="modal-content">	
+	<div class="mn">
+	<!--<img class="logohit" src="icj/logohit.png"/>-->	
+	<div class="clear"></div>	
+	<center class="arrtts">Already Rated<img src="//mba.hitbullseye.com/icj/line.png"></center>	
+	
+	<fieldset class="rating2">	
+	<div class="demo-table">	
+	<div id="tutorial-500">		
+	<input type="hidden" name="rating" id="rating" value="3" />	
+	<ul onMouseOut="resetRating(500);" class="cookiesexists"style="width:100%;">	
+	
+		
+	<li class=''>&#9733;</li>  
+		
+	<li class=''>&#9733;</li>  
+		
+	<li class=''>&#9733;</li>  
+		
+	<li class=''>&#9733;</li>  
+		
+	<li class=''>&#9733;</li>  
+			
+	</ul>		
+	</div>	
+	</div>		
+	</fieldset>	
+	
+	<div class="close-image" id="close-imageA">
+	<h6 class="clsess">Close</h6>
+	</div>
+	</div> 
+	</div>  
+	</div>					
+	</div> 
+
+
+	<style>
+	.view-sidebar-content-view .view-empty{
+		display:none;
+	}
+</style>
+<div class="wrapper">
+	<div class="wrap">
+	<div class="post-entry-top">
+	<h1 class="post-entry-title">Practice Case Studies: Long</h1>
+	<div class="post-entry-meta">
+	Perfect your Case Study preparation by solving these long case studies</div>
+	</div>
+	<div class="cleared"></div>
+	<div class="row">
+	<div class="col-lg-8 col-sm-8">
+			<div class="post-entry-rate">
+			<div class="UpdateStar">
+			<fieldset class="rating">
+			
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+					</fieldset></div><a href="#" id = "dontremovethisid">Rate Us</a></div>
+
+			<div class="post-entry-views">Views:169556</div>
+									<div class="post-entry-share">
+				<a class="hvr-buzz-out" onclick="javascript:genericSocialShare('http://www.facebook.com/sharer.php?u=http://gdpi.hitbullseye.com/MBA/Case-Study-Examples.php')" title="Facebook Share">
+					<img style="margin-top:-2px;" class="hbe-ps-lazy-nv" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/images/facebook-logo.svg">				</a>
+
+				<a class="hvr-buzz-out" onclick="javascript:genericSocialShare('http://twitter.com/share?url=http://gdpi.hitbullseye.com/MBA/Case-Study-Examples.php')" title="Twitter Share">
+					<img style="margin-top:-2px;" class="hbe-ps-lazy-nv" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/images/twitter-logo.svg">				</a>
+
+
+
+				<a class="hvr-buzz-out" href="https://www.instagram.com/hitbullseye/" target="_blank">
+					<img style="margin-top:-2px;" class="hbe-ps-lazy-nv" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/images/instagram-logo.svg">				</a>
+
+				<a class="hvr-buzz-out" href="https://www.youtube.com/hitbullseye" target="_blank">
+					<img style="margin-top:-2px;" class="hbe-ps-lazy-nv" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/images/youtube-logo.svg">				</a>
+			</div>
+		<div class="post-entry-single">
+		<div class="post">
+
+
+			<div class="post-entry-media" data-nodeid="616">
+				<div class="post-flexslider">
+					<div class="flexslider">
+											<ul class="slides step3 126">
+															<li>
+								<!--	<a href="#" target="_self">-->
+                                    <a href="javascript:void(0)"  >
+									<img class="hbe-ps-lazy" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="/images/gdpi_defaultsign-updated.jpg" alt="" data-check="hello">									</a>
+								</li>
+													</ul>
+										</div>
+				</div>
+			</div>
+					</div></div>
+
+    </div>
+	<div class="topsidebar_new col-lg-4 col-sm-4">
+	<div class="right-side-top">
+		<a href="javascript:void(0)" onclick="operegistrationremote();"  class="free-sign-btn btn btn-lg btn-default related-btn">
+		<i class="fa fa-link" aria-hidden="true"></i> Instant Access to Free Material
+	 </a>
+		<!--<a href="<?php// echo $base_url; ?>" target="_blank" class="btn btn-lg btn-default related-btn">
+		<i class="fa fa-link" aria-hidden="true"></i> Related:
+		<?php// echo ($node->field_domain['und'][0]['tid']==166||$domaindetail->field_domain_short_name['und'][0]['value']=='HIT')?'HOME':$domaindetail->field_domain_short_name['und'][0]['value'].'Prep Portal';?> </a>-->
+	<div class="top-ads hidden-xs">
+	<ul>
+    <li class="bottom1"><a href="https://www.hitbullseye.com/b-school/counselling.php" target="_blank">
+	<img class="img-responsive hbe-ps-lazy-nv" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="https://s3service.hitbullseye.com/s3fs-public/Save upto (359 x 185 px) (1)_7.jpg?null" alt="" title=""></a></li>
+<li class="bottom2"><a href="https://www.hitbullseye.com/mba-prep/scholarship.php" target="_blank">
+	<img class="img-responsive hbe-ps-lazy-nv" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="https://s3service.hitbullseye.com/s3fs-public/Scholarship (359 x 185 px)_13_0.jpg?null" alt="" title=""></a></li>
+    </ul>
+		</div>
+	</div>
+<div></div>
+	</div>
+	</div>
+
+	</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+<section id="greysection">
+		<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-sm-8">
+			<div class="post-entry-body ">
+				<div class="post-entry-content content left-content field-items">
+					<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div>
+<ul>
+	<li><strong>The Exotic Melons:</strong><br />
+	You are the manager (Worldwide Sales Cock and Bull Melons) in a Dubai-based company that deals in selling exotic fruits. Cock and Bull Melons are a special variety of melons that can be cultivated only on the sandy dunes surrounding the Cock and Bull oasis in the Sahara desert. Worldwide demand and supply have been quite stable so far at 100 melons a year, with the supply being just sufficient to cover the demand.<br />
+	Cock and Bull Melons have traditionally been sold to the sheikhs in the Middle East, and Hollywood and Bollywood actors and actresses. Their exorbitant prices take them out of reach of common people.&nbsp;<br />
+	In January 2002, the research centre at Punjab Agricultural University (PAU), India discovers that Cock and Bull melons can cure the fatal MarGaya syndrome in pregnant women, which kills both he mother and the child. Also, it can cure the fatal MaraGaya syndrome in diabetic patients. Both these symptoms are very rare. Unfortunately for you, in May 2002, the MaraGaya syndrome strikes 2000 people in America and the MarGaya syndrome strikes 1000 pregnant women in Sweden. 100 Cock and Bull melons are required to cure the 1000 cases in America while 100 are required to cure the Swedish problem. You know that the patients in both the countries cannot afford the high cost of Cock and Bull melon treatment. You also know that the revenues from treating patients would be much lower than selling them to sheikhs and film stars.&nbsp;<br />
+	You are in a real dilemma. What would you do?</li>
+</ul>
+
+<!-- <div><a href="https://www.hitbullseye.com/gdpi-course/scholarship.php" target="_blank"><img src="http://mba.hitbullseye.com/sites/default/files/PI-WAT-registration-ad.jpg" alt="gPI-WAT"></a></div> -->
+
+  <div><a href="https://www.hitbullseye.com/b-school/counselling.php" target="_blank"><img src="//mba.hitbullseye.com/sites/default/files/cashback-750x200.jpg" alt="" class="Cashback"></a></div>
+<ul>
+	<li><strong>Confidential Information?</strong><br />
+	Mr. SecretKeeper is a Corporate Head (HR) in a company. He is very nice and gets along well with all people. People often consult him for help and advice. One person (named &ldquo;Mr. A&rdquo;) approaches him for a job because he is right now jobless. Mr. SecretKeeper takes the guy&#39;s qualifications and asks him to come after a week however, since no job available. He keeps frequently postponing the job offer. Mr. A keeps visiting the HR head, Mr. Secret Keeper, often and becomes his close friend.<br />
+	Then, one day, Mr. A confides with the HR Head &ldquo;I was in prison for 18 years for a crime that I had not committed. With two years remaining of the sentence, I ran away from jail. Even now, police is in look out for me.&rdquo; Mr. SecretKeeper tells the person to go home and that he would give him a job. However as soon as he leaves, Mr. SecretKeeper calls up the police and gives the details of Mr. A and asks them to arrest Mr. A.<br />
+	Because of this betrayal of trust by the HR head, people in the organisation have started losing faith in him. A senior person in the office complains to the VP that the Mr. Secret Keeper has &ldquo;broken faith&rdquo;, so others could not come to him.<br />
+	Assume that you are the VP of the company. What would you do about the situation?</li>
+</ul>
+
+<div class="suggested-link">
+<div class="suggested-title">Group Discussion Preparation </div>
+
+<ul class="suggested-ul1">
+	<li><a href="https://mba.hitbullseye.com/gdpi-course/mba.php" target ="_blank">Decisive Interview, GD & Essay prep</a></li>
+        <li><a href="https://gdpi.hitbullseye.com/group-discussion-topics.php" target ="_blank">GD: Topics 2021</a></li>
+	<li><a href="https://gdpi.hitbullseye.com/Group-Discussion-Rules.php" target ="_blank">GD: Approach</a></li>
+	<li><a href="https://gdpi.hitbullseye.com/MBA/Group-Discussion-Dos-and-Dont.php" target ="_blank">GD: Do's and Don'ts</a></li>
+	<li><a href="https://gdpi.hitbullseye.com/GD-Importance-of-Communication-Skills.php" target ="_blank">GD: Communications</a></li>
+        <li><a href="https://gdpi.hitbullseye.com/Group-Discussion-Topics-with-Answers.php" target ="_blank">Solved GDs Topics</a></li>
+        
+</ul>
+
+<ul>
+	<li><a href="https://gdpi.hitbullseye.com/Group-Discussion.php" target ="_blank">GD Introduction</a></li>
+	<li><a href="https://gdpi.hitbullseye.com/Types-of-GD.php" target ="_blank">Types of GD topics: Techniques</a></li>
+	<li><a href="https://gdpi.hitbullseye.com/Group-Discussion-Etiquette.php" target ="_blank">GD: Ettiquette</a></li>
+    <li><a href="https://gdpi.hitbullseye.com/Group-Discussion-Questions.php" target ="_blank">GD: Content</a></li>
+	<li><a href="https://gdpi.hitbullseye.com/MBA/Example-of-Case-Study.php" target ="_blank">Solved Case Studies</a></li>
+
+</ul>
+</div>
+<!--<div class="ebook_creative">
+<div class="row">
+<div class="col-md-4 col-sm-12 col-xs-4 book"><a href="//mba.hitbullseye.com/Online-Courses/Group-Discussion-Tips-and-Tricks.php" target="_blank">
+<img alt="Group Discussion Tips and Tricks" src="/sites/default/files/Coverpage-Essential-GD-ebook-cover.png" /></a></div>
+
+<div class="col-md-8 col-sm-12 col-xs-8 book_txt">
+<h3><a href="//mba.hitbullseye.com/Online-Courses/Group-Discussion-Tips-and-Tricks.php" target="_blank">Essential MBA GD Guide: Key Topics with Strategies<span>Free</span></a></h3>
+
+<ul>
+	<li><a href="//mba.hitbullseye.com/Online-Courses/Group-Discussion-Tips-and-Tricks.php" target="_blank">Importance of Group Discussions</a></li>
+	<li><a href="//mba.hitbullseye.com/Online-Courses/Group-Discussion-Tips-and-Tricks.php" target="_blank">Tips and Strategies to handle a GD</a></li>
+	<li><a href="//mba.hitbullseye.com/Online-Courses/Group-Discussion-Tips-and-Tricks.php" target="_blank">Top 25 GD topics</a></li>
+	<li><a href="//mba.hitbullseye.com/Online-Courses/Group-Discussion-Tips-and-Tricks.php" target="_blank">Sample GD</a></li>
+	<li><a href="//mba.hitbullseye.com/Online-Courses/Group-Discussion-Tips-and-Tricks.php" target="_blank"><span>Free Download</span></a></li>
+</ul>
+</div>
+</div>
+</div>-->
+<ul>
+	<li><strong>In a fix!</strong><br />
+	You are the young dynamic, blue-eyed boy (girl) in a firm, which is a known leader in the industrial oils business. Under your leadership, the company has done extremely well in a slow, sluggish, mature market and has also effectively warded off competition from the superior industrial oil segment.<br />
+	However, as a young blooded individual, you decide that the company should branch into something more glamorous and contemporary. You manage to convince the top management to get into the film-making business.<br />
+	The film-making business is started as another division, where the systems and processes are kept the same to have uniformity across businesses. You manage to hire top talent in this field Mr. A, Mr. B and Mr. C from different competitors. You have big hopes from the trio as these people have come together as a team for the first time. You grant every freedom to these people to recruit their own subordinates.<br />
+	Barely a month after the film-making business has started, you are in a fix! Mr. B throws his cap, sheds a zillion tears and tells you in a choked voice that he would rather die than continue with your business. A couple of months later Mr. C blames your policies and quits.<br />
+	Your six monthly profit and loss statement shows that film-making business had been a horrific disaster. The only remaining member of the star trio, Mr. A says that the business is slightly out of form and that he might deliver if you grant him complete freedom.&nbsp;<br />
+	You can now see your own future as dark as the industrial oils your company specializes in. You are wondering what went wrong and what should you do now?</li>
+</ul>
+
+<div><img alt="" src="/sites/default/files/u44/vd.png" /><a href="http://gdpi.hitbullseye.com/other-selection-tools-extempore.php" target="_blank">Optimize your performance in Extempore with the help of these expert tips</a></div>
+
+<ul>
+	<li><strong>Tension on the job:</strong><br />
+	Sujit Bhattacharyya (Bhola) had been an exceptionally bright student throughout his studies at IIT-Kharagpur. He devoted four years in pursuit of academic excellence. He had very few friends. Few peers liked him, but he was the darling of all his professors. Bhola joined TELCO from the campus as production supervisor in charge of vehicle assembly. Bhola used to manage shop floor operations consisting of truck assembly and in a shift 30-33 operator used to report to him. The IQ level of a typical operator could be compared to that of a class VIII student, but years of experience had made them confident about their job.<br />
+<div class="row article-area">
+<div class="col-md-3 col-sm-6">
+<div class="article-btn">Suggested Action:</div>
+</div>
+<div class="col-md-9 col-sm-6 article-btn-text"><a href=" https://mba.hitbullseye.com/Online-Courses/free-cat-preparation.php" target="_blank"><span style="color: #006ea7;">Get CAT-MBA Free 20+ Tests & 100+ Videos, eBooks & more to boost your prep.</span></br> Sign Up Now</a></div>
+</div>	The operators, by virtue of doing the same job for so many years, had developed a highly robotic style of functioning and were highly resistant to change. The trade union was powerful and exercised a lot of leverage with the management, to secure incentives and overtime payment, which were fixed at a uniform rate across the departments.<br />
+	Nilesh was an operator in charge of front axle assembly. The number of trucks that rolled out of the factory was equal to the number of axles assembled. Thus, Nilesh was looking after a highly sensitive assembly operation. Nilesh, lately, had lost a lot of money in the stock market, had frequent quarrels with his wife and many times used to come drunk to the shop floor. His abrasive behavior had caused a lot of worry to Bhola. Nilesh also started absenting himself from duty and became casual in his approach. Subsequently, Nilesh was transferred to the quality control department to reduce his physical workload. Bhola found it very difficult to find a suitable replacement for Nilesh in the assembly area. He had to frequently interchange workers who were unable to cope with the high pressure work at the axle assembly. They deliberately started going slow, and thereby, affected productivity. Bhola did his best to pinpoint the problem. He was under tremendous pressure from the top to increase productivity to previous levels.<br />
+	The workers started demanding additional incentives and overtime payments. The management, on the other hand, was opposed to any change in the incentive structure. Bhola was helpless. He tried his best and at times did the work himself. The workers, sensing that Bhola had little control over them, became more aggressive and further slowed their work. Bhola suffered an emotional breakdown and had to stay away from work for two months.&nbsp;<br />
+	Discuss what the main issues in the case are and what would be your approach in this situation.</li>
+</ul>
+
+<div><a href="https://www.hitbullseye.com/gdpi-ebooks/toppers-strategies-for-pi-and-wat.php" target="_blank"><img src="//mba.hitbullseye.com/sites/default/files/GD‑PI-wat-article-ad.jpg" alt="GDPI-WAT"></a></div>
+<ul>
+	<li><strong>Tuna-Tuna Lactuna!:</strong><br />
+	The Minicoy Canning Factory (henceforth MCF) was set up by the Lakshadweep administration in 1969 with an aim to step up fishery production, provide employment and enable fishermen to sell their excess fish for better returns. MCF could produce only up to 150,000 cans per year because of labour constraint. However, due to excess production, by September 2001, MCF had accumulated an unsold inventory of 150,000 cans amounting to Rs. 12,807,700. In 2001, 64,322 cans were sold resulting in a turnover of Rs. 6,302,500 and a profit of Rs. 810,380.<br />
+	Competition for MCF came from Integrated Fisheries Project (henceforth IFP), a government undertaking set up with an aim to introduce and popularize diversified fishery products in rural and urban markets. MCF canned a type of tuna called Skipjack tuna, whose meat was harder and different in taste as compared to Yellow fin tuna canned by IFP. The distributors felt that higher price of Skipjack tuna was the culprit for lower sales vis-&agrave;-vis IFP. The higher price was on account of higher overheads for MCF attributed to lower volumes. IFP also had a stronger dealer network and a much larger promotion budget.&nbsp;<br />
+	The demand for canned tuna is concentrated in upcountry areas. However, the sale of MCF&#39;s tuna to these regions has been low. Sales enquiries had also been received from the Middle East, but no action had been taken on them. Markets other than the retail market were also being explored.<br />
+	The management of MCF was pondering over what the problem was and what could be done to resolve it amicably, both in the short term as well as in the longer term.</li>
+</ul>
+
+<ul>
+	<li><strong>Et tu Brutus!:</strong><br />
+	Yahan Gadbad Inc. is a reputed multinational that specialized in organizing beauty pageants. The protagonists of this piece, besides you (of course), are Mr. Bhartus, the HR Manager and Mr. BigMouth, the flamboyant hospitality manager. Mr. BigMouth has been in Yahan Gadbad Inc. for over a decade now, during which he has successfully organized half a dozen pageants at exotic locales around the world. People in Yahan Gadbad swear by his integrity and professionalism and he has been the role model in the company for the last decade.<br />
+	Mr. Bhartus and Mr. BigMouth were good friends. One day after they had had a drink too many, Mr. BigMouth said to Mr. Bhartus, &ldquo;Bhartu, I have something to confess to you. Bhartu dear, please listen to me as a friend and not as an HR manager&rdquo;. &ldquo;Of course Biggie!&rdquo; said Mr. Bhartus, &ldquo;I have big stomach. I can digest any secret&rdquo;. Mr. BigMouth then said, &ldquo;Do you remember the pageant we had in Polynesian Islands? You know, Bhartu the human heart is frail. I kind of got bowled over by a contestant. We had a week of debauchery. I rigged the contest to help her get the second runners up title&rdquo;.<br />
+	In spite of the promise made to Mr. BigMouth, Mr. Bhartus comes to you (President, Yahan Gadbad Inc.) with the information. You think aloud, &ldquo;Damn! What do I do now? The HR department handles confidential information and this fool could not keep a secret. On the other hand&hellip; God! Please guide me!&rdquo;</li>
+</ul>
+
+<ul>
+	<li><strong>Student&#39;s BIG problem:</strong><br />
+	In an institute AIM, the students&#39; council is selected by a voting wherein each student is allocated a vote for each position in the council. The council is supposed to undertake activities of students&#39; interests. Each student pays Rs. 50 per year towards council dues. Extending the brief of the council, it decides to add responsibilities and projects. As a first, it introduces a scheme for students wherein it provides them stationary and hosiery at a subsidized price. This is to be done on a no-profit no-loss basis. Initially, it is done only for a select group of students as a pilot exercise.&nbsp;<br />
+	Extending in the first month, the council has a sale of Rs.3500. They make a profit of Rs. 300. Seeing this, the council decides to expand its store for the complete instituted. They buy goods worth Rs.15000 for the first time and Rs 10000 the second time. In order to buy these goods, it takes loan of Rs.8000 at an interest of 18% per annum. Rumors of bungling of money start floating around the campus. Some council members are alleged to have taken money from the store and the council funds. As a result of these rumors, some students begin to boycott the council and start to doubts its intentions. In addition, they allege that the store was supposed to be on a no profit no-loss basis, but still it aimed at earning profits.&nbsp;<br />
+	On complaints to the institute authorities, the store is closed for business till further notice, pending an internal investigation into the matter. As a result of the store closure, the council is left with stocks of Rs.13500. In addition, the council also has to repay Rs. 8000 plus interest to the financial institution. In the present scenario, what could be the possible solutions?</li>
+</ul>
+
+<div><img alt="" src="/sites/default/files/u44/fr.png" />&nbsp;G<a href="http://gdpi.hitbullseye.com/Group-Discussion-Topics-with-Answers.php" target="_blank">et an Insight on Handling GDs with the given solved GD Topics</a></div>
+
+<ul>
+	<li><strong>The Video Games Case</strong><br />
+	You are the CEO of a large, diversified entertainment company. A division of your firm manufactures video games. The division is the third largest manufacturer of hardware in the industry and has a 10% market share, with the top two having 40% and 35% respectively. The industry growth has been strong, though over the last few months, the overall industry sales growth has slowed a bit.<br />
+	The division&#39;s sales have increased rapidly over the last year from a relatively small base. Current estimate is annual sales of 500,000 units for your division. The selling price of the basic Video Game unit (hardware) is Rs. 1000. The current cost of manufacturing a unit is Rs. 700, excluding the marketing costs. The top two competitors are estimated to have a 10 to 15% cost advantage currently. The division currently exceeds corporate return requirements; however, margins have recently been falling.<br />
+	The product features are constantly developed (e.g., new type of remote joy stick), to appeal to the segments of the market. However, the division estimates much of the initial target market (young families) has now purchased the video game hardware. No large new user segments have been identified .&nbsp;<br />
+	Recently, a request has come to you, the CEO, for approval of Rs. 20 Cr. for tripling the division&#39;s capacity. The requested expansion will also reduce the cost of manufacture by 5 to 7 % from the present value. Should you approve the expansion?</li>
+</ul>
+<div class="row article-area">
+<div class="col-md-3 col-sm-6">
+<div class="article-btn">Suggested Action:</div>
+</div>
+
+<div class="col-md-9 col-sm-6 article-btn-text"><a href="https://www.hitbullseye.com/mba-prep/demo-sessions.php" target="_blank"><span style="color: #006ea7;">Kickstart Your CAT-MBA Journey with FREE Live Masterclasses from the Test Prep Experts!</span></br>Register Now</a></div>
+</div><ul>
+	<li><strong>Bow Bow!</strong><br />
+	You are the General Manager (Procurement) in a large, international trading firm, Idhar Udhar Inc. Your current responsibilities involve procurement of rats, dogs and cats from the dark interiors of Africa and selling them at a profit in developed countries as pets. Of these products, dogs are extremely seasonal, being available only from the middle of May to the end of August. You are expecting a bumper season this time around. Also, the price of dogs in the developed countries being at an all time high, you are expecting record profits which would, in a swift move, also put your career on the fast track.&nbsp;<br />
+	Bang in the middle of the procurement season, an internal audit reveals that Mr. Ghotala Doggy, your star manager (Procurement Dogs) has siphoned off Rs. 20,000 from company funds. Mr. Doggy has excellent relations with the suppliers and you know that it would be impossible to meet targets without him. On your questioning, Mr. Doggy reveals that he had taken the money for paying the medical bills of his daughter, Ms. Bitchy Doggy, who was seriously ill.&nbsp;<br />
+	Following this incident, audits were conducted in other divisions and irregularities were found there also. However, since your division was the first where such an incident took place, people are looking at you to set a precedent. Your company lays extreme emphasis on personal integrity and this is the first time in the company&#39;s century old history that such an incident has occurred. What would you do?</li>
+</ul>
+
+<ul>
+	<li><strong>The Dilemma!</strong><br />
+	You are the GM (HR) of a small firm involved in manufacturing and selling AM/FM radios. Of late, sales of radios have declined due to emergence of TV, Cable etc. The main departments are the production, marketing and accounting.&nbsp;<br />
+	Bharat is a clerk in the accounting department. He has been with the company for 15 years now. He knows the job well, but of late, is increasingly coming late for work. He is married with two children and he cites family problems as the cause of late arrival on job. Every time he promises to mend his ways, but has not done so till date.&nbsp;<br />
+	Om is the production supervisor. He has been with the company since its inception 30 years ago and commands a lot of respect from his workers. But, age is catching up on him fast. Also, the much younger workers are increasingly questioning and resisting his authority. If chucked out of the job, it might be difficult for him to find another job at his age. He is due to retire in another two years. Jai is a young MBA in marketing from a major B-School. He joined the company a year ago and started new advertising and marketing campaigns, at a tremendous cost to the company. His plans met with initial success, but then the sales were back to its initial levels. He handles the company&#39;s dealers in the northern region. But, his initial success seems to have gone to his head. He increasingly feels discontented when some of his new ideas are turned down by the higher management.&nbsp;<br />
+	Jagdish is a marketing executive with the company for the last 6 years. Though not an MBA, he was still hired for the job due to his sharp acumen. In the years to follow, with an increasing mumber of MBA&#39;s joining the company, he was denied promotion last year. This caused bouts of deep depression, from which he recovered after two months. After that, he has been complacent in his work and sometimes even rude to the customers.&nbsp;<br />
+	In a desperate cost-cutting measure, your company decides that it must reduce the workforce as a first measure. These four are the possible candidates for job termination. You, as a group, have to decide how many you will sack, which ones, and why?</li>
+</ul>
+<img alt="" src="/sites/default/files/u44/suggested.png" /><a href="http://gdpi.hitbullseye.com/Group-Discussion-Etiquette.php" target="_blank">Check out the rules&nbsp; to effectively handle different situations in a GD </a></div>
+
+<div><strong>If you have any question, suggestion or feedback, feel free to post it in the discussion box given below.</strong></div>
+</div></div></div><div class="suggested-link">
+<div class="suggested-title">GDPI Preparation Links:</div>
+
+<ul class="suggested-ul1">
+	<li><a href="//gdpi.hitbullseye.com/MBA/Group-Discussion.php">Group Discussions</a></li>
+	<li><a href="//gdpi.hitbullseye.com/MBA/Interview-Prepration.php">Interviews</a></li>
+	<li><a href="//gdpi.hitbullseye.com/MBA/Personality-Development.php">Personality</a></li>
+</ul>
+
+<ul>
+	<li><a href="//gdpi.hitbullseye.com/MBA/MBA-Colleges-GDPI.php">Past Experiences</a></li>
+	<li><a href="//gdpi.hitbullseye.com/MBA/Essay-Writing.php">Essay/WAT</a></li>
+	<li><a href="//gdpi.hitbullseye.com/MBA/Ebook.php">eBooks</a></li>
+</ul>
+</div>
+			<!-- inside art -   Anil Sir told to bring the sharing buttons on the footer of the article So paste the above code here as well (1st June 2020)-->
+			<div class="inside-art">
+			<div class="post-entry-rate">
+			<div class="UpdateStar">
+			<fieldset class="rating">
+			
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+					</fieldset></div><a href="#" id = "dontremovethisid">Rate Us</a></div>
+
+			<div class="post-entry-views">Views:169556</div>
+
+						<div class="post-entry-share">
+				<a class="hvr-buzz-out" onclick="javascript:genericSocialShare('http://www.facebook.com/sharer.php?u=http://gdpi.hitbullseye.com/MBA/Case-Study-Examples.php')" title="Facebook Share">
+					<img style="margin-top:-2px;" class="hbe-ps-lazy" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/images/facebook-logo.svg">				</a>
+
+				<a class="hvr-buzz-out" onclick="javascript:genericSocialShare('http://twitter.com/share?url=http://gdpi.hitbullseye.com/MBA/Case-Study-Examples.php')" title="Twitter Share">
+					<img style="margin-top:-2px;" class="hbe-ps-lazy" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/images/twitter-logo.svg">				</a>
+
+
+
+				<a class="hvr-buzz-out" href="https://www.instagram.com/hitbullseye/" target="_blank">
+					<img style="margin-top:-2px;" class="hbe-ps-lazy" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/images/instagram-logo.svg">				</a>
+
+				<a class="hvr-buzz-out" href="https://www.youtube.com/channel/UCMGOQvYqNpb7xVJuLUDVnmw" target="_blank">
+					<img style="margin-top:-2px;" class="hbe-ps-lazy" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="http://gdpi.hitbullseye.com/sites/all/themes/exblog/images/youtube-logo.svg">				</a>
+			</div>
+			</div>
+			<!-- inside art-->
+                 </div>
+
+
+				
+				<!--code ends-->
+			<!--div-->
+			</div>
+			</div><!-- I'm not sure why the hell I'm adding this div, but if i remove this the page gets messed up-->
+		<div class="col-lg-4 col-sm-4">
+		<div class=" bgwhite sidebar-new">
+					<h4>Most Popular Articles - PS</h4>
+					<div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-5d7b67f5f6af0dfde74c380c508adc18">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/Group-Discussion.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/gd-thumbnail.jpg?null&itok=KPsdDSXv" alt="" title=""/>
+		</div>
+		<div class="sidebar-text">
+		<h3>GD Introduction</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i><i class="fa fa-play" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-07059017587c6f0368d037d36b902736">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/group-discussion-topics.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/gdpi_defaulttile_1.jpg?null&itok=wNJkXcuB" alt="GD Topics for MBA Exam" title="GD Topics for MBA Exam"/>
+		</div>
+		<div class="sidebar-text">
+		<h3>100 Group Discussion (GD) Topics for MBA 2025</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-f10256d48085f06f2126af82b4b73827">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/Group-Discussion-Topics-with-Answers.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/gd_topic_tile_0.jpg?null&itok=LgfW-q4z" alt="Solved GDs Topic" title="Solved GDs Topic"/>
+		</div>
+		<div class="sidebar-text">
+		<h3>Solved GDs Topic</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-da99c4fe3a5e6170d8b7d46f057e4751">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/Industry-GD-Topics.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/Leadership-personality1_0.png?null&itok=vCBl4pdB" alt="Industry GD Topics" title="Industry GD Topics"/>
+		</div>
+		<div class="sidebar-text">
+		<h3>Top 50 Other (Science, Economy, Environment) topics for GD</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-63a0a2577c51b643db09f7ac374f3b1a">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/Group-Discussion-Rules.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/5-tips--starting-GD-icon.jpg?null&itok=ddUcCwDs" alt="5 tips for starting a GD" title="5 tips for starting a GD"/>
+		</div>
+		<div class="sidebar-text">
+		<h3>5 tips for starting a GD</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-8625983e0b45a6686cdaa1639ddb4634">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/GD-Importance-of-Communication-Skills.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/gd-types1_0.jpg?null&itok=sKSTn0Hz" alt="" title=""/>
+		</div>
+		<div class="sidebar-text">
+		<h3>GD FAQs: Communication</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-e8c7caa68ba331eb886bdf9d8bf22839">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/Group-Discussion-Questions.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/practice-gd1_0.jpg?null&itok=1OcseFCY" alt="" title=""/>
+		</div>
+		<div class="sidebar-text">
+		<h3>GD FAQs: Content</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-95d30150c3c26789e4d51e5c12319c2f">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/MBA/Group-Discussion-Tips-and-Tricks.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/GD-skills-Three-key-stages-GD-preparation-tile.jpg?null&itok=OXxniHwl" alt="Assess your GD skills: Three key stages of GD preparation" title="Assess your GD skills: Three key stages of GD preparation"/>
+		</div>
+		<div class="sidebar-text">
+		<h3>Stages of GD preparation</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-382580ddb197582a14b13dd4988743bf">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/Group-Discussion-Etiquette.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/public-speak-1-thumb_0.png?null&itok=VZc1cT5j" alt="Group Discussion Etiquettes" title="Group Discussion Etiquettes"/>
+		</div>
+		<div class="sidebar-text">
+		<h3>Group Discussion Etiquettes</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i><i class="fa fa-play" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-526eb9744782adea31c961a854373d3a">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/MBA/Case-Study.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/rising-potential1_0.jpg?null&itok=poB42In3" alt="" title=""/>
+		</div>
+		<div class="sidebar-text">
+		<h3>Case Study: Tips and Strategy</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-28b84b333efe38da3f1d771a9a9639f1">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/MBA/Example-of-Case-Study.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/intro-gd1_0.jpg?null&itok=tBz_9WTL" alt="" title=""/>
+		</div>
+		<div class="sidebar-text">
+		<h3>MBA Case Studies - Solved Examples</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-f1dc7f48934fcbfa76a115392634aef7">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/MBA/Case-Study-Examples.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/interpersonal-communication1_0.png?null&itok=Vuesz7qN" alt="" title=""/>
+		</div>
+		<div class="sidebar-text">
+		<h3>Practice Case Studies: Long</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-e9237c92133e55d5cc4dea8886aa0929">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/MBA/Case-Study-Practice.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/Leadership-personality1.png?null&itok=38XIMDPD" alt="" title=""/>
+		</div>
+		<div class="sidebar-text">
+		<h3>Practice Case Studies: Short</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-1d565f7232faa539bba3a50c266e96f0">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/MBA/Abstract-GD-Topics-for-MBA.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/5-tips-GD-topics-icon.jpg?null&itok=zVEpGPP8" alt="5 tips for handling Abstract GD topics" title="5 tips for handling Abstract GD topics"/>
+		</div>
+		<div class="sidebar-text">
+		<h3>5 tips for handling Abstract GD topics</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-b7767142fd1c8d5b90d67857e259c120">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/MBA/How-to-Handle-Fish-Market-Situation-in-GD.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/fish-market-situation-GD-icon.jpg?null&itok=0AzA8qSw" alt="5 tips for handling a fish market situation in a GD" title="5 tips for handling a fish market situation in a GD"/>
+		</div>
+		<div class="sidebar-text">
+		<h3>5 tips for handling a fish market situation in GD</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-3c5528e8d30dce81623a0f5f08e3ed3e">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/MBA/GD-Tips-and-Tricks.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/gd-tips-tricks-icon.jpg?null&itok=g5Nof8Vq" alt="5 things to follow: if you don’t know much about the GD topic" title="5 things to follow: if you don’t know much about the GD topic"/>
+		</div>
+		<div class="sidebar-text">
+		<h3>5 things to follow: if you don’t know much about the GD topic</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-8e94e4818f1d9cb4105cba7d21880836">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/MBA/Group-Discussion-Dos-and-Dont.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/Group-task-thumbnail_0.png?null&itok=o1IetaPu" alt="" title=""/>
+		</div>
+		<div class="sidebar-text">
+		<h3>Do’s and Don’ts in a Group Discussion</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i><i class="fa fa-play" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-93312ff48f11e2544320833878c86df3">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/MBA/Factual-GD-Topics.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/5-tips-handling-gd-topics-icon.jpg?null&itok=mhRVKA2e" alt="5 tips for handling Factual GD topics" title="5 tips for handling Factual GD topics"/>
+		</div>
+		<div class="sidebar-text">
+		<h3>5 tips for handling Factual GD topics</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-sidebar-content-view view-id-sidebar_content_view view-display-id-page post-entry123 view-dom-id-f78b81cd618386157b33cf7b8bb41c6f">
+        
+  
+  
+      <div class="view-content">
+          <div class="post-entry">
+        
+  <div class="views-field views-field-php">        <span class="field-content"><a href="/how-to-prepare-for-gd.php" target="_blank">
+		<div class="sidebar-image">
+			<img src="https://s3service.hitbullseye.com/s3fs-public/styles/face_tile_image/public/gd_topic_tile.jpg?null&itok=5cIv2TLu" alt="" title=""/>
+		</div>
+		<div class="sidebar-text">
+		<h3>How to prepare for Group Discussion</h3><div class="sidebar-rating-video"><fieldset class="rating">
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		<label class="full selected" for="star"></label>
+		</fieldset></div><div class="video-article pull-right"><i class="fa fa-file-text-o" aria-hidden="true"></i></div></div></a></span>  </div>    </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div>		</div>
+		</div>
+		</div>
+		</div>
+</section>
+
+
+
+  </div>
+               
+			            </div>
+				<div class="cleared"></div>
+<style>
+/* Footer CSS*/
+
+.new-footer{padding:50px 0;background-color:#000;float:left;width:100%;}
+.new-footer ul, .new-footer li{padding:0;list-style:none;}
+.new-footer .link-box h3{font-size:18px;font-family:"Roboto-Bold";margin:0 0 15px;padding-bottom:10px;border-bottom:1px solid #666666;color:#fff;}
+.new-footer .link-box h3.sec{margin-top:10px;}
+.new-footer .link-box li{padding:5px 0}
+.new-footer .link-box li a{display:inline-block;color:#aaa;font-size:14px;transition:all ease 0.5s;}
+.new-footer .link-box li a:hover{color:#ac2626;}
+.new-footer .row.row2{margin-left:-10px;margin-right:-10px;}
+.new-footer .hq-address{display:block;}
+.new-footer .hq-address{padding:10px 0;margin-top:30px}
+.new-footer .hq-address h3{font-weight:normal;color:#fff;font-size:16px;margin:0;}
+.new-footer .hq-address p{margin:10px 0 0;font-size:14px;display:inline-block;}
+.new-footer .hq-address p a{color:#59a2bf;transition:all ease 0.5s}
+.new-footer .hq-address p a:hover{color:#aaa;}
+.new-footer .hq-address p.nw{padding-left:15px;color:#bbb}
+.new-footer .hq-address p i img{width:22px;}
+
+.new-footer .footer-seo{padding:30px 0 15px;}
+.new-footer .footer-seo h3{font-size:18px;font-family:"Roboto-Bold";margin:0px 0 15px;padding-bottom:10px;border-bottom:1px solid #666666;color:#fff;}
+.new-footer .footer-seo p{font-size:14px;color:#aaa;line-height:24px;padding:0;}
+.new-footer .footer-seo #read-btn{background-color:transparent;box-shadow:none;color:#59a2bf;border:none;padding:0}
+
+.new-footer .footer-seo .sub-section{margin-top:30px;}
+.new-footer .footer-seo .sub-section ul{margin-bottom:15px;}
+.new-footer .footer-seo .sub-section h4{font-size:16px!important;margin:0 0 15px;font-family:"Roboto-Bold"!important;color:#fff;text-transform:capitalize!important;}
+.new-footer .footer-seo .sub-section li{position: relative;font-size: 14px;padding: 8px 0px 8px 25px;font-family:"Roboto-Regular";color:#aaa;}
+.new-footer .footer-seo .sub-section li:before{position: absolute;content: url(https://mba.hitbullseye.com/sites/all/themes/exblog/images/checknew.svg);top: 10px;left: 0;width: 16px;}
+.new-footer .footer-seo .sub-section h5{margin:0 0 5px;padding:0;}
+.new-footer .footer-seo .sub-section p{margin:0;}
+
+.footer-social{border-top:1px solid #2f2f2f;padding:15px 0;background-color:#000;float:left;width:100%;height:auto!important;text-align:left;}
+.footer-social .social-left{}
+.footer-social .social-left h3{color:#fff;font-size:16px;margin:0;display:inline-block;margin-right:15px;line-height:33px;vertical-align:top;}
+.footer-social .social-left a{display:inline-block;border:1px solid rgba(255,255,255,0.2);padding:2px 8px;border-radius:5px;}
+.footer-social .social-right{text-align:right;}
+.footer-social .social-right h3{color:#fff;font-size:16px;margin:0;display:inline-block;margin-right:15px;line-height:33px;vertical-align:top;}
+.footer-social .social-right .soc-ico{display:inline-block;}
+.footer-social .social-right .soc-ico img{width:35px;height:35px;}
+
+.footer-down{background-color:#151515;padding:10px 0;color:#aaa;float:left;width:100%;}
+.footer-down .left-txt p{margin:0;}
+.footer-down .right-txt{text-align:right;}
+.footer-down .right-txt a{display:inline-block;padding:0 15px;color:#aaa;transition:all ease 0.5s;position:relative;}
+.footer-down .right-txt a:hover{color:#ac2626;}
+.footer-down .right-txt a:before{position:absolute;width:1px;height:15px;top:5px;left:0px;background-color:#aaa;content:"";}
+.footer-down .right-txt a:first-child:before{display:none;}
+/* Footer CSS*/
+
+.row.row-exact{margin-left:-10px;margin-right:-10px;}
+.row.row-exact2{margin-left:-15px;margin-right:-15px;}
+.col-xs-15,.col-sm-15,.col-md-15,.col-lg-15 {position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+.col-xs-15 {width: 20%;float: left;}
+.footer-upper{padding:0px 0 30px;}
+.exact-footer{background-color:#222;padding:35px 0 15px;}
+.exact-footer .new-col h3{font-size:18px;color:#f27f7a;margin:0 0 5px;}
+.exact-footer .new-col ul{margin:0;padding:0;}
+.exact-footer .new-col li{list-style:none;padding:4px 0;}
+.exact-footer .new-col li a{color:#cbcbcb;display:inline-block;transition:all ease 0.5s;}
+.exact-footer .new-col li a:hover{color:#f27f7a;}
+.exact-footer.hide{display:none;}
+.footer-social-new{padding:0px 0 10px;border-bottom:1px solid #333}
+.footer-social-new .app-sec-foot h3{display:inline-block;color:#fff;font-size:20px;margin:0 15px 0 0;line-height:39px;vertical-align:top;padding:0;}
+.footer-social-new .app-sec-foot a{display:inline-block;}
+.footer-social-new .app-sec-foot a img{width:120px;}
+.footer-social-new .social-foot{text-align:right;}
+.footer-social-new .social-foot h3{display:inline-block;color:#fff;font-size:20px;margin:0 15px 0 0;vertical-align:top;line-height:39px;padding:0;}
+.footer-social-new .social-foot ul {margin:0 0 0 0; padding:0;display:inline-block;}
+.footer-social-new .social-foot ul li {list-style-type:none; display:inline-block; margin:0px 2px;}
+.footer-social-new .social-foot ul li i {width:34px; height:34px;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;background-color:#fff; line-height:34px;text-align:center;color:#fff;}
+.footer-social-new .social-foot .fa.fa-facebook {background-color:#507CBD;}
+.footer-social-new .social-foot .fa.fa-twitter {background-color:#63CEF2;}
+.footer-social-new .social-foot .fa.fa-linkedin {background-color:#336699;}
+.footer-social-new .social-foot .fa.fa-instagram {background-color:#487191;}
+.footer-social-new .social-foot .fa.fa-google-plus {background-color:#C63E24;}
+.footer-social-new .social-foot .fa.fa-youtube-play {background-color:#ED1C24;}
+.footer-social-new .social-foot .fa:hover {background-color:#fff;}
+.footer-social-new .social-foot .fa.fa-facebook:hover {color:#507CBD;}
+.footer-social-new .social-foot .fa.fa-twitter:hover {color:#63CEF2;}
+.footer-social-new .social-foot .fa.fa-linkedin:hover {color:#336699;}
+.footer-social-new .social-foot .fa.fa-instagram:hover {color:#487191;}
+.footer-social-new .social-foot .fa.fa-google-plus:hover {color:#C63E24;}
+.footer-social-new .social-foot .fa.fa-youtube-play:hover{color:#ED1C24;}
+.footer-content{padding:30px 0 0;border-bottom:1px solid #333}
+.footer-content h3{font-size:18px;color:#f27f7a;margin:0 0 10px;}
+.footer-content h4{font-size:15px;color:#cbcbcb;margin:0 0 10px;}
+.footer-content p{font-size:14px;color:#cbcbcb;}
+.footer-content p.last{margin-top:15px;}
+.footer-content .foot-about{padding-bottom:30px;}
+.footer-content .foot-about{padding-bottom:30px;}
+.footer-content .foot-about ul{margin:0;padding:0}
+.footer-content .foot-about li{position: relative;font-size: 15px;padding: 3px 0px 3px 25px;color:#cbcbcb;list-style:none;font-size:14px;}
+.footer-content .foot-about li strong{font-weight:normal;font-family:"Roboto-Bold"}
+.footer-content .foot-about li:before{position: absolute;content: url(../images/foot-pointer.svg);top: 5px;left: 0;width: 16px;}
+.footer-copyright{padding:15px 0 0;}
+.copyright{margin:0px;color:#cbcbcb;font-size:14px;font-family:"Roboto-Light";}
+.footer-copyright .privacy{margin:0px;}
+.footer-copyright .privacy a{color:#cbcbcb;font-size:14px;font-family:"Roboto-Light";}
+.footer-copyright .privacy a:hover{color:#f27f7a!important;}
+.footer-copyright .privacy a:last-child:after{content:none;}
+.footer-copyright .privacy a:after{content:"|";margin:0 10px;}
+body #kenytChatBubble.style1 #kenytBubbleContainer{bottom:140px;}
+
+@media only screen and (min-width:1200px){
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media only screen and (min-width:992px){
+	.col-md-15 {
+	width: 20%;
+	float: left;
+    }
+}
+
+@media only screen and (max-width: 991px)  {
+	.exact-footer .new-col h3{font-size:15px;margin:0 0 10px;}
+	.exact-footer .new-col li a{font-size:13px;}
+.footer-social-new .app-sec-foot h3, .footer-social .social-foot h3{font-size:15px;line-height:33px;}
+.footer-social-new .app-sec-foot a img{width:100px;}
+.footer-social-new .social-foot li a img{width:33px;}
+
+.footer-content h3{font-size:15px;}
+.footer-content p{font-size:13px;}
+.footer-content .foot-about li{font-size:13px;}
+.footer-content h4{font-size:13px;}
+}
+@media only screen and (min-width:768px)
+{
+    .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media only screen and (max-width: 767px)
+{
+
+.row.row-exact{margin-left:-15px;margin-right:-15px;display:block;;}
+.col-xs-6.hght{height:215px;padding-left:15px;padding-right:15px;}
+.col-xs-6.hght2{height:190px;padding-left:15px;padding-right:15px;}
+.col-xs-12.hght3{height:auto;padding-left:15px;padding-right:15px;}
+
+.footer-social-new{text-align:center;}
+.footer-social-new .app-sec-foot h3, .footer-social .social-foot h3{display:block;margin:10px 0;}
+.footer-social-new .social-foot{text-align:center;}
+.footer-copyright{text-align:center;}
+.footer-copyright .copyright{margin-bottom:10px;font-size:13px;}
+.footer-copyright .text-right{text-align:center;}
+.footer-copyright .private a{font-size:13px;}
+.footer-copyright .privacy a:hover{color:#f27f7a;}
+}
+@media only screen and (max-width: 479px){
+	.new-footer{padding:15px 0;}
+	.new-footer .link-box h3{font-size:14px;margin:0 0 5px;}
+	.new-footer .link-box li a{font-size:12px;}
+	.new-footer .footer-seo{padding:0px;}
+	.new-footer .footer-seo h3{font-size:15px;}
+	.new-footer .footer-seo .sub-section h4{font-size:13px!important;}
+	.new-footer .hq-address p.nw{padding-left:0;}
+	.new-footer .hq-address{margin:0;}
+	.new-footer .hq-address p{margin-top:0;}
+	.footer-social .social-left h3{font-size:13px;}
+	.footer-social .social-left,.footer-social .social-right{text-align:center;}
+	.footer-social .social-left a{padding:0;line-height:40px;}
+	.footer-social .social-left a img{width:80px;}
+	.footer-social .social-right h3{font-size:13px;}
+	.footer-down{text-align:center;}
+	.footer-down .right-txt{text-align:center;}
+}
+</style>
+
+<div class="mainLoader" style="display:none">
+	<div class="loader"></div>
+</div>
+
+<style>
+	.loader {
+		border: 16px solid #f3f3f3;
+		/* Light grey */
+		border-top: 16px solid #3498db;
+		/* Blue */
+		border-radius: 50%;
+		width: 120px;
+		height: 120px;
+		animation: spin 2s linear infinite;
+		margin: 0 auto;
+		margin-top: 25%;
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	.mainLoader {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 9999;
+		/* text-align: center; */
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+</style>
+
+
+<script>
+	function getURLParameter(param) {
+		var pageURL = window.location.search.substring(1); //get the query string parameters without the "?"
+		var URLVariables = pageURL.split('&'); //break the parameters and values attached together to an array
+		for (var i = 0; i < URLVariables.length; i++) {
+			var parameterName = URLVariables[i].split('='); //break the parameters from the values
+			if (parameterName[0] == param) {
+				return parameterName[1];
+			}
+		}
+		return null;
+	}
+
+	function getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for (var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+
+	var setCookieCounter = 0;
+	var setCookieValue = "";
+	document.setCookie = function(sName, sValue) {
+		var oDate = new Date(),
+			minutes = 43200;
+		oDate.setTime(oDate.getTime() + (minutes * 60 * 1000));
+		var sCookie = encodeURIComponent(sName) + '=' + encodeURIComponent(sValue) + ';expires=' + oDate.toGMTString() + ';path=/';
+		document.cookie = sCookie;
+		setCookieCounter = setCookieCounter + 1;
+		setCookieValue = setCookieValue + "#" + sCookie;
+	}
+
+	var outto = "##";
+	var outtono = 0;
+	var outtoch = "##";
+	var outtochnoy = 0;
+	var outtochnon = 0;
+	var is_cookie_accepted = 0;
+
+	function checkCookieAccepted() {
+		is_cookie_accepted = getCookie("is_cookie_accepted") ? 1 : 0;
+		if (is_cookie_accepted != 0) {
+			jQuery("div[aria-label*='cookieconsent']").hide();
+			outtochnoy = outtochnoy + 1;
+			outtoch = "#Cookie set to " + is_cookie_accepted + "# outtochnoy: " + outtochnoy + "#";
+		} else {
+			// show cookie modal
+			jQuery("div[aria-label*='cookieconsent']").show();
+			outtochnon = outtochnon + 1;
+			outtoch = "#Cookie set to " + is_cookie_accepted + "# outtochnon: " + outtochnon + "#";
+		}
+	}
+
+	function cc_dismissAddOnClick() {
+		jQuery(document).on('click', '.cc-dismiss', function() {
+			setCookie('is_cookie_accepted', 1, 30);
+			jQuery("div[aria-label*='cookieconsent']").hide();
+			is_cookie_accepted = getCookie("is_cookie_accepted") ? 1 : 0;
+			outtono = outtono + 1;
+			outtoch = "#Cookie set to " + is_cookie_accepted + "# outtono: " + outtono + "#";
+		});
+		checkCookieAccepted();
+	}
+
+	jQuery(document).ready(function() {
+			});
+
+	var source = getURLParameter('utm_source');
+	if (source) {
+		document.setCookie('utm_source', source);
+	} else {
+		var source = getURLParameter('gclid'); //this will work when you are running ad through google
+		if (source) {
+			source = "GoogleAds"
+			document.setCookie('utm_source', source);
+		}
+	}
+	var admitad_uid = getURLParameter('admitad_uid');
+
+	if (admitad_uid) {
+		document.setCookie('admitad_uid', admitad_uid);
+	}
+
+	function genericSocialShare(url) {
+		window.open(url, 'sharer', 'toolbar=0,status=0,width=648,height=395');
+		return true;
+	}
+</script>
+
+
+
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-xs-12 footer-left"><img class="footer-logo hbe-ps-lazy" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="/new-code/images/footer-logo.png" alt="Footer Logo" class="footer-logo" width="160" height="43"><ul>
+					<li><a href="https://www.hitbullseye.com/">Home</a></li>
+					<li><a href="https://www.hitbullseye.com/about-us.php">About</a></li>
+					<li><a href="https://www.hitbullseye.com/testimonial.php">Testimonial</a></li>
+					<li><a href="https://www.hitbullseye.com/courses.php">Courses</a></li>
+					<li><a href="https://www.hitbullseye.com/contact.php">Contact</a></li>
+				</ul>
+			</div>
+
+			<div class="col-md-4 col-sm-4 col-xs-12 footer-right">
+				<div class="foot-quick-link">
+					<h3>Quick Links</h3>
+					<div class="heading-border"></div>
+
+					<ul>
+						<li><a href="https://www.hitbullseye.com/learning-home.php#quick-tab-1">MBA</a></li>
+						<li><a href="https://www.hitbullseye.com/learning-home.php#quick-tab-2">Bank-PO</a></li>
+						<li><a href="https://www.hitbullseye.com/learning-home.php#quick-tab-3">GK</a></li>
+						<li><a href="https://www.hitbullseye.com/learning-home.php#quick-tab-4">Interview</a></li>
+						<li><a href="https://www.hitbullseye.com/learning-home.php#quick-tab-5">Miscellaneous</a></li>
+						<li><a href="https://www.hitbullseye.com/learning-home.php#quick-tab-6">Vocab</a></li>
+						<li><a href="https://www.hitbullseye.com/learning-home.php#quick-tab-7">Academic Zone</a></li>
+						<li><a href="https://www.hitbullseye.com/learning-home.php#quick-tab-8">Placement Training</a></li>
+						<li><a href="https://www.hitbullseye.com/learning-home.php#quick-tab-9">After +2 - Law / BBA / HM / Others</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-12 footer-right">
+				<div class="app">
+					<h3>Download App</h3>
+					<div class="heading-border"></div><a href="https://play.google.com/store/apps/details?id=com.bullseye" target="_blank"><img class="hbe-ps-lazy" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="/images/playstore-logo.svg" alt="Play Store"  width="110" height="40"></a> <a href="https://apps.apple.com/in/app/hitbullseye-exam-prep-leader/id6477370044?platform=iphone" target="_blank"><img class="hbe-ps-lazy" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="/images/appstore-logo.svg" alt="Play Store"  width="110" height="40"></a></div>
+
+				<div class="social-media">
+					<h3>Follow</h3>
+					<a href="https://www.facebook.com/hitbullseyedotcom/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="https://twitter.com/hitbullseye" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="https://www.linkedin.com/company/bulls-eye" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					<a href="https://www.instagram.com/hitbullseye/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href="https://www.youtube.com/user/BullsEyeAdmin" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-saperator"></div>
+
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12 footer-bootom-left">Copyright © Hitbullseye 2026 | All Rights Reserved</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 footer-bootom-right">
+					<a href="https://www.hitbullseye.com/Privacy-Policy.php" target="_blank">Privacy Policy</a>
+					<a href="https://www.hitbullseye.com/refund-Policy.php" target="_blank">Refund Policy</a>
+					<a href="https://www.hitbullseye.com/Terms-of-use.php" target="_blank">Term Of Use</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</footer>
+<style>
+	.archive #container .tiles-listing {
+		display: block !important;
+	}
+
+	/*
+	.description
+	{
+	 display: none !important;
+	}
+	.tips
+	{
+	 display: none !important;
+	}*/
+</style>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript">
+	function show_hide(id) {
+		ID = document.getElementById(id);
+		if (ID.style.display == '') {
+			ID.style.display = 'none';
+		} else {
+			ID.style.display = '';
+			jQuery('#' + id).focus();
+		}
+	}
+	jQuery(document).ready(function() {
+		
+				jQuery('.closedd').click(function() {
+			jQuery('#wrapper1').hide();
+		});
+		jQuery('.Ash-Img-popup .closedd').click(function() {
+			jQuery('.Ash-Img-popup').hide();
+		});
+	});
+</script>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//www.hitbullseye.com/embed/embed.js"></script>
+
+<!-- Piwik -->
+<script>
+  $(document).ready(function(){
+  $("#read-btn").click(function(){
+    // Toggle visibility of the hidden text
+    $("#more-text").slideToggle("slow");
+    
+    // Toggle button text between "Read More" and "Read Less"
+    if ($(this).text() === "Read More") {
+      $(this).text("Read Less");
+    } else {
+      $(this).text("Read More");
+    }
+  });
+});
+</script>
+<script>
+	function startLoader() {
+		jQuery('.mainLoader').show();
+
+		var timeout = setInterval(function() {
+			if (jQuery('.pager li div.ajax-progress').length == '0') {
+				stopLoader();
+				getpagedetailed();
+				// console.log(pageno);
+				clearInterval(timeout);
+			} else {
+				console.log('Not Checked');
+			}
+		}, 10)
+	}
+
+	function stopLoader() {
+		jQuery('.mainLoader').hide();
+	}
+
+	function getpagedetailed() {
+		var pageno = jQuery('.pager-current').text();
+		var length = parseInt(jQuery('.view-content .post-entry').length);
+		if (pageno == '') {
+			jQuery('#totalrowsinfo').text('1 - ' + length + ' of over 0 results');
+		} else {
+			jQuery('#totalrowsinfo').text((((pageno - 1) * 15 + 1) + ' - ' + (((pageno - 1) * 15) + length) + ' of over -1 results'));
+		}
+
+	}
+
+	function commonHeader_flipdiv(counter) {
+		jQuery('.common_showdiv_' + counter).slideToggle();
+	}
+
+	jQuery(document).ready(function() {
+		if (jQuery('#totalrowsinfo').length != 0) {
+			console.log('hello');
+			getpagedetailed();
+		}
+
+		jQuery('.toptog1').click(function() {
+			jQuery('.togdrp').slideToggle();
+		});
+
+		jQuery('#trendDrop').click(function() {
+			jQuery('.trnndddp2').slideToggle();
+		});
+
+		jQuery('#mytest').click(function() {
+			jQuery('#toggle_hide_menu').slideToggle();
+		});
+
+		jQuery('#flip-mainres23').click(function() {
+			jQuery('#panel-menu23').slideToggle();
+		});
+
+		jQuery('#flip2').click(function() {
+			jQuery('#panel2').slideToggle();
+		});
+		jQuery('#flip_secondrow').click(function() {
+			jQuery('#pane_secondrow').slideToggle();
+		});
+	});
+</script>
+
+<!-- Below script for mobile side navigation -------------------->
+<script>
+	jQuery(document).ready(function() {
+		jQuery('.nav_parentz').find('.active').prependTo('.nav_parentz');
+	});
+</script>
+<script>
+	jQuery(document).ready(function() {
+
+		jQuery("#content").hide();
+
+		jQuery("#hideshow").show();
+
+		jQuery('#hideshow').click(function() {
+
+			jQuery("#content").slideToggle();
+
+		});
+
+	});
+</script>
+<!-- Chat Gen Starts
+ <script type="text/javascript">
+"use strict";
+    !function () {
+        var a = window.ChatGen || [];
+        if (!a.loaded) {
+            var s = document.createElement('script');
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = 'https://app.chatgen.ai/cmp/chat-widget/bot.js';
+            var fs = document.getElementsByTagName('script')[0];
+            fs.parentNode.insertBefore(s, fs);
+            s.onload=function(){
+                var yourKey = 'rT4R1Mvv';
+                var widgetKey = {widget_key: yourKey};
+                ChatGen.init(widgetKey);
+            }
+        }
+    }();
+</script>
+ Chat Gen Ends -->
+
+
+ <script type="text/javascript" src="https://login.hitbullseye.com/js/toggle-script.js"></script>
+ <script>
+		var loginDomain = "https://login.hitbullseye.com";	
+	</script>
+<input type="hidden" name="easychatstudentid" id="easychatstudentid" value="">
+<div id="load-registration" class="load-registration" style="display:none"></div>
+<div id="paid-registration" class="paid-registration" style="display:none"></div>
+
+<script type="text/javascript" src="https://login.hitbullseye.com/modalpopup/helpercall.js" defer></script><script type="text/javascript" src="https://login.hitbullseye.com/modalpopup/helpercall-extend.js" defer></script><div id="succes_loginbox_common" class="succes_loginbox_common" style="display:none">
+	<link rel="stylesheet" type="text/css" href="https://login.hitbullseye.com/css/common-registration-style.min.css" defer>
+	<body id="pageid-1">
+		<div class="bgblack"></div>
+		<div class="wrapper">
+			<div class="modal-as-new" style="background: #bdeabe;">
+				<div class="modal-body">
+					<div class="" style="text-align: center;">
+						Login Successful: Redirecting...
+						<img class="hbe-ps-lazy-nv" src="https://www.hitbullseye.com/images/img-lazy-temp.png" data-src="https://mba.hitbullseye.com/cat-scholarship/images/loading.gif" style="margin: 0 auto;"/>					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</div>
+    <link rel="stylesheet" type="text/css" href="/required_common.css">
+    <script type="text/javascript" src="/required_common.js"></script>
+    
+<script>
+	function addAdditionalCss(add_data) {
+		let head = document.getElementsByTagName('head')[0];
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		if (add_data == 'chatBot') link.href = 'https://mba.hitbullseye.com/sites/all/themes/exblog/css/newcodestyle.min.css';
+		else if (add_data == 'cookie') link.href = '../cookieconsent-lazy.min.css';
+		link.media = 'all';
+		head.appendChild(link);
+	}
+
+	function addAdditionalJs(add_data) {
+		let head = document.getElementsByTagName('head')[0];
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		// script.async = true;
+		if (add_data == 'chatBot') script.src = 'https://mba.hitbullseye.com/sites/all/themes/exblog/css/newcodestyle.min.css';
+		else if (add_data == 'cookie') script.src = '../cookieconsent-lazy.min.js';
+		head.appendChild(script);
+	}
+	function isInViewport(element) {
+		const rect = element.getBoundingClientRect();
+		return (
+			rect.top >= 0 &&
+			rect.left >= 0 &&
+			rect.bottom <= (window.innerHeight + 300 || document.documentElement.clientHeight) &&
+			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+		);
+	}
+	var scrollTop = window.pageYOffset;
+	document.addEventListener("DOMContentLoaded", function() {
+		var lazyloadImages = document.querySelectorAll("img.hbe-ps-lazy");
+		var lazyloadImagesNV = document.querySelectorAll("img.hbe-ps-lazy-nv");
+		var lazyloadThrottleTimeout;
+
+		var chatBotAdded = false
+		var adPopUp = false
+		var cookiePopUp = false
+
+		function lazyload() {
+
+			// console.log('lazyload() ..');
+
+			if (lazyloadThrottleTimeout) {
+				clearTimeout(lazyloadThrottleTimeout);
+			}
+			lazyloadThrottleTimeout = setTimeout(function() {
+				lazyloadImages.forEach(function(img) {
+					if (img.dataset.src != '' && isInViewport(img) && img.offsetTop < (window.innerHeight + scrollTop)) {
+						img.src = img.dataset.src;
+						img.classList.remove('hbe-ps-lazy');
+						img.dataset.src = '';
+					}
+				});
+
+				if (lazyloadImages.length == 0) {
+					document.removeEventListener("scroll", lazyload);
+					window.removeEventListener("resize", lazyload);
+					window.removeEventListener("orientationChange", lazyload);
+				}
+
+				lazyloadImagesNV.forEach(function(img) {
+					if (img.dataset.src != '' && isInViewport(img) && img.offsetTop < (window.innerHeight + scrollTop)) {
+						img.src = img.dataset.src;
+						img.classList.remove('hbe-ps-lazy-nv');
+						img.dataset.src = '';
+					}
+				});
+
+				if (lazyloadImagesNV.length == 0) {
+					document.removeEventListener("scroll", lazyload);
+					window.removeEventListener("resize", lazyload);
+					window.removeEventListener("orientationChange", lazyload);
+				}
+			}, 20);
+
+			if (!chatBotAdded) {
+				chatBotAdded = true;
+				chatBotDD();
+				addAdditionalCss('chatBot');
+				// appendStyle('main-style');
+				$('.chat-sec').show();
+			}
+
+			if (!adPopUp) {
+				adPopUp = true;
+				setTimeout(function() {
+					jQuery('#wrapper1').show();
+				}, 3000);
+			}
+
+			if (!cookiePopUp) {
+				cookiePopUp = true;
+				// addAdditionalCss('cookie');
+				// addAdditionalJs('cookie');
+				cookiePopUpDD();
+				setTimeout(cc_dismissAddOnClick, 2000);
+			}
+		}
+
+		lazyloadImages.forEach(function(img) {
+			// console.log("lazyloadImages")
+			if (img.dataset.src != '' && isInViewport(img) && img.offsetTop < (window.innerHeight + scrollTop)) {
+				// console.log("lazyLoading..")
+				img.src = img.dataset.src;
+				// img.classList.add('hbe-ps-lazy-added');
+				img.classList.remove('hbe-ps-lazy');
+				img.dataset.src = '';
+			}
+		});
+
+		document.addEventListener("scroll", lazyload);
+		window.addEventListener("resize", lazyload);
+		window.addEventListener("orientationChange", lazyload);
+	});
+</script>
+
+<script defer src="https://www.kenyt.ai/botapp/ChatbotUI/dist/js/bot-loader.js" type="text/javascript" data-bot="190704703"></script>
+<script src="https://www.hitbullseye.com/hbe-chatbot/chatbot-loader.js?v=9" data-domain="others"></script>
+
+
+
+		</div>
+	</div>
+	
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"2e5b8f4dc3","applicationID":"1554294122","transactionName":"MQZQZhBQX0tZAhUPXghMZ0ALHh5OWRNOEUYRTFpGD10eXV4STgVcFRBbRgceVV1eABQKRUgTWkI=","queueTime":0,"applicationTime":720,"atts":"HUFTEFhKTEU=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+
+</html>

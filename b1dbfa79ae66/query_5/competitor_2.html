@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://bestpracticeguides.scot/xmlrpc.php"/>
+
+	<script type="text/javascript">document.documentElement.className='js';</script>
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><style id="et-builder-googlefonts-cached-inline">@font-face{font-family:'Barlow';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHtv4kjgoGqM7E_CfNY8HMJnQ.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:italic;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfP04WogvT8.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOQ4mogvT8.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E_Cfs1wHo.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPI42ogvT8.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPk5GogvT8.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOA5WogvT8.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:italic;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOc5mogvT8.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfO452ogvT8.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E3b_s1wHo.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3w-os6Vop.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3p-ks6Vop.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_Ass8.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3_-gs6Vop.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E30-8s6Vop.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3t-4s6Vop.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3q-0s6Vop.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3j-ws6Vop.ttf) format('truetype')}@font-face{font-family:'Barlow';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHtv4kjgoGqM7E_CfNY8HMJng&skey=c079aaa284cdfedf&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:italic;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHsv4kjgoGqM7E_CfP04WogvTw&skey=9a40589dc4645af7&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHsv4kjgoGqM7E_CfOQ4mogvTw&skey=cff9305546dac9b9&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHrv4kjgoGqM7E_Cfs1wHk&skey=ae428d300932fbee&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHsv4kjgoGqM7E_CfPI42ogvTw&skey=989d87b0113009a2&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHsv4kjgoGqM7E_CfPk5GogvTw&skey=b6fa275773d7d91f&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHsv4kjgoGqM7E_CfOA5WogvTw&skey=25c93348b6ec64d8&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:italic;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHsv4kjgoGqM7E_CfOc5mogvTw&skey=4f8c1421606143df&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHsv4kjgoGqM7E_CfO452ogvTw&skey=a17eda9aca9f836a&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHrv4kjgoGqM7E3b_s1wHk&skey=ea7542df22f6a953&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHqv4kjgoGqM7E3w-os6Voq&skey=e8c74abecf94633e&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHqv4kjgoGqM7E3p-ks6Voq&skey=5c2bca46e72f5b37&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHpv4kjgoGqM7E_Ass_&skey=32d7acf8757dbad0&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHqv4kjgoGqM7E3_-gs6Voq&skey=4c8d0d0b13516148&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHqv4kjgoGqM7E30-8s6Voq&skey=a9a2225c15335812&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHqv4kjgoGqM7E3t-4s6Voq&skey=f60e73b1bbf362f3&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHqv4kjgoGqM7E3q-0s6Voq&skey=c0113ae012ad56b&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=7cHqv4kjgoGqM7E3j-ws6Voq&skey=ed2d519ec0625a7a&v=v13) format('woff')}@font-face{font-family:'Barlow';font-style:italic;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHtv4kjgoGqM7E_CfNY8HMJmA.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:italic;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfP04WogvTo.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOQ4mogvTo.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E_Cfs1wH8.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPI42ogvTo.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfPk5GogvTo.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOA5WogvTo.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:italic;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOc5mogvTo.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:italic;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfO452ogvTo.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHrv4kjgoGqM7E3b_s1wH8.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3w-os6Vos.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3p-ks6Vos.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_Ass5.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3_-gs6Vos.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E30-8s6Vos.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3t-4s6Vos.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3q-0s6Vos.woff2) format('woff2')}@font-face{font-family:'Barlow';font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3j-ws6Vos.woff2) format('woff2')}</style><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'/>
+<script type="text/javascript">let jqueryParams=[],jQuery=function(r){return jqueryParams=[...jqueryParams,r],jQuery},$=function(r){return jqueryParams=[...jqueryParams,r],$};window.jQuery=jQuery,window.$=jQuery;let customHeadScripts=!1;jQuery.fn=jQuery.prototype={},$.fn=jQuery.prototype={},jQuery.noConflict=function(r){if(window.jQuery)return jQuery=window.jQuery,$=window.jQuery,customHeadScripts=!0,jQuery.noConflict},jQuery.ready=function(r){jqueryParams=[...jqueryParams,r]},$.ready=function(r){jqueryParams=[...jqueryParams,r]},jQuery.load=function(r){jqueryParams=[...jqueryParams,r]},$.load=function(r){jqueryParams=[...jqueryParams,r]},jQuery.fn.ready=function(r){jqueryParams=[...jqueryParams,r]},$.fn.ready=function(r){jqueryParams=[...jqueryParams,r]};</script>
+	<!-- This site is optimized with the Yoast SEO plugin v27.3 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Home | Wild Deer Best Practice Guidance</title>
+	<link rel="canonical" href="https://bestpracticeguides.scot/"/>
+	<meta property="og:locale" content="en_GB"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="Home | Wild Deer Best Practice Guidance"/>
+	<meta property="og:url" content="https://bestpracticeguides.scot/"/>
+	<meta property="og:site_name" content="Wild Deer Best Practice Guidance"/>
+	<meta property="article:modified_time" content="2026-04-04T14:27:00+00:00"/>
+	<meta property="og:image" content="https://bestpracticeguides.scot/wp-content/uploads/2025/01/deer-bg-e1737066192903.jpg"/>
+	<meta property="og:image:width" content="1920"/>
+	<meta property="og:image:height" content="1120"/>
+	<meta property="og:image:type" content="image/jpeg"/>
+	<meta name="twitter:card" content="summary_large_image"/>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/bestpracticeguides.scot\/","url":"https:\/\/bestpracticeguides.scot\/","name":"Home | Wild Deer Best Practice Guidance","isPartOf":{"@id":"https:\/\/bestpracticeguides.scot\/#website"},"primaryImageOfPage":{"@id":"https:\/\/bestpracticeguides.scot\/#primaryimage"},"image":{"@id":"https:\/\/bestpracticeguides.scot\/#primaryimage"},"thumbnailUrl":"https:\/\/bestpracticeguides.scot\/wp-content\/uploads\/2025\/01\/deer-bg-e1737066192903.jpg","datePublished":"2025-01-16T20:48:53+00:00","dateModified":"2026-04-04T14:27:00+00:00","breadcrumb":{"@id":"https:\/\/bestpracticeguides.scot\/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https:\/\/bestpracticeguides.scot\/"]}]},{"@type":"ImageObject","inLanguage":"en-GB","@id":"https:\/\/bestpracticeguides.scot\/#primaryimage","url":"https:\/\/bestpracticeguides.scot\/wp-content\/uploads\/2025\/01\/deer-bg-e1737066192903.jpg","contentUrl":"https:\/\/bestpracticeguides.scot\/wp-content\/uploads\/2025\/01\/deer-bg-e1737066192903.jpg","width":1920,"height":1120},{"@type":"BreadcrumbList","@id":"https:\/\/bestpracticeguides.scot\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https:\/\/bestpracticeguides.scot\/#website","url":"https:\/\/bestpracticeguides.scot\/","name":"Wild Deer Best Practice Guidance","description":"Expert guidance for wild deer management in Scotland – your trusted resource for best practices.","alternateName":"WDBPG","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/bestpracticeguides.scot\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-GB"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.googletagmanager.com'/>
+<link rel="alternate" type="application/rss+xml" title="Wild Deer Best Practice Guidance &raquo; Feed" href="https://bestpracticeguides.scot/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="Wild Deer Best Practice Guidance &raquo; Comments Feed" href="https://bestpracticeguides.scot/comments/feed/"/>
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://bestpracticeguides.scot/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbestpracticeguides.scot%2F"/>
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://bestpracticeguides.scot/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbestpracticeguides.scot%2F&#038;format=xml"/>
+		<style>.lazyload,.lazyloading{max-width:100%}</style>
+		<meta content="FARSIGHT Digital Solutions v.1.0.1" name="generator"/><link rel='stylesheet' id='dflip-style-css' href='https://bestpracticeguides.scot/wp-content/plugins/3d-flipbook-dflip-lite/assets/css/dflip.min.css?ver=2.4.27' type='text/css' media='all'/>
+<style id='divi-style-parent-inline-inline-css' type='text/css'>a,abbr,acronym,address,applet,b,big,blockquote,body,center,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,kbd,label,legend,li,object,ol,p,pre,q,s,samp,small,span,strike,strong,sub,sup,tt,u,ul,var{margin:0;padding:0;border:0;outline:0;font-size:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}blockquote{margin:20px 0 30px;border-left:5px solid;padding-left:20px}:focus{outline:0}del{text-decoration:line-through}pre{overflow:auto;padding:10px}figure{margin:0}table{border-collapse:collapse;border-spacing:0}article,aside,footer,header,hgroup,nav,section{display:block}body{font-family:Open\ Sans,Arial,sans-serif;font-size:14px;color:#666;background-color:#fff;line-height:1.7em;font-weight:500;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body.page-template-page-template-blank-php #page-container{padding-top:0!important}body.et_cover_background{background-size:cover!important;background-position:top!important;background-repeat:no-repeat!important;background-attachment:fixed}a{color:#2ea3f2}a,a:hover{text-decoration:none}p{padding-bottom:1em}p:not(.has-background):last-of-type{padding-bottom:0}p.et_normal_padding{padding-bottom:1em}strong{font-weight:700}cite,em,i{font-style:italic}code,pre{font-family:Courier\ New,monospace;margin-bottom:10px}ins{text-decoration:none}sub,sup{height:0;line-height:1;position:relative;vertical-align:baseline}sup{bottom:.8em}sub{top:.3em}dl{margin:0 0 1.5em}dl dt{font-weight:700}dd{margin-left:1.5em}blockquote p{padding-bottom:0}embed,iframe,object,video{max-width:100%}h1,h2,h3,h4,h5,h6{color:#333;padding-bottom:10px;line-height:1em;font-weight:500}h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:inherit}h1{font-size:30px}h2{font-size:26px}h3{font-size:22px}h4{font-size:18px}h5{font-size:16px}h6{font-size:14px}input{-webkit-appearance:none}input[type="checkbox"]{-webkit-appearance:checkbox}input[type="radio"]{-webkit-appearance:radio}input.text,input.title,input[type="email"],input[type="password"],input[type="tel"],input[type="text"],select,textarea{background-color:#fff;border:1px solid #bbb;padding:2px;color:#4e4e4e}input.text:focus,input.title:focus,input[type="text"]:focus,select:focus,textarea:focus{border-color:#2d3940;color:#3e3e3e}input.text,input.title,input[type="text"],select,textarea{margin:0}textarea{padding:4px}button,input,select,textarea{font-family:inherit}img{max-width:100%;height:auto}.clear{clear:both}br.clear{margin:0;padding:0}.pagination{clear:both}#et_search_icon:hover,.et-social-icon a:hover,.et_password_protected_form .et_submit_button,.form-submit .et_pb_buttontton.alt.disabled,.nav-single a,.posted_in a{color:#2ea3f2}.et-search-form,blockquote{border-color:#2ea3f2}#main-content{background-color:#fff}.container{width:80%;max-width:1080px;margin:auto;position:relative}body:not(.et-tb) #main-content .container,body:not(.et-tb-has-header) #main-content .container{padding-top:58px}.et_full_width_page #main-content .container:before{display:none}.main_title{margin-bottom:20px}.et_password_protected_form .et_submit_button:hover,.form-submit .et_pb_button:hover{background:rgba(0,0,0,.05)}.et_button_icon_visible .et_pb_button{padding-right:2em;padding-left:.7em}.et_button_icon_visible .et_pb_button:after{opacity:1;margin-left:0}.et_button_left .et_pb_button:hover:after{left:.15em}.et_button_left .et_pb_button:after{margin-left:0;left:1em}.et_button_icon_visible.et_button_left .et_pb_button,.et_button_left .et_pb_button:hover,.et_button_left .et_pb_module .et_pb_button:hover{padding-left:2em;padding-right:.7em}.et_button_icon_visible.et_button_left .et_pb_button:after,.et_button_left .et_pb_button:hover:after{left:.15em}.et_password_protected_form .et_submit_button:hover,.form-submit .et_pb_button:hover{padding:.3em 1em}.et_button_no_icon .et_pb_button:after{display:none}.et_button_no_icon.et_button_icon_visible.et_button_left .et_pb_button,.et_button_no_icon.et_button_left .et_pb_button:hover,.et_button_no_icon .et_pb_button,.et_button_no_icon .et_pb_button:hover{padding:.3em 1em!important}.et_button_custom_icon .et_pb_button:after{line-height:1.7em}.et_button_custom_icon.et_button_icon_visible .et_pb_button:after,.et_button_custom_icon .et_pb_button:hover:after{margin-left:.3em}#left-area .post_format-post-format-gallery .wp-block-gallery:first-of-type{padding:0;margin-bottom:-16px}.entry-content table:not(.variations){border:1px solid #eee;margin:0 0 15px;text-align:left;width:100%}.entry-content thead th,.entry-content tr th{color:#555;font-weight:700;padding:9px 24px}.entry-content tr td{border-top:1px solid #eee;padding:6px 24px}#left-area ul,.entry-content ul,.et-l--body ul,.et-l--footer ul,.et-l--header ul{list-style-type:disc;padding:0 0 23px 1em;line-height:26px}#left-area ol,.entry-content ol,.et-l--body ol,.et-l--footer ol,.et-l--header ol{list-style-type:decimal;list-style-position:inside;padding:0 0 23px;line-height:26px}#left-area ul li ul,.entry-content ul li ol{padding:2px 0 2px 20px}#left-area ol li ul,.entry-content ol li ol,.et-l--body ol li ol,.et-l--footer ol li ol,.et-l--header ol li ol{padding:2px 0 2px 35px}#left-area ul.wp-block-gallery{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;list-style-type:none;padding:0}#left-area ul.products{padding:0!important;line-height:1.7!important;list-style:none!important}.gallery-item a{display:block}.gallery-caption,.gallery-item a{width:90%}#wpadminbar{z-index:100001}#left-area .post-meta{font-size:14px;padding-bottom:15px}#left-area .post-meta a{text-decoration:none;color:#666}#left-area .et_featured_image{padding-bottom:7px}.single .post{padding-bottom:25px}body.single .et_audio_content{margin-bottom:-6px}.nav-single a{text-decoration:none;color:#2ea3f2;font-size:14px;font-weight:400}.nav-previous{float:left}.nav-next{float:right}.et_password_protected_form p input{background-color:#eee;border:none!important;width:100%!important;border-radius:0!important;font-size:14px;color:#999!important;padding:16px!important;-webkit-box-sizing:border-box;box-sizing:border-box}.et_password_protected_form label{display:none}.et_password_protected_form .et_submit_button{font-family:inherit;display:block;float:right;margin:8px auto 0;cursor:pointer}.post-password-required p.nocomments.container{max-width:100%}.post-password-required p.nocomments.container:before{display:none}.aligncenter,div.post .new-post .aligncenter{display:block;margin-left:auto;margin-right:auto}.wp-caption{border:1px solid #ddd;text-align:center;background-color:#f3f3f3;margin-bottom:10px;max-width:96%;padding:8px}.wp-caption.alignleft{margin:0 30px 20px 0}.wp-caption.alignright{margin:0 0 20px 30px}.wp-caption img{margin:0;padding:0;border:0}.wp-caption p.wp-caption-text{font-size:12px;padding:0 4px 5px;margin:0}.alignright{float:right}.alignleft{float:left}img.alignleft{display:inline;float:left;margin-right:15px}img.alignright{display:inline;float:right;margin-left:15px}.page.et_pb_pagebuilder_layout #main-content{background-color:transparent}body #main-content .et_builder_inner_content>h1,body #main-content .et_builder_inner_content>h2,body #main-content .et_builder_inner_content>h3,body #main-content .et_builder_inner_content>h4,body #main-content .et_builder_inner_content>h5,body #main-content .et_builder_inner_content>h6{line-height:1.4em}body #main-content .et_builder_inner_content>p{line-height:1.7em}.wp-block-pullquote{margin:20px 0 30px}.wp-block-pullquote.has-background blockquote{border-left:none}.wp-block-group.has-background{padding:1.5em 1.5em .5em}@media (min-width:981px){#left-area{width:79.125%;padding-bottom:23px}#main-content .container:before{content:"";position:absolute;top:0;height:100%;width:1px;background-color:#e2e2e2}.et_full_width_page #left-area,.et_no_sidebar #left-area{float:none;width:100%!important}.et_full_width_page #left-area{padding-bottom:0}.et_no_sidebar #main-content .container:before{display:none}}@media (max-width:980px){#page-container{padding-top:80px}.et-tb #page-container,.et-tb-has-header #page-container{padding-top:0!important}#left-area,#sidebar{width:100%!important}#main-content .container:before{display:none!important}.et_full_width_page .et_gallery_item:nth-child(4n+1){clear:none}}@media print{#page-container{padding-top:0!important}}#wp-admin-bar-et-use-visual-builder a:before{font-family:ETmodules!important;content:"\e625";font-size:30px!important;width:28px;margin-top:-3px;color:#974df3!important}#wp-admin-bar-et-use-visual-builder:hover a:before{color:#fff!important}#wp-admin-bar-et-use-visual-builder:hover a,#wp-admin-bar-et-use-visual-builder a:hover{transition:background-color .5s ease;-webkit-transition:background-color .5s ease;-moz-transition:background-color .5s ease;background-color:#7e3bd0!important;color:#fff!important}* html .clearfix,:first-child+html .clearfix{zoom:1}.iphone .et_pb_section_video_bg video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}.et_mobile_device .et_pb_section_parallax .et_pb_parallax_css{background-attachment:scroll}.et-social-facebook a.icon:before{content:"\e093"}.et-social-twitter a.icon:before{content:"\e094"}.et-social-google-plus a.icon:before{content:"\e096"}.et-social-instagram a.icon:before{content:"\e09a"}.et-social-rss a.icon:before{content:"\e09e"}.ai1ec-single-event:after{content:" ";display:table;clear:both}.evcal_event_details .evcal_evdata_cell .eventon_details_shading_bot.eventon_details_shading_bot{z-index:3}.wp-block-divi-layout{margin-bottom:1em}*{-webkit-box-sizing:border-box;box-sizing:border-box}#et-info-email:before,#et-info-phone:before,#et_search_icon:before,.comment-reply-link:after,.et-cart-info span:before,.et-pb-arrow-next:before,.et-pb-arrow-prev:before,.et-social-icon a:before,.et_audio_container .mejs-playpause-button button:before,.et_audio_container .mejs-volume-button button:before,.et_overlay:before,.et_password_protected_form .et_submit_button:after,.et_pb_button:after,.et_pb_contact_reset:after,.et_pb_contact_submit:after,.et_pb_font_icon:before,.et_pb_newsletter_button:after,.et_pb_pricing_table_button:after,.et_pb_promo_button:after,.et_pb_testimonial:before,.et_pb_toggle_title:before,.form-submit .et_pb_button:after,.mobile_menu_bar:before,a.et_pb_more_button:after{font-family:ETmodules!important;speak:none;font-style:normal;font-weight:400;-webkit-font-feature-settings:normal;font-feature-settings:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-shadow:0 0;direction:ltr}.et-pb-icon,.et_pb_custom_button_icon.et_pb_button:after,.et_pb_login .et_pb_custom_button_icon.et_pb_button:after,.et_pb_woo_custom_button_icon .button.et_pb_custom_button_icon.et_pb_button:after,.et_pb_woo_custom_button_icon .button.et_pb_custom_button_icon.et_pb_button:hover:after{content:attr(data-icon)}.et-pb-icon{font-family:ETmodules;speak:none;font-weight:400;-webkit-font-feature-settings:normal;font-feature-settings:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;font-size:96px;font-style:normal;display:inline-block;-webkit-box-sizing:border-box;box-sizing:border-box;direction:ltr}#et-ajax-saving{display:none;-webkit-transition:background .3s , -webkit-box-shadow .3s;transition:background .3s , -webkit-box-shadow .3s;transition:background .3s , box-shadow .3s;transition:background .3s , box-shadow .3s , -webkit-box-shadow .3s;-webkit-box-shadow:rgba(0,139,219,.247059) 0 0 60px;box-shadow:0 0 60px rgba(0,139,219,.247059);position:fixed;top:50%;left:50%;width:50px;height:50px;background:#fff;border-radius:50px;margin:-25px 0 0 -25px;z-index:999999;text-align:center}#et-ajax-saving img{margin:9px}.et-safe-mode-indicator,.et-safe-mode-indicator:focus,.et-safe-mode-indicator:hover{-webkit-box-shadow:0 5px 10px rgba(41,196,169,.15);box-shadow:0 5px 10px rgba(41,196,169,.15);background:#29c4a9;color:#fff;font-size:14px;font-weight:600;padding:12px;line-height:16px;border-radius:3px;position:fixed;bottom:30px;right:30px;z-index:999999;text-decoration:none;font-family:Open\ Sans,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.et_pb_button{font-size:20px;font-weight:500;padding:.3em 1em;line-height:1.7em!important;background-color:transparent;background-size:cover;background-position:50%;background-repeat:no-repeat;border:2px solid;border-radius:3px;-webkit-transition-duration:.2s;transition-duration:.2s;-webkit-transition-property:all!important;transition-property:all!important}.et_pb_button,.et_pb_button_inner{position:relative}.et_pb_button:hover,.et_pb_module .et_pb_button:hover{border:2px solid transparent;padding:.3em 2em .3em .7em}.et_pb_button:hover{background-color:hsla(0,0%,100%,.2)}.et_pb_bg_layout_light.et_pb_button:hover,.et_pb_bg_layout_light .et_pb_button:hover{background-color:rgba(0,0,0,.05)}.et_pb_button:after,.et_pb_button:before{font-size:32px;line-height:1em;content:"\35";opacity:0;position:absolute;margin-left:-1em;-webkit-transition:all .2s;transition:all .2s;text-transform:none;-webkit-font-feature-settings:"kern" off;font-feature-settings:"kern" off;font-variant:none;font-style:normal;font-weight:400;text-shadow:none}.et_pb_button.et_hover_enabled:hover:after,.et_pb_button.et_pb_hovered:hover:after{-webkit-transition:none!important;transition:none!important}.et_pb_button:before{display:none}.et_pb_button:hover:after{opacity:1;margin-left:0}.et_pb_column_1_3 h1,.et_pb_column_1_4 h1,.et_pb_column_1_5 h1,.et_pb_column_1_6 h1,.et_pb_column_2_5 h1{font-size:26px}.et_pb_column_1_3 h2,.et_pb_column_1_4 h2,.et_pb_column_1_5 h2,.et_pb_column_1_6 h2,.et_pb_column_2_5 h2{font-size:23px}.et_pb_column_1_3 h3,.et_pb_column_1_4 h3,.et_pb_column_1_5 h3,.et_pb_column_1_6 h3,.et_pb_column_2_5 h3{font-size:20px}.et_pb_column_1_3 h4,.et_pb_column_1_4 h4,.et_pb_column_1_5 h4,.et_pb_column_1_6 h4,.et_pb_column_2_5 h4{font-size:18px}.et_pb_column_1_3 h5,.et_pb_column_1_4 h5,.et_pb_column_1_5 h5,.et_pb_column_1_6 h5,.et_pb_column_2_5 h5{font-size:16px}.et_pb_column_1_3 h6,.et_pb_column_1_4 h6,.et_pb_column_1_5 h6,.et_pb_column_1_6 h6,.et_pb_column_2_5 h6{font-size:15px}.et_pb_bg_layout_dark,.et_pb_bg_layout_dark h1,.et_pb_bg_layout_dark h2,.et_pb_bg_layout_dark h3,.et_pb_bg_layout_dark h4,.et_pb_bg_layout_dark h5,.et_pb_bg_layout_dark h6{color:#fff!important}.et_pb_module.et_pb_text_align_left{text-align:left}.et_pb_module.et_pb_text_align_center{text-align:center}.et_pb_module.et_pb_text_align_right{text-align:right}.et_pb_module.et_pb_text_align_justified{text-align:justify}.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}.et_pb_bg_layout_light .et_pb_more_button{color:#2ea3f2}.et_builder_inner_content{position:relative;z-index:1}header .et_builder_inner_content{z-index:2}.et_pb_css_mix_blend_mode_passthrough{mix-blend-mode:unset!important}.et_pb_image_container{margin:-20px -20px 29px}.et_pb_module_inner{position:relative}.et_hover_enabled_preview{z-index:2}.et_hover_enabled:hover{position:relative;z-index:2}.et_pb_all_tabs,.et_pb_module,.et_pb_posts_nav a,.et_pb_tab,.et_pb_with_background{position:relative;background-size:cover;background-position:50%;background-repeat:no-repeat}.et_pb_background_mask,.et_pb_background_pattern{bottom:0;left:0;position:absolute;right:0;top:0}.et_pb_background_mask{background-size:calc(100% + 2px) calc(100% + 2px);background-repeat:no-repeat;background-position:50%;overflow:hidden}.et_pb_background_pattern{background-position:0 0;background-repeat:repeat}.et_pb_with_border{position:relative;border:0 solid #333}.post-password-required .et_pb_row{padding:0;width:100%}.post-password-required .et_password_protected_form{min-height:0}body.et_pb_pagebuilder_layout.et_pb_show_title .post-password-required .et_password_protected_form h1,body:not(.et_pb_pagebuilder_layout) .post-password-required .et_password_protected_form h1{display:none}.et_pb_no_bg{padding:0!important}.et_overlay.et_pb_inline_icon:before,.et_pb_inline_icon:before{content:attr(data-icon)}.et_pb_more_button{color:inherit;text-shadow:none;text-decoration:none;display:inline-block;margin-top:20px}.et_parallax_bg_wrap{overflow:hidden;position:absolute;top:0;right:0;bottom:0;left:0}.et_parallax_bg{background-repeat:no-repeat;background-position:top;background-size:cover;position:absolute;bottom:0;left:0;width:100%;height:100%;display:block}.et_parallax_bg.et_parallax_bg__hover,.et_parallax_bg.et_parallax_bg_phone,.et_parallax_bg.et_parallax_bg_tablet,.et_parallax_gradient.et_parallax_gradient__hover,.et_parallax_gradient.et_parallax_gradient_phone,.et_parallax_gradient.et_parallax_gradient_tablet,.et_pb_section_parallax_hover:hover .et_parallax_bg:not(.et_parallax_bg__hover),.et_pb_section_parallax_hover:hover .et_parallax_gradient:not(.et_parallax_gradient__hover){display:none}.et_pb_section_parallax_hover:hover .et_parallax_bg.et_parallax_bg__hover,.et_pb_section_parallax_hover:hover .et_parallax_gradient.et_parallax_gradient__hover{display:block}.et_parallax_gradient{bottom:0;display:block;left:0;position:absolute;right:0;top:0}.et_pb_module.et_pb_section_parallax,.et_pb_posts_nav a.et_pb_section_parallax,.et_pb_tab.et_pb_section_parallax{position:relative}.et_pb_section_parallax .et_pb_parallax_css,.et_pb_slides .et_parallax_bg.et_pb_parallax_css{background-attachment:fixed}body.et-bfb .et_pb_section_parallax .et_pb_parallax_css,body.et-bfb .et_pb_slides .et_parallax_bg.et_pb_parallax_css{background-attachment:scroll;bottom:auto}.et_pb_section_parallax.et_pb_column .et_pb_module,.et_pb_section_parallax.et_pb_row .et_pb_column,.et_pb_section_parallax.et_pb_row .et_pb_module{z-index:9;position:relative}.et_pb_more_button:hover:after{opacity:1;margin-left:0}.et_pb_preload .et_pb_section_video_bg,.et_pb_preload>div{visibility:hidden}.et_pb_preload,.et_pb_section.et_pb_section_video.et_pb_preload{position:relative;background:#464646!important}.et_pb_preload:before{content:"";position:absolute;top:50%;left:50%;background:url(https://bestpracticeguides.scot/wp-content/themes/Divi/includes/builder/styles/images/preloader.gif) no-repeat;border-radius:32px;width:32px;height:32px;margin:-16px 0 0 -16px}.box-shadow-overlay{position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;pointer-events:none}.et_pb_section>.box-shadow-overlay~.et_pb_row{z-index:11}body.safari .section_has_divider{will-change:transform}.et_pb_row>.box-shadow-overlay{z-index:8}.has-box-shadow-overlay{position:relative}.et_clickable{cursor:pointer}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important}.et_multi_view_hidden,.et_multi_view_hidden_image{display:none!important}@keyframes multi-view-image-fade{0%{opacity:0}10%{opacity:.1}20%{opacity:.2}30%{opacity:.3}40%{opacity:.4}50%{opacity:.5}60%{opacity:.6}70%{opacity:.7}80%{opacity:.8}90%{opacity:.9}to{opacity:1}}.et_multi_view_image__loading{visibility:hidden}.et_multi_view_image__loaded{-webkit-animation:multi-view-image-fade .5s;animation:multi-view-image-fade .5s}#et-pb-motion-effects-offset-tracker{visibility:hidden!important;opacity:0;position:absolute;top:0;left:0}.et-pb-before-scroll-animation{opacity:0}header.et-l.et-l--header:after{clear:both;display:block;content:""}.et_pb_module{-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-duration:.2s;animation-duration:.2s}@-webkit-keyframes fadeBottom{0%{opacity:0;-webkit-transform:translateY(10%);transform:translateY(10%)}to{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes fadeBottom{0%{opacity:0;-webkit-transform:translateY(10%);transform:translateY(10%)}to{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}}@-webkit-keyframes fadeLeft{0%{opacity:0;-webkit-transform:translateX(-10%);transform:translateX(-10%)}to{opacity:1;-webkit-transform:translateX(0);transform:translateX(0)}}@keyframes fadeLeft{0%{opacity:0;-webkit-transform:translateX(-10%);transform:translateX(-10%)}to{opacity:1;-webkit-transform:translateX(0);transform:translateX(0)}}@-webkit-keyframes fadeRight{0%{opacity:0;-webkit-transform:translateX(10%);transform:translateX(10%)}to{opacity:1;-webkit-transform:translateX(0);transform:translateX(0)}}@keyframes fadeRight{0%{opacity:0;-webkit-transform:translateX(10%);transform:translateX(10%)}to{opacity:1;-webkit-transform:translateX(0);transform:translateX(0)}}@-webkit-keyframes fadeTop{0%{opacity:0;-webkit-transform:translateY(-10%);transform:translateY(-10%)}to{opacity:1;-webkit-transform:translateX(0);transform:translateX(0)}}@keyframes fadeTop{0%{opacity:0;-webkit-transform:translateY(-10%);transform:translateY(-10%)}to{opacity:1;-webkit-transform:translateX(0);transform:translateX(0)}}@-webkit-keyframes fadeIn{0%{opacity:0}to{opacity:1}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.et-waypoint:not(.et_pb_counters){opacity:0}@media (min-width:981px){.et_pb_section.et_section_specialty div.et_pb_row .et_pb_column .et_pb_column .et_pb_module.et-last-child,.et_pb_section.et_section_specialty div.et_pb_row .et_pb_column .et_pb_column .et_pb_module:last-child,.et_pb_section.et_section_specialty div.et_pb_row .et_pb_column .et_pb_row_inner .et_pb_column .et_pb_module.et-last-child,.et_pb_section.et_section_specialty div.et_pb_row .et_pb_column .et_pb_row_inner .et_pb_column .et_pb_module:last-child,.et_pb_section div.et_pb_row .et_pb_column .et_pb_module.et-last-child,.et_pb_section div.et_pb_row .et_pb_column .et_pb_module:last-child{margin-bottom:0}}@media (max-width:980px){.et_overlay.et_pb_inline_icon_tablet:before,.et_pb_inline_icon_tablet:before{content:attr(data-icon-tablet)}.et_parallax_bg.et_parallax_bg_tablet_exist,.et_parallax_gradient.et_parallax_gradient_tablet_exist{display:none}.et_parallax_bg.et_parallax_bg_tablet,.et_parallax_gradient.et_parallax_gradient_tablet{display:block}.et_pb_column .et_pb_module{margin-bottom:30px}.et_pb_row .et_pb_column .et_pb_module.et-last-child,.et_pb_row .et_pb_column .et_pb_module:last-child,.et_section_specialty .et_pb_row .et_pb_column .et_pb_module.et-last-child,.et_section_specialty .et_pb_row .et_pb_column .et_pb_module:last-child{margin-bottom:0}.et_pb_more_button{display:inline-block!important}.et_pb_bg_layout_light_tablet.et_pb_button,.et_pb_bg_layout_light_tablet.et_pb_module.et_pb_button,.et_pb_bg_layout_light_tablet .et_pb_more_button{color:#2ea3f2}.et_pb_bg_layout_light_tablet .et_pb_forgot_password a{color:#666}.et_pb_bg_layout_light_tablet h1,.et_pb_bg_layout_light_tablet h2,.et_pb_bg_layout_light_tablet h3,.et_pb_bg_layout_light_tablet h4,.et_pb_bg_layout_light_tablet h5,.et_pb_bg_layout_light_tablet h6{color:#333!important}.et_pb_module .et_pb_bg_layout_light_tablet.et_pb_button{color:#2ea3f2!important}.et_pb_bg_layout_light_tablet{color:#666!important}.et_pb_bg_layout_dark_tablet,.et_pb_bg_layout_dark_tablet h1,.et_pb_bg_layout_dark_tablet h2,.et_pb_bg_layout_dark_tablet h3,.et_pb_bg_layout_dark_tablet h4,.et_pb_bg_layout_dark_tablet h5,.et_pb_bg_layout_dark_tablet h6{color:#fff!important}.et_pb_bg_layout_dark_tablet.et_pb_button,.et_pb_bg_layout_dark_tablet.et_pb_module.et_pb_button,.et_pb_bg_layout_dark_tablet .et_pb_more_button{color:inherit}.et_pb_bg_layout_dark_tablet .et_pb_forgot_password a{color:#fff}.et_pb_module.et_pb_text_align_left-tablet{text-align:left}.et_pb_module.et_pb_text_align_center-tablet{text-align:center}.et_pb_module.et_pb_text_align_right-tablet{text-align:right}.et_pb_module.et_pb_text_align_justified-tablet{text-align:justify}}@media (max-width:767px){.et_pb_more_button{display:inline-block!important}.et_overlay.et_pb_inline_icon_phone:before,.et_pb_inline_icon_phone:before{content:attr(data-icon-phone)}.et_parallax_bg.et_parallax_bg_phone_exist,.et_parallax_gradient.et_parallax_gradient_phone_exist{display:none}.et_parallax_bg.et_parallax_bg_phone,.et_parallax_gradient.et_parallax_gradient_phone{display:block}.et-hide-mobile{display:none!important}.et_pb_bg_layout_light_phone.et_pb_button,.et_pb_bg_layout_light_phone.et_pb_module.et_pb_button,.et_pb_bg_layout_light_phone .et_pb_more_button{color:#2ea3f2}.et_pb_bg_layout_light_phone .et_pb_forgot_password a{color:#666}.et_pb_bg_layout_light_phone h1,.et_pb_bg_layout_light_phone h2,.et_pb_bg_layout_light_phone h3,.et_pb_bg_layout_light_phone h4,.et_pb_bg_layout_light_phone h5,.et_pb_bg_layout_light_phone h6{color:#333!important}.et_pb_module .et_pb_bg_layout_light_phone.et_pb_button{color:#2ea3f2!important}.et_pb_bg_layout_light_phone{color:#666!important}.et_pb_bg_layout_dark_phone,.et_pb_bg_layout_dark_phone h1,.et_pb_bg_layout_dark_phone h2,.et_pb_bg_layout_dark_phone h3,.et_pb_bg_layout_dark_phone h4,.et_pb_bg_layout_dark_phone h5,.et_pb_bg_layout_dark_phone h6{color:#fff!important}.et_pb_bg_layout_dark_phone.et_pb_button,.et_pb_bg_layout_dark_phone.et_pb_module.et_pb_button,.et_pb_bg_layout_dark_phone .et_pb_more_button{color:inherit}.et_pb_module .et_pb_bg_layout_dark_phone.et_pb_button{color:#fff!important}.et_pb_bg_layout_dark_phone .et_pb_forgot_password a{color:#fff}.et_pb_module.et_pb_text_align_left-phone{text-align:left}.et_pb_module.et_pb_text_align_center-phone{text-align:center}.et_pb_module.et_pb_text_align_right-phone{text-align:right}.et_pb_module.et_pb_text_align_justified-phone{text-align:justify}}@media (max-width:479px){a.et_pb_more_button{display:block}}@media (min-width:768px) and (max-width:980px){[data-et-multi-view-load-tablet-hidden=true]:not(.et_multi_view_swapped){display:none!important}}@media (max-width:767px){[data-et-multi-view-load-phone-hidden=true]:not(.et_multi_view_swapped){display:none!important}}.et_pb_menu.et_pb_menu--style-inline_centered_logo .et_pb_menu__menu nav ul{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}@-webkit-keyframes multi-view-image-fade{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}50%{-webkit-transform:scale(1.01);transform:scale(1.01);opacity:1}to{-webkit-transform:scale(1);transform:scale(1);opacity:1}}</style>
+<link rel='stylesheet' id='divi-dynamic-late-css' href='https://bestpracticeguides.scot/wp-content/et-cache/100/et-divi-dynamic-tb-162-tb-222-100-late.css?ver=1776200287' type='text/css' media='all'/>
+<link rel='stylesheet' id='divi-dynamic-css' href='https://bestpracticeguides.scot/wp-content/et-cache/100/et-divi-dynamic-tb-162-tb-222-100.css?ver=1776200287' type='text/css' media='all'/>
+<link rel='stylesheet' id='divi-contact-form-helper-css' href='https://bestpracticeguides.scot/wp-content/plugins/divi-contact-form-helper/d4/assets/public/app.min.css?ver=2.0.9' type='text/css' media='all'/>
+<link rel='stylesheet' id='divi-customblog-module-styles-css' href='https://bestpracticeguides.scot/wp-content/plugins/divi-customblog-module/styles/style.min.css?ver=2.0.3' type='text/css' media='all'/>
+<link rel='stylesheet' id='dp-divi-filtergrid-bundle-style-css' href='https://bestpracticeguides.scot/wp-content/plugins/dp-divi-filtergrid/styles/bundle.css?ver=4.1.6' type='text/css' media='all'/>
+<link rel='stylesheet' id='child-style-css' href='https://bestpracticeguides.scot/wp-content/themes/Divi%20Farsight-Child/style.css?ver=1.0.1' type='text/css' media='all'/>
+<script type="text/javascript" id="cookie-law-info-js-extra">var _ckyConfig={"_ipData":[],"_assetsURL":"https://bestpracticeguides.scot/wp-content/plugins/cookie-law-info/lite/frontend/images/","_publicURL":"https://bestpracticeguides.scot","_expiry":"365","_categories":[{"name":"Necessary","slug":"necessary","isNecessary":true,"ccpaDoNotSell":true,"cookies":[],"active":true,"defaultConsent":{"gdpr":true,"ccpa":true}},{"name":"Functional","slug":"functional","isNecessary":false,"ccpaDoNotSell":true,"cookies":[],"active":true,"defaultConsent":{"gdpr":false,"ccpa":false}},{"name":"Analytics","slug":"analytics","isNecessary":false,"ccpaDoNotSell":true,"cookies":[],"active":true,"defaultConsent":{"gdpr":false,"ccpa":false}},{"name":"Performance","slug":"performance","isNecessary":false,"ccpaDoNotSell":true,"cookies":[],"active":true,"defaultConsent":{"gdpr":false,"ccpa":false}},{"name":"Advertisement","slug":"advertisement","isNecessary":false,"ccpaDoNotSell":true,"cookies":[],"active":true,"defaultConsent":{"gdpr":false,"ccpa":false}}],"_activeLaw":"gdpr","_rootDomain":"","_block":"1","_showBanner":"1","_bannerConfig":{"settings":{"type":"box","preferenceCenterType":"popup","position":"bottom-left","applicableLaw":"gdpr"},"behaviours":{"reloadBannerOnAccept":false,"loadAnalyticsByDefault":false,"animations":{"onLoad":"animate","onHide":"sticky"}},"config":{"revisitConsent":{"status":true,"tag":"revisit-consent","position":"bottom-left","meta":{"url":"#"},"styles":{"background-color":"#005671"},"elements":{"title":{"type":"text","tag":"revisit-consent-title","status":true,"styles":{"color":"#0056a7"}}}},"preferenceCenter":{"toggle":{"status":true,"tag":"detail-category-toggle","type":"toggle","states":{"active":{"styles":{"background-color":"#1863DC"}},"inactive":{"styles":{"background-color":"#D0D5D2"}}}}},"categoryPreview":{"status":false,"toggle":{"status":true,"tag":"detail-category-preview-toggle","type":"toggle","states":{"active":{"styles":{"background-color":"#1863DC"}},"inactive":{"styles":{"background-color":"#D0D5D2"}}}}},"videoPlaceholder":{"status":true,"styles":{"background-color":"#000000","border-color":"#000000","color":"#ffffff"}},"readMore":{"status":false,"tag":"readmore-button","type":"link","meta":{"noFollow":true,"newTab":true},"styles":{"color":"#005671","background-color":"transparent","border-color":"transparent"}},"showMore":{"status":true,"tag":"show-desc-button","type":"button","styles":{"color":"#1863DC"}},"showLess":{"status":true,"tag":"hide-desc-button","type":"button","styles":{"color":"#1863DC"}},"alwaysActive":{"status":true,"tag":"always-active","styles":{"color":"#008000"}},"manualLinks":{"status":true,"tag":"manual-links","type":"link","styles":{"color":"#1863DC"}},"auditTable":{"status":true},"optOption":{"status":true,"toggle":{"status":true,"tag":"optout-option-toggle","type":"toggle","states":{"active":{"styles":{"background-color":"#1863dc"}},"inactive":{"styles":{"background-color":"#FFFFFF"}}}}}}},"_version":"3.4.0","_logConsent":"1","_tags":[{"tag":"accept-button","styles":{"color":"#FFFFFF","background-color":"#005671","border-color":"#005671"}},{"tag":"reject-button","styles":{"color":"#005671","background-color":"transparent","border-color":"#005671"}},{"tag":"settings-button","styles":{"color":"#005671","background-color":"transparent","border-color":"#005671"}},{"tag":"readmore-button","styles":{"color":"#005671","background-color":"transparent","border-color":"transparent"}},{"tag":"donotsell-button","styles":{"color":"#1863DC","background-color":"transparent","border-color":"transparent"}},{"tag":"show-desc-button","styles":{"color":"#1863DC"}},{"tag":"hide-desc-button","styles":{"color":"#1863DC"}},{"tag":"cky-always-active","styles":[]},{"tag":"cky-link","styles":[]},{"tag":"accept-button","styles":{"color":"#FFFFFF","background-color":"#005671","border-color":"#005671"}},{"tag":"revisit-consent","styles":{"background-color":"#005671"}}],"_shortCodes":[{"key":"cky_readmore","content":"\u003Ca href=\"#\" class=\"cky-policy\" aria-label=\"Cookie Policy\" target=\"_blank\" rel=\"noopener\" data-cky-tag=\"readmore-button\"\u003ECookie Policy\u003C/a\u003E","tag":"readmore-button","status":false,"attributes":{"rel":"nofollow","target":"_blank"}},{"key":"cky_show_desc","content":"\u003Cbutton class=\"cky-show-desc-btn\" data-cky-tag=\"show-desc-button\" aria-label=\"Show more\"\u003EShow more\u003C/button\u003E","tag":"show-desc-button","status":true,"attributes":[]},{"key":"cky_hide_desc","content":"\u003Cbutton class=\"cky-show-desc-btn\" data-cky-tag=\"hide-desc-button\" aria-label=\"Show less\"\u003EShow less\u003C/button\u003E","tag":"hide-desc-button","status":true,"attributes":[]},{"key":"cky_optout_show_desc","content":"[cky_optout_show_desc]","tag":"optout-show-desc-button","status":true,"attributes":[]},{"key":"cky_optout_hide_desc","content":"[cky_optout_hide_desc]","tag":"optout-hide-desc-button","status":true,"attributes":[]},{"key":"cky_category_toggle_label","content":"[cky_{{status}}_category_label] [cky_preference_{{category_slug}}_title]","tag":"","status":true,"attributes":[]},{"key":"cky_enable_category_label","content":"Enable","tag":"","status":true,"attributes":[]},{"key":"cky_disable_category_label","content":"Disable","tag":"","status":true,"attributes":[]},{"key":"cky_video_placeholder","content":"\u003Cdiv class=\"video-placeholder-normal\" data-cky-tag=\"video-placeholder\" id=\"[UNIQUEID]\"\u003E\u003Cp class=\"video-placeholder-text-normal\" data-cky-tag=\"placeholder-title\"\u003EPlease accept cookies to access this content\u003C/p\u003E\u003C/div\u003E","tag":"","status":true,"attributes":[]},{"key":"cky_enable_optout_label","content":"Enable","tag":"","status":true,"attributes":[]},{"key":"cky_disable_optout_label","content":"Disable","tag":"","status":true,"attributes":[]},{"key":"cky_optout_toggle_label","content":"[cky_{{status}}_optout_label] [cky_optout_option_title]","tag":"","status":true,"attributes":[]},{"key":"cky_optout_option_title","content":"Do Not Sell or Share My Personal Information","tag":"","status":true,"attributes":[]},{"key":"cky_optout_close_label","content":"Close","tag":"","status":true,"attributes":[]},{"key":"cky_preference_close_label","content":"Close","tag":"","status":true,"attributes":[]}],"_rtl":"","_language":"en","_providersToBlock":[]};var _ckyStyles={"css":".cky-overlay{background: #000000; opacity: 0.4; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999999;}.cky-hide{display: none;}.cky-btn-revisit-wrapper{display: flex; align-items: center; justify-content: center; background: #0056a7; width: 45px; height: 45px; border-radius: 50%; position: fixed; z-index: 999999; cursor: pointer;}.cky-revisit-bottom-left{bottom: 15px; left: 15px;}.cky-revisit-bottom-right{bottom: 15px; right: 15px;}.cky-btn-revisit-wrapper .cky-btn-revisit{display: flex; align-items: center; justify-content: center; background: none; border: none; cursor: pointer; position: relative; margin: 0; padding: 0;}.cky-btn-revisit-wrapper .cky-btn-revisit img{max-width: fit-content; margin: 0; height: 30px; width: 30px;}.cky-revisit-bottom-left:hover::before{content: attr(data-tooltip); position: absolute; background: #4e4b66; color: #ffffff; left: calc(100% + 7px); font-size: 12px; line-height: 16px; width: max-content; padding: 4px 8px; border-radius: 4px;}.cky-revisit-bottom-left:hover::after{position: absolute; content: \"\"; border: 5px solid transparent; left: calc(100% + 2px); border-left-width: 0; border-right-color: #4e4b66;}.cky-revisit-bottom-right:hover::before{content: attr(data-tooltip); position: absolute; background: #4e4b66; color: #ffffff; right: calc(100% + 7px); font-size: 12px; line-height: 16px; width: max-content; padding: 4px 8px; border-radius: 4px;}.cky-revisit-bottom-right:hover::after{position: absolute; content: \"\"; border: 5px solid transparent; right: calc(100% + 2px); border-right-width: 0; border-left-color: #4e4b66;}.cky-revisit-hide{display: none;}.cky-consent-container{position: fixed; width: 440px; box-sizing: border-box; z-index: 9999999; border-radius: 6px;}.cky-consent-container .cky-consent-bar{background: #ffffff; border: 1px solid; padding: 20px 26px; box-shadow: 0 -1px 10px 0 #acabab4d; border-radius: 6px;}.cky-box-bottom-left{bottom: 40px; left: 40px;}.cky-box-bottom-right{bottom: 40px; right: 40px;}.cky-box-top-left{top: 40px; left: 40px;}.cky-box-top-right{top: 40px; right: 40px;}.cky-custom-brand-logo-wrapper .cky-custom-brand-logo{width: 100px; height: auto; margin: 0 0 12px 0;}.cky-notice .cky-title{color: #212121; font-weight: 700; font-size: 18px; line-height: 24px; margin: 0 0 12px 0;}.cky-notice-des *,.cky-preference-content-wrapper *,.cky-accordion-header-des *,.cky-gpc-wrapper .cky-gpc-desc *{font-size: 14px;}.cky-notice-des{color: #212121; font-size: 14px; line-height: 24px; font-weight: 400;}.cky-notice-des img{height: 25px; width: 25px;}.cky-consent-bar .cky-notice-des p,.cky-gpc-wrapper .cky-gpc-desc p,.cky-preference-body-wrapper .cky-preference-content-wrapper p,.cky-accordion-header-wrapper .cky-accordion-header-des p,.cky-cookie-des-table li div:last-child p{color: inherit; margin-top: 0; overflow-wrap: break-word;}.cky-notice-des P:last-child,.cky-preference-content-wrapper p:last-child,.cky-cookie-des-table li div:last-child p:last-child,.cky-gpc-wrapper .cky-gpc-desc p:last-child{margin-bottom: 0;}.cky-notice-des a.cky-policy,.cky-notice-des button.cky-policy{font-size: 14px; color: #1863dc; white-space: nowrap; cursor: pointer; background: transparent; border: 1px solid; text-decoration: underline;}.cky-notice-des button.cky-policy{padding: 0;}.cky-notice-des a.cky-policy:focus-visible,.cky-notice-des button.cky-policy:focus-visible,.cky-preference-content-wrapper .cky-show-desc-btn:focus-visible,.cky-accordion-header .cky-accordion-btn:focus-visible,.cky-preference-header .cky-btn-close:focus-visible,.cky-switch input[type=\"checkbox\"]:focus-visible,.cky-footer-wrapper a:focus-visible,.cky-btn:focus-visible{outline: 2px solid #1863dc; outline-offset: 2px;}.cky-btn:focus:not(:focus-visible),.cky-accordion-header .cky-accordion-btn:focus:not(:focus-visible),.cky-preference-content-wrapper .cky-show-desc-btn:focus:not(:focus-visible),.cky-btn-revisit-wrapper .cky-btn-revisit:focus:not(:focus-visible),.cky-preference-header .cky-btn-close:focus:not(:focus-visible),.cky-consent-bar .cky-banner-btn-close:focus:not(:focus-visible){outline: 0;}button.cky-show-desc-btn:not(:hover):not(:active){color: #1863dc; background: transparent;}button.cky-accordion-btn:not(:hover):not(:active),button.cky-banner-btn-close:not(:hover):not(:active),button.cky-btn-revisit:not(:hover):not(:active),button.cky-btn-close:not(:hover):not(:active){background: transparent;}.cky-consent-bar button:hover,.cky-modal.cky-modal-open button:hover,.cky-consent-bar button:focus,.cky-modal.cky-modal-open button:focus{text-decoration: none;}.cky-notice-btn-wrapper{display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; margin-top: 16px;}.cky-notice-btn-wrapper .cky-btn{text-shadow: none; box-shadow: none;}.cky-btn{flex: auto; max-width: 100%; font-size: 14px; font-family: inherit; line-height: 24px; padding: 8px; font-weight: 500; margin: 0 8px 0 0; border-radius: 2px; cursor: pointer; text-align: center; text-transform: none; min-height: 0;}.cky-btn:hover{opacity: 0.8;}.cky-btn-customize{color: #1863dc; background: transparent; border: 2px solid #1863dc;}.cky-btn-reject{color: #1863dc; background: transparent; border: 2px solid #1863dc;}.cky-btn-accept{background: #1863dc; color: #ffffff; border: 2px solid #1863dc;}.cky-btn:last-child{margin-right: 0;}@media (max-width: 576px){.cky-box-bottom-left{bottom: 0; left: 0;}.cky-box-bottom-right{bottom: 0; right: 0;}.cky-box-top-left{top: 0; left: 0;}.cky-box-top-right{top: 0; right: 0;}}@media (max-height: 480px){.cky-consent-container{max-height: 100vh;overflow-y: scroll}.cky-notice-des{max-height: unset !important;overflow-y: unset !important}.cky-preference-center{height: 100vh;overflow: auto !important}.cky-preference-center .cky-preference-body-wrapper{overflow: unset}}@media (max-width: 440px){.cky-box-bottom-left, .cky-box-bottom-right, .cky-box-top-left, .cky-box-top-right{width: 100%; max-width: 100%;}.cky-consent-container .cky-consent-bar{padding: 20px 0;}.cky-custom-brand-logo-wrapper, .cky-notice .cky-title, .cky-notice-des, .cky-notice-btn-wrapper{padding: 0 24px;}.cky-notice-des{max-height: 40vh; overflow-y: scroll;}.cky-notice-btn-wrapper{flex-direction: column; margin-top: 0;}.cky-btn{width: 100%; margin: 10px 0 0 0;}.cky-notice-btn-wrapper .cky-btn-customize{order: 2;}.cky-notice-btn-wrapper .cky-btn-reject{order: 3;}.cky-notice-btn-wrapper .cky-btn-accept{order: 1; margin-top: 16px;}}@media (max-width: 352px){.cky-notice .cky-title{font-size: 16px;}.cky-notice-des *{font-size: 12px;}.cky-notice-des, .cky-btn{font-size: 12px;}}.cky-modal.cky-modal-open{display: flex; visibility: visible; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); top: 50%; left: 50%; transition: all 1s ease;}.cky-modal{box-shadow: 0 32px 68px rgba(0, 0, 0, 0.3); margin: 0 auto; position: fixed; max-width: 100%; background: #ffffff; top: 50%; box-sizing: border-box; border-radius: 6px; z-index: 999999999; color: #212121; -webkit-transform: translate(-50%, 100%); -moz-transform: translate(-50%, 100%); -ms-transform: translate(-50%, 100%); -o-transform: translate(-50%, 100%); transform: translate(-50%, 100%); visibility: hidden; transition: all 0s ease;}.cky-preference-center{max-height: 79vh; overflow: hidden; width: 845px; overflow: hidden; flex: 1 1 0; display: flex; flex-direction: column; border-radius: 6px;}.cky-preference-header{display: flex; align-items: center; justify-content: space-between; padding: 22px 24px; border-bottom: 1px solid;}.cky-preference-header .cky-preference-title{font-size: 18px; font-weight: 700; line-height: 24px;}.cky-preference-header .cky-btn-close{margin: 0; cursor: pointer; vertical-align: middle; padding: 0; background: none; border: none; width: 24px; height: 24px; min-height: 0; line-height: 0; text-shadow: none; box-shadow: none;}.cky-preference-header .cky-btn-close img{margin: 0; height: 10px; width: 10px;}.cky-preference-body-wrapper{padding: 0 24px; flex: 1; overflow: auto; box-sizing: border-box;}.cky-preference-content-wrapper,.cky-gpc-wrapper .cky-gpc-desc{font-size: 14px; line-height: 24px; font-weight: 400; padding: 12px 0;}.cky-preference-content-wrapper{border-bottom: 1px solid;}.cky-preference-content-wrapper img{height: 25px; width: 25px;}.cky-preference-content-wrapper .cky-show-desc-btn{font-size: 14px; font-family: inherit; color: #1863dc; text-decoration: none; line-height: 24px; padding: 0; margin: 0; white-space: nowrap; cursor: pointer; background: transparent; border-color: transparent; text-transform: none; min-height: 0; text-shadow: none; box-shadow: none;}.cky-accordion-wrapper{margin-bottom: 10px;}.cky-accordion{border-bottom: 1px solid;}.cky-accordion:last-child{border-bottom: none;}.cky-accordion .cky-accordion-item{display: flex; margin-top: 10px;}.cky-accordion .cky-accordion-body{display: none;}.cky-accordion.cky-accordion-active .cky-accordion-body{display: block; padding: 0 22px; margin-bottom: 16px;}.cky-accordion-header-wrapper{cursor: pointer; width: 100%;}.cky-accordion-item .cky-accordion-header{display: flex; justify-content: space-between; align-items: center;}.cky-accordion-header .cky-accordion-btn{font-size: 16px; font-family: inherit; color: #212121; line-height: 24px; background: none; border: none; font-weight: 700; padding: 0; margin: 0; cursor: pointer; text-transform: none; min-height: 0; text-shadow: none; box-shadow: none;}.cky-accordion-header .cky-always-active{color: #008000; font-weight: 600; line-height: 24px; font-size: 14px;}.cky-accordion-header-des{font-size: 14px; line-height: 24px; margin: 10px 0 16px 0;}.cky-accordion-chevron{margin-right: 22px; position: relative; cursor: pointer;}.cky-accordion-chevron-hide{display: none;}.cky-accordion .cky-accordion-chevron i::before{content: \"\"; position: absolute; border-right: 1.4px solid; border-bottom: 1.4px solid; border-color: inherit; height: 6px; width: 6px; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); transition: all 0.2s ease-in-out; top: 8px;}.cky-accordion.cky-accordion-active .cky-accordion-chevron i::before{-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}.cky-audit-table{background: #f4f4f4; border-radius: 6px;}.cky-audit-table .cky-empty-cookies-text{color: inherit; font-size: 12px; line-height: 24px; margin: 0; padding: 10px;}.cky-audit-table .cky-cookie-des-table{font-size: 12px; line-height: 24px; font-weight: normal; padding: 15px 10px; border-bottom: 1px solid; border-bottom-color: inherit; margin: 0;}.cky-audit-table .cky-cookie-des-table:last-child{border-bottom: none;}.cky-audit-table .cky-cookie-des-table li{list-style-type: none; display: flex; padding: 3px 0;}.cky-audit-table .cky-cookie-des-table li:first-child{padding-top: 0;}.cky-cookie-des-table li div:first-child{width: 100px; font-weight: 600; word-break: break-word; word-wrap: break-word;}.cky-cookie-des-table li div:last-child{flex: 1; word-break: break-word; word-wrap: break-word; margin-left: 8px;}.cky-footer-shadow{display: block; width: 100%; height: 40px; background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%); position: absolute; bottom: calc(100% - 1px);}.cky-footer-wrapper{position: relative;}.cky-prefrence-btn-wrapper{display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 22px 24px; border-top: 1px solid;}.cky-prefrence-btn-wrapper .cky-btn{flex: auto; max-width: 100%; text-shadow: none; box-shadow: none;}.cky-btn-preferences{color: #1863dc; background: transparent; border: 2px solid #1863dc;}.cky-preference-header,.cky-preference-body-wrapper,.cky-preference-content-wrapper,.cky-accordion-wrapper,.cky-accordion,.cky-accordion-wrapper,.cky-footer-wrapper,.cky-prefrence-btn-wrapper{border-color: inherit;}@media (max-width: 845px){.cky-modal{max-width: calc(100% - 16px);}}@media (max-width: 576px){.cky-modal{max-width: 100%;}.cky-preference-center{max-height: 100vh;}.cky-prefrence-btn-wrapper{flex-direction: column;}.cky-accordion.cky-accordion-active .cky-accordion-body{padding-right: 0;}.cky-prefrence-btn-wrapper .cky-btn{width: 100%; margin: 10px 0 0 0;}.cky-prefrence-btn-wrapper .cky-btn-reject{order: 3;}.cky-prefrence-btn-wrapper .cky-btn-accept{order: 1; margin-top: 0;}.cky-prefrence-btn-wrapper .cky-btn-preferences{order: 2;}}@media (max-width: 425px){.cky-accordion-chevron{margin-right: 15px;}.cky-notice-btn-wrapper{margin-top: 0;}.cky-accordion.cky-accordion-active .cky-accordion-body{padding: 0 15px;}}@media (max-width: 352px){.cky-preference-header .cky-preference-title{font-size: 16px;}.cky-preference-header{padding: 16px 24px;}.cky-preference-content-wrapper *, .cky-accordion-header-des *{font-size: 12px;}.cky-preference-content-wrapper, .cky-preference-content-wrapper .cky-show-more, .cky-accordion-header .cky-always-active, .cky-accordion-header-des, .cky-preference-content-wrapper .cky-show-desc-btn, .cky-notice-des a.cky-policy{font-size: 12px;}.cky-accordion-header .cky-accordion-btn{font-size: 14px;}}.cky-switch{display: flex;}.cky-switch input[type=\"checkbox\"]{position: relative; width: 44px; height: 24px; margin: 0; background: #d0d5d2; -webkit-appearance: none; border-radius: 50px; cursor: pointer; outline: 0; border: none; top: 0;}.cky-switch input[type=\"checkbox\"]:checked{background: #1863dc;}.cky-switch input[type=\"checkbox\"]:before{position: absolute; content: \"\"; height: 20px; width: 20px; left: 2px; bottom: 2px; border-radius: 50%; background-color: white; -webkit-transition: 0.4s; transition: 0.4s; margin: 0;}.cky-switch input[type=\"checkbox\"]:after{display: none;}.cky-switch input[type=\"checkbox\"]:checked:before{-webkit-transform: translateX(20px); -ms-transform: translateX(20px); transform: translateX(20px);}@media (max-width: 425px){.cky-switch input[type=\"checkbox\"]{width: 38px; height: 21px;}.cky-switch input[type=\"checkbox\"]:before{height: 17px; width: 17px;}.cky-switch input[type=\"checkbox\"]:checked:before{-webkit-transform: translateX(17px); -ms-transform: translateX(17px); transform: translateX(17px);}}.cky-consent-bar .cky-banner-btn-close{position: absolute; right: 9px; top: 5px; background: none; border: none; cursor: pointer; padding: 0; margin: 0; min-height: 0; line-height: 0; height: 24px; width: 24px; text-shadow: none; box-shadow: none;}.cky-consent-bar .cky-banner-btn-close img{height: 9px; width: 9px; margin: 0;}.cky-notice-group{font-size: 14px; line-height: 24px; font-weight: 400; color: #212121;}.cky-notice-btn-wrapper .cky-btn-do-not-sell{font-size: 14px; line-height: 24px; padding: 6px 0; margin: 0; font-weight: 500; background: none; border-radius: 2px; border: none; cursor: pointer; text-align: left; color: #1863dc; background: transparent; border-color: transparent; box-shadow: none; text-shadow: none;}.cky-consent-bar .cky-banner-btn-close:focus-visible,.cky-notice-btn-wrapper .cky-btn-do-not-sell:focus-visible,.cky-opt-out-btn-wrapper .cky-btn:focus-visible,.cky-opt-out-checkbox-wrapper input[type=\"checkbox\"].cky-opt-out-checkbox:focus-visible{outline: 2px solid #1863dc; outline-offset: 2px;}@media (max-width: 440px){.cky-consent-container{width: 100%;}}@media (max-width: 352px){.cky-notice-des a.cky-policy, .cky-notice-btn-wrapper .cky-btn-do-not-sell{font-size: 12px;}}.cky-opt-out-wrapper{padding: 12px 0;}.cky-opt-out-wrapper .cky-opt-out-checkbox-wrapper{display: flex; align-items: center;}.cky-opt-out-checkbox-wrapper .cky-opt-out-checkbox-label{font-size: 16px; font-weight: 700; line-height: 24px; margin: 0 0 0 12px; cursor: pointer;}.cky-opt-out-checkbox-wrapper input[type=\"checkbox\"].cky-opt-out-checkbox{background-color: #ffffff; border: 1px solid black; width: 20px; height: 18.5px; margin: 0; -webkit-appearance: none; position: relative; display: flex; align-items: center; justify-content: center; border-radius: 2px; cursor: pointer;}.cky-opt-out-checkbox-wrapper input[type=\"checkbox\"].cky-opt-out-checkbox:checked{background-color: #1863dc; border: none;}.cky-opt-out-checkbox-wrapper input[type=\"checkbox\"].cky-opt-out-checkbox:checked::after{left: 6px; bottom: 4px; width: 7px; height: 13px; border: solid #ffffff; border-width: 0 3px 3px 0; border-radius: 2px; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); content: \"\"; position: absolute; box-sizing: border-box;}.cky-opt-out-checkbox-wrapper.cky-disabled .cky-opt-out-checkbox-label,.cky-opt-out-checkbox-wrapper.cky-disabled input[type=\"checkbox\"].cky-opt-out-checkbox{cursor: no-drop;}.cky-gpc-wrapper{margin: 0 0 0 32px;}.cky-footer-wrapper .cky-opt-out-btn-wrapper{display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 22px 24px;}.cky-opt-out-btn-wrapper .cky-btn{flex: auto; max-width: 100%; text-shadow: none; box-shadow: none;}.cky-opt-out-btn-wrapper .cky-btn-cancel{border: 1px solid #dedfe0; background: transparent; color: #858585;}.cky-opt-out-btn-wrapper .cky-btn-confirm{background: #1863dc; color: #ffffff; border: 1px solid #1863dc;}@media (max-width: 352px){.cky-opt-out-checkbox-wrapper .cky-opt-out-checkbox-label{font-size: 14px;}.cky-gpc-wrapper .cky-gpc-desc, .cky-gpc-wrapper .cky-gpc-desc *{font-size: 12px;}.cky-opt-out-checkbox-wrapper input[type=\"checkbox\"].cky-opt-out-checkbox{width: 16px; height: 16px;}.cky-opt-out-checkbox-wrapper input[type=\"checkbox\"].cky-opt-out-checkbox:checked::after{left: 5px; bottom: 4px; width: 3px; height: 9px;}.cky-gpc-wrapper{margin: 0 0 0 28px;}}.video-placeholder-youtube{background-size: 100% 100%; background-position: center; background-repeat: no-repeat; background-color: #b2b0b059; position: relative; display: flex; align-items: center; justify-content: center; max-width: 100%;}.video-placeholder-text-youtube{text-align: center; align-items: center; padding: 10px 16px; background-color: #000000cc; color: #ffffff; border: 1px solid; border-radius: 2px; cursor: pointer;}.video-placeholder-normal{background-image: url(\"/wp-content/plugins/cookie-law-info/lite/frontend/images/placeholder.svg\"); background-size: 80px; background-position: center; background-repeat: no-repeat; background-color: #b2b0b059; position: relative; display: flex; align-items: flex-end; justify-content: center; max-width: 100%;}.video-placeholder-text-normal{align-items: center; padding: 10px 16px; text-align: center; border: 1px solid; border-radius: 2px; cursor: pointer;}.cky-rtl{direction: rtl; text-align: right;}.cky-rtl .cky-banner-btn-close{left: 9px; right: auto;}.cky-rtl .cky-notice-btn-wrapper .cky-btn:last-child{margin-right: 8px;}.cky-rtl .cky-notice-btn-wrapper .cky-btn:first-child{margin-right: 0;}.cky-rtl .cky-notice-btn-wrapper{margin-left: 0; margin-right: 15px;}.cky-rtl .cky-prefrence-btn-wrapper .cky-btn{margin-right: 8px;}.cky-rtl .cky-prefrence-btn-wrapper .cky-btn:first-child{margin-right: 0;}.cky-rtl .cky-accordion .cky-accordion-chevron i::before{border: none; border-left: 1.4px solid; border-top: 1.4px solid; left: 12px;}.cky-rtl .cky-accordion.cky-accordion-active .cky-accordion-chevron i::before{-webkit-transform: rotate(-135deg); -moz-transform: rotate(-135deg); -ms-transform: rotate(-135deg); -o-transform: rotate(-135deg); transform: rotate(-135deg);}@media (max-width: 768px){.cky-rtl .cky-notice-btn-wrapper{margin-right: 0;}}@media (max-width: 576px){.cky-rtl .cky-notice-btn-wrapper .cky-btn:last-child{margin-right: 0;}.cky-rtl .cky-prefrence-btn-wrapper .cky-btn{margin-right: 0;}.cky-rtl .cky-accordion.cky-accordion-active .cky-accordion-body{padding: 0 22px 0 0;}}@media (max-width: 425px){.cky-rtl .cky-accordion.cky-accordion-active .cky-accordion-body{padding: 0 15px 0 0;}}.cky-rtl .cky-opt-out-btn-wrapper .cky-btn{margin-right: 12px;}.cky-rtl .cky-opt-out-btn-wrapper .cky-btn:first-child{margin-right: 0;}.cky-rtl .cky-opt-out-checkbox-wrapper .cky-opt-out-checkbox-label{margin: 0 12px 0 0;}"};</script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/plugins/cookie-law-info/lite/frontend/js/script.min.js?ver=3.4.0" id="cookie-law-info-js"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=GT-KDDL6M9P" id="google_gtagjs-js" async></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["bestpracticeguides.scot"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-KDDL6M9P", {"googlesitekit_post_type":"page"});
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+//# sourceURL=google_gtagjs-js-after
+/* ]]> */
+</script>
+<link rel="https://api.w.org/" href="https://bestpracticeguides.scot/wp-json/"/><link rel="alternate" title="JSON" type="application/json" href="https://bestpracticeguides.scot/wp-json/wp/v2/pages/100"/><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bestpracticeguides.scot/xmlrpc.php?rsd"/>
+<style id="cky-style-inline">[data-cky-tag]{visibility:hidden}</style><meta name="generator" content="Site Kit by Google 1.176.0"/>		<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+				<style>.no-js img.lazyload{display:none}figure.wp-block-image img.lazyloading{min-width:150px}.lazyload,.lazyloading{--smush-placeholder-width:100px;--smush-placeholder-aspect-ratio: 1/1;width:var(--smush-image-width,var(--smush-placeholder-width))!important;aspect-ratio:var(--smush-image-aspect-ratio,var(--smush-placeholder-aspect-ratio))!important}.lazyload,.lazyloading{opacity:0}.lazyloaded{opacity:1;transition:opacity 400ms;transition-delay:0ms}</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><script>jQuery(document).ready(function(){jQuery(window).scroll(function(){var scroll=jQuery(window).scrollTop();if(scroll>=50){jQuery(".navigation").addClass("header-fixed");}else{jQuery(".navigation").removeClass("header-fixed");}});});jQuery(document).ready(function($){$("img").mouseenter(function(){let $notooltip=$(this).attr("title");$(this).attr("notooltip",$notooltip);$(this).attr("title","");}).mouseleave(function(){let $notooltip=$(this).attr("notooltip");$(this).attr("title",$notooltip);$(this).removeAttr("notooltip");});});</script><link rel="icon" href="https://bestpracticeguides.scot/wp-content/uploads/2024/11/Favicon.svg" sizes="32x32"/>
+<link rel="icon" href="https://bestpracticeguides.scot/wp-content/uploads/2024/11/Favicon.svg" sizes="192x192"/>
+<link rel="apple-touch-icon" href="https://bestpracticeguides.scot/wp-content/uploads/2024/11/Favicon.svg"/>
+<meta name="msapplication-TileImage" content="https://bestpracticeguides.scot/wp-content/uploads/2024/11/Favicon.svg"/>
+<link rel="stylesheet" id="et-core-unified-tb-162-tb-222-100-cached-inline-styles" href="https://bestpracticeguides.scot/wp-content/et-cache/100/et-core-unified-tb-162-tb-222-100.min.css?ver=1776200290"/><link rel="stylesheet" id="et-core-unified-100-cached-inline-styles" href="https://bestpracticeguides.scot/wp-content/et-cache/100/et-core-unified-100.min.css?ver=1776200290"/><style id='global-styles-inline-css' type='text/css'>:root{--wp--preset--aspect-ratio--square:1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black:#000;--wp--preset--color--cyan-bluish-gray:#abb8c3;--wp--preset--color--white:#fff;--wp--preset--color--pale-pink:#f78da7;--wp--preset--color--vivid-red:#cf2e2e;--wp--preset--color--luminous-vivid-orange:#ff6900;--wp--preset--color--luminous-vivid-amber:#fcb900;--wp--preset--color--light-green-cyan:#7bdcb5;--wp--preset--color--vivid-green-cyan:#00d084;--wp--preset--color--pale-cyan-blue:#8ed1fc;--wp--preset--color--vivid-cyan-blue:#0693e3;--wp--preset--color--vivid-purple:#9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple:linear-gradient(135deg,#0693e3 0%,#9b51e0 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan:linear-gradient(135deg,#7adcb4 0%,#00d082 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange:linear-gradient(135deg,#fcb900 0%,#ff6900 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red:linear-gradient(135deg,#ff6900 0%,#cf2e2e 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray:linear-gradient(135deg,#eee 0%,#a9b8c3 100%);--wp--preset--gradient--cool-to-warm-spectrum:linear-gradient(135deg,#4aeadc 0%,#9778d1 20%,#cf2aba 40%,#ee2c82 60%,#fb6962 80%,#fef84c 100%);--wp--preset--gradient--blush-light-purple:linear-gradient(135deg,#ffceec 0%,#9896f0 100%);--wp--preset--gradient--blush-bordeaux:linear-gradient(135deg,#fecda5 0%,#fe2d2d 50%,#6b003e 100%);--wp--preset--gradient--luminous-dusk:linear-gradient(135deg,#ffcb70 0%,#c751c0 50%,#4158d0 100%);--wp--preset--gradient--pale-ocean:linear-gradient(135deg,#fff5cb 0%,#b6e3d4 50%,#33a7b5 100%);--wp--preset--gradient--electric-grass:linear-gradient(135deg,#caf880 0%,#71ce7e 100%);--wp--preset--gradient--midnight:linear-gradient(135deg,#020381 0%,#2874fc 100%);--wp--preset--font-size--small:13px;--wp--preset--font-size--medium:20px;--wp--preset--font-size--large:36px;--wp--preset--font-size--x-large:42px;--wp--preset--spacing--20:.44rem;--wp--preset--spacing--30:.67rem;--wp--preset--spacing--40:1rem;--wp--preset--spacing--50:1.5rem;--wp--preset--spacing--60:2.25rem;--wp--preset--spacing--70:3.38rem;--wp--preset--spacing--80:5.06rem;--wp--preset--shadow--natural:6px 6px 9px rgba(0,0,0,.2);--wp--preset--shadow--deep:12px 12px 50px rgba(0,0,0,.4);--wp--preset--shadow--sharp:6px 6px 0 rgba(0,0,0,.2);--wp--preset--shadow--outlined:6px 6px 0 -3px #fff , 6px 6px #000;--wp--preset--shadow--crisp:6px 6px 0 #000}:root{--wp--style--global--content-size:823px;--wp--style--global--wide-size:1080px}:where(body) {margin:0}.wp-site-blocks>.alignleft{float:left;margin-right:2em}.wp-site-blocks>.alignright{float:right;margin-left:2em}.wp-site-blocks>.aligncenter{justify-content:center;margin-left:auto;margin-right:auto}:where(.is-layout-flex){gap:.5em}:where(.is-layout-grid){gap:.5em}.is-layout-flow>.alignleft{float:left;margin-inline-start:0;margin-inline-end:2em}.is-layout-flow>.alignright{float:right;margin-inline-start:2em;margin-inline-end:0}.is-layout-flow>.aligncenter{margin-left:auto!important;margin-right:auto!important}.is-layout-constrained>.alignleft{float:left;margin-inline-start:0;margin-inline-end:2em}.is-layout-constrained>.alignright{float:right;margin-inline-start:2em;margin-inline-end:0}.is-layout-constrained>.aligncenter{margin-left:auto!important;margin-right:auto!important}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:var(--wp--style--global--content-size);margin-left:auto!important;margin-right:auto!important}.is-layout-constrained>.alignwide{max-width:var(--wp--style--global--wide-size)}body .is-layout-flex{display:flex}.is-layout-flex{flex-wrap:wrap;align-items:center}.is-layout-flex > :is(*, div){margin:0}body .is-layout-grid{display:grid}.is-layout-grid > :is(*, div){margin:0}body{padding-top:0;padding-right:0;padding-bottom:0;padding-left:0}:root :where(.wp-element-button, .wp-block-button__link){background-color:#32373c;border-width:0;color:#fff;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration:none;text-transform:inherit}.has-black-color{color:var(--wp--preset--color--black)!important}.has-cyan-bluish-gray-color{color:var(--wp--preset--color--cyan-bluish-gray)!important}.has-white-color{color:var(--wp--preset--color--white)!important}.has-pale-pink-color{color:var(--wp--preset--color--pale-pink)!important}.has-vivid-red-color{color:var(--wp--preset--color--vivid-red)!important}.has-luminous-vivid-orange-color{color:var(--wp--preset--color--luminous-vivid-orange)!important}.has-luminous-vivid-amber-color{color:var(--wp--preset--color--luminous-vivid-amber)!important}.has-light-green-cyan-color{color:var(--wp--preset--color--light-green-cyan)!important}.has-vivid-green-cyan-color{color:var(--wp--preset--color--vivid-green-cyan)!important}.has-pale-cyan-blue-color{color:var(--wp--preset--color--pale-cyan-blue)!important}.has-vivid-cyan-blue-color{color:var(--wp--preset--color--vivid-cyan-blue)!important}.has-vivid-purple-color{color:var(--wp--preset--color--vivid-purple)!important}.has-black-background-color{background-color:var(--wp--preset--color--black)!important}.has-cyan-bluish-gray-background-color{background-color:var(--wp--preset--color--cyan-bluish-gray)!important}.has-white-background-color{background-color:var(--wp--preset--color--white)!important}.has-pale-pink-background-color{background-color:var(--wp--preset--color--pale-pink)!important}.has-vivid-red-background-color{background-color:var(--wp--preset--color--vivid-red)!important}.has-luminous-vivid-orange-background-color{background-color:var(--wp--preset--color--luminous-vivid-orange)!important}.has-luminous-vivid-amber-background-color{background-color:var(--wp--preset--color--luminous-vivid-amber)!important}.has-light-green-cyan-background-color{background-color:var(--wp--preset--color--light-green-cyan)!important}.has-vivid-green-cyan-background-color{background-color:var(--wp--preset--color--vivid-green-cyan)!important}.has-pale-cyan-blue-background-color{background-color:var(--wp--preset--color--pale-cyan-blue)!important}.has-vivid-cyan-blue-background-color{background-color:var(--wp--preset--color--vivid-cyan-blue)!important}.has-vivid-purple-background-color{background-color:var(--wp--preset--color--vivid-purple)!important}.has-black-border-color{border-color:var(--wp--preset--color--black)!important}.has-cyan-bluish-gray-border-color{border-color:var(--wp--preset--color--cyan-bluish-gray)!important}.has-white-border-color{border-color:var(--wp--preset--color--white)!important}.has-pale-pink-border-color{border-color:var(--wp--preset--color--pale-pink)!important}.has-vivid-red-border-color{border-color:var(--wp--preset--color--vivid-red)!important}.has-luminous-vivid-orange-border-color{border-color:var(--wp--preset--color--luminous-vivid-orange)!important}.has-luminous-vivid-amber-border-color{border-color:var(--wp--preset--color--luminous-vivid-amber)!important}.has-light-green-cyan-border-color{border-color:var(--wp--preset--color--light-green-cyan)!important}.has-vivid-green-cyan-border-color{border-color:var(--wp--preset--color--vivid-green-cyan)!important}.has-pale-cyan-blue-border-color{border-color:var(--wp--preset--color--pale-cyan-blue)!important}.has-vivid-cyan-blue-border-color{border-color:var(--wp--preset--color--vivid-cyan-blue)!important}.has-vivid-purple-border-color{border-color:var(--wp--preset--color--vivid-purple)!important}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background:var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple)!important}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background:var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan)!important}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background:var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange)!important}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background:var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red)!important}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background:var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray)!important}.has-cool-to-warm-spectrum-gradient-background{background:var(--wp--preset--gradient--cool-to-warm-spectrum)!important}.has-blush-light-purple-gradient-background{background:var(--wp--preset--gradient--blush-light-purple)!important}.has-blush-bordeaux-gradient-background{background:var(--wp--preset--gradient--blush-bordeaux)!important}.has-luminous-dusk-gradient-background{background:var(--wp--preset--gradient--luminous-dusk)!important}.has-pale-ocean-gradient-background{background:var(--wp--preset--gradient--pale-ocean)!important}.has-electric-grass-gradient-background{background:var(--wp--preset--gradient--electric-grass)!important}.has-midnight-gradient-background{background:var(--wp--preset--gradient--midnight)!important}.has-small-font-size{font-size:var(--wp--preset--font-size--small)!important}.has-medium-font-size{font-size:var(--wp--preset--font-size--medium)!important}.has-large-font-size{font-size:var(--wp--preset--font-size--large)!important}.has-x-large-font-size{font-size:var(--wp--preset--font-size--x-large)!important}</style>
+
+</head>
+<body data-rsssl=1 class="home wp-singular page-template-default page page-id-100 wp-theme-Divi wp-child-theme-DiviFarsight-Child et-tb-has-template et-tb-has-header et-tb-has-footer et_button_no_icon et_pb_button_helper_class et_cover_background et_pb_gutter windows et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
+	<div id="page-container">
+<div id="et-boc" class="et-boc">
+			
+		<header class="et-l et-l--header">
+			<div class="et_builder_inner_content et_pb_gutters3"><div class="et_pb_section et_pb_section_1_tb_header navigation et_pb_with_background et_section_regular et_pb_section--fixed et_pb_section--with-menu">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_header et_pb_row--with-menu">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0_tb_header  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column--with-menu">
+				
+				
+				
+				
+				<div class="et_pb_with_border et_pb_module et_pb_menu et_pb_menu_0_tb_header navigation et_pb_bg_layout_light  et_pb_text_align_left et_dropdown_animation_fade et_pb_menu--with-logo et_pb_menu--style-left_aligned">
+					
+					
+					
+					
+					<div class="et_pb_menu_inner_container clearfix">
+						<div class="et_pb_menu__logo-wrap">
+			  <div class="et_pb_menu__logo">
+				<a href="https://bestpracticeguides.scot/"><img decoding="async" data-src="https://bestpracticeguides.scot/wp-content/uploads/2025/01/BPG-HORIZONTAL-RGB.svg" alt="Best Practice Guides Logo" class="wp-image-224 lazyload" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg=="/></a>
+			  </div>
+			</div>
+						<div class="et_pb_menu__wrap">
+							<div class="et_pb_menu__menu">
+								<nav class="et-menu-nav"><ul id="menu-main-menu" class="et-menu nav"><li class="et_pb_menu_page_id-2564 menu-item menu-item-type-post_type menu-item-object-page menu-item-2571"><a href="https://bestpracticeguides.scot/about-us/">About Us</a></li>
+<li class="et_pb_menu_page_id-1114 menu-item menu-item-type-post_type menu-item-object-page menu-item-2857"><a href="https://bestpracticeguides.scot/statutory-guides/">Statutory Guides</a></li>
+<li class="et_pb_menu_page_id-58 menu-item menu-item-type-post_type menu-item-object-page menu-item-1100"><a href="https://bestpracticeguides.scot/guides/">Deer</a></li>
+<li class="et_pb_menu_page_id-1101 menu-item menu-item-type-post_type menu-item-object-page menu-item-1113"><a href="https://bestpracticeguides.scot/feral-pigs/">Feral Pigs</a></li>
+<li class="et_pb_menu_page_id-1427 menu-item menu-item-type-post_type menu-item-object-page menu-item-1455"><a href="https://bestpracticeguides.scot/news/">News</a></li>
+<li class="et_pb_menu_page_id-71 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-71"><a>Resources</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-937 menu-item menu-item-type-post_type menu-item-object-page menu-item-953"><a href="https://bestpracticeguides.scot/contact-us/">Contact Us</a></li>
+	<li class="et_pb_menu_page_id-2685 menu-item menu-item-type-post_type menu-item-object-page menu-item-2704"><a href="https://bestpracticeguides.scot/how-to/">How to Use the Guides</a></li>
+	<li class="et_pb_menu_page_id-1935 menu-item menu-item-type-post_type menu-item-object-page menu-item-2153"><a href="https://bestpracticeguides.scot/guide-index/">Guide Index</a></li>
+	<li class="et_pb_menu_page_id-954 menu-item menu-item-type-post_type menu-item-object-page menu-item-965"><a href="https://bestpracticeguides.scot/contact-us/forms/">Forms</a></li>
+	<li class="et_pb_menu_page_id-1034 menu-item menu-item-type-post_type menu-item-object-page menu-item-1055"><a href="https://bestpracticeguides.scot/training/">Training</a></li>
+	<li class="et_pb_menu_page_id-978 menu-item menu-item-type-post_type menu-item-object-page menu-item-1014"><a href="https://bestpracticeguides.scot/useful-contacts/">Useful Contacts</a></li>
+</ul>
+</li>
+</ul></nav>
+							</div>
+							
+							
+							<div class="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="mobile_menu_bar"></span>
+				</div>
+			</div>
+						</div>
+						
+					</div>
+				</div><div class="et_pb_module et_pb_code et_pb_code_0_tb_header">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><a href="/search" class="et_pb_menu__icon et_pb_menu__search-button" aria-label="Search"></a></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</header>
+	<div id="et-main-area">
+	
+<div id="main-content">
+
+
+			
+				<article id="post-100" class="post-100 page type-page status-publish has-post-thumbnail hentry">
+
+				
+					<div class="entry-content">
+					<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0 hero-text  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>Inspiring Confidence</h2>
+<h1>Wild Deer Best<br/>Practice</h1></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_icon et_pb_icon_0 et_animated et-waypoint">
+				<a href="#scroll" title="deer-bg"><span class="et_pb_icon_wrap "><span class="et-pb-icon">"</span></span></a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div id="scroll" class="et_pb_section et_pb_section_1 et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_2 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>Welcome to Scotland&#8217;s          Best Practice Guidance</h2>
+<p>Here you will find Best Practice guidance on the management of Wild Deer and the control of Feral Pigs in Scotland.</p>
+<p>The guides are developed within Scotland’s wildlife management sector to provide up to date, reliable information available in a format that is easy to access.</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_cta_0 et_animated et_clickable et_pb_promo  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_promo_description"><h3 class="et_pb_module_header">Wild Deer Guides</h3></div>
+				
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_cta_1 et_animated et_clickable et_pb_promo  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_promo_description"><h3 class="et_pb_module_header">Feral Pigs Guides</h3></div>
+				
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img fetchpriority="high" decoding="async" width="1260" height="997" src="https://bestpracticeguides.scot/wp-content/uploads/2025/01/hunter-mobile.jpg" alt="" title="hunter-mobile" srcset="https://bestpracticeguides.scot/wp-content/uploads/2025/01/hunter-mobile.jpg 1260w, https://bestpracticeguides.scot/wp-content/uploads/2025/01/hunter-mobile-980x775.jpg 980w, https://bestpracticeguides.scot/wp-content/uploads/2025/01/hunter-mobile-480x380.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1260px, 100vw" class="wp-image-272"/></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_4">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough et_pb_column_empty">
+				
+				
+				
+				
+				
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>Following Best Practice</h3>
+<p>Best Practice aims to provide guidance on relevant legislation and on how best to reinforce the three central aims of public safety, food safety and deer welfare. The guides seek to support, reassure and educate by setting out where possible general principles rather than tight prescription. In this way the Steering Group recognises that there is often more than one way of doing something and welcomes discussion of alternative approaches that add value to the way that the deer sector can enhance public safety, food safety and deer welfare.</p>
+<p>At the heart of the guides is the need for clarity on the law; along with three central aims: safeguarding public safety; ensuring food safety; and taking full account of deer welfare. Public confidence in these three issues is essential if wild deer management in Scotland is to maintain the understanding and respect of a wider audience at home and abroad.</p>
+<p>In the development of the concept the Steering Group recognised that there will always be situations, when for whatever reasons, things do not go according to plan. Following Best Practice is about understanding what the benchmark is for an activity, aiming to deliver at least to that level and aspiring to go further.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_3 et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_5 et_pb_gutters4">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>Newest Guidance Released</h3>
+<h4>Use of Drones (UAVs) in Deer Management</h4>
+<p>Wild Deer Best Practice has published new two-part guidance on the use of drones (UAVs) in deer management, effective from January 2026.<br/>Developed with input from BH Wildlife Consultancy,  NatureScot, and FLS, the guidance sets out Civil Aviation Authority (CAA) requirements, planning considerations and legal responsibilities, alongside practical advice on survey methods, thermal imaging, operational constraints and wildlife welfare. Together, the guides explain how drones can be used lawfully, safely and responsibly in deer management.</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_0_wrapper  et_pb_module ">
+				<a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="https://bestpracticeguides.scot/1-planning-drones-1/" target="_blank">View Guidance</a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_1">
+				
+				
+				
+				
+				<a href="https://bestpracticeguides.scot/1-planning-drones-1/" target="_blank"><span class="et_pb_image_wrap "><img decoding="async" width="595" height="841" data-src="https://bestpracticeguides.scot/wp-content/uploads/2026/01/1-Planning-Drones-1.jpg" alt="PDF Thumbnail of Use of Night Vision and Thermal Guide" title="1 Planning - Drones 1" data-srcset="https://bestpracticeguides.scot/wp-content/uploads/2026/01/1-Planning-Drones-1.jpg 595w, https://bestpracticeguides.scot/wp-content/uploads/2026/01/1-Planning-Drones-1-480x678.jpg 480w" data-sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 595px, 100vw" class="wp-image-3341 lazyload" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" style="--smush-placeholder-width: 595px; --smush-placeholder-aspect-ratio: 595/841;"/></span></a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_6">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_10  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>Latest Guidance Updates</h3></div>
+			</div><div class="et_pb_module et_pb_code et_pb_code_0">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><div class="latest-updates-wrapper">            <div class="latest-updates">
+                <a href="https://bestpracticeguides.scot/deer-ecology/sika-deer/" class="thumbnail">
+                    <img decoding="async" data-src="https://bestpracticeguides.scot/wp-content/uploads/2025/03/ecology_sika-pdf.jpg" alt="PDF Thumbnail" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" class="lazyload" style="--smush-placeholder-width: 1089px; --smush-placeholder-aspect-ratio: 1089/1527;">                </a>
+                <div class="content">
+                    <h4>Sika Deer</h4>
+                    <span>13 April 2026</span>
+                    <a href="https://bestpracticeguides.scot/deer-ecology/sika-deer/" class="view-update">View Update</a>
+                </div>
+            </div>
+                        <div class="latest-updates">
+                <a href="https://bestpracticeguides.scot/deer-ecology/fallow-deer/" class="thumbnail">
+                    <img decoding="async" data-src="https://bestpracticeguides.scot/wp-content/uploads/2025/03/ecology_fallow-pdf.jpg" alt="PDF Thumbnail" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" class="lazyload" style="--smush-placeholder-width: 1089px; --smush-placeholder-aspect-ratio: 1089/1527;">                </a>
+                <div class="content">
+                    <h4>Fallow Deer</h4>
+                    <span>28 July 2025</span>
+                    <a href="https://bestpracticeguides.scot/deer-ecology/fallow-deer/" class="view-update">View Update</a>
+                </div>
+            </div>
+            </div></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_4 et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div id="about" class="et_pb_row et_pb_row_7">
+				<div class="et_pb_column et_pb_column_3_4 et_pb_column_11  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2><span>How to use our guides<br/></span></h2>
+<h3>Format of the Guides</h3>
+<p>In order to assist practitioners in following Best Practice, the guides have been designed to highlight legal requirements and issues relating to public safety, food safety and deer welfare. Links to other Best Practice guides have also been identified, as well as references to other relevant material.</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_1_wrapper  et_pb_module ">
+				<a class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" href="https://bestpracticeguides.scot/how-to/">Learn more</a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_12  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_2">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="752" height="1168" data-src="https://bestpracticeguides.scot/wp-content/uploads/2025/12/howto-guide.png" alt="" title="howto-guide" data-srcset="https://bestpracticeguides.scot/wp-content/uploads/2025/12/howto-guide.png 752w, https://bestpracticeguides.scot/wp-content/uploads/2025/12/howto-guide-480x746.png 480w" data-sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 752px, 100vw" class="wp-image-3299 lazyload" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" style="--smush-placeholder-width: 752px; --smush-placeholder-aspect-ratio: 752/1168;"/></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_5 et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_8 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_13  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_6  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>Wild Deer Guides Categories</h3>
+<p>Discover our comprehensive range of Wild Deer Guides. To find the guide you need, simply browse through the relevant category or use the search bar for quick access.</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_14  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_code et_pb_code_1">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><a href="/search" class="et_pb_menu__icon et_pb_menu__search-button bigger-search" aria-label="Search"></a></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_9">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_15  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_with_border et_pb_module et_pb_cta_2 et_clickable et_pb_section_video_on_hover et_pb_promo  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_promo_description"><h4 class="et_pb_module_header">Deer Ecology & Behaviour</h4></div>
+				
+			</div><div class="et_pb_with_border et_pb_module et_pb_cta_3 et_clickable et_pb_section_video_on_hover et_pb_promo  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_promo_description"><h4 class="et_pb_module_header">Culling</h4></div>
+				
+			</div><div class="et_pb_with_border et_pb_module et_pb_cta_4 et_clickable et_pb_section_video_on_hover et_pb_promo  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_promo_description"><h4 class="et_pb_module_header">Crop & Habitat Protection</h4></div>
+				
+			</div><div class="et_pb_with_border et_pb_module et_pb_cta_5 et_clickable et_pb_section_video_on_hover et_pb_promo  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_promo_description"><h4 class="et_pb_module_header">Carcass Preparation</h4></div>
+				
+			</div><div class="et_pb_with_border et_pb_module et_pb_cta_6 et_clickable et_pb_section_video_on_hover et_pb_promo  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_promo_description"><h4 class="et_pb_module_header">Habitat Impact Assessment</h4></div>
+				
+			</div><div class="et_pb_with_border et_pb_module et_pb_cta_7 et_clickable et_pb_section_video_on_hover et_pb_promo  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_promo_description"><h4 class="et_pb_module_header">Deer Health & Welfare</h4></div>
+				
+			</div><div class="et_pb_with_border et_pb_module et_pb_cta_8 et_clickable et_pb_section_video_on_hover et_pb_promo  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_promo_description"><h4 class="et_pb_module_header">Firearms</h4></div>
+				
+			</div><div class="et_pb_with_border et_pb_module et_pb_cta_9 et_clickable et_pb_section_video_on_hover et_pb_promo  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_promo_description"><h4 class="et_pb_module_header">People & Resources</h4></div>
+				
+			</div><div class="et_pb_with_border et_pb_module et_pb_cta_10 et_clickable et_pb_section_video_on_hover et_pb_promo  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_promo_description"><h4 class="et_pb_module_header">Planning</h4></div>
+				
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</div>
+						</div>
+
+				
+				</article>
+
+			
+
+</div>
+
+	<footer class="et-l et-l--footer">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_1_tb_footer et_pb_with_background et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_footer">
+				<div class="et_pb_column et_pb_column_2_5 et_pb_column_0_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0_tb_footer">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" data-src="https://bestpracticeguides.scot/wp-content/uploads/2025/01/BPG-HORIZONTAL-WHT.svg" alt="Best Practice Guidance Logo" title="BPG-HORIZONTAL-WHT" class="wp-image-225 lazyload" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg=="/></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_0_tb_footer  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Further information available from <a href="https://www.nature.scot/" target="_blank" rel="noopener">NatureScot</a></p>
+<p>Phone: <a href="tel:01463725000">01463 725000</a></p>
+<p>Email: <a href="mailto:info@bestpracticeguides.scot">info@bestpracticeguides.scot</a></p>
+<p>Address:<br/>NatureScot, Great Glen House,<br/>Leachkin Road, Inverness, IV3 8NW</p>
+<p><a href="/privacy-policy">Privacy Policy</a></p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_3_5 et_pb_column_1_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_1_tb_footer  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p class="p1"><span class="s1">The Wild Deer Best Practice guides are produced in partnership by a Steering Group, comprised of </span><a href="http://www.deer-management.co.uk/" target="_blank" rel="noopener">ADMG</a>, <a href="https://basc.org.uk/" target="_blank" rel="noopener">BASC</a>, <a href="https://www.bds.org.uk/" target="_blank" rel="noopener">BDS</a>, <a href="https://www.scotlink.org/" target="_blank" rel="noopener">Environment Link</a>, <a href="https://forestryandland.gov.scot/" target="_blank" rel="noopener">FLS</a>, <a href="https://www.scotland.lantra.co.uk/lantra-scotland" target="_blank" rel="noopener">LANTRA</a>, <a href="http://www.ldns.org.uk/" target="_blank" rel="noopener">LDNS</a>, <a href="https://www.nature.scot/" target="_blank" rel="noopener">NatureScot</a>, Private Forestry, <a href="https://www.countryside-alliance.org/scotland" target="_blank" rel="noopener">Scottish Countryside Alliance</a>, <a href="https://forestry.gov.scot/" target="_blank" rel="noopener">Scottish Forestry</a>, <a href="https://www.scottishgamekeepers.co.uk/" target="_blank" rel="noopener">SGA</a>, <a href="https://www.scottishlandandestates.co.uk/" target="_blank" rel="noopener">SLE</a><span class="s2"> </span><span class="s1">and the land-based Colleges (</span><span class="s3"><a href="https://www.borderscollege.ac.uk/" target="_blank" rel="noopener">Borders College</a>, <a href="https://www.sruc.ac.uk/" target="_blank" rel="noopener">SRUC</a></span><span class="s4"> </span><span class="s1">and</span><span class="s4"> </span><a href="https://www.uhi.ac.uk/en/" target="_blank" rel="noopener"><span class="s3">UHI</span></a><span class="s1">)</span><span class="s5">.</span></p>
+<p class="p2">Practitioners are encouraged to debate and share ideas to help develop future editions. Revisions and updates will also be made in light of new research, changes to policy and new legislation.</p>
+<p class="p3"><span class="s1">There are a </span>parallel set of <a href="https://thedeerinitiative.co.uk/guides-landing-basc/" target="_blank" rel="noopener">guides for England and Wales</a><span class="s6"> </span><span class="s1">and for </span><a href="http://bestpracticeguides.ie/" target="_blank" rel="noopener">Ireland</a><span class="s1">.</span></p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_3_tb_footer et_pb_with_background et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_1_tb_footer">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_2_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2_tb_footer  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Copyright © 2026 Best Practice Guidance. All rights reserved.</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</footer>
+		</div>
+
+			
+		</div>
+		</div>
+
+			<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/Divi%20Farsight-Child/*","/wp-content/themes/Divi/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="ckyBannerTemplate" type="text/template"><div class="cky-overlay cky-hide"></div><div class="cky-btn-revisit-wrapper cky-revisit-hide" data-cky-tag="revisit-consent" data-tooltip="Consent Preferences" style="background-color:#005671"> <button class="cky-btn-revisit" aria-label="Consent Preferences"> <img src="https://bestpracticeguides.scot/wp-content/plugins/cookie-law-info/lite/frontend/images/revisit.svg" alt="Revisit consent button"> </button></div><div class="cky-consent-container cky-hide" tabindex="0"> <div class="cky-consent-bar" data-cky-tag="notice" style="background-color:#FFFFFF;border-color:#F4F4F4">  <div class="cky-notice"> <p class="cky-title" role="heading" aria-level="1" data-cky-tag="title" style="color:#212121">We value your privacy</p><div class="cky-notice-group"> <div class="cky-notice-des" data-cky-tag="description" style="color:#212121"> <p>We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking "Accept All", you consent to our use of cookies.</p> </div><div class="cky-notice-btn-wrapper" data-cky-tag="notice-buttons"> <button class="cky-btn cky-btn-customize" aria-label="Customise" data-cky-tag="settings-button" style="color:#005671;background-color:transparent;border-color:#005671">Customise</button> <button class="cky-btn cky-btn-reject" aria-label="Reject All" data-cky-tag="reject-button" style="color:#005671;background-color:transparent;border-color:#005671">Reject All</button> <button class="cky-btn cky-btn-accept" aria-label="Accept All" data-cky-tag="accept-button" style="color:#FFFFFF;background-color:#005671;border-color:#005671">Accept All</button>  </div></div></div></div></div><div class="cky-modal" tabindex="0"> <div class="cky-preference-center" data-cky-tag="detail" style="color:#212121;background-color:#FFFFFF;border-color:#F4F4F4"> <div class="cky-preference-header"> <span class="cky-preference-title" role="heading" aria-level="1" data-cky-tag="detail-title" style="color:#212121">Customise Consent Preferences</span> <button class="cky-btn-close" aria-label="Close" data-cky-tag="detail-close"> <img src="https://bestpracticeguides.scot/wp-content/plugins/cookie-law-info/lite/frontend/images/close.svg" alt="Close"> </button> </div><div class="cky-preference-body-wrapper"> <div class="cky-preference-content-wrapper" data-cky-tag="detail-description" style="color:#212121"> <p>We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below.</p><p>The cookies that are categorised as "Necessary" are stored on your browser as they are essential for enabling the basic functionalities of the site. </p><p>We also use third-party cookies that help us analyse how you use this website, store your preferences, and provide the content and advertisements that are relevant to you. These cookies will only be stored in your browser with your prior consent.</p><p>You can choose to enable or disable some or all of these cookies but disabling some of them may affect your browsing experience.</p> </div><div class="cky-accordion-wrapper" data-cky-tag="detail-categories"> <div class="cky-accordion" id="ckyDetailCategorynecessary"> <div class="cky-accordion-item"> <div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div> <div class="cky-accordion-header-wrapper"> <div class="cky-accordion-header"><button class="cky-accordion-btn" aria-label="Necessary" data-cky-tag="detail-category-title" style="color:#212121">Necessary</button><span class="cky-always-active">Always Active</span> <div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchnecessary"></div> </div> <div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color:#212121"> <p>Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.</p></div> </div> </div> <div class="cky-accordion-body"> <div class="cky-audit-table" data-cky-tag="audit-table" style="color:#212121;background-color:#f4f4f4;border-color:#ebebeb"><p class="cky-empty-cookies-text">No cookies to display.</p></div> </div> </div><div class="cky-accordion" id="ckyDetailCategoryfunctional"> <div class="cky-accordion-item"> <div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div> <div class="cky-accordion-header-wrapper"> <div class="cky-accordion-header"><button class="cky-accordion-btn" aria-label="Functional" data-cky-tag="detail-category-title" style="color:#212121">Functional</button><span class="cky-always-active">Always Active</span> <div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchfunctional"></div> </div> <div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color:#212121"> <p>Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features.</p></div> </div> </div> <div class="cky-accordion-body"> <div class="cky-audit-table" data-cky-tag="audit-table" style="color:#212121;background-color:#f4f4f4;border-color:#ebebeb"><p class="cky-empty-cookies-text">No cookies to display.</p></div> </div> </div><div class="cky-accordion" id="ckyDetailCategoryanalytics"> <div class="cky-accordion-item"> <div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div> <div class="cky-accordion-header-wrapper"> <div class="cky-accordion-header"><button class="cky-accordion-btn" aria-label="Analytics" data-cky-tag="detail-category-title" style="color:#212121">Analytics</button><span class="cky-always-active">Always Active</span> <div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchanalytics"></div> </div> <div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color:#212121"> <p>Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.</p></div> </div> </div> <div class="cky-accordion-body"> <div class="cky-audit-table" data-cky-tag="audit-table" style="color:#212121;background-color:#f4f4f4;border-color:#ebebeb"><p class="cky-empty-cookies-text">No cookies to display.</p></div> </div> </div><div class="cky-accordion" id="ckyDetailCategoryperformance"> <div class="cky-accordion-item"> <div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div> <div class="cky-accordion-header-wrapper"> <div class="cky-accordion-header"><button class="cky-accordion-btn" aria-label="Performance" data-cky-tag="detail-category-title" style="color:#212121">Performance</button><span class="cky-always-active">Always Active</span> <div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchperformance"></div> </div> <div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color:#212121"> <p>Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors.</p></div> </div> </div> <div class="cky-accordion-body"> <div class="cky-audit-table" data-cky-tag="audit-table" style="color:#212121;background-color:#f4f4f4;border-color:#ebebeb"><p class="cky-empty-cookies-text">No cookies to display.</p></div> </div> </div><div class="cky-accordion" id="ckyDetailCategoryadvertisement"> <div class="cky-accordion-item"> <div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div> <div class="cky-accordion-header-wrapper"> <div class="cky-accordion-header"><button class="cky-accordion-btn" aria-label="Advertisement" data-cky-tag="detail-category-title" style="color:#212121">Advertisement</button><span class="cky-always-active">Always Active</span> <div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchadvertisement"></div> </div> <div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color:#212121"> <p>Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns.</p></div> </div> </div> <div class="cky-accordion-body"> <div class="cky-audit-table" data-cky-tag="audit-table" style="color:#212121;background-color:#f4f4f4;border-color:#ebebeb"><p class="cky-empty-cookies-text">No cookies to display.</p></div> </div> </div> </div></div><div class="cky-footer-wrapper"> <span class="cky-footer-shadow"></span> <div class="cky-prefrence-btn-wrapper" data-cky-tag="detail-buttons"> <button class="cky-btn cky-btn-reject" aria-label="Reject All" data-cky-tag="detail-reject-button" style="color:#005671;background-color:transparent;border-color:#005671"> Reject All </button> <button class="cky-btn cky-btn-preferences" aria-label="Save My Preferences" data-cky-tag="detail-save-button" style="color:#005671;background-color:transparent;border-color:#005671"> Save My Preferences </button> <button class="cky-btn cky-btn-accept" aria-label="Accept All" data-cky-tag="detail-accept-button" style="color:#FFFFFF;background-color:#005671;border-color:#005671"> Accept All </button> </div></div></div></div></script>		<script type="application/javascript">(function(){var file=["https:\/\/bestpracticeguides.scot\/wp-content\/et-cache\/100\/et-divi-dynamic-tb-162-tb-222-100-late.css"];var handle=document.getElementById('divi-style-parent-inline-inline-css');var location=handle.parentNode;if(0===document.querySelectorAll('link[href="'+file+'"]').length){var link=document.createElement('link');link.rel='stylesheet';link.id='et-dynamic-late-css';link.href=file;location.insertBefore(link,handle.nextSibling);}})();</script>
+			<script type="text/javascript">var et_animation_data=[{"class":"et_pb_icon_0","style":"slideTop","repeat":"loop","duration":"1350ms","delay":"0ms","intensity":"30%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_cta_0","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_cta_1","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"250ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"}];var et_link_options_data=[{"class":"et_pb_cta_0","url":"https:\/\/bestpracticeguides.scot\/guides\/","target":"_self"},{"class":"et_pb_cta_1","url":"https:\/\/bestpracticeguides.scot\/feral-pigs\/","target":"_self"},{"class":"et_pb_cta_2","url":"\/deer-ecology\/","target":"_self"},{"class":"et_pb_cta_3","url":"\/culling\/","target":"_self"},{"class":"et_pb_cta_4","url":"\/crop-habitat\/","target":"_self"},{"class":"et_pb_cta_5","url":"\/carcass-preparation\/","target":"_self"},{"class":"et_pb_cta_6","url":"\/habitat-impacts\/","target":"_self"},{"class":"et_pb_cta_7","url":"\/health-welfare\/","target":"_self"},{"class":"et_pb_cta_8","url":"\/firearms\/","target":"_self"},{"class":"et_pb_cta_9","url":"\/people-resources\/","target":"_self"},{"class":"et_pb_cta_10","url":"\/planning\/","target":"_self"}];</script>
+	        <script data-cfasync="false">window.dFlipLocation='https://bestpracticeguides.scot/wp-content/plugins/3d-flipbook-dflip-lite/assets/';window.dFlipWPGlobal={"text":{"toggleSound":"Turn on\/off Sound","toggleThumbnails":"Toggle Thumbnails","toggleOutline":"Toggle Outline\/Bookmark","previousPage":"Previous Page","nextPage":"Next Page","toggleFullscreen":"Toggle Fullscreen","zoomIn":"Zoom In","zoomOut":"Zoom Out","toggleHelp":"Toggle Help","singlePageMode":"Single Page Mode","doublePageMode":"Double Page Mode","downloadPDFFile":"Download PDF File","gotoFirstPage":"Goto First Page","gotoLastPage":"Goto Last Page","share":"Share","mailSubject":"I wanted you to see this FlipBook","mailBody":"Check out this site {{url}}","loading":"DearFlip: Loading "},"viewerType":"flipbook","moreControls":"download,pageMode,startPage,endPage,sound","hideControls":"","scrollWheel":"false","backgroundColor":"#777","backgroundImage":"","height":"auto","paddingLeft":"20","paddingRight":"20","controlsPosition":"bottom","duration":800,"soundEnable":"true","enableDownload":"true","showSearchControl":"false","showPrintControl":"false","enableAnnotation":false,"enableAnalytics":"false","webgl":"true","hard":"none","maxTextureSize":"1600","rangeChunkSize":"524288","zoomRatio":1.5,"stiffness":3,"pageMode":"0","singlePageMode":"0","pageSize":"0","autoPlay":"false","autoPlayDuration":5000,"autoPlayStart":"false","linkTarget":"2","sharePrefix":"flipbook-"};</script>
+      <script type="text/javascript" src="https://bestpracticeguides.scot/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="jquery-js-after">jqueryParams.length&&$.each(jqueryParams,function(e,r){if("function"==typeof r){var n=String(r);n.replace("$","jQuery");var a=new Function("return "+n)();$(document).ready(a)}});</script>
+<script type="text/javascript" id="divi-custom-script-js-extra">var DIVI={"item_count":"%d Item","items_count":"%d Items"};var et_builder_utils_params={"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};var et_frontend_scripts={"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};var et_pb_custom={"ajaxurl":"https://bestpracticeguides.scot/wp-admin/admin-ajax.php","images_uri":"https://bestpracticeguides.scot/wp-content/themes/Divi/images","builder_images_uri":"https://bestpracticeguides.scot/wp-content/themes/Divi/includes/builder/images","et_frontend_nonce":"fe716e15a8","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"5497987dc5","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"100","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":"https://bestpracticeguides.scot/wp-content/themes/Divi/includes/builder/frontend-builder/assets/vendors","accent_color":"#005671","waypoints_options":[]};var et_pb_box_shadow_elements=[];</script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/themes/Divi/js/scripts.min.js?ver=4.27.6" id="divi-custom-script-js"></script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/plugins/3d-flipbook-dflip-lite/assets/js/dflip.min.js?ver=2.4.27" id="dflip-script-js"></script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.fitvids.js?ver=4.27.6" id="fitvids-js"></script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-includes/js/comment-reply.min.js?ver=8237f63af26ad132af995cf5f943b484" id="comment-reply-js" async="async" data-wp-strategy="async" fetchpriority="low"></script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.mobile.js?ver=4.27.6" id="jquery-mobile-js"></script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/magnific-popup.js?ver=4.27.6" id="magnific-popup-js"></script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/easypiechart.js?ver=4.27.6" id="easypiechart-js"></script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/salvattore.js?ver=4.27.6" id="salvattore-js"></script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">wp.i18n.setLocaleData({'text direction\u0004ltr':['ltr']});</script>
+<script type="text/javascript" id="divi-contact-form-helper-js-extra">var DiviContactFormHelperPublicData={"ajaxURL":"https://bestpracticeguides.scot/wp-admin/admin-ajax.php","ajaxNonce":"3425dabcbd","pluginURL":"https://bestpracticeguides.scot/wp-content/plugins/divi-contact-form-helper/d4","blogURL":"https://bestpracticeguides.scot","wpLocale":"en","wpMaxUploadSize":"134217728","wpMaxUploadSizeFormatted":"128 MB","imageMimeTypes":["image/jpeg","image/gif","image/png","image/bmp","image/tiff","image/webp","image/avif","image/x-icon","image/heic","image/heif","image/heic-sequence","image/heif-sequence"],"isSuperAdmin":"","userIPAddress":"fe3e1134dd9b6190b1c145f459c64bc9","isPopupsforDivi":"","i10n":{"form_unique_id_warning":"Important: Unique ID Required\u003Cbr\u003ETo ensure your form entries are saved correctly in the website database, each contact form must have a unique ID. This ID is essential for connecting the form to the database and identifying which entries belong to each form. Our plugin automatically assigns a unique ID in the \"Admin Label\" toggle in the Divi Contact Form settings. If you have more than one form on your site, each one must have a unique ID. This is managed automatically unless you duplicate a form using the Divi Builder's duplicate button. For more information on using unique IDs, please refer to our \u003Ca href=\"https://www.peeayecreative.com/docs/divi-contact-form-helper/saving-entries-to-database/\" target=\"_blank\"\u003Eplugin documentation\u003C/a\u003E.","file_upload_btn_text":"Choose Files","accepted_file_text":"Accepted file types:","max_filesize_text":"Max. file size:","chosen_file_text":"No Files Chosen","selected_files_text":"{chosen_files_count} file{_s_} selected","uploading_text":"{percentage} uploaded your files, please wait for the system to continue.","already_attached_text":"File {filename} has already attached. Please choose another file.","allow_filesize_text":"File {filename} not uploaded. Maximum file size {allowed_filesize}.","x_files_allow_text":"Only {allowed_files} files are allowed to upload.","remove_file_text":"Are you sure you want to remove {filename}?","delete_file_icon_hover_text":"Delete","security_reason_text":"File {filename} has failed to upload. Sorry, this file type is not permitted for security reasons.","fill_message_text":"Please fill in the following fields:","fix_message_text":"Please fix the following errors:","siganture_empty_text":"The signature pad is empty. Please sign it and then save.","siganture_before_save_text":"Are you sure you want to save the signature?","siganture_save_text":"The signature has been saved successfully!","siganture_delete_text":"The signature has been deleted successfully!","siganture_save_btn_text":"Save","siganture_clear_btn_text":"Clear","required_captcha_text":"Please complete the CAPTCHA.","wrong_captcha_text":"There was a problem with the captcha verification.","invalid_email_text":"Please enter a valid email address."}};</script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/plugins/divi-contact-form-helper/d4/assets/public/app.min.js?ver=2.0.9" id="divi-contact-form-helper-js"></script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/plugins/divi-customblog-module/scripts/frontend-bundle.min.js?ver=2.0.3" id="divi-customblog-module-frontend-bundle-js"></script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/themes/Divi/core/admin/js/common.js?ver=4.27.6" id="et-core-common-js"></script>
+<script type="text/javascript" id="smush-lazy-load-js-before">var smushLazyLoadOptions={"autoResizingEnabled":false,"autoResizeOptions":{"precision":5,"skipAutoWidth":true}};</script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.24.0" id="smush-lazy-load-js"></script>
+<script type="text/javascript" id="smush-lazy-load-js-after">function rw(){Waypoint.refreshAll();}window.addEventListener('lazybeforeunveil',rw,false);window.addEventListener('lazyloaded',rw,false);</script>
+<script type="text/javascript" id="et-builder-modules-script-motion-js-extra">var et_pb_motion_elements={"desktop":[{"id":".et_pb_row_0","start":0,"midStart":65,"midEnd":65,"end":100,"startValue":100,"midValue":100,"endValue":0,"resolver":"opacity","module_type":"et_pb_row","trigger_start":"top","trigger_end":"middle"}],"tablet":[{"id":".et_pb_row_0","start":0,"midStart":74,"midEnd":74,"end":100,"startValue":100,"midValue":100,"endValue":0,"resolver":"opacity","module_type":"et_pb_row","trigger_start":"top","trigger_end":"middle"}],"phone":[{"id":".et_pb_row_0","start":0,"midStart":74,"midEnd":74,"end":100,"startValue":100,"midValue":100,"endValue":0,"resolver":"opacity","module_type":"et_pb_row","trigger_start":"top","trigger_end":"middle"}]};</script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/motion-effects.js?ver=4.27.6" id="et-builder-modules-script-motion-js"></script>
+<script type="text/javascript" id="et-builder-modules-script-sticky-js-extra">var et_pb_sticky_elements=[];</script>
+<script type="text/javascript" src="https://bestpracticeguides.scot/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/sticky-elements.js?ver=4.27.6" id="et-builder-modules-script-sticky-js"></script>
+	
+	</body>
+</html>

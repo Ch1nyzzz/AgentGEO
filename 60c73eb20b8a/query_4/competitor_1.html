@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+<head> 
+
+	
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+        <title>EstiMac - Interior Design Business Software - Estimate - Purchase - Invoice - Report</title>
+        <meta name="description" content="Estimating, ordering, invoicing and reporting features. Simple but effective business software for interior designers.">
+
+    
+	<meta name="keywords"      content="estimac,estipc,interior design,estimate,order,invoice,report">
+	<meta name="revisit-after" content="7 days">
+	<meta name="verify-v1"     content="FzcRyiU2ZNEMjr2gFgY3YyUvNhOYXP5zb9v8wJ9PrEw=">
+
+    
+        <style>
+body					    { margin: 0px; padding: 0px; font-family: Helvetica, sans-serif; background-color: rgb( 208, 208, 208 ); box-sizing: border-box; }
+
+img						    { border: none; }
+
+p, h1, h2				    { margin: 0px 0px 4px 0px; font-weight: normal; font-size: 1.0em; }
+h3, h4					    { margin: 0px 0px 8px 0px; font-weight: bold;   font-size: 1.0em; padding-top: 16px; }
+h3						    { color: rgb( 57, 130, 235 ); }
+h4						    { color: white; }
+
+ul						    { margin: 4px 0px 4px 0px; padding-left: 0px; }
+li						    { margin: 2px 0px 0px 20px; }
+
+input, select, textarea		{ font-size: 1.0em; background-color: white; border: none; }
+input, select               { max-width: 600px; }
+input[type=submit]			{ padding-top: 4px; padding-bottom: 4px; border-radius: 3px; background-color: rgb( 64, 64, 64 ); color: white; cursor: pointer; }
+
+div#margins				    { margin-left: auto; margin-right: auto; margin-top: 20px; padding-left: 20px; padding-right: 20px; background-size: 90%; background-position: center 85px; background-repeat: no-repeat; background-attachment: fixed; }
+div#min-height				{ min-height: 1400px; }
+
+div.panel				    { border-radius: 20px; }
+div.panelleft			    { padding: 20px  0px 10px 20px; }
+div.panelright			    { padding: 20px 20px 10px 20px; }
+
+img#logo				    { display: block; float: left; width:  85px; height: 85px; }
+img#name				    { display: block; float: left; width: 287px; height: 68px; margin-top: 8px; }
+img#santa                   { position: absolute; left: 28px; top: -8px; width: 90px; height: 127px; }
+img#netbanx                 { width: 152px; height: 65px; }
+img#ssl                     { width: 140px; height: 65px; }
+
+img.featureimage            { border-radius: 7px; }
+img.hotelimage              { border-radius: 7px; }
+
+h1#slogan				    { font-weight: normal; margin: 10px 0px 10px 25px; color: gray; }
+p#slogan-placeholder	    { font-weight: normal; margin: 10px 0px 10px  0px; }
+
+img.arrow					{ width: 20px; height: 20px; }
+h2.arrow				    { margin: 0px; }
+
+div.nonclickable		    { margin: 0px 10px 15px 10px; padding: 10px 15px 10px 15px; border-radius: 7px; color: white; background-color: rgb( 94, 165, 255 ); }
+div.clickable			    { margin: 0px 10px 15px 10px; padding: 10px 15px 10px 15px; border-radius: 7px; color: white; background-color: rgb( 57, 130, 235 ); cursor: pointer; }
+div#clickable-placeholder	{ margin: 0px  0px 15px  0px; padding: 10px  0px 10px  0px; }
+div.clickable:hover		    { background-color: rgb( 50, 113, 205 ); }
+div.clicableleft			{ margin: 10px 30px 15px 10px; }
+
+div.expand				    { margin: 0px 10px 20px 10px; padding:  0px 30px 16px 30px; border-radius: 7px; background-color: white; }
+div.expandguides			{ margin: 0px 10px 20px 10px; padding: 16px 20px  4px 20px; border-radius: 7px; background-color: white; }
+
+div.pdf						{ margin-bottom: 10px; border-radius: 7px; padding: 7px; background-color: rgb( 64, 64, 64 ); color: white; background-repeat: repeat-y; cursor: pointer; }
+div.pdf:hover				{ background-color: rgb( 48, 48, 48 ); }
+img.pdf						{ width: 30px; height: 30px; margin-top: 2px; margin-left: 2px; }
+p.pdf						{ margin-left: 45px; margin-bottom: 0px; }
+
+div.video					{ margin-bottom: 10px; border-radius: 7px; padding: 7px; background-color: rgb( 64, 64, 64 ); color: white; background-repeat: repeat-y; cursor: pointer; }
+div.video:hover				{ background-color: rgb( 48, 48, 48 ); }
+img.video					{ width: 29px; height: 25px; margin-left: 2px; margin-top: 4px; }
+p.video						{ margin-left: 45px; margin-bottom: 0px; }
+
+div.video-placeholder		{ margin-bottom: 10px; border-radius: 7px; padding: 7px; color: gray; border: 1px dashed gray; }
+p.video-placeholder			{ margin-left: 45px; margin-bottom: 0px; }
+
+div#slides					{ width: 100%; margin-top: 20px; margin-right: 60px; }
+
+div.news					{ border-radius: 7px; border: 10px solid pink; background-color: rgb( 240, 240, 240 ); margin-left: auto; margin-right: auto; width: 40%; min-width: 380px; padding: 10px 20px 10px 20px; text-align: center; cursor: pointer; }
+div.news:hover				{ background-color: white; }
+
+div.slide					{ border-radius: 7px; background-color: rgb( 64, 64, 64 ); color: white; text-align: center; cursor: pointer; }
+div.slide:hover				{ background-color: rgb( 48, 48, 48 ); }
+div.slidepart				{ margin-left: auto; margin-right: auto; width: 40%; min-width: 380px; }
+div.slidefull				{ margin-left: 30px; margin-right: 30px; }
+div.slideall				{ padding: 30px 30px 15px 30px; }
+div.slideupper				{ padding: 30px 30px  0px 30px; }
+div.slidemid				{ padding:  0px 30px  0px 30px; }
+div.slidelower				{ padding:  0px 30px 15px 30px; }
+div.userlink				{ color: silver; }
+div.userlink:hover			{ color: white; }
+
+p#quote                     { min-height: 50px; }
+
+div.screen					{ border-radius: 7px; margin: 0px 30px 20px 10px; padding: 15px 10px 10px 10px; background-color: rgb( 64, 64, 64 ); }
+div.screenedge				{ border-radius: 7px; height: 400px; cursor: pointer; }
+div.screenedge:hover		{ background-color: rgb( 48, 48, 48 ); }
+div.screenleft				{ padding: 15px 15px 0px  5px; }
+div.screenright				{ padding: 15px  5px 0px 15px; }
+div.screencentre			{ margin-left: 50px; margin-right: 50px; text-align: center; }
+div.screenthumb				{ border-radius: 7px; margin: 0px 30px 20px 10px; padding: 15px 0px 10px 20px; text-align: center; background-color: rgb( 64, 64, 64 ); cursor: pointer; }
+div.screenthumb:hover		{ background-color: rgb( 48, 48, 48 ); }
+div.screenthumbinner		{ height: 160px; background-size: 100% 100%; }
+
+img#screenshot-image		{ width: 100%; max-width: 1416px; max-height: 882px; }
+
+div.screenshoticon			{ width: 60px; border-radius: 7px; margin-left: 20px; padding-top: 8px; padding-bottom: 8px; background-color: rgb( 19, 229, 72 ); }
+img.screenshoticon			{ width: 30px; height: 30px; }
+
+form.esti				    { margin: 10px 0px 10px 0px; border-radius: 7px; background-color: rgb( 150, 150, 150 ); padding: 12px 16px 12px 16px; }
+
+div.google				    { padding: 5px; border-radius: 7px; background-color: white; margin: 10px 0px 10px 0px; min-height: 70px; }
+
+div.guides				    { padding: 20px; border-radius: 7px; color: white; background-color: rgb( 94, 165, 255 ); }
+div.guide                   { cursor: pointer; }
+img.guide					{ float: left; width: 32px; height: 32px; padding-bottom: 4px; }
+p.guide						{ padding-top: 6px; padding-left: 40px; }
+
+span.search-outline         { background-color: rgb( 94, 165, 255 ); color: white; }
+span.search-solid           { background-color: rgb( 57, 130, 235 ); color: white; }
+
+div.help					{ border-radius: 7px; margin: 0px 10px 15px 10px; padding: 15px; background-color: rgb( 64, 64, 64 ); }
+
+div#menu				    { padding-left: 20px; }
+div.container			    { position: relative; top: 0px; left: 0px; /* so that relative positioning of elements within is relative to this container and not the window */ }
+
+img#hits				    { width: 50px; height: 18px; vertical-align: top; position: relative; top: -1px; }
+
+div#footer-outer		    { margin-top : 20px; margin-bottom:  0px; padding-top: 20px; padding-bottom: 10px; }
+div#footer-inner		    { border-radius: 10px; padding: 10px 20px 10px 20px; background-color: rgba( 96, 96, 96, 0.6 ); }
+
+.hand					    { cursor: pointer; }
+
+.hidden					    { display: none; }
+.block					    { display: block; }
+
+.invisible					{ visibility: hidden; }
+
+.floatleft				    { float: left; }
+.floatright				    { float: right; }
+.clear					    { clear: both; }
+.clearleft				    { clear: left; }
+.clearright				    { clear: right; }
+
+.widthright                 { width: 340px; }
+
+.margintop				    { margin-top:      4px; }
+.marginbottom			    { margin-bottom:   4px; }
+.marginleft				    { margin-left:     8px; }
+.marginright			    { margin-right:    8px; }
+.marginnone				    { margin:  		   0px !important; }
+.padtop					    { padding-top:     4px; }
+.padbottom				    { padding-bottom:  4px; }
+.padleft				    { padding-left:    8px; }
+.padright				    { padding-right:   8px; }
+.padnone				    { padding:         0px; }
+.gaptop					    { margin-top:	  20px; }
+.gapbottom				    { margin-bottom:  20px; }
+.gapleft				    { margin-left:	  30px; }
+.gapright				    { margin-right:   30px; }
+.padgaptop				    { padding-top:	  20px; }
+.padgapbottom			    { padding-bottom: 20px; }
+
+.centre					    { text-align: center; }
+.right					    { text-align: right; }
+.top					    { vertical-align: top; }
+.middle					    { vertical-align: middle; }
+.bottom					    { vertical-align: bottom; }
+
+.narrow					    { width: 1px; }
+.wide					    { width: 100%; }
+input.wide				    { width: 95%; }
+select.wide				    { width: 95%; }
+
+.nowrap						{ white-space: nowrap; }
+
+.black					    { color: black; }
+.blue					    { color: blue; }
+.darkgrey				    { color: dimgray; }
+.grey					    { color: gray; }
+.lightgrey				    { color: lightgray; }
+.silver						{ color: silver; }
+.white						{ color: white; }
+
+.green                      { color: rgb( 19, 229, 72 ); }
+
+.bold						{ font-weight: bold; }
+.italic						{ font-style: italic; }
+.underline					{ text-decoration: underline; }
+.strike                     { text-decoration: line-through; }
+
+
+
+
+div#margins				    { max-width: 1600px; min-width: 940px; }
+
+div#left-side               { float: left; width: 420px; }
+div#right-side              { margin-left: 440px; }
+
+div.panel				    { background-color: white; background-color: rgba( 255, 255, 255, 0.6 ); }
+
+div#slides					{ opacity: 0; }
+
+div.slidepart				{ opacity: 0; }
+
+div#users-part-clickable    { margin: 10px 80px 20px 10px; padding: 15px 0px 10px 30px; }
+div#users-part-images		{ width: 220px; background-color: white; }
+div#users-full-images       { }
+
+img.user				    { width: 220px; height: 35px; display: block; }
+
+div.screenthumbinner        { margin: 0px 30px 10px 10px; padding-top: 20px; }
+
+div.gaptopmobile            { }
+
+img.featureimage            { width: 380px; }
+img.hotelimage              { width: 340px; height: 200px; }
+
+img#image-trial             { height: 250px; }
+img#image-more              { height: 235px; }
+
+.fastfade                   { transition: opacity 0.4s ease; }
+.imagefade                  { transition: opacity 1.9s ease; }
+.slowfade                   { transition: opacity 3.0s ease; }
+
+.large						{ font-size: 1.3em; }
+.medium						{ font-size: 1.1em; }
+.smaller					{ font-size: 0.9em; }
+.small						{ font-size: 0.8em; }
+</style>
+
+    	<style>
+
+		div.pdf			{ background-image: url( https://estisoft.com/images/pdf-back.png ); }
+		div.video		{ background-image: url( https://estisoft.com/images/video-back.png ); }
+
+	</style>
+	<script>
+
+    var bMobile    = false;
+
+	var	sAppName   = 'EstiMac',
+		sAppLower  = 'estimac',
+        sAppUpper  = 'ESTIMAC',
+		sAltName   = 'EstiPC';
+
+</script>
+	<script>
+
+        var bTCT          = false,
+            bShowDownload = false,
+            bShowTrial    = false,
+            bShowMore     = false;
+        var nInitDelay    = 10000,
+            nUserCount    = 6;
+
+        if( !bMobile && typeof window.innerHeight != 'undefined' ) nUserCount = Math.max( 4, Math.min( 32, Math.floor( ( window.innerHeight - ( bTCT ? 600 : 400 ) ) / 35 ) ) );
+
+    </script>
+	<script defer src="esti.js"></script>
+	<script defer src="start/start.js"></script>
+
+</head>
+
+<body onload="init(); showBrowserSize();" onresize="showBrowserSize();">
+
+   	<div class="hidden">    
+        
+    </div>
+
+	
+
+	<div id="margins">
+	
+		<div id="min-height">
+	
+			<div id="left-side">
+
+				
+<div id="menu" class="container panel panelleft gapbottom">
+
+	<img id="logo" src="https://estisoft.com/images/logo.png" alt="EstiMac" class="hand" onclick="reset(); location='/';">
+    	<img id="name" src="https://estisoft.com/images/estimac.png" alt="EstiMac - Interior Design Software" class="hand" onclick="reset(); location='/';">
+	<p id="slogan-placeholder">&nbsp;</p>
+	<div id="clickable-placeholder">&nbsp;</div>
+	<div class="clear"></div>
+
+	<div class="floatleft nonclickable" title="click to download, set up a free trial or find out more"   onclick="location='https://www.estimac.com/';">		   START </div>     	<div class="floatleft clickable" title="click to see screen shots and sample PDF documents"        onclick="location='https://www.estimac.com/features';"> FEATURES </div>
+	<div class="floatleft clickable" title="click to view the quick start and detailed guides"         onclick="location='https://www.estimac.com/guides';">   GUIDES </div>
+	<div class="floatleft clickable" title="click to watch the introduction and topic videos"          onclick="location='https://www.estimac.com/videos';">   VIDEOS </div>
+	<div class="floatleft clickable" title="click to find about about one day training seminars"       onclick="location='https://www.estimac.com/training';"> TRAINING </div>
+	<div class="floatleft clickable" title="click to contact us by web form, email or the help centre" onclick="location='https://www.estimac.com/contact';">  CONTACT </div>
+    	<div class="clear"></div>
+
+</div>
+
+				
+<div id="users-part" class="panel panelleft gaptopmobile gapbottom">
+
+    <div id="users-part-clickable" class="clickable" title="click to show more EstiMac and EstiPC users" onclick="hideExpands(); showFullUsers(); showSlides();">
+
+        <img src="https://estisoft.com/images/arrow-right.png" alt="" class="arrow floatright marginright padright">
+        <p class="padbottom">USED BY</p>
+        <div id="users-part-images">
+            <script>
+
+                for( var nUser = 0; nUser < nUserCount; nUser++ ) 
+                    document.write( '<img src="https://estisoft.com/images/users/blank.png" alt="" class="user imagefade">' );
+
+            </script>
+        </div>
+        <div class="clearleft"></div>
+        <p class="padtop margintop">and many more</p>
+        
+    </div>
+
+</div>
+
+                
+			</div> <!-- left-side -->
+
+			<div id="right-side">
+			
+				<div class="panel panelright">
+
+					<h1 id="slogan">Interior Design Business Software</h1>
+
+					<div id="title-download" class="clickable" title="click to show how to download and install EstiMac" onclick="hideFullUsers(); toggleExpand( 'download' ); showSlides();">
+						<img id="arrow-download" src="https://estisoft.com/images/arrow-down.png" alt="" class="arrow floatright">
+						<h2 class="arrow">DOWNLOAD AND INSTALL</h2>
+					</div>
+					<div class="expand" id="expand-download" style="display: none;">
+
+						
+						
+						<div class="clearright"></div>
+
+						<div class="floatright widthright clickable" title="click to download EstiMac" style="margin-top: 20px; margin-left: 30px; margin-right: 0px; padding: 20px;" onclick="location='https://esti.s3.eu-west-2.amazonaws.com/downloads/EstiMac-Install.pkg';">
+							<p class="medium marginnone">Download EstiMac</p>
+							<img src="https://estisoft.com/images/download.png" alt="Download" class="floatright" style="width: 60px; height: 58px; position: relative; top: -15px;">
+							<p class="margintop">Version 3.09k</p>
+                            <p class="lightgrey">Released 07 October 2024</p>
+							<p>&nbsp;</p>
+						</div>
+
+						<h3><span class="nowrap">New Users and Registered Users</span></h3>
+						<p>This download can be used by...</p>
+						<ul>
+							<li>New users setting up a one month free trial to evaluate the software</li>
+							<li>Registered users updating an older version</li>
+							<li>Registered users setting up a new computer</li>
+						</ul>
+                        <p>It&apos;s the same software for free trial and registered use.<br>A time-limited Access Code is used to unlock the software for the one month free trial period or the full licence period.</p>
+
+						<div class="clearright"></div>
+
+						<div class="floatright widthright guides gapleft gaptop gapbottom">
+							<p class="smaller padbottom">For more information about installing for the first time or updating an earlier version, have a look at...</p>
+							<div class="pdf" title="click to view the guide" onclick="location='https://estisoft.com/install/How_To_Install_Or_Update_EstiMac.pdf';">
+								<img src="https://estisoft.com/images/pdf-new.png" alt="PDF" class="floatleft pdf">
+								<p class="pdf">How to Install or Update EstiMac<br><span class="small silver">PDF setup guide</span></p>
+							</div>
+							<p class="smaller margintop padtop padbottom">To see what&apos;s new, have a look at...</p>
+							<div class="pdf" title="click to view the guide" onclick="location='https://estisoft.com/whats_new/Whats_New_3_09.pdf';">
+								<img src="https://estisoft.com/images/pdf-new.png" alt="PDF" class="floatleft pdf">
+								<p class="pdf">What&apos;s New in Version 3.09<br><span class="small silver">PDF new features guide</span></p>
+							</div>
+                            <p class="smaller margintop"><a href="https://www.estimac.com/features/history.php">Full Version History</a></p>
+						</div>
+
+						<h3><span class="nowrap">Installation Instructions</span></h3>
+						<div class="padbottom">
+                            <p>Click the green arrow to start downloading the software. Downloading should take less than a minute if you have a reasonable internet connection.</p>
+															<p>When the download is finished you may need to click or double-click it to begin the installation.</p>
+								<p>Click on Continue at each installation stage. When prompted, you&apos;ll need to enter your computer login password. If you&apos;re not an admin user you&apos;ll need to enter the name and password for an admin account.</p>
+								<p>EstiMac will open once the installation is finished.</p>
+													</div>
+
+						<div class="clearright"></div>
+
+					</div>
+
+					<div id="title-trial" class="clickable" title="click to show how to try EstiMac for free" onclick="hideFullUsers(); toggleExpand( 'trial' ); showSlides();">
+						<img id="arrow-trial" src="https://estisoft.com/images/arrow-down.png" alt="" class="arrow floatright">
+						<h2 class="arrow">TRY IT FOR FREE</h2>
+					</div>
+					<div class="expand" id="expand-trial" style="display: none;">
+							
+						<h3>Download and Install</h3>
+						<p>Start by <a href="javascript: toggleExpand( 'download' );">downloading and installing</a> the software, as described in the panel above. Click the green arrow to begin.</p>
+
+						<img id="image-trial" src="https://estisoft.com/images/office-160671665.jpg" alt="" class="floatright gapleft gaptop gapbottom featureimage">
+
+						<h3>Register for a One Month Free Trial Licence</h3>
+                        <p>After installing EstiMac you&apos;ll see a regristration form. Enter your name and contact details and select the option to start a free trial. You won&apos;t be asked for credit card or other payment details.</p>
+                        <p>You&apos;ll then be automatically registered for at least one month to help you fully evaluate the software. You can set up a few projects of your own and check that the software meets all your requirements.</p>
+
+						<h3><span class="nowrap">Open the Example Project</span></h3>
+						<p>Once your EstiMac free trial is set up, click on menu File / Open Example to see an example project which demonstrates most of the features of the software.</p>
+
+						<div class="clearright"></div>
+
+					</div>
+
+					<div id="title-more" class="clickable" title="click to show more about EstiMac" onclick="hideFullUsers(); toggleExpand( 'more' ); showSlides();">
+						<img id="arrow-more" src="https://estisoft.com/images/arrow-down.png" alt="" class="arrow floatright">
+						<h2 class="arrow">FIND OUT MORE</h2>
+					</div>
+					<div class="expand" id="expand-more" style="display: none;">
+
+						<div class="floatright widthright guides gapleft gaptop gapbottom">
+							<p class="smaller padbottom">For an introduction to using the software, have a look at the Quick Start Guides...</p>
+							<div class="pdf" title="click to view the guide" onclick="location='https://estisoft.com/quick_start/Estimating_Specifying_Reporting.pdf';">
+								<img src="https://estisoft.com/images/pdf-new.png" alt="PDF" class="floatleft pdf">
+								<p class="pdf">Estimating, Specifying And Reporting<br><span class="small silver">PDF quick start guide</span></p>
+							</div>
+							<div class="pdf" title="click to view the guide" onclick="location='https://estisoft.com/quick_start/Purchasing.pdf';">
+								<img src="https://estisoft.com/images/pdf-new.png" alt="PDF" class="floatleft pdf">
+								<p class="pdf">Purchasing<br><span class="small silver">PDF quick start guide</span></p>
+							</div>
+							<div class="pdf" title="click to view the guide" onclick="location='https://estisoft.com/quick_start/Client_Invoicing.pdf';">
+								<img src="https://estisoft.com/images/pdf-new.png" alt="PDF" class="floatleft pdf">
+								<p class="pdf">Client Invoicing<br><span class="small silver">PDF quick start guide</span></p>
+							</div>
+							<p class="smaller padbottom">and the Introduction Videos...</p>
+                            <div class="video" title="click to view the video" onclick="location='https://player.vimeo.com/video/110267664?autoplay=1&quality=1080p';">
+                                <img src="https://estisoft.com/images/video.png" alt="Video" class="floatleft video">
+                                <p class="video">Getting Started<br><span class="small silver">introduction video</span></p>
+                            </div>
+                            <div class="video" title="click to view the video" onclick="location='https://player.vimeo.com/video/118912891?autoplay=1&quality=1080p';">
+                                <img src="https://estisoft.com/images/video.png" alt="Video" class="floatleft video">
+                                <p class="video">Purchasing<br><span class="small silver">introduction video</span></p>
+                            </div>
+                            <div class="video" title="click to view the video" onclick="location='https://player.vimeo.com/video/123044567?autoplay=1&quality=1080p';">
+                                <img src="https://estisoft.com/images/video.png" alt="Video" class="floatleft video">
+                                <p class="video">Invoicing<br><span class="small silver">introduction video</span></p>
+                            </div>
+						</div>
+
+						<h3><span class="nowrap">Features and Benefits</span></h3>
+						<p>EstiMac helps you keep control of the financial and administrative aspects of interior design projects. It&apos;s simple and efficient, leaving you more time for creative work.</p>
+						<p>EstiMac handles all your project information including descriptions, images, confidential details, costings, markups and fees. It uses this information selectively to generate client estimates, invoices and statements, supplier orders, contractor listings, management reports and summaries.</p>
+						<p>EstiMac saves you time and money by increasing efficiency, avoiding duplication, eliminating financial and administrative mistakes, monitoring project cash flow and analysing profitability.</p>
+
+						<h3>Technology and Security</h3>
+						<p>EstiMac is designed, programmed and supported in the UK and used all around the world. It&apos;s an original, stable and secure product, based on over 20 years&apos; experience of interior design business software.</p>
+						<p>EstiMac is self-contained, stand-alone software. It&apos;s not based on other office or database software.</p>
+						<p>EstiMac puts you in control of your projects and data. It runs directly and securely on your computer. It&apos;s not a cloud or web-based service so don&apos;t need to rely on internet connections or service providers. The risks of exposing your client&apos;s confidential information to cloud service security threats is minimised.</p>
+						<p class="gaptop">Got a PC? You need...</p>
+						<p><a href="https://www.estipc.com"><img src="https://estisoft.com/images/estipc.png" alt="EstiPC - Interior Design Software for PC" width="143" height="30"><br>www.estipc.com</a></p>
+
+						<img id="image-more" src="https://estisoft.com/images/office-189811220.jpg" alt="" class="floatleft gapright gaptop gapbottom featureimage">
+						
+						<div style="min-height: 260px;">
+							<h3><span class="nowrap">Networking and Sharing</span></h3>
+							<p>In larger companies EstiMac can be configured to share projects and data between many users.</p>
+							<p>Sharing can be implemented using a network server, shared network drive or a cloud service such as Dropbox or Google Drive.</p>
+							<p>It&apos;s even possible to share using mixed networks of Macs and PCs as EstiMac and EstiPC projects and data are fully compatible.</p>
+						</div>
+						
+						<h3>Licensing and Pricing</h3>
+						<p>EstiMac is sold as an annual licence. A separate licence is required for each computer on which you use the software.</p>
+						<p>Charging in this way minimises your initial costs and enables us to continue to develop and enhance the software.</p>
+						<div class="guides" style="margin: 10px 0px 10px 0px; padding: 10px 20px 10px 20px;">
+							<p>Licences are priced at...</p>
+							<ul>
+								<li><b>&pound;350</b> UK / &euro;405 EU / $440 US - per year - single licence</li>
+								<li><b>&pound;300</b> UK / &euro;345 EU / $375 US - per licence per year - 2 to 5 licences</li>
+								<li><b>&pound;250</b> UK / &euro;290 EU / $315 US - per licence per year - 6 or more licences</li>
+							</ul>
+							<p>This includes software updates and support via our online help centre and email. 
+						</div>
+						<p>A further payment is required every year to renew the licence. If you ever decide not to renew your licences you&apos;ll still be able to view your existing projects and data.</p>
+						<p class="small grey">VAT is charged at 20% to UK users. The above prices are exclusive of VAT.</p>
+						<p class="small grey">EU and US prices are aproximate. Payment is by credit card, debit card or direct bank transfer in UK pounds sterling at the current exchange rate.</p>
+						<p class="small"><a href="https://www.estimac.com/start/terms.php">Licence Agreement</a></p>
+						<p class="small"><a href="https://www.estimac.com/start/privacy.php">Privacy Policy</a></p>
+
+						<h3>Request a Quotation / Pro Forma</h3>
+						<p>Just send us your details and let us know how many licences you require. We&apos;ll email you a quotation / pro forma including online payment details.</p>
+												
+						<div class="clearright"></div>
+						<form method="post" action="/?submit" onsubmit="return checkFormQuotation();" id="form-quotation" class="esti">
+							<table class="wide">
+								<tr><td class="padtop padright padbottom">Name     </td><td colspan="2"><input type="text"  value="" name="name"    class="wide"></td></tr>
+								<tr><td class="padtop padright padbottom">Company  </td><td colspan="2"><input type="text"  value="" name="company" class="wide"></td></tr>
+								<tr><td class="padtop padright padbottom">Address  </td><td colspan="2"><input type="text"  value="" name="address" class="wide"></td></tr>
+								<tr><td class="padtop padright padbottom">Email    </td><td colspan="2"><input type="email" value="" name="email"   class="wide"></td></tr>
+								<tr><td class="padtop padright padbottom">Licences </td><td class="padright narrow"><input type="number" min="1" value="1" name="licences" style="width: 100px;"></td><td class="padtop darkgrey">(a licence is required for each computer on which you use EstiMac)</td></tr>
+                                <tr><td class="padtop padright padbottom top">Questions, <br>comments, <br>and details <br><span class="darkgrey">(optional)</span></td><td class="padright" colspan="2"><textarea name="message" class="wide" style="height: 80px; margin-top: 2px; resize: none;"></textarea></td></tr>
+								<tr><td class="narrow"></td><td colspan="2" class="padtop"><input type="submit" value="Send" style="width: 102px;"><input type="hidden" name="request" value="quotation"></td></tr>
+							</table>							
+						</form>
+                        <p class="small grey">This information will be processed and retained in accordance with our <a href="https://www.estimac.com/start/privacy.php">Privacy Policy</a>.</p>
+
+					</div>
+
+				</div>
+				
+				<div id="slides" class="panel slowfade">
+                    					<div style="height: 30px;"></div>
+					<div id="features-part" class="slide slidepart slideall slowfade" title="click to show the full list of features" onclick="showFullSlide( 'features', true );">
+						<p id="feature" class="large fastfade">&nbsp;</p>
+						<img id="arrow-feature" src="https://estisoft.com/images/arrow-down.png" alt="" class="arrow gaptop">
+					</div>
+					<div id="features-full" class="slide slidefull" style="display: none;" title="click to hide the full list of features" onclick="showFullSlide( 'features', false );">						
+						<div class="slideall" >
+							<div id="features-list" class="large"></div>
+							<img src="https://estisoft.com/images/cross.png" alt="" class="arrow gaptop">
+						</div>							
+					</div>
+					<div style="height: 30px;"></div>
+					<div id="quotes-part" class="slide slidepart slideall slowfade" title="click to show the full list of testimonials" onclick="showFullSlide( 'quotes', true );">
+						<p id="quote" class="italic medium fastfade">&nbsp;</p>
+						<p id="designer" class="fastfade padtop">&nbsp;</p>
+						<img src="https://estisoft.com/images/arrow-down.png" alt="" class="arrow gaptop">
+					</div>
+					<div id="quotes-full" class="slide slidefull" style="display: none;" title="click to hide the full list of testimonials">						
+						<div class="slideupper" onclick="showFullSlide( 'quotes', false );">
+							<p class="italic">&quot;I have been using EstiMac from the first day it was released and have found it an invaluable tool for our business. It saves a huge amount of office time when preparing estimates, orders and invoices, and helps you keep a tight grip on project costs which is so important in our job. I honestly can&apos;t imagine running an interior design business without it!&quot;</p>
+						</div>
+						<div class="slidemid userlink" title="click to go to the website" onclick="location='http://www.salvesengraham.com/';">
+							<p class="padtop">Mary Graham<br>Salvesen Graham, London<br>www.salvesengraham.com</p>
+						</div>
+                        <div class="slideupper" onclick="showFullSlide( 'quotes', false );">
+							<p class="italic">&quot;My business couldn&apos;t function without EstiMac. It gives me complete confidence.&quot;</p>
+						</div>
+						<div class="slidemid userlink" title="click to go to the website" onclick="location='http://www.henriettastevenson.com';">
+							<p class="padtop">Henrietta Stevenson<br>Henrietta Stevenson Design, London<br>www.henriettastevenson.com</p>
+						</div>
+                        <div class="slideupper" onclick="showFullSlide( 'quotes', false );">
+							<p class="italic">&quot;We urgently needed a software package which could meet the demands of our expanding business and keep tight financial control of the costs being incurred on every project. EstiMac was the solution. As we transferred our records to EstiMac we detected formulation errors in our spreadsheets. The investment in EstiMac paid for itself on the very first day!&quot;</p>
+							<p class="italic padtop">&quot;EstiMac has allowed us to increase the level of activity in the business, without employing additional resources, whilst also giving us a robust purchase ordering, sales invoicing and work in progress monitoring system which ensures that all costs incurred on a project are fully recharged. Purchasing EstiMac has proved to be the best investment our business has made.&quot;</p>
+						</div>
+						<div class="slidemid userlink" title="click to go to the website" onclick="location='http://www.the-idp.com';">
+							<p class="padtop">Brendan Corkery<br>The Interior Design Partnership, Edinburgh<br>www.the-idp.com</p>
+						</div>
+						<div class="slideupper" onclick="showFullSlide( 'quotes', false );">
+							<p class="italic">&quot;EstiMac has helped us stay focused on our designs whilst taking the headache out of all the administration.&quot;</p>
+							<p class="italic padtop">&quot;For someone who is juggling jobs for a small business I can&apos;t rate the software highly enough. You guys really do give a lot of support too.&quot;</p>
+						</div>
+						<div class="slidemid userlink" title="click to go to the website" onclick="location='http://www.annewebsterdesigns.com';">
+							<p class="padtop">Anne Webster<br>Anne Webster Designs, Sydney<br>www.annewebsterdesigns.com</p>
+						</div>
+						<div class="slideupper" onclick="showFullSlide( 'quotes', false );">
+							<p class="italic">&quot;The supplier charge control features are amazing - we never spend over on client deposits on account. Ordering is effortless and I love the codes system - it has so many possibilities - brilliant!&quot;</p>
+						</div>
+						<div class="slidemid userlink" title="click to go to the website" onclick="location='http://www.srpdesigns.co.uk';">
+							<p class="padtop">Stephen Richardson-Pope<br>Stephen Richardson-Pope Designs, London<br>www.srpdesigns.co.uk</p>
+						</div>
+						<div class="slideupper" onclick="showFullSlide( 'quotes', false );">
+							<p class="italic">&quot;EstiMac has been with us from day one and forms the essential basis to our project coordination. We always feel confident using it as projects progress and details change, knowing that the software does the background calculations and keeps everything up to date, with all the information we need in one place.&quot;</p>
+						</div>
+						<div class="slidemid userlink" title="click to go to the website" onclick="location='http://www.emmahooton.com/';">
+							<p class="padtop">Emma Hooton<br>Emma Hooton Interior Design, Winchester<br>www.emmahooton.com</p>
+						</div>
+                        <div class="slideupper userlink" title="click to contact us" onclick="location='/contact/';">
+							<p class="padtop">please <span class="underline">contact</span> us if you would like to contribute your own testimonial</p>
+						</div>
+						<div class="slidelower" onclick="showFullSlide( 'quotes', false );">
+							<img src="https://estisoft.com/images/cross.png" alt="" class="arrow gaptop">
+						</div>
+					</div>
+					<div style="height: 30px;"></div>
+					
+				</div>
+
+			</div> <!-- right-side -->
+
+			
+            
+			<div id="users-full" class="panel panelleft gaptop gapbottom" style="display: none;">
+
+				<div class="clickable" title="click to hide these users" style="margin: 10px 30px 20px 10px; padding: 15px 0px 10px 30px;" onclick="hideFullUsers(); showSlides();">
+					<img src="https://estisoft.com/images/cross.png" alt="" class="arrow floatright marginright padright">
+					<p class="padbottom">USED BY</p>
+					<div id="users-full-images" class="gapright">
+						<img src="https://estisoft.com/images/users/blank.png" alt="1508.png              / 1508, London"												class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="absoluteabode.png     / Absolute Abode, London"            				        class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="accouter.png          / Accouter Design, London"            				        class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="adambray.png          / Adam Bray, London"										class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="aji.png               / Alexander James Interiors, Berkshire" 		  			class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="alexandradixon.png    / Alexandra Dixon Interiors, Buckinghamshire"  				class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="aliceleigh.png        / Alice Leigh Design, London"   	  				        class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="amandamurray.png      / Amanda Murray Design, Saffron Walden"   	  				class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="annewebster.png       / Anne Webster Designs, Sydney"                             class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="anouskahempel.png     / Anouska Hempel Design, London"							class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="annahewitson.png      / Anna Hewitson Design, London"								class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="apponyi.png           / Apponyi Design, London"           				        class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="aprilrussell.png      / April Russell Interior Design, London"		  			class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="argent.png            / Argent Design, London"							        class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="averilblundell.png    / Averil Blundell Interior Design, Yorkshire" 		  		class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="barclay.png           / Barclay Interiors, Ascot"									class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="bernhart.png          / Bernhart, Newcastle"										class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="beyond.png            / Beyond The Hall Door, Dublin"								class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="billbenette.png       / Bill Bennette Design, London"								class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="boscolo.png           / Boscolo, London"                                          class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="cardencunietti.png    / Carden Cunietti, London"   	  				            class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="carolinepaterson.png  / Caroline Paterson Interiors, London"		  				class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="carolynparker.png     / Carolyn Parker Interior Design, York"		  				class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="casaforma.png         / Casa Forma, London"										class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="casuscasa.png         / Casus Casa, Amsterdam"									class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="catalyst.png          / Catalyst Contract Interiors, Chester"						class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="crossland.png         / Charlotte Crossland Interiors, London" 			      	class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="cloudstudios.png      / Cloud Studios, London and Oxford"  		      			class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="cochrane.png          / Cochrane Design, London"									class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="colbourns.png         / Colbourns Hand Tufted Carpets, London" 			      	class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="conceptinteriors.png  / Concept Interiors, Weybridge" 			      			class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="cottontree.png        / Cotton Tree Interiors, Suffolk" 			      			class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="dargielewis.png       / Dargie Lewis Designs, London" 			      			class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="daviesyates.png       / Davies and Yates Interior Design, Cheshire" 			    class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="designedinteriors.png / Designed Interiors, London" 			      				class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="devasdesigns.png      / Devas Designs, London"									class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="dhinterior.png        / DH Interior Design, Edinburgh" 							class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="dkinteriors.png       / DK Interiors, London" 			      					class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="dmackie.png           / Douglas Mackie Design, London"							class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="downers.png           / Downers Design, London"					  				class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="emmahooton.png        / Emma Hooton Interior Design, Winchester"					class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="evernden.png          / Evernden Interiors, Cranbrook"							class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="fentonwhelan.png      / Fenton Whelan, London"                                    class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="finchatton.png        / Finchatton, London"      					  				class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="fionabarratt.png      / Fiona Barratt Interiors, London"							class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="folio.png             / Folio Design, London"      					  			class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="forest.png            / Forest Interiors, Essex"      					  		class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="fransesdesign.png     / Franses Design, London"									class="user floatleft part">
+                        <img src="https://estisoft.com/images/users/blank.png" alt="gemmazimmerhansl.png  / Gemma Zimmerhansl Interior Design, London"                class="user floatleft">
+                        <img src="https://estisoft.com/images/users/blank.png" alt="genevievehurley.png   / Genevieve Hurley Interiors, London"                       class="user floatleft">
+                        <img src="https://estisoft.com/images/users/blank.png" alt="goddardlittlefair.png / Goddard Littlefair Interior Architectural Design, London" class="user floatleft part">
+                        <img src="https://estisoft.com/images/users/blank.png" alt="gordondufflinton.png  / Gordon-Duff &amp; Linton, London"                         class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="gracaviterbo.png      / Graca Viterbo, Estoril"                                   class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="grantwhite.png        / Grant White Design, London"								class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="grove.png             / Grove Interiors, London"                                  class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="guygoodfellow.png     / Guy Goodfellow, Architectural Design, London" 			class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="halo.png              / Halo Design Interiors, Weybridge" 	   		  			class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="hambleton.png         / Hambleton Decorating, Rutland"   	   		  				class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="hamilford.png         / Hamilford Design, London"									class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="anstruther.png        / Harriet Anstruther Studio, London"   	  				    class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="hayleymanning.png     / Hayley Manning Interior Design, London"   	  			class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="hazelcollins.png      / Hazel Collins Design, London" 			      			class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="hbinterior.png        / HB Interior, London"										class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="helengreen.png        / Helen Green Design, London"								class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="stephenson.png        / Henrietta Stephenson Design, London"						class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="hillhouse.png         / Hill House Interiors, Weybridge"  	   		  			class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="honky.png             / Honky Design, London"										class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="howlandjackson.png    / Howland Jackson Interior Design, London"					class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="zandberg.png          / Hubert Zandberg Interiors, London"				        class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="hughleslie.png        / Hugh Leslie, Interior Design and Decoration, London"   	class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="iansmith.png          / Ian Smith Design, Edinburgh"	              				class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="lindemann.png         / Ina Lindemann Interior Design, London"   	  				class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="inara.png             / Inara Interiors, Surrey"   	   		      				class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="idp.png               / The Interior Design Partnership, Edinburgh"				class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="ids.png               / The Interior Design School, London"						class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="janechurchill.png     / Jane Churchill Interiors, London"  		      			class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="janeclayton.png       / Jane Clayton And Company, Bristol"  		      			class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="pricestephens.png     / Jane Price-Stephens, London"								class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="janinestone.png       / Janine Stone, London and Cheshire"						class="user floatleft part">
+                        <img src="https://estisoft.com/images/users/blank.png" alt="jarvisrayes.png       / Jarvis Rayes, Berkshire"                                     class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="jeffreys.png          / Jeffreys Interiors, Edinburgh"   	   		  				class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="jessicabrook.png      / Jessica Brook Design, London"   	   		      			class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="joanaaranha.png       / Joana Aranha, Lisbon"            				            class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="joannatrading.png     / Joanna Trading, Interior Design, London"	  				class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="katharinepooley.png   / Katharine Pooley, London"									class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="kelling.png           / Kelling Designs, London"   	  				            class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="kensingtondesign.png  / Kensington Design, London"   	  				            class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="kitesgrove.png        / Kitesgrove Design, London"   	  				            class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="klc.png               / KLC School Of Design, London"   	  				        class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="landc.png             / The L and C Company, Surrey"   	  				        class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="lambertthurnherr.png  / Lambert and Thurnherr Interiors, London"                  class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="laurahammett.png      / Laura Hammett, London"									class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="lauramassey.png       / Laura Massey Design, London"								class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="lawsonrobb.png        / Lawson Robb Associates, London"							class="user floatleft part">
+                        <img src="https://estisoft.com/images/users/blank.png" alt="leconfield.png        / Leconfield Property Group, London"						class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="leveson.png           / Leveson Design, London"   	  				            class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="linley.png            / Linley, London"											class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="livinginspace.png     / Living In Space, London"									class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="louisebradley.png     / Louise Bradley, London"								    class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="louisejones.png       / Louise Jones Interiors, Richmond"                         class="user floatleft part">
+                        <img src="https://estisoft.com/images/users/blank.png" alt="lmdesigns.png         / LM Designs, Berkshire"									class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="marchwhite.png        / March and White, London"									class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="markwatty.png         / Mark Watty and Company, London"							class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="martinhulbert.png	    / Martin Hulbert Design, London"							class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="marianorossouw.png    / Mariano Rossouw Interior Design Solutions, Cape Town"		class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="matrushka.png         / Matrushka, London"										class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="matthewgodley.png     / Matthew Godley Interior Design, London"					class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="maxrollitt.png        / Max Rollitt, Hampshire"	  								class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="mcwhirtermorris.png   / McWhirter Morris Interior Decoration, London"	  			class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="melissawyndham.png    / Melissa Wyndham Design and Decoration, London"			class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="michaelreeves.png     / Micael Reeves Associates, London"		      				class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="mlinaric.png          / Mlinaric, Henry and Zervudachi, London and Paris"			class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="nataliabarbour.png    / Natalia Barbour Interior Design, Guildford"               class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="nelsondesign.png      / Nelson Design, London"									class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="nickybailey.png       / Nicky Bailey Interior Works, London and East Sussex"		class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="nicolaharding.png     / Nicola Harding Interior and Garden Design, London"		class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="ninacampbell.png      / Nina Campbell Interior Design, London"   	  				class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="nuttall.png           / Nuttall Home, London"										class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="olala.png             / O La La Interiors, Ballito"								class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="oldbrandnewid.png     / Old Brand New ID, London"									class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="olive.png             / Olive Design Studio, London"                              class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="oliverburns.png       / Oliver Burns, St Albans"                                  class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="peacock.png           / Peacock I Design, Cape Town"								class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="pippapaton.png        / Pippa Paton Design, Oxford"								class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="progressive.png       / Progressive Designers, Kent"								class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="rddesign.png	        / RD Design, Warwickshire"									class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="redesignlondon.png    / Redesign London, London"									class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="ritakonig.png	        / Rita Konig, London"										class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="robinson.png          / Robinson Design, London"									class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="roccoforte.png        / Rocco Forte Hotels, London" 								class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="roomcompany.png       / The Room Company, London" 								class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="roseuniacke.png       / Rose Uniacke, London"	              						class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="russellsage.png       / Russell Sage Studio, London" 								class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="sallyabram.png        / Sally Abram Studio, High Wycombe"            				class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="salvesengraham.png    / Salvesen Graham Interior Design and Decoration, London"	class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="sarahdelaney.png      / Sarah Delaney Design, London" 			      			class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="nielsen.png           / Sarah Jane Nielsen Interior Design, Cumbria"				class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="sgsdesign.png         / SGS Design, Tunbridge Wells"	              				class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="simmons.png           / Simmons Interiors, Surrey"             					class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="soane.png             / Soane Britain, London"	              					class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="stellamannering.png   / Stella Mannering, Oxford"									class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="dunning.png           / Stephanie Dunning, Salisbury"								class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="stephenclasper.png    / Stephen Clasper Interiors, Surrey"						class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="stephenryan.png       / Stephen Ryan Design and Decoration, London"	  			class="user floatleft part">
+                        <img src="https://estisoft.com/images/users/blank.png" alt="studioaida.png        / StudioAida, London"                                       class="user floatleft part">
+                        <img src="https://estisoft.com/images/users/blank.png" alt="alidad.png            / Studio Alidad, London"                                    class="user floatleft part">
+                        <img src="https://estisoft.com/images/users/blank.png" alt="studiok.png           / Studio K Design, London"                                  class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="susieatkinson.png     / Susie Atkinson Design, London"							class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="tessuto.png           / Tessuto Interiors, London"								class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="timothyhatton.png     / Timothy Hatton Architects, London"						class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="triciadouglas.png     / Tricia Douglas, York" 			      					class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="turnerpocock.png      / Turner Pocock Interior Design, London"					class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="tylermandic.png       / Tyler Mandic, London"										class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="victoriafairfax.png   / Victoria Fairfax, London"      					  		class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="weller.png            / Weller Design, Gloucestershire"							class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="whitelinen.png        / White Linen Interiors, Richmond"							class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="wickendenhutley.png   / Wickenden Hutley, London"									class="user floatleft part">
+						<img src="https://estisoft.com/images/users/blank.png" alt="woodward.png          / Woodward McCausland, London"                              class="user floatleft">
+						<img src="https://estisoft.com/images/users/blank.png" alt="woolf.png             / Woolf Interior Architecture And Design, London"           class="user floatleft">
+					</div>
+					<p class="clearleft" style="padding-top: 8px;">and more</p>
+				</div>
+
+			</div> <!-- users-full -->
+		
+		</div> <!-- min-height -->
+
+		
+<div id="footer-outer">
+
+	<div id="footer-inner" class="centre small">
+
+		<span class="nowrap">Copyright &copy; 2008 - 2026 Esti Software Ltd.</span>
+        <span class="nowrap">All rights reserved.</span>&nbsp;&nbsp;
+        <span id="footer-size">0 x 0</span>&nbsp;&nbsp;
+        <span class="hand" onclick="window.open( 'http://validator.w3.org/check?uri='                + encodeURIComponent( location.href ), 'html' );">HTML5</span>&nbsp;&nbsp;
+        <span class="hand" onclick="window.open( 'http://jigsaw.w3.org/css-validator/validator?uri=' + encodeURIComponent( location.href ), 'css'  );">CSS3</span>&nbsp;&nbsp;
+        AWS&nbsp;&nbsp;
+        <span class="nowrap">Modified 12 November 2024.</span>
+
+    </div>
+
+    <div class="centre margintop padtop padbottom gapleft gapright small">
+
+        &bull; <a href="/"         title="download, set up a free trial or find out more"   >Start</a>
+        &bull; <a href="/features" title="see screen shots and sample PDF documents"        >Features</a>
+        &bull; <a href="/guides"   title="view the quick start and detailed guides"         >Guides</a>
+        &bull; <a href="/videos"   title="watch the introduction and topic videos"          >Videos</a>
+        &bull; <a href="/training" title="find about about one day training seminars"       >Training</a>
+        &bull; <a href="/contact"  title="contact us by web form, email or the help centre" >Contact</a>
+
+        &bull; <a href="/start/terms.php"   title="check our licence agreement" >Licence&nbsp;Agreement</a>
+        &bull; <a href="/start/privacy.php" title="check our privacy policy"    >Privacy&nbsp;Policy</a>
+
+        &bull;
+
+    </div>
+
+</div>
+
+	</div> <!-- margins -->
+
+	
+    
+        <link rel="stylesheet" type="text/css" href="esti.css">
+        <link rel="stylesheet" type="text/css" href="esti-computer.css">
+
+    
+	<img src="https://estisoft.com/images/cross.png" alt="" style="display: none;">	
+</body>
+
+</html>

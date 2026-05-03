@@ -1,0 +1,719 @@
+<!doctype html>
+<html class="no-js" lang="en-US" >
+	<head>
+		<meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false},ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"1bf2c69c97",applicationID:"157999336",browserID:"158430007"};;/*! For license information please see nr-loader-rum-1.313.1.min.js.LICENSE.txt */
+(()=>{var e,t,r={163:(e,t,r)=>{"use strict";r.d(t,{j:()=>T});var n=r(384),i=r(1741);var s=r(2555);r(860).K7.genericEvents;const o="experimental.resources",a="register",c=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var u=r(2614),d=r(944),l=r(8122);const f="[data-nr-mask]",g=e=>(0,l.a)(e,(()=>{const e={feature_flags:[],experimental:{register:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{register:{get enabled(){return e.feature_flags.includes(a)||e.experimental.register},set enabled(t){e.experimental.register=t},duplicate_data_to_container:!1}},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(o)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:u.wk,inactiveMs:u.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){c(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,d.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){c(t)?e.block_selector+=",".concat(t):""!==t&&(0,d.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,d.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var p=r(6154),m=r(9324);let h=0;const v={buildEnv:m.F3,distMethod:m.Xs,version:m.xv,originTime:p.WN},b={consented:!1},y={activatedFeatures:void 0,appMetadata:{},configured:!1,get consented(){return this.session?.state?.consent||b.consented},set consented(e){b.consented=e},customTransaction:void 0,denyList:[],disabled:!1,drainRegistry:new Map,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++h}},_=e=>{const t=(0,l.a)(e,y),r=Object.keys(v).reduce((e,t)=>(e[t]={value:v[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)},w=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var x=r(7836),R=r(3241);const k={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A=e=>(0,l.a)(e,k);function T(e,t={},r,o){let{init:a,info:c,loader_config:u,runtime:d={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();a=e.init,c=e.info,u=e.loader_config}e.init=g(a||{}),e.loader_config=A(u||{}),c.jsAttributes??={},p.bv&&(c.jsAttributes.isWorker=!0),e.info=(0,s.D)(c);const f=e.init;e.runtime??=_(d),f.proxy.assets&&w(f.proxy.assets),e.runtime.configured||(Object.defineProperty(e,"beacons",{get:()=>[e.info.beacon,e.info.errorBeacon,e.init.proxy.assets,e.init.proxy.beacon].filter(Boolean)}),Object.defineProperty(e.runtime,"denyList",{get:()=>[...e.init.ajax.deny_list||[],...e.init.ajax.block_internal?e.beacons:[]]}),e.runtime.ptid=e.agentIdentifier,function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach(r=>{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let s=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return s?s(...t):n})})}(e),e.runtime.loaderType=r,e.ee=x.ee.get(e.agentIdentifier),e.exposed=l,(0,R.W)({drained:!!e.runtime.activatedFeatures,type:"lifecycle",name:"initialize",feature:void 0,data:e.config}),e.runtime.configured=!0)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>a,Zm:()=>c,bQ:()=>d,dV:()=>u,pV:()=>l});var n=r(6154),i=r(1863),s=r(944),o=r(1910);const a={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function u(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,o.i)(...Object.values(e.o))),e}function d(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,s.R)(69)}function l(){return function(){let e=c();const t=e.info||{};e.info={beacon:a.beacon,errorBeacon:a.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),u(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>d,K7:()=>c,P3:()=>u,XX:()=>i,Yy:()=>a,df:()=>s,qY:()=>n,v4:()=>o});const n="events",i="jserrors",s="browser/blobs",o="rum",a="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations"},u={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.softNav]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.sessionReplay]:8,[c.logging]:9,[c.genericEvents]:10},d={[c.pageViewEvent]:o,[c.pageViewTiming]:n,[c.ajax]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:s,[c.sessionReplay]:s,[c.logging]:a,[c.genericEvents]:"ins"}},944:(e,t,r)=>{"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>a,Ze:()=>u,x3:()=>c});var n=r(3241),i=r(3606),s=r(860),o=r(2646);function a(e,t){if(!e)return;const r={staged:!1,priority:s.P3[t]||0};e.runtime.drainRegistry.get(t)||e.runtime.drainRegistry.set(t,r)}function c(e,t){if(!e)return;const r=e.runtime.drainRegistry;r&&(r.get(t)&&r.delete(t),l(e,t,!1),r.size&&d(e))}function u(e,t="feature",r=!1){if(e){if(!e.runtime.drainRegistry.get(t)||r)return l(e,t);e.runtime.drainRegistry.get(t).staged=!0,d(e)}}function d(e){if(!e)return;const t=Array.from(e.runtime.drainRegistry);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{e.runtime.drainRegistry.delete(t),l(e,t)}))}function l(e,t,r=!0){if(!e)return;const s=e.ee,a=i.i.handlers;if(s&&!s.aborted&&s.backlog&&a){if((0,n.W)({type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=a[t];if(r){for(let t=0;e&&t<e.length;++t)f(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof o.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}s.isolatedBacklog||delete a[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function f(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],s=e[2];n.apply(i,s)}})}},1738:(e,t,r)=>{"use strict";r.d(t,{U:()=>f,Y:()=>l});var n=r(3241),i=r(9908),s=r(1863),o=r(944),a=r(3969),c=r(8362),u=r(860),d=r(4261);function l(e,t,r,s){const l=s||r;!l||l[e]&&l[e]!==c.d.prototype[e]||(l[e]=function(){(0,i.p)(a.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({drained:!!r.runtime?.activatedFeatures,type:"data",name:"api",feature:d.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,o.R)(23,e)}})}function f(e,t,r,n,o){const a=e.info;null===r?delete a.jsAttributes[t]:a.jsAttributes[t]=r,(o||null===r)&&(0,i.p)(d.Pl+n,[(0,s.t)(),t,r],void 0,"session",e.ee)}},1741:(e,t,r)=>{"use strict";r.d(t,{W:()=>s});var n=r(944),i=r(4261);class s{#e(e,...t){if(this[e]!==s.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},1910:(e,t,r)=>{"use strict";r.d(t,{i:()=>s});var n=r(944);const i=new Map;function s(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),s=t.includes("nrWrapper");return r||s||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},2555:(e,t,r)=>{"use strict";r.d(t,{D:()=>a,f:()=>o});var n=r(384),i=r(8122);const s={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function o(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const a=e=>(0,i.a)(e,s)},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>o,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>a,uh:()=>i,wk:()=>s});const n="NRBA",i="SESSION",s=144e5,o=18e5,a={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},2843:(e,t,r)=>{"use strict";r.d(t,{G:()=>s,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function s(e,t,r){(0,n.sp)("pagehide",e,t,r)}},3241:(e,t,r)=>{"use strict";r.d(t,{W:()=>s});var n=r(6154);const i="newrelic";function s(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>s});var n=r(9908);s.on=o;var i=s.handlers={};function s(e,t,r,s){o(s||n.d,i,e,t,r)}function o(e,t,r,i,s){s||(s="feature"),e||(e=n.d);var o=t[s]=t[s]||{};(o[r]=o[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function s(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>s,jT:()=>n,sp:()=>i})},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>a,rs:()=>i,xV:()=>o,z_:()=>s});const n=r(860).K7.metrics,i="sm",s="cm",o="storeSupportabilityMetrics",a="storeEventMetrics"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(1687);class i{constructor(e,t){this.agentRef=e,this.ee=e?.ee,this.featureName=t,this.blocked=!1}deregisterDrain(){(0,n.x3)(this.agentRef,this.featureName)}}},4261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>u,BL:()=>a,CH:()=>g,Dl:()=>_,Fw:()=>y,PA:()=>h,Pl:()=>n,Pv:()=>k,Tb:()=>l,U2:()=>s,V1:()=>R,Wb:()=>x,bt:()=>b,cD:()=>v,d3:()=>w,dT:()=>c,eY:()=>p,fF:()=>f,hG:()=>i,k6:()=>o,nb:()=>m,o5:()=>d});const n="api-",i="addPageAction",s="addToTrace",o="addRelease",a="finished",c="interaction",u="log",d="noticeError",l="pauseReplay",f="recordCustomEvent",g="recordReplay",p="register",m="setApplicationVersion",h="setCurrentRouteName",v="setCustomAttribute",b="setErrorHandler",y="setPageViewName",_="setUserId",w="start",x="wrapLogger",R="measure",k="consent"},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,Qr:()=>c,sB:()=>a});var n=r(3878),i=r(6389);function s(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(s())return e();const r=(0,i.J)(e),o=setInterval(()=>{s()&&(clearInterval(o),r())},500);(0,n.sp)("load",r,t)}function a(e){if(s())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(s())return e();(0,n.sp)("popstate",e)}},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>u,RI:()=>i,WN:()=>l,bv:()=>s,gm:()=>o,m:()=>c,mw:()=>a,sb:()=>d,zk:()=>f});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,s="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),c=""+o?.location,u=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),d=u&&"undefined"==typeof SharedWorker,l=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)()),f=()=>{const e=o?.performance?.getEntriesByType?.("navigation")?.[0];if(e&&e.responseStart>0&&e.responseStart<o.performance.now())return e}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},7699:(e,t,r)=>{"use strict";r.d(t,{It:()=>s,KC:()=>a,No:()=>i,qh:()=>o});var n=r(860);const i=16e3,s=1e6,o="SESSION_ERROR",a={[n.K7.logging]:!0,[n.K7.genericEvents]:!0,[n.K7.jserrors]:!0,[n.K7.ajax]:!0}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>a,ee:()=>c});var n=r(384),i=r(8990),s=r(2646),o=r(5607);const a="nr@context:".concat(o.W),c=function e(t,r){var n={},o={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,s){!1!==s&&(s=!0);if(c.aborted&&!i)return;t&&s&&t.emit(e,r,n);var a=g(n);m(e).forEach(e=>{e.apply(a,r)});var u=v()[o[e]];u&&u.push([f,e,r,a]);return a},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{o[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[o[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof s.y?e:e?(0,i.I)(e,a,()=>new s.y(a)):new s.y(a)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c)},8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),s=0===Object.keys(r).length?e:r;for(let o in s)if(void 0!==e[o])try{if(null===e[o]){r[o]=null;continue}Array.isArray(e[o])&&Array.isArray(t[o])?r[o]=Array.from(new Set([...e[o],...t[o]])):e[o]instanceof Map||e[o]instanceof Set||e[o]instanceof Date||e[o]instanceof RegExp?r[o]=e[o]:"object"==typeof e[o]&&"object"==typeof t[o]?r[o]=i(e[o],t[o]):r[o]=e[o]}catch(e){r[o]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},8362:(e,t,r)=>{"use strict";r.d(t,{d:()=>s});var n=r(9566),i=r(1741);class s extends i.W{agentIdentifier=(0,n.LA)(16)}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>s,xv:()=>n});const n="1.313.1",i="PROD",s="CDN"},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>a,bz:()=>o});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function s(e,t){return e?15&e[t]:16*Math.random()|0}function o(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map(e=>"x"===e?s(t,r++).toString(16):"y"===e?(3&s()|8).toString(16):e).join("")}function a(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const o=[];for(var a=0;a<e;a++)o.push(s(r,i++).toString(16));return o.join("")}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,s){s?(s.buffer([e],i),s.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var s=n[e]={exports:{}};return r[e](s,s.exports,i),s.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce((t,r)=>(i.f[r](e,t),t),[])),i.u=e=>"nr-rum-1.313.1.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.313.1.PROD:",i.l=(r,n,s,o)=>{if(e[r])e[r].push(n);else{var a,c;if(void 0!==s)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+s){a=l;break}}if(!a){c=!0;var f={296:"sha512-E5cgo9olCDb1hfo75P7xhy70qTRBv8iv81Oo0YOB6CVixq6QiRl0uXoiNuwXFWgcz3w9/S/CpI4Zm4ai5G4h3w=="};(a=document.createElement("script")).charset="utf-8",i.nc&&a.setAttribute("nonce",i.nc),a.setAttribute("data-webpack",t+s),a.src=r,0!==a.src.indexOf(window.location.origin+"/")&&(a.crossOrigin="anonymous"),f[o]&&(a.integrity=f[o])}e[r]=[n];var g=(t,n)=>{a.onerror=a.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],a.parentNode&&a.parentNode.removeChild(a),i&&i.forEach(e=>e(n)),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:a}),12e4);a.onerror=g.bind(null,a.onerror),a.onload=g.bind(null,a.onload),c&&document.head.appendChild(a)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={374:0,840:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var s=new Promise((r,i)=>n=e[t]=[r,i]);r.push(n[2]=s);var o=i.p+i.u(t),a=new Error;i.l(o,r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var s=r&&("load"===r.type?"missing":r.type),o=r&&r.target&&r.target.src;a.message="Loading chunk "+t+" failed: ("+s+": "+o+")",a.name="ChunkLoadError",a.type=s,a.request=o,n[1](a)}},"chunk-"+t,t)}};var t=(t,r)=>{var n,s,[o,a,c]=r,u=0;if(o.some(t=>0!==e[t])){for(n in a)i.o(a,n)&&(i.m[n]=a[n]);if(c)c(i)}for(t&&t(r);u<o.length;u++)s=o[u],i.o(e,s)&&e[s]&&e[s][0](),e[s]=0},r=self["webpackChunk:NRBA-1.313.1.PROD"]=self["webpackChunk:NRBA-1.313.1.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(8362),t=i(860);const r=Object.values(t.K7);var n=i(163);var s=i(9908),o=i(1863),a=i(4261),c=i(1738);var u=i(1687),d=i(4234),l=i(5289),f=i(6154),g=i(944),p=i(384);const m=e=>f.RI&&!0===e?.privacy.cookies_enabled;function h(e){return!!(0,p.dV)().o.MO&&m(e)&&!0===e?.session_trace.enabled}var v=i(6389),b=i(7699);class y extends d.W{constructor(e,t){super(e,t),this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,v.J)(()=>{(0,u.Ak)(e,this.featureName),t()}))}):(0,u.Ak)(e,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;const n=async()=>{let n;await this.deferred;try{if(m(e.init)){const{setupAgentSession:t}=await i.e(296).then(i.bind(i,2612));n=t(e)}}catch(e){(0,g.R)(20,e),this.ee.emit("internal-error",[e]),(0,s.p)(b.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#t(this.featureName,n,e.init))return(0,u.Ze)(this.agentRef,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:i}=await t();this.featAggregate=new i(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,g.R)(34,e),this.abortHandler?.(),(0,u.Ze)(this.agentRef,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};f.RI?(0,l.GG)(()=>n(),!0):n()}#t(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return h(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}}var _=i(6630),w=i(2614),x=i(3241);class R extends y{static featureName=_.T;constructor(e){var t;super(e,_.T),this.setupInspectionEvents(),t=e,(0,c.Y)(a.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,s.p)(a.Pl+a.Fw,[(0,o.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>i.e(296).then(i.bind(i,146)))}setupInspectionEvents(){const e=(e,t)=>{e&&(0,x.W)({timeStamp:e.timeStamp,loaded:"complete"===e.target.readyState,type:"window",name:t,data:e.target.location+""})};(0,l.sB)(t=>{e(t,"DOMContentLoaded")}),(0,l.GG)(t=>{e(t,"load")}),(0,l.Qr)(t=>{e(t,"navigate")}),this.ee.on(w.tS.UPDATE,(e,t)=>{(0,x.W)({type:"lifecycle",name:"session",data:t})})}}class k extends e.d{constructor(e){var t;(super(),f.gm)?(this.features={},(0,p.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(R),(0,n.j)(this,e,e.loaderType||"agent"),t=this,(0,c.Y)(a.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,c.U)(t,e,r,a.cD,n);(0,g.R)(40,typeof r)}else(0,g.R)(39,typeof e)},t),function(e){(0,c.Y)(a.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,g.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,s.p)(a.Pl+"setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,c.U)(e,"enduser.id",t,a.Dl,!0)},e)}(this),function(e){(0,c.Y)(a.nb,function(t){if("string"==typeof t||null===t)return(0,c.U)(e,"application.version",t,a.nb,!1);(0,g.R)(42,typeof t)},e)}(this),function(e){(0,c.Y)(a.d3,function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,c.Y)(a.Pv,function(t=!0){if("boolean"==typeof t){if((0,s.p)(a.Pl+a.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,g.R)(65,typeof t)},e)}(this),this.run()):(0,g.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return r.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),n=[...this.desiredFeatures];n.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),n.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,g.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,g.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,p.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var A=i(2843),T=i(782);class E extends y{static featureName=T.T;constructor(e){super(e,T.T),f.RI&&((0,A.u)(()=>(0,s.p)("docHidden",[(0,o.t)()],void 0,T.T,this.ee),!0),(0,A.G)(()=>(0,s.p)("winPagehide",[(0,o.t)()],void 0,T.T,this.ee)),this.importAggregator(e,()=>i.e(296).then(i.bind(i,2117))))}}var S=i(3969);class j extends y{static featureName=S.TZ;constructor(e){super(e,S.TZ),this.importAggregator(e,()=>i.e(296).then(i.bind(i,9623)))}}new k({features:[R,E,j],loaderType:"lite"})})()})();</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+/* ]]> */
+</script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+		<!-- Custom Data Layer for Google Tag Manager -->
+		<script id="dataLayerUpdate">
+            var dataLayer = window.dataLayer = window.dataLayer || [];
+            dataLayer.push({
+    "section": "Politics & Government",
+    "column": "",
+    "series": "",
+    "author": "Livia Gershon",
+    "journal": "Journal of the Early Republic, The North American Review, Human Rights, The Annals of the American Academy of Political and Social Science, Children, Youth and Environments",
+    "publishDate": "20181017",
+    "age": 2754,
+    "contentType": "Audio Stories",
+    "wordCount": 1797,
+    "pageTitle": "The Case for Lowering the Voting Age - JSTOR Daily",
+    "pageType": "article",
+    "loggedIn": "no"
+});
+		</script>
+		<!-- End Custom Data Layer for Google Tag Manager -->
+			<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W3S34Q8');</script>
+	<!-- End Google Tag Manager -->
+	
+	<!-- This site is optimized with the Yoast SEO plugin v27.1.1 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>The Case for Lowering the Voting Age - JSTOR Daily</title>
+	<meta name="description" content="If the standard we hold for who can vote is the consent of the governed, why shouldn’t children be included?" />
+	<link rel="canonical" href="https://daily.jstor.org/case-lowering-voting-age/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="The Case for Lowering the Voting Age - JSTOR Daily" />
+	<meta property="og:description" content="If the standard we hold for who can vote is the consent of the governed, why shouldn’t children be included?" />
+	<meta property="og:url" content="https://daily.jstor.org/case-lowering-voting-age/" />
+	<meta property="og:site_name" content="JSTOR Daily" />
+	<meta property="article:publisher" content="https://www.facebook.com/JSTOR.org" />
+	<meta property="article:published_time" content="2018-10-17T14:30:00+00:00" />
+	<meta property="article:modified_time" content="2025-12-04T01:22:40+00:00" />
+	<meta property="og:image" content="https://daily.jstor.org/wp-content/uploads/2018/09/young_voters_1050x700.jpg" />
+	<meta property="og:image:width" content="1050" />
+	<meta property="og:image:height" content="700" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Charles Thaxton" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@ThaxRomana" />
+	<meta name="twitter:site" content="@JSTOR_Daily" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://daily.jstor.org/case-lowering-voting-age/#article","isPartOf":{"@id":"https://daily.jstor.org/case-lowering-voting-age/"},"author":{"name":"Charles Thaxton","@id":"https://daily.jstor.org/#/schema/person/fe5521c740172b19516c2db5a5a01d6a"},"headline":"The Case for Lowering the Voting Age","datePublished":"2018-10-17T14:30:00+00:00","dateModified":"2025-12-04T01:22:40+00:00","mainEntityOfPage":{"@id":"https://daily.jstor.org/case-lowering-voting-age/"},"wordCount":1644,"publisher":{"@id":"https://daily.jstor.org/#organization"},"image":{"@id":"https://daily.jstor.org/case-lowering-voting-age/#primaryimage"},"thumbnailUrl":"https://daily.jstor.org/wp-content/uploads/2018/09/young_voters_1050x700.jpg","keywords":["elections","Voting"],"articleSection":["Politics &amp; Government","Politics &amp; History"],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://daily.jstor.org/case-lowering-voting-age/","url":"https://daily.jstor.org/case-lowering-voting-age/","name":"The Case for Lowering the Voting Age - JSTOR Daily","isPartOf":{"@id":"https://daily.jstor.org/#website"},"primaryImageOfPage":{"@id":"https://daily.jstor.org/case-lowering-voting-age/#primaryimage"},"image":{"@id":"https://daily.jstor.org/case-lowering-voting-age/#primaryimage"},"thumbnailUrl":"https://daily.jstor.org/wp-content/uploads/2018/09/young_voters_1050x700.jpg","datePublished":"2018-10-17T14:30:00+00:00","dateModified":"2025-12-04T01:22:40+00:00","description":"If the standard we hold for who can vote is the consent of the governed, why shouldn’t children be included?","breadcrumb":{"@id":"https://daily.jstor.org/case-lowering-voting-age/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://daily.jstor.org/case-lowering-voting-age/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://daily.jstor.org/case-lowering-voting-age/#primaryimage","url":"https://daily.jstor.org/wp-content/uploads/2018/09/young_voters_1050x700.jpg","contentUrl":"https://daily.jstor.org/wp-content/uploads/2018/09/young_voters_1050x700.jpg","width":1050,"height":700,"caption":"Portrait young couple at voter polling place"},{"@type":"BreadcrumbList","@id":"https://daily.jstor.org/case-lowering-voting-age/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://daily.jstor.org/"},{"@type":"ListItem","position":2,"name":"Archive of Most Recent Posts","item":"https://daily.jstor.org/archives/"},{"@type":"ListItem","position":3,"name":"The Case for Lowering the Voting Age"}]},{"@type":"WebSite","@id":"https://daily.jstor.org/#website","url":"https://daily.jstor.org/","name":"JSTOR Daily","description":"from JSTOR, nonprofit library for the intellectually curious","publisher":{"@id":"https://daily.jstor.org/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://daily.jstor.org/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://daily.jstor.org/#organization","name":"JSTOR Daily","url":"https://daily.jstor.org/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://daily.jstor.org/#/schema/logo/image/","url":"https://daily.jstor.org/wp-content/uploads/2016/08/J_Daily-Logo_04_350w.png","contentUrl":"https://daily.jstor.org/wp-content/uploads/2016/08/J_Daily-Logo_04_350w.png","width":351,"height":111,"caption":"JSTOR Daily"},"image":{"@id":"https://daily.jstor.org/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/JSTOR.org","https://x.com/JSTOR_Daily"]},{"@type":"Person","@id":"https://daily.jstor.org/#/schema/person/fe5521c740172b19516c2db5a5a01d6a","name":"Charles Thaxton","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://daily.jstor.org/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/ee093a99db1633ca6c23e475731d416cd454bf851448b756648e1fcc98937d4b?s=96&d=wp_user_avatar&r=g","contentUrl":"https://secure.gravatar.com/avatar/ee093a99db1633ca6c23e475731d416cd454bf851448b756648e1fcc98937d4b?s=96&d=wp_user_avatar&r=g","caption":"Charles Thaxton"},"description":"Charles Thaxton is the Assistant Web Producer at JSTOR Daily and freelances elsewhere around the web. He grew up in Maine and graduated from Bates College.","sameAs":["http://www.charles-thaxton.com","https://x.com/ThaxRomana"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//daily.jstor.org' />
+<link rel='dns-prefetch' href='//use.fontawesome.com' />
+<link rel='dns-prefetch' href='//use.typekit.net' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://daily.jstor.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdaily.jstor.org%2Fcase-lowering-voting-age%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://daily.jstor.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdaily.jstor.org%2Fcase-lowering-voting-age%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='wp-components-css' href='https://daily.jstor.org/wp-includes/css/dist/components/style.min.css?ver=6.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-preferences-css' href='https://daily.jstor.org/wp-includes/css/dist/preferences/style.min.css?ver=6.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-editor-css' href='https://daily.jstor.org/wp-includes/css/dist/block-editor/style.min.css?ver=6.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='popup-maker-block-library-style-css' href='https://daily.jstor.org/wp-content/plugins/popup-maker/dist/packages/block-library-style.css?ver=dbea705cfafe089d65f1' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='sleuthstyle-css' href='https://daily.jstor.org/wp-content/plugins/daily-sleuth-plugin/frontend/assets/css/index.css?ver=6.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='main-stylesheet-css' href='https://daily.jstor.org/wp-content/themes/daily2018/build/assets/css/app.css?ver=1.0l' type='text/css' media='all' />
+<link rel='stylesheet' id='typekit-fonts-css' href='https://use.typekit.net/nkz2sqr.css?ver=1.0l' type='text/css' media='all' />
+<link rel='stylesheet' id='daily_custom_css-css' href='https://daily.jstor.org/wp-content/themes/daily2018/includes/css/style.css?ver=1.0l' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css' href='https://daily.jstor.org/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type="module" src="https://daily.jstor.org/wp-content/plugins/daily-sleuth-plugin/frontend/assets/js/index.js?ver=6.9.4"></script><script type="text/javascript" src="https://daily.jstor.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://daily.jstor.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://daily.jstor.org/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://daily.jstor.org/wp-json/wp/v2/posts/65006" /><link rel="icon" href="https://daily.jstor.org/wp-content/uploads/2016/05/JSTOR_Daily_logo_square-copy-300x300.jpg" sizes="32x32" />
+<link rel="icon" href="https://daily.jstor.org/wp-content/uploads/2016/05/JSTOR_Daily_logo_square-copy-300x300.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://daily.jstor.org/wp-content/uploads/2016/05/JSTOR_Daily_logo_square-copy-300x300.jpg" />
+<meta name="msapplication-TileImage" content="https://daily.jstor.org/wp-content/uploads/2016/05/JSTOR_Daily_logo_square-copy-300x300.jpg" />
+		<style type="text/css" id="wp-custom-css">
+			.charleft.ginput_counter {
+	margin-top: -10px;
+	font-size: 12px;
+}
+
+.gfield_description {
+	font-size: 15px;
+}
+
+.hidden_label .gfield_label {
+	display: none;
+}
+
+.postid-295292 .topper {
+	margin-top: 50px;
+}
+
+@media screen and (min-width: 640px) {
+.postid-295292 .article-media-title.full-width-title-overlay .aritcle-titles-container>.inner {
+	max-width: 90%;
+}
+
+.postid-295292 .topper {
+	margin-top: 30px;
+}
+
+}
+		</style>
+			<link rel='stylesheet' id='soundcite-css' href='https://cdn.knightlab.com/libs/soundcite/latest/css/player.css?ver=6.9.4' type='text/css' media='all' />
+
+</head>
+	<body class="wp-singular post-template-default single single-post postid-65006 single-format-standard wp-theme-daily2018 offcanvas">
+		<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3S34Q8"
+	                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	
+	<a class="site-skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header" role="banner">
+		<div data-sticky-container>
+			<div class="top-bar-container sticky" data-sticky data-margin-top="0" /*data-options="stickyOn:small;"*/>
+				<div class="grid-container">
+					<nav class="site-navigation top-bar grid-x grid-margin-x" role="navigation">
+						<div class="top-bar-left cell medium-7 small-12">
+							<div class="hamburger" id="hamburger" aria-label="Main Menu" data-toggle="site-nav menu-overlay hamburger" data-toggler=".is-active">
+								<span class="line"></span>
+								<span class="line"></span>
+								<span class="line"></span>
+							</div>
+							<div class="top-bar-title">
+								<a href="https://daily.jstor.org/" rel="home"><img src="/wp-content/themes/daily2018/build/assets/images/j_dailylogo_header_184x60.png" srcset="/wp-content/themes/daily2018/build/assets/images/j_dailylogo_header_184x60.png 1x, /wp-content/themes/daily2018/build/assets/images/j_dailylogo_header_372x122.png 2x" class="logo" height="60" width="184"></a>
+								<a href="https://daily.jstor.org/" rel="home" class="tagline">from JSTOR, nonprofit library for the intellectually curious</a>
+							</div>
+						</div>
+						<div class="top-bar-right cell medium-5 small-12">
+							<ul id="menu-secondary-menu" class="dropdown menu desktop-menu" data-dropdown-menu><li id="menu-item-460" class="newsletter menu-item menu-item-type-post_type menu-item-object-page menu-item-460"><a href="https://daily.jstor.org/newsletter/">Newsletter</a></li>
+</ul>						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div>
+			<nav id="site-nav" class="site-nav" role="navigation" data-toggler=".expanded">
+				<div class="inner">
+					<!-- search form -->
+					
+<form role="search" method="get" id="searchform" action="https://daily.jstor.org/">
+	<div class="input-group">
+		<input type="text" class="input-group-field" value="" name="s" id="s" placeholder="Search">
+		<button type="submit" class="btn searchsubmit">
+			<i class="fas fa-search"></i>
+		</button>
+	</div>
+</form>
+
+					<!-- nav -->
+					<div class="menu-wrapper">
+						<ul id="menu-main-menu" class="vertical menu"><li id="menu-item-288293" class="menu-item menu-item-type-taxonomy menu-item-object-daily_article_types menu-item-288293"><a href="https://daily.jstor.org/type/shared-collections-jstor/">Collections on JSTOR</a></li>
+<li id="menu-item-306884" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-306884"><a href="https://daily.jstor.org/teaching-and-learning-resources-from-jstor-daily/">Teaching and Learning Resources</a></li>
+<li id="menu-item-14" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-14"><a href="https://daily.jstor.org/category/arts/">Arts &amp; Culture</a>
+<ul class="vertical nested menu">
+	<li id="menu-item-22560" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22560"><a href="https://daily.jstor.org/category/arts/art-art-history/">Art &amp; Art History</a></li>
+	<li id="menu-item-23389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23389"><a href="https://daily.jstor.org/category/arts/film-media/">Film &amp; Media</a></li>
+	<li id="menu-item-22558" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22558"><a href="https://daily.jstor.org/category/arts/language-literature/">Language &amp; Literature</a></li>
+	<li id="menu-item-23390" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23390"><a href="https://daily.jstor.org/category/arts/performing-arts/">Performing Arts</a></li>
+</ul>
+</li>
+<li id="menu-item-82" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-82"><a href="https://daily.jstor.org/category/education-and-society/">Education &amp; Society</a>
+<ul class="vertical nested menu">
+	<li id="menu-item-38550" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38550"><a href="https://daily.jstor.org/category/education-and-society/education/">Education</a></li>
+	<li id="menu-item-38552" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38552"><a href="https://daily.jstor.org/category/education-and-society/lifestyle/">Lifestyle</a></li>
+	<li id="menu-item-38551" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38551"><a href="https://daily.jstor.org/category/education-and-society/religion/">Religion</a></li>
+	<li id="menu-item-38549" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38549"><a href="https://daily.jstor.org/category/education-and-society/social-sciences/">Social Sciences</a></li>
+</ul>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-16"><a href="https://daily.jstor.org/category/politics/">Politics &amp; History</a>
+<ul class="vertical nested menu">
+	<li id="menu-item-64218" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-64218"><a href="https://daily.jstor.org/category/politics/politics-government/">Politics &amp; Government</a></li>
+	<li id="menu-item-64225" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64225"><a href="https://daily.jstor.org/category/politics/us-history/">U.S. History</a></li>
+	<li id="menu-item-64226" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64226"><a href="https://daily.jstor.org/category/politics/world-history/">World History</a></li>
+	<li id="menu-item-64224" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64224"><a href="https://daily.jstor.org/category/politics/social-history/">Social History</a></li>
+	<li id="menu-item-64223" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64223"><a href="https://daily.jstor.org/category/politics/quirky-history/">Quirky History</a></li>
+</ul>
+</li>
+<li id="menu-item-17" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-17"><a href="https://daily.jstor.org/category/science/">Science &amp; Technology</a>
+<ul class="vertical nested menu">
+	<li id="menu-item-36228" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36228"><a href="https://daily.jstor.org/category/science/health/">Health</a></li>
+	<li id="menu-item-36227" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36227"><a href="https://daily.jstor.org/category/science/naturalscience/">Natural Science</a></li>
+	<li id="menu-item-36230" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36230"><a href="https://daily.jstor.org/category/science/plantsanimals/">Plants &amp; Animals</a></li>
+	<li id="menu-item-33532" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33532"><a href="https://daily.jstor.org/category/science/sustainability/">Sustainability &amp; The Environment</a></li>
+	<li id="menu-item-36229" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36229"><a href="https://daily.jstor.org/category/science/technology/">Technology</a></li>
+</ul>
+</li>
+<li id="menu-item-15" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-15"><a href="https://daily.jstor.org/category/business/">Business &amp; Economics</a>
+<ul class="vertical nested menu">
+	<li id="menu-item-38547" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38547"><a href="https://daily.jstor.org/category/business/business-business/">Business</a></li>
+	<li id="menu-item-38548" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38548"><a href="https://daily.jstor.org/category/business/economics/">Economics</a></li>
+</ul>
+</li>
+<li id="menu-item-50871" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50871"><a href="https://daily.jstor.org/contact-us/?from_url=/case-lowering-voting-age/">Contact The Editors</a></li>
+</ul>					</div>
+				</div>
+			</nav>
+		</div>
+
+	</header>
+	<div id="menu-overlay" data-toggle="site-nav menu-overlay hamburger" data-toggler=".shown"></div>
+
+	<div class="topper">
+		<div class="article-media-title default ">
+			<div class="inner">
+				<div class="aritcle-titles-container">
+					<div class="inner">
+						<div class="slug"><a href="https://daily.jstor.org/category/politics/politics-government/">Politics &amp; Government</a></div>						<h1 class="entry-title">The Case for Lowering the Voting Age</h1>						<div class="subtitle">
+							<p>If the standard we hold for who can vote is the consent of the governed, why shouldn’t children be included?</p>
+						</div>
+					</div>
+				</div>
+				
+			<div class="featured-img-container">
+				<div class="inner">
+					<img width="1050" height="700" src="https://daily.jstor.org/wp-content/uploads/2018/09/young_voters_1050x700.jpg" class="vertical-featured-img wp-post-image" alt="Portrait young couple at voter polling place" decoding="async" loading="lazy" />
+				</div>
+			</div>			</div>
+		</div>
+		<div class="article-meta-container grid-container">
+			<div class="grid-x grid-margin-x">
+				<div class="feature-img-attribution cell small-12">
+					<div class="caption"></div>
+					<div class="attribution">Getty</div>
+				</div>
+				<div class="article-share cell small-12">
+					<div class="article-share-container-compact article-top">
+						<span><span><svg id="share-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.49994 0L9.90971 4.43359L8.93744 5.41111L6.1875 2.64632V8.23515H4.8125V2.64619L2.06244 5.41111L1.09016 4.43359L5.49994 0Z"/>
+<path d="M1.375 7.54394V9.61758H9.625V7.54394H11V11H0V7.54394H1.375Z"/>
+</svg></span> Share</span>
+						
+	<div class="share-options">
+		<a href="javascript:navigator.clipboard.writeText('https%3A%2F%2Fdaily.jstor.org%2Fcase-lowering-voting-age%2F')" onClick="this.innerHTML=this.innerHTML.replace('Copy link', 'Link copied')"><span class="icon"><svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.339844H3.4375L3.4375 3.77734L0 3.77734V11.3398H7.5625V7.90234L11 7.90234V0.339844ZM7.5625 6.52734L9.625 6.52734V1.71484L4.8125 1.71484V3.77734L7.5625 3.77734V6.52734ZM1.375 9.96484L1.375 5.15234L6.1875 5.15234L6.1875 9.96484L1.375 9.96484Z" fill="#4A4A4A"/>
+</svg></span>Copy link</a>
+		<a class="article-share__link article-share__link--facebook" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdaily.jstor.org%2Fcase-lowering-voting-age%2F"><span class="icon"><i class="fab fa-facebook-f"></i></span>Facebook</a>
+		<a class="article-share__link article-share__link--linkedin" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fdaily.jstor.org%2Fcase-lowering-voting-age%2F&amp;title=The+Case+for+Lowering+the+Voting+Age"><span class="icon"><i class="fab fa-linkedin-in"></i></span>LinkedIn</a>
+		<a class="article-share__link article-share__link--bluesky" target="_blank" rel="noopener" href="https://bsky.app/intent/compose?text=The+Case+for+Lowering+the+Voting+Age%0Ahttps%3A%2F%2Fdaily.jstor.org%2Fcase-lowering-voting-age%2F"><span class="icon"><i class="fas fa-cloud"></i></span>BlueSky</a>
+		<a class="article-share__link article-share__link--threads" target="_blank" rel="noopener" href="https://www.threads.net/intent/post?text=The+Case+for+Lowering+the+Voting+Age%0Ahttps%3A%2F%2Fdaily.jstor.org%2Fcase-lowering-voting-age%2F"><span class="icon"><i class="fab fa-threads"></i></span>Threads</a>
+		<a class="article-share__link article-share__link--reddit" target="_blank" rel="noopener" href="https://reddit.com/submit?url=https%3A%2F%2Fdaily.jstor.org%2Fcase-lowering-voting-age%2F&amp;title=The+Case+for+Lowering+the+Voting+Age"><span class="icon"><i class="fab fa-reddit-alien"></i></span>Reddit</a>
+		<a class="article-share__link article-share__link--whatsapp" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?text=The+Case+for+Lowering+the+Voting+Age https%3A%2F%2Fdaily.jstor.org%2Fcase-lowering-voting-age%2F"><span class="icon"><i class="fab fa-whatsapp"></i></span>WhatsApp</a>
+		<a class="article-share__link article-share__link--email" target="_blank" rel="noopener" href="mailto:?subject=The%20Case%20for%20Lowering%20the%20Voting%20Age&amp;body=If%20the%20standard%20we%20hold%20for%20who%20can%20vote%20is%20the%20consent%20of%20the%20governed%2C%20why%20shouldn%E2%80%99t%20children%20be%20included%3F%0D%0A%0D%0A%20Read%20More: https%3A%2F%2Fdaily.jstor.org%2Fcase-lowering-voting-age%2F"><span class="icon"><i class="fas fa-envelope"></i></span>Email</a>
+	</div>
+						</div>
+				</div>
+
+				<div class="article-meta cell small-12">
+					<div class="article-authors byline"><span>By: </span>
+			<a href="https://daily.jstor.org/daily-author/livia-gershon/">Livia Gershon</a>
+			</div>
+					<div class="article-date">
+						<time class="timestamp timestamp--published" datetime="2018-10-17T10:30:00-04:00">October 17, 2018</time>
+						<time class="timestamp--updated" datetime="2025-12-03T20:22:40-05:00">December 3, 2025</time>
+					</div>
+
+					<div class="article-reading-time">
+						<i class="fas fa-clock"></i>
+						7 minutes
+					</div>
+
+									</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="grid-container">
+		<div class="main-grid grid-x grid-margin-x">
+			<main class="main-content cell small-12 medium-8" id="main">
+									<article id="post-65006" class="post-65006 post type-post status-publish format-standard has-post-thumbnail hentry category-politics-government category-politics tag-elections tag-voting pub_tag-children-youth-and-environments pub_tag-human-rights pub_tag-journal-of-the-early-republic pub_tag-the-annals-of-the-american-academy-of-political-and-social-science pub_tag-the-north-american-review daily_article_types-curio daily_article_types-long-reads do-drop-cap">
+						<div class="entry-content">
+							<div class="j-icon">
+								The <span class="jcitation"></span> icon indicates free access to the linked research on JSTOR.
+							</div>
+							<p>In the wake of the Parkland school shooting in February 2018 at Marjory Stoneman Douglas High School, students across the U.S. have mobilized against gun violence. Newly engaged youth activists from majority-white, economically privileged schools like Stoneman Douglas have <a href="https://www.chalkbeat.org/posts/chicago/2018/06/15/five-chicago-student-activists/">joined forces</a> with black youth activists in cities like Chicago, with longstanding traditions of organizing by young people. These students have travelled across the country, providing information to their peers and organizing voter registration drives. And yet, until they turn 18, these engaged citizens can’t cast their own ballots.</p><p class=“jpass-incontent-banner"><a href="https://www.jstor.org/action/jpass?lookupKey=SlBBU1MtSS1ZZWFy&discountCode=SlNUT1JEQUlMWTEw&utm_source=jstor_daily&utm_campaign=daily_newsletter_2"><img decoding="async" class="size-full wp-image-305864 show-for-large" src="https://daily.jstor.org/wp-content/uploads/2026/02/jpass_discount_desktop_2100.jpg" alt=“JPASS” width="800" height="196"><img class="hide-for-large" src="https://daily.jstor.org/wp-content/uploads/2026/02/jpass_discount_mobile_2100.jpg" alt=“JPASS” /></a></p>
+<p>Some of them are trying to change that. <a href="https://www.teenvogue.com/story/the-voting-age-should-be-lowered-to-16-years-old">Vote16</a>, a national initiative of the civics education group Generation Citizen, is supporting local, youth-led efforts in a number of cities to win 16- and 17-year-olds the right to vote in local elections. In Washington, D.C., the kids are also seeking the vote in presidential elections. Sixteen-year-olds can already vote in local races in three Maryland cities and in Berkeley, California.</p>
+<h2><em>Audio brought to you by <a href="http://curio.io/" target="_blank" rel="noopener noreferrer">curio.io</a></em></h2>
+<p><iframe class="optanon-category-C0004" data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/522245463%3Fsecret_token%3Ds-SPobt&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<p>In some respects, this campaign echoes the youth activism that led to the enfranchisement of 18-year-olds through the passage of the 26<sup>th</sup> Amendment in 1971. But it also raises more fundamental questions about who should have a say in the government, an issue that has been up for debate in the U.S. since its very beginning.</p>
+<p>The push to give 18-year-olds the vote started when Congress began drafting them in 1942. In both World Wars, the draft began with men ages 21 and older but expanded to include younger men as the need for service members increased.</p>
+<p>As the historian Rebecca de Schweinitz writes in her contribution to <a href="http://nyu.universitypressscholarship.com/view/10.18574/nyu/9781479870011.001.0001/upso-9781479870011-chapter-011"><em>Age in America</em></a>, the concepts of citizen and soldier have been linked for a long time, with Americans generally viewing 21 as the age for taking up both the gun and the ballot. Between 1942 and 1971, youth activists (and their allies) who wanted to reduce the voting age pointed to young men killed in Europe and the Pacific, and then in Korea and Vietnam, who never had the chance to cast a vote.</p>
+<p>They also emphasized the independence of young adults and their contributions to society, de Schweinitz notes. A majority of 18-to-21-year-olds worked full time and paid taxes, and they did not receive <a href="https://daily.jstor.org/u-s-sentence-children-life-prison/">special protections for children</a>, such as juvenile courts, child labor laws, or the right to public schooling. Literature supporting the lower voting age noted that 18-year-olds “bear the burdens of citizenship” and “behave and resume responsibility as adults.”</p>
+		<aside class="pull-quote center">
+			<div class="pull-quote__text tweetable">The history of American politics is, to some extent, a story of people demanding the right to vote.</div>
+					</aside>
+		
+<p>If these are the standards to determine who should be allowed to vote, then 16-year-olds surely shouldn’t. But neither should a lot of other people who can. The history of American politics is, to some extent, a story of people demanding the right to vote, even if they hadn’t previously been seen as contributors or competent decision-makers by those who did have the right.</p>
+<p>At the time of the Revolutionary War, the historian Donald Ratcliffe observes, the American colonies commonly <a href="https://www.jstor.org/stable/24768843?mag=case-lowering-voting-age" class="jcitation" >limited the vote</a> to those considered to have a “stake in society.” That generally meant owning property, or sometimes paying taxes or serving in the military. Laborers, tenant farmers, enslaved or indentured people, and women were excluded. In some cases, new immigrants and racial or religious minorities were too. But the need to whip up broad support pushed the revolutionaries to extend voting rights further. And the rhetoric of the Declaration of Independence suggests that democratic rights should be based not on voters’ qualifications, but on the basic need for the consent of the governed.</p>
+<p>“Radicals began to insist that every adult male deserved the right to vote, and that individual citizens needed the vote to protect them against the possible tyranny of lawmakers,” Ratcliffe writes.</p>
+
+	<div class="daily_email_signup weekly-digest ">
+		<h4>Get Our Newsletter</h4>
+		<script type="text/javascript">
+/* <![CDATA[ */
+
+/* ]]&gt; */
+</script>
+
+                <div class='gf_browser_chrome gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_17' >
+                        <div class='gform_heading'>
+                            <p class='gform_description'></p>
+                        </div><form method='post' enctype='multipart/form-data'  id='gform_17'  action='/case-lowering-voting-age/' data-formid='17' novalidate> 
+ <input type='hidden' class='gforms-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' />
+                        <div class='gform-body gform_body'><div id='gform_fields_17' class='gform_fields top_label form_sublabel_below description_below validation_below'><div id="field_17_3" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_17_3'>Comments</label><div class='ginput_container'><input name='input_3' id='input_17_3' type='text' value='' autocomplete='new-password'/></div><div class='gfield_description' id='gfield_description_17_3'>This field is for validation purposes and should be left unchanged.</div></div><div id="field_17_2" class="gfield gfield--type-html gfield--input-type-html gfield--width-full gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><p>Get your fix of JSTOR Daily’s best stories in your inbox each Thursday.</p></div><div id="field_17_1" class="gfield gfield--type-email gfield--input-type-email field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_17_1'>Email</label><div class='ginput_container ginput_container_email'>
+                            <input name='input_1' id='input_17_1' type='email' value='' class='large'     aria-invalid="false"  />
+                        </div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_17' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Subscribe'  /> 
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_17' value='postback' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_17' id='gform_theme_17' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_17' id='gform_style_settings_17' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_17' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='17' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_currency' data-currency='USD' value='G+9nNHiSZ5dmyOlSrvX0Xuph2pkImAYEVUr1yz6Whgi5h57KrTsBFtUw00LxN9A1rif+Ejr0zVM2PVBpcFTW7z11TJgMrEoo6U/DYm5jlDqYtnA=' />
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_17' value='WyJbXSIsImY3ZTc5YWU0NTZiMDRhNzc0ZWZlYzY1YjlhMmIzM2M1Il0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_17' id='gform_target_page_number_17' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_17' id='gform_source_page_number_17' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        <p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="192"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>
+                        </div><script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {gformInitSpinner( 17, 'https://daily.jstor.org/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_17').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_17');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_17').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_17').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_17').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_17').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_17').val();gformInitSpinner( 17, 'https://daily.jstor.org/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [17, current_page]);window['gf_submitting_17'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_17').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [17]);window['gf_submitting_17'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_17').text());}else{jQuery('#gform_17').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "17", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_17" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_17";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_17" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 17, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} ); 
+/* ]]&gt; */
+</script>
+
+	</div>
+	
+<p>Arguably, the white men of all classes who increasingly gained the right to vote in the early republic had the potential to become landowners, and might be called upon to serve in the military in active combat. But that couldn’t be said for the women, who gained the vote in 1920, as opponents of women’s suffrage were well aware.</p>
+<p>Writing in 1909, the <a href="https://www.jstor.org/stable/25106424?mag=case-lowering-voting-age" class="jcitation" >anti-suffragist Mrs. Gilbert F. Jones</a> hung her argument against giving women the vote mostly on men’s military service. “A Government owes its <em>existence</em> not to the obedience of its subjects, not to the taxes it receives, but to the fact that the men of the State will come to the support of the State,” she wrote.</p>
+<p>Secondarily, she argued that most women of her day couldn’t really be counted as taxpayers since, even if they worked for pay, they weren’t “economically <em>in</em>dependent.” She claims: “No woman who is economically <em>de</em>pendent on her husband or father or whomever may be supporting her may properly be said to pay taxes.”</p>
+<p>Americans eventually came around to the idea that women—even if they didn’t work outside the home or fight in wars—were entitled to an equal say in their government. Today, we wouldn’t deny the vote to an adult simply because of a disability that makes it impossible for them to live alone or because their income is too low to pay federal taxes. So why should we keep 16-year-olds—or even younger kids—from the ballot?</p>
+		<aside class="pull-quote center">
+			<div class="pull-quote__text tweetable">We have little, if any, evidence to show that the political preferences of teenagers are any more irrational than those of adults.</div>
+					</aside>
+		
+<p>That was a question some people were asking in the 1970s. Alongside the more mainstream arguments for giving 18-year-olds the vote, advocates for “children’s liberation” were asking why kids shouldn’t have many of the rights of full citizens. Writing in 1974, <a href="https://www.jstor.org/stable/27878983?mag=case-lowering-voting-age" class="jcitation" >Patricia M. Wald, an attorney working on issues affecting children</a>, acknowledged that much of the talk about children’s rights “appears, at first glance, far-fetched, wildly impractical, or simply woolyheaded.” But, she added, the previous few decades had shown how quickly politically marginalized groups—African-Americans, women, people with disabilities, and LGBTQ+ people, among others—could overturn assumptions about their fitness for civil rights and political power.</p>
+<p>In modern U.S. society, Wald wrote, adolescents should have at least some control over their choices about work, school, and medical care. The juvenile justice system, for example, should not simply back up parents in conflicts with their children and “randomly threaten a teenager with incarceration if he doesn’t obey his parents.” Instead, the system should be a tool that children can also use “as a counterweight against arbitrary parental authority.”</p>
+<p>Perhaps most radically, Wald suggested that it might be a good idea to enfranchise children as young as 12 or 13. Even if they haven’t yet completed a high school civics class, she wrote:</p>
+<blockquote><p>[W]e have little, if any, evidence to show that the political preferences of teenagers are any more irrational than those of adults. If the debates in your home track with ours, you may have quite the opposite feeling. The stake of young people in their local and national leaders and leadership is enormous; and the automatic disenfranchisement of young citizens, without empirical justification, is a blatant anomaly in our democracy.</p></blockquote>
+<p>In 2011, Daniel Hart and Robert Atkins, childhood studies scholars at Rutgers University, bolstered Wald’s anecdotal observations from her own home with survey data suggesting that, on average, adolescents—<a href="https://www.jstor.org/stable/27895968?mag=case-lowering-voting-age" class="jcitation" >at least those ages 16 and up—are intellectually mature enough to vote</a>. They looked at a U.S. survey that asked people ages 14 and up about their civic knowledge, their tolerance (should unpopular speech or controversial books be allowed?), their political skills (could they write a letter to a politician, or speak at a public meeting?), and their interest (did they follow the news?). The results showed that 16-year-olds scored as well, or nearly as well, as adults on all the measures. Fourteen-year-olds did as well as their elders on some measures, though they were significantly less knowledgeable about civics and less tolerant.</p>
+<p>Hart and Atkins also insisted that 16-year-olds have different interests from adults that ought to be captured at the ballot box. For example, young people are more supportive of federal funding for public schools and for college financial aid. In addition, they wrote, voting is likely to deepen teenagers’ interest in civic life, helping them to become lifelong political participants.</p>
+<p>It’s true that not all 16-year-olds are rational, politically savvy thinkers. But, as theoretical ethicist John Wall writes, it’s not as though we hold adults to that standard:</p>
+<p>If a particular level of competence were indeed necessary for suffrage, then one could argue that many schizophrenic, senile, low IQ, or even just thoughtless adults should be denied it; while many intelligent, politically active, or even just ordinary children and youth should not.</p>
+<p>In a 2014 paper, <a href="https://www.jstor.org/stable/10.7721/chilyoutenvi.24.1.0108?mag=case-lowering-voting-age" class="jcitation" >Wall argued for the total enfranchisement of children</a>. Drawing on an actual proposal introduced in Germany, he suggested that children should receive the right to vote the moment they’re born, with their parents empowered to act as proxies. Then, whenever children develop the interest and capacity to register, they can claim the vote for themselves. In this system, even very young children would be acknowledged as people with political needs, with their parents recognized as the best judges of what those needs are. Meanwhile, older kids with an interest in politics—like the ones organizing around gun violence across the country—would be able to take part in the political system they live in.</p>
+<p>If the standard we hold for who should vote really is the consent of the governed, there’s no reason they shouldn’t.</p>
+
+		<div class="daily-explore story-list  bg-color-">
+										<div class="article-tease image-left default ">
+							<div class="article-tease__featured-image">
+					<a href="https://daily.jstor.org/how-to-get-people-to-vote/">
+						<img fetchpriority="high" decoding="async" width="1050" height="700" src="https://daily.jstor.org/wp-content/uploads/2018/10/Voting_1050x700.jpg" class=" wp-post-image" alt="&quot;I Voted&quot; stickers" />					</a>
+				</div>
+			
+			<div class="article-tease__text">
+				<h3><a href="https://daily.jstor.org/how-to-get-people-to-vote/">How to Get People to Vote</a></h3>				<div class="byline">
+			<a href="https://daily.jstor.org/daily-author/livia-gershon/">Livia Gershon</a>
+			</div>				<div class="article-date">
+					October 19, 2018				</div>
+				<div class="subtitle">In United States midterm elections, it is common for as few as 40% of eligible adults to vote. Why it matters, and some possible solutions.</div>			</div>
+		</div>
+				</div>
+
+		
+													</div>
+
+						<!--div class="article-share-container article-bottom">
+													</div-->
+
+						<div class="feedback-solicitation">Have a correction or comment about this article? <br /><a href='/contact-us?[from_url]'>Please contact us.</a></div>
+						<div class="entry-tags hide-for-small-only"><span class="post_tag"><a href="https://daily.jstor.org/tag/elections/">elections</a></span><span class="post_tag"><a href="https://daily.jstor.org/tag/voting/">Voting</a></span><span class="pub_tag"><a href="https://daily.jstor.org/pub_tag/children-youth-and-environments/">Children,&nbsp;Youth&nbsp;and&nbsp;Environments</a></span><span class="pub_tag"><a href="https://daily.jstor.org/pub_tag/human-rights/">Human&nbsp;Rights</a></span><span class="pub_tag"><a href="https://daily.jstor.org/pub_tag/journal-of-the-early-republic/">Journal&nbsp;of&nbsp;the&nbsp;Early&nbsp;Republic</a></span><span class="pub_tag"><a href="https://daily.jstor.org/pub_tag/the-annals-of-the-american-academy-of-political-and-social-science/">The&nbsp;Annals&nbsp;of&nbsp;the&nbsp;American&nbsp;Academy&nbsp;of&nbsp;Political&nbsp;and&nbsp;Social&nbsp;Science</a></span><span class="pub_tag"><a href="https://daily.jstor.org/pub_tag/the-north-american-review/">The&nbsp;North&nbsp;American&nbsp;Review</a></span></div>						
+	<div class="article-citations-container"><a class="anchor" id="resources"></a>
+		<div class="jstor-logo">
+			<img src="/wp-content/uploads/2018/02/jstor-logo@2x.png" alt="JSTOR logo" width="65" height="90" >
+		</div>
+		<div class="article-citations">
+			<h2>Resources</h2>
+			<p class="text-tight">
+				JSTOR is a digital library for scholars, researchers, and students. JSTOR Daily readers can access the original research behind our articles for free on JSTOR.			</p>
+
+								<div class="citation color-brand">
+						<div class="citation__title bar">
+							<a href="https://www.jstor.org/stable/24768843?mag=case-lowering-voting-age" data-journal="Journal of the Early Republic">The Right to Vote and the Rise of Democracy, 1787—1828</a>
+						</div>
+												<div class="citation_byline">
+							By: DONALD RATCLIFFE						</div>
+													<div class="citation_source">
+							Journal of the Early Republic, Vol. 33, No. 2 (Summer 2013), pp. 219-254						</div>
+						<div class="citation_publisher">
+							University of Pennsylvania Press on behalf of the Society for Historians of the Early American Republic						</div>
+					</div>
+										<div class="citation color-brand">
+						<div class="citation__title bar">
+							<a href="https://www.jstor.org/stable/25106424?mag=case-lowering-voting-age" data-journal="The North American Review">Some Impediments to Woman Suffrage</a>
+						</div>
+												<div class="citation_byline">
+							By: Mrs. Gilbert F. Jones						</div>
+													<div class="citation_source">
+							The North American Review, Vol. 190, No. 645 (Aug., 1909), pp. 158-169 (12 pages)						</div>
+						<div class="citation_publisher">
+							University of Northern Iowa						</div>
+					</div>
+										<div class="citation color-brand">
+						<div class="citation__title bar">
+							<a href="https://www.jstor.org/stable/27878983?mag=case-lowering-voting-age" data-journal="Human Rights">MAKING SENSE OUT OF THE RIGHTS OF YOUTH</a>
+						</div>
+												<div class="citation_byline">
+							By: Patricia M. Wald						</div>
+													<div class="citation_source">
+							Human Rights, Vol. 4, No. 1 (Fall 1974), pp. 13-29						</div>
+						<div class="citation_publisher">
+							American Bar Association						</div>
+					</div>
+										<div class="citation color-brand">
+						<div class="citation__title bar">
+							<a href="https://www.jstor.org/stable/27895968?mag=case-lowering-voting-age" data-journal="The Annals of the American Academy of Political and Social Science">American Sixteen- and Seventeen-Year-Olds Are Ready to Vote</a>
+						</div>
+												<div class="citation_byline">
+							By: DANIEL HART and ROBERT ATKINS						</div>
+													<div class="citation_source">
+							The Annals of the American Academy of Political and Social Science, Vol. 633, The Child as Citizen (January 2011), pp. 201-222						</div>
+						<div class="citation_publisher">
+							Sage Publications, Inc. in association with the  American Academy of Political and Social Science						</div>
+					</div>
+										<div class="citation color-brand">
+						<div class="citation__title bar">
+							<a href="https://www.jstor.org/stable/10.7721/chilyoutenvi.24.1.0108?mag=case-lowering-voting-age" data-journal="Children, Youth and Environments">Why Children and Youth Should Have the Right to Vote: An Argument for Proxy-Claim Suffrage</a>
+						</div>
+												<div class="citation_byline">
+							By: John Wall						</div>
+													<div class="citation_source">
+							Children, Youth and Environments, Vol. 24, No. 1 (2014), pp. 108-123						</div>
+						<div class="citation_publisher">
+							University of Cincinnati						</div>
+					</div>
+					
+		</div>
+	</div>
+
+							
+
+
+						
+						<div class="article-bottom-email-signup">
+							
+	<div class="daily_email_signup weekly-digest ">
+		<h4>Get Our Newsletter</h4>
+		
+                <div class='gf_browser_chrome gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_17' >
+                        <div class='gform_heading'>
+                            <p class='gform_description'></p>
+                        </div><form method='post' enctype='multipart/form-data'  id='gform_17'  action='/case-lowering-voting-age/' data-formid='17' novalidate> 
+ <input type='hidden' class='gforms-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' />
+                        <div class='gform-body gform_body'><div id='gform_fields_17' class='gform_fields top_label form_sublabel_below description_below validation_below'><div id="field_17_3" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_17_3'>Name</label><div class='ginput_container'><input name='input_3' id='input_17_3' type='text' value='' autocomplete='new-password'/></div><div class='gfield_description' id='gfield_description_17_3'>This field is for validation purposes and should be left unchanged.</div></div><div id="field_17_2" class="gfield gfield--type-html gfield--input-type-html gfield--width-full gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><p>Get your fix of JSTOR Daily’s best stories in your inbox each Thursday.</p></div><div id="field_17_1" class="gfield gfield--type-email gfield--input-type-email field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_17_1'>Email</label><div class='ginput_container ginput_container_email'>
+                            <input name='input_1' id='input_17_1' type='email' value='' class='large'     aria-invalid="false"  />
+                        </div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_17' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Subscribe'  /> 
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_17' value='postback' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_17' id='gform_theme_17' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_17' id='gform_style_settings_17' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_17' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='17' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_currency' data-currency='USD' value='zmJQKhIT9UEMe0Q72ZZqriGyhNJPBxNp70vuQSiFnPKFviNIvcL73U6LK/T/sU55QicyQHc0rNURRY48qdGuKBvVm0ff9hZMwwAHKpi4KzUu1l4=' />
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_17' value='WyJbXSIsImY3ZTc5YWU0NTZiMDRhNzc0ZWZlYzY1YjlhMmIzM2M1Il0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_17' id='gform_target_page_number_17' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_17' id='gform_source_page_number_17' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        <p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_2" name="ak_js" value="113"/><script>document.getElementById( "ak_js_2" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>
+                        </div><script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {gformInitSpinner( 17, 'https://daily.jstor.org/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_17').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_17');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_17').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_17').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_17').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_17').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_17').val();gformInitSpinner( 17, 'https://daily.jstor.org/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [17, current_page]);window['gf_submitting_17'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_17').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [17]);window['gf_submitting_17'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_17').text());}else{jQuery('#gform_17').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "17", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_17" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_17";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_17" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 17, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} ); 
+/* ]]> */
+</script>
+
+	</div>
+							</div>
+
+					</article>
+							</main>
+
+			<aside class="sidebar cell small-12 medium-4">
+													<div data-sticky-container id="next-story-s">
+						<div class="next-story-container">
+							<h4 class="meta-title bar">Read this next</h4>
+							<div class="next-story">
+								
+<div class="article-tease">
+			<div class="article-tease__featured-image">
+			<a href="https://daily.jstor.org/the-voting-rights-act-at-50/">
+				<img width="600" height="400" src="https://daily.jstor.org/wp-content/uploads/2015/01/Lyndon_Johnson_and_Martin_Luther_King_Jr._-_Voting_Rights_Act-600x400.jpg" class=" wp-post-image" alt="Lyndon Johnson and Martin Luther King Jr. set to shake hands" decoding="async" loading="lazy" />			</a>
+		</div>
+		<div class="slug"><a href="https://daily.jstor.org/category/politics/politics-government/">Politics &amp; Government</a></div>	<h3><a href="https://daily.jstor.org/the-voting-rights-act-at-50/">The Voting Rights Act at 50</a></h3>	<div class="subtitle">Passage of the act was paved by the sacrifices of Civil Rights activists, especially those who had recently put their bodies on the line at Selma, Alabama.</div></div>							</div>
+
+						</div>
+					</div>
+									<div class="post-widgets">
+					<div id="daily_trending_posts_widget-2" class="widget daily_trending_posts_widget">		<div class="trending-stories">
+					<h4>Trending Posts</h4>
+		<ol>
+							<li>
+					<a href="https://daily.jstor.org/why-does-music-in-science-fiction-sound-like-that/">Why Does Music in Science Fiction Sound Like That?</a>				</li>
+								<li>
+					<a href="https://daily.jstor.org/just-wilde-about-hair/">Just Wilde About Hair</a>				</li>
+								<li>
+					<a href="https://daily.jstor.org/inside-a-four-million-word-diary-of-1860s-new-york/">Inside a Four-Million-Word Diary of 1860s New York</a>				</li>
+								<li>
+					<a href="https://daily.jstor.org/worried-about-teens-today-so-were-adults-in-the-1920s/">Worried About Teens Today? So Were Adults in the 1920s</a>				</li>
+								<li>
+					<a href="https://daily.jstor.org/the-intimate-memorials-of-a-ladies-literary-club/">The Intimate Memorials of a Ladies Literary Club</a>				</li>
+				
+		</ol>
+				</div>
+		</div>				</div>
+
+			</aside>
+
+			<div class="article-footer cell small-12" id="article-footer-s">
+				<div class="grid-x grid-margin-x">
+					<div class="cell more-stories small-12 medium-8">
+						<h4 class="bar">More Stories</h4>
+						<div class="grid-margin-x grid-x">
+																<div class="cell large-6 medium-12 small-12">
+										
+<div class="article-tease">
+			<div class="article-tease__featured-image">
+			<a href="https://daily.jstor.org/the-intimate-memorials-of-a-ladies-literary-club/">
+				<img width="600" height="400" src="https://daily.jstor.org/wp-content/uploads/2026/04/the_intimate_memorials_of_a_ladies_literary_club_1050x700-600x400.jpg" class=" wp-post-image" alt="The Ladies Literary Club in 1951" decoding="async" loading="lazy" />			</a>
+		</div>
+		<div class="slug category"><a href="https://daily.jstor.org/category/arts/language-literature/">Language &amp; Literature</a></div>	<h3><a href="https://daily.jstor.org/the-intimate-memorials-of-a-ladies-literary-club/">The Intimate Memorials of a Ladies Literary Club</a></h3>	<div class="subtitle">These remembrances reveal a century of women’s friendships in one Midwestern literary club.</div></div>									</div>
+																		<div class="cell large-6 medium-12 small-12">
+										
+<div class="article-tease">
+			<div class="article-tease__featured-image">
+			<a href="https://daily.jstor.org/inside-a-four-million-word-diary-of-1860s-new-york/">
+				<img width="600" height="400" src="https://daily.jstor.org/wp-content/uploads/2026/04/inside_a_four_million_word_diary_of_1860s_new_york_2_1050x700-600x400.jpg" class=" wp-post-image" alt="George Templeton Strong" decoding="async" loading="lazy" />			</a>
+		</div>
+		<div class="slug category"><a href="https://daily.jstor.org/category/arts/language-literature/">Language &amp; Literature</a></div>	<h3><a href="https://daily.jstor.org/inside-a-four-million-word-diary-of-1860s-new-york/">Inside a Four-Million-Word Diary of 1860s New York</a></h3>	<div class="subtitle">George Templeton Strong chronicles Civil War–era New York with unmatched immediacy, capturing daily life and upheaval.</div></div>									</div>
+																		<div class="cell large-6 medium-12 small-12">
+										
+<div class="article-tease">
+			<div class="article-tease__featured-image">
+			<a href="https://daily.jstor.org/worried-about-teens-today-so-were-adults-in-the-1920s/">
+				<img width="600" height="400" src="https://daily.jstor.org/wp-content/uploads/2026/04/worried_about_teens_today_so_were_adults_in_the_1920s_1050x700-600x400.jpg" class=" wp-post-image" alt="An illustration from a childrens&#039; story from 1922" decoding="async" loading="lazy" />			</a>
+		</div>
+		<div class="slug category"><a href="https://daily.jstor.org/category/politics/social-history/">Social History</a></div>	<h3><a href="https://daily.jstor.org/worried-about-teens-today-so-were-adults-in-the-1920s/">Worried About Teens Today? So Were Adults in the 1920s</a></h3>	<div class="subtitle">A century ago, new technology and mobility reshaped what it meant to be young, linking rural life more closely to the city.</div></div>									</div>
+																		<div class="cell large-6 medium-12 small-12">
+										
+<div class="article-tease">
+			<div class="article-tease__featured-image">
+			<a href="https://daily.jstor.org/the-immigrant-photographers-who-shaped-a-nations-image/">
+				<img width="600" height="400" src="https://daily.jstor.org/wp-content/uploads/2026/04/the_immigrant_photographers_who_shaped_a_nations_image_1050x700-600x400.jpg" class=" wp-post-image" alt="Studio portrait of amateur photographer Tan Gwat Bing in Central Java" decoding="async" loading="lazy" />			</a>
+		</div>
+		<div class="slug category"><a href="https://daily.jstor.org/category/politics/social-history/">Social History</a></div>	<h3><a href="https://daily.jstor.org/the-immigrant-photographers-who-shaped-a-nations-image/">The Immigrant Photographers Who Shaped a Nation’s Image</a></h3>	<div class="subtitle">In early twentieth-century Indonesia, Chinese-run studios brought modernity into focus.</div></div>									</div>
+															</div>
+					</div>
+					<div class="cell small-12 medium-4 post-bottom-widgets">
+						<div id="daily_recent_posts_widget-3" class="widget daily_recent_posts_widget">		<div class="recent-stories" id="recent-stories-s">
+				<h4>Recent Posts</h4>
+	<ol>
+					<li>
+				<a href="https://daily.jstor.org/celebrating-asian-american-and-pacific-islander-heritage-month/">Celebrating Asian American and Pacific Islander Heritage Month</a>			</li>
+						<li>
+				<a href="https://daily.jstor.org/cyberpunk-dreams-in-saudi-arabia/">Cyberpunk Dreams in Saudi Arabia</a>			</li>
+						<li>
+				<a href="https://daily.jstor.org/sassafras-from-scent-to-science-in-american-medicine/">Sassafras: From Scent to Science in American Medicine</a>			</li>
+						<li>
+				<a href="https://daily.jstor.org/the-intimate-memorials-of-a-ladies-literary-club/">The Intimate Memorials of a Ladies Literary Club</a>			</li>
+						<li>
+				<a href="https://daily.jstor.org/why-does-music-in-science-fiction-sound-like-that/">Why Does Music in Science Fiction Sound Like That?</a>			</li>
+				
+	</ol>
+			</div>
+		</div>					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<div class="footer-container">
+	<footer class="footer grid-container">
+		<div class="grid-x grid-margin-x">
+			<div class="cell medium-8 small-12">
+				<div class="description-wrapper">
+					<div id="custom_html-4"><h3>About Us</h3><div class="textwidget custom-html-widget"><p>JSTOR Daily provides context for current events using scholarship found in JSTOR, a digital library of academic journals, books, and other material. We publish articles grounded in peer-reviewed research and provide free access to that research for all of our readers.
+				</p></div></div>					<ul id="menu-footer-menu" class=""><li id="menu-item-50715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50715"><a href="https://daily.jstor.org/about/">About JSTOR Daily</a></li>
+<li id="menu-item-50714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50714"><a href="https://daily.jstor.org/contact-us/?from_url=/case-lowering-voting-age/">Contact The Editors</a></li>
+<li id="menu-item-50717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50717"><a href="https://daily.jstor.org/newsletter/">Newsletter</a></li>
+<li id="menu-item-273061" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273061"><a href="https://daily.jstor.org/submit/">Submission Guidelines</a></li>
+<li id="menu-item-306020" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-306020"><a href="https://daily.jstor.org/unsubscribe/">Unsubscribe</a></li>
+<li id="menu-item-308871" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-308871"><a href="https://daily.jstor.org/jstor-daily-sleuth/">The JSTOR Daily Sleuth</a></li>
+<li id="menu-item-308873" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-308873"><a href="https://daily.jstor.org/teaching-and-learning-resources-from-jstor-daily/">Teaching and Learning Resources</a></li>
+<li id="menu-item-308875" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-308875"><a href="https://daily.jstor.org/about-the-american-prison-newspapers-collection/">American Prison Newspapers</a></li>
+<li id="menu-item-50719" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50719"><a href="/feed">RSS</a></li>
+</ul><ul id="menu-copyright-menu" class=""><li id="menu-item-50720" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50720"><a href="https://www.jstor.org/">JSTOR.org</a></li>
+<li id="menu-item-50721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50721"><a href="https://daily.jstor.org/terms-and-conditions/">Terms and Conditions of Use</a></li>
+<li id="menu-item-50722" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50722"><a href="https://www.ithaka.org/privacypolicy">Privacy Policy</a></li>
+<li id="menu-item-50723" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50723"><a href="https://www.ithaka.org/cookies">Cookie Policy</a></li>
+<li id="menu-item-279050" class="cookie-settings-link menu-item menu-item-type-custom menu-item-object-custom menu-item-279050"><a href="#">Cookie Settings</a></li>
+<li id="menu-item-50724" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50724"><a href="https://about.jstor.org/accessibility/">Accessibility</a></li>
+</ul>				</div>
+			</div>
+			<div class="cell medium-4 small-12 copyright">
+				<div class="copyright-wrapper">
+					<a href="https://www.jstor.org"><img alt="logo" src="/wp-content/themes/daily2018/build/assets/images/j_logo_footer_65x88.png" srcset="/wp-content/themes/daily2018/build/assets/images/j_logo_footer_65x88.png 1x, /wp-content/themes/daily2018/build/assets/images/j_logo_footer_122x168.png 2x" class="logo" height="63" width="85"></a>
+					<div id="custom_html-5"><div class="textwidget custom-html-widget"><p>			JSTOR is part of ITHAKA, a not-for-profit organization helping the academic community use digital technologies to preserve the scholarly record and to advance research and teaching in sustainable ways.
+				</p>
+				<p>
+					&copy;<span class="currentyear"></span> ITHAKA. All Rights Reserved. JSTOR®, the JSTOR logo, and ITHAKA® are registered trademarks of ITHAKA.
+				</p></div></div>				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/daily2018/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@webcomponents/scoped-custom-element-registry@0.0.3/scoped-custom-element-registry.min.js" id="scoped-custom-element-registry-js"></script>
+<script type="text/javascript" src="https://daily.jstor.org/wp-content/themes/daily2018/build/assets/js/app.js?ver=1.0l" id="foundation-js"></script>
+<script type="text/javascript" src="https://use.fontawesome.com/releases/v6.5.2/js/all.js?ver=6.5.2" id="fontawesome-js"></script>
+<script type="text/javascript" src="https://daily.jstor.org/wp-content/themes/daily2018/includes/js/site.js?ver=1.0l" id="daily_custom_js-js"></script>
+<script type="text/javascript" src="https://cdn.knightlab.com/libs/soundcite/latest/js/soundcite.min.js?ver=6.9.4" id="soundcite-js"></script>
+<script type="text/javascript" src="https://daily.jstor.org/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="https://daily.jstor.org/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://daily.jstor.org/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://daily.jstor.org/wp-includes/js/dist/a11y.min.js?ver=cb460b4676c94bd228ed" id="wp-a11y-js"></script>
+<script type="text/javascript" defer='defer' src="https://daily.jstor.org/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.29" id="gform_json-js"></script>
+<script type="text/javascript" id="gform_gravityforms-js-extra">
+/* <![CDATA[ */
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://daily.jstor.org/wp-content/plugins/gravityforms/images"}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https://daily.jstor.org/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://daily.jstor.org/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"17f0793a04e54935fa23bf3de8544d9e","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https://daily.jstor.org/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://daily.jstor.org/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"17f0793a04e54935fa23bf3de8544d9e","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+//# sourceURL=gform_gravityforms-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' src="https://daily.jstor.org/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.29" id="gform_gravityforms-js"></script>
+<script type="text/javascript" defer='defer' src="https://daily.jstor.org/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=3f278756f0a3032bed328ff6a9f6c01d" id="gform_gravityforms_utils-js"></script>
+<script type="text/javascript" defer='defer' src="https://daily.jstor.org/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=4f8b3915c1c1e1a6800825abd64b03cb" id="gform_gravityforms_theme_vendors-js"></script>
+<script type="text/javascript" id="gform_gravityforms_theme-js-extra">
+/* <![CDATA[ */
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"17f0793a04e54935fa23bf3de8544d9e"},"ajax":{"ajaxurl":"https://daily.jstor.org/wp-admin/admin-ajax.php","ajax_submission_nonce":"c7858f5898","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}}}},"hmr_dev":"","public_path":"https://daily.jstor.org/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"83e65625e6"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' src="https://daily.jstor.org/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=7383fdf9ccf5533a5ee9c6a7a5ad6800" id="gform_gravityforms_theme-js"></script>
+<script defer type="text/javascript" src="https://daily.jstor.org/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1777767152" id="akismet-frontend-js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 17) {} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } ); 
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "17", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_17" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_17";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_17" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 17, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } ); 
+/* ]]> */
+</script>
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+
+		$(document).ready(function () {
+			$('.gform_wrapper .disablecopypaste textarea').bind('copy paste', function (e) {
+				e.preventDefault();
+			});
+		});
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"1bf2c69c97","applicationID":"157999336","transactionName":"YQEGMBdSCxFRV0NYWlhLJQcRWgoMH0deX1JaAQ==","queueTime":0,"applicationTime":496,"atts":"TUYFRl9IGB8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

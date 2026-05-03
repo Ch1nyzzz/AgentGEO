@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    
+<title>Securities Transaction Tax (STT): Rates and how to calculate it</title>
+<meta name="description" content="Securities Transaction Tax (STT) is levied on every stock market transaction in India. Learn STT rates for equity, F&amp;O, mutual funds, and how it&#39;s calculated." />
+
+<meta property="og:title" content="Securities Transaction Tax (STT): Rates and how to calculate it">
+<meta property="og:description" content="Securities Transaction Tax (STT) is levied on every stock market transaction in India. Learn STT rates for equity, F&amp;O, mutual funds, and how it&#39;s calculated.">
+
+
+    <meta
+      name="google-site-verification"
+      content="lIP4lG2hgsaGHMkrjj78RfAB9I4_iOP2JN8JMR7UErs"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="origin" />
+
+    <meta property="og:image" content="/static/images/og.webp">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Zerodha",
+        "logo": "https://zerodha.com/static/images/logo.svg",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91 80 4040 2020",
+            "contactType": "customer service"
+          }
+        ],
+        "url": "https://zerodha.com/",
+        "sameAs": [
+          "https://www.facebook.com/zerodha.social",
+          "https://www.twitter.com/zerodhaonline",
+          "https://www.youtube.com/user/zerodhaonline",
+          "https://www.linkedin.com/company/zerodha",
+          "https://www.instagram.com/zerodhaonline",
+          "https://plus.google.com/+zerodha"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://support.zerodha.com",
+        "name": "Zerodha Support Portal",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://support.zerodha.com/search-results?query={search_term}",
+          "query-input": "required name=search_term"
+        }
+      }
+    </script>
+
+    <link
+      rel="image_src"
+      href="https://zerodha.com/static/images/landing.png"
+    />
+    <meta
+      property="og:image"
+      content="https://zerodha.com/static/images/landing.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://zerodha.com/static/images/favicon.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:400,500,600"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/static/fonts/fontello.css?v=v3.0.21" />
+    <link rel="stylesheet" href="/static/css/tw-gen.css?v=v3.0.21" />
+
+     
+  
+
+    <!-- [head] -->
+  </head>
+  <body>
+    <header
+      class="fixed grid px-2 md:absolute w-full h-[4rem] bg-z-background border-b border-z-border-dark shadow-xs z-[var(--index-z-header)] top-0"
+    >
+      <div
+        class="relative flex place-self-center px-6 max-w-7xl w-full h-full justify-between"
+      >
+        <a class="flex flex-col justify-center" href="/">
+          <img
+            class="w-32"
+            src="https://zerodha.com/static/images/logo.svg"
+            alt="Zerodha logo"
+          />
+        </a>
+        <div class="flex gap-12">
+          <div
+            class="md:flex hidden h-full text-gray text-sm gap-10"
+            role="navigation"
+            aria-label="main navigation"
+          >
+            
+            <a
+              class="m-auto hover:text-z-blue"
+              href="https://zerodha.com/open-account/"
+              >Signup</a
+            >
+            
+
+            <a
+              class="m-auto hover:text-z-blue"
+              href="https://zerodha.com/about/"
+              >About</a
+            >
+            <a
+              class="m-auto hover:text-z-blue"
+              href="https://zerodha.com/products/"
+              >Products</a
+            >
+            <a
+              class="m-auto hover:text-z-blue"
+              href="https://zerodha.com/pricing/"
+              >Pricing</a
+            >
+            <a
+              class="m-auto hover:text-z-blue"
+              href="https://support.zerodha.com"
+              >Support</a
+            >
+          </div>
+          <button
+            id="headerButtonRef"
+            class="relative w-10 h-10 hover:scale-105 hover:text-z-blue z-[var(--index-z-hamburger-button)] self-center hover:cursor-pointer"
+          >
+            <span class="sr-only">Open main menu</span>
+            <div
+              class="absolute block w-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+            >
+              <span
+                aria-hidden="true"
+                class="absolute block w-5 h-0.5 bg-current transition duration-300 ease-in-out transform -translate-y-1.5"
+              ></span>
+              <span
+                aria-hidden="true"
+                class="absolute block w-5 h-0.5 bg-current transition duration-300 ease-in-out transform"
+              ></span>
+              <span
+                aria-hidden="true"
+                class="absolute block w-5 h-0.5 bg-current transition duration-300 ease-in-out transform translate-y-1.5"
+              ></span>
+            </div>
+          </button>
+          <div
+            id="headerRef"
+            class="absolute flex flex-col md:right-6 max-w-3xl md:top-[4rem] w-full bg-z-background text-sm shadow-2xl z-[var(--index-z-hamburger-menu)] transition-all right-0 top-2 invisible"
+          >
+            <div class="grid grid-cols-2 p-6 md:hidden gap-5">
+              
+              <a href="https://signup.zerodha.com" class="hover:text-z-blue"
+                >Signup</a
+              >
+              
+
+              <a class="hover:text-z-blue" href="https://zerodha.com/about/"
+                >About</a
+              >
+              <a class="hover:text-z-blue" href="https://zerodha.com/products/"
+                >Products</a
+              >
+              <a class="hover:text-z-blue" href="https://zerodha.com/pricing/"
+                >Pricing</a
+              >
+              <a target="_blank" href="https://support.zerodha.com">Support</a>
+            </div>
+            <hr />
+            <div class="grid grid-cols-2 p-6 md:flex md:justify-between gap-3">
+              <a
+                target="_blank"
+                class="flex md:flex-col hover:text-z-blue gap-2 items-center"
+                href="https://kite.zerodha.com"
+              >
+                <img
+                  class="md:h-12 h-8"
+                  src="https://zerodha.com/static/images/products/kite-logo.svg"
+                  alt="Kite logo"
+                />
+                <span class="font-medium"> Kite </span>
+                <span class="md:block hidden text-xs text-z-gray">
+                  Trading platform
+                </span>
+              </a>
+              <a
+                target="_blank"
+                class="flex md:flex-col hover:text-z-blue gap-2 items-center"
+                href="https://console.zerodha.com"
+              >
+                <img
+                  class="md:h-12 h-8"
+                  src="https://zerodha.com/static/images/products/console.svg"
+                  alt="Console logo"
+                />
+                <span class="font-medium"> Console </span>
+                <span class="md:block hidden text-xs text-gray-400">
+                  Backoffice
+                </span>
+              </a>
+
+              <a
+                target="_blank"
+                class="flex md:flex-col hover:text-z-blue gap-2 items-center"
+                href="https://zerodha.com/products/api/"
+              >
+                <img
+                  class="md:h-12 h-8"
+                  src="https://zerodha.com/static/images/products/kite-connect.svg"
+                  alt="Kite connect logo"
+                />
+                <span class="font-medium"> Kite Connect </span>
+                <span class="md:block hidden text-xs text-gray-400">
+                  Trading APIs
+                </span>
+              </a>
+              <a
+                target="_blank"
+                class="flex md:flex-col hover:text-z-blue gap-2 items-center"
+                href="https://coin.zerodha.com"
+              >
+                <img
+                  class="md:h-12 h-8"
+                  src="https://zerodha.com/static/images/products/coin.svg"
+                  alt="coin logo"
+                />
+                <span class="font-medium"> Coin </span>
+                <span class="md:block hidden text-xs text-gray-400">
+                  Mutual funds
+                </span>
+              </a>
+              <a
+                target="_blank"
+                class="flex md:hidden hover:text-z-blue gap-2 items-center"
+                href="https://zerodha.com/varsity/"
+              >
+                <img
+                  class="pl-2 p-1 h-7 self-start"
+                  src="https://zerodha.com/static/images/products/varsity.png"
+                  alt="varsity logo"
+                />
+                <span class="font-medium">Varsity</span>
+              </a>
+              <a
+                target="_blank"
+                class="flex md:hidden hover:text-z-blue gap-2 items-center"
+                href="https://tradingqna.com/"
+              >
+                <img
+                  class="pl-2 p-1 h-7"
+                  src="https://zerodha.com/static/images/products/tqna.png"
+                  alt="Question and Answers logo"
+                />
+                <span class="font-medium">Trading Q&amp;A</span>
+              </a>
+            </div>
+            <hr class="md:hidden" />
+            <div
+              class="grid grid-cols-2 p-6 md:grid-cols-3 md:bg-footer-grey bg-z-background text-z-gray gap-3"
+            >
+              <div class="flex flex-col gap-2">
+                <p class="pb-2 text-z-black font-semibold">Utilities</p>
+                <a
+                  class="hover:text-z-blue"
+                  href="https://zerodha.com/calculators/"
+                  >Calculators</a
+                >
+                <a
+                  class="hover:text-z-blue"
+                  href="https://zerodha.com/brokerage-calculator/"
+                  >Brokerage calculator</a
+                >
+                <a
+                  href="https://zerodha.com/margin-calculator/"
+                  class="hover:text-z-blue"
+                  >Margin calculator</a
+                >
+                <a
+                  href="https://zerodha.com/calculators/sip-calculator/"
+                  class="hover:text-z-blue"
+                  >SIP calculator</a
+                >
+              </div>
+              <div class="flex flex-col gap-2">
+                <p class="pb-2 text-z-black font-semibold">Updates</p>
+                <a
+                  target="_blank"
+                  href="https://zerodha.com/z-connect/"
+                  class="hover:text-z-blue"
+                  >Z-Connect blog</a
+                >
+                <a
+                  target="_blank"
+                  href="https://zerodha.com/marketintel/bulletin/"
+                  class="hover:text-z-blue"
+                  >Circulars / Bulletin</a
+                >
+                <a href="https://zerodha.com/ipo/" class="hover:text-z-blue"
+                  >IPOs</a
+                >
+                <a href="https://zerodha.com/markets" class="hover:text-z-blue"
+                  >Markets</a
+                >
+              </div>
+              <div class="flex-col md:flex hidden gap-2">
+                <p class="pb-2 text-z-black font-semibold">Education</p>
+                <div class="flex justify-between">
+                  <a
+                    target="_blank"
+                    class="hover:text-z-blue"
+                    href="https://zerodha.com/varsity/"
+                  >
+                    <img
+                      class="mb-5 h-9"
+                      src="https://zerodha.com/static/images/products/varsity.png"
+                      alt="varsity logo"
+                    />
+                    <span>Varsity</span>
+                  </a>
+                  <a
+                    target="_blank"
+                    class="hover:text-z-blue"
+                    href="https://tradingqna.com/"
+                  >
+                    <img
+                      class="mb-5 h-9"
+                      src="https://zerodha.com/static/images/products/tqna.png"
+                      alt="Question and Answers logo"
+                    />
+                    <span>Trading Q&amp;A</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="mt-[4rem]">
+      <div class="w-full bg-z-light-gray">
+        <div class="px-6 py-6 m-auto max-w-7xl md:py-10">
+          <div class="flex flex-wrap pb-5 md:pb-8 gap-3 justify-between items-center">
+            <p class="pr-2 md:text-4xl text-xl sm:text-2xl font-semibold">
+              <a
+                href="/"
+                class="cursor-pointer"
+              >
+                Support Portal
+              </a>
+            </p>
+
+            
+            <a
+              target="_blank"
+              href="/login?next=https%3A%2F%2Fsupport.zerodha.com%2Ftickets%2F"
+              class="flex py-1.5 px-2 md:px-4 md:py-2 md:text-base hover:bg-z-black bg-z-blue text-white text-sm rounded-sm gap-1.5 items-center shrink-0 outline-offset-2"
+            >
+              <!-- <span class="md:block hidden fontello-tickets"></span> -->
+              <span class="font-medium">My tickets</span>
+            </a>
+            
+          </div>
+          <div
+            class="relative flex px-5 md:px-6 md:gap-3 border-z-border-blue h-[60px] has-focus-visible:shadow-[1px_1px_6px_#E0E7EF] bg-z-background border rounded-sm gap-2 items-center transition-shadow outline-z-gray outline-offset-2"
+          >
+            <span class="md:block hidden text-z-gray fontello-search"></span>
+            <input
+              id="searchInput"
+              class="pl-1 py-4 w-full border-0 outline-none"
+              type="text"
+              autocomplete="off"
+              placeholder="Eg: How do I open my account, How do i activate F&O..."
+              
+            />
+            <div id="search-spinner" class="hidden gap-1 animate-pulse">
+              <div class="w-1.5 h-1.5 bg-z-gray rounded-full animate-bounce" style="animation-delay: 0s"></div>
+              <div class="w-1.5 h-1.5 bg-z-gray rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+              <div class="w-1.5 h-1.5 bg-z-gray rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+            </div>
+
+            <div
+              id="comboboxItemsRef"
+              class="absolute max-h-[500px] bg-z-background border-x border-z-border-blue shadow-[1px_1px_6px_#E0E7EF] z-[500] overflow-y-auto -right-[1px] -left-[1px] top-[59px]"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      
+<div class="flex pb-5 px-6 m-auto max-w-7xl gap-14 items-start">
+  <div class="sticky flex-col mt-4 pt-8 pb-12 w-1/3 hidden gap-7 lg:flex shrink-0 top-0">
+
+    
+	  <details class="group/detail "  open >
+		<summary
+    id="side-pannel-summary"
+		  class="flex hover:scale-103 border-z-border-dark border rounded-xs items-center transition-transform cursor-pointer select-none group/summary"
+		>
+       <div
+          class="flex px-5 bg-z-light-blue/60 rounded-xs items-center self-stretch shrink-0"
+        >
+    			<span class="text-xl text-z-blue fontello-account-open"></span>
+        </div>
+        <p class="px-3 py-4 text-lg font-medium">
+          <!-- <a href="/category/account-opening"> -->
+            Account Opening
+          <!-- </a> -->
+        </p>
+        <span class="ml-auto px-5 text-[9px] text-z-blue transition-transform shrink-0 fontello-arrow rotate-180 group-open/detail:rotate-0"></span>
+		</summary>
+		<div class="flex flex-col w-full border-z-border-dark border-b border-r border-l">
+		  <ul class="flex flex-col pl-12 py-4 md:pl-16 w-full list-disc">
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 underline text-z-blue font-medium underline-offset-4" 
+              href="/category/account-opening/resident-individual">
+                Resident individual
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/account-opening/minor">
+                Minor
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/account-opening/nri-account-opening">
+                Non Resident Indian (NRI)
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/account-opening/company-partnership-and-huf-account-opening">
+                Company, Partnership, HUF and LLP
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/account-opening/glossary">
+                Glossary
+            </a>
+					</li>
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+		  </ul>
+		</div>
+	  </details>
+	  
+	  <details class="group/detail " >
+		<summary
+    id="side-pannel-summary"
+		  class="flex hover:scale-103 border-z-border-dark border rounded-xs items-center transition-transform cursor-pointer select-none group/summary"
+		>
+       <div
+          class="flex px-5 bg-z-light-blue/60 rounded-xs items-center self-stretch shrink-0"
+        >
+    			<span class="text-xl text-z-blue fontello-your-account"></span>
+        </div>
+        <p class="px-3 py-4 text-lg font-medium">
+          <!-- <a href="/category/your-zerodha-account"> -->
+            Your Zerodha Account
+          <!-- </a> -->
+        </p>
+        <span class="ml-auto px-5 text-[9px] text-z-blue transition-transform shrink-0 fontello-arrow rotate-180 group-open/detail:rotate-0"></span>
+		</summary>
+		<div class="flex flex-col w-full border-z-border-dark border-b border-r border-l">
+		  <ul class="flex flex-col pl-12 py-4 md:pl-16 w-full list-disc">
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/your-zerodha-account/your-profile">
+                Your Profile
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/your-zerodha-account/account-modification-and-segment-addition">
+                Account modification
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/your-zerodha-account/dp-id-and-bank-details">
+                Client Master Report (CMR) and Depository Participant (DP)
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/your-zerodha-account/nomination-process">
+                Nomination
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/your-zerodha-account/transfer-of-shares-and-conversion-of-shares">
+                Transfer and conversion of securities
+            </a>
+					</li>
+				
+			
+				
+			
+		  </ul>
+		</div>
+	  </details>
+	  
+	  <details class="group/detail " >
+		<summary
+    id="side-pannel-summary"
+		  class="flex hover:scale-103 border-z-border-dark border rounded-xs items-center transition-transform cursor-pointer select-none group/summary"
+		>
+       <div
+          class="flex px-5 bg-z-light-blue/60 rounded-xs items-center self-stretch shrink-0"
+        >
+    			<span class="text-xl text-z-blue fontello-kite"></span>
+        </div>
+        <p class="px-3 py-4 text-lg font-medium">
+          <!-- <a href="/category/trading-and-markets"> -->
+            Kite
+          <!-- </a> -->
+        </p>
+        <span class="ml-auto px-5 text-[9px] text-z-blue transition-transform shrink-0 fontello-arrow rotate-180 group-open/detail:rotate-0"></span>
+		</summary>
+		<div class="flex flex-col w-full border-z-border-dark border-b border-r border-l">
+		  <ul class="flex flex-col pl-12 py-4 md:pl-16 w-full list-disc">
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/trading-and-markets/ipo">
+                IPO
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/trading-and-markets/trading-faqs">
+                Trading FAQs
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/trading-and-markets/margins">
+                Margin Trading Facility (MTF) and Margins
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/trading-and-markets/charts-and-orders">
+                Charts and orders
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/trading-and-markets/alerts-and-nudges">
+                Alerts and Nudges
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/trading-and-markets/general-kite">
+                General
+            </a>
+					</li>
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+		  </ul>
+		</div>
+	  </details>
+	  
+	  <details class="group/detail " >
+		<summary
+    id="side-pannel-summary"
+		  class="flex hover:scale-103 border-z-border-dark border rounded-xs items-center transition-transform cursor-pointer select-none group/summary"
+		>
+       <div
+          class="flex px-5 bg-z-light-blue/60 rounded-xs items-center self-stretch shrink-0"
+        >
+    			<span class="text-xl text-z-blue fontello-funds"></span>
+        </div>
+        <p class="px-3 py-4 text-lg font-medium">
+          <!-- <a href="/category/funds"> -->
+            Funds
+          <!-- </a> -->
+        </p>
+        <span class="ml-auto px-5 text-[9px] text-z-blue transition-transform shrink-0 fontello-arrow rotate-180 group-open/detail:rotate-0"></span>
+		</summary>
+		<div class="flex flex-col w-full border-z-border-dark border-b border-r border-l">
+		  <ul class="flex flex-col pl-12 py-4 md:pl-16 w-full list-disc">
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/funds/adding-funds">
+                Add money
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/funds/fund-withdrawal">
+                Withdraw money
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/funds/adding-bank-accounts">
+                Add bank accounts
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/funds/mandate">
+                eMandates
+            </a>
+					</li>
+				
+			
+		  </ul>
+		</div>
+	  </details>
+	  
+	  <details class="group/detail " >
+		<summary
+    id="side-pannel-summary"
+		  class="flex hover:scale-103 border-z-border-dark border rounded-xs items-center transition-transform cursor-pointer select-none group/summary"
+		>
+       <div
+          class="flex px-5 bg-z-light-blue/60 rounded-xs items-center self-stretch shrink-0"
+        >
+    			<span class="text-xl text-z-blue fontello-console"></span>
+        </div>
+        <p class="px-3 py-4 text-lg font-medium">
+          <!-- <a href="/category/console"> -->
+            Console
+          <!-- </a> -->
+        </p>
+        <span class="ml-auto px-5 text-[9px] text-z-blue transition-transform shrink-0 fontello-arrow rotate-180 group-open/detail:rotate-0"></span>
+		</summary>
+		<div class="flex flex-col w-full border-z-border-dark border-b border-r border-l">
+		  <ul class="flex flex-col pl-12 py-4 md:pl-16 w-full list-disc">
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/console/portfolio">
+                Portfolio
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/console/corporate-actions">
+                Corporate actions
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/console/ledger">
+                Funds statement
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/console/reports">
+                Reports
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/console/profile">
+                Profile
+            </a>
+					</li>
+				
+			
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/console/segments">
+                Segments
+            </a>
+					</li>
+				
+			
+		  </ul>
+		</div>
+	  </details>
+	  
+	  <details class="group/detail " >
+		<summary
+    id="side-pannel-summary"
+		  class="flex hover:scale-103 border-z-border-dark border rounded-xs items-center transition-transform cursor-pointer select-none group/summary"
+		>
+       <div
+          class="flex px-5 bg-z-light-blue/60 rounded-xs items-center self-stretch shrink-0"
+        >
+    			<span class="text-xl text-z-blue fontello-coin"></span>
+        </div>
+        <p class="px-3 py-4 text-lg font-medium">
+          <!-- <a href="/category/mutual-funds"> -->
+            Coin
+          <!-- </a> -->
+        </p>
+        <span class="ml-auto px-5 text-[9px] text-z-blue transition-transform shrink-0 fontello-arrow rotate-180 group-open/detail:rotate-0"></span>
+		</summary>
+		<div class="flex flex-col w-full border-z-border-dark border-b border-r border-l">
+		  <ul class="flex flex-col pl-12 py-4 md:pl-16 w-full list-disc">
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/mutual-funds/understanding-mutual-funds">
+                Mutual funds
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/mutual-funds/nps">
+                National Pension Scheme (NPS)
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/mutual-funds/fixed-deposits">
+                Fixed Deposit (FD)
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/mutual-funds/features-on-coin">
+                Features on Coin
+            </a>
+					</li>
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/mutual-funds/payments-and-orders">
+                Payments and Orders
+            </a>
+					</li>
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+					
+					<li class="pl-1 hover:text-z-blue text-z-black cursor-pointer">
+						<a class="flex py-2 px-2 " 
+              href="/category/mutual-funds/coin-general">
+                General
+            </a>
+					</li>
+				
+			
+				
+			
+		  </ul>
+		</div>
+	  </details>
+	  
+  </div>
+
+  <div class="w-full">
+    
+<div class="mt-2 mb-2 pt-5 pb-5 m-auto max-w-7xl md:sticky md:mt-4 md:pt-8 md:mb-3 md:top-0 bg-z-background z-50 top-[4rem]">
+  <ul
+    itemscope
+    itemtype="http://schema.org/BreadcrumbList"
+    class="flex flex-wrap gap-2 items-center"
+  >
+     
+    
+     
+      
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem"
+        class="md:text-base text-sm flex items-center gap-2 text-z-blue hover:text-z-gray"
+      >
+        <meta itemprop="position" content="1" />
+        
+        <a
+          itemtype="http://schema.org/Thing"
+          itemprop="item"
+          href="https://support.zerodha.com/"
+        >
+          
+          <span itemprop="name">Home</span>
+          
+        </a>
+      </li>
+     
+       
+        
+      
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem"
+        class="md:text-base text-sm flex items-center gap-2 text-z-blue hover:text-z-gray"
+      >
+        <meta itemprop="position" content="2" />
+        
+        <span class="text-[7px] text-z-blue shrink-0 fontello-arrow rotate-90"></span>
+        
+        <a
+          itemtype="http://schema.org/Thing"
+          itemprop="item"
+          href="https://support.zerodha.com/category/account-opening"
+        >
+          
+          <span itemprop="name">Account Opening</span>
+          
+        </a>
+      </li>
+     
+       
+        
+      
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem"
+        class="md:text-base text-sm flex items-center gap-2 text-z-blue hover:text-z-gray"
+      >
+        <meta itemprop="position" content="3" />
+        
+        <span class="text-[7px] text-z-blue shrink-0 fontello-arrow rotate-90"></span>
+        
+        <a
+          itemtype="http://schema.org/Thing"
+          itemprop="item"
+          href="https://support.zerodha.com/category/account-opening/resident-individual"
+        >
+          
+          <span itemprop="name">Resident individual</span>
+          
+        </a>
+      </li>
+     
+       
+        
+      
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem"
+        class="md:text-base text-sm flex items-center gap-2 text-z-gray"
+      >
+        <meta itemprop="position" content="4" />
+        
+        <span class="text-[7px] text-z-blue shrink-0 fontello-arrow rotate-90"></span>
+        
+        <a
+          itemtype="http://schema.org/Thing"
+          itemprop="item"
+          href="https://support.zerodha.com/category/account-opening/resident-individual/ri-charges"
+        >
+          
+          <span itemprop="name">Charges</span>
+          
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+<div class="w-full">
+  
+<div>
+  <h1 class="mb-5 md:text-3xl md:leading-12 text-2xl font-medium">What is Securities Transaction Tax (STT) and how is it calculated?</h1>
+  <div id="article-body">
+    <p>
+      <p dir="ltr">
+ Securities Transaction Tax (STT) is a tax on buying and selling stocks and other securities on Indian stock exchanges. STT rates on futures and options (F&amp;O) changed on 1 April 2026. Equity delivery and intraday rates remain unchanged.
+</p>
+<h2 dir="ltr">
+ STT charges by order type
+</h2>
+<table class="mce-item-table">
+ <thead>
+  <tr>
+   <th>
+    Order type
+   </th>
+   <th>
+    Rate
+   </th>
+   <th>
+    Applicable side
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    Equity intraday
+   </td>
+   <td>
+    0.025% (₹25 per lakh)
+   </td>
+   <td>
+    Sell side only
+   </td>
+  </tr>
+  <tr>
+   <td>
+    Equity delivery
+   </td>
+   <td>
+    0.1% (₹100 per lakh)
+   </td>
+   <td>
+    Both buy and sell sides
+   </td>
+  </tr>
+  <tr>
+   <td>
+    Options (exercised)
+   </td>
+   <td>
+    0.15% of intrinsic value
+   </td>
+   <td>
+    Options bought and exercised
+   </td>
+  </tr>
+  <tr>
+   <td>
+    Options (shorted)
+   </td>
+   <td>
+    0.15% of the premium
+   </td>
+   <td>
+    Options that are shorted
+   </td>
+  </tr>
+  <tr>
+   <td>
+    Futures
+   </td>
+   <td>
+    0.05% (₹50 per lakh)
+   </td>
+   <td>
+    Sell side only
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ The F&amp;O rate changes took effect from 1 April 2026 as per Budget 2026–27. The previous rates were 0.02% for futures, 0.1% for options shorted, and 0.125% for exercised options.
+</p>
+<h2 dir="ltr">
+ How STT is rounded off
+</h2>
+<p dir="ltr">
+ STT is rounded to the nearest rupee based on the paise portion:
+</p>
+<ul>
+ <li dir="ltr" role="presentation">
+  If the paise portion is 50 or more, STT rounds up (e.g., ₹100.60 becomes ₹101).
+ </li>
+ <li dir="ltr" role="presentation">
+  If the paise portion is less than 50, STT rounds down (e.g., ₹100.40 becomes ₹100).
+ </li>
+</ul>
+<h2 dir="ltr">
+ How to calculate average price for delivery trades
+</h2>
+<p dir="ltr">
+ Since STT applies to both the buy and sell side for delivery trades, you need to calculate the average price first:
+</p>
+<ul>
+ <li dir="ltr" role="presentation">
+  Average price = (Total cost to buy shares + Total revenue from selling shares) ÷ Total number of shares bought and sold
+ </li>
+ <li dir="ltr" role="presentation">
+  Average price = [(Buy Qty × Buy Price) + (Sell Qty × Sell Price)] ÷ (Buy Qty + Sell Qty)
+ </li>
+</ul>
+<h2>
+ Example calculations
+</h2>
+<h3 dir="ltr">
+ Equity intraday
+</h3>
+<ol>
+ <li dir="ltr" role="presentation">
+  Buy: 500 shares at ₹100 each.
+ </li>
+ <li dir="ltr" role="presentation">
+  Sell: 500 shares at ₹105 each.
+ </li>
+ <li dir="ltr" role="presentation">
+  Average price = [(500 × ₹100) + (500 × ₹105)] ÷ 1,000 = ₹102.50.
+ </li>
+ <li dir="ltr" role="presentation">
+  STT (on sell side) = 500 × ₹102.50 × 0.025% = ₹13 (₹12.81 rounded up).
+ </li>
+</ol>
+<h3 dir="ltr">
+ Equity delivery
+</h3>
+<ol>
+ <li dir="ltr" role="presentation">
+  Buy: 500 shares at ₹100 each.
+ </li>
+ <li dir="ltr" role="presentation">
+  Sell: 500 shares at ₹105 each.
+ </li>
+ <li dir="ltr" role="presentation">
+  STT on buy = 500 × ₹100 × 0.1% = ₹50.
+ </li>
+ <li dir="ltr" role="presentation">
+  STT on sell = 500 × ₹105 × 0.1% = ₹53 (₹52.50 rounded up).
+ </li>
+</ol>
+<h3 dir="ltr">
+ Options (exercised)
+</h3>
+<p dir="ltr">
+ STT on the intrinsic value of an exercised option contract:
+</p>
+<ol>
+ <li dir="ltr" role="presentation">
+  1 lot of CE = 50 units.
+ </li>
+ <li dir="ltr" role="presentation">
+  Strike price = ₹17,300.
+ </li>
+ <li dir="ltr" role="presentation">
+  Spot price = ₹17,350.
+ </li>
+ <li dir="ltr" role="presentation">
+  Intrinsic value for 1 lot = (₹17,350 − ₹17,300) × 50 units = ₹2,500.
+ </li>
+ <li dir="ltr" role="presentation">
+  STT on intrinsic value = 0.15% × ₹2,500 = ₹4 (₹3.75 rounded up).
+ </li>
+</ol>
+<h3 dir="ltr">
+ Options (shorted)
+</h3>
+<p dir="ltr">
+ STT on the premium for shorted options:
+</p>
+<ol>
+ <li dir="ltr" role="presentation">
+  1 lot = 50 units.
+ </li>
+ <li dir="ltr" role="presentation">
+  Strike price = ₹17,300.
+ </li>
+ <li dir="ltr" role="presentation">
+  Premium received = ₹60 per lot.
+ </li>
+ <li dir="ltr" role="presentation">
+  Total premium received = ₹60 × 50 units = ₹3,000.
+ </li>
+ <li dir="ltr" role="presentation">
+  STT on premium = 0.15% × ₹3,000 = ₹5 (₹4.50 rounded up).
+ </li>
+</ol>
+<h3 dir="ltr">
+ Futures
+</h3>
+<ol>
+ <li dir="ltr" role="presentation">
+  Sell: 1 lot of XYZ futures contracts.
+ </li>
+ <li dir="ltr" role="presentation">
+  Price of 1 lot = ₹7,50,000.
+ </li>
+ <li dir="ltr" role="presentation">
+  STT (on sell side) = 0.05% × ₹7,50,000 = ₹375.
+ </li>
+</ol>
+<p dir="ltr">
+ You can find all charges involved in trading and investing on the
+ <a href="https://zerodha.com/charges/" rel="noopener" target="_blank">
+  Zerodha charges page.
+ </a>
+ Use the
+ <a href="https://zerodha.com/brokerage-calculator/" rel="noopener" target="_blank">
+  brokerage calculator
+ </a>
+ to calculate charges for any specific trade.
+</p>
+    </p>
+  </div>    
+
+  
+  <div class="flex flex-col border-t border-z-border-2] ">
+    <p class="px-3 py-5 text-2xl font-medium">Related articles</p>
+    <ol class="flex flex-col pb-5 pl-8 w-full gap-1 list-decimal">
+      
+      <li class="pl-1 hover:text-z-black text-z-blue cursor-pointer">
+        <a class="flex py-1 px-2" href="/category/account-opening/resident-individual/ri-charges/articles/stt-etfs">Is securities transaction tax (STT) levied on exchange traded funds (ETFs)?</a>
+      </li>
+          
+    </ol>
+  </div>
+  
+
+  
+  <div class="flex flex-col py-5 border-t border-z-border-2">
+    <p class="pb-3">Still need help?</p>
+    <p>
+      <a class="inline-flex px-8 py-3 hover:bg-z-black bg-z-blue text-white text-xl rounded-sm font-semibold cursor-pointer" onclick="checkOpenTicketsEvent(event)" 
+        href="/contact-us?article=how-is-the-securities-transaction-tax-stt-calculated&amp;category=ri-charges">Create a ticket</a>
+    </p>
+  </div>
+  
+</div>
+
+<dialog id="img_modal" class="m-auto" closedby="any">
+  <form class="relative">
+    <button
+      type="submit"
+      aria-label="close"
+      formmethod="dialog"
+      formnovalidate
+      class="absolute flex p-2 m-2 overflow-hidden top-0 right-0 cursor-pointer"
+    >
+      <span class="flex w-10 h-10 bg-white/80 text-4xl text-black rounded-full justify-center items-center leading-[25px] backdrop-blur-sm">&times;</span>
+    </button>
+    <div class="max-h-[80vh] max-w-[80vw]">
+      <img class="w-full h-full object-contain" id="light_image" />
+    </div>
+  </form>
+</dialog>
+<dialog id="notify_modal" class="m-auto rounded-md" closedby="any">
+  <form class="flex flex-col px-8 py-8 max-w-2xl gap-4">
+    <div class="flex w-full justify-between items-center">
+      <p class="text-2xl font-medium">Open tickets</p>
+      <button
+        type="submit"
+        aria-label="close"
+        formmethod="dialog"
+        formnovalidate
+        class="ml-auto hover:scale-105 cursor-pointer"
+      >
+        <span class="text-4xl">&times;</span>
+      </button>
+    </div>
+    <p>We see that you have the following ticket(s) open:</p>
+    
+    <p class="text-z-gray">
+      If you have the same query, check and update the existing ticket
+      <a href="/tickets/">here</a>. In case of a
+      new query, click on Continue.
+    </p>
+    <p class="text-right">
+      
+      <a
+        class="inline-flex px-5 py-2 hover:bg-z-black bg-z-blue text-white text-lg rounded-sm font-semibold cursor-pointer"
+        href="/contact-us?article=how-is-the-securities-transaction-tax-stt-calculated&amp;category=ri-charges"
+        >Continue</a
+      >
+      
+    </p>
+  </form>
+</dialog>
+
+</div>
+
+  </div>
+</div>
+
+
+    </main>
+
+    <footer class="bg-footer-grey border-t border-t-z-border-sub">
+      <div class="flex flex-col p-5 m-auto max-w-7xl">
+        <div
+          class="grid grid-cols-1 md:grid-cols-[4fr_3fr_3fr_3fr_3fr] gap-1 justify-between"
+        >
+          <div class="pr-3">
+            <div class="flex py-5 items-center">
+              <img
+                src="https://zerodha.com/static/images/logo.svg"
+                alt="zerodha logo"
+                class="max-h-5"
+              />
+            </div>
+            <p class="text-xs text-gray-500">
+              © 2010 - 2026 Zerodha Broking Ltd. All rights reserved.
+            </p>
+            <div
+              class="flex py-5 text-[1.25rem] text-z-gray gap-4 leading-none"
+            >
+              <a
+                class="flex w-5 h-5 shrink-0"
+                target="_blank"
+                href="https://x.com/zerodha"
+                aria-label="zerodha twitter account"
+              >
+                <div class="w-full h-full hover:[--svg-color:var(--color-z-blue)]">
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.2439 2.25H21.5532L14.3251 10.5094L22.8282 21.75H16.172L10.9548 14.9344L4.99229 21.75H1.67822L9.40791 12.9141L1.25635 2.25H8.08135L12.7923 8.47969L18.2439 2.25ZM17.0813 19.7719H18.9142L7.08291 4.125H5.11416L17.0813 19.7719Z"
+                      fill="var(--svg-color, #666666)"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="flex w-5 h-5 shrink-0"
+                target="_blank"
+                href="https://facebook.com/zerodha.social"
+                aria-label="zerodha facebook account"
+              >
+                <div
+                  class="flex w-full h-full hover:[--svg-color:var(--color-z-blue)]"
+                >
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 19 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.1297 0.668125C17.383 0.668125 17.603 0.761459 17.7897 0.948126C17.9764 1.13479 18.0697 1.36146 18.0697 1.62813V16.8681C18.0697 17.1348 17.9764 17.3615 17.7897 17.5481C17.603 17.7348 17.383 17.8281 17.1297 17.8281H12.7697V11.1681H14.9897L15.3097 8.58813H12.7697V6.92813C12.7697 6.51479 12.8564 6.20813 13.0297 6.00813C13.203 5.80813 13.543 5.70146 14.0497 5.68813L15.4097 5.66813V3.36812C14.943 3.30146 14.2764 3.26813 13.4097 3.26813C12.4097 3.26813 11.603 3.56146 10.9897 4.14813C10.3764 4.73479 10.0764 5.58146 10.0897 6.68813V8.58813H7.84969V11.1681H10.0897V17.8281H1.86969C1.61635 17.8281 1.39635 17.7348 1.20969 17.5481C1.02302 17.3615 0.929688 17.1348 0.929688 16.8681V1.62813C0.929688 1.36146 1.02302 1.13479 1.20969 0.948126C1.39635 0.761459 1.61635 0.668125 1.86969 0.668125H17.1297Z"
+                      fill="var(--svg-color, #666666)"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="flex w-5 h-5 shrink-0"
+                target="_blank"
+                href="https://instagram.com/zerodhaonline/"
+                aria-label="zerodha instagram account"
+              >
+                <div
+                  class="flex w-full h-full hover:[--svg-color:var(--color-z-blue)]"
+                >
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.8497 10.2481C12.8497 9.46146 12.5764 8.78813 12.0297 8.22813C11.483 7.66813 10.8097 7.38813 10.0097 7.38813C9.20969 7.38813 8.53635 7.66813 7.98969 8.22813C7.44302 8.78813 7.16302 9.46146 7.14969 10.2481C7.13635 11.0348 7.41635 11.7081 7.98969 12.2681C8.56302 12.8281 9.23635 13.1081 10.0097 13.1081C10.783 13.1081 11.4564 12.8281 12.0297 12.2681C12.603 11.7081 12.8764 11.0348 12.8497 10.2481ZM14.3897 10.2481C14.3897 11.4615 13.963 12.5015 13.1097 13.3681C12.2564 14.2348 11.223 14.6615 10.0097 14.6481C8.79635 14.6348 7.75635 14.2081 6.88969 13.3681C6.02302 12.5281 5.59635 11.4881 5.60969 10.2481C5.62302 9.00813 6.04969 7.96813 6.88969 7.12813C7.72969 6.28813 8.76969 5.86146 10.0097 5.84813C11.2497 5.83479 12.283 6.26146 13.1097 7.12813C13.9364 7.99479 14.363 9.03479 14.3897 10.2481ZM15.6097 5.66813C15.6097 5.94812 15.5097 6.18813 15.3097 6.38813C15.1097 6.58813 14.863 6.68813 14.5697 6.68813C14.2764 6.68813 14.0364 6.58813 13.8497 6.38813C13.663 6.18813 13.563 5.94812 13.5497 5.66813C13.5364 5.38813 13.6364 5.14813 13.8497 4.94812C14.063 4.74813 14.303 4.64813 14.5697 4.64813C14.8364 4.64813 15.083 4.74813 15.3097 4.94812C15.5364 5.14813 15.6364 5.38813 15.6097 5.66813ZM10.0097 3.20813C9.95635 3.20813 9.66969 3.20813 9.14969 3.20813H7.96969C7.70302 3.20813 7.34302 3.22146 6.88969 3.24813C6.43635 3.27479 6.05635 3.30813 5.74969 3.34813C5.44302 3.38813 5.17635 3.46146 4.94969 3.56813C4.57635 3.71479 4.24969 3.92813 3.96969 4.20813C3.68969 4.48812 3.46969 4.81479 3.30969 5.18813C3.22969 5.40146 3.16302 5.66813 3.10969 5.98812C3.05635 6.30813 3.01635 6.69479 2.98969 7.14813C2.96302 7.60146 2.95635 7.95479 2.96969 8.20813C2.98302 8.46146 2.98302 8.85479 2.96969 9.38813C2.95635 9.92146 2.95635 10.2081 2.96969 10.2481C2.98302 10.2881 2.98302 10.5748 2.96969 11.1081C2.95635 11.6415 2.95635 12.0348 2.96969 12.2881C2.98302 12.5415 2.98969 12.8948 2.98969 13.3481C2.98969 13.8015 3.02969 14.1881 3.10969 14.5081L3.30969 15.3081C3.46969 15.6815 3.68969 16.0081 3.96969 16.2881C4.24969 16.5681 4.57635 16.7815 4.94969 16.9281C5.16302 17.0081 5.42969 17.0815 5.74969 17.1481C6.06969 17.2148 6.44969 17.2481 6.88969 17.2481C7.32969 17.2481 7.68969 17.2615 7.96969 17.2881C8.24969 17.3148 8.64302 17.3148 9.14969 17.2881C9.65635 17.2615 9.94302 17.2615 10.0097 17.2881C10.0764 17.3148 10.3564 17.3148 10.8497 17.2881C11.343 17.2615 11.7364 17.2615 12.0297 17.2881C12.323 17.3148 12.683 17.3015 13.1097 17.2481C13.5364 17.1948 13.923 17.1615 14.2697 17.1481C14.6164 17.1348 14.8764 17.0615 15.0497 16.9281C15.423 16.7815 15.7564 16.5681 16.0497 16.2881C16.343 16.0081 16.5564 15.6815 16.6897 15.3081C16.7697 15.0948 16.8364 14.8281 16.8897 14.5081C16.943 14.1881 16.983 13.8015 17.0097 13.3481C17.0364 12.8948 17.043 12.5415 17.0297 12.2881C17.0164 12.0348 17.0164 11.6415 17.0297 11.1081C17.043 10.5748 17.043 10.2881 17.0297 10.2481C17.0164 10.2081 17.0164 9.92146 17.0297 9.38813C17.043 8.85479 17.043 8.46146 17.0297 8.20813C17.0164 7.95479 17.0097 7.60146 17.0097 7.14813C17.0097 6.69479 16.9697 6.30813 16.8897 5.98812L16.6897 5.18813C16.543 4.81479 16.3297 4.48812 16.0497 4.20813C15.7697 3.92813 15.4364 3.71479 15.0497 3.56813C14.8364 3.48813 14.5764 3.41479 14.2697 3.34813C13.963 3.28146 13.5764 3.24813 13.1097 3.24813C12.643 3.24813 12.283 3.23479 12.0297 3.20813C11.7764 3.18146 11.383 3.18146 10.8497 3.20813C10.3164 3.23479 10.0364 3.23479 10.0097 3.20813ZM18.5697 10.2481C18.5697 11.9548 18.5497 13.1348 18.5097 13.7881C18.443 15.3348 17.983 16.5348 17.1297 17.3881C16.2764 18.2415 15.083 18.7015 13.5497 18.7681C12.883 18.8081 11.703 18.8281 10.0097 18.8281C8.31635 18.8281 7.13635 18.8081 6.46969 18.7681C4.92302 18.6881 3.72302 18.2281 2.86969 17.3881C2.01635 16.5481 1.55635 15.3481 1.48969 13.7881C1.44969 13.1348 1.42969 11.9548 1.42969 10.2481C1.42969 8.54146 1.44969 7.36146 1.48969 6.70813C1.55635 5.16146 2.01635 3.96146 2.86969 3.10813C3.72302 2.25479 4.92302 1.79479 6.46969 1.72812C7.12302 1.68813 8.30302 1.66813 10.0097 1.66813C11.7164 1.66813 12.8964 1.68813 13.5497 1.72812C15.0964 1.80812 16.2897 2.26813 17.1297 3.10813C17.9697 3.94812 18.4297 5.14813 18.5097 6.70813C18.5497 7.36146 18.5697 8.54146 18.5697 10.2481Z"
+                      fill="var(--svg-color, #666666)"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="flex w-5 h-5 shrink-0"
+                aria-label="zerodha linkedin account"
+                target="_blank"
+                href="https://linkedin.com/company/zerodha"
+              >
+                <div
+                  class="flex w-full h-full hover:[--svg-color:var(--color-z-blue)]"
+                >
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 19 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.82969 6.22906V17.2891H1.14969V6.22906H4.82969ZM5.06969 2.80906C5.06969 3.35573 4.87635 3.80906 4.48969 4.16906C4.10302 4.52906 3.60302 4.70906 2.98969 4.70906H2.96969C2.35635 4.70906 1.86302 4.52906 1.48969 4.16906C1.11635 3.80906 0.929688 3.35573 0.929688 2.80906C0.929688 2.2624 1.12302 1.80906 1.50969 1.44906C1.89635 1.08906 2.39635 0.909063 3.00969 0.909063C3.62302 0.909063 4.11635 1.08906 4.48969 1.44906C4.86302 1.80906 5.05635 2.2624 5.06969 2.80906ZM18.0697 10.9491V17.2891H14.4097V11.3691C14.4097 10.5824 14.2564 9.96906 13.9497 9.52906C13.643 9.08906 13.1697 8.86906 12.5297 8.86906C12.063 8.86906 11.6764 8.99573 11.3697 9.24906C11.063 9.5024 10.823 9.8224 10.6497 10.2091C10.5697 10.4357 10.5297 10.7357 10.5297 11.1091V17.2891H6.84969C6.86302 14.3157 6.86969 11.9091 6.86969 10.0691V6.76906L6.84969 6.22906H10.5297V7.82906H10.5097C10.6564 7.58906 10.8097 7.3824 10.9697 7.20906C11.1297 7.03573 11.3364 6.8424 11.5897 6.62906C11.843 6.41573 12.1697 6.25573 12.5697 6.14906C12.9697 6.0424 13.3964 5.9824 13.8497 5.96906C15.1164 5.96906 16.1364 6.38906 16.9097 7.22906C17.683 8.06906 18.0697 9.30906 18.0697 10.9491Z"
+                      fill="var(--svg-color, #666666)"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <hr class="md:mr-10" />
+            <div
+              class="flex py-4 text-[1.25rem] text-z-gray gap-4 items-center leading-none"
+            >
+              <a
+                class="flex w-7 h-7"
+                target="_blank"
+                href="https://www.youtube.com/@zerodhaonline"
+                aria-label="zerodha youtube account"
+              >
+                <div
+                  class="flex w-full h-full hover:[--svg-color:var(--color-z-blue)]"
+                >
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 24 24"
+                    fill="var(--svg-color, #666666)"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M2.50001 7C1.80143 10.2967 1.80143 13.7033 2.50001 17C2.5918 17.3348 2.76915 17.6399 3.01461 17.8854C3.26008 18.1309 3.56522 18.3082 3.90001 18.4C9.26344 19.2887 14.7366 19.2887 20.1 18.4C20.4348 18.3082 20.7399 18.1309 20.9854 17.8854C21.2309 17.6399 21.4082 17.3348 21.5 17C22.1986 13.7033 22.1986 10.2967 21.5 7C21.4082 6.66521 21.2309 6.36007 20.9854 6.11461C20.7399 5.86914 20.4348 5.69179 20.1 5.6C14.7366 4.71146 9.26346 4.71146 3.90001 5.6C3.56522 5.69179 3.26008 5.86914 3.01461 6.11461C2.76915 6.36007 2.5918 6.66521 2.50001 7ZM13.0563 10.8338L15 12L13.0563 13.1662L12 13.8L10 15V12.6676V11.3324V9L12 10.2L13.0563 10.8338Z"
+                      fill="var(--svg-color, #666666)"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="flex w-5 h-5 shrink-0"
+                target="_blank"
+                href="https://whatsapp.com/channel/0029Va8tzF0EquiIIb9j791g"
+                aria-label="zerodha whatsapp account"
+              >
+                <div
+                  class="flex w-full h-full hover:[--svg-color:var(--color-z-blue)]"
+                >
+                  <?xml version="1.0" encoding="utf-8"?>
+                  <svg
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 360 362"
+                    width="100%"
+                    height="100%"
+                  >
+                    <path
+                      fill="var(--svg-color, #666666)"
+                      d="M307.5,52.6C273.7,18.7,228.7,0,180.8,0C82,0,1.5,80.4,1.5,179.2c0,31.6,8.2,62.4,23.9,89.6L0,361.7l95-24.9
+					  c26.2,14.3,55.7,21.8,85.7,21.8h0.1c98.8,0,179.2-80.4,179.2-179.2C360,131.5,341.4,86.5,307.5,52.6L307.5,52.6z M180.8,328.4
+					  L180.8,328.4c-26.8,0-53-7.2-75.9-20.8l-5.4-3.2L43,319.1l15-55l-3.5-5.6c-14.9-23.7-22.8-51.1-22.8-79.3c0-82.1,66.9-149,149.1-149
+					  c39.8,0,77.2,15.5,105.3,43.7c28.1,28.2,43.6,65.6,43.6,105.4C329.7,261.5,262.9,328.3,180.8,328.4L180.8,328.4z M262.5,216.8
+					  c-4.5-2.2-26.5-13.1-30.6-14.6c-4.1-1.5-7.1-2.2-10.1,2.2c-3,4.5-11.6,14.6-14.2,17.6c-2.6,3-5.2,3.4-9.7,1.1
+					  c-4.5-2.2-18.9-7-36-22.2c-13.3-11.9-22.3-26.5-24.9-31c-2.6-4.5-0.3-6.9,2-9.1c2-2,4.5-5.2,6.7-7.8c2.2-2.6,3-4.5,4.5-7.5
+					  c1.5-3,0.7-5.6-0.4-7.8c-1.1-2.2-10.1-24.3-13.8-33.3c-3.6-8.7-7.3-7.5-10.1-7.7c-2.6-0.1-5.6-0.2-8.6-0.2s-7.8,1.1-11.9,5.6
+					  c-4.1,4.5-15.7,15.3-15.7,37.4s16,43.3,18.3,46.3c2.2,3,31.6,48.2,76.5,67.6c10.7,4.6,19,7.4,25.5,9.4c10.7,3.4,20.5,2.9,28.2,1.8
+					  c8.6-1.3,26.5-10.8,30.2-21.3c3.7-10.5,3.7-19.4,2.6-21.3S266.9,219,262.5,216.8L262.5,216.8z"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                class="flex w-5 h-5 shrink-0"
+                target="_blank"
+                href="https://t.me/zerodhain"
+                aria-label="zerodha telegram account"
+              >
+                <div
+                  class="flex w-full h-full hover:[--svg-color:var(--color-z-blue)]"
+                >
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 20 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.28 14.8282L14.92 7.10818C14.9867 6.77485 14.9467 6.53485 14.8 6.38818C14.6533 6.24152 14.46 6.22152 14.22 6.32818L4.58 10.0282C4.36667 10.1082 4.22 10.2015 4.14 10.3082C4.06 10.4148 4.04667 10.5148 4.1 10.6082C4.15333 10.7015 4.27333 10.7748 4.46 10.8282L6.94 11.5882L12.66 7.98818C12.82 7.88152 12.94 7.86152 13.02 7.92818C13.0733 7.96818 13.0533 8.02152 12.96 8.08818L8.34 12.2882L8.16 14.8282C8.33333 14.8282 8.5 14.7415 8.66 14.5682L9.86 13.4082L12.36 15.2682C12.84 15.5348 13.1467 15.3882 13.28 14.8282ZM20 10.2482C20 11.6082 19.7333 12.9015 19.2 14.1282C18.6667 15.3548 17.96 16.4215 17.08 17.3282C16.2 18.2348 15.1333 18.9415 13.88 19.4482C12.6267 19.9548 11.3333 20.2215 10 20.2482C8.66667 20.2748 7.37333 20.0082 6.12 19.4482C4.86667 18.8882 3.8 18.1815 2.92 17.3282C2.04 16.4748 1.33333 15.4082 0.8 14.1282C0.266667 12.8482 0 11.5548 0 10.2482C0 8.94151 0.266667 7.64818 0.8 6.36818C1.33333 5.08818 2.04 4.02152 2.92 3.16818C3.8 2.31485 4.86667 1.60818 6.12 1.04818C7.37333 0.488182 8.66667 0.221516 10 0.248182C11.3333 0.274849 12.6267 0.541515 13.88 1.04818C15.1333 1.55485 16.2 2.26152 17.08 3.16818C17.96 4.07485 18.6667 5.14152 19.2 6.36818C19.7333 7.59485 20 8.88818 20 10.2482Z"
+                      fill="var(--svg-color, #666666)"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="flex py-4 gap-3">
+              <a target="_blank" href="https://play.google.com/store/apps/details?id=com.zerodha.kite3">
+                <img src="https://zerodha.com/static/images/google-play-badge-light.svg" alt="Get it on Google Play" class="h-9 w-auto" />
+              </a>
+              <a target="_blank" href="https://apps.apple.com/in/app/kite-zerodha/id1449453802">
+                <img src="https://zerodha.com/static/images/appstore-badge-light.svg" alt="Download on the App Store" class="h-9 w-auto" />
+              </a>
+            </div>
+          </div>
+          <div class="">
+            <div class="pt-3 pb-5 text-lg font-medium">Accounts</div>
+            <div class="flex flex-col text-sm text-z-gray gap-4">
+              <a
+                href="https://zerodha.com/open-account/"
+                class="hover:text-z-blue"
+                >Open demat account</a
+              >
+              <a
+                href="https://zerodha.com/open-account/minor/"
+                class="hover:text-z-blue"
+                >Minor demat account</a
+              >
+              <a
+                href="https://zerodha.com/open-account/nri/"
+                class="hover:text-z-blue"
+                >NRI demat account</a
+              >
+              <a
+                href="https://zerodha.com/open-account/huf/"
+                class="hover:text-z-blue"
+                >HUF demat account</a
+              >
+              <a
+                target="_blank"
+                href="https://zerodha.com/commodities/"
+                class="hover:text-z-blue"
+                >Commodity</a
+              >
+              <a
+                href="https://zerodha.com/dematerialise/"
+                class="hover:text-z-blue"
+                >Dematerialisation</a
+              >
+              <a
+                href="https://zerodha.com/fund-transfer/"
+                class="hover:text-z-blue"
+                >Fund transfer</a
+              >
+              <a href="https://zerodha.com/mtf/" class="hover:text-z-blue"
+                >MTF</a
+              >
+            </div>
+          </div>
+          <div class="">
+            <div class="pt-3 pb-5 text-lg font-medium">Support</div>
+            <div class="flex flex-col text-sm text-z-gray gap-4">
+              <a href="https://zerodha.com/contact/" class="hover:text-z-blue"
+                >Contact us</a
+              >
+              <a
+                target="_blank"
+                href="https://support.zerodha.com"
+                class="hover:text-z-blue"
+                >Support portal</a
+              >
+              <a
+                target="_blank"
+                href="https://support.zerodha.com/category/your-zerodha-account/your-profile/ticket-creation/articles/how-do-i-create-a-ticket-at-zerodha"
+                class="hover:text-z-blue"
+                >How to file a complaint?
+              </a>
+              <a
+                target="_blank"
+                href="https://support.zerodha.com/category/your-zerodha-account/your-profile/ticket-creation/articles/track-complaints-or-tickets"
+                class="hover:text-z-blue"
+                >Status of your complaints</a
+              >
+              <a
+                href="https://zerodha.com/marketintel/bulletin/"
+                class="hover:text-z-blue"
+                >Bulletin</a
+              >
+              <a
+                class="hover:text-z-blue"
+                href="https://zerodha.com/marketintel/circulars/"
+                >Circulars</a
+              >
+              <a href="https://zerodha.com/z-connect/" class="hover:text-z-blue"
+                >Z-Connect blog</a
+              >
+              <a href="https://zerodha.com/resources/" class="hover:text-z-blue"
+                >Downloads</a
+              >
+            </div>
+          </div>
+          <div class="">
+            <div class="pt-3 pb-5 text-lg font-medium">Company</div>
+            <div class="flex flex-col text-sm text-z-gray gap-4">
+              <a href="https://zerodha.com/about/" class="hover:text-z-blue"
+                >About</a
+              >
+              <a
+                href="https://zerodha.com/about/philosophy/"
+                class="hover:text-z-blue"
+              >
+                Philosophy
+              </a>
+              <a href="https://zerodha.com/media/" class="hover:text-z-blue"
+                >Press and media</a
+              >
+              <a
+                target="_blank"
+                href="https://careers.zerodha.com"
+                class="hover:text-z-blue"
+                >Careers</a
+              >
+              <a href="https://zerodha.com/cares/" class="hover:text-z-blue"
+                >Zerodha Cares (CSR)
+              </a>
+              <a
+                href="https://zerodha.tech/"
+                class="hover:text-z-blue"
+                target="_blank"
+                >Zerodha tech
+              </a>
+              <a
+                href="https://zerodha.com/open-source/"
+                class="hover:text-z-blue"
+                >Open source</a
+              >
+              <a href="https://zerodha.com/refer/" class="hover:text-z-blue"
+                >Referral program</a
+              >
+            </div>
+          </div>
+          <div class="">
+            <div class="pt-3 pb-5 text-lg font-medium">Quick Links</div>
+            <div class="flex flex-col text-sm text-z-gray gap-4">
+              <a href="https://zerodha.com/ipo/" class="hover:text-z-blue"
+                >Upcoming IPOs</a
+              >
+              <a href="https://zerodha.com/charges/" class="hover:text-z-blue"
+                >Brokerage charges</a
+              >
+              <a
+                href="https://zerodha.com/marketintel/holiday-calendar/"
+                class="hover:text-z-blue"
+                >Market holidays</a
+              >
+              <a
+                href="https://zerodha.com/markets/calendar/"
+                class="hover:text-z-blue"
+                >Economic calendar</a
+              >
+              <a
+                href="https://zerodha.com/calculators/"
+                class="hover:text-z-blue"
+                >Calculators</a
+              >
+              <a
+                href="https://zerodha.com/markets/stocks/"
+                class="hover:text-z-blue"
+                >Markets</a
+              >
+              <a
+                href="https://zerodha.com/markets/sector/"
+                class="hover:text-z-blue"
+                >Sectors</a
+              >
+              <a
+                href="https://zerodha.com/markets/gift-nifty/"
+                class="hover:text-z-blue"
+                >Gift Nifty</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col py-10 text-gray-400 gap-3">
+          <div class="flex flex-col text-[12px] gap-3 font-normal">
+            <p>
+              Zerodha Broking Ltd.: Member of NSE&ZeroWidthSpace;
+              &amp;&ZeroWidthSpace; BSE – SEBI Registration no.: INZ000031633
+              CDSL: Depository services through Zerodha Broking Ltd. – SEBI
+              Registration no.: IN-DP-431-2019 Commodity Trading through Zerodha
+              Commodities Pvt. Ltd. MCX: 46025 – SEBI Registration no.:
+              INZ000038238 Registered Address: Zerodha Broking Ltd., #153/154,
+              4th Cross, Dollars Colony, Opp. Clarence Public School, J.P Nagar
+              4th Phase, Bengaluru - 560078, Karnataka, India. For any
+              complaints pertaining to securities broking please write to
+              <a class="hover:text-z-black text-z-blue" rel="noopener nofollow" href="/cdn-cgi/l/email-protection#c7a4a8aab7aba6aea9b3b487bda2b5a8a3afa6e9a4a8aa" target="_blank"><span class="__cf_email__" data-cfemail="31525e5c415d50585f4542714b54435e5559501f525e5c">[email&#160;protected]</span></a
+              >, for DP related to
+              <a rel="noopener nofollow" href="/cdn-cgi/l/email-protection#d8bca898a2bdaab7bcb0b9f6bbb7b5" class="hover:text-z-black text-z-blue"><span class="__cf_email__" data-cfemail="b1d5c1f1cbd4c3ded5d9d09fd2dedc">[email&#160;protected]</span></a
+              >. Please ensure you carefully read the Risk Disclosure Document
+              as prescribed by SEBI | ICF
+            </p>
+            <p>
+              Procedure to file a complaint on
+              <a
+                class="hover:text-z-black text-z-blue"
+                rel="noopener nofollow"
+                href="https://scores.sebi.gov.in/"
+                target="_blank"
+                >SEBI SCORES</a
+              >: Register on SCORES portal. Mandatory details for filing
+              complaints on SCORES: Name, PAN, Address, Mobile Number, E-mail
+              ID. Benefits: Effective Communication, Speedy redressal of the
+              grievances
+            </p>
+            <p>
+              <a
+                class="hover:text-z-black text-z-blue"
+                href="https://smartodr.in/"
+                target="_blank"
+                >Smart Online Dispute Resolution</a
+              >
+              |
+              <a
+                class="hover:text-z-black text-z-blue"
+                href="https://zerodha-common.s3.ap-south-1.amazonaws.com/Downloads-and-resources/Smart%20ODR%20info.pdf"
+                target="_blank"
+                >Grievances Redressal Mechanism</a
+              >
+            </p>
+            <p>
+              Investments in securities market are subject to market risks; read
+              all the related documents carefully before investing.
+            </p>
+            <p>
+              Attention investors: 1) Stock brokers can accept securities as
+              margins from clients only by way of pledge in the depository
+              system w.e.f September 01, 2020. 2) Update your e-mail and phone
+              number with your stock broker / depository participant and receive
+              OTP directly from depository on your e-mail and/or mobile number
+              to create pledge. 3) Check your securities / MF / bonds in the
+              consolidated account statement issued by NSDL/CDSL every month.
+            </p>
+            <p>
+              "Prevent unauthorised transactions in your account. Update your
+              mobile numbers/email IDs with your stock brokers. Receive
+              information of your transactions directly from Exchange on your
+              mobile/email at the end of the day. Issued in the interest of
+              investors. KYC is one time exercise while dealing in securities
+              markets - once KYC is done through a SEBI registered intermediary
+              (broker, DP, Mutual Fund etc.), you need not undergo the same
+              process again when you approach another intermediary." Dear
+              Investor, if you are subscribing to an IPO, there is no need to
+              issue a cheque. Please write the Bank account number and sign the
+              IPO application form to authorize your bank to make payment in
+              case of allotment. In case of non allotment the funds will remain
+              in your bank account. As a business we don't give stock tips, and
+              have not authorized anyone to trade on behalf of others. If you
+              find anyone claiming to be part of Zerodha and offering such
+              services, please
+              <a
+                class="hover:text-z-black text-z-blue"
+                target="_blank"
+                href="https://support.zerodha.com/category/your-zerodha-account/your-profile/articles/how-do-i-place-a-complaint-at-zerodha"
+                >create a ticket here</a
+              >.
+            </p>
+          </div>
+          <div
+            class="flex flex-wrap m-auto text-[.75rem] gap-4 self-center font-medium"
+          >
+            <a
+              rel="noopener nofollow"
+              target="_blank"
+              href="https://nseindia.com"
+              class="hover:text-z-blue"
+              >NSE</a
+            >
+            <a
+              rel="noopener nofollow"
+              target="_blank"
+              href="https://www.bseindia.com/"
+              class="hover:text-z-blue"
+              >BSE</a
+            >
+            <a
+              rel="noopener nofollow"
+              target="_blank"
+              href="https://www.mcxindia.com/"
+              class="hover:text-z-blue"
+              >MCX</a
+            >
+            <a
+              href="https://zerodha.com/terms-and-conditions/"
+              class="hover:text-z-blue"
+              >Terms &amp; conditions</a
+            >
+            <a
+              href="https://zerodha.com/policies-and-procedures/"
+              class="hover:text-z-blue"
+              >Policies &amp; procedures</a
+            >
+            <a
+              href="https://zerodha.com/privacy-policy/"
+              class="hover:text-z-blue"
+              >Privacy policy</a
+            >
+            <a href="https://zerodha.com/disclosure/" class="hover:text-z-blue"
+              >Disclosure</a
+            >
+            <a
+              href="https://zerodha.com/investor-attention/"
+              class="hover:text-z-blue"
+              >For investor's attention</a
+            >
+            <a
+              href="https://zerodha.com/tos/investor-charter/"
+              class="hover:text-z-blue"
+              >Investor charter</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/static/js/index.min.js?v=v3.0.21"></script>
+
+    <!-- Matomo -->
+    <script>
+      var _paq = (window._paq = window._paq || []);
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      function embedTrackingCode() {
+        var u = "//m.zerodha.com/";
+        _paq.push(["setTrackerUrl", u + "js/"]);
+        _paq.push(["setSiteId", "6"]);
+        _paq.push(["setAPIUrl", u]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.type = "text/javascript";
+        g.async = true;
+        g.defer = true;
+        g.src = u + "js/";
+        s.parentNode.insertBefore(g, s);
+      }
+
+      if (window.addEventListener) {
+        window.addEventListener("load", embedTrackingCode, false);
+      } else if (window.attachEvent) {
+        window.attachEvent("onload", embedTrackingCode);
+      } else {
+        embedTrackingCode();
+      }
+    </script>
+
+    <!-- Rybbit -->
+    <script
+      src="https://rb.zerodha.com/api/script.js"
+      data-site-id="eafba9756039"
+      defer
+    ></script>
+
+    <!-- Umami -->
+    <script
+      defer
+      src="https://um.zerodha.com/an.js"
+      data-website-id="429134af-8895-4fe8-8d19-3b2e1b4167b5"
+    ></script>
+
+    <!-- include page script. -->
+    
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "author": "Zerodha",
+    "name": "What is Securities Transaction Tax (STT) and how is it calculated?",
+    "datePublished": "2021-02-03 11:50:39.120073",
+    "dateModified": "2026-04-10 15:17:17.853261",
+    "headline": "Account Opening",
+    "image": "https://zerodha.com/static/images/favicon.png",
+    "publisher": {
+        "@type" : "Organization",
+        "name": "Zerodha",
+        "url" : "https://zerodha.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": {
+                "@type": "URL"
+            }
+        }
+     },
+    "keywords": "STT, STT calculation, stt calculated, stt computed, "
+  }
+</script>
+
+
+    <!-- [footer] -->
+  </body>
+</html>

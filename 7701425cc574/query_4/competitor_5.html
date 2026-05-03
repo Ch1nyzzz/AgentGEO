@@ -1,0 +1,2296 @@
+<!doctype html>
+<html lang="en">
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
+                <meta charset="utf-8"/>
+<meta name="title" content="Introduction to Bootstrap for Web Development | QuickStart"/>
+<meta name="description" content="Master Bootstrap for responsive web development. Learn CSS, HTML, JavaScript, design with QuickStart&#039;s 7-day free trial."/>
+<meta name="keywords" content="Bootstrap,front-end,web development,CSS,HTML,JavaScript,responsive design"/>
+<meta name="robots" content="INDEX,FOLLOW"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>Introduction to Bootstrap for Web Development | QuickStart</title>
+<link  rel="stylesheet" type="text/css"  media="all" href="https://d2nzy1qhita6w.cloudfront.net/static/version1772014801/_cache/merged/33eb70854288456b127915c0277d1b14.min.css" />
+<link  rel="stylesheet" type="text/css"  media="print" href="https://d2nzy1qhita6w.cloudfront.net/static/version1772014801/frontend/quickstart/kepler-theme/en_US/css/print.min.css" />
+
+<link  rel="canonical" href="https://www.quickstart.com/blog/it-ops-and-management/what-is-bootstrap-and-how-does-it-work/" />
+<link  rel="icon" type="image/x-icon" href="https://d2nzy1qhita6w.cloudfront.net/media/favicon/stores/1/favicon.png" />
+<link  rel="shortcut icon" type="image/x-icon" href="https://d2nzy1qhita6w.cloudfront.net/media/favicon/stores/1/favicon.png" />
+<!--  Just to generate cookie __utmz -->
+<script type="text/javascript" data-rocketjavascript="false">var _gaq=_gaq || []; _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+
+
+<!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+<!-- Unbounce Script -->
+        
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Introduction to Bootstrap for Web Development | QuickStart" />
+<meta property="og:description" content="Master Bootstrap for responsive web development. Learn CSS, HTML, JavaScript, design with QuickStart&#039;s 7-day free trial." />
+<meta property="og:url" content="https://www.quickstart.com/blog/it-ops-and-management/what-is-bootstrap-and-how-does-it-work/" />
+<meta property="og:image" content="https://d2nzy1qhita6w.cloudfront.net/media/magefan_blog/b/o/bootstrap.jpg" />
+    
+
+<script data-rocketjavascript="false">
+    var MagefanWebP = {
+
+        _canUseWebP: null,
+
+        getUserAgentInfo: function(){
+            try {
+                var ua = navigator.userAgent,
+                    tem,
+                    M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+                if (/trident/i.test(M[1])) {
+                    tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+                    return ['IE', (tem[1] || '')];
+                }
+                if (M[1] === 'Chrome') {
+                    tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
+                    if (tem != null) {
+                        tem = tem.slice(1);
+                        tem[0] = tem[0].replace('OPR', 'Opera');
+                        return tem;
+                    }
+                }
+                M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+                if ((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
+                return M;
+            } catch (e) {
+                return ['', 0];
+            }
+        },
+
+        canUseWebP: function(){
+
+            
+
+            if (null !== this._canUseWebP){
+                return this._canUseWebP;
+            }
+
+            try {
+                var elem = document.createElement('canvas');
+                if (!!(elem.getContext && elem.getContext('2d'))) {
+                    var r = (elem.toDataURL('image/webp').indexOf('data:image/webp') == 0);
+                    if (!r) {
+                        var ua = this.getUserAgentInfo();
+                        if (ua && ua.length > 1) {
+                            ua[0] = ua[0].toLowerCase();
+                            if ('firefox' == ua[0] && parseInt(ua[1]) >= 65) {
+                                this._canUseWebP = true;
+                                return this._canUseWebP;
+                            }
+                            if ('edge' == ua[0] && parseInt(ua[1]) >= 18) {
+                                this._canUseWebP = true;
+                                return this._canUseWebP;
+                            }
+                            if ('safari' == ua[0]) {
+                                if (navigator.platform.includes('Mac')) {
+                                    if (parseInt(ua[1]) >= 16) {
+                                        this._canUseWebP = true;
+                                    }
+                                } else {
+                                    if (parseInt(ua[1]) >= 15) {
+                                        this._canUseWebP = true;
+                                    }
+                                }
+
+                                return this._canUseWebP;
+                            }
+                        }
+                    }
+
+                    this._canUseWebP = r;
+                    return this._canUseWebP;
+                }
+                this._canUseWebP = false;
+                return this._canUseWebP;
+            } catch (e) {
+                console.log(e);
+                this._canUseWebP = false;
+                return this._canUseWebP;
+            }
+        },
+
+        getOriginWebPImage: function(src) {
+            if (src.indexOf('mf_webp') == -1) {
+                return src;
+            }
+
+            var array = src.split('/');
+            var imageFormat = '';
+
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] == 'mf_webp') {
+                    imageFormat = array[i + 1];
+                    array.splice(i, 3);
+                    break;
+                }
+            }
+            src = array.join('/');
+            return src.replace('.webp', '.' + imageFormat);
+        },
+
+        getWebUrl: function (imageUrl) {
+            /* @var string */
+            imageUrl = imageUrl.trim();
+            var baseUrl = 'https://www.quickstart.com/';
+            var imageFormat = imageUrl.split('.').pop();
+
+            if ('webp' === imageFormat) {
+                return imageUrl;
+            }
+
+            var mediaBaseUrl = 'https://d2nzy1qhita6w.cloudfront.net/media/';
+            var staticBaseUrl = 'https://d2nzy1qhita6w.cloudfront.net/static/';
+
+            if (imageUrl.indexOf(mediaBaseUrl) == -1 && imageUrl.indexOf(staticBaseUrl) == -1) {
+                return false;
+            }
+
+            var imagePath = imageUrl;
+            imagePath = imagePath.replace(mediaBaseUrl, 'media/');
+            imagePath = imagePath.replace(staticBaseUrl, 'static/');
+            imagePath = imagePath.replace(baseUrl + 'pub/media/', 'media/');
+            imagePath = imagePath.replace(baseUrl + 'pub/static/', 'static/');
+            imagePath = imagePath.replace(/\.(jpg|jpeg|png|JPG|JPEG|PNG|gif|GIF)/i, '.webp');
+            imagePath = mediaBaseUrl + 'mf_webp/' + imageFormat + '/' + imagePath;
+            imagePath = imagePath.replace('%20', ' ');
+            imagePath = imagePath.replace(/version\d{10}\//g, '');
+            return imagePath;
+        }
+    };
+
+    /* MagicToolboxContainer Fix */
+    function MagefanWebPMagicToolboxContainerFix()
+    {
+        if (!MagefanWebP.canUseWebP()) {
+            (function(){
+                var i;
+                var els = document.querySelectorAll('.MagicToolboxContainer a, .MagicToolboxContainer img');
+                if (!els) return;
+                var el;
+                for (i=0; i<els.length; i++) {
+                    el = els[i];
+                    if (el.href) {
+                        el.href = MagefanWebP.getOriginWebPImage(el.href);
+                    }
+
+                    if (el.getAttribute('webpimg')) {
+                        el.src = MagefanWebP.getOriginWebPImage(el.getAttribute('webpimg'));
+                    } else {
+                        if (el.src) {
+                            el.src = MagefanWebP.getOriginWebPImage(el.src);
+                        }
+                    }
+
+                    if (el.dataset && el.dataset.image) {
+                        el.dataset.image = MagefanWebP.getOriginWebPImage(el.dataset.image);
+                    }
+
+                }
+            })();
+        } else {
+            replacePixelMagicToolbox();
+            checkIfPixelReplaced();
+        }
+    }
+
+    function replacePixelMagicToolbox() {
+        (function() {
+            var i, els = document.querySelectorAll('.MagicToolboxContainer img');
+
+            if (!els) return;
+            var el;
+
+            for (i=0; i<els.length; i++) {
+                el = els[i];
+
+                if (el.getAttribute('webpimg')) {
+                    el.src = el.getAttribute('webpimg');
+                }
+            }
+        })();
+    }
+
+    function checkIfPixelReplaced() {
+        var intervalCounter = 0,
+            waitForMagicToolbox = setInterval(function() {
+                if (document.querySelectorAll('figure img[src$="/p.jpg"]').length) {
+                    replacePixelMagicToolbox();
+                    clearInterval(waitForMagicToolbox);
+                }
+
+                if (intervalCounter > 10) {
+                    clearInterval(waitForMagicToolbox);
+                }
+
+                intervalCounter++;
+            }, 500);
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+        if (!MagefanWebP.canUseWebP()) {
+            document.body.className += ' no-webp ';
+
+            (function(){
+                var i;
+                var els = document.querySelectorAll('a[href$=".webp"]');
+                if (!els) return;
+                var el;
+                for (i=0; i<els.length; i++) {
+                    el = els[i];
+                    if (el.href) {
+                        el.href = MagefanWebP.getOriginWebPImage(el.href);
+                    }
+                }
+            })();
+
+        } else {
+            document.body.className += ' webp-supported ';
+        }
+    });
+</script>
+
+<style>
+    picture.mfwebp source.lazyload,
+    picture.mfwebp source.lazy {background:none;content:none;}
+</style>
+    </head>
+    <body data-container="body"
+          data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://d2nzy1qhita6w.cloudfront.net/static/version1772014801/frontend/quickstart/kepler-theme/en_US/images/loader-2.gif"}}'
+        id="html-body" class="blog-page blog-post-what-is-bootstrap-and-how-does-it-work blog-post-view page-layout-2columns-right">
+        
+
+
+<div class="cookie-status-message" id="cookie-status">
+    The store will not work correctly when cookies are disabled.</div>
+
+
+
+
+    <noscript>
+        <div class="message global noscript">
+            <div class="content">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong>
+                    <span>
+                        For the best experience on our site, be sure to turn on Javascript in your browser.                    </span>
+                </p>
+            </div>
+        </div>
+    </noscript>
+
+<div class="page-wrapper"><!---Fix for UB Embed->
+<style>
+html body {
+    margin-top: 0 !important;
+}
+</style>
+
+<!--Blog Fixes-->
+<style>
+.blog-post-view .post-ftimg-hld a,
+.blog-post-view .post-ftimg-hld a picture {
+    width: 100%;
+}
+.page-main #contentarea {
+    display: none;
+}
+
+/**/
+.blog-post-view .post-holder .post-header .post-info .post-tags {
+    display: none;
+}
+
+.widget.block-categories .accordion li>ul{
+  display:block !important;
+}
+</style>
+
+<!-- -->
+<style>
+    header .navbar-collapse>ul>li.search-nav{
+        display: none;
+    }
+</style>
+
+<!-- Preloader Start -->
+<div class="custom_loader_QS">
+    <div class="loader"></div>
+</div>
+<!-- Preloader Ends -->
+
+<!-- Top Bar  -->
+<div class="top-bar-area">
+    <div class="container">
+        <div class="row align-center">
+
+            <div class="col-lg-7 col-xs-12 left-info">
+                <div class="item-flex">
+                    <ul class="list">
+                        <li>
+                            <a href="tel:8662913008" class="phone_number"><i class="icon-phone"></i> Have Questions? (866) 291-3008</a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-xs-12 right-info">
+                <div class="item-flex">
+                    
+                    <div class="button">
+                        <a href="https://www.quickstart.com/customer/account/login/"><i class="icon-user"></i>Student Portal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ End Top Bar  -->
+
+<!-- Header  -->
+<header>
+
+    <!-- Start Navigation -->
+    <div class="wrap-sticky">
+        
+        <nav>
+
+        <div class="container">
+ 
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" aria-label="Mobile Navigation Toggle Button">
+                    <span class="hidden">Navbar Toggle Button</span>
+                    <i class="icon-bars"></i>
+                </button>
+                <a class="navbar-brand qs" href="https://www.quickstart.com/"> 
+                    <picture class="mfwebp">                <source  width="" height="" type="image/webp" srcset="https://d2nzy1qhita6w.cloudfront.net/media/mf_webp/png/media/.renditions/wysiwyg/marketing/quickstart-logo-new-theme.webp">                 <img data-webpconverted="1" src="https://d2nzy1qhita6w.cloudfront.net/media/.renditions/wysiwyg/marketing/quickstart-logo-new-theme.png" class="logo" alt="QuickStart Logo" width="" height=""></picture>
+                    <picture class="mfwebp">                <source  width="" height="" type="image/webp" srcset="https://d2nzy1qhita6w.cloudfront.net/media/mf_webp/png/media/.renditions/wysiwyg/marketing/quickstart-logo-white_2.webp">                 <img data-webpconverted="1" src="https://d2nzy1qhita6w.cloudfront.net/media/.renditions/wysiwyg/marketing/quickstart-logo-white_2.png" class="logo alternate" alt="QuickStart Logo" width="" height=""></picture>
+                </a>
+
+                <!-- Mobile Form CTA -->
+                <a class="btn btn-qs-theme lead_form_modal" data-custom-modal="blog_request_more_info_form_modal" href="#" data-custom-form-title="Request More Information"><span>Request More Info</span></a>
+
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <!-- <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programs</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown">
+                                <a href="https://www.quickstart.com/bootcamp/" class="dropdown-toggle" data-toggle="dropdown">IT Bootcamps</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://www.quickstart.com/bootcamp/cybersecurity/">Cybersecurity </a> </li>
+                                    <li><a href="https://www.quickstart.com/bootcamp/software-engineering/">Software Engineering </a></li>
+                                    <li><a href="https://www.quickstart.com/bootcamp/cloud-computing/">Cloud Engineering </a></li>
+                                    <li><a href="https://www.quickstart.com/bootcamp/data-science-and-analytics/">Data Analytics &amp; Visualization</a></li>
+                                    <li><a href="https://www.quickstart.com/bootcamp/it-technician/">IT Technician</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                            <a href="https://www.quickstart.com/workforce-development/" class="dropdown-toggle" data-toggle="dropdown">Workforce Development</a>                 
+                            <ul class="dropdown-menu">
+                                    <li> <a href="https://www.quickstart.com/workforce-students/">Workforce Funded Students</a></li>
+                                    <li> <a href="https://www.quickstart.com/workforce-partners/">Workforce Partners</a></li>                        
+                                </ul>                
+                            </li>
+                            
+                            <li><a href="https://www.quickstart.com/military/">Military</a></li>
+                            <li><a href="https://www.quickstart.com/finance-and-funding/">Finance &amp; Funding</a></li>
+                            <li><a href="https://www.quickstart.com/career-services/">Career Services</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.quickstart.com/it-professionals/">Certificates</a>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.quickstart.com/guaranteed-to-run/">Guaranteed To Run Courses</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="https://www.quickstart.com/partner-solutions/" class="dropdown-toggle" data-toggle="dropdown">Partner Solutions</a>
+                        <ul class="dropdown-menu">
+                            <li class="mobilOnly"><a href="https://www.quickstart.com/partner-solutions/?ref">Partner Solutions </a></li>
+                            <li><a href="https://www.quickstart.com/partner-solutions/upskill/">Upskill </a></li>
+                            <li><a href="https://www.quickstart.com/partner-solutions/reskill/">Reskill  </a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recruit-Train-Deploy</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://www.quickstart.com/partner-solutions/recruit-train-deploy-student/">Recruit-Train-Deploy Student</a>
+                                    </li><li><a href="https://www.quickstart.com/partner-solutions/recruit-train-deploy-employer/">Recruit-Train-Deploy Employer</a>
+                                </li></ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.quickstart.com/blog/">Articles</a>
+                    </li> -->
+                    
+                    <li class="dropdown icon-based">
+                        <a href="#" class="dropdown-toggle phone-icon" aria-label="contact numbers dropdown" data-toggle="dropdown"><span class="hidden">Contact Us</span><i class="icon-phone"></i></a>
+                        <ul class="dropdown-menu custom_nav">
+                            <li class="sales_phone_number"><span>Sales</span> <a href="tel:+18662913008">+1 (866) 291-3008</a> Mon-Fri 9am to 6pm CST</li>
+                            <li><span>Student Support</span> <a href="tel:+18558008240">+1 (855) 800-8240</a> Mon-Fri 9am to 6pm CST</li>
+                            <li><span>Other</span> 
+                                <a href="#" onclick="SnapEngage.startLink()">Chat</a> 
+                                <a href="https://www.quickstart.com/contact-us/"> Ask a question </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- <li class="dropdown icon-based search-nav">
+                        <a href="#" class="dropdown-toggle search-bar-toggle" aria-label="search bar toggle" data-toggle="dropdown"><span class="hidden">Search</span><i class="icon-search"></i></a>
+                        <ul class="dropdown-menu search_bar">
+                            <li>
+                                <form action="https://www.quickstart.com/catalogsearch/result/?q=">
+                                    <label for="search"><span>Search</span></label>    
+                                    <input type="text" name="q" id="search" placeholder="Type in phrases like &quot;Cybersecurity Bootcamp&quot; or &quot;Microsoft&quot;" maxlength="128" autocomplete="off">
+                                    <button type="submit"><span>Search</span></button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li> -->
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+
+            <div class="mobile-right-nav">
+                <ul>
+                    <li class="search-toggle">
+                        <a href="#" aria-label="Search Bar Toggle"><span class="hidden">Search</span><i class="icon-search"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.quickstart.com/customer/account/login/" aria-label="User Account Link"><span class="hidden">Account Link</span><i class="icon-user"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div><!-- End Container -->
+
+    </nav></div>
+    <!-- End Navigation -->
+
+</header>
+<!--/ End Header --><main id="maincontent" class="page-main"><a id="contentarea" tabindex="-1"></a>
+<div class="page messages"><div data-placeholder="messages"></div>
+<div data-bind="scope: 'messages'">
+    <!-- ko if: cookieMessages && cookieMessages.length > 0 -->
+    <div aria-atomic="true" role="alert" data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: messages().messages && messages().messages.length > 0 -->
+    <div aria-atomic="true" role="alert" class="messages" data-bind="foreach: {
+        data: messages().messages, as: 'message'
+    }">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+
+</div><div class="columns"><div class="column main"><input name="form_key" type="hidden" value="Onp5Mj3SYvcruY4w" /><div id="authenticationPopup" data-bind="scope:'authenticationPopup', style: {display: 'none'}">
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        
+</div>
+
+
+
+
+
+                    
+
+
+
+<div class="post-view">
+
+    <ul class="breadcrumb mb-5">
+        <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="/blog/"> Blog</a></li>
+                <li ><a href="https://www.quickstart.com/blog/it-ops-and-management/"> IT Ops & Management</a></li> 
+                <li class="active"> What is Bootstrap and How does it Work?</li>
+    </ul>
+
+    <div class="page-title-wrapper">
+        <h1 class="page-title">What is Bootstrap and How does it Work?</h1>
+    </div>
+
+    <div class="post-holder post-holder-459">
+
+                    <div class="post-header">
+
+                <!-- Post Sharing -->
+                <div class="post-sharing post-sharing-top old-post-view">
+                    <div class="share-elements">
+                        <div class="icon-wrapper icon-facebook" onclick="mfShareWindowOpen('https://www.quickstart.com/blog/it-ops-and-management/what-is-bootstrap-and-how-does-it-work/', 'facebook')">
+                            <div class="icon" title="Share on Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1"  class="at-icon at-icon-facebook" style="fill: #ffffff;">
+                                    <title id="at-svg-facebook-1">Share on Facebook</title>
+                                    <g><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path></g>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="icon-wrapper icon-twitter" onclick="mfShareWindowOpen('https://www.quickstart.com/blog/it-ops-and-management/what-is-bootstrap-and-how-does-it-work/', 'twitter')">
+                            <div class="icon" title="Share on X">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 32 32" width="48" height="48" fill="none">
+                                    <title id="at-svg-twitter-2">Share on X</title>
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="#ffffff"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="icon-wrapper icon-pinterest" onclick="mfShareWindowOpen('https://www.quickstart.com/blog/it-ops-and-management/what-is-bootstrap-and-how-does-it-work/', 'pinterest')">
+                            <div class="icon" title="Pinterest">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img"  class="at-icon at-icon-pinterest" style="fill: rgb(255, 255, 255);">
+                                    <title id="at-svg-pinterest_share-1">Pinterest</title>
+                                    <g><path d="M7 13.252c0 1.81.772 4.45 2.895 5.045.074.014.178.04.252.04.49 0 .772-1.27.772-1.63 0-.428-1.174-1.34-1.174-3.123 0-3.705 3.028-6.33 6.947-6.33 3.37 0 5.863 1.782 5.863 5.058 0 2.446-1.054 7.035-4.468 7.035-1.232 0-2.286-.83-2.286-2.018 0-1.742 1.307-3.43 1.307-5.225 0-1.092-.67-1.977-1.916-1.977-1.692 0-2.732 1.77-2.732 3.165 0 .774.104 1.63.476 2.336-.683 2.736-2.08 6.814-2.08 9.633 0 .87.135 1.728.224 2.6l.134.137.207-.07c2.494-3.178 2.405-3.8 3.533-7.96.61 1.077 2.182 1.658 3.43 1.658 5.254 0 7.614-4.77 7.614-9.067C26 7.987 21.755 5 17.094 5 12.017 5 7 8.15 7 13.252z" fill-rule="evenodd"></path></g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Post Sharing -->
+
+                
+
+<div class="post-info">
+            <div class="item post-posed-date">
+            <i class="mf-blog-icon mfbi-calendar"></i>
+            <span class="label">Posted:</span>
+            <span class="value">June 28, 2018</span>
+        </div>
+                <div class="item post-categories">
+            <i class="mf-blog-icon mfbi-folder"></i>
+            <span class="label">Categories:</span>
+                                                        <a title="IT Ops &amp; Management"
+                   href="https://www.quickstart.com/blog/it-ops-and-management/"
+                >IT Ops &amp; Management</a>                    </div>
+                                <div class="item post-author">
+                <i class="mf-blog-icon mfbi-user"></i>
+                <span class="label">Author:</span>
+                <span class="value">
+                                <a title="Annas Jan"
+                   href="https://www.quickstart.com/blog/author/annas-jan/">
+                
+                Annas Jan
+                                </a>
+                
+                                
+
+            </span>
+        </div>
+            
+    
+    <!-- reading time -->
+            <div class="item post-reading-time">
+            <i class="mf-blog-icon mfbi-reading-time"></i>
+            <span class="value">5 min read</span>
+        </div>
+    
+</div>
+            </div>
+        
+        <div class="post-content">
+            <div class="post-description clearfix">
+                                                    
+                <div class="post-ftimg-hld">
+                    <a href="https://www.quickstart.com/blog/it-ops-and-management/what-is-bootstrap-and-how-does-it-work/" title="What is Bootstrap and How does it Work?">
+                        <picture class="mfwebp">                <source   type="image/webp" srcset="https://d2nzy1qhita6w.cloudfront.net/media/mf_webp/jpg/media/magefan_blog/b/o/bootstrap.webp">                 <img data-webpconverted="1" src="https://d2nzy1qhita6w.cloudfront.net/media/magefan_blog/b/o/bootstrap.jpg" alt="What is Bootstrap and How does it Work?" /></picture>
+                    </a>
+                </div>
+                            <div class="post-text-hld">
+                    <p>Web developers today have a number of advanced frameworks and tools at their disposal, that sets them apart and ahead of their counterparts of even a few years ago. One such framework that has made web development considerably more streamlined, and expanded development to better include the mobile experience.</p>
+<p>It is known as the single largest and fastest growing JS, HTML and CSS framework that can be used to build interactive and engaging web projects. A <a href="https://getbootstrap.com/">front-end framework</a>, Bootstrap enables development to become faster and more streamlined.<!-- pagebreak --></p>
+<p>A framework such as Bootstrap can be useful for any web developer, as part of their technical arsenal. In this article, we will be taking a close look at the Bootstrap framework and all its fundamentals, as well as some benefits of learning how to use it.</p>
+<h2>What Actually Is Bootstrap?</h2>
+<p>Simply put, Bootstrap is a massive collection of reusable and versatile pieces of code which are written in CSS, HTML and JavaScript. Since it is also a framework, all the foundations are already laid for responsive web development, and all developers have to do is insert the code into the <a href="https://www.simbla.com/post/what-is-bootstrap">pre-defined grid system</a>.</p>
+<p>There are some free tools that come as part of the package, which permit designers to build the more common website interface components, as well as more responsive ones, adding to the versatility of the framework.</p>
+<p>Typically, it saves you from having to write long strings of especially CSS code. This gives you more time as well as capacity to work on the design of the webpages themselves. At the moment, <a href="https://github.com/twbs/bootstrap">Bootstrap is hosted by GitHub</a>.</p>
+<h2>Bootstrap for Responsive Design-based Development</h2>
+<p>Responsive website designs are nothing new. In fact, they have been the preference of web developers for many years, as responsive websites are significantly more engaging that static ones. The massive shift is preference came later, when mobile web development picked up steam and became almost as common as regular web design.</p>
+<p>Additionally, the concept of a framework was also alien to designers, as many were used to development from the ground up. However, this proved not to be so, as it was quite simple to understand and work, without extensive knowledge of responsive design concepts.</p>
+<p>The responsive features allow the web pages to appear correctly on different screens (mobile, tablet, desktop, etc.). Images are also automatically adjusted according to the viewing screen by the pre-defined CSS guidelines, with the addition of the .img-responsive class.</p>
+<p>Have you checked out our <strong><a href="https://www.quickstart.com/enterprise/" target="_blank" rel="noopener">LITE Subscription</a></strong>? Get self-paced courses, access to community of experienced IT professionals, learning analytics and informal learning within the platform absolutely free of cost.</p>
+<h2>Primary Bootstrap Files</h2>
+<p>As a front-end framework, Bootstrap has three primary files:</p>
+<ul style="list-style-type: disc;">
+<li><strong>bootstrap.js </strong>which is a jQuery/JavaScript framework.</li>
+<li><strong>bootstrap.css </strong>which is a CSS framework</li>
+<li><strong>glyphicons </strong>which is a set of icon fonts</li>
+</ul>
+<p>jQuery, which is quite widely used and very popular JavaScript library, is required for Bootstrap to function. It adds cross browser compatibility and simplifies JavaScript.</p>
+<h2>Bootstrap Components</h2>
+<p>With Bootstrap, developers have a range of components at their disposal, which can be inserted on to the website. These include, but are not limited to:</p>
+<ul style="list-style-type: disc;">
+<li>Drop-down menus</li>
+<li>Navigation bars</li>
+<li>Progress bars</li>
+<li>Thumbnail images</li>
+</ul>
+<p>Each of the components are built on a uniform design template, which allowed for a more consistent design theme throughout the development process. Additionally, it takes the visual design effort out of the equation, since the central library houses pre-arranged sets of layouts and designs.</p>
+<h2>Documentation and Customizability in Bootstrap</h2>
+<p>On the Bootstrap website, there is a definition and explanation for all the important pieces of code that will be used in the development process. There are also samples of code available among the explanations. These code pieces are used to implement basic elements, and serve to better describe how code functions within the Bootstrap framework.</p>
+<p>What’s really special about Bootstrap, and what makes it ideal for beginner developers, is that it allows you to select the component, copy the code on to the page you are designing, and make adjustments from there.</p>
+<p>As far as customizability goes, there are two faces to it. On one hand, the size of the framework is quite large, which causes the application to slow down considerably when loading for the first time. The most recent version of the CSS file for Bootstrap is 119 KB. Now, this may seem insignificant when compared to images and other multimedia files; however, this is a CSS file, and from that perspective, it is huge!</p>
+<p>On the other hand, Bootstrap does allow you to get around this issue, by allowing you to adjust the functionality you would like to be included into the download. This can be done by visiting the customization and download page and checking off the features that won’t be needed for the application, making the file smaller and <a href="https://careerfoundry.com/en/blog/web-development/what-is-bootstrap-a-beginners-guide/">reducing the download time</a>.</p>
+<h2>Grid System</h2>
+<p>The grid system in Bootstrap is one of the primary elements. They create layouts of pages by using multiple columns and rows in which the content can be inserted. If the device screen on which the page is being viewed, gets bigger, the grid will scale up to 12 columns. This fits the page on to the screen.</p>
+<p>There are pre-defined classes by which designers can make their own layouts. In case you want to place additional focus on the layout structure instead of the presentation, the grid will use Less mixins.</p>
+<p>The grid system can also collapse to fit smaller screens. This flexibility allows designers to create more visually and technically comprehensive websites, with comparatively less effort as compared to a non-framework development foundation.</p>
+<p>Bootstrap fundamentals and practical implementation are an important part of our <a href="https://www.quickstart.com/bootcamp/ai-centric-software-engineering-bootcamp/">Web Developer Bootcamp</a> at QuickStart. If you are a potential web developer looking to make a career in the field, and a few stunning websites while you’re at it, you can benefit tremendously from all the learning delivered as part of the bootcamp.</p>
+<!-- START AUTHOR CODE WITH IMAGE -->
+<div class="clearer">Learn the <strong><a href="https://www.quickstart.com/catalogsearch/result/?q=bootstrap" target="_blank" rel="noopener">basics of Bootstrap</a> </strong>with QuickStart, offering 7-day free trial to full access.</div>
+<!-- END AUTHOR CODE WITH IMAGE -->                    <div class="clear clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-bottom">
+            
+                <div class="post-nextprev-hld clearfix">
+                                            <a class="nextprev-link prev-link"
+                   href="https://www.quickstart.com/blog/business-productivity/breaking-socio-economic-barriers-with-online-it-training-courses/"
+                   title="Read Breaking Socio-Economic Barriers with Online IT Training Courses">
+                    Previous Post                </a>
+                                                        <a class="nextprev-link next-link"
+                   href="https://www.quickstart.com/blog/microsoft/introduction-to-sharepoint/"
+                   title="Read Office 365 Training Series: Introduction to SharePoint">
+                    Next Post                </a>
+                    </div>
+    
+
+                </div>
+    </div>
+</div>
+</div><div class="sidebar sidebar-additional"><style>
+    .blog-post-view .form_widget_wrapper h3 {
+        display: block !important;
+        margin-bottom: 15px;
+    }
+
+    .form-box .title {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        display: block;
+    }
+</style>
+
+<div class="form_widget_wrapper">
+
+    <div id="sticky-form-anchor"></div>
+    
+    <!-- FormStack Form -->
+    <iframe style="display:none" name="success_formstack_msub"></iframe>
+    <form style="display:none" id="master-sub-form" novalidate enctype="multipart/form-data" method="post" action="https://www.formstack.com/forms/index.php" target="success_formstack_msub">
+    
+    <input type="hidden" name="form" value="5421539" />
+    <input type="hidden" name="viewkey" value="XWfVMe1CU5" />
+    <input type="hidden" name="_submit" value="1" />
+    
+    <input placeholder="full name"   type="hidden" name="field150338892" value="" id="field150338892" />
+    <input placeholder="phone number"   type="hidden" name="field150338895" value=""  id="field150338895" />
+    <input placeholder="email"   type="hidden" name="field150338894" value=""  id="field150338894" />
+    <input placeholder="Area Of Interest"   type="hidden" name="field150340633" value=""  id="field150340633" />
+    <input placeholder="Are you underemployed or unemployed?"   type="hidden" name="field150339368" value=""  id="field150339368" />
+    <input placeholder="Are you Military or Military-Affiliated?"   type="hidden" name="field150339395" value=""  id="field150339395" />
+    <input placeholder="Bootcamp Program of Interest" type="hidden" name="field175254945" value=""  id="field175254945" />
+    
+    <input  placeholder="Email Opt-In"  type="hidden" name="field150339363" value="1"  id="field150339363" />
+    <input  placeholder="Lead Rating"  type="hidden" name="field150338902" value="3"  id="field150338902" />
+    <input  placeholder="brand"  type="hidden" name="field150338899" value=""  id="field150338899" />
+    <input  placeholder="brand code"  type="hidden" name="field150338900" value=""  id="field150338900" />
+    <input  placeholder="host page url"  type="hidden" name="field150338904" value=""  id="field150338904" />
+    <input placeholder="magento store id" type="hidden" name="field150338901" value="0"  id="field150338901" />
+    <input placeholder="country" type="hidden" name="field150338903" id="field150338903" />
+    <input placeholder="course_name" type="hidden" name="field150338898" id="field150338898" />
+    <input placeholder="blog_title" type="hidden" name="field175491445" id="field175491445" />
+    <input placeholder="form_name" type="hidden" name="field150338906" id="field150338906" value="Blog" />
+    
+    <input  placeholder="utm_source"  type="hidden" name="field150338913" value=""  id="field150338913" />
+    <input  placeholder="utm_med"  type="hidden" name="field150338914" value=""  id="field150338914" />
+    <input  placeholder="utm_campaign"  type="hidden" name="field150338917" value=""  id="field150338917" />
+    <input  placeholder="utm_content"  type="hidden" name="field150338916" value=""  id="field150338916" />
+    <input  placeholder="utm_term"  type="hidden" name="field150338915" value=""  id="field150338915" />
+    <input  placeholder="gclid"  type="hidden" name="field150338918" value=""  id="field150338918" />
+    
+    <input  placeholder="gbraid" type="hidden"  name="field185363943" value="" id="field185363943"   /> 
+    <input  placeholder="wbraid" type="hidden"  name="field185363942" value="" id="field185363942"   /> 
+    
+    <input  placeholder="campaign_id"  type="hidden" name="field186535244" value=""  id="field186535244" />
+    <input placeholder="fbp" name="field150338909" type="hidden" id="field150338909" value="" />
+    <input placeholder="fbc" name="field150338910" type="hidden" id="field150338910"  value="" />
+    <input placeholder="fbclid" name="field150338911" type="hidden" id="field150338911" value="" />
+
+    <!-- Custom Validation to avoid blank leads -->
+    <input  placeholder="fs_custom_validator"  type="hidden" name="field150338919" value=""  id="field150338919"  style="display:none" />
+    
+    <!--  -->
+    <input placeholder="created_reengaged_date" type="hidden" name="field150339402" id="field150339402" />
+    
+    </form>
+    
+     
+    
+    <!-- Submission Function --> 
+     
+    
+    
+    <!-- Front End Form And Script -->
+    <div id="lead_form_modal">
+        <div class="register-area">
+            <div class="form-box">
+                <h3>Learn. Get Hired. <br> Keep Growing.</h3>
+                <!-- <a href="#" class="mobileStickyFormCta" id="mobileStickyFormCta">Request A Quote</a> --> <!-- Mobile Stiky CTA -->
+                 
+                <form data-mage-init='{"validation": {}}'  autocomplete="off"  class="custom-lead-form-2"  name="master-sub-form-validate" 
+    id="master-sub-form-validate" action="https://www.quickstart.com/thank-you/"   method="post" data-hasrequired="* Required Fields">
+        <div class="row">
+
+            <!-- <div class="col-md-12">
+                <span class="title">Learn. Get Hired. <br> Keep Growing.</span>
+            </div> -->
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="label" for="full_name_form_msub"><span> Full Name</span></label>
+                    <input name="full_name_form_msub" id="full_name_form_msub" placeholder= "Full Name*"   value="" aria-label="Full Name" class="form-control" type="text" data-validate="{required:true,'letters-with-basic-punc':true}" />
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="label" for="email_address_form_msub"><span> Email Address</span></label>
+                    <input name="email_address_form_msub" id="email_address_form_msub" placeholder="Email Address*" title="email_address" value="" aria-label="Email Address" type="text" class="form-control" data-validate="{required:true, 'validate-email':true}" aria-required="true">
+                </div>
+            </div>
+    
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="label" for="phone_number_form_msub"><span> Mobile Number</span></label>
+                    <input name="phone_number_form_msub" id="phone_number_form_msub" placeholder="Mobile Number*"  title="phone_number" value="" aria-label="Mobile Number" type="text" class="form-control" data-validate="{required:true}"/>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="selectWrap">
+                        <label class="label" for="area_of_interest_form_msub"><span>I’m Interested In</span></label>
+                        <select class="form-control validate-select" name="area_of_interest_form_msub" id="area_of_interest_form_msub" aria-label="I’m Interested In">
+                            <option value="" selected="selected">I’m Interested In*</option>
+
+                            <option value="Cybersecurity Bootcamp">Cybersecurity Bootcamp</option>
+                            <option value="Cybersecurity Engineering" class="cybereng">Cybersecurity Engineering Bootcamp</option>
+                             <option value="AI Centric Software Engineering" class="se">AI Centric Software Engineering Bootcamp</option>
+                           <option value="Data Analytics and Visualization" class="ds">Data Analytics and Visualization Bootcamp</option>
+                           <option value="AI-Centric Front-End Software Engineering" class="fe">AI-Centric Front-End Software Engineering Bootcamp</option>
+                            <option value="IT Technician Bootcamp">IT Technician Bootcamp</option>    
+                           <option value="Network Engineering Bootcamp">Network Engineering Bootcamp</option>  
+
+                            <option value="Enterprise Solutions">Enterprise Solutions</option>
+                            <option value="Employee Training Development">Employee Training Development</option>
+                            <option value="Government Funded Training">Government Funded Training</option>     
+                            <option value="Military Tech Programs">Military Tech Programs</option>     
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="col-md-12 hidden" id="bootcamp-program-of-interest">
+                <div class="form-group">
+                    <div class="selectWrap">
+                        <label class="label" for="bootcampinterest_form_msub"><span>Program of Interest</span></label>
+                        <select class="form-control validate-select" name="bootcampinterest_form_msub" id="bootcampinterest_form_msub" aria-label="Program of Interest">
+                            <option value="" selected="selected">Program of Interest*</option>
+                            <option value="Cybersecurity">Cybersecurity</option>
+                            <option value="Cloud Engineering">Cloud Engineering</option>
+                            <option value="Data Analytics & Visualization">Data Analytics & Visualization</option>  
+                            <option value="Software Engineering">Software Engineering</option> 
+                            <option value="IT Technician">IT Technician</option>     
+                        </select>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="col-md-12 hidden id="employment-status">
+                <div class="form-group">
+                    <div class="selectWrap">
+                        <label class="label" for="employmentstatus_form_msub"><span>Employment Status</span></label>
+                        <select class="form-control validate-select" name="employmentstatus_form_msub" id="employmentstatus_form_msub" aria-label="Employment Status">
+                            <option value="" selected="selected">Employment Status*</option>
+                            <option value="419260000">Employed</option>
+                            <option value="419260001">Un-employed</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-12 hidden" id="military-affiliation">
+                <div class="form-group">
+                    <div class="selectWrap">
+                        <label class="label" for="militarystaus_form_msub"><span>Military Affiliation</span></label>
+                        <select class="form-control validate-select" name="militarystaus_form_msub" id="militarystaus_form_msub" aria-label="Military Affiliation">
+                            <option value="" selected="selected">Military Affiliation*</option>
+                            <option value="717780000">I am military or military affiliated.</option>
+                            <option value="717780001">I am not military affiliated.</option>  
+                        </select>
+                    </div>
+                </div>
+            </div>
+    
+        
+            <div class="col-md-12">
+                <button id="subFormsubmitButton" type="submit"><span>Submit</span><span class="altr">Explore Tech Training</span></button>
+                
+                <div class="userAggrement">
+                    <p>By requesting more info, I agree to receive phone calls/texts from QuickStart. <a href="#" class="userConsentMsg content_modal" data-custom-modal="modal-user-consent-msg" data-custom-form-title="">See Details</a>*</p>
+
+                    <div class="signupCheck">
+                        <label class="hidden" for="signUpConsent_2">sign up consent</label>
+                        <input type="checkbox" id="signUpConsent_2" name="signUpConsent_2" checked="checked" aria-label="sign up consent"/> 
+                        <p>I would like to sign up to receive email updates from QuickStart. See our <a href="https://www.quickstart.com/privacy-and-policy/" target="_blank">Privacy Policy</a>.</p>
+                    </div>    
+                </div>
+                
+            </div>
+        </div>
+                </form>
+    
+                
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
+
+
+
+<style>
+    .custom_modal#modal-user-consent-msg {
+        min-height: inherit;
+    }
+    .custom_modal#modal-user-consent-msg a {
+        color: var(--qs_light_blue);
+        text-decoration: underline;
+    }
+</style>
+<div id="modal-user-consent-msg" class="custom_modal">
+    <div class="msg_wrapper">
+        <p>By requesting more info, you agree to receive text messages from QuickStart. Reply STOP to opt out. Reply HELP for help. Message frequency varies. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages. For more SMS information visit our <a href="/privacy-and-policy/" target="_blank">Privacy Policy</a> and <a href="/terms-and-conditions/"  target="_blank">Terms and Conditions</a>.</p>
+    </div>
+</div>
+
+</div></div></main>
+<!-- LinkedIn Pixel Code -->
+
+
+<noscript> <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7321570&fmt=gif" /> </noscript>
+<!-- LinkedIn Pixel Code -->   
+<style>
+    footer .item .link li.newsletter-signup .insight-text {
+        color: #367486 !important;
+        font-size: 0.85rem !important;
+    }
+
+        
+    footer .item span.widget-title {
+        display: inline-block;
+        margin-bottom: 30px;
+        font-weight: 800;
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    footer .item .link li a,
+    footer .address li,
+    footer .address li a{
+    color: #fff !important;
+    line-height: 24px;
+    }
+
+    /*  */
+    .itil-Statement {
+        margin-top: 20px;
+        border-top: solid 1px #3c4655;
+        padding-top: 15px;
+        font-size: 13px;
+        color: #fff;
+    }
+
+     @media (max-width: 575px) {
+
+        footer .form_outer_wrapper>p {
+            margin-left: 0;
+        }
+
+        footer .subscribe form input {
+            margin-left: 0;
+            width: 100%;
+        }
+
+     }
+
+</style>
+<footer>
+    <div class="container">
+    <div class="f-items default-padding">
+        <div class="row">
+    
+            <div class="col-lg-3 col-md-6 col-sm-12 item mob-row-reverse"> 
+    
+                <!--  -->
+                <div class="f-item link">
+                    <span class="widget-title">Company</span>
+                    <ul>
+                        <li> <a href="/about-us/">About Us</a> </li>
+                        <li> <a href="/careers/">Careers</a> </li>
+                        <li> <a href="/in-the-news/">In the News</a> </li>
+                        <li class="newsletter-signup"> 
+                        <strong> <a href="/quickstart-newsletter-signup/" class="small-text">Stay Connected!</a></strong>
+                        <br>  
+                        <span class="insight-text">Get Top Tech Insights Here</span>
+                    </li>
+                    </ul>
+                </div>
+
+                <!--  -->
+                <div class="f-item about mt-40">
+                    <picture class="mfwebp">                <source  width="190" height="32"  loading="lazy" type="image/webp" srcset="https://d2nzy1qhita6w.cloudfront.net/media/mf_webp/png/media/.renditions/wysiwyg/marketing/quickstart-logo-white_2.webp">                 <img data-webpconverted="1" src="https://d2nzy1qhita6w.cloudfront.net/media/.renditions/wysiwyg/marketing/quickstart-logo-white_2.png" class="logo logo-display" alt="QS Logo Light" width="190" height="32"  loading="lazy"></picture>
+         
+                    <!--  -->
+                    <ul class="footer_social_icons">
+                        <li class="facebook"> <a href="https://www.facebook.com/quickstartlearninginc/" aria-label="Connect with QuickStart on Facebook" target="_blank"> <i class="icon-facebook2"></i> </a> </li>
+                        <li class="twitter"> <a href="https://twitter.com/QuickStartIntel" aria-label="Connect with QuickStart on Twitter" target="_blank"> <i class="icon-x"></i> </a> </li>
+                        <li class="linkedin"> <a href="https://www.linkedin.com/company/quickstart-technologies-inc/" target="_blank" aria-label="Connect with QuickStart on Linkedin"> <i class="icon-linkedin"></i> </a> </li>
+                        <li class="instagram"> <a href="https://www.instagram.com/quickstart_inc/" aria-label="Connect with QuickStart on Instagram" target="_blank"> <i class="icon-instagram"></i> </a> </li>
+                        <!-- <li class="youtube"> <a href="https://www.youtube.com/channel/UCNJIEbGZaScUDsq_DMYTjYg" aria-label="Follow QuickStart on Youtube" target="_blank"> <i class="icon-youtube"></i> </a> </li> -->
+                    </ul>
+                </div>      
+    
+            </div>
+    
+            <div class="col-lg-3 col-md-6 col-sm-12 item">
+    
+               
+    
+                <!--  -->
+                <div class="f-item link">
+                    <span class="widget-title">Partners</span>
+                    <ul>
+                        <li> <a href="/academic-partnerships/"> Partner With Us</a> </li>
+                      <!--  <li> <a href="/referral-reward-program/"> Referral Program</a> </li> -->
+                    </ul>
+                </div>
+
+                 <!--  -->
+                 <div class="f-item link mt-40">
+                    <span class="widget-title">Employer Partnerships</span>
+                    <ul>
+                        <li> <a href="/enterprise/">Recruit-Train-Deploy</a> </li>
+                    </ul>
+                </div>
+    
+            </div>
+    
+            <div class="col-lg-3 col-md-6 col-sm-12 item">
+                
+                <!--  -->
+                <div class="f-item link">
+                    <span class="widget-title">Customer Success</span>
+                    <ul> 
+                        <li> <a href="/completion-badges/"> Credly Official Validation</a> </li>
+                    </ul>
+                </div>
+    
+                <!--  -->
+                <div class="f-item link mt-40">
+                    <span class="widget-title">Policies</span>
+                    <ul>
+                     <li> <a href="/accessibility/"> Accessibility</a> </li>
+                     <li> <a href="/eir-policy/"> ER Requirements</a> </li>
+                     <li> <a href="/privacy-and-policy/"> Privacy Policy</a> </li>
+                    <li> <a href="/grievance-policy/"> Grievance Policy</a> </li>
+                    <li> <a href="/acceptable-use-policy/"> Acceptable Use Policy</a> </li>
+                    <li> <a href="/california-bppe/"> BPPE</a> </li>
+                 </ul>
+                </div>
+    
+            </div>
+    
+            <div class="col-lg-3 col-md-6 item">
+                <div class="f-item contact">
+                <span class="widget-title">Support</span>
+                <div class="address blockOne" style="display: none;">
+                    <ul>
+                    <li> <strong>Email:</strong><br>
+                        Sales:<a href="mailto:nicholas.lloyd@quickstart.com" style="display:inline-block"> nicholas.lloyd@quickstart.com </a><br>
+                    </li>
+                    <!--<li class="agentStatus"> <strong>Live Chat:</strong> <a href="#" class="agentAvailable" onclick="SnapEngage.startLink();">Talk Now</a> <a href="#" class="notAvailable" onclick="SnapEngage.startLink();">Leave A Message</a> </li>-->
+                    <li> <strong>Call:</strong><br>
+                        Sales: <a href="tel:5128864636" class=" "> 512-886-4636 </a><br>
+                        </li>
+                    <li> <strong>Hours of Operation:</strong><br>
+                        <strong> Mon - Fri: </strong> 9AM-6PM Central </li>
+                    </ul>
+                </div>
+                <div class="address blockTwo" style="display: block;">
+                    <ul>
+                    <li> <strong>Email:</strong><br>
+                        Sales:<a href="mailto:sales@quickstart.com"> sales@quickstart.com </a><br>
+                        Student Support:<a href="mailto:support@quickstart.com"> support@quickstart.com </a> </li>
+                    <!--<li class="agentStatus"> <strong>Live Chat:</strong> <a href="#" class="agentAvailable" onclick="SnapEngage.startLink();">Talk Now</a> <a href="#" class="notAvailable" onclick="SnapEngage.startLink();">Leave A Message</a> </li>-->
+                    <li> <strong>Call:</strong><br>
+                        Sales: <a href="tel:8669913924" class="sales_phone_number">(866) 991-3924</a><br>
+                        Student Support: <a href="tel:8558008240"> (855) 800-8240 </a> </li>
+                    <li> <strong>Hours of Operation:</strong><br>
+                        <strong> Mon - Fri: </strong> 9AM-6PM Central </li>
+                    <li> <strong>Telephone:</strong><a href="tel:5129671122"> 512-967-1122</a></li>
+                    <li> <strong>US Office Address:</strong><br>1101 S Capital of Texas Hwy - Building J, Suite 200, Austin, TX. 78746</li>
+
+                    </ul>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-lg-6 item">
+                <div class="form_outer_wrapper">
+                   
+                    <div class="subscribe" id="email_subscriptions"> 
+         
+                        <!-- FormStack Form -->
+                        <iframe style="display:none" name="success_formstack_emailSub"></iframe>
+                        <form style="display:none" id="email-sub-form" novalidate enctype="multipart/form-data" method="post" action="https://www.formstack.com/forms/index.php" target="success_formstack_emailSub">
+
+                        <input type="hidden" name="form" value="5128235" />
+                        <input type="hidden" name="viewkey" value="XWfVMe1CU5" />
+                        <input type="hidden" name="_submit" value="1" />
+
+                        <input placeholder="email"   type="hidden" name="field137621420" value=""  id="field137621420" />
+
+                        <input  placeholder="Lead Rating"  type="hidden" name="field137621428" value="3"  id="field137621428" />
+                        <input  placeholder="brand"  type="hidden" name="field137621425" value=""  id="field137621425" />
+                        <input  placeholder="brand code"  type="hidden" name="field137621426" value=""  id="field137621426" />
+                        <input  placeholder="host page url"  type="hidden" name="field137621430" value=""  id="field137621430" />
+                        <input placeholder="magento store id" type="hidden" name="field137621427" value="0"  id="field137621427" />
+                        <input placeholder="country" type="hidden" name="field137621429" id="field137621429" />
+                        <input placeholder="course_name" type="hidden" name="field137621424" id="field137621424" />
+                        <input placeholder="lead_type" type="hidden" name="field146944290" id="field146944290" />
+                        <input placeholder="form_name" type="hidden" name="field137621431" id="field137621431" value="Email Form - Footer New" />
+                        <input placeholder="created_reengaged_date" type="hidden" name="field144701988" id="field144701988" />
+
+                        <input  placeholder="utm_source"  type="hidden" name="field137621438" value=""  id="field137621438" />
+                        <input  placeholder="utm_med"  type="hidden" name="field137621439" value=""  id="field137621439" />
+                        <input  placeholder="utm_campaign"  type="hidden" name="field137621442" value=""  id="field137621442" />
+                        <input  placeholder="utm_content"  type="hidden" name="field137621441" value=""  id="field137621441" />
+                        <input  placeholder="utm_term"  type="hidden" name="field137621440" value=""  id="field137621440" />
+
+                        <!-- START  TO GET and pass WEbmechanics Tracking Data--> 
+                        <label for="field137621432"> ga </label>
+                        <input name="field137621432" type="hidden" id="field137621432" class="ga_data_pass" value="" /> 
+
+                        <label for="field137621433"> gclid </label>
+                        <input name="field137621433" type="hidden" id="field137621433" class="gclid_data_pass" value="" /> 
+
+                        <label for="field137621434"> fbp </label>
+                        <input name="field137621434" type="hidden" id="field137621434" class="fbp_data_pass" value="" /> 
+
+                        <label for="field137621435"> fbc </label>
+                        <input name="field137621435" type="hidden" id="field137621435" class="fbc_data_pass" value="" /> 
+
+                        <label for="field137621436"> fbclid </label>
+                        <input name="field137621436" type="hidden" id="field137621436" class="fbclid_data_pass" value="" /> 
+
+                        <label for="field137621437"> user_agent </label>
+                        <input id="field137621437" name="field137621437" type="hidden" class="user_agent_data_pass" value="" /> 
+
+                        <!-- END  TO GET and pass WEbmechanics Tracking Data--> 
+
+                        <!-- Custom Validation to avoid blank leads -->
+                        <input  placeholder="fs_custom_validator"  type="hidden" name="field137621444" value=""  id="field137621444"  style="display:none" />
+
+
+                        </form>
+
+                        <!-- Frontend Form -->
+                        <form data-mage-init='{"validation": {}}'  autocomplete="off"  class="custom-lead-form-2"  name="emailSub-form-validate" 
+                        id="emailSub-form-validate" action="https://www.quickstart.com/thank-you"   method="post" data-hasrequired="* Required Fields">
+                        <label for="email_address_form_emailSub" style="display:none">email</label>
+                        <input id="email_address_form_emailSub" type="email" placeholder="Enter your e-mail here" class="form-control" name="email_address_form_emailSub"  data-validate="{required:true, 'validate-email':true}" aria-label="Email Address Field" required>
+                        <button id="emailSubSubmitButton" type="submit" aria-label="Email Subscription Button"><span class="hidden">Submit Button</span><i class="icon-paper-plane"></i></button> 
+                        </form>
+        
+                    </div>
+        
+                    <p>Get the latest QuickStart and IT industry news. By subscribing, you agree to receive <br/> email updates from QuickStart and associated technology partners.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 item">
+                <p class="itil-Statement">ITIL® and the Swirl logo are registered trademarks of the PeopleCert group. Used under license from PeopleCert. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <p>&copy; Copyright 2024. All Rights Reserved by <a href="https://www.quickstart.com/">QuickStart Inc.</a></p>
+            </div>
+            <div class="col-lg-6 col-sm-12 text-right link">
+                <ul>
+                    <li> <a href="/contact-us/">Contact Us</a> </li>
+                    <li> <a href="/terms-and-conditions/">Terms and Conditions</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- End Footer Bottom --> 
+</footer>
+
+
+
+<!-- Start of LiveChat (www.livechat.com) code -->
+
+    <noscript><a href="https://www.livechat.com/chat-with/17101677/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+    <!-- End of LiveChat code -->
+
+<style>
+.sidebar .widget ul li ul li {
+    display: list-item;
+    list-style: disc;
+    padding: 0;
+    margin-left: 30px;
+    color: #666;
+}
+</style>
+
+
+</div>    <script>
+    var LOCALE = 'en\u002DUS';
+    var BASE_URL = 'https\u003A\u002F\u002Fwww.quickstart.com\u002F';
+    var require = {
+        'baseUrl': 'https\u003A\u002F\u002Fd2nzy1qhita6w.cloudfront.net\u002Fstatic\u002Fversion1772014801\u002Ffrontend\u002Fquickstart\u002Fkepler\u002Dtheme\u002Fen_US'
+    };</script>
+<script  type="text/javascript"  src="https://d2nzy1qhita6w.cloudfront.net/static/version1772014801/_cache/merged/66d52e6e42a1ccc02936fb2c97c55f41.min.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PNQR8Z');</script>
+<script>
+setTimeout(function() {
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = 'https://e0ac0fbb12354678a364f57488fd78ce.js.ubembed.com';
+script.async = true;
+document.head.appendChild(script);
+}, 3000); // 3 seconds delay
+</script>
+<script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_PageCache/js/form-key-provider": {
+                    "isPaginationCacheEnabled":
+                        0                }
+            }
+        }
+    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function(e){
+        if (!MagefanWebP.canUseWebP()) {
+            /* Replace some custom webp images with original one if webp is not supported */
+            /* Can add <a> tag in future as well */
+            setInterval(function(){
+                document.querySelectorAll("img[src$='.webp']:not(.no-origin-webp-img)").forEach(function(el){
+                    var scr = el.getAttribute('src');
+                    var newScr = MagefanWebP.getOriginWebPImage(scr);
+
+                    if (scr != newScr) {
+                        el.setAttribute('src', newScr);
+                    } else {
+                        el.classList.add('no-origin-webp-img');
+                    }
+                });
+
+            }, 1000);
+        }
+
+        function processLazyPictureImg(img)
+        {
+            var src = img.getAttribute('src');
+            var keys = ['original', 'src', 'lazyload'];
+            var original, _original;
+            for (var i=0;i<keys.length;i++) {
+                _original = img.getAttribute('data-' + keys[i]);
+                if (_original) {
+                    original = _original;
+                    break;
+                }
+            }
+            if (original == src) {
+
+                if (img.getAttribute('data-mf-lazy-picture-img')) return;
+                img.setAttribute('data-mf-lazy-picture-img', 1);
+
+
+                img.parentElement.querySelectorAll('source').forEach(function(el){
+                    var srcset = el.getAttribute('srcset');
+                    var originalset = el.getAttribute('data-originalset');
+                    if (originalset && (originalset != srcset)) {
+                        el.setAttribute('srcset', originalset);
+                        el.classList.remove('lazyload');
+                    }
+                });
+
+                var lazyLoader = img.closest('.lazy-loader');
+                if (lazyLoader) {
+                    lazyLoader.classList.remove('lazy-loader');
+                }
+
+                document.querySelectorAll("picture img[src='"+src+"']").forEach(function(img){
+                    processLazyPictureImg(img);
+                });
+
+            }
+        }
+
+        document.querySelectorAll('picture img[data-original],picture img[data-src],picture img[data-lazyload]').forEach(function(el){
+            el.addEventListener('load', function(e){
+                processLazyPictureImg(e.target);
+            });
+            processLazyPictureImg(el);
+        });
+    });
+</script>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BlogPosting","@id":"https:\/\/www.quickstart.com\/blog\/it-ops-and-management\/what-is-bootstrap-and-how-does-it-work\/","author":{"@context":"http:\/\/schema.org","@type":"Person","name":"Annas Jan","url":"https:\/\/www.quickstart.com\/blog\/author\/annas-jan","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.quickstart.com\/blog\/author\/annas-jan"},"sameAs":["https:\/\/pk.linkedin.com\/in\/annas-naim-12979821"],"jobTitle":"Associate Instructor"},"headline":"Introduction to Bootstrap for Web Development | QuickStart","description":"Master Bootstrap for responsive web development. Learn CSS, HTML, JavaScript, design with QuickStart's 7-day free trial.","datePublished":"2018-06-28T19:00:00+00:00","dateModified":"2026-04-10T11:24:00+00:00","image":{"@type":"ImageObject","url":"https:\/\/d2nzy1qhita6w.cloudfront.net\/media\/magefan_blog\/b\/o\/bootstrap.jpg"},"publisher":{"@type":"Organization","name":"Magento2 Store","logo":{"@type":"ImageObject","url":""}},"mainEntityOfPage":"https:\/\/www.quickstart.com\/blog\/"}</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_PageBuilder/js/widget-initializer": {
+                "config": {"[data-content-type=\"slider\"][data-appearance=\"default\"]":{"Magento_PageBuilder\/js\/content-type\/slider\/appearance\/default\/widget":false},"[data-content-type=\"map\"]":{"Magento_PageBuilder\/js\/content-type\/map\/appearance\/default\/widget":false},"[data-content-type=\"row\"]":{"Magento_PageBuilder\/js\/content-type\/row\/appearance\/default\/widget":false},"[data-content-type=\"tabs\"]":{"Magento_PageBuilder\/js\/content-type\/tabs\/appearance\/default\/widget":false},"[data-content-type=\"slide\"]":{"Magento_PageBuilder\/js\/content-type\/slide\/appearance\/default\/widget":{"buttonSelector":".pagebuilder-slide-button","showOverlay":"hover","dataRole":"slide"}},"[data-content-type=\"banner\"]":{"Magento_PageBuilder\/js\/content-type\/banner\/appearance\/default\/widget":{"buttonSelector":".pagebuilder-banner-button","showOverlay":"hover","dataRole":"banner"}},"[data-content-type=\"buttons\"]":{"Magento_PageBuilder\/js\/content-type\/buttons\/appearance\/inline\/widget":false},"[data-content-type=\"products\"][data-appearance=\"carousel\"]":{"Magento_PageBuilder\/js\/content-type\/products\/appearance\/carousel\/widget":false}},
+                "breakpoints": {"desktop":{"label":"Desktop","stage":true,"default":true,"class":"desktop-switcher","icon":"Magento_PageBuilder::css\/images\/switcher\/switcher-desktop.svg","conditions":{"min-width":"1024px"},"options":{"products":{"default":{"slidesToShow":"5"}}}},"tablet":{"conditions":{"max-width":"1024px","min-width":"768px"},"options":{"products":{"default":{"slidesToShow":"4"},"continuous":{"slidesToShow":"3"}}}},"mobile":{"label":"Mobile","stage":true,"class":"mobile-switcher","icon":"Magento_PageBuilder::css\/images\/switcher\/switcher-mobile.svg","media":"only screen and (max-width: 768px)","conditions":{"max-width":"768px","min-width":"640px"},"options":{"products":{"default":{"slidesToShow":"3"}}}},"mobile-small":{"conditions":{"max-width":"640px"},"options":{"products":{"default":{"slidesToShow":"2"},"continuous":{"slidesToShow":"1"}}}}}            }
+        }
+    }
+</script>
+<script type="text&#x2F;javascript">document.querySelector("#cookie-status").style.display = "none";</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "cookieStatus": {}
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "mage/cookies": {
+                "expires": null,
+                "path": "\u002F",
+                "domain": ".www.quickstart.com",
+                "secure": true,
+                "lifetime": "3600"
+            }
+        }
+    }
+</script>
+<script>
+    window.cookiesConfig = window.cookiesConfig || {};
+    window.cookiesConfig.secure = true;
+</script>
+<script>    require.config({
+        map: {
+            '*': {
+                wysiwygAdapter: 'mage/adminhtml/wysiwyg/tiny_mce/tinymce5Adapter'
+            }
+        }
+    });</script>
+<script>    require.config({
+        paths: {
+            googleMaps: 'https\u003A\u002F\u002Fmaps.googleapis.com\u002Fmaps\u002Fapi\u002Fjs\u003Fv\u003D3\u0026key\u003D'
+        },
+        config: {
+            'Magento_PageBuilder/js/utils/map': {
+                style: '',
+            },
+            'Magento_PageBuilder/js/content-type/map/preview': {
+                apiKey: '',
+                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Fwww.quickstart.com\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
+            },
+            'Magento_PageBuilder/js/form/element/map': {
+                apiKey: '',
+                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Fwww.quickstart.com\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
+            },
+        }
+    });</script>
+<script>
+    require.config({
+        shim: {
+            'Magento_PageBuilder/js/utils/map': {
+                deps: ['googleMaps']
+            }
+        }
+    });</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                        "messages": {
+                            "component": "Magento_Theme/js/view/messages"
+                        }
+                    }
+                }
+            }
+    }
+</script>
+<script>window.authenticationPopup = {"autocomplete":"off","customerRegisterUrl":"https:\/\/www.quickstart.com\/customer\/account\/create\/","customerForgotPasswordUrl":"https:\/\/www.quickstart.com\/customer\/account\/forgotpassword\/","baseUrl":"https:\/\/www.quickstart.com\/","customerLoginUrl":"https:\/\/www.quickstart.com\/customer\/ajax\/login\/"}</script>
+<script type="text/x-magento-init">
+        {
+            "#authenticationPopup": {
+                "Magento_Ui/js/core/app": {"components":{"authenticationPopup":{"component":"Magento_Customer\/js\/view\/authentication-popup","children":{"messages":{"component":"Magento_Ui\/js\/view\/messages","displayArea":"messages"},"captcha":{"component":"Magento_Captcha\/js\/view\/checkout\/loginCaptcha","displayArea":"additional-login-form-fields","formId":"user_login","configSource":"checkout"}}}}}            },
+            "*": {
+                "Magento_Ui/js/block-loader": "https\u003A\u002F\u002Fd2nzy1qhita6w.cloudfront.net\u002Fstatic\u002Fversion1772014801\u002Ffrontend\u002Fquickstart\u002Fkepler\u002Dtheme\u002Fen_US\u002Fimages\u002Floader\u002D1.gif"
+                            }
+        }
+    </script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/section-config": {
+                "sections": {"stores\/store\/switch":["*"],"stores\/store\/switchrequest":["*"],"directory\/currency\/switch":["*"],"*":["messages"],"customer\/account\/logout":["*","recently_viewed_product","recently_compared_product","persistent"],"customer\/account\/loginpost":["*"],"customer\/account\/createpost":["*"],"customer\/account\/editpost":["*"],"customer\/ajax\/login":["checkout-data","cart","captcha"],"catalog\/product_compare\/add":["compare-products"],"catalog\/product_compare\/remove":["compare-products"],"catalog\/product_compare\/clear":["compare-products"],"sales\/guest\/reorder":["cart"],"sales\/order\/reorder":["cart"],"checkout\/cart\/add":["cart","directory-data"],"checkout\/cart\/delete":["cart"],"checkout\/cart\/updatepost":["cart"],"checkout\/cart\/updateitemoptions":["cart"],"checkout\/cart\/couponpost":["cart"],"checkout\/cart\/estimatepost":["cart"],"checkout\/cart\/estimateupdatepost":["cart"],"checkout\/onepage\/saveorder":["cart","checkout-data","last-ordered-items"],"checkout\/sidebar\/removeitem":["cart"],"checkout\/sidebar\/updateitemqty":["cart"],"rest\/*\/v1\/carts\/*\/payment-information":["cart","last-ordered-items","captcha","instant-purchase"],"rest\/*\/v1\/guest-carts\/*\/payment-information":["cart","captcha"],"rest\/*\/v1\/guest-carts\/*\/selected-payment-method":["cart","checkout-data"],"rest\/*\/v1\/carts\/*\/selected-payment-method":["cart","checkout-data","instant-purchase"],"customer\/address\/*":["instant-purchase"],"customer\/account\/*":["instant-purchase"],"vault\/cards\/deleteaction":["instant-purchase"],"multishipping\/checkout\/overviewpost":["cart"],"paypal\/express\/placeorder":["cart","checkout-data"],"paypal\/payflowexpress\/placeorder":["cart","checkout-data"],"paypal\/express\/onauthorization":["cart","checkout-data"],"persistent\/index\/unsetcookie":["persistent"],"review\/product\/post":["review"],"wishlist\/index\/add":["wishlist"],"wishlist\/index\/remove":["wishlist"],"wishlist\/index\/updateitemoptions":["wishlist"],"wishlist\/index\/update":["wishlist"],"wishlist\/index\/cart":["wishlist","cart"],"wishlist\/index\/fromcart":["wishlist","cart"],"wishlist\/index\/allcart":["wishlist","cart"],"wishlist\/shared\/allcart":["wishlist","cart"],"wishlist\/shared\/cart":["cart"],"braintree\/paypal\/placeorder":["cart","checkout-data"],"braintree\/googlepay\/placeorder":["cart","checkout-data"]},
+                "clientSideSections": ["checkout-data","cart-data"],
+                "baseUrls": ["https:\/\/www.quickstart.com\/"],
+                "sectionNames": ["messages","customer","compare-products","last-ordered-items","cart","directory-data","captcha","instant-purchase","loggedAsCustomer","persistent","review","wishlist","recently_viewed_product","recently_compared_product","product_data_storage","paypal-billing-agreement"]            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/customer-data": {
+                "sectionLoadUrl": "https\u003A\u002F\u002Fwww.quickstart.com\u002Fcustomer\u002Fsection\u002Fload\u002F",
+                "expirableSectionLifetime": 60,
+                "expirableSectionNames": ["cart","persistent"],
+                "cookieLifeTime": "3600",
+                "updateSessionUrl": "https\u003A\u002F\u002Fwww.quickstart.com\u002Fcustomer\u002Faccount\u002FupdateSession\u002F"
+            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/invalidation-processor": {
+                "invalidationRules": {
+                    "website-rule": {
+                        "Magento_Customer/js/invalidation-rules/website-rule": {
+                            "scopeConfig": {
+                                "websiteId": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "pageCache": {"url":"https:\/\/www.quickstart.com\/page_cache\/block\/render\/id\/459\/category_id\/9\/","handles":["default","blog_post_view","blog_post_view_id_what-is-bootstrap-and-how-does-it-work","blog_css"],"originalRequest":{"route":"blog","controller":"post","action":"view","uri":"\/blog\/it-ops-and-management\/what-is-bootstrap-and-how-does-it-work\/"},"versionCookieName":"private_content_version"}        }
+    }
+</script>
+<script>
+            require(['jquery', 'domReady!'], function($){
+                if ($('.mfblogunveil').length) {
+                    require(['Magefan_Blog/js/lib/mfblogunveil'], function(){
+                        $('.mfblogunveil').mfblogunveil();
+                    });
+                }
+            });
+        </script>
+<script>
+    function mfShareWindowOpen(url, type, element) {
+        function reverse(s){
+            return s.split('').reverse().join('');
+        }
+
+        var u;
+        switch (type) {
+            case 'facebook':
+                u = reverse('=u?php.rerahs/rerahs/moc.koobecaf.www//:sptth') + url;
+                break;
+            case 'pinterest':
+                u = reverse('=lru?/nottub/etaerc/nip/moc.tseretnip//:sptth') + url;
+                break;
+            case 'twitter':
+                u =reverse('=lru?erahs/moc.rettiwt//:ptth') + url;
+                break;
+            case 'linkedin':
+                u =reverse('=lru?/etisffo-erahs/gnirahs/moc.nideknil.www//:sptth') + url;
+                break;
+            case 'bluesky':
+                u =reverse('=txet?esopmoc/tnetni/ppa.yksb//:sptth') + url;
+                break;
+            case 'copy':
+                var textarea = document.createElement('textarea');
+                textarea.value = url;
+                textarea.setAttribute('readonly', '');
+                textarea.style.position = 'fixed';
+                
+                document.body.appendChild(textarea);
+                textarea.focus();
+                textarea.select();
+                
+                try {
+                    document.execCommand('copy');
+                } catch (e) {}
+                
+                document.body.removeChild(textarea);
+                
+                var tooltip = document.createElement('div');
+                tooltip.innerText = 'Successfully copied to clipboard!';
+                
+                tooltip.style.position = 'absolute';
+                tooltip.style.backgroundColor = '#dff0d8';
+                tooltip.style.color = '#3c763d';
+                tooltip.style.padding = '10px 20px';
+                tooltip.style.zIndex = '5000';
+                tooltip.style.borderRadius = '4px';
+                tooltip.style.boxShadow = '0 2px 6px rgba(0,0,0,0.2)';
+                tooltip.style.opacity = '1';
+                
+                document.body.appendChild(tooltip);
+                
+                if (element) {
+                    var rect = element.getBoundingClientRect();
+                    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+                    var scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+                
+                    tooltip.style.top =
+                        rect.top + scrollY - tooltip.offsetHeight - 8 + 'px';
+                    tooltip.style.left =
+                        rect.left + scrollX + rect.width / 2 - tooltip.offsetWidth / 2 + 'px';
+                }
+                
+                setTimeout(function () {
+                    if (tooltip.parentNode) {
+                        tooltip.parentNode.removeChild(tooltip);
+                    }
+                }, 1000);
+                break;
+        }
+        if (u) {
+            window.open (u, null, 'width=600,height=400');
+        }
+    }
+</script>
+<script>
+    
+    document.cookie = "defaulttraffic=utmcsr=(disabled)|utmcmd=(disabled)|utmccn=(disabled)|utmctr=(disabled)|utmcct=(disabled)|utmgclid(disabled)";
+    
+    var UTMFormFields_msub = {
+    
+    full_name_msub:'#field150338892',
+    phone_number_msub:'#field150338895',
+    email_address_msub:'#field150338894',
+    area_of_interest_msub:'#field150340633',
+    employment_status_msub:'#field150339368',
+    military_status_msub:'#field150339395',
+    bootcampinterest_msub:'#field175254945',
+  
+    country_msub:'#field150338903',
+    host_page_url_msub:'#field150338904',
+    brand_msub:'#field150338899',
+    brand_code_msub:'#field150338900',
+    magento_store_id_msub:'#field150338901',
+    course_name_msub:'#field150338898',
+    blog_title_msub:'#field175491445',
+    
+    utm_source:'#field150338913',
+    utm_medium:'#field150338914',
+    utm_campaign:'#field150338917',
+    utm_content:'#field150338916',
+    utm_term:'#field150338915',
+    gclid:'#field150338918',
+      
+    fs_custom_validator:'#field150338919',
+    
+    }
+    
+    </script>
+<script>
+    
+    var mailChimpForm_msub,dataForm_msub;
+    var submitToMailChimp=false;
+    
+    require([
+        'jquery'    
+       
+    ],function($)
+    {
+        
+    
+      // get brand
+    
+      var host_page_url_msub = window.location.href;
+      var gotBrand_msub;	
+      var gotAccount_msub;
+      var gotBrandCode_msub;
+    
+      if (host_page_url_msub.indexOf("fau") > -1) {
+          gotBrand_msub = "Florida Atlantic University";
+          gotAccount_msub = "Florida Atlantic University";
+          gotBrandCode_msub = "839880002";
+      }
+      else if (host_page_url_msub.indexOf("csupueblo") > -1) {
+          gotBrand_msub = "Colorado State University Pueblo"; 
+          gotAccount_msub = "Colorado State University Pueblo"; 
+          gotBrandCode_msub =  "839880000";
+      }
+      else if (host_page_url_msub.indexOf("neiu") > -1) {
+          gotBrand_msub = "Northeastern Illinois University"; 
+          gotAccount_msub = "Northeastern Illinois University"; 
+          gotBrandCode_msub =  "839880003";
+      }
+      else if (host_page_url_msub.indexOf("becker") > -1) {
+          gotBrand_msub = "Becker College"; 
+          gotAccount_msub = "Becker College"; 
+          gotBrandCode_msub =  "839880001";
+      }		
+      else if (host_page_url_msub.indexOf("jmu") > -1) {
+          gotBrand_msub = "James Madison University"; 
+          gotAccount_msub = "James Madison University";
+          gotBrandCode_msub =  "419260007"; 
+      }		
+      else if (host_page_url_msub.indexOf("hofstra") > -1) {
+          gotBrand_msub = "Hofstra University"; 
+          gotAccount_msub = "Hofstra University"; 
+          gotBrandCode_msub =  "419260006";
+      }
+      else if (host_page_url_msub.indexOf("scu") > -1) {
+          gotBrand_msub = "Santa Clara University"; 
+          gotAccount_msub = "Santa Clara University"; 
+          gotBrandCode_msub =  "419260008";	  
+      }		
+      else if (host_page_url_msub.indexOf("wagner") > -1) {
+          gotBrand_msub = "Wagner";
+          gotAccount_msub = "Wagner"; 
+          gotBrandCode_msub =  "419260003";	  
+      }		
+      else if (host_page_url_msub.indexOf("tamuk") > -1) {
+          gotBrand_msub = "Texas A&M University Kingsville"; 
+          gotAccount_msub = "Texas A&M University Kingsville"; 
+          gotBrandCode_msub =  "419260001";
+      }
+      else if (host_page_url_msub.indexOf("uta") > -1) {
+          gotBrand_msub = "University of Texas at Arlington"; 
+          gotAccount_msub = "University of Texas at Arlington"; 
+          gotBrandCode_msub =  "419260009";
+      }
+      else if (host_page_url_msub.indexOf("utk") > -1) {
+          gotBrand_msub = "University of Tennessee Knoxville"; 
+          gotAccount_msub = "University of Tennessee Knoxville"; 
+          gotBrandCode_msub =  "419260010";
+      }
+      else if (host_page_url_msub.indexOf("utexas") > -1) {
+          gotBrand_msub = "University of Texas at Austin"; 
+          gotAccount_msub = "University of Texas at Austin"; 
+          gotBrandCode_msub =  "419260011";
+      }		
+      else if (host_page_url_msub.indexOf("quickstart.professional.ucsb.edu") > -1) {
+          gotBrand_msub = "UC Santa Barbara"; 
+          gotAccount_msub = "UC Santa Barbara"; 
+          gotBrandCode_msub =  "419260012";
+      }
+      else if (host_page_url_msub.indexOf("georgiasouthern") > -1) {
+          gotBrand_msub = "Georgia Southern University"; 
+          gotAccount_msub = "Georgia Southern University"; 
+          gotBrandCode_msub =  "419260013";
+      }
+      else if (host_page_url_msub.indexOf("www.quickstart.com") > -1) {
+          gotBrand_msub = "QuickStart"; 
+          gotAccount_msub = "QuickStart"; 
+          gotBrandCode_msub =  "419260000";
+      }
+      else if (host_page_url_msub.indexOf("www.infosecacademy.io") > -1) {
+          gotBrand_msub = "InfoSec Academy"; 
+          gotAccount_msub = "InfoSec Academy"; 
+          gotBrandCode_msub =  "419260004";
+      }
+      else if (host_page_url_msub.indexOf("www.devopsu.org") > -1) {
+          gotBrand_msub = "Devops University";
+          gotAccount_msub = "Devops University"; 
+          gotBrandCode_msub =  "419260002";
+      }		
+      else if (host_page_url_msub.indexOf("csuchico") > -1) {
+          gotBrand_msub = "California State University, Chico"; 
+          gotAccount_msub = "California State University, Chico";
+          gotBrandCode_msub = "419260014";
+      }
+      else if (host_page_url_msub.indexOf("www.cloudinstitute.io") > -1) {
+          gotBrand_msub = "Cloud Institute"; 
+          gotAccount_msub = "Cloud Institute";
+          gotBrandCode_msub = "419260005";
+      }			
+    
+      else {
+          gotBrand_msub = "QuickStart"; 
+          gotAccount_msub = "QuickStart"; 
+          gotBrandCode_msub =  "419260000";
+    
+      }
+    
+    
+      $(document).ready(function()
+      {
+        dataForm_msub = $('#master-sub-form-validate');
+        mailChimpForm_msub = $("#master-sub-form");
+        var trackCookieParam_msub = {};
+       
+        var isSubmit = false;
+        
+        // Passign gbraid and wbraid values to fields
+        passValuesToFields();
+        function passValuesToFields(){
+            const urlParams=new URLSearchParams(window.location.search);
+                function assignParamValueToField(paramName,fieldSelector){const value=urlParams.get(paramName);$(fieldSelector).val(value?value.trim():'');
+            }
+
+            // 
+             assignParamValueToField('gbraid','#field185363943');
+             assignParamValueToField('wbraid','#field185363942');
+
+            //
+            assignParamValueToField('campaign_id', '#field186535244');
+
+            //
+            assignParamValueToField('_fbp', '#field150338909');
+            assignParamValueToField('_fbc', '#field150338910');
+            assignParamValueToField('fbclid', '#field150338911');
+
+        }
+       
+         // get country
+         var country_msub;
+    
+        $("#subFormsubmitButton").click(function(e)
+        {
+          e.preventDefault();
+    
+          // get country
+          $.ajax({
+              url: "https://get.geojs.io/v1/ip/geo.js",
+              dataType: "jsonp",
+              success: function( location ) {
+                  country_msub = location.country;
+                  console.log('country_msub='+country_msub);
+              }
+          });
+    
+          setTimeout(function(){
+              subFormSubmission();
+          },1000);
+    
+    
+        });
+    
+    
+        //Email Opt-In
+        $('.register-area .userAggrement #signUpConsent_2').on('change', function(){
+            if($(this).is(":checked")){
+                jQuery('#field150339363').val('1');
+            }else{
+                jQuery('#field150339363').val('0');
+            }
+        });
+
+
+        //
+        // $('#area_of_interest_form_msub').on('change', function(){
+        //     if($(this).val() === 'Starting / Switching Into IT Career'){
+        //         jQuery('#bootcamp-program-of-interest').show();
+        //     }else{
+        //         jQuery('#bootcamp-program-of-interest').hide();
+        //     }
+        // });
+        
+        
+    
+        function subFormSubmission()
+        {
+          /*
+          Implementation:
+          Registration Form -> On Submission -> Get UTM Params from Cookie -> Put Values in Static Block(Stackform) -> (Stackfrom) will send values to Mailchimp
+          (FormStack) will not submit if meet any below case:
+            a. If form setup not done in the static block ("sign_up_page_utm") with the form id ("forUTMOnReg")
+            b. If UTMFormFields script setup not done in the static block ("sign_up_page_utm")
+            c. If UTM Cookie ("_utm_og") not available or required params not in this cookie
+          */
+    
+          // Begin - UTM & RANP
+          var rc = '';
+          var r_name = "ranp";
+          var gc = '';
+    
+          var c_name = "";
+    
+          if ($.cookie('__utmz'))
+          {  
+            var c_name = "__utmz";
+          }
+    
+          else if ($.cookie('quickstartTraffic')) {
+            var c_name = "quickstartTraffic";
+          } 
+    
+          else {
+            var c_name = "defaulttraffic";
+          }
+    
+    
+              if (document.cookie.length>0)
+              {
+            var r_start=document.cookie.indexOf(r_name + "=");
+            if (r_start!=-1)
+            {
+              r_start=r_start + r_name.length+1;
+                      var r_end=document.cookie.indexOf(";",r_start);
+                      if (r_end==-1) r_end=document.cookie.length;
+                      rc = unescape(document.cookie.substring(r_start,r_end));
+                      if(rc != "")
+                      {
+                          var rz = "";
+                          var ry = rc.split('|');
+                          for(i=0; i<ry.length; i++)
+                          {
+                              if(ry[i].indexOf('ranmid=') >= 0) rz += "&ranmid="+ry[i].substring(ry[i].indexOf('=')+1);
+                              if(ry[i].indexOf('ransiteid=') >= 0) rz += "&ransiteid="+ry[i].substring(ry[i].indexOf('=')+1);
+                          }
+                          rc = rz;
+              }
+            }
+    
+                  var c_start=document.cookie.indexOf(c_name + "=");
+                  if (c_start!=-1)
+                  {
+                      c_start=c_start + c_name.length+1;
+                      c_end=document.cookie.indexOf(";",c_start);
+                      if (c_end==-1) c_end=document.cookie.length;
+                      gc = unescape(document.cookie.substring(c_start,c_end));
+                      if(gc != "")
+                      {
+                          var z = "";
+                          var y = gc.split('|');
+                          for(i=0; i<y.length; i++)
+                          {
+                              if(y[i].indexOf('utmcsr=') >= 0) z += "&utm_source="+y[i].substring(y[i].indexOf('=')+1);
+                              if(y[i].indexOf('utmccn=') >= 0) z += "&utm_campaign="+y[i].substring(y[i].indexOf('=')+1);
+                              if(y[i].indexOf('utmcmd=') >= 0) z += "&utm_medium="+y[i].substring(y[i].indexOf('=')+1);
+                              if(y[i].indexOf('utmctr=') >= 0) z += "&utm_term="+y[i].substring(y[i].indexOf('=')+1);
+                              if(y[i].indexOf('utmcct=') >= 0) z += "&utm_content="+y[i].substring(y[i].indexOf('=')+1);
+                              if(y[i].indexOf('utmgclid=') >= 0) z += "&gclid="+y[i].substring(y[i].indexOf('=')+1);
+                          }
+                          gc = z;
+                      }
+                  }
+                  
+                   
+                   
+    
+            var utmExists = (gc != "" && typeof gc != "undefined" && gc != null);
+            var ranExists = (rc != "" && typeof rc != "undefined" && rc != null);
+
+            submitToMailChimp = (typeof mailChimpForm_msub.html() != 'undefined' && typeof UTMFormFields_msub != "undefined");
+            allElementExists = (typeof mailChimpForm_msub.html() !== 'undefined' && typeof UTMFormFields_msub !== "undefined" && (ranExists || utmExists));
+
+            if(submitToMailChimp)
+            {
+
+            if(allElementExists){
+
+              trackCookieParam_msub = {};
+    
+              //  If UTM Cookie Exist
+              if(utmExists)
+              {
+                gc = gc.split("&");
+                $.each(gc,function(key, val)
+                {
+                  var arr = val.split("=");
+                  if(val != "")
+                  {
+                    trackCookieParam_msub[arr[0]] = arr[1];
+                  }
+                });
+              }
+    
+              //  If RAN Cookie Exist
+              if(ranExists)
+              {
+                rc = rc.split("&");
+                $.each(rc,function(key, val)
+                {
+                  var arr = val.split("=");
+                  if(val != "")
+                  {
+                    trackCookieParam_msub[arr[0]] = arr[1];
+                  }
+                });
+              }
+              
+            }
+        
+              $.each(UTMFormFields_msub,function(key, elmID)
+              {
+                  
+                  if(key == "full_name_msub"){
+                      $(elmID).val($("#full_name_form_msub").val());
+    
+                  }
+    
+                  if(key == "phone_number_msub"){
+                      $(elmID).val($("#phone_number_form_msub").val());
+                  }
+                  
+                  if(key == "email_address_msub"){
+                      $(elmID).val($("#email_address_form_msub").val());
+                  }
+    
+                  if(key == "area_of_interest_msub"){
+                      $(elmID).val($("#area_of_interest_form_msub").val());
+                  }
+    
+                  if(key == "employment_status_msub"){
+                      $(elmID).val($("#employmentstatus_form_msub").val());
+                  }
+    
+                  if(key == "military_status_msub"){
+                      $(elmID).val($("#militarystaus_form_msub").val());
+                  }
+    
+                  if(key == "bootcampinterest_msub"){
+                      $(elmID).val($("#bootcampinterest_form_msub").val());
+                  }
+                  
+                   if(key == "brand_msub"){                     
+                      $(elmID).val(gotBrand_msub);
+                  }
+              
+                  if(key == "brand_code_msub"){                     
+                      $(elmID).val(gotBrandCode_msub);
+                  } 
+    
+                  if(key == "magento_store_id_msub"){
+                      var rootbaseobject = 2;
+                      console.log('rootbaseobject = '+rootbaseobject);
+                      $(elmID).val(rootbaseobject);
+                  }
+    
+                  if(key == "country_msub"){                     
+                      $(elmID).val(country_msub);
+                  }
+    
+                  if(key == "host_page_url_msub"){
+    
+                      var host_page_url_msub = window.location.href;
+                      $(elmID).val(host_page_url_msub);
+                  } 
+                  
+                  if(key == "course_name_msub"){
+                       postNameToField($(elmID));
+                  } 
+                  
+                  
+
+                  if(key == "blog_title_msub"){
+                        postNameToField($(elmID));
+                  } 
+    
+                  if(key == "fs_custom_validator"){                    
+                         $(elmID).val("FSsend");
+                    } 
+          
+    
+                  if(typeof trackCookieParam_msub[key] != "undefined" && allElementExists){
+                      $(elmID).val(trackCookieParam_msub[key]);
+                  }
+              });
+    
+            }
+              }
+              // End - UTM & RANP
+    
+            function postNameToField(elementID){
+
+                var course_name_string = "";
+                    var selectors = [
+                    ".page-title-wrapper .page-title",
+                    ".forTypeForm",
+                    ".breadcrumb li.active"
+                    ];
+
+                    for (var i = 0; i < selectors.length; i++) {
+                        var el = jQuery(selectors[i]);
+                        var txt = el.text().trim();
+                        if (txt) {
+                            course_name_string = txt;
+                            break;
+                        }
+                    }
+
+                    elementID.val(course_name_string);
+
+            }
+          if(dataForm_msub.valid() && validatePhoneNumber()){
+    
+            console.log("dataForm_msub.valid");
+    
+            isSubmit = true;
+    
+            //Get Date
+            $('#field150339402').val((new Date()).toUTCString());
+    
+            //
+             $('.custom-lead-form-2 #subFormsubmitButton').addClass('submitting');
+    
+             //
+             mailChimpForm_msub.submit(); 
+             
+    
+            //Form Success Tracking For VWO
+            var vwoFormInstance = '#master-sub-form-validate';
+            window.VWO = window.VWO || [];
+            window.VWO.push(['nls.formAnalysis.markSuccess', vwoFormInstance , 1 ]);
+    
+            //
+            setTimeout( function(){
+    
+             //Add Params in Form Action
+            var requestform_elm =  $("#master-sub-form-validate");
+            var formAction = requestform_elm.attr('action');
+            var userName = $('#master-sub-form-validate #full_name_form_msub').val();
+    
+            var queryMark;
+            if(formAction.indexOf('?') > 0){
+                queryMark = '&';
+            }else{
+                queryMark = '?';
+            }
+    
+            //var formActionFinal = formAction+queryMark+'user_name='+userName;
+    
+            var formActionFinal = formAction;
+    
+            requestform_elm.attr('action',formActionFinal);
+    
+            //   $('.register-area .reg-form .form-box').append('<p class="successMsg">Thank you for your request. An academic advisor will contact you shortly.<p>');
+            //   $('#master-sub-form-validate').parent().remove();
+  
+            setTimeout( function(){
+                //dataForm_msub.submit();
+                window.location.href = "https://www.quickstart.com/thank-you/";
+            },1500);
+    
+            //alert($('#field150338908').val());
+            
+
+            },1000);
+           
+           
+            //
+          //  fbq('track', 'Lead');
+    
+    
+          }
+    
+
+          function validatePhoneNumber() {
+                var phoneNumberField = $('#phone_number_form_msub');
+                var phoneNumberVal = phoneNumberField.val();
+                if (phoneNumberVal != "") {
+                    var phoneRegex = /^(?=.*[0-9])[- +()0-9]+$/;
+                    if (phoneNumberVal.match(phoneRegex) && phoneNumberVal.length > 9) {
+                        phoneNumberField.parent().find('.mage-error').remove();
+                        return true;
+                    } else {
+                        phoneNumberField.parent().find('.mage-error').remove();
+                        $("<div for='phone_number_form_msub' generated='true' class='mage-error' id='phone_number_form_msub-error'>Please enter a valid number.</div>").insertAfter(phoneNumberField);
+                        return false;
+                    }
+                } else {
+                    $("<div for='phone_number_form_msub' generated='true' class='mage-error' id='phone_number_form_msub-error'>Please enter phone number.</div>").insertAfter(phoneNumberField);
+                }
+            }
+
+        }
+    
+    
+    
+      });
+      
+    });
+    </script>
+<script>
+ 
+require(['jquery'],function($){
+
+    $(window).on('scroll', function() {
+        sticky_sidebar_form();
+    });
+    $(window).on('resize', function() {
+        sticky_sidebar_form();
+    });
+
+    function sticky_sidebar_form() {
+        if ($('.form_widget_wrapper').length > 0) {
+            var windowsize = $(window).width();
+            windowsize = $(window).width();
+            if (windowsize > 1023) {
+                var window_top = $(window).scrollTop();
+                var footer_top = $("footer").offset().top;
+                var sidebar_height = $(".form_widget_wrapper").height();
+                var padding = 290;
+                if (window_top + sidebar_height > footer_top - padding) {
+                    $('.form_widget_wrapper').removeClass('fixedForm active');
+                } else {
+                    $('.form_widget_wrapper').addClass('fixedForm active');
+                }
+                
+            } else {
+                $('.form_widget_wrapper').removeClass('fixedForm active');
+            }
+        }
+    }
+
+});
+
+</script>
+<script>
+ 
+    require(['jquery'],function($){
+    
+        //
+        $('body').on('click', '.userConsentMsg', function(){
+            $('#blog_request_more_info_form_modal').removeClass('active');
+        });
+    
+    });
+    
+</script>
+<script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "storage-manager": {
+                            "component": "Magento_Catalog/js/storage-manager",
+                            "appendTo": "",
+                            "storagesConfiguration" : {"recently_viewed_product":{"requestConfig":{"syncUrl":"https:\/\/www.quickstart.com\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"recently_compared_product":{"requestConfig":{"syncUrl":"https:\/\/www.quickstart.com\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"product_data_storage":{"updateRequestConfig":{"url":"https:\/\/www.quickstart.com\/rest\/default\/V1\/products-render-info"},"requestConfig":{"syncUrl":"https:\/\/www.quickstart.com\/catalog\/product\/frontend_action_synchronize\/"},"allowToSendRequest":null}}                        }
+                    }
+                }
+            }
+        }
+</script>
+<script type="text/javascript">
+    setTimeout(function(){
+        //
+        _linkedin_partner_id = "7321570"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+
+        //
+        (function(l) { if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])}; window.lintrk.q=[]} var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(window.lintrk);
+        
+    }, 3000);
+</script>
+<script data-mfmofile="true">
+    document.addEventListener("DOMContentLoaded", function() {
+        if (document.querySelectorAll('.mf-ytw-wrapper').length || document.querySelectorAll('[data-mf-ytw-youtube-link]').length) {
+            !function (f, b, e, v, t, s) {
+                if(f.mfytwcss)return;
+                f.mfytwcss=1;
+                t = b.createElement(e);
+                t.rel = 'stylesheet';
+                t.type = 'text/css';
+                t.href = v;
+                s = b.getElementsByTagName('HEAD')[0];
+                s.appendChild(t)
+            }(window, document, 'link', 'https://d2nzy1qhita6w.cloudfront.net/static/version1772014801/frontend/quickstart/kepler-theme/en_US/Magefan_YouTubeWidget/css/youtubewidget.min.css');
+        }
+        if (document.querySelectorAll('.mf-ytw-wrapper').length) {
+            !function (f, b, e, v, t, s) {
+                if(f.mfytwjs)return;
+                f.mfytwjs=1;
+                t = b.createElement(e);
+                t.type = 'text/javascript';
+                t.src = v;
+                s = b.getElementsByTagName('HEAD')[0];
+                s.appendChild(t)
+            }(window, document, 'script', 'https://d2nzy1qhita6w.cloudfront.net/static/version1772014801/frontend/quickstart/kepler-theme/en_US/Magefan_YouTubeWidget/js/iframe.min.js');
+        }
+        if (document.querySelectorAll('[data-mf-ytw-youtube-link]').length) {
+            !function (f, b, e, v, t) {
+                if(f.mflinkjs)return;
+                f.mflinkjs=1;
+                t = b.createElement(e);
+                t.type = 'text/javascript';
+                t.src = v;
+                s = b.getElementsByTagName('HEAD')[0];
+                s.appendChild(t)
+            }(window, document, 'script', 'https://d2nzy1qhita6w.cloudfront.net/static/version1772014801/frontend/quickstart/kepler-theme/en_US/Magefan_YouTubeWidget/js/link.min.js');
+        }
+    });
+</script>
+<script>
+    const currentYear = new Date().getFullYear();
+    const footer = document.querySelector('footer .footer-bottom');
+    if (footer) {
+        footer.innerHTML = footer.innerHTML.replace(/\d{4}/, currentYear);
+    }
+</script>
+<script>
+
+    requirejs(['jquery'], function($) {
+       
+        $('document').ready( function(){
+    
+            setTimeout(function() {
+    
+            window.__lc = window.__lc || {};
+            window.__lc.license = 17101677;
+            window.__lc.integration_name = "manual_channels";
+            window.__lc.product_name = "livechat";
+            ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+
+            // Function to get a cookie value by name
+            function getCookie(name) {
+                let match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+                return match ? decodeURIComponent(match[2]) : "";
+            }
+            // Function to parse __utmz cookie and extract UTM values
+            function parseUtmz(utmz) {
+                let params = {};
+    
+                if (!utmz) return params; // Return empty object if cookie is not found
+                let utmString = utmz.split(".").slice(2).join("."); // Remove metadata
+                
+                let pairs = utmString.split("|");
+                pairs.forEach(pair => {
+                    let [key, value] = pair.split("=");
+                    if (key && value) {
+                        params[key.trim()] = value.trim();
+                    }
+                });
+                return {
+                    utm_source: params["utmcsr"] || "",
+                    gclid: params["utmgclid"] || "",
+                    utm_campaign: params["utmccn"] || "",
+                    utm_medium: params["utmcmd"] || "",
+                    utm_term: params["utmctr"] || "",
+                    utm_content: params["utmcct"] || ""
+                };
+            }
+            // Function to get UTM parameters from the URL
+            function getUtmFromUrl() {
+                const params = new URLSearchParams(window.location.search);
+                return {
+                    utm_source: params.get("utm_source") || "",
+                    gclid: params.get("gclid") || "",
+                    utm_campaign: params.get("utm_campaign") || "",
+                    utm_medium: params.get("utm_medium") || "",
+                    utm_term: params.get("utm_term") || "",
+                    utm_content: params.get("utm_content") || ""
+                };
+            }
+    
+                //First, get UTM parameters from the URL
+                let utmParams = getUtmFromUrl();
+    
+                //If no UTM parameters exist in the URL, fall back to the cookie
+                if (!utmParams.utm_source && !utmParams.gclid && !utmParams.utm_campaign) {
+                    let utmzValue = getCookie("__utmz");
+                    if (utmzValue) {
+                        utmParams = parseUtmz(utmzValue);
+                    }
+                }
+    
+                // Set session variables when LiveChat is ready
+                const currentUrl = window.location.href;
+    
+                const productNameElement = $('h1');
+                const productName = productNameElement.length > 0 ? productNameElement.text().trim() : 'n/a';
+            
+                LiveChatWidget.on("ready", function() {
+                    LiveChatWidget.call("set_session_variables", {
+                        page_url: currentUrl,
+                        store_brand: 'QuickStart',
+                        brand_code: '419260000',
+                        store_id: '2',
+                        utm_campaign: utmParams.utm_campaign,
+                        utm_source: utmParams.utm_source,
+                        utm_medium: utmParams.utm_medium,
+                        utm_content: utmParams.utm_content,
+                        utm_term: utmParams.utm_term,
+                        gclid: utmParams.gclid,
+                        product_name: productName
+                    });
+                });
+    
+           
+            },
+        3000);
+    
+        }); //document ready
+    
+    }); // require.js
+    </script>
+<script type="text/javascript">
+    require([
+        'jquery',
+        'Magento_Theme/js/jquery.cookie.min',
+        'Magento_Theme/js/quickstart-kepler'
+    ], function ($) {
+     
+        //console.log('All scripts loaded successfully');
+    });
+</script>
+<script type="text/javascript">
+    require([
+        'jquery',
+        'Magefan_Blog/js/blog-custom'
+    ], function ($) {
+        // Your code logic here
+        //console.log('blog-custom.js loaded successfully');
+    });
+</script></body>
+</html>

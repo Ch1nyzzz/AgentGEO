@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html class="bg-gray-100" lang="en">
+<head>
+<link href="https://media.swncdn.com/bst4/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<title>Does "Thou Shalt Not Kill" Command Only Apply to Murder? Verse Meaning Explained | Bible Study Tools</title>
+<link href="https://plus.google.com/+biblestudytools" rel="publisher"/>
+<link href="https://www.biblestudytools.com/bible-study/topical-studies/does-thou-shalt-not-kill-only-apply-to-murder.html" rel="canonical"/>
+<link as="style" href="/dist/index.css?v=20260109182620&amp;t=2" rel="preload"/>
+<link href="/dist/index.css?v=20260109182620&amp;t=2" rel="stylesheet"/>
+<link crossorigin="" href="https://www.lightboxcdn.com" rel="preconnect"/>
+<link crossorigin="" href="https://experience.tinypass.com" rel="preconnect"/>
+<link crossorigin="" href="https://media.swncdn.com" rel="preconnect"/>
+<link crossorigin="" href="https://www.googletagservices.com" rel="preconnect"/>
+<link crossorigin="" href="https://prebid.adnxs.com" rel="preconnect"/>
+<link crossorigin="" href="https://pagead2.googlesyndication.com" rel="preconnect"/>
+<link crossorigin="" href="https://ad.doubleclick.net" rel="preconnect"/>
+<link crossorigin="" href="https://c.amazon-adsystem.com" rel="preconnect"/>
+</head>
+<body>
+<header class="md:mb-5">
+<div id="alert-container"></div>
+<nav @click.away="isOpen = false" @keydown.escape="isOpen = false" class="flex flex-wrap items-center justify-between bg-white px-1 py-2 z-10 shadow-md transition-all duration-200" x-data="{ isOpen: false, showSearch: false, visibleSection: 0 }" x-init="$watch('isOpen', value =&gt; window.BST.ScrollLock.setBodyLock('side-navigation', value))">
+<!-- Logo and Menu Toggle -->
+<div :class="{'hidden': showSearch}" class="flex items-center shrink-0">
+<!-- Mobile Menu Toggle -->
+<button :class="{ 'text-white bg-yellow-400 hover:bg-yellow-500': isOpen }" @click="isOpen = !isOpen" aria-label="Toggle Navigation" class="block px-2 py-1 text-gray-600 hover:text-gray-800 hover:bg-gray-100 focus:outline-none transition-colors duration-150 rounded-md" type="button">
+</button>
+<!-- Logo -->
+<a :class="{ 'text-white': isOpen }" class="flex items-center text-gray-800 no-underline hover:no-underline transition-opacity duration-200 hover:opacity-75 ml-2" href="https://www.biblestudytools.com/">
+<img alt="BibleStudyTools" class="max-w-[150px] h-auto" src="https://media.salemwebnetwork.com/biblestudytools-core/images/bst-logo-real.svg" width="150"/>
+</a>
+</div>
+<!-- Search Component -->
+<div class="flex grow">
+<div class="w-full max-w-prose mx-auto" x-data="{searchQuery: new URLSearchParams(window.location.search).get('q') || '', isOpen: false, showSearch: false}">
+<form @keydown.enter="window.BST.Zeta.TrackSearch(searchQuery);" action="https://www.biblestudytools.com/search/" id="mobile-search-form" method="get">
+<input name="t" type="hidden" x-data="{translation: BST.SiteStorage().readPref('translation')}" x-model="translation"/>
+<!-- Mobile search box -->
+<div class="md:hidden block inset-0 z-10 justify-end px-5">
+<button :class="{ 'text-white': isOpen, 'hidden': showSearch }" @click="showSearch = !showSearch" aria-label="Search" class="block lg:hidden focus:outline-none bg-gray-700 p-3 rounded-full shadow-md" type="button">
+</button>
+<div class="fixed inset-0 z-10 bg-black bg-opacity-20" style="backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px)" x-cloak="" x-show="showSearch">
+<div class="absolute inset-x-0 flex items-center justify-between p-2 bg-white shadow-md">
+<div class="flex items-center flex-1 px-2 space-x-2">
+<!-- search icon -->
+<span>
+</span>
+<input class="w-full px-4 py-3 text-gray-800 rounded-md focus:bg-gray-100 focus:outline-none" name="q" placeholder="Search" type="text" x-model="searchQuery"/>
+</div>
+<!-- close button -->
+<button @click="showSearch = !showSearch" aria-label="Search" class="flex-shrink-0 p-4 rounded-md" type="button">
+</button>
+</div>
+</div>
+</div>
+</form>
+<form @keydown.enter="window.BST.Zeta.TrackSearch(searchQuery);" action="https://www.biblestudytools.com/search/" class="px-3" id="desktop-search-form" method="get">
+<input name="t" type="hidden" x-data="{translation: BST.SiteStorage().readPref('translation')}" x-model="translation"/>
+<!-- Desktop search box -->
+<div class="items-center hidden md:block bg-gray-200 rounded-full shadow-inner border border-gray-400">
+<div class="flex items-center pr-1">
+<input class="w-full px-4 py-2 bg-transparent placeholder-gray-900 text-gray-800 rounded-md focus:outline-none" name="q" placeholder="Search the Bible" type="text" x-model="searchQuery"/>
+<div @click.away="showSearchDropdown = false" class="relative inline-block text-left" x-data="{showSearchDropdown: false, currentSelection: 'bibles', selectionText: 'The Bible', selectItem(value, text) {
+            this.currentSelection = value; this.selectionText = text; this.showSearchDropdown = false; BST.SiteStorage().writePref('search-filter-value', value); BST.SiteStorage().writePref('search-filter-text', text);
+          }}" x-init="selectItem(BST.SiteStorage().readPref('search-filter-value', 'bibles'), BST.SiteStorage().readPref('search-filter-text', 'The Bible'))">
+<input name="s" type="hidden" x-model="currentSelection"/>
+<div>
+<button @click="showSearchDropdown = !showSearchDropdown;" aria-expanded="true" aria-haspopup="true" class="bg-gray-300 hover:bg-gray-200 text-gray-800 font-bold py-2 px-2 pr-3 rounded inline-flex items-center my-1 border border-gray-400" id="menu-button" type="button">
+<span class="whitespace-nowrap" x-text="selectionText">
+                The Bible
+              </span>
+</button>
+</div>
+<div aria-labelledby="menu-button" aria-orientation="vertical" class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" tabindex="-1" x-cloak="" x-show="showSearchDropdown">
+<div class="py-1 font-bold" role="none">
+<button @click="selectItem('bibles', 'The Bible')" class="text-gray-700 block px-4 py-2 hover:bg-yellow-400 w-full text-left" id="menu-item-0" role="menuitem" tabindex="-1" type="button">The Bible</button>
+<button @click="selectItem('topics', 'Topics')" class="text-gray-700 block px-4 py-2 hover:bg-yellow-400 w-full text-left" id="menu-item-1" role="menuitem" tabindex="-1" type="button">Topics</button>
+<button @click="selectItem('studies', 'Bible Study')" class="text-gray-700 block px-4 py-2 hover:bg-yellow-400 w-full text-left" id="menu-item-2" role="menuitem" tabindex="-1" type="button">Bible Study</button>
+<button @click="selectItem('pastors', 'Pastors')" class="text-gray-700 block px-4 py-2 hover:bg-yellow-400 w-full text-left" id="menu-item-3" role="menuitem" tabindex="-1" type="button">Pastors</button>
+<button @click="selectItem('references', 'References')" class="text-gray-700 block px-4 py-2 hover:bg-yellow-400 w-full text-left" id="menu-item-4" role="menuitem" tabindex="-1" type="button">References</button>
+<button @click="selectItem('stories', 'Bible Stories')" class="text-gray-700 block px-4 py-2 hover:bg-yellow-400 w-full text-left" id="menu-item-5" role="menuitem" tabindex="-1" type="button">Bible Stories</button>
+</div>
+</div>
+</div>
+<button aria-label="Search" class="ml-1 pr-3 bg-gray-700 p-2 py-3 rounded-r-full shadow-md" type="submit">
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- Desktop Header Buttons -->
+<div class="hidden md:flex shrink-0 space-x-2 items-center">
+<!-- Not Logged In: Show Join PLUS and Log In -->
+<a class="py-2 px-4 rounded-lg bg-yellow-400 text-gray-900 font-semibold hover:shadow-lg hover:to-yellow-600 transition-all duration-200 transform hover:scale-105" data-google-interstitial="false" href="https://www.biblestudytools.com/subscribe/?campaign_key=nav_joinplus">
+                    Join PLUS
+                </a>
+<a class="py-2 px-4 rounded-lg bg-gray-200 text-gray-900 font-semibold border border-gray-300 hover:bg-gray-300 hover:shadow-md transition-all duration-200" data-google-interstitial="false" href="https://www.biblestudytools.com/login/">
+                    Log In
+                </a>
+</div>
+<aside :class="isOpen ? 'visible shadow-side' : 'hidden'" class="top-0 left-0 w-screen md:w-64 bg-white fixed h-full overflow-auto ease-in-out duration-100 z-30 border-r-2 border-gray-300" id="side-navigation" x-cloak="">
+<div class="flex align-middle p-2">
+<div class="grow self-center">
+<a class="flex align-middle text-gray-800 no-underline hover:no-underline" href="https://www.biblestudytools.com/">
+<span class="flex-initial self-center ml-1 text-yellow-400 focus:outline-none mr-1">
+</span>
+</a>
+</div>
+<button :class="{ 'transform-180 text-white': isOpen, 'hidden': showSearch }" @click="isOpen = !isOpen" aria-label="Navigation" class="block py-3 px-5 text-gray-500 hover:text-gray-300 focus:outline-none" type="button">
+</button>
+</div>
+<ul class="list-reset justify-end items-center">
+<!-- Mobile Login/Join Section (Not Logged In) -->
+<li class="py-3 mb-2 md:hidden border-b border-gray-200">
+<div class="flex flex-col space-y-2 px-3">
+<a @click="isOpen = false;" class="py-3 px-4 bg-linear-to-r from-yellow-400 to-yellow-500 text-gray-900 rounded-lg font-bold text-center transition-all duration-200 hover:shadow-lg hover:to-yellow-600" data-google-interstitial="false" href="https://www.biblestudytools.com/subscribe/?campaign_key=nav_joinplus">
+                                Join PLUS
+                            </a>
+<a @click="isOpen = false;" class="py-3 px-4 bg-gray-100 border-2 border-gray-300 text-gray-800 rounded-lg font-bold text-center transition-all duration-200 hover:bg-gray-200" data-google-interstitial="false" href="https://www.biblestudytools.com/login/">
+                                Log In
+                            </a>
+</div>
+</li>
+<!-- Desktop PLUS Promo (Not Logged In) -->
+<li class="select-none hidden md:block">
+<div @click="window.location.href = 'https://www.biblestudytools.com/subscribe/?campaign_key=nav_joinplus'" class="flex py-3 px-4 border-t-4 border-b border-yellow-300 bg-yellow-400 cursor-pointer md:mb-3 shadow-lg transition-all duration-200 hover:shadow-xl">
+<a class="grow text-gray-900 no-underline font-bold uppercase text-xl hover:no-underline" href="https://www.biblestudytools.com/subscribe/?campaign_key=nav_joinplus">
+                                PLUS
+                            </a>
+</div>
+</li>
+<!-- Menu Items -->
+<li class="select-none">
+<div @click="visibleSection = visibleSection === 646 ? 0 : 646" class="flex py-3 px-3 border-t-2 border-b-2 border-gray-300 bg-gray-100 cursor-pointer transition-colors duration-200 md:mb-2">
+<span class="grow text-gray-800 font-bold uppercase text-lg">
+                            Bible
+                            </span>
+<span class="md:hidden">
+</span>
+</div>
+<ul :class="{'max-h-96': visibleSection === 646, 'hidden md:block': visibleSection !== 646}" class="md:block max-h-0 md:max-h-none overflow-hidden transition-all duration-300">
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/bible-versions/">
+                                    Bible Versions
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/bible-verse-of-the-day/">
+                                    Verse of the Day
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/topical-verses/">
+                                    Verses by Topic
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/bible-reading-plan/">
+                                    Reading Plans
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/parallel-bible/">
+                                    Parallel Bible
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/books-of-the-bible/">
+                                    Books of the Bible
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/compare-translations/">
+                                    Compare Translations
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/audio-bible/">
+                                    Audio Bible
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/interlinear-bible/">
+                                    Interlinear Bible
+                                        </a>
+</li>
+</ul>
+</li>
+<li class="select-none">
+<div @click="visibleSection = visibleSection === 647 ? 0 : 647" class="flex py-3 px-3 border-t-2 border-b-2 border-gray-300 bg-gray-100 cursor-pointer transition-colors duration-200 md:mb-2">
+<span class="grow text-gray-800 font-bold uppercase text-lg">
+                            Study
+                            </span>
+<span class="md:hidden">
+</span>
+</div>
+<ul :class="{'max-h-96': visibleSection === 647, 'hidden md:block': visibleSection !== 647}" class="md:block max-h-0 md:max-h-none overflow-hidden transition-all duration-300">
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/library/">
+                                    Library
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/commentaries/">
+                                    Commentaries
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/concordances/">
+                                    Concordances
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/dictionaries/">
+                                    Dictionaries
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/encyclopedias/">
+                                    Encyclopedias
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/bible-stories/">
+                                    Bible Stories
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/apocrypha/">
+                                    Apocrypha Books
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/lexicons/">
+                                    Lexicons
+                                        </a>
+</li>
+</ul>
+</li>
+<li class="select-none">
+<div @click="visibleSection = visibleSection === 648 ? 0 : 648" class="flex py-3 px-3 border-t-2 border-b-2 border-gray-300 bg-gray-100 cursor-pointer transition-colors duration-200 md:mb-2">
+<span class="grow text-gray-800 font-bold uppercase text-lg">
+                            Tools
+                            </span>
+<span class="md:hidden">
+</span>
+</div>
+<ul :class="{'max-h-96': visibleSection === 648, 'hidden md:block': visibleSection !== 648}" class="md:block max-h-0 md:max-h-none overflow-hidden transition-all duration-300">
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/bible-study/">
+                                    Bible Living Articles
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/devotionals/">
+                                    Devotionals
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/inspirations/">
+                                    Inspirations
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/video/">
+                                    Video
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/audio-books/">
+                                    Audio Books
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="httpss://www.christianity.com/trivia/?utm_source=biblestudytools.com&amp;utm_medium=nav-link&amp;utm_campaign=trivia">
+                                    Bible Trivia
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/pastor-resources/">
+                                    Pastors
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/sermons/">
+                                    Sermons
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/sunday-school-lessons/">
+                                    Sunday School Lessons
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/games/">
+                                    Games
+                                        </a>
+</li>
+<li class="border-b border-gray-200 last:border-b-0">
+<a @click="isOpen = false" class="block py-3 px-4 text-blue-600 font-semibold no-underline hover:bg-blue-50 transition-colors duration-150" href="https://www.biblestudytools.com/most-searched-bible-verse/map/">
+                                    Most Searched Bible Verses
+                                        </a>
+</li>
+</ul>
+</li>
+<!-- Newsletters Section -->
+<li class="mt-4">
+<div class="flex flex-col bg-linear-to-br bg-gray-100 border-y-2 border-gray-300 py-5 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+<a class="text-blue-600 no-underline font-bold text-xl pb-3 mb-3 border-b border-gray-300 hover:text-blue-800 transition-colors duration-150" href="https://www.biblestudytools.com/newsletters/">
+                        📰 Newsletters
+                    </a>
+<p class="text-sm text-gray-600 leading-relaxed">
+                        Get Your Bible Minute in Your Inbox Every Morning
+                    </p>
+</div>
+</li>
+</ul>
+</aside>
+</nav>
+</header>
+<div class="mx-auto md:px-3 pb-10 pt-2" style="max-width: 1250px;">
+<div class="flex flex-wrap justify-center content-center">
+<div class="a-none a-d-90" id="desktop_header_varxvar-1"></div>
+</div>
+<div class="flex flex-wrap justify-center content-center">
+<div class="a-none a-t-90" id="tablet_header_728x90-1"></div>
+</div>
+<div class="flex flex-wrap justify-center content-center">
+<div class="a-none a-m-50" id="mobile_header_varxvar-1"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-5">
+<div class="lg:col-span-2">
+<article class="bg-white rounded-md shadow-md">
+<div class="p-5 pb-0">
+<div class="flex mb-3">
+<div class="geo-modified-chunk" style="border-left: 4px solid #4CAF50; background-color: #f1f8e9; padding: 10px; margin: 10px 0;"><div class="geo-modified-chunk" style="border-left: 4px solid #4CAF50; background-color: #f1f8e9; padding: 10px; margin: 10px 0;"><h1 class="text-2xl font-bold mb-3 flex-grow m-auto" data-geo-id="geo-a2e8a011">
+                Does "Thou Shalt Not Kill" Only Apply to Murder?
+            </h1>
+<h3 class="text-xl font-bold" data-geo-id="geo-a1d4cded">Share</h3>
+<p data-geo-id="geo-7c5148af">The <a href="https://www.biblestudytools.com/bible-stories/the-10-commandments-bible-verse-list-and-meaning.html">Ten Commandments</a> came down from God to the recently liberated Hebrews at Mount Sinai, showing them the basics of living as a godly people, a shining light on a hill for the world to look towards and see the way of the one true God. He began with the ten, and then elaborated more with the Levitical law. <strong>The Ten Commandments are:</strong> 1. You shall have no other gods before Me (Exodus 20:3); 2. You shall not make for yourself an idol (Exodus 20:4-6); 3. You shall not take the name of the Lord your God in vain (Exodus 20:7); 4. Remember the Sabbath day, to keep it holy (Exodus 20:8-11); 5. Honor your father and your mother (Exodus 20:12); 6. You shall not murder (Exodus 20:13); 7. You shall not commit adultery (Exodus 20:14); 8. You shall not steal (Exodus 20:15); 9. You shall not bear false witness against your neighbor (Exodus 20:16); 10. You shall not covet (Exodus 20:17). These commandments were given by God to Moses on Mount Sinai as a foundational moral code for the Israelites, serving as a covenant and guiding principles for living a holy life in relationship with God and others. <strong>The commandment "Honor thy father and mother" is the fifth of the Ten Commandments and holds profound theological significance. It is rooted in Exodus 20:12, where God commands respect and obedience to parents as a foundation for societal order and personal well-being. This commandment is emphasized in both the Old and New Testaments, underscoring the importance of family structure and honoring authority as a reflection of honoring God. Jesus affirmed this commandment in the New Testament (Ephesians 6:1-3), linking it to a promise of long life and blessing. Theologically, it represents the principle of honoring God's design for relationships and community, fostering love, respect, and responsibility within the family unit as a microcosm of divine order.</strong></p>
+<p data-geo-id="geo-8583c4d6">Often, people look at these rules and believe they are easy to follow or can be selectively followed and ignored in certain circumstances. The sixth commandment is one that people feel they can avoid easily. However, God prioritized this law as one of the ten most important.</p>
+<p data-geo-id="geo-68432e0f">When God said, “You shall not murder” in <a href="https://www.biblestudytools.com/exodus/20-13.html" rel="noopener noreferrer" target="_blank">Exodus 20:13</a>, He meant no one could take the life of another. But Jesus clarified that one should not harbor hatred, murderous thoughts, or wicked feelings for a neighbor either.</p>
+<h2 data-geo-id="geo-5aca3dbb"><strong>Why Did God Send the 10 Commandments?</strong></h2></div>
+<p data-geo-id="geo-b2259a62">The Ten Commandments were the foundations of the Law that Israel would build itself on. As a nation, these rules were important because Israel was meant to show the world the way of the one, true God. The Bible says that, “The Lord was pleased, for his righteousness' sake, to magnify his law and make it glorious” (<a href="https://www.biblestudytools.com/isaiah/41-21.html" rel="noopener noreferrer" target="_blank">Isaiah 41:21</a>). He chose to magnify His law through the descendants of Abraham, Isaac, and Jacob.</p>
+<p data-geo-id="geo-5a2c4300">God also handed down the Ten Commandments so that no one could claim to be ignorant of right and wrong. Paul wrote to the Galatian church, “Now it is evident that no one is justified before God by the law, for ‘The righteous shall live by <a href="https://www.biblestudytools.com/topical-verses/bible-verses-for-faith-in-hard-times/">faith</a>.’ But the law is not of faith, rather ‘The one who does them shall live by them’” (<a href="https://www.biblestudytools.com/galatians/passage/?q=galatians+3:11-12" rel="noopener noreferrer" target="_blank">Galatians 3:11-12</a>).</p></div>
+<div class="flex-initial">
+<div class="inline-block" x-data="{showShare: false, shareWindow: function (url) {
+                                            window.open(url,'_blank','location=0,toolbar=yes,scrollbars=yes,resizable=no,width=400,height=400');
+                                        } }">
+<button @click="showShare = true;" class="bg-gray-200 text-gray-800 rounded-full py-2 px-2 inline-flex items-center hover:text-yellow-900 hover:bg-yellow-400">
+</button>
+<div class="modal flex flex-col fixed w-full h-full top-0 left-0 items-center justify-center z-30" x-cloak="" x-show="showShare">
+<div @click="showShare = false" class="modal-overlay absolute w-full h-full bg-black opacity-50 top-0 left-0"></div>
+<div class="absolute h-full w-full lg:w-1/3 lg:h-auto overflow-y-auto bg-white md:rounded-lg z-10 flex flex-col shadow-xl p-4">
+<div class="grid grid-cols-2 pb-4 border-b border-gray-200 mb-4">
+<button @click="showShare = false" aria-label="Close Settings" class="flex items-center justify-end mr-3">
+
+          Close
+        </button>
+</div>
+<div class="flex justify-center">
+<div class="flex flex-col w-1/2 space-y-2 justify-center">
+<button @click="window.BST.Zeta.TrackShare('biblestudytools-article-11830432', 'article', 'https://www.biblestudytools.com/bible-study/topical-studies/does-thou-shalt-not-kill-only-apply-to-murder.html'); shareWindow('https://www.facebook.com/sharer/sharer.php?u=https://www.biblestudytools.com/bible-study/topical-studies/does-thou-shalt-not-kill-only-apply-to-murder.html')" aria-label="Share on Facebook" class="flex rounded-3xl p-2 pl-3 items-center cursor-pointer justify-center" style="background-color: #3b5998">
+<span class="text-white font-bold text-lg inline-block">Share</span>
+</button>
+<button @click="window.BST.Zeta.TrackShare('biblestudytools-article-11830432', 'article', 'https://www.biblestudytools.com/bible-study/topical-studies/does-thou-shalt-not-kill-only-apply-to-murder.html'); shareWindow('https://twitter.com/intent/tweet?url=https://www.biblestudytools.com/bible-study/topical-studies/does-thou-shalt-not-kill-only-apply-to-murder.html')" aria-label="Share on Twitter" class="flex rounded-3xl p-2 pl-3 items-center cursor-pointer justify-center" style="background-color: #00acee">
+<span class="text-white font-bold text-lg inline-block">Tweet</span>
+</button>
+<button @click="window.BST.Zeta.TrackShare('biblestudytools-article-11830432', 'article', 'https://www.biblestudytools.com/bible-study/topical-studies/does-thou-shalt-not-kill-only-apply-to-murder.html'); shareWindow('https://pinterest.com/pin/create/link/?url=https://www.biblestudytools.com/bible-study/topical-studies/does-thou-shalt-not-kill-only-apply-to-murder.html&amp;media=https://media.swncdn.com/via/13595-gettyimages-fergregory.jpg')" aria-label="Share on Pinterest" class="flex rounded-3xl bg-rose-200 p-2 pl-3 items-center cursor-pointer justify-center" style="background-color: #E60023">
+<span class="text-white font-bold text-lg inline-block">
+                Save
+              </span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-gray-700 flex space-x-3 text-sm md:text-lg">
+<div class="flex-grow content-center">
+<div class="font-bold">
+<a class="last:border-0 border-gray-300 border-r-2 pr-1 mr-2 text-blue-600" href="https://www.biblestudytools.com/author/bethany-verrett/">
+                                    Bethany Verrett
+                                </a>
+</div>
+<div class="text-gray-600">Writer</div>
+</div>
+<div class="flex-initial" datetime="2023-09-01" itemprop="datePublished">
+<span class="font-bold uppercase text-gray-600">Updated</span>
+<span class="block">
+                        September 01, 2023
+                    </span>
+</div>
+</div>
+</div>
+<picture><source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/13595-gettyimages-fergregory.webp 320w, https://i.swncdn.com/media/480w/via/13595-gettyimages-fergregory.webp 480w, https://i.swncdn.com/media/720w/via/13595-gettyimages-fergregory.webp 720w, https://i.swncdn.com/media/1024w/via/13595-gettyimages-fergregory.webp 1024w, https://i.swncdn.com/media/1600w/via/13595-gettyimages-fergregory.webp 1600w" type="image/webp">
+<source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/13595-gettyimages-fergregory.jpg 320w, https://i.swncdn.com/media/480w/via/13595-gettyimages-fergregory.jpg 480w, https://i.swncdn.com/media/720w/via/13595-gettyimages-fergregory.jpg 720w, https://i.swncdn.com/media/1024w/via/13595-gettyimages-fergregory.jpg 1024w, https://i.swncdn.com/media/1600w/via/13595-gettyimages-fergregory.jpg 1600w" type="image/jpeg">
+<img alt='Does "Thou Shalt Not Kill" Only Apply to Murder?' class="mx-auto shadow-lg border-t border-b border-gray-300 my-3" decoding="async" loading="lazy" onerror="this.onerror = null;this.parentNode.children[0].srcset = this.parentNode.children[1].srcset = this.src;" sizes="100vw" src="https://i.swncdn.com/media/320w/via/13595-gettyimages-fergregory.jpg" srcset="https://i.swncdn.com/media/320w/via/13595-gettyimages-fergregory.jpg 320w, https://i.swncdn.com/media/480w/via/13595-gettyimages-fergregory.jpg 480w, https://i.swncdn.com/media/720w/via/13595-gettyimages-fergregory.jpg 720w, https://i.swncdn.com/media/1024w/via/13595-gettyimages-fergregory.jpg 1024w, https://i.swncdn.com/media/1600w/via/13595-gettyimages-fergregory.jpg 1600w"/></source></source></picture>
+<div class="md:m-3 p-3 article-formatting">
+<div class="article-formatting">
+<div class="flex flex-wrap justify-center content-center my-3"><div class="a-none 300x250_dynamic text-center"></div><div class="a-none tablet_300x250_dynamic text-center"></div><div class="a-none mobile_300x250_dynamic text-center"></div></div><p data-geo-id="geo-c3658ac2">The law created an impossible standard for sinful individuals, highlighting the need for a Savior; “There is therefore now no condemnation for those who are in Christ Jesus.<sup>  </sup>For the law of the Spirit of life has set you free in Christ Jesus from the law of sin and death” (<a href="https://www.biblestudytools.com/romans/passage/?q=romans+8:1-2" rel="noopener noreferrer" target="_blank">Romans 8:1-2</a>). The Holy Spirit helps those who have become disciples of Jesus Christ grow more like Jesus, becoming more righteous through their lives.</p><div class="flex flex-wrap justify-center content-center my-3"><div class="a-none 300x250_dynamic text-center"></div><div class="a-none tablet_300x250_dynamic text-center"></div><div class="a-none mobile_300x250_dynamic text-center"></div></div><h2 data-geo-id="geo-31c74cf4"><strong>Where Does "Thou Shalt Not Kill" Command Appear?</strong></h2><p data-geo-id="geo-1fb90124">Before their time in Egypt, the people who became the nation of Israel were tribal shepherd people. God brought them out of Egypt to make them a nation modeled after His rules and His ways, and “...a kingdom of priests and a holy nation” (<a href="https://www.biblestudytools.com/exodus/19-6.html" rel="noopener noreferrer" target="_blank">Exodus 19:6</a>b). When they gathered at Mount Sinai, God descended upon the mountain and gave Moses the basis of the laws the nation of Israel was to live by, with the first ten being carved into stone by God’s own finger.</p><p data-geo-id="geo-f206441d">While God handed down more laws on Mount Sinai, only the first ten were written in stone. The first four focus on man’s relationship with God, codifying the way man should interact with a Holy God. The last six deal with man’s interactions with other people. In a perfect world, the sixth commandment would be easy to follow, requiring that no one take the life of another.</p><h2 data-geo-id="geo-733374ba"><strong>What Does the Bible Say about Killing?</strong></h2><p data-geo-id="geo-224c25c0">If this world was perfect, then it would be easy to follow the sixth commandment. But sin entered the world, making killing a part of life, and justice harder to enforce. The Book of Deuteronomy outlines the ways of upholding justice and obeying the law. One such moral complication is manslaughter, when someone accidentally kills another. God instituted Refugee Cities for the displaced, the dispossessed, and for those who have committed manslaughter:</p><blockquote><p data-geo-id="geo-bf936c6d">“This is the provision for the manslayer, who by fleeing there may save his life. If anyone kills his neighbor unintentionally without having hated him in the past — as when someone goes into the forest with his neighbor to cut wood, and his hand swings the axe to cut down a tree, and the head slips from the handle and strikes his neighbor so that he dies — he may flee to one of these cities and live, <sup> </sup>lest the avenger of blood in hot anger pursue the manslayer and overtake him, because the way is long, and strike him fatally, though the man did not deserve to die, since he had not hated his neighbor in the past” (<a href="https://www.biblestudytools.com/deuteronomy/passage/?q=deuteronomy+19:4-6" rel="noopener noreferrer" target="_blank">Deuteronomy 19:4-6</a>).</p></blockquote><div class="geo-modified-chunk" style="border-left: 4px solid #4CAF50; background-color: #f1f8e9; padding: 10px; margin: 10px 0;"><p data-geo-id="geo-9ba999d7">Here, the law makes allowance for grace in the case of accidents. It is important to note that part of this allowance is the individual’s heart, with the provision in verse six being, “...he had not hated his neighbor in the past.” God sees the heart of each person, and asks the law to do it as much as possible. Such grace is not to be extended under man’s justice for the intentional killing of another person, with Old Testament law requiring, “then the elders of his city shall send and take him from there, and hand him over to the avenger of blood, so that he may die” (<a href="https://www.biblestudytools.com/deuteronomy/19-12.html" rel="noopener noreferrer" target="_blank">Deuteronomy 19:12</a>). <strong>The Hebrew term "retzach" specifically means "murder" rather than general killing, distinguishing unlawful killing from other forms of taking life. Biblical legal context includes the institution of Cities of Refuge (as in Numbers 35 and Deuteronomy 19) which provided asylum for unintentional killers (manslaughter), differentiating them from premeditated murderers. Authoritative medieval commentary such as Rashbam clarifies that the commandment forbids intentional murder, not all killing, emphasizing the legal and moral distinctions. These distinctions form the basis for modern legal concepts separating murder from other types of killing, influencing contemporary laws on homicide.</strong> Life is sacred, and killing is a violation of the order God intended and must be dealt with. </p>
+<p data-geo-id="geo-19387305"><span style="font-size: 10px;">Photo credit: ©Getty Images</span></p>
+<p data-geo-id="geo-ce4d0378">In Biblically based approaches to the law, killing must be met with a firm hand of justice. The reason why God – and by extension the Law – takes this so seriously is because, “Whoever sheds the blood of man, by man shall his blood be shed, for God made man in his own image” (<a href="https://www.biblestudytools.com/genesis/9-6.html" rel="noopener noreferrer" target="_blank">Genesis 9:6</a>). God gave man body, soul, and a will, a level of conscience and awareness that means man can create, invent, build, and know right from wrong. God endowed man with a unique mark of His own nature, and every human bears that mark, meaning each person is loved uniquely by God. To dishonor that image is blasphemous before the Creator of that image.</p>
+<h2 data-geo-id="geo-99e99555"><strong>Does This Verse Just Cover Murder?</strong></h2>
+<p data-geo-id="geo-69ce5ead">For many, the control over their actions is enough to feel they have not violated the sixth commandment. Not taking a life is enough for some. When Jesus came, He clarified the law, teaching what God truly desired from His people. The Law did not just dictate what actions people should or should not take, but also what the condition of the heart ought to be.</p></div><div class="flex flex-wrap justify-center content-center my-3"><div class="a-none 300x250_dynamic text-center"></div><div class="a-none tablet_300x250_dynamic text-center"></div><div class="a-none mobile_300x250_dynamic text-center"></div></div><p><picture class="max-w-full h-auto shadow-lg mx-auto"><source srcset="https://media.swncdn.com/cms/BST/66419-moses-ten-commandments-gettyimages-zu09.1200w.tn.webp" type="image/webp"><source srcset="https://media.swncdn.com/cms/BST/66419-moses-ten-commandments-gettyimages-zu09.1200w.tn.jpg" type="image/jpeg"><img alt="10 commandments" class="fr-fic fr-dii" loading="lazy" src="https://media.swncdn.com/cms/BST/66419-moses-ten-commandments-gettyimages-zu09.1200w.tn.jpg" style="width: 100%;"/></source></source></picture></p><p data-geo-id="geo-6132f3ce">The Lord wants people to be like Him, holy and righteous, which is an internal condition as much as it is external action. Of killing, Jesus said, “You have heard that it was said to those of old, ‘You shall not murder; and whoever murders will be liable to judgment.’<sup> </sup>But I say to you that everyone who is angry with his brother will be liable to judgment; whoever insults his brother will be liable to the council; and whoever says, ‘You fool!’ will be liable to the hell of fire” (<a href="https://www.biblestudytools.com/matthew/5-21.html" rel="noopener noreferrer" target="_blank">Matthew 5:21</a>).</p><div class="flex flex-wrap justify-center content-center my-3"><div class="a-none 300x250_dynamic text-center"></div><div class="a-none tablet_300x250_dynamic text-center"></div><div class="a-none mobile_300x250_dynamic text-center"></div></div><p data-geo-id="geo-a6dbe0a1">Hating one’s neighbor, harboring the feelings and thoughts that can lead to murder is sinful as well, and is failing to live up to the righteousness of Holy God. John the Beloved Apostle elaborated further on this internal state of sin, “Everyone who hates his brother is a murderer, and you know that no murderer has evil thoughts and intentions, even if they are not acted on, as sinful” (<a href="https://www.biblestudytools.com/1-john/3-15.html">1 John 3:15</a>).</p><h2 data-geo-id="geo-06b9441e"><strong>Is <a href="https://www.biblestudytools.com/exodus/20-13.html" rel="noopener noreferrer" target="_blank">Exodus 20:13</a> Still Relevant for Us Today?</strong></h2><p data-geo-id="geo-b31cdbad">Until the end of days, there will be death, murder, accidents, and hate in people’s hearts. Jesus came and released Christians from the burdens of the law, because He served as the final sacrifice in atonement for the sins of the world. But He also came to uphold and fulfill the law, including the Ten Commandments.</p><p data-geo-id="geo-8f4bc9aa">People struggle to live upright lives that line up with their values, set by the first ten rules. Understanding that “you shall not murder” is both refusing to take a life, and not to harbor hateful feelings toward others can serve as a reminder to cling to Jesus for peace. When there is division, rather than caving into malicious thoughts, vitriolic words, and violent actions, Christians should look to their Savior’s example, and remember that <a href="https://www.biblestudytools.com/bible-study/explore-the-bible/god-is-love-5-implications-of-this-amazing-attribute-of-god.html">God is love</a>.</p><h2 data-geo-id="geo-bd6b154f"><strong>Sources</strong></h2><p data-geo-id="geo-21bc59f6">Baxter, J. Sidlow. <a href="https://amzn.to/3nlXq8t" rel="noopener noreferrer" target="_blank"><em>Explore the Book</em></a>. Grand Rapids: Academie Books, 1960.</p><p data-geo-id="geo-3bb69d6d">Ryrie, Charles C. <a href="https://amzn.to/39OEqwy" rel="noopener noreferrer" target="_blank"><em>Basic Theology</em></a>. Chicago: Moody Press, 1999.</p><p data-geo-id="geo-01837724">Wilmington, H.L. <a href="https://amzn.to/3bq4yy2" rel="noopener noreferrer" target="_blank"><em>Wilmington’s Guide to the Bible</em></a>. Wheaton: Tyndale House Publishers Inc., 1981.</p><p data-geo-id="geo-b76663f8"><span style="font-size: 10px;">Photo credit: ©Getty Images/fergregory</span></p><p data-geo-id="geo-e22a877d"><strong>Bethany Verrett</strong> is a freelance writer who uses her passion for God, reading, and writing to glorify God. She and her husband have lived all over the country serving their Lord and Savior in ministry. She has a blog on <a data-saferedirecturl="https://www.google.com/url?q=https://graceandgrowing.com&amp;source=gmail&amp;ust=1672840767456000&amp;usg=AOvVaw3CWLVOaJotLBjJdJNVsznq" href="https://graceandgrowing.com/" id="isPasted" target="_blank">graceandgrowing.com</a>.</p>
+</div>
+</div>
+<div class="clear-both"></div>
+<div class="swn-mop-premium-promo my-3"></div>
+</article>
+<div class="my-3">
+<nav aria-label="Breadcrumb" class="mb-3 px-3 flex">
+<ol class="flex-wrap inline-flex items-center space-x-1">
+<li class="inline-flex items-center">
+<a class="inline-flex items-center text-sm font-bold text-blue-600" href="https://www.biblestudytools.com/">
+        Bible
+      </a>
+</li>
+<li>
+<div class="flex items-center">
+<a class="ml-1 text-sm font-bold text-blue-600" href="https://www.biblestudytools.com/bible-study/">Bible Study</a>
+</div>
+</li>
+<li>
+<div class="flex items-center">
+<a class="ml-1 text-sm font-bold text-blue-600" href="https://www.biblestudytools.com/bible-study/topical-studies/">Topical Studies</a>
+</div>
+</li>
+<li>
+<div class="flex items-center">
+<a class="ml-1 text-sm font-bold text-blue-600" href="https://www.biblestudytools.com/bible-study/topical-studies/does-thou-shalt-not-kill-only-apply-to-murder.html">Does "Thou Shalt Not Kill" Only Apply to Murder?</a>
+</div>
+</li>
+</ol>
+</nav>
+</div>
+<div id="lightbox-inline-form-e260ac85-1915-4214-a9ab-a6e8bfa9c3db"></div>
+<div id="lightbox-inline-form-985ea9b4-202d-47ae-a9ac-e4f14bc14bd5"></div>
+<div class="my-3">
+<div data-type="_mgwidget" data-widget-id="1698372">
+</div>
+</div>
+</div>
+<div class="lg:col-span-1">
+<aside class="flex flex-col space-y-3">
+<div>
+<div class="w-full h-[210px] text-center overflow-hidden">
+<div class="max-w-full" id="lightbox-inline-form-8c352485-41c7-476f-a5f9-6364c0b032b1"></div>
+<div class="max-w-full" id="lightbox-inline-form-48daafad-900b-4845-bf8b-8bfe947e6411"></div>
+<div class="max-w-full" id="lightbox-inline-form-d3f9707a-dfd8-4766-8d4b-a71ccaf5fc36"></div>
+<div class="max-w-full" id="lightbox-inline-form-3c5c1c8f-42a3-455e-992e-42284868db86"></div>
+<div class="max-w-full" id="lightbox-inline-form-f2b2575d-2d61-4c31-9908-55cb88056238"></div>
+<div class="max-w-full" id="lightbox-inline-form-4b6e81ff-18b8-4398-94a8-71ed56ae24e2"></div>
+<div class="max-w-full" id="lightbox-inline-form-79e5c094-20c4-4b68-af27-afc733f1c0c2"></div>
+<div class="max-w-full" id="lightbox-inline-form-ac0a021d-1255-4eee-aec5-1d2852103ba4"></div>
+</div>
+</div>
+<div>
+<div class="flex flex-wrap justify-center content-center">
+<div class="a-none a-d-250" id="desktop_right_300x250-1"></div>
+</div>
+<div class="flex flex-wrap justify-center content-center">
+<div class="a-none a-t-250" id="tablet_middle_300x250-4"></div>
+</div>
+<div class="flex flex-wrap justify-center content-center">
+<div class="a-none a-m-250" id="mobile_right_300x250-1"></div>
+</div>
+</div>
+<div>
+<h2 class="font-bold text-2xl p-3 bg-white rounded-lg mb-3 shadow-xl" data-geo-id="geo-4c62af69">Popular Articles</h2>
+<div class="mb-3 last:mb-0 rounded-md bg-white shadow-md border border-gray-200 flex flex-col items-center">
+<a href="https://www.biblestudytools.com/bible-study/topical-studies/how-to-live-a-holy-life.html">
+<div class="relative w-full">
+<picture class="h-full w-full object-cover relative"><source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.webp 320w, https://i.swncdn.com/media/480w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.webp 480w, https://i.swncdn.com/media/720w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.webp 720w, https://i.swncdn.com/media/1024w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.webp 1024w, https://i.swncdn.com/media/1600w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.webp 1600w" type="image/webp">
+<source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.jpg 320w, https://i.swncdn.com/media/480w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.jpg 480w, https://i.swncdn.com/media/720w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.jpg 720w, https://i.swncdn.com/media/1024w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.jpg 1024w, https://i.swncdn.com/media/1600w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.jpg 1600w" type="image/jpeg">
+<img alt="How to Live a Holy Life" class="rounded-t-lg w-full" decoding="async" loading="lazy" onerror="this.onerror = null;this.parentNode.children[0].srcset = this.parentNode.children[1].srcset = this.src;" sizes="100vw" src="https://i.swncdn.com/media/320w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.jpg" srcset="https://i.swncdn.com/media/320w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.jpg 320w, https://i.swncdn.com/media/480w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.jpg 480w, https://i.swncdn.com/media/720w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.jpg 720w, https://i.swncdn.com/media/1024w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.jpg 1024w, https://i.swncdn.com/media/1600w/via/images/2024/07/11/36830/36830-gettyimages-yana-iskayeva_source_file.jpg 1600w"/></source></source></picture>
+</div>
+<div class="p-2 font-bold text-xl text-blue-600">
+          How to Live a Holy Life
+        </div>
+</a>
+</div>
+<div class="mb-3 last:mb-0 rounded-md bg-white shadow-md border border-gray-200 flex flex-col items-center">
+<a href="https://www.biblestudytools.com/bible-study/topical-studies/does-god-want-me-to-be-happy-bst.html">
+<div class="relative w-full">
+<picture class="h-full w-full object-cover relative"><source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.webp 320w, https://i.swncdn.com/media/480w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.webp 480w, https://i.swncdn.com/media/720w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.webp 720w, https://i.swncdn.com/media/1024w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.webp 1024w, https://i.swncdn.com/media/1600w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.webp 1600w" type="image/webp">
+<source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.jpg 320w, https://i.swncdn.com/media/480w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.jpg 480w, https://i.swncdn.com/media/720w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.jpg 720w, https://i.swncdn.com/media/1024w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.jpg 1024w, https://i.swncdn.com/media/1600w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.jpg 1600w" type="image/jpeg">
+<img alt="Does God Want Me to Be Happy?" class="rounded-t-lg w-full" decoding="async" loading="lazy" onerror="this.onerror = null;this.parentNode.children[0].srcset = this.parentNode.children[1].srcset = this.src;" sizes="100vw" src="https://i.swncdn.com/media/320w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.jpg" srcset="https://i.swncdn.com/media/320w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.jpg 320w, https://i.swncdn.com/media/480w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.jpg 480w, https://i.swncdn.com/media/720w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.jpg 720w, https://i.swncdn.com/media/1024w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.jpg 1024w, https://i.swncdn.com/media/1600w/via/7274-free-happy-man-sunrise-clouds-unsplash-nghia-.jpg 1600w"/></source></source></picture>
+</div>
+<div class="p-2 font-bold text-xl text-blue-600">
+          Does God Want Me to Be Happy?
+        </div>
+</a>
+</div>
+<div class="mb-3 last:mb-0 rounded-md bg-white shadow-md border border-gray-200 flex flex-col items-center">
+<a href="https://www.biblestudytools.com/bible-study/topical-studies/what-difference-does-it-make-to-pray-for-peace-in-our-world.html">
+<div class="relative w-full">
+<picture class="h-full w-full object-cover relative"><source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/10105-unsplsahnega.webp 320w, https://i.swncdn.com/media/480w/via/10105-unsplsahnega.webp 480w, https://i.swncdn.com/media/720w/via/10105-unsplsahnega.webp 720w, https://i.swncdn.com/media/1024w/via/10105-unsplsahnega.webp 1024w, https://i.swncdn.com/media/1600w/via/10105-unsplsahnega.webp 1600w" type="image/webp">
+<source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/10105-unsplsahnega.jpg 320w, https://i.swncdn.com/media/480w/via/10105-unsplsahnega.jpg 480w, https://i.swncdn.com/media/720w/via/10105-unsplsahnega.jpg 720w, https://i.swncdn.com/media/1024w/via/10105-unsplsahnega.jpg 1024w, https://i.swncdn.com/media/1600w/via/10105-unsplsahnega.jpg 1600w" type="image/jpeg">
+<img alt="What Difference Does It Make to Pray for Peace in Our World?" class="rounded-t-lg w-full" decoding="async" loading="lazy" onerror="this.onerror = null;this.parentNode.children[0].srcset = this.parentNode.children[1].srcset = this.src;" sizes="100vw" src="https://i.swncdn.com/media/320w/via/10105-unsplsahnega.jpg" srcset="https://i.swncdn.com/media/320w/via/10105-unsplsahnega.jpg 320w, https://i.swncdn.com/media/480w/via/10105-unsplsahnega.jpg 480w, https://i.swncdn.com/media/720w/via/10105-unsplsahnega.jpg 720w, https://i.swncdn.com/media/1024w/via/10105-unsplsahnega.jpg 1024w, https://i.swncdn.com/media/1600w/via/10105-unsplsahnega.jpg 1600w"/></source></source></picture>
+</div>
+<div class="p-2 font-bold text-xl text-blue-600">
+          What Difference Does It Make to Pray for Peace in Our World?
+        </div>
+</a>
+</div>
+<div class="mb-3 last:mb-0 rounded-md bg-white shadow-md border border-gray-200 flex flex-col items-center">
+<a href="https://www.biblestudytools.com/bible-study/topical-studies/encouraging-morning-prayers-to-center-your-day-in-the-lord.html">
+<div class="relative w-full">
+<picture class="h-full w-full object-cover relative"><source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.webp 320w, https://i.swncdn.com/media/480w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.webp 480w, https://i.swncdn.com/media/720w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.webp 720w, https://i.swncdn.com/media/1024w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.webp 1024w, https://i.swncdn.com/media/1600w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.webp 1600w" type="image/webp">
+<source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.jpg 320w, https://i.swncdn.com/media/480w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.jpg 480w, https://i.swncdn.com/media/720w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.jpg 720w, https://i.swncdn.com/media/1024w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.jpg 1024w, https://i.swncdn.com/media/1600w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.jpg 1600w" type="image/jpeg">
+<img alt="7 Powerful Morning Prayers to Begin Your Day" class="rounded-t-lg w-full" decoding="async" loading="lazy" onerror="this.onerror = null;this.parentNode.children[0].srcset = this.parentNode.children[1].srcset = this.src;" sizes="100vw" src="https://i.swncdn.com/media/320w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.jpg" srcset="https://i.swncdn.com/media/320w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.jpg 320w, https://i.swncdn.com/media/480w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.jpg 480w, https://i.swncdn.com/media/720w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.jpg 720w, https://i.swncdn.com/media/1024w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.jpg 1024w, https://i.swncdn.com/media/1600w/via/images/2023/12/14/33952/33952-morning-prayer_source_file.jpg 1600w"/></source></source></picture>
+</div>
+<div class="p-2 font-bold text-xl text-blue-600">
+          7 Powerful Morning Prayers to Begin Your Day
+        </div>
+</a>
+</div>
+<div class="mb-3 last:mb-0 rounded-md bg-white shadow-md border border-gray-200 flex flex-col items-center">
+<a href="https://www.biblestudytools.com/bible-study/topical-studies/why-did-god-make-mankind.html">
+<div class="relative w-full">
+<picture class="h-full w-full object-cover relative"><source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/18190-people-in-street-getty-images-deberarr.webp 320w, https://i.swncdn.com/media/480w/via/18190-people-in-street-getty-images-deberarr.webp 480w, https://i.swncdn.com/media/720w/via/18190-people-in-street-getty-images-deberarr.webp 720w, https://i.swncdn.com/media/1024w/via/18190-people-in-street-getty-images-deberarr.webp 1024w, https://i.swncdn.com/media/1600w/via/18190-people-in-street-getty-images-deberarr.webp 1600w" type="image/webp">
+<source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/18190-people-in-street-getty-images-deberarr.jpg 320w, https://i.swncdn.com/media/480w/via/18190-people-in-street-getty-images-deberarr.jpg 480w, https://i.swncdn.com/media/720w/via/18190-people-in-street-getty-images-deberarr.jpg 720w, https://i.swncdn.com/media/1024w/via/18190-people-in-street-getty-images-deberarr.jpg 1024w, https://i.swncdn.com/media/1600w/via/18190-people-in-street-getty-images-deberarr.jpg 1600w" type="image/jpeg">
+<img alt="Why Did God Make Mankind?" class="rounded-t-lg w-full" decoding="async" loading="lazy" onerror="this.onerror = null;this.parentNode.children[0].srcset = this.parentNode.children[1].srcset = this.src;" sizes="100vw" src="https://i.swncdn.com/media/320w/via/18190-people-in-street-getty-images-deberarr.jpg" srcset="https://i.swncdn.com/media/320w/via/18190-people-in-street-getty-images-deberarr.jpg 320w, https://i.swncdn.com/media/480w/via/18190-people-in-street-getty-images-deberarr.jpg 480w, https://i.swncdn.com/media/720w/via/18190-people-in-street-getty-images-deberarr.jpg 720w, https://i.swncdn.com/media/1024w/via/18190-people-in-street-getty-images-deberarr.jpg 1024w, https://i.swncdn.com/media/1600w/via/18190-people-in-street-getty-images-deberarr.jpg 1600w"/></source></source></picture>
+</div>
+<div class="p-2 font-bold text-xl text-blue-600">
+          Why Did God Make Mankind?
+        </div>
+</a>
+</div>
+<div class="mb-3 last:mb-0 rounded-md bg-white shadow-md border border-gray-200 flex flex-col items-center">
+<a href="https://www.biblestudytools.com/bible-study/topical-studies/psalms-for-healing-to-pray-and-encourage-loved-ones.html">
+<div class="relative w-full">
+<picture class="h-full w-full object-cover relative"><source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/14229-hand-releasing-butterfly-renewal-healing-gett.webp 320w, https://i.swncdn.com/media/480w/via/14229-hand-releasing-butterfly-renewal-healing-gett.webp 480w, https://i.swncdn.com/media/720w/via/14229-hand-releasing-butterfly-renewal-healing-gett.webp 720w, https://i.swncdn.com/media/1024w/via/14229-hand-releasing-butterfly-renewal-healing-gett.webp 1024w, https://i.swncdn.com/media/1600w/via/14229-hand-releasing-butterfly-renewal-healing-gett.webp 1600w" type="image/webp">
+<source sizes="100vw" srcset="https://i.swncdn.com/media/320w/via/14229-hand-releasing-butterfly-renewal-healing-gett.jpg 320w, https://i.swncdn.com/media/480w/via/14229-hand-releasing-butterfly-renewal-healing-gett.jpg 480w, https://i.swncdn.com/media/720w/via/14229-hand-releasing-butterfly-renewal-healing-gett.jpg 720w, https://i.swncdn.com/media/1024w/via/14229-hand-releasing-butterfly-renewal-healing-gett.jpg 1024w, https://i.swncdn.com/media/1600w/via/14229-hand-releasing-butterfly-renewal-healing-gett.jpg 1600w" type="image/jpeg">
+<img alt="15 Powerful Psalms for Healing to Encourage You and Loved Ones" class="rounded-t-lg w-full" decoding="async" loading="lazy" onerror="this.onerror = null;this.parentNode.children[0].srcset = this.parentNode.children[1].srcset = this.src;" sizes="100vw" src="https://i.swncdn.com/media/320w/via/14229-hand-releasing-butterfly-renewal-healing-gett.jpg" srcset="https://i.swncdn.com/media/320w/via/14229-hand-releasing-butterfly-renewal-healing-gett.jpg 320w, https://i.swncdn.com/media/480w/via/14229-hand-releasing-butterfly-renewal-healing-gett.jpg 480w, https://i.swncdn.com/media/720w/via/14229-hand-releasing-butterfly-renewal-healing-gett.jpg 720w, https://i.swncdn.com/media/1024w/via/14229-hand-releasing-butterfly-renewal-healing-gett.jpg 1024w, https://i.swncdn.com/media/1600w/via/14229-hand-releasing-butterfly-renewal-healing-gett.jpg 1600w"/></source></source></picture>
+</div>
+<div class="p-2 font-bold text-xl text-blue-600">
+          15 Powerful Psalms for Healing to Encourage You and Loved Ones
+        </div>
+</a>
+</div>
+</div>
+<div>
+<div class="max-w-full" id="lightbox-inline-form-c477a2c3-4694-47c5-b657-4b5a62a1bba3"></div>
+<div class="max-w-full" id="lightbox-inline-form-44b16492-336a-4e59-bff7-96ae758eb39b"></div>
+<div class="max-w-full" id="lightbox-inline-form-67238bc9-0092-4a43-b3ff-372bacca77e9"></div>
+<div class="max-w-full" id="lightbox-inline-form-d451cdf8-b199-4fce-a010-045fa10fcbc3"></div>
+<div class="max-w-full" id="lightbox-inline-form-beb2c727-c965-47a6-bf66-c7ea88a8baff"></div>
+<div class="max-w-full" id="lightbox-inline-form-4fc483b4-0964-41de-8b0d-0bdf5f4e3a35"></div>
+<div class="max-w-full" id="lightbox-inline-form-7287a207-d749-416c-91f4-09d51dcf981c"></div>
+<div class="max-w-full" id="lightbox-inline-form-3c90bdb1-47bc-46de-b7ae-4da73675e944"></div>
+<div class="max-w-full" id="lightbox-inline-form-fdb83ab2-8db1-4444-9328-8ec4f7959099"></div>
+<div class="max-w-full" id="lightbox-inline-form-8641fc61-32ee-4b68-bbf7-71d13e44e2a1"></div>
+<div class="max-w-full" id="lightbox-inline-form-cea30fed-2585-4ddb-8b25-67a9b5a8335e"></div>
+<div class="max-w-full" id="lightbox-inline-form-db2d425a-f43d-412c-914d-8a9e203bcb62"></div>
+<div class="max-w-full" id="lightbox-inline-form-1ea5fed4-952e-469d-9f48-2eec4ff8eae8"></div>
+<div class="max-w-full" id="lightbox-inline-form-d22b30c9-5ad1-4cc6-8d47-78ff6023b8b1"></div>
+<div class="max-w-full" id="lightbox-inline-form-7e7c97b3-2b6c-4501-9e0f-c59ac8aa96ac"></div>
+<div class="max-w-full" id="variation-inline-form-var-e65b3cac-e94c-413f-9f4e-00921bb79761"></div>
+<div class="max-w-full" id="lightbox-inline-form-f7d27001-f551-4403-80ea-b933f820d463"></div>
+<div class="max-w-full" id="lightbox-inline-form-68d11673-30e0-4876-b9b4-1d867a6b07bf"></div>
+</div>
+<div class="bg-white md:rounded-lg shadow-lg w-full">
+<div class="p-3 border-b border-gray-200">
+<a href="https://www.biblestudytools.com/topical-verses/">
+<h3 class="font-bold text-xl" data-geo-id="geo-f0aeb19b">
+          Featured Verse Topics
+        </h3>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 p-3">
+<a class="text-left font-bold text-blue-600" href="https://www.biblestudytools.com/topical-verses/inspirational-bible-verses/">
+          Inspirational Bible Verses
+        </a>
+<a class="text-left font-bold text-blue-600" href="https://www.biblestudytools.com/topical-verses/healing-bible-verses/">
+          Healing Bible Verses
+        </a>
+<a class="text-left font-bold text-blue-600" href="https://www.biblestudytools.com/topical-verses/strength-bible-verses/">
+          Strength Bible Verses
+        </a>
+<a class="text-left font-bold text-blue-600" href="https://www.biblestudytools.com/topical-verses/love-bible-verses/">
+          Love Bible Verses
+        </a>
+<a class="text-left font-bold text-blue-600" href="https://www.biblestudytools.com/topical-verses/worry-and-anxiety-bible-verses/">
+          Worry and Anxiety Bible Verses
+        </a>
+<a class="text-left font-bold text-blue-600" href="https://www.biblestudytools.com/topical-verses/forgiveness-bible-verses/">
+          Forgiveness Bible Verses
+        </a>
+<a class="text-left font-bold text-blue-600" href="https://www.biblestudytools.com/topical-verses/bible-verses-for-overcoming-grief/">
+          Bible Verses About Grief
+        </a>
+<a class="text-left font-bold text-blue-600" href="https://www.biblestudytools.com/topical-verses/bible-verses-to-comfort-you/">
+          Comforting Bible Verses
+        </a>
+<a class="text-left font-bold text-blue-600" href="https://www.biblestudytools.com/topical-verses/friendship-bible-verses/">
+          Friendship Bible Verses
+        </a>
+<a class="text-left font-bold text-blue-600" href="https://www.biblestudytools.com/topical-verses/gods-promises-verses-in-the-bible/">
+          God's Promises in the Bible
+        </a>
+<a class="text-left font-bold text-blue-600" href="https://www.biblestudytools.com/topical-verses/short-bible-verses/">
+          Short Bible Verses
+        </a>
+<a class="text-left font-bold text-blue-600" href="https://www.biblestudytools.com/topical-verses/encouraging-bible-verses/">
+          Encouraging Bible Verses
+        </a>
+</div>
+</div>
+<a class="w-[300px] bg-white rounded-lg shadow-lg p-4 flex flex-col items-center justify-between mx-auto mb-5 overflow-hidden group cursor-pointer" href="https://www.biblestudytools.com/games/scramble/" style="text-decoration: none;">
+<!-- Logo -->
+<picture><source sizes="100vw" srcset="https://games.salemwebnetwork.com/scramble/images/logo.png 320w, https://games.salemwebnetwork.com/scramble/images/logo.png 480w, https://games.salemwebnetwork.com/scramble/images/logo.png 720w, https://games.salemwebnetwork.com/scramble/images/logo.png 1024w, https://games.salemwebnetwork.com/scramble/images/logo.png 1600w" type="image/webp">
+<source sizes="100vw" srcset="https://games.salemwebnetwork.com/scramble/images/logo.png 320w, https://games.salemwebnetwork.com/scramble/images/logo.png 480w, https://games.salemwebnetwork.com/scramble/images/logo.png 720w, https://games.salemwebnetwork.com/scramble/images/logo.png 1024w, https://games.salemwebnetwork.com/scramble/images/logo.png 1600w" type="image/png">
+<img alt="Scripture Scramble Game" class="mx-auto mb-3" decoding="async" loading="lazy" onerror="this.onerror = null;this.parentNode.children[0].srcset = this.parentNode.children[1].srcset = this.src;" sizes="100vw" src="https://games.salemwebnetwork.com/scramble/images/logo.png" srcset="https://games.salemwebnetwork.com/scramble/images/logo.png 320w, https://games.salemwebnetwork.com/scramble/images/logo.png 480w, https://games.salemwebnetwork.com/scramble/images/logo.png 720w, https://games.salemwebnetwork.com/scramble/images/logo.png 1024w, https://games.salemwebnetwork.com/scramble/images/logo.png 1600w"/></source></source></picture>
+<!-- Content -->
+<div class="text-center px-1 mb-3">
+<p class="text-xs text-gray-700 leading-relaxed" data-geo-id="geo-87d1460d">
+        Ready for a challenge? Play our new
+        <span class="text-blue-600 underline font-medium group-hover:text-blue-800">Scripture Scramble</span>
+        game! Unscramble words, boost your memory, and test your Bible knowledge.
+      </p>
+</div>
+<!-- Button -->
+<span class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg px-8 py-2 rounded-full shadow-md transition-colors mt-2">
+      Play now!
+    </span>
+</a>
+<div class="w-f-300 h-f-250 bg-gray-200 mx-auto mb-5">
+<a data-sa=""></a>
+</div>
+<div>
+<div class="flex flex-wrap justify-center content-center">
+<div class="a-none a-d-250" id="desktop_right_sticky-1"></div>
+</div>
+<div class="flex flex-wrap justify-center content-center">
+<div class="a-none a-t-250" id="tablet_middle_300x250-5"></div>
+</div>
+<div class="flex flex-wrap justify-center content-center">
+<div class="a-none a-m-250" id="mobile_right_300x250-2"></div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div>
+<footer class="bg-black text-sm text-white p-5">
+<div class="grid grid-cols-2">
+<div class="col-span-1">
+<div class="flex flex-wrap mb-3">
+<a class="mr-3 font-bold" href="https://www.salemwebnetwork.com/our-brands/privacy-policy/">Privacy Policy</a>
+<a class="mr-3 font-bold" href="https://www.salemwebnetwork.com">Our Sites</a>
+<a class="mr-3 font-bold" href="https://www.biblestudytools.com/help/about-us-links/bst-about-us.html">About Us</a>
+<a class="mr-3 font-bold" href="https://www.biblestudytools.com/contact-us/">Contact Us</a>
+</div>
+<div class="flex">
+<a class="mr-2" href="https://www.facebook.com/biblestudytools/">
+</a>
+<a class="mr-2" href="https://www.instagram.com/biblestudytoolscom/">
+</a>
+<a class="mr-2" href="https://www.youtube.com/channel/UCnYbuIiW2VuCtOZ2q-xGBFg">
+</a>
+</div>
+</div>
+<div class="col-span-1 mb-5">
+<picture><source sizes="100vw" srcset="https://i.swncdn.com/media/320w/logo/swn/swn-white-130w.webp 320w, https://i.swncdn.com/media/480w/logo/swn/swn-white-130w.webp 480w, https://i.swncdn.com/media/720w/logo/swn/swn-white-130w.webp 720w, https://i.swncdn.com/media/1024w/logo/swn/swn-white-130w.webp 1024w, https://i.swncdn.com/media/1600w/logo/swn/swn-white-130w.webp 1600w" type="image/webp">
+<source sizes="100vw" srcset="https://i.swncdn.com/media/320w/logo/swn/swn-white-130w.png 320w, https://i.swncdn.com/media/480w/logo/swn/swn-white-130w.png 480w, https://i.swncdn.com/media/720w/logo/swn/swn-white-130w.png 720w, https://i.swncdn.com/media/1024w/logo/swn/swn-white-130w.png 1024w, https://i.swncdn.com/media/1600w/logo/swn/swn-white-130w.png 1600w" type="image/png">
+<img alt="Salem Web Network" class="mb-3 max-w-[140px]" decoding="async" loading="lazy" onerror="this.onerror = null;this.parentNode.children[0].srcset = this.parentNode.children[1].srcset = this.src;" sizes="100vw" src="https://i.swncdn.com/media/320w/logo/swn/swn-white-130w.png" srcset="https://i.swncdn.com/media/320w/logo/swn/swn-white-130w.png 320w, https://i.swncdn.com/media/480w/logo/swn/swn-white-130w.png 480w, https://i.swncdn.com/media/720w/logo/swn/swn-white-130w.png 720w, https://i.swncdn.com/media/1024w/logo/swn/swn-white-130w.png 1024w, https://i.swncdn.com/media/1600w/logo/swn/swn-white-130w.png 1600w"/></source></source></picture>
+<p style="color: #ffffff !important;">
+        Proud member
+        of
+        <a class="text-primary" href="http://www.salemmedia.com">Salem Media Group</a>.
+      </p>
+</div>
+</div>
+<div class="border border-gray-800 mb-5"></div>
+<div class="text-center">
+<div>
+      Copyright © 2026, Bible Study Tools. All rights reserved. Article Images Copyright © 2026 Getty Images unless otherwise indicated.
+    </div>
+<div data-google-interstitial="false" id="us-nat-optout"></div>
+</div>
+<div id="swn-mop-sticky-bottom"></div>
+</footer>
+<dialog @hide-confirmation.window="hideDialog" @show-confirmation.window="showDialog($event.detail.title, $event.detail.message, $event.detail.yesText, $event.detail.noText, $event.detail.yesCallback, $event.detail.noCallback)" class="modal fixed w-screen h-screen top-0 left-0 flex items-center justify-center z-30" x-cloak="" x-data="BST.ConfirmationDialog()" x-show="open">
+<div @click="open = false" class="modal-overlay absolute w-full h-full bg-black opacity-50 top-0 left-0"></div>
+<div class="absolute h-full w-full lg:w-1/2 lg:h-auto bg-white rounded-sm justify-center z-10 flex flex-col shadow-xl p-3 shadow-md">
+<div class="pb-3 border-b border-gray-200 font-bold">
+<span x-text="title"></span>
+</div>
+<div class="mt-5">
+<p x-text="message"></p>
+</div>
+<div class="mt-5 border-t border-gray-300 pt-5 grid grid-cols-2 gap-5">
+<button @click="yesCallback()" class="bg-green-500 text-white px-3 py-2 rounded" x-text="yesText"></button>
+<button @click="noCallback()" class="bg-red-500 text-white px-3 py-2 rounded" x-text="noText"></button>
+</div>
+</div>
+</dialog>
+<div x-data="{}" x-init="
+  window.BST.Admiral.Targeting.Init('false', 'false', 'unregistered');
+  window.BST.Zeta.Init('biblestudytools', 'article', 'biblestudytools-article-11830432');
+  window.BST.Zeta.UpdateUser({EmailAddress: '', FirstName: '', LastName: ''});"></div>
+</body>
+</html>

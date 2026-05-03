@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+	<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://www.dadsagain.com/xmlrpc.php">
+<!-- speed -->
+<script defer="defer">
+  // lazyload
+    var _extends=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o])}return t},_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};!function(t,e){"object"===("undefined"==typeof exports?"undefined":_typeof(exports))&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):t.LazyLoad=e()}(this,function(){"use strict";function t(t,e,n){return!(u(t,e,n)||_(t,e,n)||f(t,e,n)||h(t,e,n))}function e(t,e,n){var o=e._settings;!n&&r(t)||(C(o.callback_enter,t),R.indexOf(t.tagName)>-1&&(x(t,e),y(t,o.class_loading)),H(t,e),s(t),C(o.callback_set,t))}var n=function(){return{elements_selector:"img",container:window,threshold:300,throttle:150,data_src:"src",data_srcset:"srcset",data_sizes:"sizes",data_bg:"bg",class_loading:"loading",class_loaded:"loaded",class_error:"error",class_initial:"initial",skip_invisible:!0,callback_load:null,callback_error:null,callback_set:null,callback_enter:null,callback_finish:null,to_webp:!1}},o=function(t,e){return t.getAttribute("data-"+e)},i=function(t,e,n){var o="data-"+e;null!==n?t.setAttribute(o,n):t.removeAttribute(o)},s=function(t){return i(t,"was-processed","true")},r=function(t){return"true"===o(t,"was-processed")},l=function(t){return t.filter(function(t){return!r(t)})},a=function(t,e){return t.filter(function(t){return t!==e})},c=function(t){return t.getBoundingClientRect().top+window.pageYOffset-t.ownerDocument.documentElement.clientTop},u=function(t,e,n){return(e===window?window.innerHeight+window.pageYOffset:c(e)+e.offsetHeight)<=c(t)-n},d=function(t){return t.getBoundingClientRect().left+window.pageXOffset-t.ownerDocument.documentElement.clientLeft},f=function(t,e,n){var o=window.innerWidth;return(e===window?o+window.pageXOffset:d(e)+o)<=d(t)-n},_=function(t,e,n){return(e===window?window.pageYOffset:c(e))>=c(t)+n+t.offsetHeight},h=function(t,e,n){return(e===window?window.pageXOffset:d(e))>=d(t)+n+t.offsetWidth},p=function(t,e){var n,o=new t(e);try{n=new CustomEvent("LazyLoad::Initialized",{detail:{instance:o}})}catch(t){(n=document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized",!1,!1,{instance:o})}window.dispatchEvent(n)},g=function(t,e){return e?t.replace(/\.(jpe?g|png)/gi,".webp"):t},m="undefined"!=typeof window,w=m&&!("onscroll"in window)||/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),v=m&&"classList"in document.createElement("p"),b=m&&function(){var t=document.createElement("canvas");return!(!t.getContext||!t.getContext("2d"))&&0===t.toDataURL("image/webp").indexOf("data:image/webp")}(),y=function(t,e){v?t.classList.add(e):t.className+=(t.className?" ":"")+e},E=function(t,e){v?t.classList.remove(e):t.className=t.className.replace(new RegExp("(^|\\s+)"+e+"(\\s+|$)")," ").replace(/^\s+/,"").replace(/\s+$/,"")},L=function(t,e,n,i){for(var s,r=0;s=t.children[r];r+=1)if("SOURCE"===s.tagName){var l=o(s,n);T(s,e,l,i)}},T=function(t,e,n,o){n&&t.setAttribute(e,g(n,o))},S=function(t,e){var n=b&&e.to_webp,i=o(t,e.data_src),s=o(t,e.data_bg);if(i){var r=g(i,n);t.style.backgroundImage='url("'+r+'")'}if(s){var l=g(s,n);t.style.backgroundImage=l}},O={IMG:function(t,e){var n=b&&e.to_webp,i=e.data_srcset,s=t.parentNode;s&&"PICTURE"===s.tagName&&L(s,"srcset",i,n);var r=o(t,e.data_sizes);T(t,"sizes",r);var l=o(t,i);T(t,"srcset",l,n);var a=o(t,e.data_src);T(t,"src",a,n)},IFRAME:function(t,e){var n=o(t,e.data_src);T(t,"src",n)},VIDEO:function(t,e){var n=e.data_src,i=o(t,n);L(t,"src",n),T(t,"src",i),t.load()}},H=function(t,e){var n=e._settings,o=t.tagName,i=O[o];if(i)return i(t,n),e._updateLoadingCount(1),void(e._elements=a(e._elements,t));S(t,n)},C=function(t,e){t&&t(e)},k=function(t,e,n){t.addEventListener(e,n)},z=function(t,e,n){t.removeEventListener(e,n)},N=function(t,e,n){k(t,"load",e),k(t,"loadeddata",e),k(t,"error",n)},A=function(t,e,n){z(t,"load",e),z(t,"loadeddata",e),z(t,"error",n)},I=function(t,e,n){var o=n._settings,i=e?o.class_loaded:o.class_error,s=e?o.callback_load:o.callback_error,r=t.target;E(r,o.class_loading),y(r,i),C(s,r),n._updateLoadingCount(-1)},x=function(t,e){var n=function n(i){I(i,!0,e),A(t,n,o)},o=function o(i){I(i,!1,e),A(t,n,o)};N(t,n,o)},R=["IMG","IFRAME","VIDEO"],D=function(t,e){for(;e.length;)t.splice(e.pop(),1)},F=function(t){this._settings=_extends({},n(),t),this._loadingCount=0,this._queryOriginNode=this._settings.container===window?document:this._settings.container,this._previousLoopTime=0,this._loopTimeout=null,this._boundHandleScroll=this.handleScroll.bind(this),this._isFirstLoop=!0,window.addEventListener("resize",this._boundHandleScroll),this.update()};return F.prototype={_loopThroughElements:function(e){var n=this._settings,o=this._elements,i=o?o.length:0,s=void 0,r=[],l=this._isFirstLoop;if(l&&(this._isFirstLoop=!1),0!==i){for(s=0;s<i;s++){var a=o[s];n.skip_invisible&&null===a.offsetParent||(e||t(a,n.container,n.threshold))&&(l&&y(a,n.class_initial),this.load(a),r.push(s))}D(o,r)}else this._stopScrollHandler()},_startScrollHandler:function(){this._isHandlingScroll||(this._isHandlingScroll=!0,this._settings.container.addEventListener("scroll",this._boundHandleScroll))},_stopScrollHandler:function(){this._isHandlingScroll&&(this._isHandlingScroll=!1,this._settings.container.removeEventListener("scroll",this._boundHandleScroll))},_updateLoadingCount:function(t){this._loadingCount+=t,0===this._elements.length&&0===this._loadingCount&&C(this._settings.callback_finish)},handleScroll:function(){var t=this._settings.throttle;if(0!==t){var e=Date.now(),n=t-(e-this._previousLoopTime);n<=0||n>t?(this._loopTimeout&&(clearTimeout(this._loopTimeout),this._loopTimeout=null),this._previousLoopTime=e,this._loopThroughElements()):this._loopTimeout||(this._loopTimeout=setTimeout(function(){this._previousLoopTime=Date.now(),this._loopTimeout=null,this._loopThroughElements()}.bind(this),n))}else this._loopThroughElements()},loadAll:function(){this._loopThroughElements(!0)},update:function(t){var e=this._settings,n=t||this._queryOriginNode.querySelectorAll(e.elements_selector);this._elements=l(Array.prototype.slice.call(n)),w?this.loadAll():(this._loopThroughElements(),this._startScrollHandler())},destroy:function(){window.removeEventListener("resize",this._boundHandleScroll),this._loopTimeout&&(clearTimeout(this._loopTimeout),this._loopTimeout=null),this._stopScrollHandler(),this._elements=null,this._queryOriginNode=null,this._settings=null},load:function(t,n){e(t,this,n)}},m&&function(t,e){if(e)if(e.length)for(var n,o=0;n=e[o];o+=1)p(t,n);else p(t,e)}(F,window.lazyLoadOptions),F});			
+  // lazyload
+</script>
+<!-- speed -->
+<!-- Start of Async Drift Code -->
+<!--<script defer="defer">
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('pgxr8x9fp5st');
+</script>-->
+<!-- End of Async Drift Code -->
+<script src="https://app.dadsagain.com/script/web/webscript.php?site=519"></script>
+<script defer="defer" type="text/javascript/defer"  src="https://cdn.callrail.com/companies/793910735/cc40725d5ff7cb2003a0/12/swap.js"></script>
+<script defer="defer" src='https://www.google.com/recaptcha/api.js'></script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '628008290708274');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=628008290708274&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<!-- Start Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-719896-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-719896-1');
+</script>
+<!-- End Google Analytics -->
+<style>
+.videos{width:100%; }
+.videos p{ font-size:11px!important;}
+.videos .vid{width:350px;float:left; margin:10px; }
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5SXQB6T');</script>
+<!-- End Google Tag Manager -->
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SXQB6T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
+
+<!--  Clickcease.com tracking-->
+<script type='text/javascript'>var script = document.createElement('script');
+script.async = true; script.type = 'text/javascript';
+var target = 'https://www.clickcease.com/monitor/stat.js';
+script.src = target;var elem = document.head;elem.appendChild(script);
+</script>
+<noscript>
+<a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com/stats/stats.aspx' alt='ClickCease'/></a>
+</noscript>
+<!--  Clickcease.com tracking-->
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Does Insurance Pay for Vasectomy Reversal Costs in 2026? &#8902; DadsAgain.com</title>
+	<meta name="description" content="Does Insurance Pay for Vasectomy Reversal Costs in 2026? The goal of this article, by microsurgeon and author Dr. Sheldon Marks, is to explain how and why" />
+	<link rel="canonical" href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/insurance-coverage/" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="3 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.dadsagain.com/cost-of-a-vasectomy-reversal/insurance-coverage/","url":"https://www.dadsagain.com/cost-of-a-vasectomy-reversal/insurance-coverage/","name":"Does Insurance Pay for Vasectomy Reversal Costs in 2026? &#8902; DadsAgain.com","isPartOf":{"@id":"https://www.dadsagain.com/#website"},"datePublished":"2017-02-05T17:13:02+00:00","dateModified":"2026-01-09T19:13:09+00:00","description":"Does Insurance Pay for Vasectomy Reversal Costs in 2026? The goal of this article, by microsurgeon and author Dr. Sheldon Marks, is to explain how and why","breadcrumb":{"@id":"https://www.dadsagain.com/cost-of-a-vasectomy-reversal/insurance-coverage/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.dadsagain.com/cost-of-a-vasectomy-reversal/insurance-coverage/"]}]},{"@type":"BreadcrumbList","@id":"https://www.dadsagain.com/cost-of-a-vasectomy-reversal/insurance-coverage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dadsagain.com/"},{"@type":"ListItem","position":2,"name":"What is the Cost of a Vasectomy Reversal in 2026?","item":"https://www.dadsagain.com/cost-of-a-vasectomy-reversal/"},{"@type":"ListItem","position":3,"name":"Does Insurance Pay for Vasectomy Reversal Costs in 2026?"}]},{"@type":"WebSite","@id":"https://www.dadsagain.com/#website","url":"https://www.dadsagain.com/","name":"DadsAgain.com","description":"","publisher":{"@id":"https://www.dadsagain.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.dadsagain.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.dadsagain.com/#organization","name":"DadsAgain.com","url":"https://www.dadsagain.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.dadsagain.com/#/schema/logo/image/","url":"https://www.dadsagain.com/wp-content/uploads/2022/12/DadsAgain-Filler1.jpg","contentUrl":"https://www.dadsagain.com/wp-content/uploads/2022/12/DadsAgain-Filler1.jpg","width":800,"height":600,"caption":"DadsAgain.com"},"image":{"@id":"https://www.dadsagain.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/pages/ICVR-International-Center-for-Vasectomy-Reversal/108482095893204","https://x.com/dadsagain","https://www.instagram.com/dadsagain/"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//static.addtoany.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="DadsAgain.com &raquo; Feed" href="https://www.dadsagain.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="DadsAgain.com &raquo; Comments Feed" href="https://www.dadsagain.com/comments/feed/" />
+<link rel='stylesheet' id='sgr_main-css' href='https://www.dadsagain.com/wp-content/plugins/simple-google-recaptcha/sgr.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.dadsagain.com/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='dashicons-css' href='https://www.dadsagain.com/wp-includes/css/dashicons.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css' href='https://www.dadsagain.com/wp-includes/css/admin-bar.min.css' type='text/css' media='all' />
+<style id='admin-bar-inline-css' type='text/css'>
+
+    /* Hide CanvasJS credits for P404 charts specifically */
+    #p404RedirectChart .canvasjs-chart-credit {
+        display: none !important;
+    }
+    
+    #p404RedirectChart canvas {
+        border-radius: 6px;
+    }
+
+    .p404-redirect-adminbar-weekly-title {
+        font-weight: bold;
+        font-size: 14px;
+        color: #fff;
+        margin-bottom: 6px;
+    }
+
+    #wpadminbar #wp-admin-bar-p404_free_top_button .ab-icon:before {
+        content: "\f103";
+        color: #dc3545;
+        top: 3px;
+    }
+    
+    #wp-admin-bar-p404_free_top_button .ab-item {
+        min-width: 80px !important;
+        padding: 0px !important;
+    }
+    
+    /* Ensure proper positioning and z-index for P404 dropdown */
+    .p404-redirect-adminbar-dropdown-wrap { 
+        min-width: 0; 
+        padding: 0;
+        position: static !important;
+    }
+    
+    #wpadminbar #wp-admin-bar-p404_free_top_button_dropdown {
+        position: static !important;
+    }
+    
+    #wpadminbar #wp-admin-bar-p404_free_top_button_dropdown .ab-item {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .p404-redirect-dropdown-container {
+        min-width: 340px;
+        padding: 18px 18px 12px 18px;
+        background: #23282d !important;
+        color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+        margin-top: 10px;
+        position: relative !important;
+        z-index: 999999 !important;
+        display: block !important;
+        border: 1px solid #444;
+    }
+    
+    /* Ensure P404 dropdown appears on hover */
+    #wpadminbar #wp-admin-bar-p404_free_top_button .p404-redirect-dropdown-container { 
+        display: none !important;
+    }
+    
+    #wpadminbar #wp-admin-bar-p404_free_top_button:hover .p404-redirect-dropdown-container { 
+        display: block !important;
+    }
+    
+    #wpadminbar #wp-admin-bar-p404_free_top_button:hover #wp-admin-bar-p404_free_top_button_dropdown .p404-redirect-dropdown-container {
+        display: block !important;
+    }
+    
+    .p404-redirect-card {
+        background: #2c3338;
+        border-radius: 8px;
+        padding: 18px 18px 12px 18px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 1px solid #444;
+    }
+    
+    .p404-redirect-btn {
+        display: inline-block;
+        background: #dc3545;
+        color: #fff !important;
+        font-weight: bold;
+        padding: 5px 22px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 17px;
+        transition: background 0.2s, box-shadow 0.2s;
+        margin-top: 8px;
+        box-shadow: 0 2px 8px rgba(220,53,69,0.15);
+        text-align: center;
+        line-height: 1.6;
+    }
+    
+    .p404-redirect-btn:hover {
+        background: #c82333;
+        color: #fff !important;
+        box-shadow: 0 4px 16px rgba(220,53,69,0.25);
+    }
+    
+    /* Prevent conflicts with other admin bar dropdowns */
+    #wpadminbar .ab-top-menu > li:hover > .ab-item,
+    #wpadminbar .ab-top-menu > li.hover > .ab-item {
+        z-index: auto;
+    }
+    
+    #wpadminbar #wp-admin-bar-p404_free_top_button:hover > .ab-item {
+        z-index: 999998 !important;
+    }
+    
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://www.dadsagain.com/wp-content/plugins/contact-form-7/includes/css/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wpcf7-redirect-script-frontend-css' href='https://www.dadsagain.com/wp-content/plugins/wpcf7-redirect/build/assets/frontend-script.css' type='text/css' media='all' />
+<link rel='stylesheet' id='pilot-style-css' href='https://www.dadsagain.com/wp-content/themes/pilot/dest/css/main.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='addtoany-css' href='https://www.dadsagain.com/wp-content/plugins/add-to-any/addtoany.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='rich-reviews-css' href='https://www.dadsagain.com/wp-content/plugins/rich-reviews-master/css/rich-reviews.css' type='text/css' media='all' />
+<script type="text/javascript" id="sgr_main-js-extra">
+/* <![CDATA[ */
+var sgr_main = {"sgr_site_key":"6LerHzMUAAAAALSE64i1EIGdeHGHe6wstKfqZ2vE"};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="https://www.dadsagain.com/wp-content/plugins/simple-google-recaptcha/sgr.js" id="sgr_main-js"></script>
+<script type="text/javascript" id="addtoany-core-js-before">
+/* <![CDATA[ */
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+/* ]]> */
+</script>
+<script type="text/javascript" defer defer src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" id="jquery-js"></script>
+<script type="text/javascript" defer defer src="https://www.dadsagain.com/wp-content/plugins/add-to-any/addtoany.min.js" id="addtoany-jquery-js"></script>
+<script type="text/javascript" id="wpgmza_data-js-extra">
+/* <![CDATA[ */
+var wpgmza_google_api_status = {"message":"Enqueued","code":"ENQUEUED"};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="https://www.dadsagain.com/wp-content/plugins/wp-google-maps/wpgmza_data.js" id="wpgmza_data-js"></script>
+<script type="text/javascript" defer src="https://www.dadsagain.com/wp-content/themes/pilot/bower_components/wow/dist/wow.js" id="pilot-wow-js"></script>
+<script type="text/javascript" defer src="https://www.dadsagain.com/wp-content/plugins/rich-reviews-master/js/rich-reviews.js" id="rich-reviews-js"></script>
+<link rel="https://api.w.org/" href="https://www.dadsagain.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.dadsagain.com/wp-json/wp/v2/pages/723" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.dadsagain.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.5" />
+<link rel='shortlink' href='https://www.dadsagain.com/?p=723' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.dadsagain.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dadsagain.com%2Fcost-of-a-vasectomy-reversal%2Finsurance-coverage%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.dadsagain.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dadsagain.com%2Fcost-of-a-vasectomy-reversal%2Finsurance-coverage%2F&#038;format=xml" />
+		<style type="text/css" id="wp-custom-css">
+			/*#generic_content_block_5{
+	display:none;
+}*/
+img:not([src]) {
+    visibility: hidden;
+}
+.wow.fadeInUp.animated{
+	animation:none !important;
+}		</style>
+		</head>	<body data-rsssl=1 class="wp-singular page-template page-template-tpl_about_us page-template-tpl_about_us-php page page-id-723 page-child parent-pageid-38 wp-theme-pilot">
+		<div class="site">
+			<script defer="defer" id="modernizr-custom" src="https://www.dadsagain.com/wp-content/themes/pilot/dest/js/modernizr-custom.js" ></script>
+<script defer="defer" type="text/javascript" src="https://cdn.callrail.com/companies/793910735/cc40725d5ff7cb2003a0/12/swap.js"></script>
+<header id="masthead" class="site-header">
+	
+    <div class="top_section">
+	
+        <div class="site-branding">
+		<div class="main-container">
+            <a href="https://www.dadsagain.com"><h1 class="logo">						<img src='https://dadsagain.com/wp-content/uploads/2016/07/logo.png' alt='DadsAgain.com'>
+			</a>
+			
+			</h1>
+			 <!--<h1 class="logo" style="padding:0 0 0 20px;"><a href="https://www.dadsagain.com/articles/reversaltextbook/"><img src="https://www.dadsagain.com/wp-content/uploads/2019/04/headd.png" /></a></h1>-->
+			<div class="search-part">
+		
+			<section id="text-2" class="widget widget_text">			<div class="textwidget"><a class="fs-phone-route" data-phone-route="1395" href="tel:5207312705">(520) 731-2705</a></div>
+		</section><section id="search-4" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://www.dadsagain.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></section>		</div>
+        </div><!-- .site-branding -->
+        
+	 </div>	
+	<nav id="site-navigation" class="main-navigation custom-menu">
+		<div class="main-container">
+		<div class="dl-menuwrapper" id="dl-menu">
+			<!--<label for="show-menu" class="show-menu">Menu</label>
+			<input id="show-menu" role="button" type="checkbox">-->
+		<!--<button id="c-button--push-left" class="c-button menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>-->
+			            <ul id="primary-menu" class=" c-menu c-menu--push-left dl-menu"><li id="menu-item-2415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="https://www.dadsagain.com/">Home<br /><span class="sub"></span></a></li>
+<li id="menu-item-300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.dadsagain.com/vasectomy-reversal/">Vasectomy Reversal »<br /><span class="sub"></span></a>
+<ul class="dl-submenu submenu">
+	<li id="menu-item-854" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/vasectomy-reversal/our-high-success-rate/">How Do Dr. Marks and Dr. Burrows Get Such a High Vasectomy Reversal Success Rate in 2026?<br /><span class="sub"></span></a></li>
+	<li id="menu-item-855" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/vasectomy-reversal/number-of-years-since-your-vasectomy/">Will a Vasectomy Reversal Work after 10, 15, 20 or 25 Years After Vasectomy ? &#8211; The Truth About the Number of Years Since the Vasectomy in 2026<br /><span class="sub"></span></a></li>
+	<li id="menu-item-856" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/vasectomy-reversal/our-one-a-day-approach/">Only One Vasectomy Reversal a Day, and Why This Is  So Important<br /><span class="sub"></span></a></li>
+	<li id="menu-item-857" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/vasectomy-reversal/every-patient-know/">Insider Tips – What Every Patient Should Know<br /><span class="sub"></span></a></li>
+	<li id="menu-item-918" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/vasectomy-reversal/what-to-expect/">The Vasectomy Reversal Experience, What to Expect<br /><span class="sub"></span></a></li>
+</ul>
+</li>
+<li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children"><a href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/">Reversal Cost »<br /><span class="sub"></span></a>
+<ul class="dl-submenu submenu">
+	<li id="menu-item-858" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/payment-options/">Affordable Payment Options for a Vasectomy Reversal in 2026<br /><span class="sub"></span></a></li>
+	<li id="menu-item-860" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-723 current_page_item"><a href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/insurance-coverage/">Does Insurance Pay for Vasectomy Reversal Costs in 2026?<br /><span class="sub"></span></a></li>
+	<li id="menu-item-859" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/why-not-use-cheapest/">Why not use the cheapest?<br /><span class="sub"></span></a></li>
+	<li id="menu-item-861" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/comparing-cost-of-reversals/">Using Cost to Choose<br /><span class="sub"></span></a></li>
+</ul>
+</li>
+<li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.dadsagain.com/about-icvr/">ICVR Backstory  »<br /><span class="sub"></span></a>
+<ul class="dl-submenu submenu">
+	<li id="menu-item-862" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/about-icvr/why-choose-icvr/">Why Choose ICVR for a Vasectomy Reversal ?<br /><span class="sub"></span></a></li>
+	<li id="menu-item-863" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/about-icvr/our-surgical-reversal-suite/">Our Vasectomy Reversal Surgical Suite<br /><span class="sub"></span></a></li>
+	<li id="menu-item-865" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/about-icvr/about-dr-marks/">About Dr. Sheldon H.F. Marks- 2026 Update<br /><span class="sub"></span></a></li>
+	<li id="menu-item-864" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/about-icvr/about-dr-burrows/">About Dr. Peter J. Burrows in 2026<br /><span class="sub"></span></a></li>
+</ul>
+</li>
+<li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.dadsagain.com/reversal-information/">Don’t All Doctors Get the Same Success?  »<br /><span class="sub"></span></a>
+<ul class="dl-submenu submenu">
+	<li id="menu-item-952" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/reversal-information/your-babies-our-successes/">Our Patient’s Babies, Our Successes<br /><span class="sub"></span></a></li>
+	<li id="menu-item-958" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/reversal-information/reversal-myths/">7 Common Vasectomy Reversal Myths, Updated in 2026<br /><span class="sub"></span></a></li>
+	<li id="menu-item-959" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/articles/">Articles, Blogs and Patient Care Information about Vasectomy Reversals and Related Topics, Update 2026<br /><span class="sub"></span></a></li>
+	<li id="menu-item-957" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/reversal-information/videos/">Videos with ICVR Patients and Q&#038;A<br /><span class="sub"></span></a></li>
+</ul>
+</li>
+<li id="menu-item-1044" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.dadsagain.com/questions/">20 Questions  »<br /><span class="sub"></span></a>
+<ul class="dl-submenu submenu">
+	<li id="menu-item-1046" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/questions/types-of-doctors/">What Are the 4 Types of Vasectomy Reversal Doctors (and the Smart One to Choose)?<br /><span class="sub"></span></a></li>
+	<li id="menu-item-1045" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/questions/secrets-discount-doctors/">Insider Secrets of Discount Vasectomy Reversal Doctors<br /><span class="sub"></span></a></li>
+</ul>
+</li>
+<li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.dadsagain.com/contact-us/">Contact Us  »<br /><span class="sub"></span></a>
+<ul class="dl-submenu submenu">
+	<li id="menu-item-2393" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/clients-testimonials/">Patient&#8217;s Testimonials<br /><span class="sub"></span></a></li>
+	<li id="menu-item-867" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/contact-us/schedule-a-free-consultation/">How Do We Schedule a Free Consultation?<br /><span class="sub"></span></a></li>
+	<li id="menu-item-1034" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/contact-us/in-the-news/">Our Vasectomy Reversal Doctors in the News &#8211; 2026 Update<br /><span class="sub"></span></a></li>
+	<li id="menu-item-866" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/?page_id=635">Hotel Packages<br /><span class="sub"></span></a></li>
+	<li id="menu-item-1033" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/contact-us/where-patients-travel-from/">Where do ICVR&#8217;s Vasectomy Reversal Patients Travel From? 2026 Update<br /><span class="sub"></span></a></li>
+	<li id="menu-item-1198" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.dadsagain.com/contact-us/press/">Press / Media Contact<br /><span class="sub"></span></a></li>
+</ul>
+</li>
+<div class="container1 main-navigation custom-menu">
+		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span> <span class="text">Menu</span></button>
+		<nav class="menu " id="ml-menu">
+			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+            <div class="menu__wrap">
+				<ul data-menu="main" class="menu__level"><li class="menu__item">
+<a class="menu__link" href="https://www.dadsagain.com/" title="Home">Home</a>
+</li>
+<li class="menu__item">
+<a href="#" class="menu__link arrow" data-submenu="submenu-2" title="Vasectomy Reversal »"></a><a class="menu__link" data-submenu="submenu-2" href="https://www.dadsagain.com/vasectomy-reversal/" title="Vasectomy Reversal »" >Vasectomy Reversal »</a>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+<li class="menu__item">
+<a href="#" class="menu__link arrow" data-submenu="submenu-8" title="Reversal Cost »"></a><a class="menu__link" data-submenu="submenu-8" href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/" title="Reversal Cost »" >Reversal Cost »</a>
+</li>
+</li>
+</li>
+</li>
+</li>
+<li class="menu__item">
+<a href="#" class="menu__link arrow" data-submenu="submenu-13" title="ICVR Backstory  »"></a><a class="menu__link" data-submenu="submenu-13" href="https://www.dadsagain.com/about-icvr/" title="ICVR Backstory  »" >ICVR Backstory  »</a>
+</li>
+</li>
+</li>
+</li>
+</li>
+<li class="menu__item">
+<a href="#" class="menu__link arrow" data-submenu="submenu-18" title="Don’t All Doctors Get the Same Success?  »"></a><a class="menu__link" data-submenu="submenu-18" href="https://www.dadsagain.com/reversal-information/" title="Don’t All Doctors Get the Same Success?  »" >Don’t All Doctors Get the Same Success?  »</a>
+</li>
+</li>
+</li>
+</li>
+</li>
+<li class="menu__item">
+<a href="#" class="menu__link arrow" data-submenu="submenu-23" title="20 Questions  »"></a><a class="menu__link" data-submenu="submenu-23" href="https://www.dadsagain.com/questions/" title="20 Questions  »" >20 Questions  »</a>
+</li>
+</li>
+</li>
+<li class="menu__item">
+<a href="#" class="menu__link arrow" data-submenu="submenu-26" title="Contact Us  »"></a><a class="menu__link" data-submenu="submenu-26" href="https://www.dadsagain.com/contact-us/" title="Contact Us  »" >Contact Us  »</a>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</ul>
+<ul class="menu__level" data-menu="submenu-2"><li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/vasectomy-reversal/our-high-success-rate/">How Do Dr. Marks and Dr. Burrows Get Such a High Vasectomy Reversal Success Rate in 2026?<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/vasectomy-reversal/number-of-years-since-your-vasectomy/">Will a Vasectomy Reversal Work after 10, 15, 20 or 25 Years After Vasectomy ? &#8211; The Truth About the Number of Years Since the Vasectomy in 2026<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/vasectomy-reversal/our-one-a-day-approach/">Only One Vasectomy Reversal a Day, and Why This Is  So Important<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/vasectomy-reversal/every-patient-know/">Insider Tips – What Every Patient Should Know<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/vasectomy-reversal/what-to-expect/">The Vasectomy Reversal Experience, What to Expect<br><span class="sub"></span></a></li>
+</ul><ul class="menu__level" data-menu="submenu-8"><li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/payment-options/">Affordable Payment Options for a Vasectomy Reversal in 2026<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/insurance-coverage/">Does Insurance Pay for Vasectomy Reversal Costs in 2026?<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/why-not-use-cheapest/">Why not use the cheapest?<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/comparing-cost-of-reversals/">Using Cost to Choose<br><span class="sub"></span></a></li>
+</ul><ul class="menu__level" data-menu="submenu-13"><li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/about-icvr/why-choose-icvr/">Why Choose ICVR for a Vasectomy Reversal ?<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/about-icvr/our-surgical-reversal-suite/">Our Vasectomy Reversal Surgical Suite<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/about-icvr/about-dr-marks/">About Dr. Sheldon H.F. Marks- 2026 Update<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/about-icvr/about-dr-burrows/">About Dr. Peter J. Burrows in 2026<br><span class="sub"></span></a></li>
+</ul><ul class="menu__level" data-menu="submenu-18"><li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/reversal-information/your-babies-our-successes/">Our Patient’s Babies, Our Successes<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/reversal-information/reversal-myths/">7 Common Vasectomy Reversal Myths, Updated in 2026<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/articles/">Articles, Blogs and Patient Care Information about Vasectomy Reversals and Related Topics, Update 2026<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/reversal-information/videos/">Videos with ICVR Patients and Q&#038;A<br><span class="sub"></span></a></li>
+</ul><ul class="menu__level" data-menu="submenu-23"><li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/questions/types-of-doctors/">What Are the 4 Types of Vasectomy Reversal Doctors (and the Smart One to Choose)?<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/questions/secrets-discount-doctors/">Insider Secrets of Discount Vasectomy Reversal Doctors<br><span class="sub"></span></a></li>
+</ul><ul class="menu__level" data-menu="submenu-26"><li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/clients-testimonials/">Patient's Testimonials<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/contact-us/schedule-a-free-consultation/">How Do We Schedule a Free Consultation?<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/contact-us/in-the-news/">Our Vasectomy Reversal Doctors in the News &#8211; 2026 Update<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/?page_id=635">Hotel Packages<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/contact-us/where-patients-travel-from/">Where do ICVR&#8217;s Vasectomy Reversal Patients Travel From? 2026 Update<br><span class="sub"></span></a></li>
+<li class="menu__item"><a class="menu__link" href="https://www.dadsagain.com/contact-us/press/">Press / Media Contact<br><span class="sub"></span></a></li>
+</ul></div></nav></div></ul>			<div id="c-mask" class="c-mask"></div><!-- /c-mask -->
+					</div>
+</div>
+
+        </nav>
+		
+
+	</div>
+</header>			<div class="site-content">
+				<main class="site-main custom-page">
+    <section class="full-container">
+		
+		<section class="page-header">
+			<h1>Does Insurance Pay for Vasectomy Reversal Costs in 2026?</h1>
+		</section>
+	<section class="container">
+        <div id="sidebar" class="sidebar">
+		<section class="widget_nav_menu">
+		<ul class="">
+								<li class=" "><a href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/">What is the Cost of a Vasectomy Reversal in 2026?</a></li>
+                
+									<li class="0">
+						<a href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/payment-options/">Affordable Payment Options for a Vasectomy Reversal in 2026 </a> 
+					</li>
+										<li class="current-menu-item">
+						<a href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/insurance-coverage/">Does Insurance Pay for Vasectomy Reversal Costs in 2026? </a> 
+					</li>
+										<li class="current-menu-iten">
+						<a href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/comparing-cost-of-reversals/">The Mistake of Using Cost or Convenience - What Should Couples Look for When Comparing Cost of Vasectomy Reversals? </a> 
+					</li>
+										<li class="current-menu-iteo">
+						<a href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/why-not-use-cheapest/">Why Not Use the Cheapest Vas Reversal Doctor in 2026? </a> 
+					</li>
+					</ul>
+			</section>
+			
+					
+		
+		
+		
+		</div>
+				<section class="main-content">	
+					<div class="breadcrumbs">
+						<p class="yoast-breadcrumb"><span><span><a href="https://www.dadsagain.com/">Home</a></span> &raquo; <span><a href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/">What is the Cost of a Vasectomy Reversal in 2026?</a></span> &raquo; <span class="breadcrumb_last" aria-current="page">Does Insurance Pay for Vasectomy Reversal Costs in 2026?</span></span></p>						<ul>
+							<li><a href="#"><i class="icon ion-android-share-alt"></i> <div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/insurance-coverage/" data-a2a-title="Does Insurance Pay for Vasectomy Reversal Costs in 2026?"><a class="a2a_dd addtoany_no_icon addtoany_share_save addtoany_share" href="https://www.addtoany.com/share">Share</a></div> </a></li>
+							<li><a href="#"><i class="icon ion-printer"></i> <div class="printfriendly pf-button  pf-alignleft">
+                    <a href="#" rel="nofollow" onclick="window.print(); return false;" title="Printer Friendly, PDF & Email">
+                    <span id="printfriendly-text2" class="pf-button-text">Print</span>
+                    </a>
+                </div></a></li>
+						</ul>
+					</div>
+										<article id="post-723" class="post-723 page type-page status-publish hentry">
+			<!--<header class="entry-header">-->
+					<!--</header>-->
+		<div class="entry-content custom-conent-page">
+		
+		<h2>Does Insurance Pay for Vasectomy Reversal Costs in 2026?</h2>
+<p>The goal of this article, by microsurgeon and author <a href="https://www.dadsagain.com/about-icvr/about-dr-marks/">Dr. Sheldon Marks,</a> is to explain how and why insurance rarely pays for a vas reversal.</p>
+<p>Bottom line, for most men a vasectomy reversal is usually <strong>not covered</strong> by most insurance plans. Insurance companies think it is an elective and so not a &#8220;medically necessary&#8221; procedure. They do not want to pay for correcting a past decision that men now regret. Plus, I have been told by an insurance insider that a successful vasectomy reversal will increase insurance company costs as they now have to pay for the delivery and costs for more children with no additional income to cover these expenses.</p>
+<p><strong>How to find out if insurance will pay for the vasectomy reversal? </strong><br />
+Because there are many thousands of insurance plans and so many variations within each plan, each patient will have to call the insurance company and find out if the specific plan that they have will cover an &#8220;outpatient microsurgical vasovasostomy&#8221; (code # <strong>55400-50</strong>). It is best not to say the words &#8220;vasectomy reversal.&#8221;</p>
+<p><strong>The vasectomy reversal is approved!&#8230;maybe&#8230;probably not!</strong><br />
+Even if the insurance company representative says that &#8220;yes, an outpatient vas reversal is covered,&#8221; as they often do, please know that what the representative says <strong>usually is not</strong> true and they will refuse to pay later on. It’s one of those fine print things buried deep in the health insurance contract that no one ever reads. When they say &#8220;yes, it is covered” what they really are saying is that under the terms of the insurance contract, outpatient surgery even with a non-contracted provider is usually a &#8220;covered expense.&#8221;</p>
+<p>The problem is that in the decades of our performing many thousands and thousands of vasectomy reversals, the insurance company almost always will deny payment later on after the surgery. Here&#8217;s how they can do that &#8211; the authorization department that says that it is &#8220;covered&#8221; is not the same department that later on has to approve the payment and write the check. The payment division then explains that even if &#8220;pre-approved,&#8221; the insurance company is not legally bound to pay. This then leaves the patient now responsible to pay the unexpected bill.</p>
+<p>Even if the insurance company or agency does “approve” the vas reversal and actually sends a check to the doctor, in my experience it may be only a few hundred dollars for a several thousand-dollar procedure. They reason is that the insurance company alone gets to decide how much they think is &#8220;reasonable and customary&#8221; for a vasectomy reversal in 2026, even though it is many thousands less than the true costs. Some insurance plans try to direct patients to an “in plan” contracted urologist to do the vas reversal, even if the doctor is not trained, skilled or experienced in urologic microsurgery.</p>
+<p><strong>How the ICVR team works with each patient</strong><br />
+ICVR is <strong>not</strong> contracted with any insurance company, business or government/military entity or veterans agency. We simply cannot hire several more full-time employees just to file and re-file hundreds of claims over and over again with months of challenges and battles with insurance companies all over the US and around the world. Instead, we have found that is is easier for the patient pay for the vas reversal up front and then apply to the insurance company for reimbursement. We provide a copy of the operative note to help with this process.</p>
+<p>Plus, because we know that a well performed microsurgical reverse vasectomy is not cheap, we offer <a href="https://www.dadsagain.com/cost-of-a-reversal/payment-options/">payment options</a> for most couples.</p>
+<p>If there are any questions about vasectomy reversals or to set up a no-cost consultation with one of the 2 microsurgeons, please call our <strong>full-time, vas reversal only</strong> center today!</p>
+<p>This page was reviewed, edited and updated January 9, 2026 by Sheldon H. F. Marks, MD.</p>
+			
+	</div><!-- .entry-content -->
+	<footer class="entry-footer ">
+			</footer>
+</article>								
+
+									
+					<div class="breadcrumbs footer">
+						<p class="yoast-breadcrumb"><span><span><a href="https://www.dadsagain.com/">Home</a></span> &raquo; <span><a href="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/">What is the Cost of a Vasectomy Reversal in 2026?</a></span> &raquo; <span class="breadcrumb_last" aria-current="page">Does Insurance Pay for Vasectomy Reversal Costs in 2026?</span></span></p>						<ul>
+							<li><a href="#"><i class="icon ion-android-share-alt"></i> <div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="https://www.dadsagain.com/cost-of-a-vasectomy-reversal/insurance-coverage/" data-a2a-title="Does Insurance Pay for Vasectomy Reversal Costs in 2026?"><a class="a2a_dd addtoany_no_icon addtoany_share_save addtoany_share" href="https://www.addtoany.com/share">Share</a></div> </a></li>
+							
+						</ul>
+					</div>
+				</section><!-- main-content --> 
+
+		</section>
+    </section>
+			</main>
+			<aside class="widget-area" role="complementary">
+	</aside>			</div><!-- /site-content -->
+			<div id="generic_content_block_5" class="block-generic_content-footer  module    ">
+
+<div class="layout-content"><div class="gc-wrap wow  fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+	<h3>Let’s talk. We’re here to help.</h3>
+	<div class="gc-content"><div lang="en-US" dir="ltr" id="wpcf7-f123-p32-o1" class="wpcf7" role="form">
+<div class="screen-reader-response"></div>
+<div data-fs-form-id="294"></div>
+<h3>or call us toll-free at   <span class="phone_no"><a class="fs-phone-route" data-phone-route="1394" href="tel:5207312705">(520) 731-2705</a></span></h3>
+<p>&nbsp;</p>
+</div>
+</div>
+</div><!--/layout-content--></div></div>
+<div id="full_map_block_6" class="block-full_map module    "><div class="layout-content"><div class="wow  fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+<div style="background-image: url(https://www.dadsagain.com/wp-content/uploads/2016/07/map_back-1.png);" class="bg-image">
+	 <div class="gc-content"><p><a href="https://dadsagain.com/where-our-patients-come-from/">Proud to have MORE THEN <strong><span class="big-font"> 7000</span></strong> men from every state in<br />
+the US and more than <strong><span class="big-font">85</span></strong> countries</a></p>
+</div>
+	</div>
+</div>
+</div><!--/layout-content--></div>
+
+
+
+
+<footer class="site-footer footer-custom">
+	<div class="footer-part">
+		<div class="main-container">
+			<div class="column one">
+				<section id="text-4" class="widget widget_text"><h2 class="widget-title">Surgery Center</h2>			<div class="textwidget">850 N. KOLB RD<br >
+TUCSON,  AZ 85710<br >
+<a href="https://www.dadsagain.com/contact-us/">Directions</a>
+
+<div style="width: 46%; margin-right:3%;margin-top:20px;margin-bottom:20px;">
+				<!--<a target="_blank" id="bbblink" class="ruhzbum" href="http://www.bbb.org/tucson/business-reviews/physicians-and-surgeons-medical-md/international-center-for-vasectomy-reversal-pc-in-tucson-az-2000125#bbbseal" title="International Center for Vasectomy Reversal, PC, Physicians &amp; SurgeonsMedicalM.D., Tucson, AZ" style="padding: 0px; margin: 0px;">--><a href="#" id="bbblink" class="ruhzbum"><img class="lazy has-webp" style="padding: 0px; border: none;" id="bbblinkimg" data-src="https://dadsagain.com/wp-content/uploads/2017/06/international-center-for-vasectomy-reversal-pc-2000125.png" width="300" height="68" alt="International Center for Vasectomy Reversal, PC, Physicians &amp; SurgeonsMedicalM.D., Tucson, AZ"></a><script type="text/javascript">var bbbprotocol = ( ("https:" == document.location.protocol) ? "https://" : "http://" ); document.write(unescape("%3Cscript src='" + bbbprotocol + 'seal-tucson.bbb.org' + unescape('%2Flogo%2Finternational-center-for-vasectomy-reversal-pc-2000125.js') + "' type='text/javascript'%3E%3C/script%3E"));</script><script src="https://seal-tucson.bbb.org/logo/international-center-for-vasectomy-reversal-pc-2000125.js" type="text/javascript"></script>
+</div>
+<img class="lazy has-webp" data-src="https://dadsagain.com/wp-content/uploads/2017/06/SheldonMarks.jpg" style="display: inline-block; width: 46%;"/></div>
+		</section>			</div>
+			<div class="column two">
+				<section id="text-5" class="widget widget_text"><h2 class="widget-title footer-title">Call</h2>			<div class="textwidget"><span class="label-call" style="font-size:17px;">Toll Free</span><br >
+<span class="content-call" ><a class="fs-phone-route" data-phone-route="1395" href="tel:5207312705">(520) 731-2705</a></span><br ><br >
+
+<span class="label-call"  style="font-size:17px;">Tucson</span><br >
+<span class="content-call"><a class="fs-phone-route" data-phone-route="1395" href="tel:5207312705">(520) 731-2705</a></span><br >
+</div>
+		</section>			</div>
+			<div class="column three">
+				<section id="text-8" class="widget widget_text"><h2 class="widget-title footer-title">Social</h2>			<div class="textwidget"><style>.facebook-icont, .instagra, .twitter
+{ display: inline-block; background: url('https://dadsagain.com/wp-content/uploads/2016/07/download.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+.facebook-icont { background-position: -0px -0px; width: 14px; height: 14px; }
+.instagra { background-position: -0px -14px; width: 14px; height: 14px; }
+.twitter { background-position: -0px -28px; width: 14px; height: 12px; }
+</style>
+<a href="https://www.facebook.com/pages/ICVR-International-Center-for-Vasectomy-Reversal/108482095893204" target="_blank"><span class="facebook-line"><span class="icon-font"><div class="facebook-icont"></div></span>  <span class="title"> Facebook</span></span></a>
+
+
+
+<a href="http://twitter.com/dadsagain" target="_blank"><span class="twitter-line"><span class="icon-font">
+<div class="twitter"></div></span> <span class="title"> Twitter</span></span></a>
+
+<a href="https://www.instagram.com/dadsagain/" target="_blank"><span class="instagram-line"><span class="icon-font"><div class="instagra"></div></span> <span class="title">Instagram</span></span></a></div>
+		</section>			</div>
+			<div class="column four">
+				<section id="text-7" class="widget widget_text">			<div class="textwidget"><span class="tag-line">
+INTERNATIONAL CENTER FOR<br >
+VASECTOMY REVERSAL
+
+</span>
+
+<h1>We Make Men <br >
+ Dads Again<sup>™</sup></h1>
+<div itemscope="" itemtype="http://schema.org/Service">
+				<span itemprop="name" style="display:none">
+					International Center for Vasectomy Reversal				</span>
+				Overall rating:				<span itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+					<span class="stars" style="color: #ffaf00;">
+						★★★★★					</span>
+					<span class="rating" itemprop="ratingValue" style="display: none !important;">
+						5					</span> based on
+					<span class="votes" itemprop="reviewCount">
+						125				</span> reviews
+					<div style="display:none">
+						<span itemprop="bestRating">5</span>
+						<span itemprop="worstRating">1</span>
+					</div>
+				</span>
+			</div>
+</div>
+		</section>			</div>
+		</div>
+	</div>
+
+	<div class="site-info">
+		<div class="main-container">
+		 
+		<section id="text-3" class="widget widget_text">			<div class="textwidget"><p>Copyright © 2000-2026 International Center for Vasectomy Reversal. All rights Reserved. Your information will never be shared with anyone.<br />
+<a style="text-decoration: underline;" href="https://www.dadsagain.com/privacy-policy/">Privacy Policy</a> | <a style="text-decoration: underline;" href="https://www.dadsagain.com/copyright-and-disclaimer/">Copyright and Disclaimer</a></p>
+</div>
+		</section>		</div>
+	</div><!-- .site-info -->
+</footer>
+
+<script>
+    jQuery(document).ready(function( $ ) {
+        $('.big-font').counterUp({
+            delay: 10,
+            time: 1000
+        });
+    });
+</script>
+<script defer id="counterup1" src="https://www.dadsagain.com/wp-content/themes/pilot/dest/js/jquery.counterup.min.js" ></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+
+
+<script defer src="https://www.dadsagain.com/wp-content/themes/pilot/dest/js/main.js" ></script>
+
+<script defer src="https://www.dadsagain.com/wp-content/themes/pilot/dest/js/classie.js" ></script>
+
+<script>
+(function() {
+	var menuEl = document.getElementById('ml-menu'),
+		mlmenu = new MLMenu(menuEl, {
+			// breadcrumbsCtrl : true, // show breadcrumbs
+			// initialBreadcrumb : 'all', // initial breadcrumb text
+			backCtrl : false, // show back button
+			// itemsDelayInterval : 60, // delay between each menu item sliding animation
+			//onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+		});
+
+	// mobile menu toggle
+	var openMenuCtrl = document.querySelector('.action--open'),
+		closeMenuCtrl = document.querySelector('.action--close');
+
+	openMenuCtrl.addEventListener('click', openMenu);
+	closeMenuCtrl.addEventListener('click', closeMenu);
+
+	function openMenu() {
+		classie.add(menuEl, 'menu--open');
+	}
+
+	function closeMenu() {
+		classie.remove(menuEl, 'menu--open');
+	}
+
+	// simulate grid content loading
+	var gridWrapper = document.querySelector('.content');
+
+	function loadDummyData(ev, itemName) {
+		ev.preventDefault();
+
+		closeMenu();
+		gridWrapper.innerHTML = '';
+		classie.add(gridWrapper, 'content--loading');
+		setTimeout(function() {
+			classie.remove(gridWrapper, 'content--loading');
+			gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+		}, 700);
+	}
+})();
+</script>
+<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    location = 'https://www.dadsagain.com/thank-you/';
+}, false );
+</script>
+		</div><!-- /site -->
+	
+	<style>
+		@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:300;src:local('Merriweather Light Italic'),local('Merriweather-LightItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR7lXff1jvzRPA.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:300;src:local('Merriweather Light Italic'),local('Merriweather-LightItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR7lXff8jvzRPA.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:300;src:local('Merriweather Light Italic'),local('Merriweather-LightItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR7lXff3jvzRPA.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:300;src:local('Merriweather Light Italic'),local('Merriweather-LightItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR7lXff2jvzRPA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:300;src:local('Merriweather Light Italic'),local('Merriweather-LightItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR7lXff4jvw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:400;src:local('Merriweather Italic'),local('Merriweather-Italic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4m0qyriQwlOrhSvowK_l5-eRZDf-LHrw.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:400;src:local('Merriweather Italic'),local('Merriweather-Italic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4m0qyriQwlOrhSvowK_l5-eRZKf-LHrw.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:400;src:local('Merriweather Italic'),local('Merriweather-Italic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4m0qyriQwlOrhSvowK_l5-eRZBf-LHrw.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:400;src:local('Merriweather Italic'),local('Merriweather-Italic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4m0qyriQwlOrhSvowK_l5-eRZAf-LHrw.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:400;src:local('Merriweather Italic'),local('Merriweather-Italic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4m0qyriQwlOrhSvowK_l5-eRZOf-I.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:700;src:local('Merriweather Bold Italic'),local('Merriweather-BoldItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf1jvzRPA.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:700;src:local('Merriweather Bold Italic'),local('Merriweather-BoldItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf8jvzRPA.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:700;src:local('Merriweather Bold Italic'),local('Merriweather-BoldItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf3jvzRPA.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:700;src:local('Merriweather Bold Italic'),local('Merriweather-BoldItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf2jvzRPA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:700;src:local('Merriweather Bold Italic'),local('Merriweather-BoldItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf4jvw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:900;src:local('Merriweather Black Italic'),local('Merriweather-BlackItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR7NWPf1jvzRPA.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:900;src:local('Merriweather Black Italic'),local('Merriweather-BlackItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR7NWPf8jvzRPA.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:900;src:local('Merriweather Black Italic'),local('Merriweather-BlackItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR7NWPf3jvzRPA.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:900;src:local('Merriweather Black Italic'),local('Merriweather-BlackItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR7NWPf2jvzRPA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Merriweather';font-style:italic;font-display:block; font-weight:900;src:local('Merriweather Black Italic'),local('Merriweather-BlackItalic'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR7NWPf4jvw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:300;src:local('Merriweather Light'),local('Merriweather-Light'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l521wRZVcf6lvg.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:300;src:local('Merriweather Light'),local('Merriweather-Light'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l521wRZXMf6lvg.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:300;src:local('Merriweather Light'),local('Merriweather-Light'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l521wRZV8f6lvg.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:300;src:local('Merriweather Light'),local('Merriweather-Light'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l521wRZVsf6lvg.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:300;src:local('Merriweather Light'),local('Merriweather-Light'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l521wRZWMf6.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:400;src:local('Merriweather Regular'),local('Merriweather-Regular'),url(https://fonts.gstatic.com/s/merriweather/v19/u-440qyriQwlOrhSvowK_l5-cSZMZ-Y.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:400;src:local('Merriweather Regular'),local('Merriweather-Regular'),url(https://fonts.gstatic.com/s/merriweather/v19/u-440qyriQwlOrhSvowK_l5-eCZMZ-Y.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:400;src:local('Merriweather Regular'),local('Merriweather-Regular'),url(https://fonts.gstatic.com/s/merriweather/v19/u-440qyriQwlOrhSvowK_l5-cyZMZ-Y.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:400;src:local('Merriweather Regular'),local('Merriweather-Regular'),url(https://fonts.gstatic.com/s/merriweather/v19/u-440qyriQwlOrhSvowK_l5-ciZMZ-Y.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:400;src:local('Merriweather Regular'),local('Merriweather-Regular'),url(https://fonts.gstatic.com/s/merriweather/v19/u-440qyriQwlOrhSvowK_l5-fCZM.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:700;src:local('Merriweather Bold'),local('Merriweather-Bold'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l52xwNZVcf6lvg.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:700;src:local('Merriweather Bold'),local('Merriweather-Bold'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l52xwNZXMf6lvg.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:700;src:local('Merriweather Bold'),local('Merriweather-Bold'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l52xwNZV8f6lvg.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:700;src:local('Merriweather Bold'),local('Merriweather-Bold'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l52xwNZVsf6lvg.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:700;src:local('Merriweather Bold'),local('Merriweather-Bold'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l52xwNZWMf6.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:900;src:local('Merriweather Black'),local('Merriweather-Black'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l52_wFZVcf6lvg.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:900;src:local('Merriweather Black'),local('Merriweather-Black'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l52_wFZXMf6lvg.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:900;src:local('Merriweather Black'),local('Merriweather-Black'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l52_wFZV8f6lvg.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:900;src:local('Merriweather Black'),local('Merriweather-Black'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l52_wFZVsf6lvg.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Merriweather';font-style:normal;font-display:block; font-weight:900;src:local('Merriweather Black'),local('Merriweather-Black'),url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l52_wFZWMf6.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Lato';font-style:normal;font-display:block; font-weight:400;src:local('Lato Regular'),local('Lato-Regular'),url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Lato';font-style:normal;font-display:block; font-weight:400;src:local('Lato Regular'),local('Lato-Regular'),url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Lato';font-style:normal;font-display:block; font-weight:700;src:local('Lato Bold'),local('Lato-Bold'),url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwaPGR_p.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Lato';font-style:normal;font-display:block; font-weight:700;src:local('Lato Bold'),local('Lato-Bold'),url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}	
+	</style>
+	
+	
+	<script>
+		window.onload=loadfunn;function loadfunn(){var menuEl=document.getElementById('ml-menu'),mlmenu=new MLMenu(menuEl,{backCtrl:!1,});var openMenuCtrl=document.querySelector('.action--open'),closeMenuCtrl=document.querySelector('.action--close');openMenuCtrl.addEventListener('click',openMenu);closeMenuCtrl.addEventListener('click',closeMenu);function openMenu(){classie.add(menuEl,'menu--open')}
+		function closeMenu(){classie.remove(menuEl,'menu--open')}
+		var gridWrapper=document.querySelector('.content');function loadDummyData(ev,itemName){ev.preventDefault();closeMenu();gridWrapper.innerHTML='';classie.add(gridWrapper,'content--loading');setTimeout(function(){classie.remove(gridWrapper,'content--loading');gridWrapper.innerHTML='<ul class="products">'+dummyData[itemName]+'<ul>'},700)}}			
+	</script>		
+	<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/pilot\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+     <script type="text/javascript" id="pf_script">
+                      var pfHeaderImgUrl = '';
+          var pfHeaderTagline = '';
+          var pfdisableClickToDel = '0';
+          var pfImagesSize = 'full-size';
+          var pfImageDisplayStyle = 'left';
+          var pfEncodeImages = '0';
+          var pfShowHiddenContent  = '0';
+          var pfDisableEmail = '0';
+          var pfDisablePDF = '0';
+          var pfDisablePrint = '0';
+
+            
+          var pfPlatform = 'WordPress';
+
+        (function($){
+            $(document).ready(function(){
+                if($('.pf-button-content').length === 0){
+                    $('style#pf-excerpt-styles').remove();
+                }
+            });
+        })(jQuery);
+        </script>
+      <script defer src='https://cdn.printfriendly.com/printfriendly.js'></script>
+            
+            <script type="text/javascript" defer src="https://www.dadsagain.com/wp-includes/js/dist/hooks.min.js" id="wp-hooks-js"></script>
+<script type="text/javascript" defer src="https://www.dadsagain.com/wp-includes/js/dist/i18n.min.js" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="https://www.dadsagain.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/www.dadsagain.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="https://www.dadsagain.com/wp-content/plugins/contact-form-7/includes/js/index.js" id="contact-form-7-js"></script>
+<script type="text/javascript" id="wpcf7-redirect-script-js-extra">
+/* <![CDATA[ */
+var wpcf7r = {"ajax_url":"https:\/\/www.dadsagain.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="https://www.dadsagain.com/wp-content/plugins/wpcf7-redirect/build/assets/frontend-script.js" id="wpcf7-redirect-script-js"></script>
+<script type="text/javascript" defer src="https://www.dadsagain.com/wp-content/themes/pilot/dest/js/lib.min.js" id="pilot-libraries-js"></script>
+<script type="text/javascript" defer src="https://www.dadsagain.com/wp-content/themes/pilot/dest/js/app.min.js" id="pilot-scripts-js"></script>
+<!--Speed  -->
+	<script>
+		(function(){function logEvent(eventName,element){console.log(Date.now(),eventName,element.getAttribute('data-src'),element.getAttribute('src'))}
+		var callback_enter=function(element){logEvent("ENTERED",element)};var callback_load=function(element){logEvent("LOADED",element)};var callback_set=function(element){logEvent("SET",element)};var callback_error=function(element){logEvent("ERROR",element);element.src="https://placehold.it/220x280?text=Placeholder"};var llWebp=new LazyLoad({elements_selector:".lazy.has-webp",to_webp:!0,callback_enter:callback_enter,callback_load:callback_load,callback_set:callback_set,callback_error:callback_error});var llStandard=new LazyLoad({elements_selector:".lazy:not(.has-webp)",callback_enter:callback_enter,callback_load:callback_load,callback_set:callback_set,callback_error:callback_error})}())		
+	</script>
+<!--Speed  -->				
+	</body>
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
+
+
+Served from: www.dadsagain.com @ 2026-05-03 13:18:25 by W3 Total Cache
+-->

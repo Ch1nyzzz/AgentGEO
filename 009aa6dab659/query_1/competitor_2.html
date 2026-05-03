@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.5",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),this},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||!t.src||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e=window){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
+</script>
+	<meta name="google-site-verification" content="mOcv-4GyjzG0UhYhLNURixKSQPALo4q9i7VkQYcB_0I" />
+	<meta name="google-site-verification" content="d4mPpC0kltIaL7yykytSe8fYAMQpxPk0JGVHfkhnBPw" />
+<!-- Google Tag Manager -->
+<script type="text/rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-RRLC');</script>
+<!-- End Google Tag Manager -->
+	
+	
+	
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://www.unhcr.ca/xmlrpc.php" />
+
+	<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="alternate" hreflang="en" href="https://www.unhcr.ca/about-us/frequently-asked-questions/" />
+<link rel="alternate" hreflang="fr" href="https://www.unhcr.ca/fr/a-propos-de-nous/foire-aux-questions/" />
+<link rel="alternate" hreflang="x-default" href="https://www.unhcr.ca/about-us/frequently-asked-questions/" />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v27.5 (Yoast SEO v27.5) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<title>Frequently Asked Questions about UNHCR | UNHCR Canada</title><link rel="preload" data-rocket-preload as="image" href="https://www.unhcr.ca/wp-content/uploads/2020/06/RF2279826_SAM_3210-scaled.jpg" fetchpriority="high">
+	<meta name="description" content="Want to help refugees in need? Are you new to Canada? Read the most frequently asked questions about UNHCR, the UN Refugee Agency." />
+	<link rel="canonical" href="https://www.unhcr.ca/about-us/frequently-asked-questions/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Frequently Asked Questions" />
+	<meta property="og:description" content="Want to help refugees in need? Are you new to Canada? Read the most frequently asked questions about UNHCR, the UN Refugee Agency." />
+	<meta property="og:url" content="https://www.unhcr.ca/about-us/frequently-asked-questions/" />
+	<meta property="og:site_name" content="UNHCR Canada" />
+	<meta property="article:publisher" content="https://www.facebook.com/UNHCRCanada" />
+	<meta property="article:modified_time" content="2025-08-22T14:35:24+00:00" />
+	<meta property="og:image" content="https://www.unhcr.ca/wp-content/uploads/2020/06/RF2279826_SAM_3210-1-scaled.jpg" />
+	<meta property="og:image:width" content="2048" />
+	<meta property="og:image:height" content="1366" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@UNHCRCanada" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="10 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.unhcr.ca\/about-us\/frequently-asked-questions\/","url":"https:\/\/www.unhcr.ca\/about-us\/frequently-asked-questions\/","name":"Frequently Asked Questions about UNHCR | UNHCR Canada","isPartOf":{"@id":"https:\/\/www.unhcr.ca\/#website"},"primaryImageOfPage":{"@id":"https:\/\/www.unhcr.ca\/about-us\/frequently-asked-questions\/#primaryimage"},"image":{"@id":"https:\/\/www.unhcr.ca\/about-us\/frequently-asked-questions\/#primaryimage"},"thumbnailUrl":"https:\/\/www.unhcr.ca\/wp-content\/uploads\/2020\/06\/RF2279826_SAM_3210-1-scaled.jpg","datePublished":"2014-10-17T19:39:54+00:00","dateModified":"2025-08-22T14:35:24+00:00","description":"Want to help refugees in need? Are you new to Canada? Read the most frequently asked questions about UNHCR, the UN Refugee Agency.","breadcrumb":{"@id":"https:\/\/www.unhcr.ca\/about-us\/frequently-asked-questions\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.unhcr.ca\/about-us\/frequently-asked-questions\/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/www.unhcr.ca\/about-us\/frequently-asked-questions\/#primaryimage","url":"https:\/\/www.unhcr.ca\/wp-content\/uploads\/2020\/06\/RF2279826_SAM_3210-1-scaled.jpg","contentUrl":"https:\/\/www.unhcr.ca\/wp-content\/uploads\/2020\/06\/RF2279826_SAM_3210-1-scaled.jpg","width":2048,"height":1366,"caption":"“I am the first person in my family to go to secondary school. I really enjoy studying and I do it every evening. The biggest challenges are the lack of light and textbooks. Education is important for us refugees so we can develop our country once we go back home. Once I finish my studies, I want to go back to the Nuba mountains to be close to my family and make a difference in our community.” Eighteen-year-old Sudanese refugee, Roza Awad Ashiek Kanani, from Tirhaka School in Pamir camp, was among the top ten female students in South Sudan in 2019. After completing an accelerated learning programme with excellent grades, Roza started studying sciences at secondary school this year. ; Close to 120,000 Sudanese refugees from the Nuba Mountains live in Ruweng State, South Sudan, most of them women and children. Refugee children living in camps have free access to education and study alongside the host community. Despite experiencing huge displacement itself, South Sudan is also host to some 300,000 refugees, of whom the vast majority come from Sudan."},{"@type":"BreadcrumbList","@id":"https:\/\/www.unhcr.ca\/about-us\/frequently-asked-questions\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/www.unhcr.ca\/"},{"@type":"ListItem","position":2,"name":"About Us","item":"https:\/\/www.unhcr.ca\/about-us\/"},{"@type":"ListItem","position":3,"name":"Frequently Asked Questions"}]},{"@type":"WebSite","@id":"https:\/\/www.unhcr.ca\/#website","url":"https:\/\/www.unhcr.ca\/","name":"UNHCR Canada","description":"UN Refugee Agency","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.unhcr.ca\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+
+<link rel="alternate" type="application/rss+xml" title="UNHCR Canada &raquo; Feed" href="https://www.unhcr.ca/feed/" />
+<link rel="alternate" type="application/rss+xml" title="UNHCR Canada &raquo; Comments Feed" href="https://www.unhcr.ca/comments/feed/" />
+<script type="text/javascript" id="wpp-js" src="https://www.unhcr.ca/wp-content/plugins/wordpress-popular-posts/assets/js/wpp.min.js?ver=7.3.8" data-sampling="0" data-sampling-rate="100" data-api-url="https://www.unhcr.ca/wp-json/wordpress-popular-posts" data-post-id="702" data-token="0e899f9d28" data-lang="0" data-debug="0"></script>
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.unhcr.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.unhcr.ca%2Fabout-us%2Ffrequently-asked-questions%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.unhcr.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.unhcr.ca%2Fabout-us%2Ffrequently-asked-questions%2F&#038;format=xml" />
+<meta content="UNHCR Canada 2020 Theme v.1.0.0" name="generator"/><link data-minify="1" rel='stylesheet' id='dica-builder-styles-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/dg-divi-carousel/assets/css/dica-builder.css?ver=1777520564' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='dica-lightbox-styles-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/dg-divi-carousel/styles/light-box-styles.css?ver=1777520564' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='swipe-style-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/dg-divi-carousel/styles/swiper.min.css?ver=1777520564' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-components-css' href='https://www.unhcr.ca/wp-includes/css/dist/components/style.min.css?ver=81897890954e610875107a2e91fad25b' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='dica-divi5-new-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/dg-divi-carousel/Builder/Visual-Builder/build/styles/bundle.css?ver=1777520564' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='swiper-style-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/dg-divi-carousel/styles/swiper.min.css?ver=1777520564' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='adventure-style-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/mv-adventure/css/adventure.css?ver=1777520564' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='page-list-style-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/page-list/css/page-list.css?ver=1777520564' type='text/css' media='all' />
+<link rel='stylesheet' id='wpml-legacy-horizontal-list-0-css' href='https://www.unhcr.ca/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css?ver=1' type='text/css' media='all' />
+<style id='wpml-legacy-horizontal-list-0-inline-css' type='text/css'>
+.wpml-ls-statics-shortcode_actions, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu, .wpml-ls-statics-shortcode_actions a {border-color:#cdcdcd;}.wpml-ls-statics-shortcode_actions a, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:link, .wpml-ls-statics-shortcode_actions li:not(.wpml-ls-current-language) .wpml-ls-link, .wpml-ls-statics-shortcode_actions li:not(.wpml-ls-current-language) .wpml-ls-link:link {color:#444444;background-color:#ffffff;}.wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:hover,.wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:focus, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:link:hover, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:link:focus {color:#000000;background-color:#eeeeee;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language > a {color:#444444;background-color:#ffffff;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language:hover>a, .wpml-ls-statics-shortcode_actions .wpml-ls-current-language>a:focus {color:#000000;background-color:#eeeeee;}
+/*# sourceURL=wpml-legacy-horizontal-list-0-inline-css */
+</style>
+<link rel='stylesheet' id='wpml-menu-item-0-css' href='https://www.unhcr.ca/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.min.css?ver=1' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='h5p-plugin-fonts-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/h5p/h5p-php-library/styles/h5p-fonts.css?ver=1777520564' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='h5p-plugin-styles-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/h5p/h5p-php-library/styles/h5p.css?ver=1777520564' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='et_monarch-css-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/monarch/css/style.css?ver=1777520564' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-carousel-styles-css' href='https://www.unhcr.ca/wp-content/plugins/dg-divi-carousel/styles/style.min.css?ver=5.0.0' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='wp-pagenavi-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=1777520564' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='new-royalslider-core-css-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/new-royalslider/lib/royalslider/royalslider.css?ver=1777520564' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='rsUni-css-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/new-royalslider/lib/royalslider/skins/universal/rs-universal.css?ver=1777520564' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='content_slider-css-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/new-royalslider/lib/royalslider/templates-css/rs-content-slider-template.css?ver=1777520564' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='popup-maker-site-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/uploads/pum/pum-site-styles.css?ver=1777520564' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='divi-style-parent-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/themes/Divi/style-static.min.css?ver=1777520564' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='stylesheet-proximanova-css' href='https://www.unhcr.ca/wp-content/cache/min/1/wp-content/themes/unhcrca20-theme/proximanova/stylesheet-proximanova.css?ver=1777520564' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-pum-css' href='https://www.unhcr.ca/wp-content/themes/unhcrca20-theme/style.css?ver=4.27.6' type='text/css' media='all' />
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-content/cache/min/1/wp-content/themes/unhcrca20-theme/js/custom.js?ver=1777520564" id="rn-custom-script-js" data-rocket-defer defer></script>
+<link rel="https://api.w.org/" href="https://www.unhcr.ca/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.unhcr.ca/wp-json/wp/v2/pages/702" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.unhcr.ca/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://www.unhcr.ca/?p=702' />
+<meta name="cdp-version" content="1.5.3" /><meta name="generator" content="WPML ver:4.9.2.1 stt:1,4;" />
+<style type="text/css" id="et-social-custom-css">
+				 .et_monarch .widget_monarchwidget .et_social_networks ul li, .et_monarch .widget_monarchwidget.et_social_circle li i { background: #cccccc !important; } .et_monarch .widget_monarchwidget.et_social_rounded .et_social_icons_container li:hover, .et_monarch .widget_monarchwidget.et_social_rectangle .et_social_icons_container li:hover, .et_monarch .widget_monarchwidget.et_social_circle .et_social_icons_container li:hover i.et_social_icon { background: #1e84bf !important; } 
+			</style>            <style id="wpp-loading-animation-styles">@-webkit-keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}@keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}.wpp-widget-block-placeholder,.wpp-shortcode-placeholder{margin:0 auto;width:60px;height:3px;background:#dd3737;background:linear-gradient(90deg,#dd3737 0%,#571313 10%,#dd3737 100%);background-size:200% auto;border-radius:3px;-webkit-animation:bgslide 1s infinite linear;animation:bgslide 1s infinite linear}</style>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><link rel="icon" href="https://www.unhcr.ca/wp-content/uploads/2015/06/cropped-300-2016-unhcr-logo-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.unhcr.ca/wp-content/uploads/2015/06/cropped-300-2016-unhcr-logo-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.unhcr.ca/wp-content/uploads/2015/06/cropped-300-2016-unhcr-logo-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.unhcr.ca/wp-content/uploads/2015/06/cropped-300-2016-unhcr-logo-270x270.png" />
+<style id="et-divi-customizer-global-cached-inline-styles">body,.et_pb_column_1_2 .et_quote_content blockquote cite,.et_pb_column_1_2 .et_link_content a.et_link_main_url,.et_pb_column_1_3 .et_quote_content blockquote cite,.et_pb_column_3_8 .et_quote_content blockquote cite,.et_pb_column_1_4 .et_quote_content blockquote cite,.et_pb_blog_grid .et_quote_content blockquote cite,.et_pb_column_1_3 .et_link_content a.et_link_main_url,.et_pb_column_3_8 .et_link_content a.et_link_main_url,.et_pb_column_1_4 .et_link_content a.et_link_main_url,.et_pb_blog_grid .et_link_content a.et_link_main_url,body .et_pb_bg_layout_light .et_pb_post p,body .et_pb_bg_layout_dark .et_pb_post p{font-size:19px}.et_pb_slide_content,.et_pb_best_value{font-size:21px}#et_search_icon:hover,.mobile_menu_bar:before,.mobile_menu_bar:after,.et_toggle_slide_menu:after,.et-social-icon a:hover,.et_pb_sum,.et_pb_pricing li a,.et_pb_pricing_table_button,.et_overlay:before,.entry-summary p.price ins,.et_pb_member_social_links a:hover,.et_pb_widget li a:hover,.et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active,.et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active,.et_pb_gallery .et_pb_gallery_pagination ul li a.active,.wp-pagenavi span.current,.wp-pagenavi a:hover,.nav-single a,.tagged_as a,.posted_in a{color:#0072bc}.et_pb_contact_submit,.et_password_protected_form .et_submit_button,.et_pb_bg_layout_light .et_pb_newsletter_button,.comment-reply-link,.form-submit .et_pb_button,.et_pb_bg_layout_light .et_pb_promo_button,.et_pb_bg_layout_light .et_pb_more_button,.et_pb_contact p input[type="checkbox"]:checked+label i:before,.et_pb_bg_layout_light.et_pb_module.et_pb_button{color:#0072bc}.footer-widget h4{color:#0072bc}.et-search-form,.nav li ul,.et_mobile_menu,.footer-widget li:before,.et_pb_pricing li:before,blockquote{border-color:#0072bc}.et_pb_counter_amount,.et_pb_featured_table .et_pb_pricing_heading,.et_quote_content,.et_link_content,.et_audio_content,.et_pb_post_slider.et_pb_bg_layout_dark,.et_slide_in_menu_container,.et_pb_contact p input[type="radio"]:checked+label i:before{background-color:#0072bc}.container,.et_pb_row,.et_pb_slider .et_pb_container,.et_pb_fullwidth_section .et_pb_title_container,.et_pb_fullwidth_section .et_pb_title_featured_container,.et_pb_fullwidth_header:not(.et_pb_fullscreen) .et_pb_fullwidth_header_container{max-width:1360px}.et_boxed_layout #page-container,.et_boxed_layout.et_non_fixed_nav.et_transparent_nav #page-container #top-header,.et_boxed_layout.et_non_fixed_nav.et_transparent_nav #page-container #main-header,.et_fixed_nav.et_boxed_layout #page-container #top-header,.et_fixed_nav.et_boxed_layout #page-container #main-header,.et_boxed_layout #page-container .container,.et_boxed_layout #page-container .et_pb_row{max-width:1520px}a{color:#0072bc}.et_secondary_nav_enabled #page-container #top-header{background-color:rgba(0,114,188,0)!important}#et-secondary-nav li ul{background-color:rgba(0,114,188,0)}#et-secondary-nav li ul{background-color:#0072bc}#main-header .nav li ul a{color:rgba(0,0,0,0.7)}#top-menu li.current-menu-ancestor>a,#top-menu li.current-menu-item>a,#top-menu li.current_page_item>a{color:#0072bc}#main-footer .footer-widget h4,#main-footer .widget_block h1,#main-footer .widget_block h2,#main-footer .widget_block h3,#main-footer .widget_block h4,#main-footer .widget_block h5,#main-footer .widget_block h6{color:#0072bc}.footer-widget li:before{border-color:#0072bc}.footer-widget,.footer-widget li,.footer-widget li a,#footer-info{font-size:14px}.footer-widget .et_pb_widget div,.footer-widget .et_pb_widget ul,.footer-widget .et_pb_widget ol,.footer-widget .et_pb_widget label{line-height:1.7em}#et-footer-nav .bottom-nav li.current-menu-item a{color:#0072bc}#footer-info{font-size:17px}body .et_pb_button{font-size:19px;border-radius:0px}body.et_pb_button_helper_class .et_pb_button,body.et_pb_button_helper_class .et_pb_module.et_pb_button{}body .et_pb_button:after{font-size:30.4px}body .et_pb_bg_layout_light.et_pb_button:hover,body .et_pb_bg_layout_light .et_pb_button:hover,body .et_pb_button:hover{border-radius:0px}@media only screen and (min-width:981px){.et_header_style_centered.et_hide_primary_logo #main-header:not(.et-fixed-header) .logo_container,.et_header_style_centered.et_hide_fixed_logo #main-header.et-fixed-header .logo_container{height:11.88px}.et_header_style_left .et-fixed-header #et-top-navigation,.et_header_style_split .et-fixed-header #et-top-navigation{padding:21px 0 0 0}.et_header_style_left .et-fixed-header #et-top-navigation nav>ul>li>a,.et_header_style_split .et-fixed-header #et-top-navigation nav>ul>li>a{padding-bottom:21px}.et_header_style_centered header#main-header.et-fixed-header .logo_container{height:41px}.et_header_style_split #main-header.et-fixed-header .centered-inline-logo-wrap{width:41px;margin:-41px 0}.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo{max-height:41px}.et_pb_svg_logo.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo{height:41px}.et_header_style_slide .et-fixed-header #et-top-navigation,.et_header_style_fullscreen .et-fixed-header #et-top-navigation{padding:12px 0 12px 0!important}}@media only screen and (min-width:1700px){.et_pb_row{padding:34px 0}.et_pb_section{padding:68px 0}.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper{padding-top:102px}.et_pb_fullwidth_section{padding:0}}@media only screen and (max-width:980px){.et_header_style_centered .mobile_nav .select_page,.et_header_style_split .mobile_nav .select_page,.et_mobile_menu li a,.mobile_menu_bar:before,.et_nav_text_color_light #top-menu>li>a,.et_nav_text_color_dark #top-menu>li>a,#top-menu a,.et_mobile_menu li a,#et_search_icon:before,#et_top_search .et-search-form input,.et_search_form_container input,#et-top-navigation .et-cart-info{color:rgba(255,255,255,0.6)}.et_close_search_field:after{color:rgba(255,255,255,0.6)!important}.et_search_form_container input::-moz-placeholder{color:rgba(255,255,255,0.6)}.et_search_form_container input::-webkit-input-placeholder{color:rgba(255,255,255,0.6)}.et_search_form_container input:-ms-input-placeholder{color:rgba(255,255,255,0.6)}}@media(max-width:767px){.whitetextmobile,.whitetextmobile h3,.whitetextmobile p,.whitetextmobile blockquote{border-color:#fff!important;color:#fff}blockquote p{font-size:19px!important}}.noimagespace{line-height:0}.et_pb_blurb_content{max-width:100%}.flex-SameSize .et_pb_column_1_3,.flex-SameSize .et_pb_column_1_4,.flex-SameSize .et_pb_column_1_5,.flex-SameSize .et_pb_column_1_6{display:flex}.et_pb_blurb h3{padding-bottom:0}@media(max-width:980px){.flex-SameSize .et_pb_column_1_3 .et_pb_blurb{margin-left:auto;margin-right:auto}}.post-template-default #page-container,.search-results #page-container,.archive #page-container,.search-no-results #page-container{border-top:solid 130px #0072bc}.post-template-default.et_pb_pagebuilder_layout #page-container{border-top:none}.single-post #left-area{max-width:800px;margin-left:auto;margin-right:auto}@media (min-width:981px){.et_right_sidebar #left-area{max-width:79.125%;float:left;padding-right:5.5%}}.single-post.et_pb_pagebuilder_layout #left-area{max-width:100%}#left-area .post-meta{font-size:19px}#footer-bottom{background:none}.footer-widget .gform_wrapper li.hidden_label input{margin-top:0}.footer-widget .gform_wrapper .gform_footer input.button,.footer-widget .gform_wrapper .gform_footer input[type=submit]{padding:2px 1em;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;width:auto;color:#fff}@media only screen and (min-width:641px){.footer-widget .gform_wrapper ul.gform_fields li.gfield{padding-right:0!important}.footer-widget div.ginput_container_name span{padding-right:5px}.footer-widget .top_label div.ginput_complex.ginput_container.gf_name_has_1,.footer-widget .top_label div.ginput_complex.ginput_container.gf_name_has_2,.footer-widget .top_label div.ginput_complex.ginput_container.gf_name_has_3{width:calc(100% + 2px)!important}}#footer-bottom .container{width:100%}.rss-date{display:block!important;font-size:14px!important;margin-bottom:6px!important}.widget_rss li a.rsswidget{color:#0072bc!important;font-weight:700!important;font-size:19px!important;line-height:1.2em!important;padding-bottom:10px!important;display:block!important}.widget_rss .widgettitle{display:none!important}.widget_rss .rssSummary{font-size:19px!important;line-height:1.4em!important}.widget_rss{width:100%!important}.widget_rss li{margin-bottom:60px!important}.dh-valign-center-row .et_pb_column,.dh-valign-center-section,.dh-valign-center-module{display:flex;flex-direction:column;justify-content:center}#breadcrumbs{font-size:14px;padding-bottom:10px}.et_pb_bg_layout_dark #breadcrumbs a{color:#ffffff}#breadcrumbs .breadcrumb_last{display:none}.et_pb_toggle_open .et_pb_toggle_title:before{display:block!important;content:"\e04f"}.hsds-beacon .hMPnUk{z-index:199999!important}.rsSlideCaption{width:100%;margin:0;font-size:14px!important;padding:20px!important}.twitter-tweet{margin:auto}#footer-widgets .footer-widget li,#footer-widgets .footer-widget p,#main-footer .footer-widget h4{font-size:19px}.et_pb_blog_grid article p.post-meta{font-size:14px!important}.footer-widget li a.icon{font-size:32px}</style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>	
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.unhcr.ca/wp-includes/css/dist/block-library/style.min.css?ver=81897890954e610875107a2e91fad25b' type='text/css' media='none' onload="media='all'" />
+<style id='wp-block-library-inline-css' type='text/css'>
+/*wp_block_styles_on_demand_placeholder:69f74360aa46b*/
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+
+<style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><meta name="generator" content="WP Rocket 3.21.1" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_lazyload_iframes wpr_automatic_lazy_rendering wpr_oci wpr_cache_webp wpr_minify_css wpr_desktop" /></head>
+
+<body class="wp-singular page-template-default page page-id-702 page-child parent-pageid-47802 wp-theme-Divi wp-child-theme-unhcrca20-theme et_monarch et_pb_button_helper_class et_fixed_nav et_show_nav et_secondary_nav_enabled et_secondary_nav_only_menu et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter et_pb_gutters3 et_pb_pagebuilder_layout et_smooth_scroll et_no_sidebar et_divi_theme et-db">
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-RRLC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<div  id="page-container">
+
+					<div  id="top-header">
+			<div  class="container clearfix">
+
+			
+				<div id="et-secondary-menu">
+				<ul id="et-secondary-nav" class="menu"><li class="btnyellow menu-item menu-item-type-custom menu-item-object-custom menu-item-49801"><a href="https://give.unhcr.ca/page/52275/donate/1?ea.tracking.id=OL26_UNR_HB">Donate</a></li>
+<li class="btnblue menu-item menu-item-type-custom menu-item-object-custom menu-item-49955"><a href="https://shop.unhcr.ca/page/46989/shop/1?ea.tracking.id=SHOP26_UNR_HB">Shop</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65693"><a href="https://act.unhcr.ca/page/79741/hub/1?locale=en-CA">Donor Preference Centre</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49803"><a href="https://help.unhcr.org/canada/">Do you need UNHCR&#8217;s help?</a></li>
+<li class="menu-item-language menu-item wpml-ls-slot-803 wpml-ls-item wpml-ls-item-fr wpml-ls-menu-item wpml-ls-first-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-803-fr"><a href="https://www.unhcr.ca/fr/a-propos-de-nous/foire-aux-questions/" title="Switch to Français" aria-label="Switch to Français"><span class="wpml-ls-native" lang="fr">Français</span></a></li>
+</ul>				</div> <!-- #et-secondary-menu -->
+
+			</div> <!-- .container -->
+		</div> <!-- #top-header -->
+		
+	
+			<header  id="main-header" data-height-onload="66">
+			<div  class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					
+						
+						<!-- Language logo switcher -->
+																			
+						<!-- Main logo -->
+							<a href="https://www.unhcr.ca/">
+							<img src="https://www.unhcr.ca/wp-content/uploads/2020/04/unhcr-ca-logo-vert-white-240-v3.png.webp" alt="UNHCR Canada" id="logo" data-height-percentage="54" />
+							</a>
+					<!-- Scroll LOGO --><a href="https://www.unhcr.ca/">
+						<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="UNHCR Canada" id="logoscroll" data-lazy-src="https://www.unhcr.ca/wp-content/themes/unhcrca20-theme/images/unhcr-ca-logo-blue90.png" /><noscript><img src="https://www.unhcr.ca/wp-content/themes/unhcrca20-theme/images/unhcr-ca-logo-blue90.png" alt="UNHCR Canada" id="logoscroll" /></noscript>
+						</a>
+
+					<!-- END Scroll LOGO -->
+					<!-- Mobile LOGO -->
+					<a href="https://www.unhcr.ca/">
+						<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="UNHCR Canada" id="logomobile" data-lazy-src="https://www.unhcr.ca/wp-content/themes/unhcrca20-theme/images/unhcr-ca-logo-white120.png" /><noscript><img src="https://www.unhcr.ca/wp-content/themes/unhcrca20-theme/images/unhcr-ca-logo-white120.png" alt="UNHCR Canada" id="logomobile" /></noscript>
+						</a>
+
+					<!-- END Mobile LOGO -->
+					
+					
+					                                        
+                    <!-- End logo switcher -->
+					
+				</div>
+							<div id="et-top-navigation" data-height="66" data-fixed-height="41">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li id="menu-item-48071" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-48071"><a href="https://www.unhcr.ca/about-us/">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-48072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48072"><a href="https://www.unhcr.ca/about-us/about-unhcr/">About UNHCR</a>
+	<ul class="sub-menu">
+		<li id="menu-item-48073" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48073"><a href="https://www.unhcr.ca/about-us/about-unhcr/about-unhcr-canada/">About UNHCR Canada</a></li>
+	</ul>
+</li>
+	<li id="menu-item-48074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48074"><a href="https://www.unhcr.ca/about-us/who-we-help/">Who We Help</a></li>
+	<li id="menu-item-48794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48794"><a href="https://www.unhcr.ca/about-us/partners/">Partners</a>
+	<ul class="sub-menu">
+		<li id="menu-item-48807" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48807"><a href="https://www.unhcr.ca/about-us/partners/corporate-partners/">Corporate Partners</a></li>
+		<li id="menu-item-61356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61356"><a href="https://www.unhcr.ca/about-us/partners/foundations/">Foundation Partners</a></li>
+	</ul>
+</li>
+	<li id="menu-item-48075" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-702 current_page_item menu-item-48075"><a href="https://www.unhcr.ca/about-us/frequently-asked-questions/" aria-current="page">Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li id="menu-item-48077" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48077"><a href="https://www.unhcr.ca/our-work/">Our Work</a>
+<ul class="sub-menu">
+	<li id="menu-item-48078" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48078"><a href="https://www.unhcr.ca/our-work/emergencies/">Emergencies</a>
+	<ul class="sub-menu">
+		<li id="menu-item-62765" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62765"><a href="https://www.unhcr.ca/our-work/emergencies/afghanistan/">Afghanistan</a></li>
+		<li id="menu-item-48085" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48085"><a href="https://www.unhcr.ca/our-work/emergencies/central-america/">Central America</a></li>
+		<li id="menu-item-62348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62348"><a href="https://www.unhcr.ca/our-work/emergencies/ethiopia/">Ethiopia</a></li>
+		<li id="menu-item-48082" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48082"><a href="https://www.unhcr.ca/our-work/emergencies/libya/">Libya</a></li>
+		<li id="menu-item-48086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48086"><a href="https://www.unhcr.ca/our-work/emergencies/rohingya-crisis/">Rohingya Crisis</a></li>
+		<li id="menu-item-54837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54837"><a href="https://www.unhcr.ca/our-work/emergencies/sahel/">Sahel</a></li>
+		<li id="menu-item-85108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85108"><a href="https://www.unhcr.ca/our-work/emergencies/sudan/">Sudan</a></li>
+		<li id="menu-item-48088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48088"><a href="https://www.unhcr.ca/our-work/emergencies/syria-2/">Syria</a></li>
+		<li id="menu-item-66385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66385"><a href="https://www.unhcr.ca/our-work/emergencies/ukraine-emergency/">Ukraine</a></li>
+		<li id="menu-item-48083" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48083"><a href="https://www.unhcr.ca/our-work/emergencies/venezuela/">Venezuela</a></li>
+		<li id="menu-item-48079" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48079"><a href="https://www.unhcr.ca/our-work/emergencies/yemen-crisis/">Yemen</a></li>
+	</ul>
+</li>
+	<li id="menu-item-48089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48089"><a href="https://www.unhcr.ca/our-work/ongoing-support/">Ongoing Support</a>
+	<ul class="sub-menu">
+		<li id="menu-item-66563" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66563"><a href="https://www.unhcr.ca/our-work/ongoing-support/aiming-higher/">Aiming Higher</a></li>
+		<li id="menu-item-48096" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48096"><a href="https://www.unhcr.ca/our-work/ongoing-support/children/">Children</a></li>
+		<li id="menu-item-48090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48090"><a href="https://www.unhcr.ca/our-work/ongoing-support/education/">Education</a></li>
+		<li id="menu-item-48094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48094"><a href="https://www.unhcr.ca/our-work/ongoing-support/emergency-relief/">Emergency Relief</a></li>
+		<li id="menu-item-48091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48091"><a href="https://www.unhcr.ca/our-work/ongoing-support/healthcare/">Healthcare</a></li>
+		<li id="menu-item-48095" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48095"><a href="https://www.unhcr.ca/our-work/ongoing-support/rebuilding-lives/">Livelihoods and Rebuilding Lives</a></li>
+		<li id="menu-item-48092" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48092"><a href="https://www.unhcr.ca/our-work/ongoing-support/shelter/">Shelter</a></li>
+		<li id="menu-item-48093" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48093"><a href="https://www.unhcr.ca/our-work/ongoing-support/women-and-girls/">Women and Girls</a></li>
+		<li id="menu-item-48097" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48097"><a href="https://www.unhcr.ca/our-work/ongoing-support/lgbtiq-refugees/">LGBTIQ+ Refugees</a></li>
+	</ul>
+</li>
+	<li id="menu-item-48334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48334"><a href="https://www.unhcr.ca/in-canada/refugee-statistics/">Global Refugee Statistics</a></li>
+</ul>
+</li>
+<li id="menu-item-48100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48100"><a href="https://www.unhcr.ca/news-stories/">News and Stories</a>
+<ul class="sub-menu">
+	<li id="menu-item-48102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48102"><a href="https://www.unhcr.ca/news-stories/stories/">Stories</a></li>
+	<li id="menu-item-48104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48104"><a href="https://www.unhcr.ca/news-stories/news-releases/">News Releases</a></li>
+	<li id="menu-item-48105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48105"><a href="https://www.unhcr.ca/news-stories/special-features/">Special Features</a></li>
+	<li id="menu-item-48103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48103"><a href="https://www.unhcr.ca/news-stories/media-centre/">Media Centre</a></li>
+	<li id="menu-item-76409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76409"><a href="https://www.unhcr.ca/journalism-guide/">Journalism Guide</a></li>
+</ul>
+</li>
+<li id="menu-item-48106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48106"><a href="https://www.unhcr.ca/how-to-help/">How to Help</a>
+<ul class="sub-menu">
+	<li id="menu-item-48119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48119"><a href="https://www.unhcr.ca/how-to-help/gifts-in-wills/">Gifts in Wills</a></li>
+	<li id="menu-item-48118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48118"><a href="https://www.unhcr.ca/how-to-help/stocks-and-securities/">Gifts of Stocks and Securities</a></li>
+	<li id="menu-item-48114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48114"><a href="https://www.unhcr.ca/how-to-help/fundraise/">Fundraise</a>
+	<ul class="sub-menu">
+		<li id="menu-item-48108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48108"><a href="https://www.unhcr.ca/how-to-help/fundraise/for-celebrations/">For Celebrations</a></li>
+	</ul>
+</li>
+	<li id="menu-item-59352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-59352"><a href="https://www.unhcr.ca/how-to-help/islamic-philanthropy/">Islamic Philanthropy</a>
+	<ul class="sub-menu">
+		<li id="menu-item-73552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73552"><a href="https://www.unhcr.ca/how-to-help/islamic-philanthropy/ramadan/">Ramadan</a></li>
+	</ul>
+</li>
+	<li id="menu-item-48123" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48123"><a href="https://shop.unhcr.ca/page/46989/shop/1?ea.tracking.id=SHOP26_UNR_OL">Shop</a></li>
+	<li id="menu-item-48110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48110"><a href="https://www.unhcr.ca/how-to-help/petitions/">Petitions</a></li>
+	<li id="menu-item-48575" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48575"><a href="https://www.unhcr.ca/how-to-help/our-campaigns/">Our Campaigns</a>
+	<ul class="sub-menu">
+		<li id="menu-item-83414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83414"><a href="https://www.unhcr.ca/hope/">Hope Away From Home</a></li>
+		<li id="menu-item-85394" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85394"><a href="https://www.unhcr.ca/how-to-help/our-campaigns/the-jasmine-route-2026/">The Jasmine Route 2026</a></li>
+		<li id="menu-item-83568" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83568"><a href="https://www.unhcr.ca/how-to-help/our-campaigns/more-than-a-game/">More than a game</a></li>
+	</ul>
+</li>
+	<li id="menu-item-48120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48120"><a href="https://www.unhcr.ca/how-to-help/other-ways-to-give/">Other Ways to Give</a>
+	<ul class="sub-menu">
+		<li id="menu-item-48109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48109"><a href="https://www.unhcr.ca/how-to-help/other-ways-to-give/honour-a-loved-one/">Honour a Loved One</a></li>
+	</ul>
+</li>
+	<li id="menu-item-48121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48121"><a href="https://www.unhcr.ca/how-to-help/donor-care/">Donor Care</a></li>
+</ul>
+</li>
+<li id="menu-item-48346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-48346"><a href="https://www.unhcr.ca/in-canada/">In Canada</a>
+<ul class="sub-menu">
+	<li id="menu-item-48345" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48345"><a href="https://www.unhcr.ca/in-canada/seeking-asylum-in-canada/">Seeking Asylum in Canada</a></li>
+	<li id="menu-item-78762" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78762"><a href="https://www.unhcr.ca/in-canada/statistics-on-asylum-seekers-in-canada/">Statistics on Asylum-Seekers in Canada</a></li>
+	<li id="menu-item-80529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80529"><a href="https://www.unhcr.ca/in-canada/asylum-seekers-in-canada-the-myths-and-the-facts/">Asylum Myths and Facts</a></li>
+	<li id="menu-item-59537" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59537"><a href="https://www.unhcr.ca/in-canada/unhcr-role-resettlement/">UNHCR’s Role in Resettlement</a></li>
+	<li id="menu-item-59539" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59539"><a href="https://www.unhcr.ca/in-canada/other-immigration-pathways-refugees/">Other Immigration Pathways for Refugees</a></li>
+	<li id="menu-item-48335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48335"><a href="https://www.unhcr.ca/in-canada/refugees-in-canada/">Refugees in Canada</a></li>
+	<li id="menu-item-48347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48347"><a href="https://www.unhcr.ca/in-canada/key-issues-publications/">Key Issues and Publications</a></li>
+</ul>
+</li>
+</ul>							
+						
+							
+						</nav>
+					
+										
+					<!-- Mobile Button Menu -->
+														<div class="mobilebuttons-container">
+										<ul id="menu-mobile-buttons" class="mobilebuttons"><li id="menu-item-28887" class="btnblue menu-item menu-item-type-custom menu-item-object-custom menu-item-28887"><a href="https://shop.unhcr.ca/page/46989/shop/1?ea.tracking.id=SHOP26_UNR_HB">Shop</a></li>
+<li id="menu-item-28886" class="btnyellow menu-item menu-item-type-custom menu-item-object-custom menu-item-28886"><a href="https://give.unhcr.ca/page/52275/donate/1?ea.tracking.id=OL26_UNR_HB">Donate</a></li>
+<li id="menu-item-65694" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65694"><a href="https://act.unhcr.ca/page/79741/hub/1">Donor Preference Centre</a></li>
+</ul>								</div> 
+													<!-- / Mobile Button Menu -->
+					
+
+					
+					
+										<div id="et_top_search">
+						<span id="et_search_icon"></span>
+					</div>
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+			<div  class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="https://www.unhcr.ca/">
+					<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" /><input type='hidden' name='lang' value='en' />					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+		</header> <!-- #main-header -->
+		
+			<div  id="et-main-area">
+			
+			
+			
+			
+		
+	
+<div  id="main-content">
+
+
+			
+				<article id="post-702" class="post-702 page type-page status-publish has-post-thumbnail hentry">
+
+				
+					<div class="entry-content">
+					<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0 height600 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h1>Frequently Asked Questions</h1></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>Answering your most frequently asked questions about UNHCR, the UN Refugee Agency, and our work.</h3></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: right;"><span class="headercredit">Photo: © UNHCR/Martim Gray Pereira</span></p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_1 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_2">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Here, you can learn more about UNHCR globally and here in Canada. You may also <strong><a href="https://www.unhcr.ca/how-to-help/donor-care/">visit our Donor Care FAQ section</a></strong>, if you have more questions about donations and donating to UNHCR. These are the most frequently asked questions about UNHCR and our work.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>Frequently Asked Questions About UNHCR</h3></div>
+			</div><div class="et_pb_module et_pb_accordion et_pb_accordion_0">
+				
+				
+				
+				
+				<div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_0  et_pb_toggle_open">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What is UNHCR and what does it stand for? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>The Office of the United Nations High Commissioner for Refugees, also known as UNHCR, the UN Refugee Agency is a global organization dedicated to saving lives, protecting rights and building a better future for refugees, forcibly displaced communities and stateless people.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_1  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What is UNHCR Canada?</h5>
+				<div class="et_pb_toggle_content clearfix"><p>The Office of the United Nations High Commissioner for Refugees, also known as UNHCR, the UN Refugee Agency, is the world’s leading organization committed to protecting the rights and well-being of people forced to flee. UNHCR has operated in Canada since 1976.</p>
+<p>Around the world, UNHCR has over 18,000 staff on the ground in 137 countries helping refugees and other vulnerable groups with emergency relief, protection, and support as they rebuild their lives. In Canada, UNHCR promotes the highest standards of protection for refugees and asylum-seekers, helps coordinate resettlement opportunities, and supports UNHCR efforts around the world. <strong><a href="https://www.unhcr.ca/about-us/about-unhcr/about-unhcr-canada/">Learn more about UNHCR Canada</a></strong>.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_2  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">Who does UNHCR help? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>Learn more about <strong><a href="https://www.unhcr.ca/about-us/who-we-help/">Who We Help</a></strong> and <strong><a href="https://www.unhcr.ca/our-work/">Our Work</a></strong> on our other informative pages!</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_3  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What is UNHCR’s mandate? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>The UN Refugee Agency&#8217;s mandate is to provide international protection and humanitarian assistance to refugees. Read more about our mandate by <a href="https://www.unhcr.ca/about-us/about-unhcr/"><strong>learning more about us</strong>.</a></p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_4  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">How do I contact UNHCR?  </h5>
+				<div class="et_pb_toggle_content clearfix"><p>Please visit our <strong><a href="https://www.unhcr.ca/contact-us/">Contact Us page</a></strong> for contact information.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_5  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">Who funds UNHCR?  </h5>
+				<div class="et_pb_toggle_content clearfix"><p>UNHCR is funded almost entirely by voluntary contributions, with the majority coming from governments and the European Union. Other contributions come from other intergovernmental organizations and pooled funding mechanisms, while a further percentage is from the private sector, including foundations, corporations and the public. You can access UNHCR’s detailed <strong><a href="https://www.unhcr.ca/our-work/where-your-money-goes/">budget and financials report here</a></strong>.</p></div>
+			</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_3 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_4">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>Frequently Asked Questions about Refugees and Asylum Seekers in Canada</h3></div>
+			</div><div class="et_pb_module et_pb_accordion et_pb_accordion_1">
+				
+				
+				
+				
+				<div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_6  et_pb_toggle_open">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">I have a friend/relative who is a refugee. Can you tell me more about resettlement options in Canada? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>Once a refugee has been registered with UNHCR in their country of asylum, local resettlement staff can determine who is in need of resettlement and can then submit their case to various resettlement countries. Ultimately, it is the resettlement country that decides whether or not a person will be admitted into the country. The decision on who will be referred for resettlement is made by the UNHCR office in the refugee’s country of asylum and not by UNHCR in Canada. You may wish to consult <strong><a href="https://www.canada.ca/en/services/immigration-citizenship.html">Citizenship and Immigration Canada for information on Canada’s immigration options</a></strong>, including family reunification or Private Sponsorship of Refugees programs.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_7  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">I am a refugee outside of Canada. Can I count on UNHCR’s assistance to be resettled to Canada? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>If you are inquiring about your refugee or resettlement case and you are currently outside of Canada, please contact your <strong><a href="https://www.unhcr.org/contact-us.html">nearest UNHCR office</a></strong>. The decision of who will be referred for resettlement is made by the local office and not by UNHCR in the Canadian office.</p>
+<p>UNHCR Canada is unable to provide you with any case-specific information.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_8  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">I came to Canada as a refugee. How can my family join me? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>For information on Canadian family reunification eligibility and requirements, please visit <strong><a href="https://www.canada.ca/en/services/immigration-citizenship.html">Citizenship and Immigration Canada</a></strong>.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_9  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What is the Immigration and Refugee Board of Canada? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>The <strong><a href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration and Refugee Board of Canada </a></strong>is also known as the IRB. Founded in 1989, it is an independent tribunal established by the Parliament of Canada and responsible for making efficient, fair, decisions on immigration and refugee matters pursuant to the Immigration and Refugee Protection Act (IRPA). Among other responsibilities, the IRB is the decision-making body which determines which asylum-seekers will receive refugee status in Canada.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_10  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What is refugee status in Canada? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>Every year, thousands of people come to Canada and apply for refugee status by making an asylum claim. The Immigration and Refugee Protection Act (IRPA), the law that governs immigration and refugee matters is the basis for granting refugee status in Canada. </p>
+<p>The definition of a refugee is found in the 1951 Convention and incorporated in IRPA. <strong>From Immigration, Refugees and Citizenship Canada</strong>: “Convention refugees are people who are outside their home country or the country where they normally live, and who are unwilling to return because of a well-founded fear of persecution based on race; religion; political opinion; nationality; or membership in a particular social group.” </p>
+<p>Once a claim is accepted, an asylum-seeker becomes a recognized refugee, receives the status of “protected person” and can apply to become a permanent resident of Canada. </p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_11  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What are the rights of refugees in Canada? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>When an asylum-seeker first comes to Canada, he or she must make a claim for protection to the Canadian government in order to be granted refugee status. During the time when this claim is being evaluated, an asylum-seeker has certain rights. For example, he or she may be eligible to work or study in Canada and receive emergency medical care. All minor children are automatically eligible to attend school. If a claim for protection is successful, asylum seekers are granted “protected persons” status with access to additional benefits.</p>
+<p>Some refugees that have made their asylum claim in another country are resettled in Canada. These resettled refugees receive initial assistance (typically provided for up to one year) from either the federal government, the Province of Quebec, or private sponsors. Resettled refugees become permanent residents and can eventually become citizens of Canada. <a href="https://www.canada.ca/en/services/immigration-citizenship.html"><strong>Get help resettling in Canada</strong>.</a></p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_12  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">How many refugees are in Canada?  </h5>
+				<div class="et_pb_toggle_content clearfix"><p>To learn about immigration and refugees in Canada, please visit the <strong><a href="https://www.canada.ca/en/services/immigration-citizenship.html">Government of Canada’s website</a></strong><em>.</em></p></div>
+			</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_5">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_6  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>Frequently Asked Questions about Definitions and Terms</h3></div>
+			</div><div class="et_pb_module et_pb_accordion et_pb_accordion_2">
+				
+				
+				
+				
+				<div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_13  et_pb_toggle_open">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What is the definition of refugee? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>The internationally recognized legal definition of refugee was set out in the 1951 Refugee Convention as: “A person who, owing to a well-founded fear of being persecuted for reasons of race, religion, nationality, membership of a particular social group or political opinion, is outside the country of his nationality and is unable or, owing to such fear, unwilling to avail himself of the protection of that country”.</p>
+<p>Refugees are ordinary people who have been forced to flee their homes across national borders because of conflict or human rights abuses. These devastating circumstances often arise suddenly, forcing families to react with urgency to factors beyond their control. There are currently over 26.4 million refugees worldwide.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_14  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What is the definition of asylum-seeker? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>An asylum-seeker is someone who is seeking international protection but has not yet been granted refugee status. </p>
+<p>When an individual fleeing conflict or persecution arrives in a new country, they must submit a formal claim for refugee status. This claim is evaluated by the host country, after which asylum seekers may be legally recognized as refugees. In Canada, refugee claims are heard by the Immigration and Refugee Board within 60 days. </p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_15  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What is the difference between a migrant and a refugee? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>A migrant is someone who chooses to leave their country, whether for economic reasons or to search for a better life. They can also return to their home country whenever they like. A refugee is someone who is forced to flee their home due to persecution, war, or violence. They can’t return home until it’s safe, something that often doesn’t happen for years, or even decades. </p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_16  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What is the definition of stateless? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>A stateless person is someone who does not have a nationality of any country. People can become stateless for a number of reasons, and some people are born stateless. Without a nationality, individuals can struggle to realise basic needs like healthcare, education, voting or employment and their fundamental human rights may be compromised.</p>
+<p>Some stateless persons are also refugees. However, not all refugees are stateless, and many persons who are stateless have never crossed an international border.</p>
+<p>Some of the reasons for statelessness include discrimination against minority groups, gaps in nationality law, the emergence of new states, or changes in borders. </p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_17  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What is the definition of IDPs? </h5>
+				<div class="et_pb_toggle_content clearfix"><p><span data-contrast="auto">Like refugees, internally displaced persons (IDPs) are ordinary people forced to flee their homes due to war or persecution. However, unlike refugees, IDPs remain in their own country. As of the end of 2024, 73.5 million people were estimated to remain internally displaced due to conflict or violence. </span><span data-ccp-props="{}"> </span></p>
+<p><span data-contrast="auto">Unlike refugees, internally displaced persons are not protected under international law because they are legally under the protection of their country’s government—even if that government was the cause of their displacement. IDPs therefore represent one of the world’s most vulnerable groups, and one that UNHCR is committed to assisting.</span><span data-ccp-props="{}"> </span></p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_18  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What is a refugee camp? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>A refugee camp is a temporary settlement built to house refugees.</p>
+<p>As an example, Za’atari camp in Jordan is the largest refugee camp in the Middle East. Za’atari is home to 77,298 refugees. The camp has 32 schools and 58 community centres offering activities to children and families.</p>
+<p>UNHCR believes that refugee camps should be a temporary measure. Alternatives to camps, including renting land or private hosting agreements, allow refugees more control over their freedoms and rights, and more options to live with greater dignity, independence and normality as members of the community they live in. Read the UN Policy on Alternatives to Camps.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_19  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What is meant by climate refugees or environmental refugees? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>The Earth’s climate is changing rapidly, causing extreme weather patterns, drought, food scarcity, conflict over water resources, and other grave consequences. It is estimated that natural disasters and climate change force 22.5 million people to flee their homes each year.</p>
+<p>The terms climate refugee and environmental refugee are often used to refer to these vulnerable persons. However, climate and environmental refugees are not legally recognized under the definitions set out by the 1951 Refugee Convention and although they may need protection and assistance, these people are not eligible for refugee status.</p>
+<p>UNHCR has begun an international dialogue to address this “protection gap” through the Advisory Group on Climate Change and Human Mobility. The Paris COP 21 Conclusions Agreements also calls for a task force to “develop recommendations for integrated approaches to avert, minimize and address displacement related to the adverse impacts of climate change”.</p></div>
+			</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_5 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_6">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_7  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>Miscellaneous Questions</h3></div>
+			</div><div class="et_pb_module et_pb_accordion et_pb_accordion_3">
+				
+				
+				
+				
+				<div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_20  et_pb_toggle_open">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">UNHCR and Public Outreach</h5>
+				<div class="et_pb_toggle_content clearfix"><p>UNHCR works with Public Outreach to carry out telemarketing calls in Canada, using the following numbers:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>(604) 674-9248</li>
+<li>(416) 900-4470</li>
+</ul>
+</li>
+</ul>
+<p>Through these calls, members of the public may be invited to learn more about UNHCR’s work and to consider becoming monthly donors. Monthly donations provide reliable funding that enables UNHCR to deliver protection, shelter, and life-saving assistance to refugees and displaced families around the world.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_21  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">How does refugee resettlement work?  </h5>
+				<div class="et_pb_toggle_content clearfix"><p>To learn about how refugee resettlement works, <strong><a href="https://www.unhcr.ca/in-canada/key-issues-publications/">please visit our one pager</a> </strong>with easy to access information.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_22  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">Is UNHCR aware of fraudulent messages circulating online?</h5>
+				<div class="et_pb_toggle_content clearfix"><p>Yes. Stay alert and report fraudsters who are offering you resettlement, financial or other kinds of assistance, fake documents or fake claims in exchange for money or other favours. <strong>All UNHCR services are free of charge. Do not trust anyone or any organization asking you to pay for the services of UNHCR or its partners.</strong> </p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_23  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">My family has just fled their country of origin. How can I help them? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>If they believe they are refugees, we urge all asylum-seekers to register with UNHCR or the comparable local authority. For information on where to register you can contact the <strong><a href="https://www.unhcr.ca/contact-us/">closest UNHCR office</a></strong>.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_24  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What percentage of refugees are resettled? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>2024 saw the highest number of refugees resettled to third countries for more than 40 years, 188,800. In addition, almost 88,900 refugees obtained their host country’s citizenship or were granted permanent residence in 2024. However, millions more are still waiting for a durable solution. Learn more about <strong><a href="https://www.unhcr.ca/in-canada/">resettlement</a></strong>.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_25  et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">Can you tell me more about the UNHCR resettlement program? </h5>
+				<div class="et_pb_toggle_content clearfix"><p>Resettlement is one of three long-term solutions—in addition to voluntary repatriation and local integration—to help refugees rebuild their lives. Resettlement is offered to vulnerable refugees who cannot return home or remain in their country of asylum. Only a small number of refugees are submitted for resettlement consideration and very few countries participate in the resettlement programs. Canada is one of UNHCR’s leading resettlement partners, welcoming thousands of refugees each year. <a href="http://www.unhcr.org"><strong>More information is available on our international website</strong>.</a></p></div>
+			</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_6 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_7">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_8  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: center;"><strong>Donate Today</strong><br /><strong>Please help refugee families in need.</strong></p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="https://give.unhcr.ca/page/52275/donate/1?ea.tracking.id=OL25_UNR">Donate Now</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</div>
+						</div>
+
+				
+				</article>
+
+			
+
+</div>
+
+
+			<footer data-wpr-lazyrender="1" id="main-footer">
+				
+<div class="container">
+	<div id="footer-widgets" class="clearfix">
+		<div class="footer-widget"><div id="text-14" class="fwidget et_pb_widget widget_text"><h4 class="title">Donate today</h4>			<div class="textwidget"><p>Please help refugees in need</p>
+<p><a class="et_pb_button et_pb_bg_layout_dark" href="https://give.unhcr.ca/page/52275/donate/1?ea.tracking.id=OL26_UNR_HB" style="color:#fff;">Donate today</a></p></div>
+		</div></div><div class="footer-widget"><div id="text-7" class="fwidget et_pb_widget widget_text"><h4 class="title">Stay connected</h4>			<div class="textwidget"><p>Follow us on</p>
+<div id="et-info-footer">
+    <ul class="et-social-icons">
+ <li class="et-social-icon et-social-instagram">
+            <a href="https://www.instagram.com/unhcr_canada/" class="icon" target="_blank">
+                <span>Instagram</span>
+            </a>
+        </li>     
+ <li class="et-social-icon et-social-linkedin">
+            <a href="https://www.linkedin.com/company/11377361" class="icon" target="_blank">
+         <span>LinkedIn</span>
+            </a>
+        </li>     
+ <li class="et-social-icon et-social-facebook">
+            <a href="https://www.facebook.com/UNHCRCanada/" class="icon" target="_blank">
+            <span>Facebook</span>
+            </a>
+        </li>
+        <li class="et-social-icon et-social-twitter">
+            <a href="https://twitter.com/UNHCRCanada" class="icon" target="_blank">
+                <span>Twitter</span>
+            </a>
+        </li>
+    </ul>             
+</div></div>
+		</div></div><div class="footer-widget"><div id="text-13" class="fwidget et_pb_widget widget_text"><h4 class="title">Stay informed</h4>			<div class="textwidget"><p>Sign up for UNHCR's newsletter to learn more about refugees</p>
+<p><a class="et_pb_button et_pb_bg_layout_dark" 
+href="https://act.unhcr.ca/page/41673/subscribe/1?ea.tracking.id=NS26_UNR_HB" style="color:#fff;">Subscribe today</a></p></div>
+		</div></div><div class="footer-widget"><div id="text-9" class="fwidget et_pb_widget widget_text"><h4 class="title">Contact us</h4>			<div class="textwidget"><p>UNHCR CANADA,<br />
+280 Albert Street, Suite 401,<br />
+Ottawa, Ontario<br />
+CANADA K1P 5G8</p>
+<p>1-877-232-0909</p>
+</div>
+		</div></div>	</div>
+</div>
+
+
+		
+				<div id="et-footer-nav">
+					<div class="container">
+						<ul id="menu-footer-sub-menu" class="bottom-nav"><li id="menu-item-52951" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-52951"><a href="https://www.unhcr.ca/about-us/">About Us</a></li>
+<li id="menu-item-640" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640"><a href="https://www.unhcr.ca/careers/">Careers</a></li>
+<li id="menu-item-49874" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49874"><a href="https://www.unhcr.ca/careers/notice-fraudulent-job-postings/">Fraudulent Job Postings</a></li>
+<li id="menu-item-11713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11713"><a href="https://www.unhcr.ca/contact-us/">Contact Us</a></li>
+<li id="menu-item-49875" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49875"><a href="https://www.unhcr.ca/how-to-help/donor-care/">Donor Care</a></li>
+<li id="menu-item-49876" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49876"><a href="https://www.unhcr.ca/news-stories/media-centre/">Media Centre</a></li>
+<li id="menu-item-642" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-642"><a href="https://www.unhcr.org">UNHCR International</a></li>
+<li id="menu-item-665" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-665"><a href="https://www.unhcr.ca/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-63101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63101"><a href="https://www.unhcr.ca/accessibility-statement/">Accessibility Statement</a></li>
+<li id="menu-item-11733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11733"><a href="https://www.unhcr.ca/site-map/">Site Map</a></li>
+</ul>					</div>
+				</div> <!-- #et-footer-nav -->
+
+			
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				© 2026 UNHCR CANADA 
+					</div>	<!-- .container -->
+				</div>
+				
+				
+			</footer> <!-- #main-footer -->
+		</div> <!-- #et-main-area -->
+
+
+	</div> <!-- #page-container -->
+
+	<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/unhcrca20-theme/*","/wp-content/themes/Divi/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div 
+	id="pum-1350" 
+	role="dialog" 
+	aria-modal="false"
+	class="pum pum-overlay pum-theme-1346 pum-theme-default-theme popmake-overlay pum-click-to-close click_open" 
+	data-popmake="{&quot;id&quot;:1350,&quot;slug&quot;:&quot;newsletter-signup&quot;,&quot;theme_id&quot;:1346,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:&quot;&quot;,&quot;extra_selectors&quot;:&quot;.eModal-1&quot;,&quot;do_default&quot;:null,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_fixed&quot;:&quot;1&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:&quot;1&quot;},&quot;click_open&quot;:[]}}">
+
+	<div  id="popmake-1350" class="pum-container popmake theme-1346 pum-responsive pum-responsive-medium responsive size-medium pum-position-fixed">
+
+				
+				
+		
+				<div  class="pum-content popmake-content" tabindex="0">
+			<div>
+<h3 style="text-align: center;">Sign up for UNHCR email updates</h3>
+<p style="text-align: center;">Sign up today for the UN Refugee Agency&#8217;s email updates and stay in touch with the latest news on refugee issues from around the world and our progress as we work to bring protection to refugees, internally displaced people and others of concern worldwide.</p>
+</div>
+<form class="en__component en__component--page" action="https://act.unhcr.ca/page/41673/subscribe/2" method="post"><input class="en__hiddenFields" name="hidden" type="hidden" value="" /><br />
+<input name="sessionId" type="hidden" value="8aadd96d4d40404a842180a73452158d-server9796" /></p>
+<div class="en__component en__component--row en__component--row--1"><input name="supporter.questions.90053" type="hidden" value="Y" /></p>
+<div class="en__component en__component en__component--column">
+<div class="en__component en__component--formblock">
+<div class="en__field en__field--text en__field--417663 en__field--firstName en__mandatory" style="text-align: center;">
+<p><label class="en__field__label" for="en__field_supporter_firstName">First Name</label></p>
+<div class="en__field__element en__field__element--text"><input id="en__field_supporter_firstName" class="en__field__input en__field__input--text" name="supporter.firstName" type="text" value="" /></div>
+</div>
+<div class="en__field en__field--text en__field--417664 en__field--lastName en__mandatory" style="text-align: center;">
+<p><label class="en__field__label" for="en__field_supporter_lastName">Last Name</label></p>
+<div class="en__field__element en__field__element--text"><input id="en__field_supporter_lastName" class="en__field__input en__field__input--text" name="supporter.lastName" type="text" value="" /></div>
+</div>
+<div class="en__field en__field--text en__field--417665 en__field--emailAddress en__mandatory" style="text-align: center;">
+<p><label class="en__field__label" for="en__field_supporter_emailAddress">Email</label></p>
+<div class="en__field__element en__field__element--text"><input id="en__field_supporter_emailAddress" class="en__field__input en__field__input--text" name="supporter.emailAddress" type="text" value="" /></div>
+</div>
+<p>&nbsp;</p>
+<div class="en__field en__field--radio en__field--429860 en__field--language en__mandatory" style="text-align: center;">
+<p><label class="en__field__label" for="en__field_supporter_language">Language</label></p>
+<div class="en__field__element en__field__element--radio ">
+<div class="en__field__item"><input id="en__field_supporter_language0" class="en__field__input en__field__input--radio" checked="checked" name="supporter.language" type="radio" value="English" /><label class="en__field__label en__field__label--item" for="en__field_supporter_language0">English</label><input id="en__field_supporter_language1" class="en__field__input en__field__input--radio" name="supporter.language" type="radio" value="French" /><label class="en__field__label en__field__label--item" for="en__field_supporter_language1">French</label></div>
+<div></div>
+</div>
+</div>
+<div class="en__submit" style="text-align: center;"><button>Submit</button></div>
+</div>
+</div>
+</div>
+</form>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			X			</button>
+		
+	</div>
+
+</div>
+<div data-wpr-lazyrender="1" class="et_social_pin_images_outer">
+					<div  class="et_social_pinterest_window">
+						<div  class="et_social_modal_header"><h3>Pin It on Pinterest</h3><span class="et_social_close"></span></div>
+						<div  class="et_social_pin_images" data-permalink="https://www.unhcr.ca/about-us/frequently-asked-questions/" data-title="Frequently Asked Questions" data-post_id="702"></div>
+					</div>
+				</div><div data-wpr-lazyrender="1" class="et_social_sidebar_networks et_social_visible_sidebar et_social_no_animation et_social_animated et_social_rectangle et_social_sidebar_simple et_social_mobile_off et_social_sidebar_networks_right">
+					
+					<ul class="et_social_icons_container"><li class="et_social_facebook">
+									<a href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.unhcr.ca%2Fabout-us%2Ffrequently-asked-questions%2F&#038;t=Frequently%20Asked%20Questions" class="et_social_share" rel="nofollow" data-social_name="facebook" data-post_id="702" data-social_type="share" data-location="sidebar">
+										<i class="et_social_icon et_social_icon_facebook"></i>
+										
+										
+										<span class="et_social_overlay"></span>
+									</a>
+								</li><li class="et_social_twitter">
+									<a href="http://twitter.com/share?text=Frequently%20Asked%20Questions&#038;url=https%3A%2F%2Fwww.unhcr.ca%2Fabout-us%2Ffrequently-asked-questions%2F&#038;via=UNHCRCanada" class="et_social_share" rel="nofollow" data-social_name="twitter" data-post_id="702" data-social_type="share" data-location="sidebar">
+										<i class="et_social_icon et_social_icon_twitter"></i>
+										
+										
+										<span class="et_social_overlay"></span>
+									</a>
+								</li><li class="et_social_all_button">
+								<a href="#" rel="nofollow" data-location="sidebar" data-page_id="702" data-permalink="https://www.unhcr.ca/about-us/frequently-asked-questions/" data-title="Frequently Asked Questions" class="et_social_open_all">
+									<i class="et_social_icon et_social_icon_all_button"></i>
+									<span class="et_social_overlay"></span>
+								</a>
+							</li></ul>
+					<span class="et_social_hide_sidebar et_social_icon"></span>
+				</div><script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-content/plugins/dg-divi-carousel/scripts/swiper.min.js?ver=5.0.0" id="swipe-script-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-content/plugins/dg-divi-carousel/scripts/swiper.min.js?ver=5.0.0" id="swiper-script-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-content/plugins/monarch/js/idle-timer.min.js?ver=1.4.14" id="et_monarch-idle-js" data-rocket-defer defer></script>
+<script type="text/javascript" id="et_monarch-custom-js-js-extra">
+/* <![CDATA[ */
+var monarchSettings = {"ajaxurl":"https://www.unhcr.ca/wp-admin/admin-ajax.php","pageurl":"https://www.unhcr.ca/about-us/frequently-asked-questions/","stats_nonce":"6b5b7b90a7","share_counts":"564a937c4d","follow_counts":"3b410ae770","total_counts":"49ebb05c06","media_single":"82fd49d890","media_total":"53286f35a6","generate_all_window_nonce":"6a47011d3c","no_img_message":"No images available for sharing on this page"};
+//# sourceURL=et_monarch-custom-js-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-content/cache/min/1/wp-content/plugins/monarch/js/custom.js?ver=1777520564" id="et_monarch-custom-js-js" data-rocket-defer defer></script>
+<script type="text/javascript" id="divi-custom-script-js-extra">
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https://www.unhcr.ca/wp-admin/admin-ajax.php","images_uri":"https://www.unhcr.ca/wp-content/themes/Divi/images","builder_images_uri":"https://www.unhcr.ca/wp-content/themes/Divi/includes/builder/images","et_frontend_nonce":"b9de1026a6","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"9457e162bd","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"702","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":"","tinymce_uri":"https://www.unhcr.ca/wp-content/themes/Divi/includes/builder/frontend-builder/assets/vendors","accent_color":"#0072bc","waypoints_options":{"context":[".pum-overlay"]}};
+var et_pb_box_shadow_elements = [];
+//# sourceURL=divi-custom-script-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-content/themes/Divi/js/scripts.min.js?ver=4.27.6" id="divi-custom-script-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-content/cache/min/1/wp-content/themes/Divi/js/smoothscroll.js?ver=1777520564" id="smoothscroll-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-content/plugins/dg-divi-carousel/scripts/frontend-bundle.min.js?ver=5.0.0" id="divi-carousel-frontend-bundle-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" id="popup-maker-site-js-extra">
+/* <![CDATA[ */
+var pum_vars = {"version":"1.22.0","pm_dir_url":"https://www.unhcr.ca/wp-content/plugins/popup-maker/","ajaxurl":"https://www.unhcr.ca/wp-admin/admin-ajax.php","restapi":"https://www.unhcr.ca/wp-json/pum/v1","rest_nonce":null,"default_theme":"1346","debug_mode":"","disable_tracking":"","home_url":"/","message_position":"top","core_sub_forms_enabled":"1","popups":[],"cookie_domain":"","paramNames":{"popup_id":"pid","cta":"cta","notrack":"notrack"},"analytics_enabled":"1","analytics_route":"analytics","analytics_api":"https://www.unhcr.ca/wp-json/pum/v1"};
+var pum_sub_vars = {"ajaxurl":"https://www.unhcr.ca/wp-admin/admin-ajax.php","message_position":"top"};
+var pum_popups = {"pum-1350":{"triggers":[{"type":"click_open","settings":{"cookie_name":"","extra_selectors":".eModal-1","do_default":null,"cookie":{"name":null}}}],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"1346","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":true,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":true,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"default-theme","id":1350,"slug":"newsletter-signup"}};
+//# sourceURL=popup-maker-site-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-content/cache/min/1/wp-content/uploads/pum/pum-site-scripts.js?ver=1777520564" id="popup-maker-site-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-content/cache/min/1/wp-content/themes/Divi/core/admin/js/common.js?ver=1777520564" id="et-core-common-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.unhcr.ca/wp-content/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js?ver=3.4.1" id="new-royalslider-main-js-js" data-rocket-defer defer></script>
+<style id="et-builder-module-design-deferred-702-cached-inline-styles">div.et_pb_section.et_pb_section_0{background-image:linear-gradient(180deg,rgba(43,43,43,0) 38%,rgba(0,0,0,0.7) 78%),url(https://www.unhcr.ca/wp-content/uploads/2020/06/RF2279826_SAM_3210-scaled.jpg)!important}.et_pb_section_0.et_pb_section{padding-top:20px;padding-bottom:20px;background-color:#000000!important}.et_pb_row_0.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;margin-top:auto!important;margin-bottom:0px!important;padding-top:0px;padding-bottom:0px}.et_pb_text_0{margin-top:0px!important;margin-bottom:0px!important;max-width:900px}.et_pb_text_1.et_pb_text,.et_pb_text_1 h1,.et_pb_text_1 h3{color:#ffffff!important}.et_pb_text_1{margin-top:0px!important}.et_pb_row_1.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;margin-top:0px!important;margin-bottom:0px!important;padding-top:0px;padding-bottom:0px}.et_pb_section_2.et_pb_section,.et_pb_section_4.et_pb_section{background-color:#efefef!important}.et_pb_section_6.et_pb_section{padding-top:60px;padding-bottom:60px;background-color:#f4f4f4!important}body #page-container .et_pb_section .et_pb_button_0,body .pum-container .et_pb_section .et_pb_button_0{color:#ffffff!important;background-color:#0072bc}.et_pb_button_0,.et_pb_button_0:after{transition:all 300ms ease 0ms}@media only screen and (max-width:980px){div.et_pb_section.et_pb_section_0{background-image:linear-gradient(180deg,rgba(43,43,43,0) 38%,rgba(0,0,0,0.7) 78%),url(https://www.unhcr.ca/wp-content/uploads/2020/06/RF2279826_SAM_3210-1-scaled.jpg)!important}.et_pb_section_0.et_pb_section{padding-bottom:40px;background-color:#000000!important}body #page-container .et_pb_section .et_pb_button_0:after,body .pum-container .et_pb_section .et_pb_button_0:after{display:inline-block;opacity:0}body #page-container .et_pb_section .et_pb_button_0:hover:after,body .pum-container .et_pb_section .et_pb_button_0:hover:after{opacity:1}}@media only screen and (max-width:767px){div.et_pb_section.et_pb_section_0{background-position:center bottom 0px;background-image:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,0.71) 60%),url(https://www.unhcr.ca/wp-content/uploads/2020/06/RF2279826_SAM_3210-1-scaled.jpg)!important}.et_pb_section_0.et_pb_section{padding-bottom:40px;background-color:#000000!important}.et_pb_row_7.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;padding-top:0px!important;padding-bottom:0px!important}body #page-container .et_pb_section .et_pb_button_0:after,body .pum-container .et_pb_section .et_pb_button_0:after{display:inline-block;opacity:0}body #page-container .et_pb_section .et_pb_button_0:hover:after,body .pum-container .et_pb_section .et_pb_button_0:hover:after{opacity:1}}</style><script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.unhcr.ca/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script>
+<p id="breadcrumbs"><span><span><a href="https://www.unhcr.ca/">Home</a></span> » <span><a href="https://www.unhcr.ca/about-us/">About Us</a></span> » <span class="breadcrumb_last" aria-current="page">Frequently Asked Questions</span></span></p>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f5f8d386ba49d5a',t:'MTc3NzgxNDMwNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+<!-- Rocket has webp -->
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

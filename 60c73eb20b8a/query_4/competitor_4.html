@@ -1,0 +1,2349 @@
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    
+        
+        
+            
+            
+        
+        
+            <head>
+                <meta name="format-detection" content="telephone=no" />
+                
+                <script type="text/javascript">
+                    var subjectAvailabilityParam = subjectAvailabilityParam || {};
+                    
+                    var loggedIn = false;
+                    var statusParam = statusParam || {};
+                    var statusEvents = statusEvents || {};
+
+                    statusParam.isProgramPage = true;
+                    statusParam.programCode = 'IDC_C';
+                    
+                    function onStatusLoaded(obj)
+                    {
+                        loggedIn = obj.loggedIn;
+                        if (!obj.showAddAffil)
+                            document.getElementById('affiliate_prog').style.display = 'none';
+                        if (obj.showRemoveAffil)
+                            document.getElementById('unaffiliate_prog').style.display = 'inline';
+                    }
+
+                    function affiliateProgram()
+                    {
+                        if (loggedIn)
+                        {
+                            StudentServices.affiliateWithProgram('IDC_C',
+                                    {
+                                        success: function (data) {
+                                            if (!data.error)
+                                            {
+                                                document.getElementById('affiliate_prog').style.display = 'none';
+                                                document.getElementById('unaffiliate_prog').style.display = 'inline';
+                                                alert('You have successfully affiliated yourself with this program.\nYou will now start receiving important information regarding this program');
+                                            } else
+                                                alert(data.message);
+                                        },
+                                        error: function () {
+                                            alert('We\'re sorry but an error occured while trying to complete your request.  Please try again.');
+                                        }
+                                    });
+                        } else
+                            sendToLogin();
+                    }
+                    function unaffiliateProgram()
+                    {
+                        if (loggedIn)
+                        {
+                            StudentServices.removeAffiliateWithProgram('IDC_C',
+                                    {
+                                        success: function (data) {
+                                            if (!data.error)
+                                            {
+                                                document.getElementById('unaffiliate_prog').style.display = 'none';
+                                                document.getElementById('affiliate_prog').style.display = 'inline';
+                                                alert('You have successfully unaffiliated yourself with this program.\nYou will no longer receiving important information regarding this program');
+                                            } else
+                                                alert(data.message);
+                                        },
+                                        error: function () {
+                                            alert('We\'re sorry but an error occured while trying to complete your request.  Please try again.');
+                                        }
+                                    });
+                        } else
+                            sendToLogin();
+                    }
+                    function sendToLogin()
+                    {
+                        var go = confirm("You must be logged in to perform this action.\nDo you wish to login?");
+                        if (go)
+                            location.href = Cart.server + '/cart/checkout.jsp?redirect=true&hide_new=true';
+                    }
+
+                    (function () {
+                        //add success event to the on status load
+                        statusEvents.success = statusEvents.success || new Array();
+                        statusEvents.success[statusEvents.success.length] = onStatusLoaded;
+                    })();
+
+                </script>
+                
+                
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="icon" type="image/gif" href="/ce/favicon.ico" />	
+<link rel="shortcut icon" type="image/gif" href="/ce/favicon.ico" />
+
+
+<title>Seneca College Part-time Studies - Toronto, Ontario, Canada - Interior Decorating</title>
+<meta name="description" content=''>
+<meta name="keywords" content='ITD901,Basic Drafting,ITD902,Design Theory and Presentation Techniques,ITD904,History of Furniture and Accessories,ITD907,Floor and Wall Coverings,ITD911,Colour Theory and Practice,ITD910,Perspective Drawings and Floor Plans,ITD913,Fabrics For Interior,ITD914,Window Treatments,ITD915,Fundamentals of Lighting,ITD920,Sales and Business Practices,ITD930,Comprehensive Decorating Project,PRC197,Effective Business Communication,ITD010,Introduction to Sketchup,ITD921,Designing Kitchens and Bathrooms,ATC111,AutoCAD 2025 - Fundamentals,ATC421,AutoCAD Fundamentals in Residential Design'>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<script type="text/javascript" src="/ce/system/modules/ca.on.senecac.www.fce/resources/js/jquery-1.5.1.min.js"></script>
+
+<!--AV start-->
+<script>window.jQuery || document.write('<script src="/shared/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<!--AV end-->
+
+<script type="text/javascript" src="/ce/system/modules/ca.on.senecac.www.fce/resources/js/jquery-ui-1.8.11.custom.min.js"></script>
+<script type="text/javascript" src="/ce/system/modules/ca.on.senecac.www.fce/templates/common/script/appfunctions.js"></script>
+<script type="text/javascript" src="/ce/system/modules/ca.on.senecac.www.fce/templates/common/styles/fall_2012/script/cartui.js"></script>
+
+<script type="text/javascript" src="/ce/system/modules/ca.on.senecac.www.fce/templates/common/styles/fall_2012/script/installall.js"></script>
+
+
+<script type="text/javascript" src="/ce/system/modules/ca.on.senecac.www.fce/resources/js/jquery.qtip.js"></script>
+<script type="text/javascript" src="/ce/system/modules/ca.on.senecac.www.fce/resources/js/jquery.qtip.min.js"></script>
+
+<link type="text/css" rel="stylesheet" media="screen" href="/ce/system/modules/ca.on.senecac.www.fce/resources/css/jquery.qtip.css">
+<link type="text/css" rel="stylesheet" media="screen" href="/ce/system/modules/ca.on.senecac.www.fce/resources/css/jquery.qtip.min.css">
+
+<script type="text/javascript" src="/ce/system/modules/ca.on.senecac.www.fce/resources/js/jquery.history.js"></script>
+                
+
+
+<link type="text/css" rel="stylesheet" media="screen" href="/ce/system/modules/ca.on.senecac.www.fce/resources/css/blitzer/jquery-ui-1.8.11.custom.css">
+<link type="text/css" rel="stylesheet" media="screen" href="/ce/system/modules/ca.on.senecac.www.fce/templates/common/styles/fall_2012/css/screen.css">
+<link type="text/css" rel="stylesheet" media="print" href="/ce/system/modules/ca.on.senecac.www.fce/templates/common/styles/fall_2012/css/print.css">
+
+
+<link type="text/css" rel="stylesheet" media="screen" href="/ce/system/modules/ca.on.senecac.www.fce/templates/common/styles/fall_2012/css/subject_screen.css"/>
+<link type="text/css" rel="stylesheet" media="print" href="/ce/system/modules/ca.on.senecac.www.fce/templates/common/styles/fall_2012/css/subject_print.css"/>
+
+<link type="text/css" rel="stylesheet" media="screen" href="/ce/system/modules/ca.on.senecac.www.fce/templates/common/styles/fall_2012/css/program_screen.css"/>
+
+
+                
+<script type="text/javascript" src="/ce/system/modules/ca.on.senecac.www.fce/templates/common/styles/fall_2012/script/cart.js"></script>
+<script type="text/javascript" src="/ce/system/modules/ca.on.senecac.www.fce/templates/common/styles/fall_2012/script/addsubject.js"></script>							
+
+<script src="https://cdn.optimizely.com/js/30510070057.js"></script>
+
+<!-- 20200825 starts -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-FGJQ');</script>
+<!-- End Google Tag Manager -->
+<!-- 20200825 ends -->
+<!-- head.jsp -->
+
+<!--AV start-->
+
+	<link type="text/css" rel="stylesheet" media="screen" href="/ce/system/modules/ca.on.senecac.www.fce/templates/common/styles/fall_2012/css/responsive.css"/>
+	<script type="text/javascript" src="/ce/system/modules/ca.on.senecac.www.fce/templates/common/styles/fall_2012/script/responsive.js"></script>
+
+<!--AV end-->
+
+
+
+
+
+	
+		   
+
+
+<script type="text/javascript">
+
+
+var app_context_path = '/ce';
+var isDebug = false;
+
+/* verb on 20260324: immerge vt. = immerse */
+function immerge() {
+    const g = constantfy();
+    const jastudent = `null`;
+    const metastudent = tread(g.studentkey, jastudent);
+    metastudent.event = 'meta_data_init';
+    push_commerce(true, metastudent); // install.js
+}
+
+immerge();
+</script>
+
+
+
+<script type="text/javascript">
+var button = "OK";
+var message = "";
+if(message != null && message != "")
+{
+	alert2(message,button);
+}
+	
+function alert2(message, buttonText) {
+    buttonText = (buttonText == undefined) ? "Ok" : buttonText;
+
+    var div = $('<div>');
+    div.html(message);
+    div.dialog({
+        autoOpen: true,
+        modal: true,
+        draggable: false,
+        resizable: false,
+        buttons: [{
+            text: buttonText,
+            click: function () {
+                //$(this).dialog("close");
+				//$(this).dialog("destroy");
+				//$(this).remove();
+				//window.reload();
+                div.remove();
+            }
+        }]
+    });
+}
+</script>
+
+
+
+
+<!-- head.jsp ends -->
+
+
+
+            </head>
+        
+        
+
+
+
+<body onload="_onload();" onscroll="_onscroll();" onresize="_onresize();" onunload="_onunload();">
+
+
+        
+        <div class="centre-all">
+            
+<!--<img class="bgimage" src="/ce/system/modules/ca.on.senecac.www.fce/resources/cement/images/background.jpg"/>-->
+<div class="head-banner-full">
+<!--HEADER-WRAP STARTS-->
+<!-- 20200825 starts -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-FGJQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- 20200825 ends -->
+<!-- header.jsp -->
+
+<div class="header-wrap"> 
+      <!--LOGO-STARTS-->
+      <div style="cursor: pointer;" onclick="location.href='/ce/index.html';" class="logo"></div>
+<div style="float:right; width:320px;"><!--SEARCH &nbsp; <script src="https://addsearch.com/js/?key=198b5d450273c8185a9753d08a4c2f86"></script>--><script>
+  (function() {
+    var cx = '003312874551335045403:bk-vzyprzrm';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<gcse:search></gcse:search>
+ <style type="text/css">
+ 	input#gsc-i-id1.gsc-input {
+    text-indent: 4px;
+	background-image: none;
+}
+input.gsc-search-button{
+    border-radius: none;
+	-moz-border-radius: none;
+	-webkit-border-radius: none;
+}
+</style>
+</div>
+      <div id="login">
+        <p><a href="/ce/info/login.html">LOG IN</a></p>
+      </div>
+
+      
+      <!--LOGO-ENDS--> 
+      
+      <!--COPYRIGHT-STARTS--><!--COPYRIGHT-ENDS--> 
+      
+    </div>
+
+<!--HEADER-WRAP ENDS-->
+</div>
+
+
+
+<!-- banner20211215 -->
+<div style="padding: 20px; background-color: #f5f5f5; color: #333333; font-size: 14px;margin-top: 115px;margin-bottom: 20px;">
+<p>Registration for <a href="/ce/summer/index.html">Summer 2026 programs and courses</a> is now open. Learn more about the <a href="/ce/summer/index.html">academic programs we are delivering in Summer 2026</a>. If you have any questions about part-time studies, please <a href="/ce/info/contact-us.html">contact us</a>.
+</p>
+</div>
+                <div class="body-content-wrapper">
+                
+
+                <div class="information-boxes-program-wrapper">
+                    <!--INFORMATION-BOX-RED START-->
+                    <div class="information-box-red" style="position:  relative;">
+                        
+                        
+
+                        
+                        
+                        
+
+                        
+                        
+                        <hgroup>
+                            <h2 class="program-information-heading"><strong>Interior Decorating</strong></h2>
+                            <!-- ticket #I20240102_045 -->
+                            <h3 class="program-information-credential">Seneca College Certificate</h3>
+                        </hgroup>
+                        <div class="program-information-link" style="position:  absolute;  bottom:  0;">
+                            
+                                
+                            
+                            
+                                
+                            
+                            
+                            
+
+                            
+                            
+                                <h2 class="program-information-text"><strong>Also Available</strong></h2>
+                            
+
+                            
+                            
+                            
+                                
+                                
+                                &middot;&nbsp;<a class="program-information-link" href="/ce/creative/interior/interior-decorating.html" onclick="redoOnlineFilter();
+                                        return false;">ONLINE</a><br/>
+                                
+                            
+                            
+                                
+                                
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    <!--INFORMATION-BOX-RED END-->
+                    <!--INFORMATION-BOX-2ND-START-->
+                    <div class="information-box-inside">
+                        <h2 class="infobox-heading-inside">Core Information</h2>
+                        <hr style="width: 202px;">
+
+                        <ul>
+                            
+                            <li><a href="#Overview" class="rightside-content-link">Overview</a></li>
+                                
+                                <li><a id='link_CareerOpportunities' href="#CareerOpportunities" class="rightside-content-link">Career Opportunities</a></li>
+<li><a id='link_EntryRequirements' href="#EntryRequirements" class="rightside-content-link">Entry Requirements</a></li>
+<li><a id='link_Curriculum' href="#Curriculum" class="rightside-content-link">Curriculum</a></li>
+<li><a id='link_ProgramOutcomes' href="#ProgramOutcomes" class="rightside-content-link">Program Outcomes</a></li>
+
+
+                        </ul>
+
+
+
+                    </div>
+
+
+                    <!--INFORMATION-BOX-2ND END-->
+                    
+                    
+                        <!--INFORMATION-BOX-3RD-START-->
+                        <div class="information-box-inside">
+                            <h2 class="infobox-heading-inside">More Information</h2>
+                            <hr>
+                            <ul>
+                                
+                                    <li><a id="link_ContactInfo" href="#ContactInfo" class="rightside-content-link">Program Contacts</a></li>
+                                    
+                                    
+                                    <li><a id='link_CreditforPriorLearning' href="#CreditforPriorLearning" class="rightside-content-link">Credit for Prior Learning</a></li>
+<li><a id='link_GraduationConvocation' href="#GraduationConvocation" class="rightside-content-link">Graduation/Convocation</a></li>
+
+                            </ul>
+                        </div>
+                        <!--INFORMATION-BOX-3RD END-->
+                    
+                    <!--INFORMATION-BOX-4TH-START-->
+
+                    
+                    
+                    
+                        
+                    
+                    
+                    
+                    
+                    
+                    <!--INFORMATION-BOX-3RD-START-->
+                    <div class="information-box-inside">
+                        <h2 class="infobox-heading-inside">Related Studies</h2>
+                        <hr>
+                        <ul>
+                            
+                            <li><a target='_blank' href="/ce/creative/floral/professional-floral-design.html" class="rightside-content-link">Professional Floral Design</a></li>
+<li><a href="/ce/creative/interior/home-staging.html">Home Staging</a></li>
+<li><a href="/ce/creative/interior/pi-interior-decorator.html">Interior Decorating for Personal Application</a></li>
+
+                        </ul>
+
+                    </div>
+
+                    <!--INFORMATION-BOX-4TH END-->
+                    
+                    
+                </div>
+            </div>
+
+            <div class="leftside-information-wrap">
+                <!-- AddThis Button BEGIN -->
+                
+<!-- AddThis Button BEGIN -->
+
+&nbsp;
+<!-- AddThis Button END -->
+                
+<!-- template common sytle fall_2012 livechat.jsp -->
+
+                <div>
+                    <input id="add_class" class="submitform-large-button-choices-white" type="submit" onclick="showRegistration();" name="submit" value="REGISTER NOW">
+                    
+                    <input id="affiliate_prog" style="display:none;" class="submitform-large-button-choices-white" type="submit" name="submit" value="AFFILIATE WITH PROGRAM" onclick="affiliateProgram();">
+                    <input id="unaffiliate_prog" style="display:none;" class="submitform-large-button-choices-white" type="submit" name="submit" value="UNAFFILIATE WITH PROGRAM" onclick="unaffiliateProgram();">
+                    
+                    <div class="filter" id="class_filter">
+                        <script type="text/javascript">
+                            function updateAvailableFilter()
+                            {
+                                var opts = document.getElementsByName("availabaility");
+                                var allChecked = false;
+                                var availChecked = false;
+                                var waitChecked = false;
+                                var availWaitChecked = false;
+                                var unavailChecked = false;
+                                for (var i = 0; i < opts.length; i++)
+                                {
+                                    allChecked = (allChecked || (opts[i].value == 'all' && opts[i].checked));
+                                    availChecked = (availChecked || (opts[i].value == 'available' && opts[i].checked));
+                                    waitChecked = (waitChecked || (opts[i].value == 'waitlist' && opts[i].checked));
+                                    availWaitChecked = (availWaitChecked || (opts[i].value == 'available_waitlist' && opts[i].checked));
+                                    unavailChecked = (unavailChecked || (opts[i].value == 'unavailable' && opts[i].checked));
+
+                                    var style = document.getElementById('availability_style_' + opts[i].value);
+                                    if (style != null)
+                                    {
+                                        var sheetParent = style.parentNode;
+                                        sheetParent.removeChild(style);
+                                    }
+
+                                }
+
+                                if (allChecked)
+                                {
+                                    availChecked = true;
+                                    waitChecked = true;
+                                    unavailChecked = true;
+                                }
+                                if (availWaitChecked)
+                                {
+                                    availChecked = true;
+                                    waitChecked = true;
+                                }
+
+                                if (!availChecked)
+                                {
+                                    var sheet = document.createElement('style');
+                                    sheet.id = 'availability_style_available';
+                                    sheet.innerHTML = 'tr.available{display:none;}';
+                                    document.body.appendChild(sheet);
+                                }
+
+                                if (!waitChecked)
+                                {
+                                    var sheet = document.createElement('style');
+                                    sheet.id = 'availability_style_waitlist';
+                                    sheet.innerHTML = 'tr.waitlist{display:none;}';
+                                    document.body.appendChild(sheet);
+                                }
+
+                                if (!unavailChecked)
+                                {
+                                    var sheet = document.createElement('style');
+                                    sheet.id = 'availability_style_unavailable';
+                                    sheet.innerHTML = 'tr.unavailable{display:none;}';
+                                    document.body.appendChild(sheet);
+                                }
+
+
+                            }
+
+                            function updateTeachFilter(chk)
+                            {
+                                var teachIds = ['teach_all', 'teach_inclass', 'teach_online', 'teach_correspondence', 'teach_blended', 'teach_unknown'];
+                                if (chk.id == teachIds[0] && chk.checked)
+                                {
+                                    for (var i = 1; i < teachIds.length; i++)
+                                    {
+                                        if (document.getElementById(teachIds[i]) != null)
+                                            document.getElementById(teachIds[i]).checked = false;
+                                    }
+                                }
+                                for (var i = 0; i < teachIds.length; i++)
+                                {
+                                    var style = document.getElementById('availability_style_' + teachIds[i]);
+                                    if (style != null)
+                                    {
+                                        var sheetParent = style.parentNode;
+                                        sheetParent.removeChild(style);
+                                    }
+
+                                }
+
+                                var teachAll = document.getElementById('teach_all').checked;
+                                var teachInClass = document.getElementById('teach_inclass').checked;
+                                var teachOnline = document.getElementById('teach_online').checked;
+                                var teachBlended = document.getElementById('teach_blended').checked;
+                                var teachCorrespondence = document.getElementById('teach_correspondence').checked;
+
+                                if ((teachInClass || teachOnline || teachCorrespondence || teachBlended) && !(teachInClass && teachOnline && teachCorrespondence && teachBlended) && teachAll)
+                                {
+                                    teachAll = false;
+                                    document.getElementById('teach_all').checked = false;
+                                } else if (!teachInClass && !teachOnline && !teachCorrespondence && !teachBlended)
+                                {
+                                    teachAll = true;
+                                    document.getElementById('teach_all').checked = true;
+                                }
+
+                                if (teachAll)
+                                {
+                                    teachInClass = true;
+                                    teachOnline = true;
+                                    teachCorrespondence = true;
+                                    teachBlended = true;
+                                }
+
+
+                                /*
+                                 var notOpr = '';
+                                 if (teachInClass)
+                                 {
+                                 //if (notOpr.length > 0)
+                                 //	notOpr += ', ';
+                                 notOpr += ' cls:not(.mode_P)';
+                                 }
+                                 if (teachOnline)
+                                 {
+                                 //if (notOpr.length > 0)
+                                 //	notOpr += ', ';
+                                 notOpr += ' cls:not(.mode_O), cls:not(.mode_I)';
+                                 }
+                                 if (teachBlended)
+                                 {
+                                 //if (notOpr.length > 0)
+                                 //	notOpr += ', ';
+                                 notOpr += ' cls:not(.mode_H)';
+                                 }
+                                 if (teachCorrespondence)
+                                 {
+                                 //if (notOpr.length > 0)
+                                 //	notOpr += ', ';
+                                 notOpr += ' cls:not(.mode_D)';
+                                 }
+                                 */
+
+                                var notOpr = '';
+                                if (teachInClass)
+                                {
+                                    //if (notOpr.length > 0)
+                                    //	notOpr += ', ';
+                                    notOpr += ':not(.mode_P)';
+                                }
+                                if (teachOnline)
+                                {
+                                    //if (notOpr.length > 0)
+                                    //	notOpr += ', ';
+                                    notOpr += ':not(.mode_O):not(.mode_I)';
+                                }
+                                if (teachBlended)
+                                {
+                                    //if (notOpr.length > 0)
+                                    //	notOpr += ', ';
+                                    notOpr += ':not(.mode_H)';
+                                }
+                                if (teachCorrespondence)
+                                {
+                                    //if (notOpr.length > 0)
+                                    //	notOpr += ', ';
+                                    notOpr += ':not(.mode_D)';
+                                }
+                                if (notOpr.length > 0)
+                                {
+                                    notOpr = 'cls' + notOpr;
+                                }
+
+                                if (!teachInClass)
+                                {
+                                    var sheet = document.createElement('style');
+                                    sheet.id = 'availability_style_teach_inclass';
+                                    //sheet.innerHTML = '.mode_N' + notOpr  + '{display:none;}';
+                                    sheet.innerHTML = notOpr.replace(/cls/g, '.mode_P') + '{display:none;}';
+                                    document.body.appendChild(sheet);
+                                }
+                                if (!teachOnline)
+                                {
+                                    var sheet = document.createElement('style');
+                                    sheet.id = 'availability_style_teach_online';
+//                                    sheet.innerHTML = '.mode_O' + notOpr  + ', tr.mode_I' + notOpr  + '{display:none;}';
+                                    sheet.innerHTML = notOpr.replace(/cls/g, '.mode_O') + ', ' + notOpr.replace(/cls/g, '.mode_I') + '{display:none;}';
+                                    document.body.appendChild(sheet);
+                                }
+                                if (!teachBlended)
+                                {
+                                    var sheet = document.createElement('style');
+                                    sheet.id = 'availability_style_teach_blended';
+                                    //sheet.innerHTML = '.mode_B' + notOpr  + '{display:none;}';
+                                    sheet.innerHTML = notOpr.replace(/cls/g, '.mode_H') + '{display:none;}';
+                                    document.body.appendChild(sheet);
+                                }
+                                if (!teachCorrespondence)
+                                {
+                                    var sheet = document.createElement('style');
+                                    sheet.id = 'availability_style_teach_correspondence';
+//                                    sheet.innerHTML = '.mode_T' + notOpr  + '{display:none;}';
+                                    sheet.innerHTML = notOpr.replace(/cls/g, '.mode_D') + '{display:none;}';
+                                    document.body.appendChild(sheet);
+                                }
+
+                                if (!teachAll)
+                                {
+                                    var sheet = document.createElement('style');
+                                    sheet.id = 'availability_style_teach_unknown';
+//                                    sheet.innerHTML = '.mode_T' + notOpr  + '{display:none;}';
+                                    sheet.innerHTML = notOpr.replace(/cls/g, '.mode_U') + '{display:none;}';
+                                    document.body.appendChild(sheet);
+                                }
+
+
+                            }
+
+                        </script>
+                        <br/>
+                        <!--
+                        <fieldset>
+                            <legend>Availability</legend>
+                            <input type="radio" value="all" name="availabaility" onclick="updateAvailableFilter();"/> All<br/>
+                            <input type="radio" value="available" name="availabaility" onclick="updateAvailableFilter();"/> Available<br/>
+                            <input type="radio" value="waitlist" name="availabaility" onclick="updateAvailableFilter();"/> Waitlist Only<br/>
+                            <input type="radio" value="available_waitlist" name="availabaility" onclick="updateAvailableFilter();"/> Available & Waitlist<br/>
+                            <input type="radio" value="unavailable" name="availabaility" onclick="updateAvailableFilter();"/> Unavailable
+                        </fieldset>
+                        <fieldset>
+                            <legend>Teaching Mode</legend>
+                            <input type="checkbox" id="teach_all" onclick="updateTeachFilter(this);"/> All<br/>
+                            <input type="checkbox" id="teach_inclass" onclick="updateTeachFilter(this);"/> In Class<br/>
+                            <input type="checkbox" id="teach_online" onclick="updateTeachFilter(this);"/> Online<br/>
+                            <input type="checkbox" id="teach_blended" onclick="updateTeachFilter(this);"/> Hybrid<br/>
+                            <input type="checkbox" id="teach_correspondence" onclick="updateTeachFilter(this);"/> Correspondence
+                        </fieldset>
+                        -->
+                    </div>
+                </div>
+                <!-- AddThis wrap END -->
+                <!-- AddThis Button END -->
+                <!-- program-information-leftbox- END -->
+                
+<div id="listing">
+
+
+
+</div>
+
+            </div>
+            
+            <div class="rightside-content-wrapper">
+                <div class="rightside-content-backdrop">
+
+                    
+                    <div class="rightside-content rightside-content-hidden" id="_Overview" loaded="true">
+                        <h3><strong>Overview</strong></h3>
+                        
+                        <p>This program teaches the art and craft of interior decorating and prepares students for a
+rewarding career in this multifaceted industry. With emphasis on professional standards, students
+develop their creativity while learning how to use colour, texture, fabrics, furnishings, lighting,
+as well as floor and wall coverings to achieve a variety of decorating concepts. Graduates can
+expect to acquire skills and techniques that have proven valuable in this highly competitive
+field.</p>
+<p>This certificate is recognized by the 
+<a href="https://www.ddacanada.com/" target="_blank">Decorators &amp; Designers Association of
+Canada</a>.</p>
+<p>
+<img src="/ce/media/images/creative/decorators-and-designers-association.png"
+alt="Decorators &amp; Designers Association of Canada Logo" />
+</p>
+
+
+                        
+
+                    </div>
+                    
+                    
+                                                        <!--<div class="rightside-content rightside-content-hidden" id="_CareerOpportunities">-->
+                    
+                    <div class="rightside-content rightside-content-hidden" id="_CareerOpportunities" loaded="true">
+                        
+                        
+                        <script type="text/javascript">window['CareerOpportunities_loaded'] = true;</script>
+                        
+                        
+                        
+                        
+                        <h3 class=""><strong>Career Opportunities</strong></h3>
+                                
+                                
+                                    
+
+                            
+                            
+
+                            
+                            
+                                
+                                <!-- ticket #197364 for curriculum -->
+
+                                <span class="mode_U"><p>A variety of challenging careers are available in the interior decorating field. Graduates from
+the program find themselves in high demand for employment in retail sales, fabric distribution and
+customer service or may become self-employed interior decorators.</p></span>
+                            
+                            
+                        
+                    </div>
+                    
+                    <!--</div>-->
+                    
+                                                        <!--<div class="rightside-content rightside-content-hidden" id="_EntryRequirements">-->
+                    
+                    <div class="rightside-content rightside-content-hidden" id="_EntryRequirements" loaded="true">
+                        
+                        
+                        <script type="text/javascript">window['EntryRequirements_loaded'] = true;</script>
+                        
+                        
+                        
+                        
+                        <h3 class=""><strong>Entry Requirements</strong></h3>
+                                
+                                
+                                    
+
+                            
+                            
+
+                            
+                            
+                                
+                                <!-- ticket #197364 for curriculum -->
+
+                                <span class="mode_U"><p>A good command of the English language and a facility for mathematics are essential for success
+in the Interior Decorating Program. New students must begin the program by taking either <a href='/ce/classes/ITD901.html'>ITD901</a> or
+<a href='/ce/classes/ITD904.html'>ITD904</a>. Individuals interested in taking this program are invited to attend an information session
+that is held before the start of each term.</p></span>
+                            
+                            
+                        
+                                    
+
+                            
+                            
+                                
+                                
+                                
+                                <h4 class="mode_U">Prerequisites</h4>
+                                
+                                
+                                    <span class="mode_U">
+                                        <p>It is your responsibility to ensure that program requirements and course prerequisites as
+outlined are met. Prerequisites are included for your academic protection. Knowledge of the
+prerequisite material is assumed by your instructor and instruction will proceed accordingly.
+Students lacking prerequisites not only jeopardize their own ability to succeed but present
+unnecessary interruption. If you lack appropriate prerequisites (or Transfer Credit for the
+prerequisite course) you may be asked to withdraw or transfer to a more appropriate course with the
+risk of academic/financial penalty.</p>
+                                    </span>
+                                
+                                
+                            
+
+                            
+                            
+                            
+                        
+                    </div>
+                    
+                    <!--</div>-->
+                    
+                                                        <!--<div class="rightside-content rightside-content-hidden" id="_Curriculum">-->
+                    
+                    <div class="rightside-content rightside-content-hidden" id="_Curriculum" loaded="true">
+                        
+                            
+                            <script type="text/javascript">
+                                $(function () {
+                                    document.getElementById('offering_online').checked = false;
+                                    document.getElementById('offering_correspondence').checked = false;
+
+                                
+
+                                
+
+                                    //$('#filter_options').corner();
+                                });
+
+                                function showMsg() {
+                                    document.getElementById('filterNote').style.display = "block";
+                                }
+
+                                function hideMsg() {
+                                    document.getElementById('filterNote').style.display = "none";
+                                }
+
+                                function redoFilter()
+                                {
+                                    var showInClass = document.getElementById('offering_inclass').checked;
+                                    var showInOnline = document.getElementById('offering_online').checked;
+                                    var showInCorrespondence = document.getElementById('offering_correspondence').checked;
+                                    var showBlended = document.getElementById('offering_blended').checked;
+                                    var showAvailable = document.getElementById('offering_available').checked;
+
+                                    if (!showInClass && !showInOnline && !showInCorrespondence && !showBlended && !showAvailable)
+                                    {
+                                        $('#_Curriculum .mode_U').show();
+                                        $('#_Curriculum .mode_P').show();
+                                        $('#_Curriculum .mode_H').show();
+                                        $('#_Curriculum .mode_O').show();
+                                        $('#_Curriculum .mode_D').show();
+                                        $('#_Curriculum .mode_C').show();
+                                        $('.location_O').show();  // VL ADDED 2015-01-26
+                                        $('.location_C').show();  // VL ADDED 2015-01-26
+                                        $('.available').show();  // VL ADDED 2015-01-26
+                                        // $('filterNote').show();       // vincent 2016-05-02   
+                                        hideMsg(); // vincent 2016-05-04
+                                    } else
+                                    {
+                                        $('#_Curriculum .mode_U').hide();
+                                        $('#_Curriculum .mode_P').hide();
+                                        $('#_Curriculum .mode_H').hide();
+                                        $('#_Curriculum .mode_O').hide();
+                                        $('#_Curriculum .mode_D').hide();
+                                        $('#_Curriculum .mode_C').hide();
+                                        $('.location_O').hide();    // VL ADDED 2015-01-26
+                                        $('.location_C').hide();    // VL ADDED 2015-01-26
+                                        $('.available').hide();  // VL ADDED 2015-01-26
+                                        showMsg(); // vincent 2016-05-04   
+
+                                        if (showAvailable)
+                                            $('.available').show();
+
+                                        if (showInClass)
+                                            $('#_Curriculum .mode_P').show();
+
+                                        if (showInOnline) {
+                                            $('#_Curriculum .mode_O').show();
+                                            $('.location_O').show();  // VL ADDED 2015-01-26
+                                        }
+
+                                        if (showInCorrespondence) {
+                                            $('#_Curriculum .mode_D').show();
+                                            $('#_Curriculum .mode_C').show();
+                                            $('.location_C').show();    // VL ADDED 2015-01-26
+                                        }
+
+                                        if (showBlended)
+                                            $('#_Curriculum .mode_H').show();
+
+                                    }
+                                }
+                            </script>
+
+
+                            <div id="filter_options" style="background-color:#c9c9c9; padding-left:10px; padding-right:10px;">
+                                <!-- Guokai 20200416 1355 -->
+                                <div style="display: none; float:left;">
+                                    Filter Classes: 
+                                    <input type="checkbox" id="offering_inclass" onclick="redoFilter();"/> In Class &nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="offering_online"  onclick="redoFilter();"/> Online &nbsp;&nbsp;&nbsp; 
+                                    <input type="checkbox" id="offering_correspondence" onclick="redoFilter();"/> Correspondence &nbsp;&nbsp;&nbsp; 
+                                    <input type="checkbox" id="offering_blended" onclick="redoFilter();"/> Hybrid &nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="offering_available" onclick="redoFilter();"/> Availability&nbsp;&nbsp;&nbsp;
+                                </div>
+                                <div id = "filterNote" style="display:none;">
+                                    <p style="background-color: yellow;"><strong>Note:</strong> Remove filter(s) above to view all program curriculum requirements.</p> 
+                                </div>
+                                <!-- 20210729 -->
+                                <p><strong>
+                                        Part-time Studies courses are being offered in either of the following four formats: 
+                                        <a href="/ce/common/learning-modes.html">
+                                            Online, Flexible, In-person, Hybrid</a>.
+                                        Click <i>Availability</i> below to see current offerings.
+                                    </strong></p>
+                            </div>
+
+                            <script type="text/javascript">
+                                /*$(function(){
+                                 document.getElementById('offering_online').checked=true;
+                                 var showInOnlineVal = document.getElementById('offering_online').checked;
+                                 if(showInOnlineVal)
+                                 {
+                                 $('#_Curriculum .mode_U').hide();
+                                 $('#_Curriculum .mode_N').hide();
+                                 $('#_Curriculum .mode_B').hide();
+                                 $('#_Curriculum .mode_C').hide();
+                                 $('#_Curriculum .mode_I').show();
+                                 }
+                                 });*/
+                                function displayCurrOnClick()
+                                {
+                                    var showing = $(".rightside-content-show");
+                                    showing.removeClass("rightside-content-show");
+                                    showing.addClass("rightside-content-hidden");
+                                    key = 'Curriculum';
+                                    showing = $("#_Curriculum");
+
+                                    showing.removeClass("rightside-content-hidden");
+                                    showing.addClass("rightside-content-show");
+
+                                    hashChanged(key);
+                                    /*
+                                     try
+                                     {
+                                     pageTracker._trackPageview("/ce/creative/interior/interior-decorating.html/" + key);
+                                     }
+                                     catch(e){}
+                                     */
+                                }
+                                
+                                function redoOnlineFilter() {
+                                    // swtich to false on 2024-Feb-28
+                                    document.getElementById('offering_online').checked = false;
+                                    document.getElementById('offering_correspondence').checked = false;
+                                    redoFilter();
+                                    displayCurrOnClick()
+                                }
+
+                                function redoCorrspndsFilter() {
+                                    // swtich to false on 2024-Feb-28
+                                    document.getElementById('offering_correspondence').checked = false;
+                                    document.getElementById('offering_online').checked = false;
+                                    redoFilter();
+                                    displayCurrOnClick()
+                                }
+                            </script>
+                            
+                        
+                        
+                        <script type="text/javascript">window['Curriculum_loaded'] = true;</script>
+                        
+                        
+                        
+                            
+                        
+                        
+                        <h3 class="mode_U"><strong>Curriculum</strong></h3>
+                                
+                                
+                                    
+
+                            
+                            
+
+                            
+                                
+                                <!--Seme: 4 -->
+<!--YYYYs: 2264 -->
+<!-- ProgC: IDC_C -->
+<!-- Table Number: 1 -->
+<h3 class='mode_U'>Certificate Requirements</h3>
+<div class='table-layout'>
+<div class='ptreg'>
+<div class='header-row mode_U'>
+<div class='group-heading'>&nbsp;</div>
+<div class='expand' style='float:right;' id='expand0-0'><a href='javascript: void(0);' onclick='var grp = $(".program-group-0-0>.subject-information"); grp.removeClass("subject-information-show"); grp.removeClass("subject-information-hide"); grp.addClass("subject-information-show"); $("#expand0-0").hide(); $("#compress0-0").show(); loadAjaxSectionSubjectAvilability("0-0");'>(Show All)</a></div>
+<div class='compress' style='float:right;' id='compress0-0'><a href='javascript: void(0);' onclick='var grp = $(".program-group-0-0>.subject-information"); grp.removeClass("subject-information-show"); grp.removeClass("subject-information-hide"); grp.addClass("subject-information-hide"); $("#expand0-0").show(); $("#compress0-0").hide();'>(Hide All)</a></div>
+<br class='clear'/>
+</div><!-- .header-row -->
+<div class='table-row program-group-0-0 available mode_H' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_0_0_ITD901_subject-information1').hasClass('subject-information-show')) {$('#tbl_0_0_ITD901_subject-information1').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_0_0_ITD901_subject-information1').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ITD901',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ITD901</div>
+<meta content='ITD901' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>Basic Drafting</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_0_0_ITD901_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_0_0_ITD901_subject-information1'>
+<div  id='tbl_0_0_ITD901'>
+<div class='subject-description'>
+<div class='description'><p>This course introduces students to basic drafting techniques and the correct use of drafting equipment. Students learn how to create plan and elevation views, para-line drawings, and shade and shadow techniques.</p>
+<p>Students are required to purchase some supplies (estimated cost: $150-$200).</p></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ITD901'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ITD901_availibility' id='ITD901_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ITD901.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-0-0 available mode_H' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_0_0_ITD902_subject-information2').hasClass('subject-information-show')) {$('#tbl_0_0_ITD902_subject-information2').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_0_0_ITD902_subject-information2').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ITD902',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ITD902</div>
+<meta content='ITD902' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>Design Theory and Presentation Techniques</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_0_0_ITD902_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_0_0_ITD902_subject-information2'>
+<div  id='tbl_0_0_ITD902'>
+<div class='subject-description'>
+<div class='prerequisite'><span class='prerequisite-title'>Prerequisite(s):</span> <p><a href='/ce/classes/ITD901.html'>ITD901</a></p></div>
+<div class='description'><p>This course introduces students to the elements and principles of design and basic presentation skills. Students learn how to apply the principles of structural and decorative design to organize creative and functional interior space. Presentation skills and rendering techniques are emphasized.</p></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ITD902'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ITD902_availibility' id='ITD902_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ITD902.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-0-0 available mode_OA' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_0_0_ITD904_subject-information3').hasClass('subject-information-show')) {$('#tbl_0_0_ITD904_subject-information3').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_0_0_ITD904_subject-information3').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ITD904',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ITD904</div>
+<meta content='ITD904' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>History of Furniture and Accessories</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_0_0_ITD904_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_0_0_ITD904_subject-information3'>
+<div  id='tbl_0_0_ITD904'>
+<div class='subject-description'>
+<div class='prerequisite'><span class='prerequisite-title'>Prerequisite(s):</span> <p><a href='/ce/classes/PRC197.html'>PRC197</a></p></div>
+<div class='description'><p>Students are introduced to the historical furniture styles of France, England, and Early America which are related to the contemporary reproductions and adaptations of furniture styles today. This knowledge of furniture and accessories enables students to recommend suitable furnishings for a given decorating concept.</p>
+<!-- 20241104 --></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ITD904'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ITD904_availibility' id='ITD904_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ITD904.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-0-0 available mode_H' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_0_0_ITD907_subject-information4').hasClass('subject-information-show')) {$('#tbl_0_0_ITD907_subject-information4').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_0_0_ITD907_subject-information4').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ITD907',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ITD907</div>
+<meta content='ITD907' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>Floor and Wall Coverings</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_0_0_ITD907_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_0_0_ITD907_subject-information4'>
+<div  id='tbl_0_0_ITD907'>
+<div class='subject-description'>
+<div class='prerequisite'><span class='prerequisite-title'>Prerequisite(s):</span> <p><a href='/ce/classes/ITD901.html'>ITD901</a> and <a href='/ce/classes/ITD902.html'>ITD902</a></p></div>
+<div class='description'><p>This course introduces students to the various types of floor and wall coverings available for interior decorating. Appropriate applications and design effects, measuring, estimating, manufacturing, product durability and maintenance are included.</p></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ITD907'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ITD907_availibility' id='ITD907_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ITD907.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-0-0 available mode_H' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_0_0_ITD911_subject-information5').hasClass('subject-information-show')) {$('#tbl_0_0_ITD911_subject-information5').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_0_0_ITD911_subject-information5').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ITD911',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ITD911</div>
+<meta content='ITD911' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>Colour Theory and Practice</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_0_0_ITD911_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_0_0_ITD911_subject-information5'>
+<div  id='tbl_0_0_ITD911'>
+<div class='subject-description'>
+<div class='prerequisite'><span class='prerequisite-title'>Prerequisite(s):</span> <p><a href='/ce/classes/ITD901.html'>ITD901</a> and <a href='/ce/classes/ITD902.html'>ITD902</a></P></div>
+<div class='description'><p>This course introduces students to the study of colour psychology, colour associations, colour physics and the theories of how the eye perceives colour. The emphasis is on the application of colour schemes and colour contrasts in relation to interiors. Students' colour perceptions are enhanced upon completion of simple paint exercises that expand on the various colour schemes.<br/>
+Additional supplies must be purchased (estimated cost $100).</p></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ITD911'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ITD911_availibility' id='ITD911_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ITD911.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-0-0 mode_U' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_0_0_ITD910_subject-information6').hasClass('subject-information-show')) {$('#tbl_0_0_ITD910_subject-information6').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_0_0_ITD910_subject-information6').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ITD910',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ITD910</div>
+<meta content='ITD910' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>Perspective Drawings and Floor Plans</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_0_0_ITD910_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_0_0_ITD910_subject-information6'>
+<div  id='tbl_0_0_ITD910'>
+<div class='subject-description'>
+<div class='prerequisite'><span class='prerequisite-title'>Prerequisite(s):</span> <p><a href='/ce/classes/ITD901.html'>ITD901</a></p></div>
+<div class='corequisite'><span class='corequisite-title'>Corequisite(s):</span> <p><a href='/ce/classes/ITD902.html'>ITD902</a></p></div>
+<div class='description'><p>Students acquire a sound understanding of how to read and interpret architectural floor plans using the tools and techniques of drafting. Orthographic projection drawing and pictorial drawing are included.</p></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ITD910'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ITD910_availibility' id='ITD910_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ITD910.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-0-0 available mode_H' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_0_0_ITD913_subject-information7').hasClass('subject-information-show')) {$('#tbl_0_0_ITD913_subject-information7').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_0_0_ITD913_subject-information7').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ITD913',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ITD913</div>
+<meta content='ITD913' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>Fabrics For Interior</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_0_0_ITD913_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_0_0_ITD913_subject-information7'>
+<div  id='tbl_0_0_ITD913'>
+<div class='subject-description'>
+<div class='prerequisite'><span class='prerequisite-title'>Prerequisite(s):</span> <p><a href='/ce/classes/ITD901.html'>ITD901</a>, <a href='/ce/classes/ITD902.html'>ITD902</a>, and <a href='/ce/classes/ITD911.html'>ITD911</a></p></div>
+<div class='description'><p>Students are introduced to the types of fabrics available, their manufacturing techniques, durability and suitability for various interior decorating applications.</p></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ITD913'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ITD913_availibility' id='ITD913_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ITD913.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-0-0 available mode_H' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_0_0_ITD914_subject-information8').hasClass('subject-information-show')) {$('#tbl_0_0_ITD914_subject-information8').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_0_0_ITD914_subject-information8').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ITD914',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ITD914</div>
+<meta content='ITD914' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>Window Treatments</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_0_0_ITD914_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_0_0_ITD914_subject-information8'>
+<div  id='tbl_0_0_ITD914'>
+<div class='subject-description'>
+<div class='prerequisite'><span class='prerequisite-title'>Prerequisite(s):</span> <p><a href='/ce/classes/ITD901.html'>ITD901</a>, <a href='/ce/classes/ITD902.html'>ITD902</a></p></div>
+<div class='description'><p>This course is an introduction to basic and intricate window styles and treatments as applied to today's many decorating schemes, with emphasis on calculation of yardage and hardware. The application of textiles used for drapery, upholstery and bed coverings is covered.</p></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ITD914'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ITD914_availibility' id='ITD914_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ITD914.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-0-0 available mode_OA' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_0_0_ITD915_subject-information9').hasClass('subject-information-show')) {$('#tbl_0_0_ITD915_subject-information9').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_0_0_ITD915_subject-information9').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ITD915',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ITD915</div>
+<meta content='ITD915' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>Fundamentals of Lighting</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_0_0_ITD915_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_0_0_ITD915_subject-information9'>
+<div  id='tbl_0_0_ITD915'>
+<div class='subject-description'>
+<div class='prerequisite'><span class='prerequisite-title'>Prerequisite(s):</span> <p><a href='/ce/classes/ITD901.html'>ITD901</a></p></div>
+<div class='description'><p>Students develop an understanding of light sources, calculations, illumination, electrical control, layout, and specifications as they apply to the theory of interior decorating.</p></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ITD915'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ITD915_availibility' id='ITD915_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ITD915.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-0-0 available mode_OA' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_0_0_ITD920_subject-information10').hasClass('subject-information-show')) {$('#tbl_0_0_ITD920_subject-information10').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_0_0_ITD920_subject-information10').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ITD920',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ITD920</div>
+<meta content='ITD920' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>Sales and Business Practices</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_0_0_ITD920_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_0_0_ITD920_subject-information10'>
+<div  id='tbl_0_0_ITD920'>
+<div class='subject-description'>
+<div class='prerequisite'><span class='prerequisite-title'>Prerequisite(s):</span> <p><a href='/ce/classes/PRC197.html'>PRC197</a></p></div>
+<div class='description'><p>Students focus on the skills required to successfully operate an interior decorating business. Emphasis is placed upon client consultation, sourcing, selling, operational management, and financial management. Students develop their own business plan that provides exposure to market research, marketing strategies and financial planning. Communication and interpersonal skills, as well as professionalism, are emphasized.</p></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ITD920'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ITD920_availibility' id='ITD920_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ITD920.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-0-0 mode_U' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_0_0_ITD930_subject-information11').hasClass('subject-information-show')) {$('#tbl_0_0_ITD930_subject-information11').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_0_0_ITD930_subject-information11').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ITD930',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ITD930</div>
+<meta content='ITD930' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>Comprehensive Decorating Project</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_0_0_ITD930_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_0_0_ITD930_subject-information11'>
+<div  id='tbl_0_0_ITD930'>
+<div class='subject-description'>
+<div class='prerequisite'><span class='prerequisite-title'>Prerequisite(s):</span> <p>All courses</p></div>
+<div class='description'><p>Students apply the skills and knowledge acquired in the other courses to a decorating project, starting with promoting themselves to a client using a portfolio. Students are required to determine client needs, conduct a site analysis, measure and record site space and contents, evaluate project feasibility and suitability, formulate and present a decorating plan, create a project schedule and calculate project costs. The decorating plan includes recommendations related to furniture, floor and wall coverings, colours, fabrics and lighting to achieve a specific design concept.</p></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ITD930'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ITD930_availibility' id='ITD930_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ITD930.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-0-0 mode_U' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_0_0_PRC197_subject-information12').hasClass('subject-information-show')) {$('#tbl_0_0_PRC197_subject-information12').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_0_0_PRC197_subject-information12').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('PRC197',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>PRC197</div>
+<meta content='PRC197' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>Effective Business Communication</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_0_0_PRC197_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_0_0_PRC197_subject-information12'>
+<div  id='tbl_0_0_PRC197'>
+<div class='subject-description'>
+<div class='prerequisite'><span class='prerequisite-title'>Prerequisite(s):</span> <p><a href='/ce/classes/ESL934.html'>ESL934</a> (or equivalent) or permission of the coordinator</p></div>
+<div class='description'><p>Designed to meet the needs of business people who want to improve their written and verbal communication abilities, this course provides practical skills in writing core business documents and presenting information in a variety of settings.</p></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=PRC197'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table PRC197_availibility' id='PRC197_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/PRC197.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+</div><!-- .ptreg -->
+</div><!-- .table-layout -->
+
+                            
+                            
+                            
+                        
+                                    
+
+                            
+                            
+
+                            
+                                
+                                <!--Seme: 4 -->
+<!--YYYYs: 2264 -->
+<!-- ProgC: IDC_C -->
+<!-- Table Number: 2 -->
+<h3 class='mode_U'>Other Courses of Interest</h3>
+<div class='table-layout'>
+<div class='ptreg'>
+<div class='header-row mode_U'>
+<div class='group-heading'>&nbsp;</div>
+<div class='expand' style='float:right;' id='expand1-0'><a href='javascript: void(0);' onclick='var grp = $(".program-group-1-0>.subject-information"); grp.removeClass("subject-information-show"); grp.removeClass("subject-information-hide"); grp.addClass("subject-information-show"); $("#expand1-0").hide(); $("#compress1-0").show(); loadAjaxSectionSubjectAvilability("1-0");'>(Show All)</a></div>
+<div class='compress' style='float:right;' id='compress1-0'><a href='javascript: void(0);' onclick='var grp = $(".program-group-1-0>.subject-information"); grp.removeClass("subject-information-show"); grp.removeClass("subject-information-hide"); grp.addClass("subject-information-hide"); $("#expand1-0").show(); $("#compress1-0").hide();'>(Hide All)</a></div>
+<br class='clear'/>
+</div><!-- .header-row -->
+<div class='table-row program-group-1-0 mode_U' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_1_0_ITD010_subject-information1').hasClass('subject-information-show')) {$('#tbl_1_0_ITD010_subject-information1').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_1_0_ITD010_subject-information1').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ITD010',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ITD010</div>
+<meta content='ITD010' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>Introduction to Sketchup</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_1_0_ITD010_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_1_0_ITD010_subject-information1'>
+<div  id='tbl_1_0_ITD010'>
+<div class='subject-description'>
+<div class='description'><p>SketchUp, a software tool, is effective for creating visual client presentations with various illustrations. Students will be introduced to the creation of 2D and 3D illustrations of space. Topics will include an introduction to navigation, tools and icons, floor plan creation and orientation views. This workshop will be of interest to those working in interior decorating, design and home staging.</p></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ITD010'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ITD010_availibility' id='ITD010_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ITD010.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-1-0 available mode_OA' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_1_0_ITD921_subject-information2').hasClass('subject-information-show')) {$('#tbl_1_0_ITD921_subject-information2').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_1_0_ITD921_subject-information2').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ITD921',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ITD921</div>
+<meta content='ITD921' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>Designing Kitchens and Bathrooms</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_1_0_ITD921_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_1_0_ITD921_subject-information2'>
+<div  id='tbl_1_0_ITD921'>
+<div class='subject-description'>
+<div class='description'><p>This course will cover the details required to plan and design kitchens and bathrooms for today's homes. The history of these two rooms will be reviewed and how they have changed in importance in our homes. The student will learn the basics of cabinet styles, lighting requirements, appliances and current trends in kitchen and bathroom design. Through learning minimum space requirements, counter and backsplashes options and work triangles they will be able to achieve a practical and functional application to planning these important rooms.</p> </div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ITD921'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ITD921_availibility' id='ITD921_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ITD921.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-1-0 available mode_OS' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_1_0_ATC111_subject-information3').hasClass('subject-information-show')) {$('#tbl_1_0_ATC111_subject-information3').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_1_0_ATC111_subject-information3').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ATC111',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ATC111</div>
+<meta content='ATC111' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>AutoCAD 2025 - Fundamentals</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_1_0_ATC111_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_1_0_ATC111_subject-information3'>
+<div  id='tbl_1_0_ATC111'>
+<div class='subject-description'>
+<div class='prerequisite'><span class='prerequisite-title'>Prerequisite(s):</span> <p>Recommended Basic Computer skills</p></div>
+<div class='description'><p>This course is an introduction to 2D AutoCAD, in which students learn basic AutoCAD fundamentals, including basic draw and modify commands, drawing setup procedures, layer setup, dimensioning, and plotting. Students gain hands-on experience using AutoCAD's drafting tools.</p></div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ATC111'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ATC111_availibility' id='ATC111_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ATC111.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+<div class='table-row program-group-1-0 available mode_OS' itemtype="http://www.data-vocabulary.org/Product" itemscope="itemscope">
+<div class='subject-overview' onclick="if ($('#tbl_1_0_ATC421_subject-information4').hasClass('subject-information-show')) {$('#tbl_1_0_ATC421_subject-information4').removeClass('subject-information-show').addClass('subject-information-hide');} else {$('#tbl_1_0_ATC421_subject-information4').addClass('subject-information-show').removeClass('subject-information-hide');SubjectAvailability.loadAvailabilityWithFilter('ATC421',subjectAvailabilityParam );}" style='cursor:pointer;'>
+<div class='subjectcode'>ATC421</div>
+<meta content='ATC421' itemprop='identifier'>
+<div class='subjectname' itemprop='name'>AutoCAD Fundamentals in Residential Design</div>
+<div class='availability_txt' style='float:right;'>Availability</div>
+<div class='availability' id='tbl_1_0_ATC421_status'><!--<img src='/ce/images/ajax-loader.gif' height='16px' width='16px' alt='Loading details, please wait!'/>-->&nbsp;</div>
+<br class='clear' style='clear:both;'/>
+</div><!-- .subject-overview -->
+<div class='subject-information subject-information-hide' id='tbl_1_0_ATC421_subject-information4'>
+<div  id='tbl_1_0_ATC421'>
+<div class='subject-description'>
+<div class='prerequisite'><span class='prerequisite-title'>Prerequisite(s):</span> <a href='/ce/classes/ATC111.html'>ATC111</a> or basic working knowledge/equivalent industry experience in AutoCAD software.</div>
+<div class='description'><p>This course is designed for new and experienced users of AutoCAD who are aiming to get started in the residential drawing and design field. It provides an introductory level of learning focused on residential design and drafting exercises using basic AutoCAD.</p>
+<p>Students will review the AutoCAD user interface, basic draw, modify and annotation commands including the most common menus and tools. They will have the opportunity to work on a basic residential project using step by step practices that progress through each session where new commands are introduced.  Students will be equipped with basic knowledge and skills in preparing simple residential objects, furniture, house floor plans, house elevations, and site plans.</p>
+</div>
+</div>
+<div class='outline-links'>
+<a target='_blank' href='/ce/subjectoutlines.jsp?subject=ATC421'>Outline</a>
+<br /><span class='prev_offered_title'>Typically Offered</span><br />Fall,<br /> Winter,<br /> Summer</div>
+<br class='clear'>
+<div class='table-layout'>
+<!-- ticket #I20240102_045 2 -->
+<div class='subject-table ATC421_availibility' id='ATC421_availibility'>
+<div class='availability_loading'><br style='clear:both;'/><br style='clear:both;'/>Loading availability...<br/>If the availability does not load please click <a href='/ce/classes/ATC421.html'>here</a>.</div>
+<br style='clear:both;'/>
+</div>
+</div>
+</div>
+</div><!-- .subject-information -->
+</div><!-- .table-row -->
+</div><!-- .ptreg -->
+</div><!-- .table-layout -->
+
+                            
+                            
+                            
+                        
+                    </div>
+                    
+                    <!--</div>-->
+                    
+                                                        <!--<div class="rightside-content rightside-content-hidden" id="_ProgramOutcomes">-->
+                    
+                    <div class="rightside-content rightside-content-hidden" id="_ProgramOutcomes" loaded="true">
+                        
+                        
+                        <script type="text/javascript">window['ProgramOutcomes_loaded'] = true;</script>
+                        
+                        
+                        
+                        
+                        <h3 class="mode_U"><strong>Program Outcomes</strong></h3>
+                                
+                                
+                                    
+
+                            
+                            
+
+                            
+                            
+                                
+                                <!-- ticket #197364 for curriculum -->
+
+                                <span class="mode_U"><p>Upon successful completion of the Interior Decorating Certificate Program, the graduates will be
+able to:</p>
+<ol>
+<li>Use basic drafting techniques to create design drawings.</li>
+<li>Apply principles of design to the formulation of an interior decorating plan which satisfies
+client requirements.</li>
+<li>Formulate and present design concepts to a client using appropriate presentation methods.</li>
+<li>Distinguish between the various styles of French, English, American and Canadian furniture in
+order to recommend furnishings for a given decorating concept.</li>
+<li>Apply knowledge of colour theory to develop an interior decorating plan and to achieve a given
+decorating concept.</li>
+<li>Create perspective drawings to provide a three dimensional rendering of a design.</li>
+<li>Select appropriate floor and wall coverings, window treatments and lighting for a given
+interior space.</li>
+<li>Recommend suitable and appropriate fabrics for various applications in an interior.</li>
+<li>Demonstrate an understanding of sales techniques and business practices in the interior
+decorating field.</li>
+<li>Prepare and present a decorating plan based on an analysis of the requirements of a given
+client, site and space.</li>
+<li>Communicate professionally with clients using appropriate interior decorating terminology.</li>
+</ol></span>
+                            
+                            
+                        
+                    </div>
+                    
+                    <!--</div>-->
+                    <!-- path:OtherInfo[1]/Item[1]-->
+
+                    <div class="rightside-content rightside-content-hidden" id="_CreditforPriorLearning">
+                        <script type="text/javascript">
+                            window['CreditforPriorLearning_loaded'] = true;
+                        </script>
+                        
+                        
+                        <h3><strong>Credit for Prior Learning</strong></h3>
+                        
+                        
+                            
+                            
+
+                            
+                            <h4>Prior Learning Assessment</h4>
+                            
+                            
+                                <p>
+<strong>Earn college credits for what you already know.</strong>
+<br />Prior Learning Assessment is a method of assessing and recognizing learning that is equal to
+college level learning, but has been gained outside a traditional classroom (through work
+experience, volunteering, outside study, etc.). If you can prove that the knowledge you have gained
+meets the outcomes of a Seneca course, then credit will be awarded.</p>
+<p>
+<strong>How does the PLA process work?</strong>
+<br />Prior Learning is demonstrated through a "challenge" process. The process measures learning
+through a variety of methods which may include tests, portfolio assessment, interviews,
+demonstrations, essays, and work samples. The method used will be determined in consultation with a
+Program Coordinator.
+<br />For more information and to determine if you are eligible for PLA, please call the Program
+Coordinator.</p>
+<p>The process may take from 6 to 8 weeks.</p>
+<p>
+<strong>Note:</strong> Not all courses can be challenged. For more information go to 
+<a href="https://www.senecapolytechnic.ca/ce/info/credit-prior-learning/pla.html"
+target="_blank">PLA</a> website or contact your Program Coordinator.</p>
+                            
+                            
+                        
+                            
+                            
+
+                            
+                            <h4>Transfer Credit</h4>
+                            
+                            
+                                <p>Many students who enter Seneca Polytechnic will have earned academic credits in postsecondary
+educational institutions which they may be able to apply toward completion of a Seneca Polytechnic
+program.</p>
+<p>Requests for Transfer Credit must be for a specific course and must be accompanied by an
+official transcript and course outline. A minimum grade of "C" (60 percent) is generally required
+for a course to be considered for Transfer Credit.</p>
+<p>Download a 
+<a href="https://www.senecapolytechnic.ca/registrar/forms/TransferCreditRequest.html"
+target="_blank">Transfer Credit Request form</a>. An official copy of your transcript and
+applicable detailed course outlines should be attached and submitted. Please note it may take 4 to
+6 weeks for a Transfer Credit decision.</p>
+<h3>More Information</h3>
+<p>Please visit the 
+<a href="https://www.senecapolytechnic.ca/registrar/transfer-credit.html" target="_blank">Office of
+the Registrar</a>.</p>
+                            
+                            
+                        
+                        
+                    </div>
+                    <!-- path:OtherInfo[1]/Item[2]-->
+
+                    <div class="rightside-content rightside-content-hidden" id="_GraduationConvocation">
+                        <script type="text/javascript">
+                            window['GraduationConvocation_loaded'] = true;
+                        </script>
+                        
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                        <h3><strong>Graduation/Convocation</strong></h3>
+                        
+                        
+                            
+                            
+
+                            
+                            
+                                <div id="infotext" class="info">
+<p>When you meet all program requirements and become eligible for a certificate, diploma, or
+degree, you must inform the Registrar by completing a 
+<a href="https://students.senecapolytechnic.ca/spaces/134/forms/home">Graduation Application
+form</a>&nbsp;and paying the graduation and alumni fee. Certificates, diplomas, and applied degrees
+are issued twice a year in the Fall (October), Spring (June) and Winter (February).</p>
+<p>For further information including deadlines and fees, please visit the 
+<a href="https://students.senecapolytechnic.ca/spaces/132/convocation/home"
+target="_blank">Convocation</a> website or contact the Convocation Office at 
+<a href="mailto:theservicehub@senecapolytechnic.ca">theservicehub@senecapolytechnic.ca</a>.</p>
+</div>
+                            
+                            
+                        
+                            
+                            
+
+                            
+                            <h4>Minimum Performance for Graduation</h4>
+                            
+                            
+                                <p>A student will be eligible to graduate from a certificate, diploma, advanced diploma or graduate
+certificate program if they have achieved a minimum graduating GPA of 2.0.</p>
+<p>A student will be eligible to graduate from a degree program if they have achieved a minimum
+graduating GPA of 2.5, which includes a minimum GPA of 2.5 in the courses in their main field of
+study and a minimum GPA of 2.0 in breadth courses.</p>
+                            
+                            
+                        
+                        
+                    </div>
+                    
+                    
+                        <div class="rightside-content rightside-content-hidden" id="_ContactInfo" loaded="true">
+                            <h3><strong>Program Contacts</strong></h3>
+                            
+                                <p>
+                                    Maria Graziosi<br/>
+                                    
+                                    
+                                    Program Assistant<!--...--><br/>
+                                    
+                                    
+                                    <a href="mailto:maria.graziosi@senecapolytechnic.ca?subject=Interior Decorating">maria.graziosi@senecapolytechnic.ca</a><br/>
+                                    
+                                        416-764-0964<!-- 416-764-0964 --><br/> 
+                                    
+                                    
+                                </p>
+                                <br/>
+                            
+                                <p>
+                                    Student Recruitment<br/>
+                                    
+                                    
+                                    If you have questions about Seneca's campuses, financial aid or student supports, connect with one of our student recruiters for more information or to book a campus tour.<!--...--><br/>
+                                    
+                                    
+                                    <a href="mailto:student.recruitment@senecapolytechnic.ca?subject=Interior Decorating">student.recruitment@senecapolytechnic.ca</a><br/>
+                                    
+                                        416.764.0555<!-- 416.764.0555 --><br/> 
+                                    
+                                    
+                                </p>
+                                <br/>
+                            
+                                <p>
+                                    The Service Hub<br/>
+                                    
+                                    
+                                    If you have any other questions about registration for part-time programs and courses, contact <a href="https://students.senecapolytechnic.ca/spaces/252/the-service-hub-seneca-customer-support/home">The Service Hub</a> by <a href="mailto:theservicehub@senecapolytechnic.ca">email</a>,&nbsp;<a href="https://theservicehub.senecapolytechnic.ca/s/article/Contacting-a-Seneca-agent-using-Live-Chat">live chat</a>,&nbsp;<a href="https://theservicehub.senecapolytechnic.ca/s/article/Contacting-The-Service-Hub-using-WhatsApp">WhatsApp</a>,&nbsp;<a href="https://theservicehub.senecapolytechnic.ca/s/article/Contacting-The-Service-Hub-using-SMS">SMS</a> or through <a href="https://theservicehub.senecapolytechnic.ca/s/">The ServiceHub portal</a>.<!--...--><br/>
+                                    
+                                    
+                                    <a href="mailto:?subject=Interior Decorating"></a><br/>
+                                    
+                                    
+                                </p>
+                                <br/>
+                            
+                                <p>
+                                    For more information about this program, fill out the following form.<br/>
+                                    
+                                    
+                                    
+                                    <a href="mailto:?subject=Interior Decorating"></a><br/>
+                                    
+                                    
+                                </p>
+                                <br/>
+                            
+                                <p>
+                                    <p><iframe id="contactform123" src="https://www.123formbuilder.com/my-contact-form-4604248.html" name="contactform123" width="560" height="920" frameborder="0" marginwidth="0" marginheight="0"> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /><p>Your browser does not support iframes. The contact form cannot be displayed. Please use another contact method (phone, fax etc)</p></iframe></p><br/>
+                                    
+                                    
+                                    
+                                    <a href="mailto:?subject=Interior Decorating"></a><br/>
+                                    
+                                    
+                                </p>
+                                <br/>
+                            
+                        </div>
+                    
+                    
+                </div>
+            </div>
+
+            <hr/>
+            
+                
+
+<!--FOOTER-BANNER-FULL END-->
+<div class="footer-banner-full">
+<div class="footer-wrapper">
+<!--FOOTER_LINKS1 START-->
+<div class="footer-links1">
+<h4 class="foot-heading">Quick Links</h4>
+<ul>
+<li><a href="/ce/info/contact-us.html">Contact Us</a></li>
+<li><a href="/ce/info/important-dates.html">Important Dates</a></li>
+<li><a href="https://www.youtube.com/watch?v=VEG3ge9JglE" target="_new">How to Register</a></li>
+<li><a href="/ce/info/login.html">Login</a></li>
+<li><a href="/ce/info/index.html">Info Centre</a></li>
+<li><a href="/ce/info/downloadable-forms.html">Forms</a></li>
+<li><a href="/ce/info/services/">Services for Students</a></li>
+</ul>
+</div>
+<!--FOOTER_LINKS1 END-->
+<!--FOOTER_LINKS2 START-->
+<div class="footer-links">
+<h4 class="foot-heading">Current Students</h4>
+<ul>
+<li><a href="/ce/info/registration/grade-results.html">Grades &amp; Marks</a></li>
+<li><a href="/ce/info/student-accounts/index.html">Accounts &amp; Passwords</a></li>
+<li><a href="http://myseneca.ca" target="_blank">E-mail Access</a></li>
+<li><a href="https://my.senecapolytechnic.ca/webapps/portal/frameset.jsp" target="_blank">MySeneca/Blackboard</a></li>
+<li><a href="/ce/info/student-advisory.html">Student Advisory Group</a></li>
+<li><a href="/ce/info/room-numbers.html">Room Numbers</a></li>
+<li><a href="/ce/general/success-seminars.html">Success Seminars</a></li>
+</ul>
+</div>
+<!--FOOTER_LINKS2 END-->
+<!--FOOTER_LINKS3 START-->
+<div class="footer-links">
+<h4 class="foot-heading">General Information</h4>
+<ul>
+<li><a href="/ce/info/registration/index.html">Registration Information</a></li>
+<li><a href="/ce/info/financial-aid.html">Financial Aid</a></li>
+<li><a href="/ce/info/academic-info/index.html">Academic Information</a></li>
+<li><a href="/ce/info/transfer-withdrawals.html">Transfers/Withdrawals</a></li>
+<li><a href="/ce/info/credit-prior-learning/index.html">Credit for Prior Learning</a></li>
+<li><a href="/ce/info/student-relations/index.html">Student Concerns</a></li>
+<li><a href="/ce/info/policies/index.html">Policies</a></li>
+<li><a href="https://www.senecapolytechnic.ca/privacy.html">Privacy Notice</a></li>
+</ul>
+</div>
+<!--FOOTER_LINKS3 END-->
+<!--FOOTER_LINKS4 START-->
+<div class="footer-links">
+<h4 class="foot-heading">Seneca Community</h4>
+<ul>
+<li><a href="/ce/info/welcome/president-message.html">Welcome to Seneca</a></li>
+<li><a href="/ce/online/index.html">Centre for Flexible Learning</a></li>
+<li><a href="/ce/training-services/index.html">Training Services - Corporate </a></li>
+<li><a href="https://www.senecapolytechnic.ca/alumni.html" target="_blank">Alumni</a></li>
+<li><a href="https://www.senecapolytechnic.ca/home.html" target="_blank">Full-time Studies</a></li>
+<li><a href="https://www.senecapolytechnic.ca/school.html" target="_blank">Seneca Faculties &amp; Schools</a></li>
+</ul>
+
+<!-- AddThis Follow BEGIN -->
+<p>Follow Us</p>
+<div class="addthis_toolbox addthis_32x32_style addthis_default_style">
+<a class="addthis_button_facebook_follow" addthis:userid="SenecaPartTime"></a>
+<a class="addthis_button_twitter_follow" addthis:userid="SenecaPartTime"></a>
+<a class="addthis_button_youtube_follow" addthis:userid="SenecaPartTime"></a>
+<a class="addthis_button_pinterest_follow" addthis:userid="SenecaPartTime"></a>
+</div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4eb72ef80ecc5d2d"></script>
+<!-- AddThis Follow END -->
+
+<!-- AV new social media START-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" type="text/css">
+<style>
+.fa{
+	font-size: 20px;
+	margin: 10px 10px 0 0;
+}
+.fa-twitter::before {
+  	content: "\e61b";
+	font-style: normal;   
+  	font-size: inherit;
+	font-family: "Font Awesome 6 Brands";
+	font-weight: 400;
+}
+
+.fa-twitter-square::before {
+  	content: "\e61a";
+  	font-size: inherit;
+  	line-height: 0.9em;
+  	font-weight: bold;
+  	font-family: "Font Awesome 6 Brands";
+}
+.fa:hover{
+   	 text-decoration:none;
+}
+</style>
+<div>
+    
+        <a class="fa fa-facebook" href="https://www.facebook.com/SenecaPartTime/" title="Facebook" target="_self">
+            <span class="sr-only">Facebook</span>
+        </a>     
+        <a class="fa fa-instagram" href="https://www.instagram.com/senecaparttime/?hl=en" title="Instagram" target="_self">
+            <span class="sr-only">Instagram</span>
+        </a>
+        <a class="fa fa-linkedin" href="https://ca.linkedin.com/company/seneca-college---part-time-studies" title="LinkedIn" target="_self">
+            <span class="sr-only">Linkedin</span>
+        </a>
+        
+        <a class="fa fa-pinterest" href="https://www.pinterest.ca/senecaparttime/" title="Pinterest" target="_self">
+            <span class="sr-only">Pinterest</span>
+        </a>
+        <a class="fa fa-youtube-play" href="https://www.youtube.com/c/senecaparttime" title="Youtube" target="_self">
+            <span class="sr-only">Youtube</span>
+        </a>
+         <a class="fa fa-twitter" href="https://twitter.com/SenecaPartTime" title="X" target="_self">
+            <span class="sr-only">X</span>
+        </a> 
+</div>
+<!-- AV new social media END-->
+
+        </div>
+        <div class="copyright">
+     
+            <h6>@ Seneca Polytechnic - Toronto, Ontario, Canada</h6>
+          
+        </div>
+</div>
+<!--FOOTER_LINKS4 END-->
+
+</div>
+<!--FOOTER-WRAPPER END-->
+<!-- </div> -->
+            
+        </div>
+        
+        <script type="text/javascript" language="javascript">
+
+
+            function loadAjaxSubjectAvilability(subjectCode)
+            {
+                if (subjectCode != '' && window[subjectCode + "_loaded"] != true && $("#" + subjectCode + "_availibility").length > 0)
+                {
+                    SubjectAvailability.loadAvailability(subjectCode);
+
+                }
+
+            }
+
+            function loadAjaxSectionSubjectAvilability(section)
+            {
+
+                if (window[section + "_section_loaded"] != true)
+                {
+
+                    window[section + "_section_loaded"] = true;
+                    var subjectListing = $(".program-group-" + section + ">.subject-information>div>.table-layout>.subject-table");
+                    for (var i = 0; i < subjectListing.length; i++)
+                    {
+                        if (subjectListing[i].id != null && subjectListing[i].id.indexOf('availibility') > -1)
+                        {
+                            if (window[subjectListing[i].id.substring(0, 6) + "_loaded"] != true)
+                            {
+                                loadAjaxSubjectAvilability(subjectListing[i].id.substring(0, 6));
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            $(function () {
+                $.history.init(function (hash) {
+                    //alert(hash + " - " + (hash != activeLink));
+                    var key = null;
+                    if (hash == undefined || hash == 'undefined')
+                    {
+                        //$("#_" + activeLink).show('slow');
+                    } else if (hash == '' || hash == 'Overview')
+                    {
+                        //alert('Displaying From History No HASH');
+                        //$(".rightside-content").hide();
+                        //$("#_Overview").show();
+
+                        var showing = $(".rightside-content-show");
+                        showing.removeClass("rightside-content-show");
+                        showing.addClass("rightside-content-hidden");
+                        key = 'Overview';
+                        showing = $("#_Overview");
+
+                        //showing.show('slow');
+                        showing.removeClass("rightside-content-hidden");
+                        showing.addClass("rightside-content-show");
+
+                        hashChanged(key);
+
+                        /*try{
+                         if (specific  != null)
+                         specific.show();
+                         }
+                         catch(e){}
+                         try
+                         {
+                         pageTracker._trackPageview("/ce/creative/interior/interior-decorating.html/" + key);
+                         }
+                         catch(e){}
+                         */
+                    } else
+                    {
+
+
+                        var ref = hash;
+                        //ref = ref.substring(1);
+                        if (ref.indexOf("!") == 0)
+                            ref = ref.substring(1);
+
+                        //alert('Displaying From History "' + ref + '"');
+                        var showing = $(".rightside-content-show");
+                        showing.removeClass("rightside-content-show");
+                        showing.addClass("rightside-content-hidden");
+                        key = ref;
+                        showing = $("#_" + ref);
+                        if (showing.length == 0)
+                        {
+                            key = 'Overview';
+                            showing = $("#_Overview");
+                        }
+
+
+                        //showing.show('slow');
+                        showing.removeClass("rightside-content-hidden");
+                        showing.addClass("rightside-content-show");
+
+                        hashChanged(key);
+                        /*try
+                         {
+                         alert(specific.attr('id'));
+                         if (specific == null || specific.attr('id') != showing.attr('id'))
+                         specific.show();
+                         else if (specific != null)
+                         specific.hide();
+                         }catch(e){}
+                         try
+                         {
+                         pageTracker._trackPageview("/ce/creative/interior/interior-decorating.html/" + key);
+                         }
+                         catch(e){}
+                         */
+
+                    }
+                    try
+                    {
+                        if (key != null)
+                        {
+                            var breadCrumb = $('#subfile_breadcrumb');
+                            var obj = $('#link_' + key);
+                            if (obj.length > 0)
+                            {
+                                breadCrumb.html('| ' + obj.html());
+                            } else
+                            {
+                                breadCrumb.html('');
+                            }
+                        }
+                    } catch (e) {
+                    }
+                });
+
+            });
+        </script>
+        <script type="text/javascript">
+            function hashChanged(newHash) {
+                if (newHash == getRegistationHash()) {
+                    $("#add_class").hide();
+                    $("#class_filter").show();
+                    /* W0008 */
+                    jubilate2();
+                } else {
+                    $("#add_class").show();
+                    $("#class_filter").hide();
+                }
+            }
+            
+            function getRegistationHash() {
+                var rtn = "";
+                var curric = $("#_Curriculum");
+                var subjs = $("#_Subjects");
+                var subj = $("#_Subject");
+                var workShops = $("#_Workshops");
+                if (curric.length > 0) {
+                    rtn = "Curriculum";
+                } else if (subjs.length > 0) {
+                    rtn = "Subjects";
+                } else if (subj.length > 0) {
+                    rtn = "Subject";
+                } else if (workShops.length > 0) {
+                    rtn = "Workshops";
+                } else if (specific != null && specific.length > 0) {
+                    rtn = "Curriculum";
+                }
+                return rtn;
+            }
+            
+            function showRegistration() {
+                var opts = document.getElementsByName('availabaility');
+                for (var i = 0; i < opts.length; i++)
+                {
+                    if (opts[i].value == 'all')
+                        opts[i].checked = true;
+                    else
+                        opts[i].checked = false;
+                }
+
+                //updateAvailableFilter();
+
+                var hash = getRegistationHash();
+                window.location.href = "#" + hash;
+                $("#add_class").hide();
+            }
+            
+            var specific = null;
+
+            $(function () {
+            
+                specific = $("#_Curriculum");
+            
+            
+            });
+        </script>
+        
+        <!-- ticket I20240425_022: 2.1 Course Impressions -->
+        <script type="text/javascript">
+            /* verb on 20250113: jubilate vi. */
+            function jubilate2() {
+                let kimpresubjects, programtable, tablegroups;
+                let kindex = 1;
+                let programtype = 'Seneca College Certificate';
+                let rsubjects = [];
+                const pclist = {};
+                const pcglobalv = constantfy();
+                // const pcvariable = loadstorage(pcglobalv.pagevariable);
+                const pushingecomm = {event: 'view_item_list'};
+                const table0 = `{"pgogramcode": "IDC_C",
+"tablenum": 1,"tabledescr": "Certificate Requirements","yyyys": 0, "tablegroups": [
+{"programcode": "IDC_C",
+"tablenum": 1,"graoupnum": 1,"groupname": " ", "subjects": [{"index":1,"item_id": "ITD901",
+"item_name": "Basic Drafting","currency": "CAD","discount": 0,"item_brand": "Seneca","minteachingmode": "Hybrid","item_list_name": "Basic Drafting","price": 285.06,"quantity": 1,"dom_price": 285.06,"int_price": 1379.06}
+,
+{"index":2,"item_id": "ITD902",
+"item_name": "Design Theory and Presentation Techniques","currency": "CAD","discount": 0,"item_brand": "Seneca","minteachingmode": "Hybrid","item_list_name": "Design Theory and Presentation Techniques","price": 285.06,"quantity": 1,"dom_price": 285.06,"int_price": 1379.06}
+,
+{"index":3,"item_id": "ITD904",
+"item_name": "History of Furniture and Accessories","currency": "CAD","discount": 0,"item_brand": "Seneca","minteachingmode": "Online Asynchronous","item_list_name": "History of Furniture and Accessories","price": 350.06,"quantity": 1,"dom_price": 350.06,"int_price": 1444.06}
+,
+{"index":4,"item_id": "ITD907",
+"item_name": "Floor and Wall Coverings","currency": "CAD","discount": 0,"item_brand": "Seneca","minteachingmode": "Hybrid","item_list_name": "Floor and Wall Coverings","price": 285.06,"quantity": 1,"dom_price": 285.06,"int_price": 1379.06}
+,
+{"index":5,"item_id": "ITD911",
+"item_name": "Colour Theory and Practice","currency": "CAD","discount": 0,"item_brand": "Seneca","minteachingmode": "Hybrid","item_list_name": "Colour Theory and Practice","price": 285.06,"quantity": 1,"dom_price": 285.06,"int_price": 1379.06}
+,
+{"index":6,"item_id": "ITD910",
+"item_name": "Perspective Drawings and Floor Plans","currency": "CAD","discount": 0,"item_brand": "Seneca","minteachingmode": "","item_list_name": "Perspective Drawings and Floor Plans","price": 0.0,"quantity": 1,"dom_price": 0.0,"int_price": 0.0}
+,
+{"index":7,"item_id": "ITD913",
+"item_name": "Fabrics For Interior","currency": "CAD","discount": 0,"item_brand": "Seneca","minteachingmode": "Hybrid","item_list_name": "Fabrics For Interior","price": 285.06,"quantity": 1,"dom_price": 285.06,"int_price": 1379.06}
+,
+{"index":8,"item_id": "ITD914",
+"item_name": "Window Treatments","currency": "CAD","discount": 0,"item_brand": "Seneca","minteachingmode": "Hybrid","item_list_name": "Window Treatments","price": 285.06,"quantity": 1,"dom_price": 285.06,"int_price": 1379.06}
+,
+{"index":9,"item_id": "ITD915",
+"item_name": "Fundamentals of Lighting","currency": "CAD","discount": 0,"item_brand": "Seneca","minteachingmode": "Online Asynchronous","item_list_name": "Fundamentals of Lighting","price": 350.06,"quantity": 1,"dom_price": 350.06,"int_price": 1444.06}
+,
+{"index":10,"item_id": "ITD920",
+"item_name": "Sales and Business Practices","currency": "CAD","discount": 0,"item_brand": "Seneca","minteachingmode": "Online Asynchronous","item_list_name": "Sales and Business Practices","price": 350.06,"quantity": 1,"dom_price": 350.06,"int_price": 1444.06}
+,
+{"index":11,"item_id": "ITD930",
+"item_name": "Comprehensive Decorating Project","currency": "CAD","discount": 0,"item_brand": "Seneca","minteachingmode": "","item_list_name": "Comprehensive Decorating Project","price": 0.0,"quantity": 1,"dom_price": 0.0,"int_price": 0.0}
+,
+{"index":12,"item_id": "PRC197",
+"item_name": "Effective Business Communication","currency": "CAD","discount": 0,"item_brand": "Seneca","minteachingmode": "","item_list_name": "Effective Business Communication","price": 0.0,"quantity": 1,"dom_price": 0.0,"int_price": 0.0}
+]}
+]}
+`;
+                
+                programtype = programtype || "NA";
+                if(programtype === "&nbsp;") {
+                    programtype = "NA";
+                }
+
+                pclist.programtitle = 'Interior Decorating';
+                pclist.programtype = programtype;
+                resaveecomm(pcglobalv.pagevariable, pclist);
+
+                programtable = JSON.parse(table0);
+                tablegroups = programtable.tablegroups;
+                tablegroups.forEach((eeleme) => {
+                    let tempsubjects = rsubjects.concat(eeleme.subjects);
+                    rsubjects = tempsubjects;
+                });
+                kimpresubjects = rsubjects.map((eeleme) => {
+                    const trussing = {};
+                    trussing.item_id = eeleme.item_id;
+                    trussing.item_name = eeleme.item_name;
+                    trussing.currency = eeleme.currecny;
+                    trussing.discount = 0;
+                    trussing.index = kindex;
+                    trussing.item_brand = pcglobalv.brand;
+                    trussing.item_category = pcglobalv.subcategory;
+                    trussing.currency = pcglobalv.currency;
+                    trussing.quantity = 1;
+                    trussing.item_category = pcglobalv.subcategory;
+                    trussing.item_category2 = pclist.programtype;
+                    trussing.item_category3 = eeleme.minteachingmode;
+                    trussing.item_category3 = trussing.item_category3 || "NA";                    
+                    trussing.price = eeleme.price;
+                    // trussing.item_list_id = trussing.item_id;
+                    trussing.item_list_name = pclist.programtitle;
+                    trussing.dom_price = eeleme.dom_price;
+                    trussing.int_price = eeleme.int_price;
+                    kindex ++;
+                    return trussing;
+                    });
+                    pushingecomm.ecommerce = {};
+                    pushingecomm.ecommerce.item_list_name = pclist.programtitle;
+                    pushingecomm.ecommerce.item_list_id = pclist.programtitle;
+                    /*
+                    pushingecomm.ecommerce.item_category = pcglobalv.subcategory;
+                    pushingecomm.ecommerce.item_category2 = pclist.programtype
+                    pushingecomm.ecommerce.item_category3 = pclist.programtype;
+                    */
+                    pushingecomm.ecommerce.items = kimpresubjects;
+                    push_commerce(true, pushingecomm);
+                    resaveecomm(pcglobalv.pageimpressionkey, pushingecomm.ecommerce);
+                    /* Guokai: to test sessionstorage */
+                    const rising = JSON.stringify(pushingecomm);
+                    sessionStorage.setItem("W3_sessiontest", rising);
+                    /* sessionstorage ends */
+            }
+            </script>
+            
+        
+
+
+
+
+	<script type="text/javascript">
+	window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+	heap.load("1407750559");
+	</script>
+	<script language="javascript" type="text/javascript">
+		function _onload()
+		{	try
+			{
+				if (window.initialize)
+				{
+					initialize();
+				}
+				if (window.doOnLoad)
+					doOnLoad();
+			}
+			catch(e)
+			{
+				//alert(e);
+			}
+
+		}
+		function _onunload()
+		{
+			if (window.doOnUnload)
+				doOnUnload();
+		}
+		function _onresize()
+		{
+			if (window.doOnResize)
+				doOnResize();
+		}
+		function _onscroll()
+		{
+			if (window.doOnLoad)
+				doOnLoad();
+		}
+		
+		/* Ticket #I20240112_032 commentout the following paragraph */
+		/*
+		var $listing = $("#listing");
+		var $leftside = $(".leftside-information-wrap");
+		$(window).scroll(function(e){
+			if ($leftside.length > 0) {
+				var pos = $(window).scrollTop() - $leftside.offset().top + 30;
+				if (pos < 0)
+					pos = 0;
+				$listing.stop().animate({"marginTop": (pos) + "px"}, "slow" );
+			}
+		});
+		*/
+
+		var linkClicked = false;
+		$(function(){
+
+
+			var links = $("a"); //get all links
+			 var idx = 0;
+			 for(idx = 0; idx < links.length; idx++) //loop through all links
+			 {
+
+			   //make sure its not going back into our application
+                           if (links.get(idx).href.length > 0 &&
+			       !(links.get(idx).href.indexOf('#') == 0 ||
+			         links.get(idx).href.indexOf('javascript:') == 0 ||
+                                 links.get(idx).href.indexOf('mailto:') == 0 ||
+			         links.get(idx).href.indexOf('/ce/') == 0 ||
+                                 links.get(idx).href.indexOf('https://senecac.on.ca/ce/') == 0 ||
+                                 links.get(idx).href.indexOf('http://senecac.on.ca/ce/') == 0 ||
+			         links.get(idx).href.indexOf('https://www.senecac.on.ca/ce/') == 0 ||
+			         links.get(idx).href.indexOf('http://www.senecac.on.ca/ce/') == 0 ||
+			         links.get(idx).href.indexOf('https://www.senecac.on.ca/ce/') == 0 ||
+			         links.get(idx).href.indexOf('https://wwwadmin.senecac.on.ca/ce/') == 0 ||
+			         links.get(idx).href.indexOf('https://senecapolytechnic.ca/ce/') == 0 ||
+			         links.get(idx).href.indexOf('http://senecapolytechnic.ca/ce/') == 0 ||
+			         links.get(idx).href.indexOf('https://www.senecapolytechnic.ca/ce/') == 0 ||
+   		                 links.get(idx).href.indexOf('http://www.senecapolytechnic.ca/ce/') == 0 ||
+			         links.get(idx).href.indexOf('https://www.senecapolytechnic.ca/ce/') == 0 ||
+			         links.get(idx).href.indexOf('https://wwwadmin.senecapolytechnic.ca/ce/') == 0||
+			         links.get(idx).href.indexOf('https://secure.senecac.on.ca/ce/') == 0 ||
+                                 links.get(idx).href.indexOf('https://secure.senecapolytechnic.ca/ce/') == 0||
+			         links.get(idx).href.indexOf('https://atom.senecac.on.ca/ce/') == 0 ||
+                                 links.get(idx).href.indexOf('https://atom.senecapolytechnic.ca/ce/') == 0
+			       ) &&
+                               links.get(idx).target.length == 0
+                              )
+			   {
+
+
+			    //assign the onclick of the link to open the survay popup.
+			    $(links.get(idx)).click( function(){
+
+			       //on click code goes here, they clicked a link to leave the page
+                               linkClicked = true;
+                               
+                                   
+                                       // window.open('https://www.surveymonkey.com/s.aspx?sm=Vyf5SRbvrNe61%2by0dCzpjg%3d%3d', 'surveywindow', 'height=500,width=600,scrollbars=yes,resizable=yes,status=yes');
+                                    
+                               
+			     });
+                           }
+                           else
+                           {
+                               $(links.get(idx)).click( function(){
+                                   //tells the unload script not to open up the survey
+                                   linkClicked = true;
+                                 });
+                           }
+
+                         }
+
+                         $(window).unload(function() {
+                          if (!linkClicked)
+                          {
+                              //window.open('https://www.surveymonkey.com/s.aspx?sm=VF%2faJabfUI5E0dUdiUIkTCDuQb4qE89WJWXcMhS0krM%3d');
+                          }
+                        });
+
+                });
+
+
+	</script>
+</body>
+
+    
+</html>
+
+        

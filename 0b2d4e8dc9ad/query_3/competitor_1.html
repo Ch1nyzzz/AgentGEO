@@ -1,0 +1,623 @@
+<!DOCTYPE html><html dir="ltr" lang="en-US"><head><meta charset="UTF-8"/>
+<script>var __ezHttpConsent={setByCat:function(src,tagType,attributes,category,force,customSetScriptFn=null){var setScript=function(){if(force||window.ezTcfConsent[category]){if(typeof customSetScriptFn==='function'){customSetScriptFn();}else{var scriptElement=document.createElement(tagType);scriptElement.src=src;attributes.forEach(function(attr){for(var key in attr){if(attr.hasOwnProperty(key)){scriptElement.setAttribute(key,attr[key]);}}});var firstScript=document.getElementsByTagName(tagType)[0];firstScript.parentNode.insertBefore(scriptElement,firstScript);}}};if(force||(window.ezTcfConsent&&window.ezTcfConsent.loaded)){setScript();}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){setScript();}else{console.error("cannot get ez consent data");force=true;setScript();}});}else{force=true;setScript();console.error("getEzConsentData is not a function");}},};</script>
+<script>var ezTcfConsent=window.ezTcfConsent?window.ezTcfConsent:{loaded:false,store_info:false,develop_and_improve_services:false,measure_ad_performance:false,measure_content_performance:false,select_basic_ads:false,create_ad_profile:false,select_personalized_ads:false,create_content_profile:false,select_personalized_content:false,understand_audiences:false,use_limited_data_to_select_content:false,};function getEzConsentData(){return new Promise(function(resolve){document.addEventListener("ezConsentEvent",function(event){var ezTcfConsent=event.detail.ezTcfConsent;resolve(ezTcfConsent);});});}</script>
+<script>if(typeof _setEzCookies!=='function'){function _setEzCookies(ezConsentData){var cookies=window.ezCookieQueue;for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(ezConsentData&&ezConsentData.loaded&&ezConsentData[cookie.tcfCategory]){document.cookie=cookie.name+"="+cookie.value;}}}}
+window.ezCookieQueue=window.ezCookieQueue||[];if(typeof addEzCookies!=='function'){function addEzCookies(arr){window.ezCookieQueue=[...window.ezCookieQueue,...arr];}}
+addEzCookies([]);if(window.ezTcfConsent&&window.ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else{console.error("cannot get ez consent data");_setEzCookies(window.ezTcfConsent);}});}else{console.error("getEzConsentData is not a function");_setEzCookies(window.ezTcfConsent);}</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;window.__ezScriptHost="//www.ezojs.com";__ez.queue=__ez.queue||function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:w(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),p())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&p()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&p())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e,i,n,s,a,d,c,u,f){var p=new l(e,i,n,s,a,d,c,f);!0===u?o[e]=p:r[e]=p,t[e]=p,h(p)}function h(e){!0!==u(e)&&0!=s&&e.process()}function u(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(w(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function p(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||u(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function w(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),p()}),5e3)}),!1),{addFile:c,addFileOnce:function(e,i,n,o,r,s,a,l,d){t[e]||c(e,i,n,o,r,s,a,l,d)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,h(n)},addFunc:function(e,n,s,l,d,c,u,f,p,m){!0===c&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,u,f,m);!0===p?o[e]=w:r[e]=w,t[e]=w,h(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,h(o)},items:t,processAll:p,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&u(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot=__ez.dot||{};__ez.queue.addFileOnce('/detroitchicago/boise.js', '//go.ezodn.com/detroitchicago/boise.js?gcb=195-0&cb=5', true, [], true, false, true, false);__ez.queue.addFileOnce('/parsonsmaize/abilene.js', '//go.ezodn.com/parsonsmaize/abilene.js?gcb=195-0&cb=6fc0905ee7', true, [], true, false, true, false);__ez.queue.addFileOnce('/parsonsmaize/mulvane.js', '//go.ezodn.com/parsonsmaize/mulvane.js?gcb=195-0&cb=e75e48eec0', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFileOnce('/detroitchicago/birmingham.js', '//go.ezodn.com/detroitchicago/birmingham.js?gcb=195-0&cb=539c47377c', true, ['/parsonsmaize/abilene.js'], true, false, true, false);</script>
+<script data-ezscrex="false" data-cfasync="false">__ez.ssaf=[17,16];__ez.sswp=4;__ez.ssv=17000;__ez.sshsdef=false;</script>
+<script data-ezscrex="false" data-cfasync="false">__ez.queue.addFile('/tardisrocinante/screx.js', '//go.ezodn.com/tardisrocinante/screx.js?gcb=0&cb=5', false, ['/detroitchicago/tulsa.js'], true, false, true, false);</script>
+<script data-ezscrex="false" data-cfasync="false">(function(){if("function"===typeof window.CustomEvent)return!1;window.CustomEvent=function(c,a){a=a||{bubbles:!1,cancelable:!1,detail:null};var b=document.createEvent("CustomEvent");b.initCustomEvent(c,a.bubbles,a.cancelable,a.detail);return b}})();</script><script data-ezscrex="false" data-cfasync="false">__ez.queue.addFile('/detroitchicago/tulsa.js', '//go.ezodn.com/detroitchicago/tulsa.js?gcb=195-0&cb=9', false, [], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({"ad_cache_level":1,"adpicker_placement_cnt":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"article_category":"When To Prune","author":"Yates Harrison","domain":"pruningcuts.com","domain_id":180345,"ezcache_level":0,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":1,"lt_cache_level":0,"publish_date":"2019-02-25","response_size":64230,"response_size_orig":52462,"response_time_orig":0,"template_id":120,"url":"https://www.pruningcuts.com/can-you-prune-trees-in-the-winter/","word_count":0,"worst_bad_word_level":0}, typeof window._ezaq !== "undefined" ? window._ezaq : {});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type='text/javascript' data-ezscrex='false' data-cfasync='false'>
+window.ezAnalyticsStatic = true;
+window._ez_send_requests_through_ezoic = true;window.ezWp = true;
+function analyticsAddScript(script) {
+	var ezDynamic = document.createElement('script');
+	ezDynamic.type = 'text/javascript';
+	ezDynamic.innerHTML = script;
+	document.head.appendChild(ezDynamic);
+}
+function getCookiesWithPrefix() {
+    var allCookies = document.cookie.split(';');
+    var cookiesWithPrefix = {};
+
+    for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+            var prefix = arguments[j];
+            if (cookie.indexOf(prefix) === 0) {
+                var cookieParts = cookie.split('=');
+                var cookieName = cookieParts[0];
+                var cookieValue = cookieParts.slice(1).join('=');
+                cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+                break; // Once matched, no need to check other prefixes
+            }
+        }
+    }
+
+    return cookiesWithPrefix;
+}
+function productAnalytics() {
+	var d = {"dhh":"//go.ezodn.com","pr":[6],"omd5":"de5614f4469a761561554ec41c8f7491"};
+	d.u = _ezaq.url;
+	d.p = _ezaq.page_view_id;
+	d.v = _ezaq.visit_uuid;
+	d.ab = _ezaq.ab_test_id;
+	d.e = JSON.stringify(_ezaq);
+	d.ref = document.referrer;
+	d.dw = document.documentElement.clientWidth || window.innerWidth || 0;
+	d.dh = window.screen.height || 0;
+	d.vpw = window.innerWidth || document.documentElement.clientWidth || 0;
+	d.vph = window.innerHeight || document.documentElement.clientHeight || 0;
+	d.doch = Math.max((document.body && document.body.scrollHeight) || 0, (document.documentElement && document.documentElement.scrollHeight) || 0, (document.body && document.body.offsetHeight) || 0, (document.documentElement && document.documentElement.offsetHeight) || 0, (document.body && document.body.clientHeight) || 0, (document.documentElement && document.documentElement.clientHeight) || 0);
+	d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+	if(typeof ez_utmParams !== 'undefined') {
+		d.utm = ez_utmParams;
+	}
+	d.qs = window.location.search;
+
+	var dataText = JSON.stringify(d);
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST','//g.ezoic.net/ezais/analytics?cb=1', true);
+	xhr.onload = function () {
+		if (xhr.status!=200) {
+            return;
+		}
+
+        if(document.readyState !== 'loading') {
+            analyticsAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+	};
+	xhr.setRequestHeader('Content-Type','text/plain');
+	xhr.send(dataText);
+}
+__ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+</script><base href="https://www.pruningcuts.com/can-you-prune-trees-in-the-winter/"/>
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-127820033"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  
+	  	  gtag('config', 'UA-127820033');
+	  
+	</script>
+
+	<script data-ad-client="ca-pub-3744406218949443" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="profile" href="https://gmpg.org/xfn/11"/>
+
+	<title>Can You Prune Trees In The Winter?</title>
+
+		<!-- All in One SEO 4.8.2 - aioseo.com -->
+	<meta name="description" content="There are several benefits for pruning the trees and to the person doing the pruning in the dormant winter months with a couple of exceptions."/>
+	<meta name="robots" content="max-image-preview:large"/>
+	<meta name="author" content="Yates Harrison"/>
+	<link rel="canonical" href="https://www.pruningcuts.com/can-you-prune-trees-in-the-winter/"/>
+	<meta name="generator" content="All in One SEO (AIOSEO) 4.8.2"/>
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"Article","@id":"https:\/\/www.pruningcuts.com\/can-you-prune-trees-in-the-winter\/#article","name":"Can You Prune Trees In The Winter?","headline":"Can You Prune Trees In The Winter?","author":{"@id":"https:\/\/www.pruningcuts.com\/author\/pruningmaster\/#author"},"publisher":{"@id":"https:\/\/www.pruningcuts.com\/#organization"},"image":{"@type":"ImageObject","url":"https:\/\/www.pruningcuts.com\/wp-content\/uploads\/2019\/02\/Can-you-prune-trees-in-the-winter-sm.jpg","width":450,"height":272,"caption":"Can you prune trees in the winter"},"datePublished":"2019-02-25T11:34:56+00:00","dateModified":"2019-02-25T11:34:58+00:00","inLanguage":"en-US","mainEntityOfPage":{"@id":"https:\/\/www.pruningcuts.com\/can-you-prune-trees-in-the-winter\/#webpage"},"isPartOf":{"@id":"https:\/\/www.pruningcuts.com\/can-you-prune-trees-in-the-winter\/#webpage"},"articleSection":"When To Prune"},{"@type":"BreadcrumbList","@id":"https:\/\/www.pruningcuts.com\/can-you-prune-trees-in-the-winter\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/www.pruningcuts.com\/#listItem","position":1,"name":"Home","item":"https:\/\/www.pruningcuts.com\/","nextItem":{"@type":"ListItem","@id":"https:\/\/www.pruningcuts.com\/can-you-prune-trees-in-the-winter\/#listItem","name":"Can You Prune Trees In The Winter?"}},{"@type":"ListItem","@id":"https:\/\/www.pruningcuts.com\/can-you-prune-trees-in-the-winter\/#listItem","position":2,"name":"Can You Prune Trees In The Winter?","previousItem":{"@type":"ListItem","@id":"https:\/\/www.pruningcuts.com\/#listItem","name":"Home"}}]},{"@type":"Organization","@id":"https:\/\/www.pruningcuts.com\/#organization","name":"Pruning Cuts","url":"https:\/\/www.pruningcuts.com\/"},{"@type":"Person","@id":"https:\/\/www.pruningcuts.com\/author\/pruningmaster\/#author","url":"https:\/\/www.pruningcuts.com\/author\/pruningmaster\/","name":"Yates Harrison","image":{"@type":"ImageObject","@id":"https:\/\/www.pruningcuts.com\/can-you-prune-trees-in-the-winter\/#authorImage","url":"https:\/\/secure.gravatar.com\/avatar\/5c11d2b30fee944e0e8db08e1ef85f4a64f9b4dc3e832abc3270ff9fbd503062?s=96&d=mm&r=g","width":96,"height":96,"caption":"Yates Harrison"}},{"@type":"WebPage","@id":"https:\/\/www.pruningcuts.com\/can-you-prune-trees-in-the-winter\/#webpage","url":"https:\/\/www.pruningcuts.com\/can-you-prune-trees-in-the-winter\/","name":"Can You Prune Trees In The Winter?","description":"There are several benefits for pruning the trees and to the person doing the pruning in the dormant winter months with a couple of exceptions.","inLanguage":"en-US","isPartOf":{"@id":"https:\/\/www.pruningcuts.com\/#website"},"breadcrumb":{"@id":"https:\/\/www.pruningcuts.com\/can-you-prune-trees-in-the-winter\/#breadcrumblist"},"author":{"@id":"https:\/\/www.pruningcuts.com\/author\/pruningmaster\/#author"},"creator":{"@id":"https:\/\/www.pruningcuts.com\/author\/pruningmaster\/#author"},"image":{"@type":"ImageObject","url":"https:\/\/www.pruningcuts.com\/wp-content\/uploads\/2019\/02\/Can-you-prune-trees-in-the-winter-sm.jpg","@id":"https:\/\/www.pruningcuts.com\/can-you-prune-trees-in-the-winter\/#mainImage","width":450,"height":272,"caption":"Can you prune trees in the winter"},"primaryImageOfPage":{"@id":"https:\/\/www.pruningcuts.com\/can-you-prune-trees-in-the-winter\/#mainImage"},"datePublished":"2019-02-25T11:34:56+00:00","dateModified":"2019-02-25T11:34:58+00:00"},{"@type":"WebSite","@id":"https:\/\/www.pruningcuts.com\/#website","url":"https:\/\/www.pruningcuts.com\/","name":"Pruning Cuts","inLanguage":"en-US","publisher":{"@id":"https:\/\/www.pruningcuts.com\/#organization"}}]}
+		</script>
+		<!-- All in One SEO -->
+
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.pruningcuts.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pruningcuts.com%2Fcan-you-prune-trees-in-the-winter%2F"/>
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.pruningcuts.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pruningcuts.com%2Fcan-you-prune-trees-in-the-winter%2F&amp;format=xml"/>
+<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css" type="text/css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*wp_block_styles_on_demand_placeholder:69f74b27d2fc1*/
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel="stylesheet" id="defer-income-school-style-css" href="https://www.pruningcuts.com/wp-content/themes/acabado-3/css/main.css?ver=1.4.0" type="text/css" media="all"/>
+<link rel="stylesheet" id="defer-style-min-width768-css" href="https://www.pruningcuts.com/wp-content/themes/acabado-3/css/min-width768.css?ver=1.4.0" type="text/css" media="(min-width: 768px)"/>
+<link rel="stylesheet" id="defer-style-min-width960-css" href="https://www.pruningcuts.com/wp-content/themes/acabado-3/css/min-width960.css?ver=1.4.0" type="text/css" media="(min-width: 960px)"/>
+<link rel="stylesheet" id="defer-style-min-width1200-css" href="https://www.pruningcuts.com/wp-content/themes/acabado-3/css/min-width1200.css?ver=1.4.0" type="text/css" media="(min-width: 1200px)"/>
+<style id="custom-style-inline-css" type="text/css">
+.search-wrapper #search-icon{background:url("https://www.pruningcuts.com/wp-content/themes/acabado-3/img/search-icon.png") center/cover no-repeat #fff;}.share-container .email-btn:before{background:url("https://www.pruningcuts.com/wp-content/themes/acabado-3/img/envelope.svg") center/cover no-repeat;}.share-container .print-btn:before{background:url("https://www.pruningcuts.com/wp-content/themes/acabado-3/img/print-icon.svg") center/cover no-repeat;}.externallinkimage{background-image:url("https://www.pruningcuts.com/wp-content/themes/acabado-3/img/extlink.png")}body, body ul, body li, body td, body th, body p, body p.legal-disclaimer, body  input, body select, body optgroup, body textarea, body .entry-meta span, body.single .entry-meta .byline, .entry-content .woocommerce div.product .woocommerce-tabs ul.tabs li a{ color: #000000; }body.home #page .hero-text-wrapper h2.hero-text{ color:#ffffff; }#content h1, #content h2:not(.widget-title, .hero-text, .section-header-text, .card-title), #content h3, #content .author-card .author-info a, #content h4, #content h5, #content h6, #content .header { color: #1c8c0e; }body .article-card header p a{color:#368c2b;}body.home #page h2.section-header-text,#page .featured-categories-wrapper .category-card h2:before{ background-color:#dd9933;}#page .featured-categories-wrapper .category-card:hover h2:before{ opacity:0.5; transition:opacity 500ms;}body.home #page h2.section-header-text, body.home #page h2.card-title{ color:#ffffff;}body a:hover, body a:visited:hover, body a:focus, body a:active { color: #363940 }.woocommerce #respond input#submit, #content .wp-block-button__link:not(.has-background), #content button:not(.hamburger, .toggle-submenu, .search-submit), #content a.button:not(.hamburger, .toggle-submenu, .search-submit), #content a.button:visited:not(.hamburger, .toggle-submenu, .search-submit), #content button:not(.hamburger, .toggle-submenu, .search-submit), #content input[type='button']:not(.hamburger, .toggle-submenu, .search-submit), #content input[type='reset'], #content input[type='submit'], #content .button:not(.hamburger, .toggle-submenu, .search-submit) { background: #dd8706; }.woocommerce #respond input#submit, .wp-block-button__link:not(.has-text-color), #page button:not(.hamburger, .toggle-submenu, .search-submit), #page a.button:not(.hamburger, .toggle-submenu, .search-submit), #page a.button:visited:not(.hamburger, .toggle-submenu, .search-submit), input[type='button']:not(.hamburger, .toggle-submenu, .search-submit), input[type='reset'], input[type='submit'], .button:not(.hamburger, .toggle-submenu, .search-submit) { color: #ffffff; }.woocommerce div.product .woocommerce-tabs ul.tabs::before, .woocommerce div.product .woocommerce-tabs ul.tabs li{border-color:#f0f0f0;}#content hr, body .wp-block-separator{ background-color: #f0f0f0; } #page aside#secondary .legal-info-container, #page aside#secondary .sidebar-ad{ border-top-color: #f0f0f0;} #page .author-card{border-top-color: #f0f0f0;border-bottom-color: #f0f0f0;}#page .site-footer{border-top-color: #f0f0f0;}@media (min-width: 960px){#page .site-content .widget-area{border-left-color:#f0f0f0;}}#content #antibounce { background: #f0f0f0; }body #content #antibounce .antibounce-card .copy-wrapper p{ color: #000000; }body #content #antibounce .antibounce-card button{ background-color: #000000; }body #content #antibounce .antibounce-card button { color: #ffffff }
+/*# sourceURL=custom-style-inline-css */
+</style>
+<link rel="https://api.w.org/" href="https://www.pruningcuts.com/wp-json/"/><link rel="alternate" title="JSON" type="application/json" href="https://www.pruningcuts.com/wp-json/wp/v2/posts/280"/><link rel="pingback" href="https://www.pruningcuts.com/xmlrpc.php"/><meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Can You Prune Trees In The Winter? | Pruning Cuts"/>
+<meta property="og:description" content="Winter can be the best time to prune trees Most people think of taking care of the gardens and landscapes in the spring and summer,…"/>
+<meta property="og:url" content="https://www.pruningcuts.com/can-you-prune-trees-in-the-winter/"/>
+<meta property="og:site_name" content="Pruning Cuts"/>
+<meta property="og:image" content="https://www.pruningcuts.com/wp-content/uploads/2019/02/Can-you-prune-trees-in-the-winter-sm.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="category" content="When To Prune"/>
+					<link rel="preconnect" href="https://fonts.gstatic.com"/>
+ 					<link rel="preload" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;800&amp;family=Roboto+Condensed&amp;display=swap" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;"/>
+				
+<script type='text/javascript'>
+var ezoTemplate = 'old_site_noads';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 180345;
+var ezdomain = 'pruningcuts.com';
+var ezoicSearchable = 1;
+</script></head>
+
+
+<body class="wp-singular post-template-default single single-post postid-280 single-format-standard wp-theme-acabado-3 no-sidebar">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+	<header id="masthead" class="site-header desktop-toggle">
+		<div class="inner-wrap">
+			<div class="hamburger-wrapper desktop">
+				<button class="hamburger hamburger--squeeze menu-toggle" type="button" aria-label="Menu" aria-controls="primary-menu" aria-expanded="false">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+					<span class="label">MENU</span>
+				</button>
+			</div>
+			<div class="site-branding">
+								<a href="https://www.pruningcuts.com/" class="custom-logo-link" rel="home" itemprop="url"><img width="300" height="156" src="https://www.pruningcuts.com/wp-content/uploads/2019/08/Pruning-Cuts-logo-300x156.png" class="attachment-medium size-medium" alt="Pruning Cuts logo" decoding="async" srcset="https://www.pruningcuts.com/wp-content/uploads/2019/08/Pruning-Cuts-logo-300x156.png 300w, https://www.pruningcuts.com/wp-content/uploads/2019/08/Pruning-Cuts-logo.png 480w" sizes="(max-width: 300px) 100vw, 300px"/></a>
+									<!-- <h1 class="site-title"><a tabindex="-1" href="" rel="home"></a></h1> -->
+										<!-- <p class="site-title"><a tabindex="-1" href="" rel="home"></a></p> -->
+								</div><!-- .site-branding -->
+			<div class="search-wrapper">
+				<a href="#open" id="search-icon" style="background: url(https://www.pruningcuts.com/wp-content/themes/acabado-3/img/search-icon.png) center/cover no-repeat #fff;"><span class="sr-only">Search</span></a>
+				<div class="search-form-wrapper">
+	<form role="search" method="get" class="search-form" action="https://www.pruningcuts.com/">
+		<style>
+		.search-wrapper.search-active .search-field {
+			width: 200px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		.search-wrapper button[type="submit"] {
+			display: inline-block;
+			vertical-align: top;
+			top: -35px;
+			position: relative;
+			background-color: transparent;
+			height: 30px;
+			width: 30px;
+			padding: 0;
+			margin: 0;
+			background-image: url("https://www.pruningcuts.com/wp-content/themes/acabado-3/img/search-icon.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		.search-wrapper.search-active button[type="submit"] {
+			display: inline-block !important;
+		}
+		</style>
+		<label for="s">
+			<span class="screen-reader-text">Search for:</span>
+		</label>
+		<input type="search" id="search-field" class="search-field" placeholder="Search …" value="" name="s"/>
+		<button type="submit" class="search-submit" style="display:none;"><span class="screen-reader-text"></span></button>
+	</form>
+</div>			</div>
+		</div>
+
+		<nav id="site-navigation" class="main-navigation">
+			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button> -->
+			<div id="primary-menu" class="inner-wrap"><ul>
+<li id="menu-item-388" class="menu-item-388"><a></a></li>
+<li id="menu-item-366" class="menu-item-366"><a></a></li>
+<li id="menu-item-365" class="menu-item-365"><a></a></li>
+<li id="menu-item-3" class="menu-item-3"><a></a></li>
+<li id="menu-item-585" class="menu-item-585"><a></a></li>
+<li id="menu-item-232" class="menu-item-232"><a></a></li>
+</ul></div>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+		
+	<div id="primary" class="content-area ">
+		<main id="main" class="site-main">
+
+		
+<article id="post-280" class="post-280 post type-post status-publish format-standard has-post-thumbnail hentry category-when-to-prune">
+	<header class="entry-header">
+		<h1 class="entry-title">Can You Prune Trees In The Winter?</h1>
+			<div class="entry-meta sr-only">
+				<meta itemprop="datePublished" content="2019-02-25"/><span class="byline"> Written by <span class="author vcard"><a class="url fn n" href="https://www.pruningcuts.com/author/pruningmaster/">Yates Harrison</a></span> </span><meta itemprop="author" content="Yates Harrison"/><link id="page-url" itemprop="mainEntityOfPage" href="https://www.pruningcuts.com/can-you-prune-trees-in-the-winter/"/><span class="term-list"> in <a href="https://www.pruningcuts.com/category/when-to-prune/" rel="category tag">When To Prune</a></span>			</div><!-- .entry-meta -->
+      
+      <br/>
+	  	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content" itemprop="articleBody">
+		
+<figure class="wp-block-image"><img fetchpriority="high" decoding="async" width="950" height="576" src="https://PruningCuts.com/wp-content/uploads/2019/02/Can-you-prune-trees-in-the-winter.jpg" alt="" class="wp-image-284" srcset="https://www.pruningcuts.com/wp-content/uploads/2019/02/Can-you-prune-trees-in-the-winter.jpg 950w, https://www.pruningcuts.com/wp-content/uploads/2019/02/Can-you-prune-trees-in-the-winter-300x182.jpg 300w, https://www.pruningcuts.com/wp-content/uploads/2019/02/Can-you-prune-trees-in-the-winter-768x466.jpg 768w, https://www.pruningcuts.com/wp-content/uploads/2019/02/Can-you-prune-trees-in-the-winter-100x61.jpg 100w, https://www.pruningcuts.com/wp-content/uploads/2019/02/Can-you-prune-trees-in-the-winter-864x524.jpg 864w" sizes="(max-width: 950px) 100vw, 950px"/><figcaption>Winter can be the best time to prune trees</figcaption></figure>
+
+
+
+<p>Most people think of taking care of the gardens and landscapes in the spring and summer, but can you do activities during the winter months to will improve your landscapes and gardens during the growing season like pruning?</p><!-- Ezoic - wp_under_page_title - under_page_title --><div id="ezoic-pub-ad-placeholder-701" data-inserter-version="2"></div><!-- End Ezoic - wp_under_page_title - under_page_title -->
+
+
+
+<p>Can you prune trees in the winter?  <strong>Yes, in fact it is the preferred time of year to prune trees. It is best to wait until the hardest part of winter is over, but it’s ideal to do regular pruning and hard pruning during winter’s dormant stage or cycle of deciduous trees.</strong></p>
+
+
+
+<p>There are a couple of exceptions to this rule of thumb, but lets cover the benefits and optimal times for most trees.</p><!-- Ezoic - wp_under_first_paragraph - under_first_paragraph --><div id="ezoic-pub-ad-placeholder-709" data-inserter-version="2"></div><!-- End Ezoic - wp_under_first_paragraph - under_first_paragraph -->
+
+
+
+<h2 class="wp-block-heading">Benefits of Pruning In Winter</h2>
+
+
+
+<ul class="wp-block-list"><li>Can see the structure of the tree</li><li>Less debris to remove since there aren’t any leaves which make clean up faster</li><li>Gives a gardener things to do before all the spring cleanup of the gardens</li><!-- Ezoic - wp_under_second_paragraph - under_second_paragraph --><div id="ezoic-pub-ad-placeholder-710" data-inserter-version="2"></div><!-- End Ezoic - wp_under_second_paragraph - under_second_paragraph --><li>Don’t have to worry about damaging fragile plants under the trees</li><li>You can do “hard pruning” where you take up to 30% of the tree top</li></ul>
+
+
+
+<p><strong>You can see the structure of the tree</strong> much easier when all the leaves are off the tree.  Cross branching is sometimes hard to see when the tree is in full leaf, but in the winter it is very easy to spot branches that are rubbing or that are heading in the direction.</p><!-- Ezoic - wp_mid_content - mid_content --><div id="ezoic-pub-ad-placeholder-711" data-inserter-version="2"></div><!-- End Ezoic - wp_mid_content - mid_content -->
+
+
+
+<p>You will want to remove any branches that not growing from the trunk outward.  Look for branches that are growing straight up or branches that are growing back inward towards the trunk and remove them.</p>
+
+
+
+<p>If the tree needs to be headed up so that it is easier to walk under for maintenance or for the public sidewalk, you can see how to balance the tree out by looking at the remaining limb once you remove the ones that are in the way.</p>
+
+
+
+<p>You can readily see if a tree growing multiple leaders that are competing with each other.  Now you will be able to pick the strongest one to keep.</p><!-- Ezoic - wp_long_content - long_content --><div id="ezoic-pub-ad-placeholder-712" data-inserter-version="2"></div><!-- End Ezoic - wp_long_content - long_content -->
+
+
+
+<p>Old dead branches are much easier to spot and remove.  But sometimes newly dead branches are hard to spot when all the leaves are off.  You might notice some dead branches once leaves are growing.</p>
+
+
+
+<p><strong>Clean up is much easier in the winter. </strong> With all the leaves off the tree it is much easier to clean up the debris from the pruning drop zone.  You don’t have to rake up all the leaves from the grass when finished.  Plus if you have to haul limbs away you can haul more without all the weight of the leaves.</p>
+
+
+
+<p><strong>For the gardener that is “chopping at the bit” to do something outside</strong> after being stuck in the house all winter, this is a great activity.  While the rest of the garden / landscape is completely dormant you can prune away.</p><!-- Ezoic - wp_longer_content - longer_content --><div id="ezoic-pub-ad-placeholder-713" data-inserter-version="2"></div><!-- End Ezoic - wp_longer_content - longer_content -->
+
+
+
+<p><strong>One great advantage to this time of the year is the lack of fragile under growth plants in the drop zone of the much bigger trees.</strong>  Most people plant perennials and annuals in beds under the protection of the bigger trees.  During the dormant winter months you don’t have to worry about stepping on the plants while pruning.</p>
+
+
+
+<p><strong>Optimal time for “hard pruning”.</strong>  Hard pruning trees is when you are reducing the overall size or heading up limbs or just thinning the canopy to allow air and sunlight in and you are cutting out up to 30% of the tree.  This is different than just trimming off a branch here or there.</p>
+
+
+
+<h2 class="wp-block-heading">Can You Prune Trees In Freezing Weather?</h2>
+
+
+
+<p>This is actually the best time of the year to prune trees.  Many people want to prune in the fall or soon after the leaves fall but it is advisable to wait until you are at the end of the winter months.  </p><!-- Ezoic - wp_longest_content - longest_content --><div id="ezoic-pub-ad-placeholder-714" data-inserter-version="2"></div><!-- End Ezoic - wp_longest_content - longest_content -->
+
+
+
+<p>If you prune too early in the winter months it might encourage the tree to try to start growing again if there is a warm snap in the weather.  Any new growth at this point will be damaged by the upcoming cold air, so you will have to remove that later in the winter.</p>
+
+
+
+<h2 class="wp-block-heading">When Can You Cut Branches Off Trees?</h2>
+
+
+
+<p>The best time to do the majority of the pruning of trees is during the dormant winter months.  But if you notice a dead, diseased, or damaged limb prune them as soon as you noticed them no matter what time of year it happens to be.</p>
+
+
+
+<p>You can also trim a limb here are there any time of year if it is in the way or rubbing on a structure.  You just want to save the hard pruning for the dormant months.</p><!-- Ezoic - wp_incontent_5 - incontent_5 --><div id="ezoic-pub-ad-placeholder-715" data-inserter-version="2"></div><!-- End Ezoic - wp_incontent_5 - incontent_5 -->
+
+
+
+<h2 class="wp-block-heading">What Month Is Considered Late Winter?</h2>
+
+
+
+<p>For most  that live north of the equator late winter will be January through late March.  For most of the United States it would be late January, February on into March.</p>
+
+
+
+<p>Instead of thinking of this as a specific calendar day or month, look at nature in your area and take notice of signs.  You want to complete your pruning before the buds start to swell or before the sap starts running.</p>
+
+
+
+<p>While it is better to wait until the average temperatures start climbing, you don’t want to wait too long.  The reason to wait until the back side of winter is because if you prune during the first part of winter and if there is a warm weather period the plant might start growing again.</p><!-- Ezoic - wp_incontent_6 - incontent_6 --><div id="ezoic-pub-ad-placeholder-716" data-inserter-version="2"></div><!-- End Ezoic - wp_incontent_6 - incontent_6 -->
+
+
+
+<p>Pruning will cause a plant (either tree or shrub) to start growing, so if you prune in early December then get a “January Thaw” where the temperatures are much higher than normal the plant will try to start growing then when the second half of winter hits hard it will kill any new growth which can be very stressful to the plant.</p>
+
+
+
+<h2 class="wp-block-heading">What is “Dormant Pruning”</h2>
+
+
+
+<p>Simply stated dormant pruning is pruning when the tree is dormant.  This happens when it drops it’s leaves and the sap retreats to the root system. </p>
+
+
+
+<p>It is optimal to wait until later in the dormant season  (winter) to do you pruning just in case there is a warm snap.  A warm snap plus pruning can encourage the tree to try to grow again.</p><!-- Ezoic - wp_incontent_7 - incontent_7 --><div id="ezoic-pub-ad-placeholder-717" data-inserter-version="2"></div><!-- End Ezoic - wp_incontent_7 - incontent_7 -->
+
+
+
+<h2 class="wp-block-heading">Can You Trim Fruit Trees In The Winter?</h2>
+
+
+
+<p>It is a great time to prune apple and pear fruit trees.  This will give them a great structure for handling the upcoming crop. </p>
+
+
+
+<p>Just keep in mind that fruit trees like peaches will fruit on last year’s growth so you don’t want to remove all of last year’s growth.</p>
+
+
+
+<h2 class="wp-block-heading">Can You Prune Maple Trees In Winter?</h2>
+
+
+
+<p>Maple, river birch, and walnut trees tend to ooze sap when they are pruned.  Keep this in mind.  If you prune right when the sap starts flowing in late winter the tree will tend to ooze more sap than if you did it more in the dead of winter when the tree is completely dormant.</p><!-- Ezoic - wp_incontent_8 - incontent_8 --><div id="ezoic-pub-ad-placeholder-718" data-inserter-version="2"></div><!-- End Ezoic - wp_incontent_8 - incontent_8 -->
+
+
+
+<p>You might also consider waiting until late spring or early summer once the major push of sap is over and the tree can heal over quickly during the growing season.</p>
+
+
+
+<p>In this post I go into the <a href="https://pruningcuts.com/when-to-prune-maple-trees/">best time to prune maple trees</a>.</p>
+
+
+
+<h2 class="wp-block-heading">Related Questions</h2>
+
+
+
+<p><strong>Does cutting off dead branches help a tree? </strong> Yes.  By removing any dead branches at any time of the year you will remove possible places of invasion by insects and disease.  Pruning dead branches as you notice them will help the tree heal over faster to seal up the area which will keep your tree healthy and happy.</p><!-- Ezoic - wp_incontent_9 - incontent_9 --><div id="ezoic-pub-ad-placeholder-719" data-inserter-version="2"></div><!-- End Ezoic - wp_incontent_9 - incontent_9 -->
+
+
+
+<p><strong><a href="https://pruningcuts.com/can-you-trim-trees-in-the-summer/">Can I trim my trees in summer?</a></strong>  Yes, but with limits.  When I say “trim” I am talking about pruning a limb that might be hanging too low to walk under.  Or maybe there is some storm damage that needs to be taken care of immediately.  In general, it is better for trees to do hard pruning or just heavier pruning while the tree is dormant in the winter months.</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+
+</article><!-- #post-280 -->
+
+<script type="application/ld+json">
+    {"@context":"http:\/\/schema.org\/","@type":"BlogPosting","name":"Can You Prune Trees In The Winter?","url":"https:\/\/www.pruningcuts.com\/can-you-prune-trees-in-the-winter\/","articleBody":"Winter can be the best time to prune trees\n\n\n\nMost people think of taking care of the gardens and landscapes in the spring and summer, but can you do activities during the winter months to will improve your landscapes and gardens during the growing season like pruning?\n\n\n\nCan you prune trees in the winter?  Yes, in fact it is the preferred time of year to prune trees. It is best to wait until the hardest part of winter is over, but it's ideal to do regular pruning and hard pruning during winter's dormant stage or cycle of deciduous trees.\n\n\n\nThere are a couple of exceptions to this rule of thumb, but lets cover the benefits and optimal times for most trees.\n\n\n\nBenefits of Pruning In Winter\n\n\n\nCan see the structure of the treeLess debris to remove since there aren't any leaves which make clean up fasterGives a gardener things to do before all the spring cleanup of the gardensDon't have to worry about damaging fragile plants under the treesYou can do \"hard pruning\" where you take up to 30% of the tree top\n\n\n\nYou can see the structure of the tree much easier when all the leaves are off the tree.  Cross branching is sometimes hard to see when the tree is in full leaf, but in the winter it is very easy to spot branches that are rubbing or that are heading in the direction.\n\n\n\nYou will want to remove any branches that not growing from the trunk outward.  Look for branches that are growing straight up or branches that are growing back inward towards the trunk and remove them.\n\n\n\nIf the tree needs to be headed up so that it is easier to walk under for maintenance or for the public sidewalk, you can see how to balance the tree out by looking at the remaining limb once you remove the ones that are in the way.\n\n\n\nYou can readily see if a tree growing multiple leaders that are competing with each other.  Now you will be able to pick the strongest one to keep.\n\n\n\nOld dead branches are much easier to spot and remove.  But sometimes newly dead branches are hard to spot when all the leaves are off.  You might notice some dead branches once leaves are growing.\n\n\n\nClean up is much easier in the winter.  With all the leaves off the tree it is much easier to clean up the debris from the pruning drop zone.  You don't have to rake up all the leaves from the grass when finished.  Plus if you have to haul limbs away you can haul more without all the weight of the leaves.\n\n\n\nFor the gardener that is \"chopping at the bit\" to do something outside after being stuck in the house all winter, this is a great activity.  While the rest of the garden \/ landscape is completely dormant you can prune away.\n\n\n\nOne great advantage to this time of the year is the lack of fragile under growth plants in the drop zone of the much bigger trees.  Most people plant perennials and annuals in beds under the protection of the bigger trees.  During the dormant winter months you don't have to worry about stepping on the plants while pruning.\n\n\n\nOptimal time for \"hard pruning\".  Hard pruning trees is when you are reducing the overall size or heading up limbs or just thinning the canopy to allow air and sunlight in and you are cutting out up to 30% of the tree.  This is different than just trimming off a branch here or there.\n\n\n\nCan You Prune Trees In Freezing Weather?\n\n\n\nThis is actually the best time of the year to prune trees.  Many people want to prune in the fall or soon after the leaves fall but it is advisable to wait until you are at the end of the winter months.  \n\n\n\nIf you prune too early in the winter months it might encourage the tree to try to start growing again if there is a warm snap in the weather.  Any new growth at this point will be damaged by the upcoming cold air, so you will have to remove that later in the winter.\n\n\n\nWhen Can You Cut Branches Off Trees?\n\n\n\nThe best time to do the majority of the pruning of trees is during the dormant winter months.  But if you notice a dead, diseased, or damaged limb prune them as soon as you noticed them no matter what time of year it happens to be.\n\n\n\nYou can also trim a limb here are there any time of year if it is in the way or rubbing on a structure.  You just want to save the hard pruning for the dormant months.\n\n\n\nWhat Month Is Considered Late Winter?\n\n\n\nFor most  that live north of the equator late winter will be January through late March.  For most of the United States it would be late January, February on into March.\n\n\n\nInstead of thinking of this as a specific calendar day or month, look at nature in your area and take notice of signs.  You want to complete your pruning before the buds start to swell or before the sap starts running.\n\n\n\nWhile it is better to wait until the average temperatures start climbing, you don't want to wait too long.  The reason to wait until the back side of winter is because if you prune during the first part of winter and if there is a warm weather period the plant might start growing again.\n\n\n\nPruning will cause a plant (either tree or shrub) to start growing, so if you prune in early December then get a \"January Thaw\" where the temperatures are much higher than normal the plant will try to start growing then when the second half of winter hits hard it will kill any new growth which can be very stressful to the plant.\n\n\n\nWhat is \"Dormant Pruning\"\n\n\n\nSimply stated dormant pruning is pruning when the tree is dormant.  This happens when it drops it's leaves and the sap retreats to the root system. \n\n\n\nIt is optimal to wait until later in the dormant season  (winter) to do you pruning just in case there is a warm snap.  A warm snap plus pruning can encourage the tree to try to grow again.\n\n\n\nCan You Trim Fruit Trees In The Winter?\n\n\n\nIt is a great time to prune apple and pear fruit trees.  This will give them a great structure for handling the upcoming crop. \n\n\n\nJust keep in mind that fruit trees like peaches will fruit on last year's growth so you don't want to remove all of last year's growth.\n\n\n\nCan You Prune Maple Trees In Winter?\n\n\n\nMaple, river birch, and walnut trees tend to ooze sap when they are pruned.  Keep this in mind.  If you prune right when the sap starts flowing in late winter the tree will tend to ooze more sap than if you did it more in the dead of winter when the tree is completely dormant.\n\n\n\nYou might also consider waiting until late spring or early summer once the major push of sap is over and the tree can heal over quickly during the growing season.\n\n\n\nIn this post I go into the best time to prune maple trees.\n\n\n\nRelated Questions\n\n\n\nDoes cutting off dead branches help a tree?  Yes.  By removing any dead branches at any time of the year you will remove possible places of invasion by insects and disease.  Pruning dead branches as you notice them will help the tree heal over faster to seal up the area which will keep your tree healthy and happy.\n\n\n\nCan I trim my trees in summer?  Yes, but with limits.  When I say \"trim\" I am talking about pruning a limb that might be hanging too low to walk under.  Or maybe there is some storm damage that needs to be taken care of immediately.  In general, it is better for trees to do hard pruning or just heavier pruning while the tree is dormant in the winter months.","headline":"Can You Prune Trees In The Winter?","author":{"@type":"Person","name":"Yates Harrison","url":""},"datePublished":"2019-02-25","mainEntityOfPage":"True","dateModified":"February 25, 2019","image":{"@type":"ImageObject","url":"https:\/\/www.pruningcuts.com\/wp-content\/uploads\/2019\/02\/Can-you-prune-trees-in-the-winter-sm.jpg","height":272,"width":450},"publisher":{"@context":"http:\/\/schema.org\/","@type":"Organization","name":"Pruning Cuts","logo":{"@type":"ImageObject","url":"https:\/\/www.pruningcuts.com\/wp-content\/uploads\/2019\/08\/Pruning-Cuts-logo-300x156.png","height":600,"width":60}}}
+</script>
+		<article class="author-card">
+			<a href="https://www.pruningcuts.com/author/pruningmaster/" alt="link to Yates Harrison author page">
+				<div class="avatar-container" style="background-image: url(&#39;https://secure.gravatar.com/avatar/5c11d2b30fee944e0e8db08e1ef85f4a64f9b4dc3e832abc3270ff9fbd503062?s=96&amp;d=mm&amp;r=g&#39;)">
+				</div>
+			</a>
+			<div class="author-info">
+				<header>
+					<p class="h3"><a href="https://www.pruningcuts.com/author/pruningmaster/">Yates Harrison</a></p>
+				</header>
+				<p></p>
+			</div>
+		</article>
+					<h3 class="h2">Recent Posts</h3>
+			<div class="recent-articles-container">
+					<article class="article-card">
+				<a href="https://www.pruningcuts.com/what-time-of-year-should-trees-be-pruned-best-results/" rel="nofollow"><div class="image-container" style="background-image: url(&#39;https://www.pruningcuts.com/wp-content/uploads/2020/04/What-time-of-year-should-trees-be-pruned.jpg&#39;)"></div><span class="sr-only">link to What Time of Year Should Trees Be Pruned? [Best Results]</span></a>
+                
+				<div class="copy-container">
+					<header>
+						<p><a href="https://www.pruningcuts.com/what-time-of-year-should-trees-be-pruned-best-results/">What Time of Year Should Trees Be Pruned? [Best Results]</a></p>
+					</header>
+					<div class="excerpt">
+						<p>If you’re thinking about pruning your trees
+and were wondering if there is a particular time of year to do it, then you’re
+in luck. This article is my complete guide for all of those people who...</p><div class="button-container"><a rel="nofollow" class="button reverse" href="https://www.pruningcuts.com/what-time-of-year-should-trees-be-pruned-best-results/" aria-label="Continue Reading: What Time of Year Should Trees Be Pruned? [Best Results]">Continue Reading</a></div>					</div>
+					<!-- <div class="button-container">
+						<a rel="nofollow" class="button reverse" href=""></a>
+					</div> -->
+				</div>
+			</article>
+					<article class="article-card">
+				<a href="https://www.pruningcuts.com/how-to-prune-herbs/" rel="nofollow"><div class="image-container" style="background-image: url(&#39;https://www.pruningcuts.com/wp-content/uploads/2020/01/how-to-prune-herbs-like-peppermint.jpg&#39;)"></div><span class="sr-only">link to How To Prune Herbs: The Complete Guide</span></a>
+                
+				<div class="copy-container">
+					<header>
+						<p><a href="https://www.pruningcuts.com/how-to-prune-herbs/">How To Prune Herbs: The Complete Guide</a></p>
+					</header>
+					<div class="excerpt">
+						<p>How to prune herbs like peppermint
+
+
+
+Do you know what happens to the majority of herb gardens within their first year? They either die off, grow wildly out of control, or manage to do a little bit...</p><div class="button-container"><a rel="nofollow" class="button reverse" href="https://www.pruningcuts.com/how-to-prune-herbs/" aria-label="Continue Reading: How To Prune Herbs: The Complete Guide">Continue Reading</a></div>					</div>
+					<!-- <div class="button-container">
+						<a rel="nofollow" class="button reverse" href=""></a>
+					</div> -->
+				</div>
+			</article>
+					</div>
+				</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<aside id="secondary" class="widget-area">
+		<div class="about-wrapper">
+		<h2 class="widget-title" style="background: #dd9933; color: #ffffff">About</h2>		<div class="about-image" style="background-image: url(&#39;https://www.pruningcuts.com/wp-content/uploads/2019/09/Yates-Harrison-Pruning-Cuts-500x500.jpg&#39;)"></div>
+				<p class="about-copy">Hi, I&#39;m Yates Harrison...Since the summer that I was the ripe old age of 11, I&#39;ve been in the landscaping world. Growing up in the business teaches you many tips, tricks, and pro secrets. <br/><br/>While I did graduate college and took many courses on horticulture, I learned most of what I know about pruning from my father who has been in the landscaping world for 60+ years. Here I hope to share and show you what really works with decades of results to back up these techniques. </p>
+				<button onclick="window.location.href=&#39;https://www.pruningcuts.com/about-yates-harrison/&#39;;">More About Yates Harrison</button>
+		<!-- <div class="button-wrapper"><a class="button" href=""></a></div> -->
+			</div>
+	</aside><!-- #secondary -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer">
+
+					
+							<div class="inner-wrap footer-option-1">
+					
+					<div class="site-info">
+							2026 Copyright PruningCuts.com | Lead Generator Tools, LLC					</div><!-- .site-info -->
+
+					
+			</div>
+				
+		
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/acabado-3/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<p class="footer-disclaimer" style="text-align: center">“This site is owned and operated by Lead Generator Tools LLC, a limited liability company headquartered in Missouri, USA. Lead Generator Tools LLC is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. Lead Generator Tools LLC also participates in affiliate programs with Bluehost, Clickbank, CJ, ShareASale, and other sites. Lead Generator Tools LLC is compensated for referring traffic and business to these companies.”</p><div id="amzn-assoc-ad-9524debb-bf6c-4757-a73e-c3f9e81891da"></div><script async="" src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=9524debb-bf6c-4757-a73e-c3f9e81891da"></script><script type="text/javascript" id="affiliate-link-sherpa-theme-js-extra">
+/* <![CDATA[ */
+var nonce_object = {"nonce":"eea228674c","postId":"280","pluginsUrl":"https://www.pruningcuts.com/wp-content/plugins"};
+//# sourceURL=affiliate-link-sherpa-theme-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" async="" defer="" src="https://www.pruningcuts.com/wp-content/plugins/sherpa-plugin/assets/js/theme.js" id="affiliate-link-sherpa-theme-js"></script>
+<script type="text/javascript" async="" defer="" src="https://www.pruningcuts.com/wp-content/themes/acabado-3/js/app.max.js?ver=1.4.0" id="income-school-js-js"></script>
+<script type="text/javascript" async="" defer="" src="https://www.pruningcuts.com/wp-includes/js/comment-reply.min.js?ver=6.9.4" id="comment-reply-js" async="async" data-wp-strategy="async" fetchpriority="low"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.pruningcuts.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://www.pruningcuts.com/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+<!-- Affiliate Income Start -->
+<script type="text/javascript">
+
+jQuery("a[href*='amazon.com']").each(function(){
+	
+	
+	
+	this.href = this.href.replace(/aax-us-east.amazon-adsystem.com\/x\/c\/[a-z ^a-z ^A-Z A-Z ^0-9 0-9_-]+\/https/g, '');
+	
+	
+	
+
+	
+	this.href = this.href.replace(/amazon\.com\/[a-z ^a-z ^A-Z A-Z ^0-9 0-9_-]+\/dp\//g, 'amazon.com/dp/');
+    this.href = this.href.replace(/amazon\.com\/[a-z ^a-z ^A-Z A-Z ^0-9 0-9_-]+\/b\//g, 'amazon.com/b/');	
+	this.href = this.href.replace(/\?ref=[a-z A-Z 0-9_-]+/g, '');
+	this.href = this.href.replace(/ref=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\?ref=[a-z A-Z 0-9_-]+/g, '');
+	this.href = this.href.replace(/\?s=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\&qid=[a-z A-Z 0-9_-]+/g, '');
+	this.href = this.href.replace(/\&sr=[a-z A-Z 0-9_-]+/g, '');
+	this.href = this.href.replace(/\+/g, '');
+	this.href = this.href.replace(/\&keywords=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\?_encoding=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\&psc=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\?pf_rd_m=[a-z A-Z 0-9_-]+/g, '');		
+	this.href = this.href.replace(/\&pf_rd_r=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\&pf_rd_t=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\&pf_rd_p=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\&pf_rd_i=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\&heroAsin=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\&source=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\&pf_rd_m=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\?smid=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\/ref_%[a-z A-Z 0-9_-]+/g, '');
+	this.href = this.href.replace(/\?tag=[a-z A-Z 0-9_-]+/g, '');
+	this.href = this.href.replace(/\&pf_rd_s=[a-z A-Z 0-9_-]+/g, '');
+	
+	this.href = this.href.replace(/\?creativeASIN=[a-z A-Z 0-9_-]+/g, '');	
+	this.href = this.href.replace(/\&linkCode=[a-z A-Z 0-9_-]+/g, '');
+	this.href = this.href.replace(/\&imprToken=[.a-z A-Z 0-9_-]+/g, '');
+	this.href = this.href.replace(/\&slotNum=[a-z A-Z 0-9_-]+/g, '');
+	
+	
+});
+var amzid = 'pcuts-20'
+jQuery("a[href*='amazon.com']").each(function(){
+	this.href += "?tag="+amzid;
+});
+</script>
+<div id="amzn-assoc-ad-9524debb-bf6c-4757-a73e-c3f9e81891da"></div><script async="" src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=9524debb-bf6c-4757-a73e-c3f9e81891da"></script>
+
+
+
+
+
+<!-- Affiliate Income Stop -->
+<div style="display: none"></div>
+
+<span id="ezoic-pub-ad-placeholder-100"></span><!-- ezoic_pub_ad_placeholder-100-bottom_floating-728x90-100-nonexxxnonexxxxxxezmaxscaleval100 --><!-- ezoic_pub_ad_placeholder-100-bottom_floating-970x90-100-nonexxxnonexxxxxxezmaxscaleval100 --><div id="ez-sidebar-wall-left" class="ez-sidebar-wall" style="left: 0px;">
+	<div class="ez-sidebar-wall-ad">
+		<span id="ezoic-pub-ad-placeholder-975"></span><!-- ezoic_pub_ad_placeholder-975-edge-160x600-975-nonexxxnonexxxxxxezmaxscaleval100 -->
+		<span class="ez-rail-close" id="ez-rail-close-left" style="top: -21px; left: 0; display: none;" onclick="__ez_close_rail(this.parentElement.parentElement.id)">x</span>
+	</div>
+</div><div id="ez-sidebar-wall-right" class="ez-sidebar-wall" style="right: 0px;">
+	<div class="ez-sidebar-wall-ad">
+		<span id="ezoic-pub-ad-placeholder-976"></span><!-- ezoic_pub_ad_placeholder-976-edge_2-160x600-976-nonexxxnonexxxxxxezmaxscaleval100 -->
+		<span class="ez-rail-close" id="ez-rail-close-right" style="top: -21px; right: 0; display: none;" onclick="__ez_close_rail(this.parentElement.parentElement.id)">x</span>
+	</div>
+</div><script>!function(){function t(t,r){var n="undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(!n){if(Array.isArray(t)||(n=function(t,r){if(t){if("string"==typeof t)return e(t,r);var n=Object.prototype.toString.call(t).slice(8,-1);return"Object"===n&&t.constructor&&(n=t.constructor.name),"Map"===n||"Set"===n?Array.from(t):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?e(t,r):void 0}}(t))||r&&t&&"number"==typeof t.length){n&&(t=n);var a=0,o=function(){};return{s:o,n:function(){return a>=t.length?{done:!0}:{done:!1,value:t[a++]}},e:function(t){throw t},f:o}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var i,u=!0,s=!1;return{s:function(){n=n.call(t)},n:function(){var t=n.next();return u=t.done,t},e:function(t){s=!0,i=t},f:function(){try{u||null==n.return||n.return()}finally{if(s)throw i}}}}function e(t,e){(null==e||e>t.length)&&(e=t.length);for(var r=0,n=new Array(e);r<e;r++)n[r]=t[r];return n}!function(){var e=function(t){var e=getComputedStyle(t);if(-1===parseInt(e.bottom,10)){var r=t.offsetHeight||300;t.style.bottom=-r+"px"}};function r(){return document.querySelector('ins[data-anchor-shown="true"][data-anchor-status="displayed"]')}function n(t){var e=t.querySelector("iframe");e&&requestAnimationFrame((function(){var r=parseFloat(getComputedStyle(e).height);isNaN(r)||t.style.setProperty("height","".concat(r+5,"px"),"important")}))}function a(t){t.style.setProperty("width","100%","important"),t.style.maxWidth="none"}function o(t){var e=t.querySelector("iframe");e&&(e.style.setProperty("display","block","important"),e.style.setProperty("margin","0 auto","important"));var r=t.querySelector("[id$='__container__']");r&&r.style.setProperty("display","contents","important")}new MutationObserver((function(r){var n,a=t(r);try{for(a.s();!(n=a.n()).done;){var o=n.value;if("attributes"===o.type){var i=o.target;i.matches("[data-anchor-status]")&&("data-anchor-status"===o.attributeName&&"dismissed"===i.getAttribute("data-anchor-status")&&e(i),"style"===o.attributeName&&"dismissed"===i.getAttribute("data-anchor-status")&&e(i))}}}catch(t){a.e(t)}finally{a.f()}})).observe(document.documentElement,{subtree:!0,attributes:!0,attributeFilter:["style","data-anchor-status"]});var i=new WeakSet;function u(e){e&&(i.has(e)||(i.add(e),new MutationObserver((function(r){var i,u=t(r);try{for(u.s();!(i=u.n()).done;){var s=i.value;"style"===s.attributeName?(n(e),a(e),o(e)):"attributes"===s.type&&"data-google-query-id"===s.attributeName&&o(e)}}catch(t){u.e(t)}finally{u.f()}})).observe(e,{attributes:!0,attributeFilter:["style","data-google-query-id"]})))}!function(){var t=r();if(t)return n(t),a(t),o(t),void u(t);var e=new MutationObserver((function(){var t=r();t&&(n(t),a(t),o(t),u(t),e.disconnect())}));e.observe(document.body,{attributes:!0,subtree:!0,childList:!0})}()}()}();</script>
+<script type="text/javascript" data-cfasync="false">!function(){var e=function(e,t){for(var r=0;r<t.length;r++){var n=t[r];if(0==n.complete||void 0!==n.readyState&&n.readyState<4){var o=n.getAttribute("src")||n.currentSrc;void 0!==n.readyState&&0==n.readyState?n.addEventListener("loadstart",(function(e){var t=e.currentTarget.getAttribute("src")||e.currentSrc;window.ezorqs(e,t)})):(o=n.getAttribute("src")||n.currentSrc,window.ezorqs(n,o)),n.addEventListener("load",(function(e){var t=e.currentTarget.getAttribute("src")||e.srcElement.currentSrc;window.ezorqe(e,t)})),n.addEventListener("loadeddata",(function(e){var t=e.currentTarget.getAttribute("src")||e.srcElement.currentSrc;window.ezorqe(e,t)})),n.addEventListener("error",(function(e){var t=e.currentTarget.getAttribute("src")||e.srcElement.currentSrc;window.ezorqe(e,t)}))}}};function t(e){for(var t=0;t<document.styleSheets.length;t++)if(document.styleSheets[t].href==e)return!0;return!1}__ez_addAllListeners=function(){e(0,document.querySelectorAll("img")),e(0,document.querySelectorAll("video")),e(0,document.querySelectorAll("audio")),function(e){for(var r=0;r<e.length;r++){var n=e[r];if(("preload"==n.getAttribute("rel")||"stylesheet"==n.getAttribute("rel"))&&null!=n.getAttribute("href")&&t(n.getAttribute("href"))){window.ezorqs(n,n.getAttribute("href"));var o=document.createElement("img");o.onerror=function(e){void 0!==e.path&&void 0!==e.path[0].currentSrc?window.ezorqe(n,e.path[0].currentSrc):void 0!==e.srcElement&&void 0!==e.srcElement.href&&window.ezorqe(n,e.srcElement.href)},o.src=n.getAttribute("href")}}}(document.querySelectorAll("link")),void 0!==window.__ez.ssaf&&window.__ez.ssaf.indexOf(16)>-1&&void 0!==window.__ez.sshsdef&&!1===window.__ez.sshsdef&&Element.prototype.addEventListener&&("function"==typeof window.onload&&(window.addEventListener("load",window.onload),window.onload=null),"function"==typeof document.onload&&(document.addEventListener.addEventListener("load",document.onload),document.onload=null))},__ez.queue.addFunc("__ez_addAllListeners","__ez_addAllListeners",null,!1,["/detroitchicago/tulsa.js"],!0,!0,!0,!0)}();</script><script data-cfasync="false">function _emitEzConsentEvent(){var customEvent=new CustomEvent("ezConsentEvent",{detail:{ezTcfConsent:window.ezTcfConsent},bubbles:true,cancelable:true,});document.dispatchEvent(customEvent);}
+(function(window,document){function _setAllEzConsentTrue(){window.ezTcfConsent.loaded=true;window.ezTcfConsent.store_info=true;window.ezTcfConsent.develop_and_improve_services=true;window.ezTcfConsent.measure_ad_performance=true;window.ezTcfConsent.measure_content_performance=true;window.ezTcfConsent.select_basic_ads=true;window.ezTcfConsent.create_ad_profile=true;window.ezTcfConsent.select_personalized_ads=true;window.ezTcfConsent.create_content_profile=true;window.ezTcfConsent.select_personalized_content=true;window.ezTcfConsent.understand_audiences=true;window.ezTcfConsent.use_limited_data_to_select_content=true;window.ezTcfConsent.select_personalized_content=true;}
+function _clearEzConsentCookie(){document.cookie="ezCMPCookieConsent=tcf2;Domain=.pruningcuts.com;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";}
+_clearEzConsentCookie();if(typeof window.__tcfapi!=="undefined"){window.ezgconsent=false;var amazonHasRun=false;function _ezAllowed(tcdata,purpose){return(tcdata.purpose.consents[purpose]||tcdata.purpose.legitimateInterests[purpose]);}
+function _handleConsentDecision(tcdata){window.ezTcfConsent.loaded=true;if(!tcdata.vendor.consents["347"]&&!tcdata.vendor.legitimateInterests["347"]){window._emitEzConsentEvent();return;}
+window.ezTcfConsent.store_info=_ezAllowed(tcdata,"1");window.ezTcfConsent.develop_and_improve_services=_ezAllowed(tcdata,"10");window.ezTcfConsent.measure_content_performance=_ezAllowed(tcdata,"8");window.ezTcfConsent.select_basic_ads=_ezAllowed(tcdata,"2");window.ezTcfConsent.create_ad_profile=_ezAllowed(tcdata,"3");window.ezTcfConsent.select_personalized_ads=_ezAllowed(tcdata,"4");window.ezTcfConsent.create_content_profile=_ezAllowed(tcdata,"5");window.ezTcfConsent.measure_ad_performance=_ezAllowed(tcdata,"7");window.ezTcfConsent.use_limited_data_to_select_content=_ezAllowed(tcdata,"11");window.ezTcfConsent.select_personalized_content=_ezAllowed(tcdata,"6");window.ezTcfConsent.understand_audiences=_ezAllowed(tcdata,"9");window._emitEzConsentEvent();}
+function _handleGoogleConsentV2(tcdata){if(!tcdata||!tcdata.purpose||!tcdata.purpose.consents){return;}
+var googConsentV2={};if(tcdata.purpose.consents[1]){googConsentV2.ad_storage='granted';googConsentV2.analytics_storage='granted';}
+if(tcdata.purpose.consents[3]&&tcdata.purpose.consents[4]){googConsentV2.ad_personalization='granted';}
+if(tcdata.purpose.consents[1]&&tcdata.purpose.consents[7]){googConsentV2.ad_user_data='granted';}
+if(googConsentV2.analytics_storage=='denied'){gtag('set','url_passthrough',true);}
+gtag('consent','update',googConsentV2);}
+__tcfapi("addEventListener",2,function(tcdata,success){if(!success||!tcdata){window._emitEzConsentEvent();return;}
+if(!tcdata.gdprApplies){_setAllEzConsentTrue();window._emitEzConsentEvent();return;}
+if(tcdata.eventStatus==="useractioncomplete"||tcdata.eventStatus==="tcloaded"){if(typeof gtag!='undefined'){_handleGoogleConsentV2(tcdata);}
+_handleConsentDecision(tcdata);if(tcdata.purpose.consents["1"]===true&&tcdata.vendor.consents["755"]!==false){window.ezgconsent=true;(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;}
+if(window.__ezconsent){__ezconsent.setEzoicConsentSettings(ezConsentCategories);}
+__tcfapi("removeEventListener",2,function(success){return null;},tcdata.listenerId);if(!(tcdata.purpose.consents["1"]===true&&_ezAllowed(tcdata,"2")&&_ezAllowed(tcdata,"3")&&_ezAllowed(tcdata,"4"))){if(typeof __ez=="object"&&typeof __ez.bit=="object"&&typeof window["_ezaq"]=="object"&&typeof window["_ezaq"]["page_view_id"]=="string"){__ez.bit.Add(window["_ezaq"]["page_view_id"],[new __ezDotData("non_personalized_ads",true),]);}}}});}else{_setAllEzConsentTrue();window._emitEzConsentEvent();}})(window,document);</script></body></html>
