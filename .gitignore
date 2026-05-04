@@ -17,7 +17,7 @@ __pycache__/
 .eggs/
 dist/
 build/
-
+GEO_*
 # Virtual environments
 venv/
 .venv/
@@ -49,3 +49,4 @@ credentials.json
 # OS files
 .DS_Store
 Thumbs.db
+GEO_Agent_204_with_queries.parquet
