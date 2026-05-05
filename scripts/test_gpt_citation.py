@@ -39,6 +39,7 @@ CONCURRENCY = 32
 NUM_COMPETITORS = 10
 SAMPLE_PATH = Path("sample_50.parquet")
 OUTPUT_PATH = Path("outputs/gpt5mini_citation_results.json")
+PAGE_MANIFEST_PATH = Path("/private/tmp/agentgeo-gh-pages/manifest.json")
 RUN_OUTPUT_DIR = OUTPUT_PATH.with_suffix("")
 CHECKPOINT_PATH = RUN_OUTPUT_DIR / "checkpoint.json"
 JSONL_PATH = RUN_OUTPUT_DIR / "records.jsonl"
@@ -203,6 +204,11 @@ def query_page_url(doc_id: str, query_index: int, page_name: str) -> str:
     return f"{BASE_URL}/{doc_id}/query_{query_index}/{page_name}"
 
 
+def manifest_page_url(path: str) -> str:
+    """Build a published URL from a gh-pages manifest path."""
+    return f"{BASE_URL}/{path.lstrip('/')}"
+
+
 def valid_test_queries(row: pd.Series) -> list[str]:
     """Return parquet queries in their stored order."""
     per_query = row.get("agentgeo_baseline_test_per_query")
@@ -249,6 +255,15 @@ def configure_output_paths(output_path: Path) -> None:
     PROBE_HITS_PATH = RUN_OUTPUT_DIR / "probe_original_hits.json"
 
 
+def load_page_manifest(path: Path) -> dict[str, list[dict]]:
+    """Load gh-pages manifest entries grouped by doc_id, preserving manifest order."""
+    entries = json.loads(path.read_text(encoding="utf-8"))
+    grouped: dict[str, list[dict]] = {}
+    for entry in entries:
+        grouped.setdefault(entry["doc_id"], []).append(entry)
+    return grouped
+
+
 def load_cases_from_sample(
     sample_path: Path,
     doc_start: int,
@@ -257,6 +272,7 @@ def load_cases_from_sample(
     num_competitors: int,
     query_start: int = 1,
     doc_indices: list[int] | None = None,
+    page_manifest_path: Path | None = None,
 ) -> list[dict]:
     """
     Build citation-test cases from sample_50.
@@ -279,9 +295,46 @@ def load_cases_from_sample(
             )
         ]
 
+    manifest_by_doc = (
+        load_page_manifest(page_manifest_path)
+        if page_manifest_path and page_manifest_path.exists()
+        else None
+    )
     cases = []
     for doc_position, row in selected_items:
         doc_id = row["doc_id"]
+        if manifest_by_doc is not None:
+            manifest_entries = [
+                entry for entry in manifest_by_doc.get(doc_id, [])
+                if int(entry.get("query_index", 0)) >= query_start
+            ]
+            if queries_per_doc > 0:
+                manifest_entries = manifest_entries[:queries_per_doc]
+            for entry in manifest_entries:
+                query_offset = int(entry["query_index"])
+                query = entry["query"]
+                competitor_urls = [
+                    manifest_page_url(comp["path"])
+                    for comp in entry.get("competitors", [])[:num_competitors]
+                    if comp.get("path")
+                ]
+                cases.append({
+                    "doc_position": doc_position,
+                    "doc_id": doc_id,
+                    "doc_url": entry.get("doc_url") or row.get("url", ""),
+                    "query": query,
+                    "query_index": query_offset,
+                    "manifest_query_index": query_offset,
+                    "manifest_path": str(page_manifest_path),
+                    "original_url": manifest_page_url(entry["original_path"]),
+                    "optimized_url": manifest_page_url(entry["optimized_path"]),
+                    "competitor_urls": competitor_urls,
+                    "competitors_from_manifest": entry.get("competitors", []),
+                    "baseline_citation": entry.get("baseline_citation_rate"),
+                    "optimized_citation": entry.get("optimized_citation_rate"),
+                })
+            continue
+
         query_items = [
             (query_index, query)
             for query_index, query in enumerate(valid_test_queries(row), start=1)
@@ -1171,6 +1224,12 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--model", default=MODEL)
     parser.add_argument("--sample-path", type=Path, default=SAMPLE_PATH)
+    parser.add_argument(
+        "--page-manifest-path",
+        type=Path,
+        default=PAGE_MANIFEST_PATH,
+        help="gh-pages manifest.json to use for query order and page paths. Use empty string to disable.",
+    )
     parser.add_argument("--doc-start", type=int, default=10, help="1-based inclusive doc start")
     parser.add_argument("--doc-end", type=int, default=15, help="1-based inclusive doc end")
     parser.add_argument(
@@ -1270,6 +1329,7 @@ async def main():
     NUM_COMPETITORS = args.num_competitors
     configure_output_paths(args.output_path)
     probe_output_path = args.probe_output_path or PROBE_HITS_PATH
+    page_manifest_path = args.page_manifest_path if str(args.page_manifest_path) else None
 
     doc_indices = parse_doc_indices(args.doc_indices) if args.doc_indices else None
 
@@ -1284,6 +1344,7 @@ async def main():
             num_competitors=args.num_competitors,
             query_start=args.query_start,
             doc_indices=doc_indices,
+            page_manifest_path=page_manifest_path,
         )
     case_source_orders = build_case_source_orders(
         cases,
@@ -1302,6 +1363,10 @@ async def main():
         f"{args.queries_per_doc} queries/doc, "
         f"{args.num_competitors} competitors/query)"
     )
+    if page_manifest_path and page_manifest_path.exists():
+        print(f"Page manifest: {page_manifest_path}")
+    elif page_manifest_path:
+        print(f"Page manifest not found, falling back to generated paths: {page_manifest_path}")
     print(f"Mode: {args.mode}")
     print(f"Model: {MODEL}, Concurrency: {args.concurrency}")
     print(f"Mode: URL browsing via web_search_preview (Responses API)")
