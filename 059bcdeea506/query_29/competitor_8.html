@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name=”robots” content=”noindex,nofollow”>
+    <meta name="theme-color" content="#f8f7f7">
+    
+    <link rel="canonical" href="https://www.agora.io/en/blog/build-an-augmented-reality-remote-assistance-app-in-android/">
+    <title>How To: Build an Augmented Reality Remote Assistance App in Android | ChatNoir Web Cache</title>
+    
+    
+<link rel="icon" href="/static/ui/img/chatnoir-icon%4016x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="/static/ui/img/chatnoir-icon%4032x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/static/ui/img/chatnoir-icon%4064x64.png" sizes="64x64" type="image/png">
+<link rel="icon" href="/static/ui/img/chatnoir-icon%4096x96.png" sizes="96x96" type="image/png">
+<link rel="icon" href="/static/ui/img/chatnoir-icon%40128x128.png" sizes="128x128" type="image/png">
+<link rel="icon" href="/static/ui/img/chatnoir-icon%40180x180.png" sizes="180x180" type="image/png">
+<link rel="icon" href="/static/ui/img/chatnoir-icon%40256x256.png" sizes="256x256" type="image/png">
+<link rel="icon" href="/static/ui/img/chatnoir-icon%40512x512.png" sizes="512x512" type="image/png">
+
+<link rel="apple-touch-icon" sizes="76x76" href="/static/ui/img/chatnoir-icon%4076x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/static/ui/img/chatnoir-icon%40120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/static/ui/img/chatnoir-icon%40152x152.png">
+<link rel="apple-touch-icon" sizes="167x167" href="/static/ui/img/chatnoir-icon%40167x167.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/ui/img/chatnoir-icon%40180x180.png">
+
+    <link rel="stylesheet" href="/static/ui/assets/index-DDYq1Xpf.css">
+</head>
+<body class="text-gray-950/92">
+    <div class="chatnoir-header bg-gray-100 flex flex-row flex-shrink-0 py-5 px-4 border-b-1 border-b-gray-200">
+        <a href="https://www.chatnoir.eu/" class="flex-shrink-0">
+        <img src="/static/ui/img/chatnoir-icon.svg" width="58" height="58" alt="" aria-hidden="true" class="flex-shrink-0 mr-2 md:mr-3 w-[48px] md:w-[58px]">
+        </a>
+        <div>
+            <div>This is ChatNoir's cached version of
+                
+                    <a href="https://www.agora.io/en/blog/build-an-augmented-reality-remote-assistance-app-in-android/" rel="nofollow" class="break-all">https://www.agora.io/en/blog/build-an-augmented-reality-remote-assistance-app-in-android/</a>
+                
+            </div>
+            <div class="text-sm mt-3 md:mt-1">
+                <dl class="md:text-xs">
+                    <dt class="font-bold inline break-after-avoid">Index:</dt>
+                    <dd class="ml-4 md:inline md:ml-[.5ex] md:mr-4">ClueWeb22</dd>
+
+                    <dt class="font-bold inline break-after-avoid">Document ID:</dt>
+                    <dd class="break-all ml-4 md:inline md:ml-[.5ex] md:mr-4">xW--oXhpVJ2OKv8XSWUmlA</dd>
+                    
+                        <dt class="font-bold inline break-after-avoid">TREC ID:</dt>
+                        <dd class="break-all ml-4 md:inline md:ml-[.5ex] md:mr-4">clueweb22-en0039-05-19010</dd>
+                    
+                    
+                        <dt class="font-bold inline break-after-avoid">Crawl Date:</dt>
+                        <dd class="ml-4 md:inline md:ml-[.5ex] md:mr-4">Aug 27, 2022</dd>
+                    
+                </dl>
+                
+                    <div class="mt-3 flex flex-row space-x-4">
+                        
+                            <a href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;uuid=xW--oXhpVJ2OKv8XSWUmlA"
+                               aria-current="page" class="text-current font-bold cursor-default no-underline" rel="nofollow">Full HTML</a>
+                        
+                        
+                            <a href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;uuid=xW--oXhpVJ2OKv8XSWUmlA&amp;minimal"
+                                 rel="nofollow">Minimal HTML</a>
+                        
+
+                        <a href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;uuid=xW--oXhpVJ2OKv8XSWUmlA&amp;plain"
+                             rel="nofollow">Plain Text</a>
+
+                         <a href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;uuid=xW--oXhpVJ2OKv8XSWUmlA&amp;raw" rel="nofollow" target="_blank">Original
+                             
+                                 HTML
+                             </a>
+
+                        
+                            <a href="https://www.agora.io/en/blog/build-an-augmented-reality-remote-assistance-app-in-android/" rel="nofollow" target="_blank">Current Website (external)</a>
+                        
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    
+        <div class="chatnoir-cache-html relative">
+            <template shadowrootmode="closed"><html data-dcnode-id="1" lang="en-US"><head data-dcnode-id="2027"><meta name="robots" content="noindex, nofollow"><meta charset="utf-8"></head><body class="post-template-default single single-post postid-21971 single-format-standard wp-embed-responsive" data-dcnode-id="2"><span data-dcnode-id="2154" instrument_node="">
+</span><meta charset="utf-8" data-dcnode-id="2153"><span data-dcnode-id="2152" instrument_node="">
+</span><meta content="width=device-width, initial-scale=1" data-dcnode-id="2151" name="viewport"><span data-dcnode-id="2150" instrument_node="">
+</span><meta content="max-image-preview:large, index, follow, max-snippet:-1, max-video-preview:-1" data-dcnode-id="2149" name="robots"><span data-dcnode-id="2148" instrument_node="">
+</span><span data-dcnode-id="2146" instrument_node="">
+</span><title data-dcnode-id="2144">How To: Build an Augmented Reality Remote Assistance App in Android</title><span data-dcnode-id="2143" instrument_node="">
+</span><meta content="Learn how to build an AR-enabled remote assistance app for Android that incorporates interactive video chat to improve the remote assistance experience." data-dcnode-id="2142" name="description"><span data-dcnode-id="2141" instrument_node="">
+</span><link data-dcnode-id="2140" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/blog/build-an-augmented-reality-remote-assistance-app-in-android/&amp;raw" rel="canonical"><span data-dcnode-id="2139" instrument_node="">
+</span><meta content="en_US" data-dcnode-id="2138" property="og:locale"><span data-dcnode-id="2137" instrument_node="">
+</span><meta content="article" data-dcnode-id="2136" property="og:type"><span data-dcnode-id="2135" instrument_node="">
+</span><meta content="How To: Build an Augmented Reality Remote Assistance App in Android" data-dcnode-id="2134" property="og:title"><span data-dcnode-id="2133" instrument_node="">
+</span><meta content="Learn how to build an AR-enabled remote assistance app for Android that incorporates interactive video chat to improve the remote assistance experience." data-dcnode-id="2132" property="og:description"><span data-dcnode-id="2131" instrument_node="">
+</span><meta content="https://www.agora.io/en/blog/build-an-augmented-reality-remote-assistance-app-in-android/" data-dcnode-id="2130" property="og:url"><span data-dcnode-id="2129" instrument_node="">
+</span><meta content="Agora" data-dcnode-id="2128" property="og:site_name"><span data-dcnode-id="2127" instrument_node="">
+</span><meta content="2020-03-26T07:00:39+00:00" data-dcnode-id="2126" property="article:published_time"><span data-dcnode-id="2125" instrument_node="">
+</span><meta content="2022-01-26T20:03:07+00:00" data-dcnode-id="2124" property="article:modified_time"><span data-dcnode-id="2123" instrument_node="">
+</span><meta content="summary_large_image" data-dcnode-id="2122" name="twitter:card"><span data-dcnode-id="2121" instrument_node="">
+</span><meta content="Learn how to build an AR-enabled remote assistance app for Android that incorporates interactive video chat to improve the remote assistance experience." data-dcnode-id="2120" name="twitter:description"><span data-dcnode-id="2119" instrument_node="">
+</span><meta content="Written by" data-dcnode-id="2118" name="twitter:label1"><span data-dcnode-id="2117" instrument_node="">
+</span><meta content="Shaocheng Yang" data-dcnode-id="2116" name="twitter:data1"><span data-dcnode-id="2115" instrument_node="">
+</span><meta content="Est. reading time" data-dcnode-id="2114" name="twitter:label2"><span data-dcnode-id="2113" instrument_node="">
+</span><meta content="17 minutes" data-dcnode-id="2112" name="twitter:data2"><span data-dcnode-id="2111" instrument_node="">
+</span><span data-dcnode-id="2106" instrument_node="">
+</span><span data-dcnode-id="2104" instrument_node="">
+</span><link data-dcnode-id="2103" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/&amp;raw" rel="dns-prefetch"><span data-dcnode-id="2102" instrument_node="">
+</span><link data-dcnode-id="2101" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//use.typekit.net/&amp;raw" rel="dns-prefetch"><span data-dcnode-id="2100" instrument_node="">
+</span><link data-dcnode-id="2099" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//s.w.org/&amp;raw" rel="dns-prefetch"><span data-dcnode-id="2098" instrument_node="">
+</span><link data-dcnode-id="2097" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/feed/&amp;raw" rel="alternate" title="Agora » Feed" type="application/rss+xml"><span data-dcnode-id="2096" instrument_node="">
+</span><link data-dcnode-id="2095" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/comments/feed/&amp;raw" rel="alternate" title="Agora » Comments Feed" type="application/rss+xml"><span data-dcnode-id="2094" instrument_node="">
+</span><link data-dcnode-id="2093" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/blog/build-an-augmented-reality-remote-assistance-app-in-android/feed/&amp;raw" rel="alternate" title="Agora » How To: Build an Augmented Reality Remote Assistance App in Android Comments Feed" type="application/rss+xml"><span data-dcnode-id="2092" instrument_node="">
+</span><span data-dcnode-id="2088" instrument_node="">
+</span><span data-dcnode-id="2085" instrument_node="">
+</span><link data-dcnode-id="2084" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-includes/css/dist/block-library/style.min.css%3Fver%3D5.9.2&amp;raw" id="wp-block-library-css" media="all" rel="stylesheet"><span data-dcnode-id="2083" instrument_node="">
+</span><link data-dcnode-id="2082" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/plugins/announcement-bar-master/css/announcement-bar.css%3Fver%3D2.0.0&amp;raw" id="pb-announcement-bar-style-css" media="all" rel="stylesheet"><span data-dcnode-id="2081" instrument_node="">
+</span><span data-dcnode-id="2078" instrument_node="">
+</span><link data-dcnode-id="2077" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/plugins/accordion-blocks/build/index.css%3Fver%3D1.5.0&amp;raw" id="pb-accordion-blocks-style-css" media="all" rel="stylesheet"><span data-dcnode-id="2076" instrument_node="">
+</span><link data-dcnode-id="2075" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/plugins/github-embed/css/github-embed.css%3Fver%3D5.9.2&amp;raw" id="github-embed-css" media="all" rel="stylesheet"><span data-dcnode-id="2074" instrument_node="">
+</span><link data-dcnode-id="2073" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//use.typekit.net/vck3geh.css%3Fver%3D1.0.0&amp;raw" id="pb-fonts-css" media="all" rel="stylesheet"><span data-dcnode-id="2072" instrument_node="">
+</span><link data-dcnode-id="2071" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/themes/agora-mar-24-2022-b/style-prism.css%3Fver%3D1.20.0&amp;raw" id="pb-prism-css-css" media="all" rel="stylesheet"><span data-dcnode-id="2070" instrument_node="">
+</span><link data-dcnode-id="2069" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/themes/agora-mar-24-2022-b/style.css%3Fver%3D1.5.0&amp;raw" id="pb-style-css" media="all" rel="stylesheet"><span data-dcnode-id="2068" instrument_node="">
+</span><span data-dcnode-id="2066" instrument_node="">
+</span><span data-dcnode-id="2064" instrument_node="">
+</span><link data-dcnode-id="2063" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-json/&amp;raw" rel="https://api.w.org/"><link data-dcnode-id="2062" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-json/wp/v2/posts/21971&amp;raw" rel="alternate" type="application/json"><link data-dcnode-id="2061" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/xmlrpc.php%3Frsd&amp;raw" rel="EditURI" title="RSD" type="application/rsd+xml"><span data-dcnode-id="2060" instrument_node="">
+</span><link data-dcnode-id="2059" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-includes/wlwmanifest.xml&amp;raw" rel="wlwmanifest" type="application/wlwmanifest+xml"><span data-dcnode-id="2058" instrument_node="">
+</span><link data-dcnode-id="2057" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/%3Fp%3D21971&amp;raw" rel="shortlink"><span data-dcnode-id="2056" instrument_node="">
+</span><link data-dcnode-id="2055" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-json/oembed/1.0/embed%3Furl%3Dhttps%253A%252F%252Fwww.agora.io%252Fen%252Fblog%252Fbuild-an-augmented-reality-remote-assistance-app-in-android%252F&amp;raw" rel="alternate" type="application/json+oembed"><span data-dcnode-id="2054" instrument_node="">
+</span><link data-dcnode-id="2053" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-json/oembed/1.0/embed%3Furl%3Dhttps%253A%252F%252Fwww.agora.io%252Fen%252Fblog%252Fbuild-an-augmented-reality-remote-assistance-app-in-android%252F%26format%3Dxml&amp;raw" rel="alternate" type="text/xml+oembed"><span data-dcnode-id="2052" instrument_node="">
+</span><span data-dcnode-id="2050" instrument_node="">
+</span><span data-dcnode-id="2047" instrument_node="">
+</span><span data-dcnode-id="2045" instrument_node="">
+</span><span data-dcnode-id="2043" instrument_node="">
+</span><span data-dcnode-id="2040" instrument_node="">
+</span><span data-dcnode-id="2038" instrument_node="">
+</span><link data-dcnode-id="2037" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2021/03/favis.png&amp;raw" rel="icon" sizes="32x32"><span data-dcnode-id="2036" instrument_node="">
+</span><link data-dcnode-id="2035" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2021/03/favis.png&amp;raw" rel="icon" sizes="192x192"><span data-dcnode-id="2034" instrument_node="">
+</span><link data-dcnode-id="2033" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2021/03/favis.png&amp;raw" rel="apple-touch-icon"><span data-dcnode-id="2032" instrument_node="">
+</span><meta content="https://www.agora.io/en/wp-content/uploads/2021/03/favis.png" data-dcnode-id="2031" name="msapplication-TileImage"><span data-dcnode-id="2030" instrument_node="">
+</span><span data-dcnode-id="2026" instrument_node="">
+</span><span data-dcnode-id="2025" instrument_node="">
+</span><span data-dcnode-id="2023" instrument_node="">
+</span><noscript data-dcnode-id="2021"><span data-dcnode-id="2022" instrument_node="">&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKTWGML"
+height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</span></noscript><span data-dcnode-id="2020" instrument_node="">
+</span><span data-dcnode-id="2018" instrument_node="">
+</span><svg data-dcnode-id="2008" focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg"><defs data-dcnode-id="2009"><filter data-dcnode-id="2010" id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" data-dcnode-id="2017" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB" data-dcnode-id="2012"><feFuncR data-dcnode-id="2016" tableValues="0 0.498039215686" type="table"></feFuncR><feFuncG data-dcnode-id="2015" tableValues="0 0.498039215686" type="table"></feFuncG><feFuncB data-dcnode-id="2014" tableValues="0 0.498039215686" type="table"></feFuncB><feFuncA data-dcnode-id="2013" tableValues="1 1" type="table"></feFuncA></feComponentTransfer><feComposite data-dcnode-id="2011" in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg data-dcnode-id="1998" focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg"><defs data-dcnode-id="1999"><filter data-dcnode-id="2000" id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" data-dcnode-id="2007" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB" data-dcnode-id="2002"><feFuncR data-dcnode-id="2006" tableValues="0 1" type="table"></feFuncR><feFuncG data-dcnode-id="2005" tableValues="0 1" type="table"></feFuncG><feFuncB data-dcnode-id="2004" tableValues="0 1" type="table"></feFuncB><feFuncA data-dcnode-id="2003" tableValues="1 1" type="table"></feFuncA></feComponentTransfer><feComposite data-dcnode-id="2001" in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg data-dcnode-id="1988" focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg"><defs data-dcnode-id="1989"><filter data-dcnode-id="1990" id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" data-dcnode-id="1997" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB" data-dcnode-id="1992"><feFuncR data-dcnode-id="1996" tableValues="0.549019607843 0.988235294118" type="table"></feFuncR><feFuncG data-dcnode-id="1995" tableValues="0 1" type="table"></feFuncG><feFuncB data-dcnode-id="1994" tableValues="0.717647058824 0.254901960784" type="table"></feFuncB><feFuncA data-dcnode-id="1993" tableValues="1 1" type="table"></feFuncA></feComponentTransfer><feComposite data-dcnode-id="1991" in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg data-dcnode-id="1978" focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg"><defs data-dcnode-id="1979"><filter data-dcnode-id="1980" id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" data-dcnode-id="1987" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB" data-dcnode-id="1982"><feFuncR data-dcnode-id="1986" tableValues="0 1" type="table"></feFuncR><feFuncG data-dcnode-id="1985" tableValues="0 0.278431372549" type="table"></feFuncG><feFuncB data-dcnode-id="1984" tableValues="0.592156862745 0.278431372549" type="table"></feFuncB><feFuncA data-dcnode-id="1983" tableValues="1 1" type="table"></feFuncA></feComponentTransfer><feComposite data-dcnode-id="1981" in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg data-dcnode-id="1968" focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg"><defs data-dcnode-id="1969"><filter data-dcnode-id="1970" id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" data-dcnode-id="1977" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB" data-dcnode-id="1972"><feFuncR data-dcnode-id="1976" tableValues="0 0" type="table"></feFuncR><feFuncG data-dcnode-id="1975" tableValues="0 0.647058823529" type="table"></feFuncG><feFuncB data-dcnode-id="1974" tableValues="0 1" type="table"></feFuncB><feFuncA data-dcnode-id="1973" tableValues="1 1" type="table"></feFuncA></feComponentTransfer><feComposite data-dcnode-id="1971" in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg data-dcnode-id="1958" focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg"><defs data-dcnode-id="1959"><filter data-dcnode-id="1960" id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" data-dcnode-id="1967" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB" data-dcnode-id="1962"><feFuncR data-dcnode-id="1966" tableValues="0.780392156863 1" type="table"></feFuncR><feFuncG data-dcnode-id="1965" tableValues="0 0.949019607843" type="table"></feFuncG><feFuncB data-dcnode-id="1964" tableValues="0.352941176471 0.470588235294" type="table"></feFuncB><feFuncA data-dcnode-id="1963" tableValues="1 1" type="table"></feFuncA></feComponentTransfer><feComposite data-dcnode-id="1961" in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg data-dcnode-id="1948" focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg"><defs data-dcnode-id="1949"><filter data-dcnode-id="1950" id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" data-dcnode-id="1957" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB" data-dcnode-id="1952"><feFuncR data-dcnode-id="1956" tableValues="0.650980392157 0.403921568627" type="table"></feFuncR><feFuncG data-dcnode-id="1955" tableValues="0 1" type="table"></feFuncG><feFuncB data-dcnode-id="1954" tableValues="0.447058823529 0.4" type="table"></feFuncB><feFuncA data-dcnode-id="1953" tableValues="1 1" type="table"></feFuncA></feComponentTransfer><feComposite data-dcnode-id="1951" in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg data-dcnode-id="1938" focusable="false" height="0" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" viewBox="0 0 0 0" width="0" xmlns="http://www.w3.org/2000/svg"><defs data-dcnode-id="1939"><filter data-dcnode-id="1940" id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" data-dcnode-id="1947" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB" data-dcnode-id="1942"><feFuncR data-dcnode-id="1946" tableValues="0.0980392156863 1" type="table"></feFuncR><feFuncG data-dcnode-id="1945" tableValues="0 0.662745098039" type="table"></feFuncG><feFuncB data-dcnode-id="1944" tableValues="0.847058823529 0.419607843137" type="table"></feFuncB><feFuncA data-dcnode-id="1943" tableValues="1 1" type="table"></feFuncA></feComponentTransfer><feComposite data-dcnode-id="1941" in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><span data-dcnode-id="1937" instrument_node=""> </span><header class="c-site-header" data-dcnode-id="1099"><span data-dcnode-id="1936" instrument_node="">
+</span><a class="u-sr-only u-skip-link" data-dcnode-id="1934" href="#content"><span data-dcnode-id="1935" instrument_node="">Skip to content</span></a><span data-dcnode-id="1933" instrument_node="">
+</span><div class="c-super-header" data-dcnode-id="1915"><span data-dcnode-id="1932" instrument_node="">
+</span><nav aria-label="Secondary Links" class="o-container c-super-header__content" data-dcnode-id="1916"><span data-dcnode-id="1931" instrument_node="">
+</span><ul class="o-list-bare c-header-links" data-dcnode-id="1918" id="header-links"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36341" data-dcnode-id="1926" id="menu-item-36341"><a data-dcnode-id="1927" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/customer-support/"><div class="menu-item-content" data-dcnode-id="1928"><div class="menu-item-title" data-dcnode-id="1929"><span data-dcnode-id="1930" instrument_node="">Support</span></div></div></a></li><span data-dcnode-id="1925" instrument_node="">
+</span><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36340" data-dcnode-id="1920" id="menu-item-36340"><a data-dcnode-id="1921" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//console.agora.io/"><div class="menu-item-content" data-dcnode-id="1922"><div class="menu-item-title" data-dcnode-id="1923"><span data-dcnode-id="1924" instrument_node="">Login</span></div></div></a></li><span data-dcnode-id="1919" instrument_node="">
+</span></ul><span data-dcnode-id="1917" instrument_node=""> </span></nav></div><span data-dcnode-id="1914" instrument_node="">
+</span><div class="c-site-navigation" data-dcnode-id="1125" id="js-sticky-header"><span data-dcnode-id="1913" instrument_node="">
+</span><div class="o-container c-site-navigation__content" data-dcnode-id="1127" id="js-site-navigation"><span data-dcnode-id="1912" instrument_node="">
+</span><a class="c-site-header__logo" data-dcnode-id="1908" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/" rel="home"><span data-dcnode-id="1911" instrument_node="">
+</span><img alt="Agora" class="c-site-header__logo-img" data-dcnode-id="1910" height="42" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/themes/agora-mar-24-2022-b/images/agora-logo.svg&amp;raw" width="120"><span data-dcnode-id="1909" instrument_node="">
+</span></a><span data-dcnode-id="1907" instrument_node="">
+</span><nav aria-label="Primary Menu" class="c-primary-nav" data-dcnode-id="1129"><span data-dcnode-id="1906" instrument_node="">
+</span><ul class="o-list-bare c-primary-nav__list" data-dcnode-id="1506" id="header-navigation"><span data-dcnode-id="1905" instrument_node="">
+</span><li class="c-primary-nav__item has-submenu hide-nav-sm" data-dcnode-id="1748"><span data-dcnode-id="1904" instrument_node="">
+</span><button class="o-button-bare c-primary-nav__link js-dropdown-toggle" data-dcnode-id="1902"><span data-dcnode-id="1903" instrument_node="">
+			Products		</span></button><span data-dcnode-id="1901" instrument_node="">
+</span><div class="c-dropdown js-dropdown-panel" data-dcnode-id="1750" style="left: -186px;"><span data-dcnode-id="1900" instrument_node="">
+</span><div class="c-dropdown__arrow" data-dcnode-id="1899" style="left: 212px;"></div><span data-dcnode-id="1898" instrument_node="">
+</span><div class="c-primary-nav__submenu has-3-columns" data-dcnode-id="1752"><span data-dcnode-id="1897" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1847"><h1 class="c-primary-nav__submenu__title" data-dcnode-id="1895"><span data-dcnode-id="1896" instrument_node="">Core Products</span></h1><p class="c-primary-nav__submenu__description" data-dcnode-id="1893"><span data-dcnode-id="1894" instrument_node="">Everything you need to build an interactive, live chat or streaming app.</span></p><span data-dcnode-id="1892" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1882" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/voice-call/"><span data-dcnode-id="1891" instrument_node="">
+</span><div class="c-primary-nav__menu-item__icon" data-dcnode-id="1887"><span data-dcnode-id="1890" instrument_node="">
+</span><img alt="Voice call icon" data-dcnode-id="1889" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2021/09/Voice.svg&amp;raw"><span data-dcnode-id="1888" instrument_node="">
+</span></div><span data-dcnode-id="1886" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1884"><span data-dcnode-id="1885" instrument_node="">
+			Voice Calling		</span></div><span data-dcnode-id="1883" instrument_node="">
+</span></a><span data-dcnode-id="1881" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1871" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/video-call/"><span data-dcnode-id="1880" instrument_node="">
+</span><div class="c-primary-nav__menu-item__icon" data-dcnode-id="1876"><span data-dcnode-id="1879" instrument_node="">
+</span><img alt="Video call icon" data-dcnode-id="1878" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2021/09/Video.svg&amp;raw"><span data-dcnode-id="1877" instrument_node="">
+</span></div><span data-dcnode-id="1875" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1873"><span data-dcnode-id="1874" instrument_node="">
+			Video Calling		</span></div><span data-dcnode-id="1872" instrument_node="">
+</span></a><span data-dcnode-id="1870" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1860" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/interactive-live-streaming/"><span data-dcnode-id="1869" instrument_node="">
+</span><div class="c-primary-nav__menu-item__icon" data-dcnode-id="1865"><span data-dcnode-id="1868" instrument_node="">
+</span><img alt="Interactive live steaming icon" data-dcnode-id="1867" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2021/09/interactive-live-streaming.svg&amp;raw"><span data-dcnode-id="1866" instrument_node="">
+</span></div><span data-dcnode-id="1864" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1862"><span data-dcnode-id="1863" instrument_node="">
+			Interactive Live Streaming		</span></div><span data-dcnode-id="1861" instrument_node="">
+</span></a><span data-dcnode-id="1859" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1849" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/real-time-messaging/"><span data-dcnode-id="1858" instrument_node="">
+</span><div class="c-primary-nav__menu-item__icon" data-dcnode-id="1854"><span data-dcnode-id="1857" instrument_node="">
+</span><img alt="Real-time Messaging" data-dcnode-id="1856" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2021/09/Real-Time-Messaging.svg&amp;raw"><span data-dcnode-id="1855" instrument_node="">
+</span></div><span data-dcnode-id="1853" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1851"><span data-dcnode-id="1852" instrument_node="">
+			Real-Time Messaging		</span></div><span data-dcnode-id="1850" instrument_node="">
+</span></a><span data-dcnode-id="1848" instrument_node="">
+</span></section><span data-dcnode-id="1846" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1805"><h1 class="c-primary-nav__submenu__title" data-dcnode-id="1844"><span data-dcnode-id="1845" instrument_node="">Extensions</span></h1><p class="c-primary-nav__submenu__description" data-dcnode-id="1842"><span data-dcnode-id="1843" instrument_node="">Easily add features to your app or build extensions for resell.</span></p><span data-dcnode-id="1841" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1836" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/recording/"><span data-dcnode-id="1840" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1838"><span data-dcnode-id="1839" instrument_node="">
+			Recording		</span></div><span data-dcnode-id="1837" instrument_node="">
+</span></a><span data-dcnode-id="1835" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1830" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/agora-analytics/"><span data-dcnode-id="1834" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1832"><span data-dcnode-id="1833" instrument_node="">
+			Agora Analytics		</span></div><span data-dcnode-id="1831" instrument_node="">
+</span></a><span data-dcnode-id="1829" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1824" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/interactive-whiteboard/"><span data-dcnode-id="1828" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1826"><span data-dcnode-id="1827" instrument_node="">
+			Interactive Whiteboard		</span></div><span data-dcnode-id="1825" instrument_node="">
+</span></a><span data-dcnode-id="1823" instrument_node="">
+</span><div class="c-primary-nav__submenu__card" data-dcnode-id="1807"><div class="c-primary-nav__submenu__card__title" data-dcnode-id="1821"><span data-dcnode-id="1822" instrument_node="">Extensions Marketplace</span></div><span data-dcnode-id="1820" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1815" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/agora-extensions-marketplace/"><span data-dcnode-id="1819" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1817"><span data-dcnode-id="1818" instrument_node="">
+			Explore Extensions Gallery		</span></div><span data-dcnode-id="1816" instrument_node="">
+</span></a><span data-dcnode-id="1814" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1809" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/extensions-marketplace/vendor-application/"><span data-dcnode-id="1813" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1811"><span data-dcnode-id="1812" instrument_node="">
+			Build an Extension		</span></div><span data-dcnode-id="1810" instrument_node="">
+</span></a><span data-dcnode-id="1808" instrument_node="">
+</span></div><span data-dcnode-id="1806" instrument_node="">
+</span></section><span data-dcnode-id="1804" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1765"><h1 class="c-primary-nav__submenu__title" data-dcnode-id="1802"><span data-dcnode-id="1803" instrument_node="">Tools</span></h1><p class="c-primary-nav__submenu__description" data-dcnode-id="1800"><span data-dcnode-id="1801" instrument_node="">All the flexibility and tools to get you to market quickly.</span></p><span data-dcnode-id="1799" instrument_node="">
+</span><h2 class="c-primary-nav__submenu__subtitle" data-dcnode-id="1797"><span data-dcnode-id="1798" instrument_node="">Code Libraries</span></h2><span data-dcnode-id="1796" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1791" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//docs.agora.io/en/All/downloads%3Fplatform%3DAll%2520Platforms" target="_blank"><span data-dcnode-id="1795" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1793"><span data-dcnode-id="1794" instrument_node="">
+			Download SDKs		</span></div><span data-dcnode-id="1792" instrument_node="">
+</span></a><span data-dcnode-id="1790" instrument_node="">
+</span><h2 class="c-primary-nav__submenu__subtitle" data-dcnode-id="1788"><span data-dcnode-id="1789" instrument_node="">No Code</span></h2><span data-dcnode-id="1787" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1782" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/agora-app-builder/"><span data-dcnode-id="1786" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1784"><span data-dcnode-id="1785" instrument_node="">
+			App Builder		</span></div><span data-dcnode-id="1783" instrument_node="">
+</span></a><span data-dcnode-id="1781" instrument_node="">
+</span><h2 class="c-primary-nav__submenu__subtitle" data-dcnode-id="1779"><span data-dcnode-id="1780" instrument_node="">Low Code</span></h2><span data-dcnode-id="1778" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1773" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/flexible-classroom/"><span data-dcnode-id="1777" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1775"><span data-dcnode-id="1776" instrument_node="">
+			Flexible Classroom		</span></div><span data-dcnode-id="1774" instrument_node="">
+</span></a><span data-dcnode-id="1772" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1767" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/developer-resources/start-building-low-code/"><span data-dcnode-id="1771" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1769"><span data-dcnode-id="1770" instrument_node="">
+			UIKits (Community Project)		</span></div><span data-dcnode-id="1768" instrument_node="">
+</span></a><span data-dcnode-id="1766" instrument_node="">
+</span></section><span data-dcnode-id="1764" instrument_node="">
+</span><section class="c-primary-nav__submenu__column spans-3-columns is-style-separated" data-dcnode-id="1754"><h1 class="c-primary-nav__submenu__title" data-dcnode-id="1762"><span data-dcnode-id="1763" instrument_node="">All built on the fastest, most reliable real-time network.</span></h1><span data-dcnode-id="1761" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1756" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/the-agora-platform-advantage/"><span data-dcnode-id="1760" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1758"><span data-dcnode-id="1759" instrument_node="">
+			Learn more about the Agora Advantage		</span></div><span data-dcnode-id="1757" instrument_node="">
+</span></a><span data-dcnode-id="1755" instrument_node="">
+</span></section><span data-dcnode-id="1753" instrument_node="">
+</span></div><span data-dcnode-id="1751" instrument_node="">
+</span></div><span data-dcnode-id="1749" instrument_node="">
+</span></li><span data-dcnode-id="1747" instrument_node="">
+</span><li class="c-primary-nav__item has-submenu hide-nav-sm" data-dcnode-id="1681"><span data-dcnode-id="1746" instrument_node="">
+</span><button class="o-button-bare c-primary-nav__link js-dropdown-toggle" data-dcnode-id="1744"><span data-dcnode-id="1745" instrument_node="">
+			Solutions		</span></button><span data-dcnode-id="1743" instrument_node="">
+</span><div class="c-dropdown js-dropdown-panel" data-dcnode-id="1683" style="left: -117px;"><span data-dcnode-id="1742" instrument_node="">
+</span><div class="c-dropdown__arrow" data-dcnode-id="1741" style="left: 144px;"></div><span data-dcnode-id="1740" instrument_node="">
+</span><div class="c-primary-nav__submenu has-1-columns" data-dcnode-id="1685"><span data-dcnode-id="1739" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1687"><p class="c-primary-nav__submenu__description" data-dcnode-id="1737"><span data-dcnode-id="1738" instrument_node="">Explore how interactive voice and video are transforming business and building community.</span></p><span data-dcnode-id="1736" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1731" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/education/"><span data-dcnode-id="1735" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1733"><span data-dcnode-id="1734" instrument_node="">
+			Education		</span></div><span data-dcnode-id="1732" instrument_node="">
+</span></a><span data-dcnode-id="1730" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1725" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/future-of-work/"><span data-dcnode-id="1729" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1727"><span data-dcnode-id="1728" instrument_node="">
+			Future of Work		</span></div><span data-dcnode-id="1726" instrument_node="">
+</span></a><span data-dcnode-id="1724" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1719" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/gaming/"><span data-dcnode-id="1723" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1721"><span data-dcnode-id="1722" instrument_node="">
+			Gaming		</span></div><span data-dcnode-id="1720" instrument_node="">
+</span></a><span data-dcnode-id="1718" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1713" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/live-audio-streaming/"><span data-dcnode-id="1717" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1715"><span data-dcnode-id="1716" instrument_node="">
+			Live Audio Streaming		</span></div><span data-dcnode-id="1714" instrument_node="">
+</span></a><span data-dcnode-id="1712" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1707" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/media-and-entertainment/"><span data-dcnode-id="1711" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1709"><span data-dcnode-id="1710" instrument_node="">
+			Media &amp; Entertainment		</span></div><span data-dcnode-id="1708" instrument_node="">
+</span></a><span data-dcnode-id="1706" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1701" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/retail/"><span data-dcnode-id="1705" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1703"><span data-dcnode-id="1704" instrument_node="">
+			Retail		</span></div><span data-dcnode-id="1702" instrument_node="">
+</span></a><span data-dcnode-id="1700" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1695" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/social/"><span data-dcnode-id="1699" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1697"><span data-dcnode-id="1698" instrument_node="">
+			Social		</span></div><span data-dcnode-id="1696" instrument_node="">
+</span></a><span data-dcnode-id="1694" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1689" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/telehealth/"><span data-dcnode-id="1693" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1691"><span data-dcnode-id="1692" instrument_node="">
+			Telehealth		</span></div><span data-dcnode-id="1690" instrument_node="">
+</span></a><span data-dcnode-id="1688" instrument_node="">
+</span></section><span data-dcnode-id="1686" instrument_node="">
+</span></div><span data-dcnode-id="1684" instrument_node="">
+</span></div><span data-dcnode-id="1682" instrument_node="">
+</span></li><span data-dcnode-id="1680" instrument_node="">
+</span><li class="c-primary-nav__item has-submenu hide-nav-md hide-nav-sm" data-dcnode-id="1646"><span data-dcnode-id="1679" instrument_node="">
+</span><button class="o-button-bare c-primary-nav__link js-dropdown-toggle" data-dcnode-id="1677"><span data-dcnode-id="1678" instrument_node="">
+			Developers		</span></button><span data-dcnode-id="1676" instrument_node="">
+</span><div class="c-dropdown js-dropdown-panel" data-dcnode-id="1648" style="left: -110px;"><span data-dcnode-id="1675" instrument_node="">
+</span><div class="c-dropdown__arrow" data-dcnode-id="1674" style="left: 144px;"></div><span data-dcnode-id="1673" instrument_node="">
+</span><div class="c-primary-nav__submenu has-1-columns" data-dcnode-id="1650"><span data-dcnode-id="1672" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1652"><span data-dcnode-id="1671" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1666" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/developer-resources/"><span data-dcnode-id="1670" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1668"><span data-dcnode-id="1669" instrument_node="">
+			Developer Resources		</span></div><span data-dcnode-id="1667" instrument_node="">
+</span></a><span data-dcnode-id="1665" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1660" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//docs.agora.io/en" target="_blank"><span data-dcnode-id="1664" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1662"><span data-dcnode-id="1663" instrument_node="">
+			Documentation		</span></div><span data-dcnode-id="1661" instrument_node="">
+</span></a><span data-dcnode-id="1659" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1654" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/category/developer/"><span data-dcnode-id="1658" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1656"><span data-dcnode-id="1657" instrument_node="">
+			Developer Blog		</span></div><span data-dcnode-id="1655" instrument_node="">
+</span></a><span data-dcnode-id="1653" instrument_node="">
+</span></section><span data-dcnode-id="1651" instrument_node="">
+</span></div><span data-dcnode-id="1649" instrument_node="">
+</span></div><span data-dcnode-id="1647" instrument_node="">
+</span></li><span data-dcnode-id="1645" instrument_node="">
+</span><li class="c-primary-nav__item has-submenu hide-nav-sm hide-nav-md hide-nav-lg" data-dcnode-id="1617"><span data-dcnode-id="1644" instrument_node="">
+</span><button class="o-button-bare c-primary-nav__link js-dropdown-toggle" data-dcnode-id="1642"><span data-dcnode-id="1643" instrument_node="">
+			Partners		</span></button><span data-dcnode-id="1641" instrument_node="">
+</span><div class="c-dropdown js-dropdown-panel" data-dcnode-id="1619" style="visibility: none;"><span data-dcnode-id="1640" instrument_node="">
+</span><div class="c-dropdown__arrow" data-dcnode-id="1639" style="left: -36px;"></div><span data-dcnode-id="1638" instrument_node="">
+</span><div class="c-primary-nav__submenu has-1-columns" data-dcnode-id="1621"><span data-dcnode-id="1637" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1623"><span data-dcnode-id="1636" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1631" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/partners/partner-gallery/"><span data-dcnode-id="1635" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1633"><span data-dcnode-id="1634" instrument_node="">
+			Partner Gallery		</span></div><span data-dcnode-id="1632" instrument_node="">
+</span></a><span data-dcnode-id="1630" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1625" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/become-a-partner/"><span data-dcnode-id="1629" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1627"><span data-dcnode-id="1628" instrument_node="">
+			Become a Partner		</span></div><span data-dcnode-id="1626" instrument_node="">
+</span></a><span data-dcnode-id="1624" instrument_node="">
+</span></section><span data-dcnode-id="1622" instrument_node="">
+</span></div><span data-dcnode-id="1620" instrument_node="">
+</span></div><span data-dcnode-id="1618" instrument_node="">
+</span></li><span data-dcnode-id="1616" instrument_node="">
+</span><li class="c-primary-nav__item hide-nav-sm hide-nav-md hide-nav-lg" data-dcnode-id="1606"><span data-dcnode-id="1615" instrument_node="">
+</span><a class="c-primary-nav__link" data-dcnode-id="1613" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/success-stories/"><span data-dcnode-id="1614" instrument_node="">
+			Success Stories		</span></a><span data-dcnode-id="1612" instrument_node="">
+</span><div class="c-dropdown js-dropdown-panel" data-dcnode-id="1608" style="visibility: none;"><span data-dcnode-id="1611" instrument_node="">
+</span><div class="c-dropdown__arrow" data-dcnode-id="1610" style="left: -36px;"></div><span data-dcnode-id="1609" instrument_node="">
+</span></div><span data-dcnode-id="1607" instrument_node="">
+</span></li><span data-dcnode-id="1605" instrument_node="">
+</span><li class="c-primary-nav__item has-submenu hide-nav-sm hide-nav-md hide-nav-lg" data-dcnode-id="1559"><span data-dcnode-id="1604" instrument_node="">
+</span><button class="o-button-bare c-primary-nav__link js-dropdown-toggle" data-dcnode-id="1602"><span data-dcnode-id="1603" instrument_node="">
+			Company		</span></button><span data-dcnode-id="1601" instrument_node="">
+</span><div class="c-dropdown js-dropdown-panel" data-dcnode-id="1561" style="visibility: none;"><span data-dcnode-id="1600" instrument_node="">
+</span><div class="c-dropdown__arrow" data-dcnode-id="1599" style="left: -36px;"></div><span data-dcnode-id="1598" instrument_node="">
+</span><div class="c-primary-nav__submenu has-1-columns" data-dcnode-id="1563"><span data-dcnode-id="1597" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1565"><span data-dcnode-id="1596" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1591" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/about-us/"><span data-dcnode-id="1595" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1593"><span data-dcnode-id="1594" instrument_node="">
+			About Us		</span></div><span data-dcnode-id="1592" instrument_node="">
+</span></a><span data-dcnode-id="1590" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1585" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/blog/"><span data-dcnode-id="1589" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1587"><span data-dcnode-id="1588" instrument_node="">
+			Blog		</span></div><span data-dcnode-id="1586" instrument_node="">
+</span></a><span data-dcnode-id="1584" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1579" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/compliance/"><span data-dcnode-id="1583" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1581"><span data-dcnode-id="1582" instrument_node="">
+			Compliance &amp; Privacy		</span></div><span data-dcnode-id="1580" instrument_node="">
+</span></a><span data-dcnode-id="1578" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1573" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/events/"><span data-dcnode-id="1577" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1575"><span data-dcnode-id="1576" instrument_node="">
+			Events		</span></div><span data-dcnode-id="1574" instrument_node="">
+</span></a><span data-dcnode-id="1572" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1567" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/careers/"><span data-dcnode-id="1571" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1569"><span data-dcnode-id="1570" instrument_node="">
+			Careers		</span></div><span data-dcnode-id="1568" instrument_node="">
+</span></a><span data-dcnode-id="1566" instrument_node="">
+</span></section><span data-dcnode-id="1564" instrument_node="">
+</span></div><span data-dcnode-id="1562" instrument_node="">
+</span></div><span data-dcnode-id="1560" instrument_node="">
+</span></li><span data-dcnode-id="1558" instrument_node="">
+</span><li class="c-primary-nav__item has-submenu" data-dcnode-id="1530" style="margin-left: auto;"><span data-dcnode-id="1557" instrument_node="">
+</span><button class="o-button-bare c-primary-nav__link js-dropdown-toggle" data-dcnode-id="1555"><span data-dcnode-id="1556" instrument_node="">
+			Pricing		</span></button><span data-dcnode-id="1554" instrument_node="">
+</span><div class="c-dropdown js-dropdown-panel" data-dcnode-id="1532" style="left: -126px;"><span data-dcnode-id="1553" instrument_node="">
+</span><div class="c-dropdown__arrow" data-dcnode-id="1552" style="left: 144px;"></div><span data-dcnode-id="1551" instrument_node="">
+</span><div class="c-primary-nav__submenu has-1-columns" data-dcnode-id="1534"><span data-dcnode-id="1550" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1536"><span data-dcnode-id="1549" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1544" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/pricing/"><span data-dcnode-id="1548" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1546"><span data-dcnode-id="1547" instrument_node="">
+			Product Pricing		</span></div><span data-dcnode-id="1545" instrument_node="">
+</span></a><span data-dcnode-id="1543" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1538" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/pricing/support-plans/"><span data-dcnode-id="1542" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1540"><span data-dcnode-id="1541" instrument_node="">
+			Support Plans		</span></div><span data-dcnode-id="1539" instrument_node="">
+</span></a><span data-dcnode-id="1537" instrument_node="">
+</span></section><span data-dcnode-id="1535" instrument_node="">
+</span></div><span data-dcnode-id="1533" instrument_node="">
+</span></div><span data-dcnode-id="1531" instrument_node="">
+</span></li><span data-dcnode-id="1529" instrument_node="">
+</span><li class="c-primary-nav__item hide-nav-sm" data-dcnode-id="1519"><span data-dcnode-id="1528" instrument_node="">
+</span><a class="c-primary-nav__link" data-dcnode-id="1526" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/talk-to-us/"><span data-dcnode-id="1527" instrument_node="">
+			Talk to Us		</span></a><span data-dcnode-id="1525" instrument_node="">
+</span><div class="c-dropdown js-dropdown-panel" data-dcnode-id="1521" style="visibility: none;"><span data-dcnode-id="1524" instrument_node="">
+</span><div class="c-dropdown__arrow" data-dcnode-id="1523" style="left: -5px;"></div><span data-dcnode-id="1522" instrument_node="">
+</span></div><span data-dcnode-id="1520" instrument_node="">
+</span></li><span data-dcnode-id="1518" instrument_node="">
+</span><li class="c-primary-nav__item" data-dcnode-id="1508"><span data-dcnode-id="1517" instrument_node="">
+</span><a class="c-primary-nav__link is-style-button" data-dcnode-id="1515" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//sso.agora.io/en/signup" target="_blank"><span data-dcnode-id="1516" instrument_node="">
+			Get Started		</span></a><span data-dcnode-id="1514" instrument_node="">
+</span><div class="c-dropdown js-dropdown-panel" data-dcnode-id="1510" style="visibility: none;"><span data-dcnode-id="1513" instrument_node="">
+</span><div class="c-dropdown__arrow" data-dcnode-id="1512" style="left: -5px;"></div><span data-dcnode-id="1511" instrument_node="">
+</span></div><span data-dcnode-id="1509" instrument_node="">
+</span></li><span data-dcnode-id="1507" instrument_node="">
+</span></ul><span data-dcnode-id="1505" instrument_node="">
+</span><div data-dcnode-id="1131" style="position: relative;"><span data-dcnode-id="1504" instrument_node="">
+</span><button aria-controls="flyout-navigation" class="c-nav-toggle js-dropdown-toggle" data-dcnode-id="1494"><span data-dcnode-id="1503" instrument_node="">
+</span><span class="c-nav-toggle__box" data-dcnode-id="1499"><span data-dcnode-id="1502" instrument_node="">
+</span><span class="c-nav-toggle__inner" data-dcnode-id="1501"></span><span data-dcnode-id="1500" instrument_node="">
+</span></span><span data-dcnode-id="1498" instrument_node="">
+</span><span class="u-sr-only" data-dcnode-id="1496"><span data-dcnode-id="1497" instrument_node="">Toggle menu</span></span><span data-dcnode-id="1495" instrument_node="">
+</span></button><span data-dcnode-id="1493" instrument_node="">
+</span><div class="c-dropdown js-dropdown-panel c-flyout-nav" data-dcnode-id="1133" style="left: -248px;"><span data-dcnode-id="1492" instrument_node="">
+</span><div class="c-dropdown__arrow" data-dcnode-id="1491" style="display: none; left: 265px;"></div><span data-dcnode-id="1490" instrument_node="">
+</span><ul class="o-list-bare" data-dcnode-id="1135" id="flyout-navigation"><span data-dcnode-id="1489" instrument_node="">
+</span><li class="c-primary-nav__item hide-nav-md hide-nav-lg hide-nav-xl" data-dcnode-id="1337"><span data-dcnode-id="1488" instrument_node="">
+</span><button class="o-button-bare c-primary-nav__link js-dropdown-toggle" data-dcnode-id="1486"><span data-dcnode-id="1487" instrument_node="">
+			Products		</span></button><span data-dcnode-id="1485" instrument_node="">
+</span><div class="c-primary-nav__submenu has-3-columns" data-dcnode-id="1339"><span data-dcnode-id="1484" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1434"><h1 class="c-primary-nav__submenu__title" data-dcnode-id="1482"><span data-dcnode-id="1483" instrument_node="">Core Products</span></h1><p class="c-primary-nav__submenu__description" data-dcnode-id="1480"><span data-dcnode-id="1481" instrument_node="">Everything you need to build an interactive, live chat or streaming app.</span></p><span data-dcnode-id="1479" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1469" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/voice-call/"><span data-dcnode-id="1478" instrument_node="">
+</span><div class="c-primary-nav__menu-item__icon" data-dcnode-id="1474"><span data-dcnode-id="1477" instrument_node="">
+</span><img alt="Voice call icon" data-dcnode-id="1476" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2021/09/Voice.svg&amp;raw"><span data-dcnode-id="1475" instrument_node="">
+</span></div><span data-dcnode-id="1473" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1471"><span data-dcnode-id="1472" instrument_node="">
+			Voice Calling		</span></div><span data-dcnode-id="1470" instrument_node="">
+</span></a><span data-dcnode-id="1468" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1458" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/video-call/"><span data-dcnode-id="1467" instrument_node="">
+</span><div class="c-primary-nav__menu-item__icon" data-dcnode-id="1463"><span data-dcnode-id="1466" instrument_node="">
+</span><img alt="Video call icon" data-dcnode-id="1465" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2021/09/Video.svg&amp;raw"><span data-dcnode-id="1464" instrument_node="">
+</span></div><span data-dcnode-id="1462" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1460"><span data-dcnode-id="1461" instrument_node="">
+			Video Calling		</span></div><span data-dcnode-id="1459" instrument_node="">
+</span></a><span data-dcnode-id="1457" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1447" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/interactive-live-streaming/"><span data-dcnode-id="1456" instrument_node="">
+</span><div class="c-primary-nav__menu-item__icon" data-dcnode-id="1452"><span data-dcnode-id="1455" instrument_node="">
+</span><img alt="Interactive live steaming icon" data-dcnode-id="1454" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2021/09/interactive-live-streaming.svg&amp;raw"><span data-dcnode-id="1453" instrument_node="">
+</span></div><span data-dcnode-id="1451" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1449"><span data-dcnode-id="1450" instrument_node="">
+			Interactive Live Streaming		</span></div><span data-dcnode-id="1448" instrument_node="">
+</span></a><span data-dcnode-id="1446" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1436" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/real-time-messaging/"><span data-dcnode-id="1445" instrument_node="">
+</span><div class="c-primary-nav__menu-item__icon" data-dcnode-id="1441"><span data-dcnode-id="1444" instrument_node="">
+</span><img alt="Real-time Messaging" data-dcnode-id="1443" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2021/09/Real-Time-Messaging.svg&amp;raw"><span data-dcnode-id="1442" instrument_node="">
+</span></div><span data-dcnode-id="1440" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1438"><span data-dcnode-id="1439" instrument_node="">
+			Real-Time Messaging		</span></div><span data-dcnode-id="1437" instrument_node="">
+</span></a><span data-dcnode-id="1435" instrument_node="">
+</span></section><span data-dcnode-id="1433" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1392"><h1 class="c-primary-nav__submenu__title" data-dcnode-id="1431"><span data-dcnode-id="1432" instrument_node="">Extensions</span></h1><p class="c-primary-nav__submenu__description" data-dcnode-id="1429"><span data-dcnode-id="1430" instrument_node="">Easily add features to your app or build extensions for resell.</span></p><span data-dcnode-id="1428" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1423" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/recording/"><span data-dcnode-id="1427" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1425"><span data-dcnode-id="1426" instrument_node="">
+			Recording		</span></div><span data-dcnode-id="1424" instrument_node="">
+</span></a><span data-dcnode-id="1422" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1417" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/agora-analytics/"><span data-dcnode-id="1421" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1419"><span data-dcnode-id="1420" instrument_node="">
+			Agora Analytics		</span></div><span data-dcnode-id="1418" instrument_node="">
+</span></a><span data-dcnode-id="1416" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1411" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/interactive-whiteboard/"><span data-dcnode-id="1415" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1413"><span data-dcnode-id="1414" instrument_node="">
+			Interactive Whiteboard		</span></div><span data-dcnode-id="1412" instrument_node="">
+</span></a><span data-dcnode-id="1410" instrument_node="">
+</span><div class="c-primary-nav__submenu__card" data-dcnode-id="1394"><div class="c-primary-nav__submenu__card__title" data-dcnode-id="1408"><span data-dcnode-id="1409" instrument_node="">Extensions Marketplace</span></div><span data-dcnode-id="1407" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1402" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/agora-extensions-marketplace/"><span data-dcnode-id="1406" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1404"><span data-dcnode-id="1405" instrument_node="">
+			Explore Extensions Gallery		</span></div><span data-dcnode-id="1403" instrument_node="">
+</span></a><span data-dcnode-id="1401" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1396" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/extensions-marketplace/vendor-application/"><span data-dcnode-id="1400" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1398"><span data-dcnode-id="1399" instrument_node="">
+			Build an Extension		</span></div><span data-dcnode-id="1397" instrument_node="">
+</span></a><span data-dcnode-id="1395" instrument_node="">
+</span></div><span data-dcnode-id="1393" instrument_node="">
+</span></section><span data-dcnode-id="1391" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1352"><h1 class="c-primary-nav__submenu__title" data-dcnode-id="1389"><span data-dcnode-id="1390" instrument_node="">Tools</span></h1><p class="c-primary-nav__submenu__description" data-dcnode-id="1387"><span data-dcnode-id="1388" instrument_node="">All the flexibility and tools to get you to market quickly.</span></p><span data-dcnode-id="1386" instrument_node="">
+</span><h2 class="c-primary-nav__submenu__subtitle" data-dcnode-id="1384"><span data-dcnode-id="1385" instrument_node="">Code Libraries</span></h2><span data-dcnode-id="1383" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1378" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//docs.agora.io/en/All/downloads%3Fplatform%3DAll%2520Platforms" target="_blank"><span data-dcnode-id="1382" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1380"><span data-dcnode-id="1381" instrument_node="">
+			Download SDKs		</span></div><span data-dcnode-id="1379" instrument_node="">
+</span></a><span data-dcnode-id="1377" instrument_node="">
+</span><h2 class="c-primary-nav__submenu__subtitle" data-dcnode-id="1375"><span data-dcnode-id="1376" instrument_node="">No Code</span></h2><span data-dcnode-id="1374" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1369" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/agora-app-builder/"><span data-dcnode-id="1373" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1371"><span data-dcnode-id="1372" instrument_node="">
+			App Builder		</span></div><span data-dcnode-id="1370" instrument_node="">
+</span></a><span data-dcnode-id="1368" instrument_node="">
+</span><h2 class="c-primary-nav__submenu__subtitle" data-dcnode-id="1366"><span data-dcnode-id="1367" instrument_node="">Low Code</span></h2><span data-dcnode-id="1365" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1360" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/products/flexible-classroom/"><span data-dcnode-id="1364" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1362"><span data-dcnode-id="1363" instrument_node="">
+			Flexible Classroom		</span></div><span data-dcnode-id="1361" instrument_node="">
+</span></a><span data-dcnode-id="1359" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1354" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/developer-resources/start-building-low-code/"><span data-dcnode-id="1358" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1356"><span data-dcnode-id="1357" instrument_node="">
+			UIKits (Community Project)		</span></div><span data-dcnode-id="1355" instrument_node="">
+</span></a><span data-dcnode-id="1353" instrument_node="">
+</span></section><span data-dcnode-id="1351" instrument_node="">
+</span><section class="c-primary-nav__submenu__column spans-3-columns is-style-separated" data-dcnode-id="1341"><h1 class="c-primary-nav__submenu__title" data-dcnode-id="1349"><span data-dcnode-id="1350" instrument_node="">All built on the fastest, most reliable real-time network.</span></h1><span data-dcnode-id="1348" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1343" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/the-agora-platform-advantage/"><span data-dcnode-id="1347" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1345"><span data-dcnode-id="1346" instrument_node="">
+			Learn more about the Agora Advantage		</span></div><span data-dcnode-id="1344" instrument_node="">
+</span></a><span data-dcnode-id="1342" instrument_node="">
+</span></section><span data-dcnode-id="1340" instrument_node="">
+</span></div><span data-dcnode-id="1338" instrument_node="">
+</span></li><span data-dcnode-id="1336" instrument_node="">
+</span><li class="c-primary-nav__item hide-nav-md hide-nav-lg hide-nav-xl" data-dcnode-id="1275"><span data-dcnode-id="1335" instrument_node="">
+</span><button class="o-button-bare c-primary-nav__link js-dropdown-toggle" data-dcnode-id="1333"><span data-dcnode-id="1334" instrument_node="">
+			Solutions		</span></button><span data-dcnode-id="1332" instrument_node="">
+</span><div class="c-primary-nav__submenu has-1-columns" data-dcnode-id="1277"><span data-dcnode-id="1331" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1279"><p class="c-primary-nav__submenu__description" data-dcnode-id="1329"><span data-dcnode-id="1330" instrument_node="">Explore how interactive voice and video are transforming business and building community.</span></p><span data-dcnode-id="1328" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1323" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/education/"><span data-dcnode-id="1327" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1325"><span data-dcnode-id="1326" instrument_node="">
+			Education		</span></div><span data-dcnode-id="1324" instrument_node="">
+</span></a><span data-dcnode-id="1322" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1317" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/future-of-work/"><span data-dcnode-id="1321" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1319"><span data-dcnode-id="1320" instrument_node="">
+			Future of Work		</span></div><span data-dcnode-id="1318" instrument_node="">
+</span></a><span data-dcnode-id="1316" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1311" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/gaming/"><span data-dcnode-id="1315" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1313"><span data-dcnode-id="1314" instrument_node="">
+			Gaming		</span></div><span data-dcnode-id="1312" instrument_node="">
+</span></a><span data-dcnode-id="1310" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1305" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/live-audio-streaming/"><span data-dcnode-id="1309" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1307"><span data-dcnode-id="1308" instrument_node="">
+			Live Audio Streaming		</span></div><span data-dcnode-id="1306" instrument_node="">
+</span></a><span data-dcnode-id="1304" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1299" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/media-and-entertainment/"><span data-dcnode-id="1303" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1301"><span data-dcnode-id="1302" instrument_node="">
+			Media &amp; Entertainment		</span></div><span data-dcnode-id="1300" instrument_node="">
+</span></a><span data-dcnode-id="1298" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1293" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/retail/"><span data-dcnode-id="1297" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1295"><span data-dcnode-id="1296" instrument_node="">
+			Retail		</span></div><span data-dcnode-id="1294" instrument_node="">
+</span></a><span data-dcnode-id="1292" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1287" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/social/"><span data-dcnode-id="1291" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1289"><span data-dcnode-id="1290" instrument_node="">
+			Social		</span></div><span data-dcnode-id="1288" instrument_node="">
+</span></a><span data-dcnode-id="1286" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1281" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/solutions/telehealth/"><span data-dcnode-id="1285" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1283"><span data-dcnode-id="1284" instrument_node="">
+			Telehealth		</span></div><span data-dcnode-id="1282" instrument_node="">
+</span></a><span data-dcnode-id="1280" instrument_node="">
+</span></section><span data-dcnode-id="1278" instrument_node="">
+</span></div><span data-dcnode-id="1276" instrument_node="">
+</span></li><span data-dcnode-id="1274" instrument_node="">
+</span><li class="c-primary-nav__item hide-nav-lg hide-nav-xl" data-dcnode-id="1245"><span data-dcnode-id="1273" instrument_node="">
+</span><button class="o-button-bare c-primary-nav__link js-dropdown-toggle" data-dcnode-id="1271"><span data-dcnode-id="1272" instrument_node="">
+			Developers		</span></button><span data-dcnode-id="1270" instrument_node="">
+</span><div class="c-primary-nav__submenu has-1-columns" data-dcnode-id="1247"><span data-dcnode-id="1269" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1249"><span data-dcnode-id="1268" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1263" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/developer-resources/"><span data-dcnode-id="1267" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1265"><span data-dcnode-id="1266" instrument_node="">
+			Developer Resources		</span></div><span data-dcnode-id="1264" instrument_node="">
+</span></a><span data-dcnode-id="1262" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1257" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//docs.agora.io/en" target="_blank"><span data-dcnode-id="1261" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1259"><span data-dcnode-id="1260" instrument_node="">
+			Documentation		</span></div><span data-dcnode-id="1258" instrument_node="">
+</span></a><span data-dcnode-id="1256" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1251" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/category/developer/"><span data-dcnode-id="1255" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1253"><span data-dcnode-id="1254" instrument_node="">
+			Developer Blog		</span></div><span data-dcnode-id="1252" instrument_node="">
+</span></a><span data-dcnode-id="1250" instrument_node="">
+</span></section><span data-dcnode-id="1248" instrument_node="">
+</span></div><span data-dcnode-id="1246" instrument_node="">
+</span></li><span data-dcnode-id="1244" instrument_node="">
+</span><li class="c-primary-nav__item hide-nav-xl" data-dcnode-id="1221"><span data-dcnode-id="1243" instrument_node="">
+</span><button class="o-button-bare c-primary-nav__link js-dropdown-toggle" data-dcnode-id="1241"><span data-dcnode-id="1242" instrument_node="">
+			Partners		</span></button><span data-dcnode-id="1240" instrument_node="">
+</span><div class="c-primary-nav__submenu has-1-columns" data-dcnode-id="1223"><span data-dcnode-id="1239" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1225"><span data-dcnode-id="1238" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1233" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/partners/partner-gallery/"><span data-dcnode-id="1237" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1235"><span data-dcnode-id="1236" instrument_node="">
+			Partner Gallery		</span></div><span data-dcnode-id="1234" instrument_node="">
+</span></a><span data-dcnode-id="1232" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1227" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/become-a-partner/"><span data-dcnode-id="1231" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1229"><span data-dcnode-id="1230" instrument_node="">
+			Become a Partner		</span></div><span data-dcnode-id="1228" instrument_node="">
+</span></a><span data-dcnode-id="1226" instrument_node="">
+</span></section><span data-dcnode-id="1224" instrument_node="">
+</span></div><span data-dcnode-id="1222" instrument_node="">
+</span></li><span data-dcnode-id="1220" instrument_node="">
+</span><li class="c-primary-nav__item hide-nav-xl" data-dcnode-id="1215"><span data-dcnode-id="1219" instrument_node="">
+</span><a class="c-primary-nav__link" data-dcnode-id="1217" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/success-stories/"><span data-dcnode-id="1218" instrument_node="">
+			Success Stories		</span></a><span data-dcnode-id="1216" instrument_node="">
+</span></li><span data-dcnode-id="1214" instrument_node="">
+</span><li class="c-primary-nav__item hide-nav-xl" data-dcnode-id="1173"><span data-dcnode-id="1213" instrument_node="">
+</span><button class="o-button-bare c-primary-nav__link js-dropdown-toggle" data-dcnode-id="1211"><span data-dcnode-id="1212" instrument_node="">
+			Company		</span></button><span data-dcnode-id="1210" instrument_node="">
+</span><div class="c-primary-nav__submenu has-1-columns" data-dcnode-id="1175"><span data-dcnode-id="1209" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1177"><span data-dcnode-id="1208" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1203" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/about-us/"><span data-dcnode-id="1207" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1205"><span data-dcnode-id="1206" instrument_node="">
+			About Us		</span></div><span data-dcnode-id="1204" instrument_node="">
+</span></a><span data-dcnode-id="1202" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1197" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/blog/"><span data-dcnode-id="1201" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1199"><span data-dcnode-id="1200" instrument_node="">
+			Blog		</span></div><span data-dcnode-id="1198" instrument_node="">
+</span></a><span data-dcnode-id="1196" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1191" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/compliance/"><span data-dcnode-id="1195" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1193"><span data-dcnode-id="1194" instrument_node="">
+			Compliance &amp; Privacy		</span></div><span data-dcnode-id="1192" instrument_node="">
+</span></a><span data-dcnode-id="1190" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1185" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/events/"><span data-dcnode-id="1189" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1187"><span data-dcnode-id="1188" instrument_node="">
+			Events		</span></div><span data-dcnode-id="1186" instrument_node="">
+</span></a><span data-dcnode-id="1184" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1179" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/careers/"><span data-dcnode-id="1183" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1181"><span data-dcnode-id="1182" instrument_node="">
+			Careers		</span></div><span data-dcnode-id="1180" instrument_node="">
+</span></a><span data-dcnode-id="1178" instrument_node="">
+</span></section><span data-dcnode-id="1176" instrument_node="">
+</span></div><span data-dcnode-id="1174" instrument_node="">
+</span></li><span data-dcnode-id="1172" instrument_node="">
+</span><li class="c-primary-nav__item" data-dcnode-id="1149"><span data-dcnode-id="1171" instrument_node="">
+</span><button class="o-button-bare c-primary-nav__link js-dropdown-toggle" data-dcnode-id="1169"><span data-dcnode-id="1170" instrument_node="">
+			Pricing		</span></button><span data-dcnode-id="1168" instrument_node="">
+</span><div class="c-primary-nav__submenu has-1-columns" data-dcnode-id="1151"><span data-dcnode-id="1167" instrument_node="">
+</span><section class="c-primary-nav__submenu__column" data-dcnode-id="1153"><span data-dcnode-id="1166" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1161" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/pricing/"><span data-dcnode-id="1165" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1163"><span data-dcnode-id="1164" instrument_node="">
+			Product Pricing		</span></div><span data-dcnode-id="1162" instrument_node="">
+</span></a><span data-dcnode-id="1160" instrument_node="">
+</span><a class="c-primary-nav__menu-item" data-dcnode-id="1155" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/pricing/support-plans/"><span data-dcnode-id="1159" instrument_node="">
+</span><div class="c-primary-nav__menu-item__label" data-dcnode-id="1157"><span data-dcnode-id="1158" instrument_node="">
+			Support Plans		</span></div><span data-dcnode-id="1156" instrument_node="">
+</span></a><span data-dcnode-id="1154" instrument_node="">
+</span></section><span data-dcnode-id="1152" instrument_node="">
+</span></div><span data-dcnode-id="1150" instrument_node="">
+</span></li><span data-dcnode-id="1148" instrument_node="">
+</span><li class="c-primary-nav__item hide-nav-md hide-nav-lg hide-nav-xl" data-dcnode-id="1143"><span data-dcnode-id="1147" instrument_node="">
+</span><a class="c-primary-nav__link" data-dcnode-id="1145" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/talk-to-us/"><span data-dcnode-id="1146" instrument_node="">
+			Talk to Us		</span></a><span data-dcnode-id="1144" instrument_node="">
+</span></li><span data-dcnode-id="1142" instrument_node="">
+</span><li class="c-primary-nav__item hide-nav-sm hide-nav-md hide-nav-lg hide-nav-xl" data-dcnode-id="1137"><span data-dcnode-id="1141" instrument_node="">
+</span><a class="c-primary-nav__link is-style-button" data-dcnode-id="1139" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//sso.agora.io/en/signup" target="_blank"><span data-dcnode-id="1140" instrument_node="">
+			Get Started		</span></a><span data-dcnode-id="1138" instrument_node="">
+</span></li><span data-dcnode-id="1136" instrument_node="">
+</span></ul><span data-dcnode-id="1134" instrument_node="">
+</span></div><span data-dcnode-id="1132" instrument_node="">
+</span></div><span data-dcnode-id="1130" instrument_node="">
+</span></nav><span data-dcnode-id="1128" instrument_node="">
+</span></div><span data-dcnode-id="1126" instrument_node="">
+</span></div><span data-dcnode-id="1124" instrument_node="">
+</span><div class="c-announcements" data-dcnode-id="1101" id="js-announcement-bar"><span data-dcnode-id="1123" instrument_node="">
+</span><div class="c-announcement" data-dcnode-id="1103" id="uuid-199840" role="alert"><span data-dcnode-id="1122" instrument_node="">
+</span><div class="c-announcement__wrapper is-style-default" data-dcnode-id="1114"><span data-dcnode-id="1121" instrument_node="">
+</span><div class="c-announcement__content" data-dcnode-id="1116"><span data-dcnode-id="1120" instrument_node="">
+</span><a data-dcnode-id="1118" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//amplify.nabshow.com/nab-show-sign-up/%3Fr%3Dmaritz%26_ga%3D2.68093779.312864936.1649176872-1941818782.1649176872" target="_blank"><span data-dcnode-id="1119" instrument_node="">
+									Join us in person at the NAB Show in Vegas, April 23-27. Register now!									</span></a><span data-dcnode-id="1117" instrument_node="">
+</span></div><span data-dcnode-id="1115" instrument_node="">
+</span></div><span data-dcnode-id="1113" instrument_node="">
+</span><button aria-controls="uuid-199840" class="c-announcement__dismiss-btn js-dismiss-announcement" data-dcnode-id="1105" data-uuid="uuid-199840" role="button"><span data-dcnode-id="1112" instrument_node="">
+</span><span aria-hidden="true" data-dcnode-id="1110"><span data-dcnode-id="1111" instrument_node="">×</span></span><span data-dcnode-id="1109" instrument_node="">
+</span><span class="u-sr-only" data-dcnode-id="1107"><span data-dcnode-id="1108" instrument_node="">
+				Dismiss announcement			</span></span><span data-dcnode-id="1106" instrument_node="">
+</span></button><span data-dcnode-id="1104" instrument_node="">
+</span></div><span data-dcnode-id="1102" instrument_node="">
+</span></div><span data-dcnode-id="1100" instrument_node="">
+</span></header><span data-dcnode-id="1098" instrument_node="">
+</span><main class="o-container c-main-content" data-dcnode-id="349" id="content"><span data-dcnode-id="1097" instrument_node="">
+</span><article aria-label="How To: Build an Augmented Reality Remote Assistance App in Android" class="c-post post-21971 post type-post status-publish format-standard has-post-thumbnail hentry category-developer" data-dcnode-id="351" id="post-21971"><span data-dcnode-id="1096" instrument_node="">
+</span><header class="c-post__header wp-block-pb-feature is-style-no-content-rule is-style-post alignfull" data-dcnode-id="1044"><span data-dcnode-id="1095" instrument_node="">
+</span><div class="o-container" data-dcnode-id="1046"><span data-dcnode-id="1094" instrument_node="">
+</span><div class="wp-block-pb-feature__inner-content" data-dcnode-id="1048"><span data-dcnode-id="1093" instrument_node="">
+</span><div class="wp-block-pb-feature-image" data-dcnode-id="1086"><span data-dcnode-id="1092" instrument_node="">
+</span><figure class="wp-block-image size-post-thumbnail" data-dcnode-id="1088"><span data-dcnode-id="1091" instrument_node="">
+</span><img alt="How To: Build an Augmented Reality Remote Assistance App in Android Featured" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" data-dcnode-id="1090" height="512" sizes="(max-width: 1024px) 100vw, 1024px" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2020/03/build-augmented-reality-remote-assistance-featured-1024x512.jpg&amp;raw" srcset="https://www.agora.io/en/wp-content/uploads/2020/03/build-augmented-reality-remote-assistance-featured.jpg 1024w, https://www.agora.io/en/wp-content/uploads/2020/03/build-augmented-reality-remote-assistance-featured-300x150.jpg 300w, https://www.agora.io/en/wp-content/uploads/2020/03/build-augmented-reality-remote-assistance-featured-768x384.jpg 768w" width="1024"><span data-dcnode-id="1089" instrument_node=""> </span></figure><span data-dcnode-id="1087" instrument_node="">
+</span></div><span data-dcnode-id="1085" instrument_node="">
+</span><div class="wp-block-pb-feature-content" data-dcnode-id="1050"><span data-dcnode-id="1084" instrument_node="">
+</span><div class="c-back" data-dcnode-id="1073"><span data-dcnode-id="1083" instrument_node="">
+</span><a class="c-back__link" data-dcnode-id="1075" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/blog/"><span data-dcnode-id="1082" instrument_node="">
+</span><span class="c-back__link-icon" data-dcnode-id="1080"><span data-dcnode-id="1081" instrument_node="">←</span></span><span data-dcnode-id="1079" instrument_node="">
+</span><span class="c-back__link-text" data-dcnode-id="1077"><span data-dcnode-id="1078" instrument_node="">
+								Back to Blog							</span></span><span data-dcnode-id="1076" instrument_node="">
+</span></a><span data-dcnode-id="1074" instrument_node="">
+</span></div><span data-dcnode-id="1072" instrument_node="">
+</span><h1 class="c-post__title" data-dcnode-id="1070"><span data-dcnode-id="1071" instrument_node="">How To: Build an Augmented Reality Remote Assistance App in Android</span></h1><span data-dcnode-id="1069" instrument_node=""> </span><div class="c-meta" data-dcnode-id="1052"><span data-dcnode-id="1068" instrument_node="">
+</span><time class="c-meta__item c-meta__item--date" data-dcnode-id="1066" datetime="2020-03-26"><span data-dcnode-id="1067" instrument_node="">
+							March 26, 2020						</span></time><span data-dcnode-id="1065" instrument_node="">
+</span><span class="c-meta__item c-meta__item--author" data-dcnode-id="1060"><span data-dcnode-id="1064" instrument_node="">
+							By </span><span class="u-sr-only" data-dcnode-id="1062"><span data-dcnode-id="1063" instrument_node="">Author: </span></span><span data-dcnode-id="1061" instrument_node="">Shaocheng Yang						</span></span><span data-dcnode-id="1059" instrument_node="">
+</span><span class="c-meta__item c-meta__item--categories" data-dcnode-id="1054"><span data-dcnode-id="1058" instrument_node="">
+								In </span><a data-dcnode-id="1056" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/category/developer/" rel="category tag"><span data-dcnode-id="1057" instrument_node="">Developer</span></a><span data-dcnode-id="1055" instrument_node=""> </span></span><span data-dcnode-id="1053" instrument_node="">
+</span></div><span data-dcnode-id="1051" instrument_node="">
+</span></div><span data-dcnode-id="1049" instrument_node="">
+</span></div><span data-dcnode-id="1047" instrument_node="">
+</span></div><span data-dcnode-id="1045" instrument_node="">
+</span></header><span data-dcnode-id="1043" instrument_node="">
+</span><div class="c-post__content" data-dcnode-id="353"><span data-dcnode-id="1042" instrument_node="">
+</span><div class="o-row u-justify-content-center" data-dcnode-id="355"><span data-dcnode-id="1041" instrument_node="">
+</span><div class="o-col u-7of12-lg u-10of12-md u-offset-1of12-lg" data-dcnode-id="386"><span data-dcnode-id="1040" instrument_node="">
+</span><p data-dcnode-id="1038"><span data-dcnode-id="1039" instrument_node="">This might have happened to many of us at some point: you plugged in that hair dryer or that heater and all of a sudden, all your lights went dark and your TV turned black.</span></p><span data-dcnode-id="1037" instrument_node="">
+</span><p data-dcnode-id="1032"><span data-dcnode-id="1036" instrument_node="">Now, you have to call the customer support of your service provider in desperation. You explained what happened and they said you might just need to switch on your air circuit-breaker. However, when you open the electric panel, you find yourself wondering:&nbsp;</span><em data-dcnode-id="1034"><span data-dcnode-id="1035" instrument_node="">which one of these is the air circuit-breaker?</span></em><span data-dcnode-id="1033" instrument_node="">&nbsp;After a 20-minute conversation with the customer support representative trying to locate this switch, you find that you don’t have one at your house in the first place.</span></p><span data-dcnode-id="1031" instrument_node="">
+</span><p data-dcnode-id="1029"><span data-dcnode-id="1030" instrument_node="">Most remote assistance today is done through voice calls or text messages. This is hardly convenient for users trying to describe their issues or understand the new concepts and terminology needed for the troubleshooting.</span></p><span data-dcnode-id="1028" instrument_node="">
+</span><p data-dcnode-id="1026"><span data-dcnode-id="1027" instrument_node="">Luckily, technology has reached a point where we can solve this issue by using Video Chat and Augmented Reality. In this guide, I will provide a step-by-step guide to show you how to build an Android app that uses ARCore and video chat to create an interactive experience.</span></p><span data-dcnode-id="1025" instrument_node="">
+</span><h2 data-dcnode-id="1023" id="h-prerequisites"><span data-dcnode-id="1024" instrument_node="">Prerequisites</span></h2><span data-dcnode-id="1022" instrument_node="">
+</span><ol data-dcnode-id="1012"><li data-dcnode-id="1020"><span data-dcnode-id="1021" instrument_node="">A basic to intermediate understanding of Java and Android SDK</span></li><li data-dcnode-id="1018"><span data-dcnode-id="1019" instrument_node="">Basic understanding of ARCore and Augmented Reality concepts</span></li><li data-dcnode-id="1015"><a data-dcnode-id="1016" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/blog/how-to-get-started-with-agora/"><span data-dcnode-id="1017" instrument_node="">Agora Developer Account</span></a></li><li data-dcnode-id="1013"><span data-dcnode-id="1014" instrument_node="">Hardware: 2 Android devices running Android API level 24 or higher and originally shipped with Google Play Store</span></li></ol><span data-dcnode-id="1011" instrument_node="">
+</span><p data-dcnode-id="1006"><span data-dcnode-id="1010" instrument_node="">* You can check detailed device requirements&nbsp;</span><a data-dcnode-id="1008" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//developers.google.com/ar/discover/supported-devices" rel="noopener nofollow noreferrer" target="_blank"><span data-dcnode-id="1009" instrument_node="">here</span></a><span data-dcnode-id="1007" instrument_node="">.</span></p><span data-dcnode-id="1005" instrument_node="">
+</span><p data-dcnode-id="1002"><em data-dcnode-id="1003"><span data-dcnode-id="1004" instrument_node="">Please Note:&nbsp;While no Java/Android knowledge is needed to follow along, certain basic concepts in Java/ARCore won’t be explained along the way.</span></em></p><span data-dcnode-id="1001" instrument_node="">
+</span><h2 data-dcnode-id="999" id="h-overview"><span data-dcnode-id="1000" instrument_node="">Overview</span></h2><span data-dcnode-id="998" instrument_node="">
+</span><p data-dcnode-id="996"><span data-dcnode-id="997" instrument_node="">In this guide, we are going to build an AR-enabled customer support app. One user will create a channel by inputting a channel name, joining the channel as a streamer (people who need support), while the other user can join the same channel by entering the same channel name as an audience member (customer support). When both users are in the channels, the streamer will broadcast their rear camera to the audience. The audience can draw on their own device and have the touch input rendered in augmented reality in the streamer’s world!</span></p><span data-dcnode-id="995" instrument_node="">
+</span><p data-dcnode-id="993"><span data-dcnode-id="994" instrument_node="">Here are all the steps that we’ll be going through in this article:</span></p><span data-dcnode-id="992" instrument_node="">
+</span><ol data-dcnode-id="970" id="set-up-new-project"><li data-dcnode-id="989"><a data-dcnode-id="990" href="#set-up-new-project"><span data-dcnode-id="991" instrument_node="">Set Up New Project</span></a></li><li data-dcnode-id="986"><a data-dcnode-id="987" href="#create-ui"><span data-dcnode-id="988" instrument_node="">Create UI</span></a></li><li data-dcnode-id="983"><a data-dcnode-id="984" href="#enable-arcore"><span data-dcnode-id="985" instrument_node="">Enable ARCore</span></a></li><li data-dcnode-id="980"><a data-dcnode-id="981" href="#enable-streamer"><span data-dcnode-id="982" instrument_node="">Enable Streamer’s Video Call</span></a></li><li data-dcnode-id="977"><a data-dcnode-id="978" href="#enable-audience"><span data-dcnode-id="979" instrument_node="">Enable Audience’s Video Call</span></a></li><li data-dcnode-id="974"><a data-dcnode-id="975" href="#remote-assistance-feature"><span data-dcnode-id="976" instrument_node="">Remote Assistance Feature</span></a></li><li data-dcnode-id="971"><a data-dcnode-id="972" href="#build-test-device"><span data-dcnode-id="973" instrument_node="">Build and Test on Device</span></a></li></ol><span data-dcnode-id="969" instrument_node="">
+</span><p data-dcnode-id="963"><em data-dcnode-id="964"><span data-dcnode-id="968" instrument_node="">You can find my Github </span><a data-dcnode-id="966" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//github.com/ysc1995/ARCoreAgora" rel="noopener noreferrer" target="_blank"><span data-dcnode-id="967" instrument_node="">demo app</span></a><span data-dcnode-id="965" instrument_node=""> as a reference for this article.</span></em></p><span data-dcnode-id="962" instrument_node="">
+</span><h2 data-dcnode-id="959" id="h-set-up-new-project"><a data-dcnode-id="961" name="set-up-new-project"></a><span data-dcnode-id="960" instrument_node="">Set Up New Project</span></h2><span data-dcnode-id="958" instrument_node="">
+</span><p data-dcnode-id="956"><span data-dcnode-id="957" instrument_node="">To start, let’s open Android studio and create a new, blank project.</span></p><span data-dcnode-id="955" instrument_node="">
+</span><ol data-dcnode-id="930"><li data-dcnode-id="950"><span data-dcnode-id="954" instrument_node="">Open Android Studio and click&nbsp;</span><strong data-dcnode-id="952"><span data-dcnode-id="953" instrument_node="">Start a new Android Studio project</span></strong><span data-dcnode-id="951" instrument_node="">.</span></li><li data-dcnode-id="936"><span data-dcnode-id="949" instrument_node="">On the&nbsp;</span><strong data-dcnode-id="947"><span data-dcnode-id="948" instrument_node="">Choose your project</span></strong><span data-dcnode-id="946" instrument_node="">&nbsp;panel, choose&nbsp;</span><strong data-dcnode-id="944"><span data-dcnode-id="945" instrument_node="">Phone and Tablet</span></strong><span data-dcnode-id="943" instrument_node="">&nbsp;&gt;&nbsp;</span><strong data-dcnode-id="941"><span data-dcnode-id="942" instrument_node="">Empty Activity</span></strong><span data-dcnode-id="940" instrument_node="">, and click&nbsp;</span><strong data-dcnode-id="938"><span data-dcnode-id="939" instrument_node="">Next</span></strong><span data-dcnode-id="937" instrument_node="">.</span></li><li data-dcnode-id="931"><span data-dcnode-id="935" instrument_node="">Click&nbsp;</span><strong data-dcnode-id="933"><span data-dcnode-id="934" instrument_node="">Finish</span></strong><span data-dcnode-id="932" instrument_node="">. Follow the on-screen instructions if you need to install any plug-ins.</span></li></ol><span data-dcnode-id="929" instrument_node="">
+</span><h3 data-dcnode-id="927" id="h-integrate-the-sdk"><span data-dcnode-id="928" instrument_node="">Integrate the SDK</span></h3><span data-dcnode-id="926" instrument_node="">
+</span><p data-dcnode-id="921"><span data-dcnode-id="925" instrument_node="">Add the following line in the&nbsp;</span><strong data-dcnode-id="923"><span data-dcnode-id="924" instrument_node="">/app/build.gradle</span></strong><span data-dcnode-id="922" instrument_node="">&nbsp;file of your project:</span></p><span data-dcnode-id="920" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="917"><code data-dcnode-id="918"><span data-dcnode-id="919" instrument_node="">dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    
+    //ARCore 
+    implementation 'com.google.ar:core:1.0.0'
+    implementation 'de.javagl:obj:0.2.1'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support:design:27.0.2'
+
+    //Video 
+    implementation 'io.agora.rtc:full-sdk:2.9.4'
+}</span></code></pre><span data-dcnode-id="916" instrument_node="">
+</span><p data-dcnode-id="911"><span data-dcnode-id="915" instrument_node="">Sync the project after the changes. Add the following project permissions in&nbsp;</span><strong data-dcnode-id="913"><span data-dcnode-id="914" instrument_node="">/app/src/main/AndroidManifest.xml&nbsp;</span></strong><span data-dcnode-id="912" instrument_node="">file:</span></p><span data-dcnode-id="910" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="907"><code data-dcnode-id="908"><span data-dcnode-id="909" instrument_node="">&lt;uses-permission android:name="android.permission.CAMERA" /&gt;
+&lt;uses-permission android:name="android.permission.INTERNET" /&gt;
+&lt;uses-permission android:name="android.permission.RECORD_AUDIO" /&gt;
+&lt;uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /&gt;
+&lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /&gt;
+&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+&lt;uses-permission android:name="android.permission.BLUETOOTH" /&gt;</span></code></pre><span data-dcnode-id="906" instrument_node="">
+</span><p data-dcnode-id="901"><span data-dcnode-id="905" instrument_node="">In order to run ARCore, we also need to add the following in the </span><strong data-dcnode-id="903"><span data-dcnode-id="904" instrument_node="">AndroidManifest.xml&nbsp;</span></strong><span data-dcnode-id="902" instrument_node="">file. This indicates that this application requires ARCore.</span></p><span data-dcnode-id="900" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="897"><code data-dcnode-id="898"><span data-dcnode-id="899" instrument_node="">&lt;uses-feature
+    android:name="android.hardware.camera.ar"
+    android:required="true" /&gt;&lt;application
+...
+&lt;meta-data
+    android:name="com.google.ar.core"
+    android:value="required" /&gt;
+&lt;/application&gt;</span></code></pre><span data-dcnode-id="896" instrument_node="">
+</span><h2 data-dcnode-id="893" id="h-create-ui"><a data-dcnode-id="895" name="create-ui"></a><span data-dcnode-id="894" instrument_node="">Create UI</span></h2><span data-dcnode-id="892" instrument_node="">
+</span><p data-dcnode-id="890"><span data-dcnode-id="891" instrument_node="">Let’s create the UI component for both users. For the user who is sharing their world with AR, we are going to refer to them as the “streamer”. For the other user who joins the channel for support, we will refer to them as the “audience”. Below is an example UI that I will be using:</span></p><span data-dcnode-id="889" instrument_node="">
+</span><figure class="wp-block-image size-large" data-dcnode-id="885"><img alt="" class="wp-image-28025" data-dcnode-id="888" height="893" loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2020/11/build-augmented-reality-remote-assistance-1-1024x893.png&amp;raw" srcset="https://www.agora.io/en/wp-content/uploads/2020/11/build-augmented-reality-remote-assistance-1-1024x893.png 1024w, https://www.agora.io/en/wp-content/uploads/2020/11/build-augmented-reality-remote-assistance-1-300x262.png 300w, https://www.agora.io/en/wp-content/uploads/2020/11/build-augmented-reality-remote-assistance-1-768x670.png 768w, https://www.agora.io/en/wp-content/uploads/2020/11/build-augmented-reality-remote-assistance-1-1536x1339.png 1536w, https://www.agora.io/en/wp-content/uploads/2020/11/build-augmented-reality-remote-assistance-1.png 1826w" width="1024"><figcaption data-dcnode-id="886"><span data-dcnode-id="887" instrument_node="">Streamer UI (left) and Audience UI (right)</span></figcaption></figure><span data-dcnode-id="884" instrument_node="">
+</span><p data-dcnode-id="878"><em data-dcnode-id="879"><span data-dcnode-id="883" instrument_node="">Please Note: You can find the .xml files for the UI&nbsp;</span><a data-dcnode-id="881" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//github.com/ysc1995/ARCoreAgora/blob/master/app/src/main/res/layout/activity_agora_arcore.xml" rel="noreferrer noopener" target="_blank"><span data-dcnode-id="882" instrument_node="">here</span></a><span data-dcnode-id="880" instrument_node="">.</span></em></p><span data-dcnode-id="877" instrument_node="">
+</span><p data-dcnode-id="869"><span data-dcnode-id="876" instrument_node="">The main difference between the streamer UI and audience UI is the streamer UI is using </span><strong data-dcnode-id="874"><span data-dcnode-id="875" instrument_node="">android.opengl.GLSurfaceView</span></strong><span data-dcnode-id="873" instrument_node=""> to render the AR camera view whereas the audience’s UI is using a </span><strong data-dcnode-id="871"><span data-dcnode-id="872" instrument_node="">RelativeLayout</span></strong><span data-dcnode-id="870" instrument_node=""> to render the video coming from the streamer.</span></p><span data-dcnode-id="868" instrument_node="">
+</span><p data-dcnode-id="866"><span data-dcnode-id="867" instrument_node="">The container on the top right corner of the streamer’s UI page is for rendering the remote video coming from the audience local camera. The container on the top right corner of the audience’s UI page is for rendering the audience’s local camera view.</span></p><span data-dcnode-id="865" instrument_node="">
+</span><p data-dcnode-id="863"><span data-dcnode-id="864" instrument_node="">We will also create a screen for the user to enter the channel name and join the channel as a streamer or audience.</span></p><span data-dcnode-id="862" instrument_node="">
+</span><figure class="wp-block-image size-large" data-dcnode-id="858"><img alt="" class="wp-image-28026" data-dcnode-id="861" height="1024" loading="lazy" sizes="(max-width: 576px) 100vw, 576px" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2020/11/build-augmented-reality-remote-assistance-2-576x1024.png&amp;raw" srcset="https://www.agora.io/en/wp-content/uploads/2020/11/build-augmented-reality-remote-assistance-2-576x1024.png 576w, https://www.agora.io/en/wp-content/uploads/2020/11/build-augmented-reality-remote-assistance-2-169x300.png 169w, https://www.agora.io/en/wp-content/uploads/2020/11/build-augmented-reality-remote-assistance-2.png 654w" width="576"><figcaption data-dcnode-id="859"><span data-dcnode-id="860" instrument_node="">Join Channel UI</span></figcaption></figure><span data-dcnode-id="857" instrument_node="">
+</span><p data-dcnode-id="851"><em data-dcnode-id="852"><span data-dcnode-id="856" instrument_node="">Please Note: You can find the .xml files for the Join Channel UI&nbsp;</span><a data-dcnode-id="854" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//github.com/ysc1995/ARCoreAgora/blob/master/app/src/main/res/layout/activity_channel.xml" rel="noreferrer noopener" target="_blank"><span data-dcnode-id="855" instrument_node="">here</span></a><span data-dcnode-id="853" instrument_node="">.</span></em></p><span data-dcnode-id="850" instrument_node="">
+</span><p data-dcnode-id="842"><span data-dcnode-id="849" instrument_node="">The logic under the Channel UI is very simple. If the user clicks the CREATE button, it will jump to the&nbsp;</span><a data-dcnode-id="847" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//github.com/ysc1995/ARCoreAgora/blob/master/app/src/main/java/com/example/arcoreagora/AgoraARStreamerActivity.java" rel="noreferrer noopener" target="_blank"><span data-dcnode-id="848" instrument_node="">streamer</span></a><span data-dcnode-id="846" instrument_node="">’s activity page which handles streaming logic. If the user clicks the JOIN button, it will jump to the&nbsp;</span><a data-dcnode-id="844" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//github.com/ysc1995/ARCoreAgora/blob/master/app/src/main/java/com/example/arcoreagora/AgoraARAudienceActivity.java" rel="noreferrer noopener" target="_blank"><span data-dcnode-id="845" instrument_node="">audience</span></a><span data-dcnode-id="843" instrument_node="">&nbsp;activity page which handles audience interaction logic. Now, we need to define the logic for both activities.</span></p><span data-dcnode-id="841" instrument_node="">
+</span><h2 data-dcnode-id="838" id="h-set-up-arcore"><a data-dcnode-id="840" name="enable-arcore"></a><span data-dcnode-id="839" instrument_node="">Set Up ARCore</span></h2><span data-dcnode-id="837" instrument_node="">
+</span><p data-dcnode-id="821"><span data-dcnode-id="836" instrument_node="">Setting up the ARCore in the project is not as difficult as most people think. In the </span><strong data-dcnode-id="834"><span data-dcnode-id="835" instrument_node="">OnResume()</span></strong><span data-dcnode-id="833" instrument_node=""> method of the</span><a data-dcnode-id="831" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//github.com/ysc1995/ARCoreAgora/blob/master/app/src/main/java/com/example/arcoreagora/AgoraARStreamerActivity.java" rel="noreferrer noopener" target="_blank"><span data-dcnode-id="832" instrument_node=""> streamer</span></a><span data-dcnode-id="830" instrument_node="">&nbsp;activity, we need to create a</span><a data-dcnode-id="826" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//developers.google.com/ar/reference/java/arcore/reference/com/google/ar/core/Session" rel="noreferrer noopener" target="_blank"><span data-dcnode-id="829" instrument_node="">&nbsp;</span><strong data-dcnode-id="827"><span data-dcnode-id="828" instrument_node="">Session</span></strong></a><span data-dcnode-id="825" instrument_node="">&nbsp;instance. The&nbsp;</span><strong data-dcnode-id="823"><span data-dcnode-id="824" instrument_node="">Session</span></strong><span data-dcnode-id="822" instrument_node="">&nbsp;instance is to manage the AR system state and handle the lifecycle. We can use it to receive frames that allow access to camera images. However, before that, we have to check if ARCore is installed.</span></p><span data-dcnode-id="820" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="817"><code data-dcnode-id="818"><span data-dcnode-id="819" instrument_node="">@Override
+protected void onResume() {
+    super.onResume();
+
+    if (mSession == null) {
+        String message = null;
+        try {
+            switch (ArCoreApk.getInstance().requestInstall(this, !installRequested)) {
+                case INSTALL_REQUESTED:
+                    installRequested = true;
+                    return;
+                case INSTALLED:
+                    break;
+            }
+
+            // ARCore requires camera permissions to operate. If we did not yet obtain runtime permission on Android M and above, now is a good time to ask the user for it.
+            if (!CameraPermissionHelper.hasCameraPermission(this)) {
+               CameraPermissionHelper.requestCameraPermission(this);
+                return;
+            }
+
+            mSession = new Session(this);
+        } catch (Exception e) {
+            ...
+        }         // Create default config and check if supported.
+        Config config = new Config(mSession);
+        if (!mSession.isSupported(config)) {
+            showSnackbarMessage("This device does not support AR", true);
+        }
+        ...
+}</span></code></pre><span data-dcnode-id="816" instrument_node="">
+</span><h3 data-dcnode-id="814" id="h-implements-glsurfaceview-renderer"><span data-dcnode-id="815" instrument_node="">Implements GLSurfaceView.Renderer</span></h3><span data-dcnode-id="813" instrument_node="">
+</span><p data-dcnode-id="799"><span data-dcnode-id="812" instrument_node="">We will use the&nbsp;</span><strong data-dcnode-id="810"><span data-dcnode-id="811" instrument_node="">GLSurfaceView</span></strong><span data-dcnode-id="809" instrument_node="">&nbsp;to render the AR camera. In order to do that, the streamer activity should implement&nbsp;</span><strong data-dcnode-id="807"><span data-dcnode-id="808" instrument_node="">GLSurfaceView.Renderer</span></strong><span data-dcnode-id="806" instrument_node="">. There are three functions that need to be overridden:&nbsp;</span><strong data-dcnode-id="804"><span data-dcnode-id="805" instrument_node="">onSurfaceCreated, onSurfaceChanged</span></strong><span data-dcnode-id="803" instrument_node="">&nbsp;and&nbsp;</span><strong data-dcnode-id="801"><span data-dcnode-id="802" instrument_node="">onDrawFrame</span></strong><span data-dcnode-id="800" instrument_node="">.</span></p><span data-dcnode-id="798" instrument_node="">
+</span><h3 data-dcnode-id="796" id="h-override-onsurfacecreated"><span data-dcnode-id="797" instrument_node="">Override onSurfaceCreated</span></h3><span data-dcnode-id="795" instrument_node="">
+</span><p data-dcnode-id="790"><span data-dcnode-id="794" instrument_node="">In the method&nbsp;</span><strong data-dcnode-id="792"><span data-dcnode-id="793" instrument_node="">onSurfaceCreated</span></strong><span data-dcnode-id="791" instrument_node="">, which is usually called at the beginning of the rendering, we will need to do some initializations for the AR scene.</span></p><span data-dcnode-id="789" instrument_node="">
+</span><ol data-dcnode-id="780"><li data-dcnode-id="787"><span data-dcnode-id="788" instrument_node="">Create a BackgroundRenderer instance and pass the id of that to the session camera.</span></li><li data-dcnode-id="785"><span data-dcnode-id="786" instrument_node="">Initialize the 3D object. This 3D object will be rendered in streamer’s AR world later.</span></li><li data-dcnode-id="783"><span data-dcnode-id="784" instrument_node="">Initialize the plane detection render.</span></li><li data-dcnode-id="781"><span data-dcnode-id="782" instrument_node="">Initialize the point cloud.</span></li></ol><span data-dcnode-id="779" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="776"><code data-dcnode-id="777"><span data-dcnode-id="778" instrument_node="">@Override
+public void onSurfaceCreated(GL10 gl, EGLConfig config) {
+    GLES20.glClearColor(0.1f,0.1f,0.1f,1.0f);
+
+    // Create the texture and pass it to ARCore session to be filled during update().
+    mBackgroundRenderer.createOnGlThread(/*context=*/ this);
+    if (mSession != null) {
+  mSession.setCameraTextureName(mBackgroundRenderer.getTextureId());
+    }    // Prepare the other rendering objects.
+    try {
+        mVirtualObject.createOnGlThread(/*context=*/this, "andy.obj", "andy.png");
+        mVirtualObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
+        mVirtualObjectShadow.createOnGlThread(/*context=*/this,
+                "andy_shadow.obj", "andy_shadow.png");
+        mVirtualObjectShadow.setBlendMode(ObjectRenderer.BlendMode.Shadow);
+        mVirtualObjectShadow.setMaterialProperties(1.0f, 0.0f, 0.0f, 1.0f);
+    } catch (IOException e) {
+        ...
+    }
+    try {
+        mPlaneRenderer.createOnGlThread(/*context=*/this, "trigrid.png");
+    } catch (IOException e) {
+        ...
+    }
+    mPointCloud.createOnGlThread(/*context=*/this);
+}</span></code></pre><span data-dcnode-id="775" instrument_node="">
+</span><h3 data-dcnode-id="773" id="h-override-onsurfacechanged"><span data-dcnode-id="774" instrument_node="">Override onSurfaceChanged</span></h3><span data-dcnode-id="772" instrument_node="">
+</span><p data-dcnode-id="767"><span data-dcnode-id="771" instrument_node="">In the&nbsp;</span><strong data-dcnode-id="769"><span data-dcnode-id="770" instrument_node="">onSurfaceChanged</span></strong><span data-dcnode-id="768" instrument_node="">&nbsp;method, which is called after the surface is created and when the surface size changes, we will set our viewport.</span></p><span data-dcnode-id="766" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="763"><code data-dcnode-id="764"><span data-dcnode-id="765" instrument_node="">@Override
+public void onSurfaceChanged(GL10 gl, int width, int height) {
+    ...
+    GLES20.glViewport(0, 0, width, height);
+}</span></code></pre><span data-dcnode-id="762" instrument_node="">
+</span><h3 data-dcnode-id="760" id="h-override-ondrawframe"><span data-dcnode-id="761" instrument_node="">Override onDrawFrame</span></h3><span data-dcnode-id="759" instrument_node="">
+</span><p data-dcnode-id="754"><span data-dcnode-id="758" instrument_node="">In the method&nbsp;</span><strong data-dcnode-id="756"><span data-dcnode-id="757" instrument_node="">onDrawFrame</span></strong><span data-dcnode-id="755" instrument_node="">, which is called to draw the current frame, we need to implement the render logic for the GLSurfaceView.</span></p><span data-dcnode-id="753" instrument_node="">
+</span><ol data-dcnode-id="740"><li data-dcnode-id="751"><span data-dcnode-id="752" instrument_node="">Clear screen</span></li><li data-dcnode-id="749"><span data-dcnode-id="750" instrument_node="">Get the latest frame from the ARSession.</span></li><li data-dcnode-id="747"><span data-dcnode-id="748" instrument_node="">Capture user’s taps and check if any planes in the scene were found. If so, create an anchor at that point.</span></li><li data-dcnode-id="745"><span data-dcnode-id="746" instrument_node="">Draw the background.</span></li><li data-dcnode-id="743"><span data-dcnode-id="744" instrument_node="">Draw the point cloud.</span></li><li data-dcnode-id="741"><span data-dcnode-id="742" instrument_node="">Iterate all the anchors and draw the 3D object on each of the anchors.</span></li></ol><span data-dcnode-id="739" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="736"><code data-dcnode-id="737"><span data-dcnode-id="738" instrument_node="">@Override
+public void onDrawFrame(GL10 gl) {
+    // Clear screen to notify driver it should not load any pixels from previous frame.
+    GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
+    ...
+    
+    try {
+        // Obtain the current frame from ARSession. When the configuration is set to
+        // UpdateMode.BLOCKING (it is by default), this will throttle the rendering to the camera framerate.
+        Frame frame = mSession.update();
+        Camera camera = frame.getCamera();
+
+        // Handle taps. Handling only one tap per frame, as taps are usually low frequency
+        // compared to frame rate.
+        MotionEvent tap = queuedSingleTaps.poll();
+        if (tap != null &amp;&amp; camera.getTrackingState() == TrackingState.TRACKING) {
+            for (HitResult hit : frame.hitTest(tap)) {
+                // Check if any plane was hit, and if it was hit inside the plane polygon
+                Trackable trackable = hit.getTrackable();
+                // Creates an anchor if a plane or an oriented point was hit.
+                if ((trackable instanceof Plane &amp;&amp; ((Plane) trackable).isPoseInPolygon(hit.getHitPose()))
+                        || (trackable instanceof Point
+                        &amp;&amp; ((Point) trackable).getOrientationMode()
+                        == Point.OrientationMode.ESTIMATED_SURFACE_NORMAL)) {
+                    // Hits are sorted by depth. Consider only closest hit on a plane or oriented point.
+                    // Cap the number of objects created. This avoids overloading both the
+                    // rendering system and ARCore.
+                    if (anchors.size() &gt;= 250) {
+                        anchors.get(0).detach();
+                        anchors.remove(0);
+                    }
+                    // Adding an Anchor tells ARCore that it should track this position in
+                    // space. This anchor is created on the Plane to place the 3D model
+                    // in the correct position relative both to the world and to the plane.
+                    anchors.add(hit.createAnchor());
+                    break;
+                }
+            }
+        }
+
+        // Draw background.
+        mBackgroundRenderer.draw(frame);
+
+        ...        if (isShowPointCloud()) {
+            // Visualize tracked points.
+            PointCloud pointCloud = frame.acquirePointCloud();
+            mPointCloud.update(pointCloud);
+            mPointCloud.draw(viewmtx, projmtx);
+
+            // Application is responsible for releasing the point cloud resources after
+            // using it.
+            pointCloud.release();
+        }
+
+        ...
+
+        if (isShowPlane()) {
+            // Visualize planes.
+            mPlaneRenderer.drawPlanes(
+                    mSession.getAllTrackables(Plane.class), camera.getDisplayOrientedPose(), projmtx);
+        }
+
+        // Visualize anchors created by touch.
+        float scaleFactor = 1.0f;
+
+        for (Anchor anchor : anchors) {
+            if (anchor.getTrackingState() != TrackingState.TRACKING) {
+                continue;
+            }
+            // Get the current pose of an Anchor in world space. The Anchor pose is updated
+            // during calls to session.update() as ARCore refines its estimate of the world.
+            anchor.getPose().toMatrix(mAnchorMatrix, 0);
+
+
+            // Update and draw the model and its shadow.
+            mVirtualObject.updateModelMatrix(mAnchorMatrix, mScaleFactor);
+            mVirtualObjectShadow.updateModelMatrix(mAnchorMatrix, scaleFactor);
+            mVirtualObject.draw(viewmtx, projmtx, lightIntensity);
+            mVirtualObjectShadow.draw(viewmtx, projmtx, lightIntensity);
+        }
+    } catch (Throwable t) {
+        ...
+    }
+}</span></code></pre><span data-dcnode-id="735" instrument_node="">
+</span><p data-dcnode-id="729"><em data-dcnode-id="730"><span data-dcnode-id="734" instrument_node="">Please note: Some of the concepts are not explained here. Check the </span><a data-dcnode-id="732" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//github.com/ysc1995/ARCoreAgora" rel="noreferrer noopener" target="_blank"><span data-dcnode-id="733" instrument_node="">Github code</span></a><span data-dcnode-id="731" instrument_node=""> for more understanding.</span></em></p><span data-dcnode-id="728" instrument_node="">
+</span><h2 data-dcnode-id="725" id="h-enable-streamer-s-video-call"><a data-dcnode-id="727" name="enable-streamer"></a><span data-dcnode-id="726" instrument_node="">Enable Streamer’s Video Call</span></h2><span data-dcnode-id="724" instrument_node="">
+</span><h3 data-dcnode-id="722" id="h-set-up-video-call-from-streamer"><span data-dcnode-id="723" instrument_node="">Set Up Video Call from Streamer</span></h3><span data-dcnode-id="721" instrument_node="">
+</span><p data-dcnode-id="716"><span data-dcnode-id="720" instrument_node="">In the&nbsp;</span><strong data-dcnode-id="718"><span data-dcnode-id="719" instrument_node="">onCreate()&nbsp;</span></strong><span data-dcnode-id="717" instrument_node="">method in the AgoraARStreamerActivity, let’s do following things:</span></p><span data-dcnode-id="715" instrument_node="">
+</span><ol data-dcnode-id="706"><li data-dcnode-id="713"><span data-dcnode-id="714" instrument_node="">Initialize the GLSurfaceView onTouchListener</span></li><li data-dcnode-id="711"><span data-dcnode-id="712" instrument_node="">Initialize the Agora RtcEngine</span></li><li data-dcnode-id="709"><span data-dcnode-id="710" instrument_node="">Set Up Custom Video source</span></li><li data-dcnode-id="707"><span data-dcnode-id="708" instrument_node="">Join Channel</span></li></ol><span data-dcnode-id="705" instrument_node="">
+</span><h3 data-dcnode-id="703" id="h-1-initialize-the-glsurfaceview-ontouchlistener"><span data-dcnode-id="704" instrument_node="">1. Initialize the GLSurfaceView onTouchListener</span></h3><span data-dcnode-id="702" instrument_node="">
+</span><p data-dcnode-id="700"><span data-dcnode-id="701" instrument_node="">Setting the onTouchListener for the GLSurfaceView allows us to capture the touch position and set an AR anchor at that position.</span></p><span data-dcnode-id="699" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="696"><code data-dcnode-id="697"><span data-dcnode-id="698" instrument_node="">mGestureDetector = new GestureDetector(this,
+        new GestureDetector.SimpleOnGestureListener() {
+            @Override
+            public boolean onSingleTapUp(MotionEvent e) {
+                onSingleTap(e);
+                return true;
+            }
+
+            @Override
+            public boolean onDown(MotionEvent e) {
+                return true;
+            }
+        });
+
+mSurfaceView.setOnTouchListener(new View.OnTouchListener() {
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        return mGestureDetector.onTouchEvent(event);
+    }
+});</span></code></pre><span data-dcnode-id="695" instrument_node="">
+</span><p data-dcnode-id="690"><span data-dcnode-id="694" instrument_node="">When the GestureDetector detects a single tap, it will trigger the </span><strong data-dcnode-id="692"><span data-dcnode-id="693" instrument_node="">onSingleTap</span></strong><span data-dcnode-id="691" instrument_node=""> method. In that method, we add this tap to a single tap queue.</span></p><span data-dcnode-id="689" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="686"><code data-dcnode-id="687"><span data-dcnode-id="688" instrument_node="">private void onSingleTap(MotionEvent e) {
+    queuedSingleTaps.offer(e);
+}</span></code></pre><span data-dcnode-id="685" instrument_node="">
+</span><p data-dcnode-id="677"><span data-dcnode-id="684" instrument_node="">Remember when we created anchors in </span><strong data-dcnode-id="682"><span data-dcnode-id="683" instrument_node="">onDrawFrame</span></strong><span data-dcnode-id="681" instrument_node=""> method? We polled the user’s taps from the </span><strong data-dcnode-id="679"><span data-dcnode-id="680" instrument_node="">queuedSingleTaps</span></strong><span data-dcnode-id="678" instrument_node="">. This is where the taps are added to the queue.</span></p><span data-dcnode-id="676" instrument_node="">
+</span><h3 data-dcnode-id="674" id="h-2-initialize-the-agora-rtcengine"><span data-dcnode-id="675" instrument_node="">2. Initialize the Agora RtcEngine</span></h3><span data-dcnode-id="673" instrument_node="">
+</span><p data-dcnode-id="668"><span data-dcnode-id="672" instrument_node="">In order to initialize the Agora video engine, just simply call&nbsp;</span><strong data-dcnode-id="670"><span data-dcnode-id="671" instrument_node="">RtcEngine.create(context, appid, RtcEventHandler)</span></strong><span data-dcnode-id="669" instrument_node="">&nbsp;to create a RtcEngine instance.</span></p><span data-dcnode-id="667" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="664"><code data-dcnode-id="665"><span data-dcnode-id="666" instrument_node="">mRtcEngine = RtcEngine.create(this, getString(R.string.private_broadcasting_app_id), mRtcEventHandler);</span></code></pre><span data-dcnode-id="663" instrument_node="">
+</span><p data-dcnode-id="658"><span data-dcnode-id="662" instrument_node="">In order to get the</span><a data-dcnode-id="660" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//docs.agora.io/en/Agora%2520Platform/terms%3Fplatform%3DAll%2520Platforms%23a-nameappidaapp-id" rel="noopener nofollow noreferrer" target="_blank"><span data-dcnode-id="661" instrument_node="">&nbsp;App ID</span></a><span data-dcnode-id="659" instrument_node="">&nbsp;in the parameter, follow these steps:</span></p><span data-dcnode-id="657" instrument_node="">
+</span><ol data-dcnode-id="643"><li data-dcnode-id="653"><a data-dcnode-id="655" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//docs.agora.io/en/Agora%2520Platform/manage_projects%3Fplatform%3DAll%2520Platforms" rel="noreferrer noopener" target="_blank"><span data-dcnode-id="656" instrument_node="">Create an Agora project</span></a><span data-dcnode-id="654" instrument_node="">&nbsp;in the Agora Console.</span></li><li data-dcnode-id="648"><span data-dcnode-id="652" instrument_node="">Click the</span><a data-dcnode-id="650" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//sso.agora.io/login/%3Fresponse_type%3Dcode%26client_id%3D59T2cPE9by201sbXpExrCEVNgIi0su1h%26redirect_uri%3Dhttps%253A%252F%252Fconsole.agora.io%252Fapi%252Fv2%252Foauth" rel="noreferrer noopener" target="_blank"><span data-dcnode-id="651" instrument_node="">&nbsp;Project Management</span></a><span data-dcnode-id="649" instrument_node="">&nbsp;tab on the left navigation panel.</span></li><li data-dcnode-id="646"><span data-dcnode-id="647" instrument_node="">Click “Create” and follow the on-screen instructions to set the project name, choose an authentication mechanism, and click “Submit”.</span></li><li data-dcnode-id="644"><span data-dcnode-id="645" instrument_node="">On the Project Management page, find the App ID of your project.</span></li></ol><span data-dcnode-id="642" instrument_node="">
+</span><p data-dcnode-id="637"><span data-dcnode-id="641" instrument_node="">The&nbsp;</span><strong data-dcnode-id="639"><span data-dcnode-id="640" instrument_node="">mRtcEventHandler</span></strong><span data-dcnode-id="638" instrument_node="">&nbsp;is a handler to manage different events occurring with the RtcEngine. Let’s implement it with some basic event handlers needed for this application.</span></p><span data-dcnode-id="636" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="633"><code data-dcnode-id="634"><span data-dcnode-id="635" instrument_node="">private IRtcEngineEventHandler mRtcEventHandler = new IRtcEngineEventHandler() {
+    @Override
+    public void onJoinChannelSuccess(final String channel, int uid, int elapsed) {
+        //when local user joined the channel
+        ...
+    }
+
+    @Override
+    public void onRemoteVideoStateChanged(final int uid, int state, int reason, int elapsed) {
+        super.onRemoteVideoStateChanged(uid, state, reason, elapsed);
+        //when remote user join the channel
+        if (state == Constants.REMOTE_VIDEO_STATE_STARTING) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    addRemoteRender(uid);
+                }
+            });
+        }
+    }
+
+    @Override
+    public void onUserOffline(int uid, int reason) {
+        //when remote user leave the channel
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                removeRemoteRender();
+            }
+        });
+    }
+
+    @Override
+    public void onStreamMessage(int uid, int streamId, byte[] data) {
+        //when received the remote user's stream message data
+        ...
+    }
+};</span></code></pre><span data-dcnode-id="632" instrument_node="">
+</span><p data-dcnode-id="627"><span data-dcnode-id="631" instrument_node="">Check the comments on the top of each event handler methods to have a better understanding of them. For more RtcEngine event handlers that you can use, check the</span><a data-dcnode-id="629" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//docs.agora.io/en/Video/API%2520Reference/java/classio_1_1agora_1_1rtc_1_1_i_rtc_engine_event_handler.html" rel="noreferrer noopener" target="_blank"><span data-dcnode-id="630" instrument_node="">&nbsp;Agora Rtc API document</span></a><span data-dcnode-id="628" instrument_node="">.</span></p><span data-dcnode-id="626" instrument_node="">
+</span><p data-dcnode-id="620"><em data-dcnode-id="621"><span data-dcnode-id="625" instrument_node="">Please Note: Some of the logic to show video views on the screen is hidden. You can check the&nbsp;Github </span><a data-dcnode-id="623" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//github.com/ysc1995/ARCoreAgora" rel="noopener nofollow noreferrer" target="_blank"><span data-dcnode-id="624" instrument_node="">demo app</span></a><span data-dcnode-id="622" instrument_node="">&nbsp;for a better understanding of how to display and remove video views on the screen dynamically.</span></em></p><span data-dcnode-id="619" instrument_node="">
+</span><h3 data-dcnode-id="617" id="h-3-set-up-custom-video-source"><span data-dcnode-id="618" instrument_node="">3. Set Up Custom Video Source</span></h3><span data-dcnode-id="616" instrument_node="">
+</span><p data-dcnode-id="614"><span data-dcnode-id="615" instrument_node="">In our application, we want to let the streamer send their AR world to the audience. So the video they send out is from a custom video source instead of a general camera video stream. Luckily, Agora Video SDK provides an API method to send custom video sources.</span></p><span data-dcnode-id="613" instrument_node="">
+</span><p data-dcnode-id="605"><span data-dcnode-id="612" instrument_node="">Create a class called AgoraVideoSource which implements </span><a data-dcnode-id="610" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//docs.agora.io/en/Voice/API%2520Reference/java/interfaceio_1_1agora_1_1rtc_1_1mediaio_1_1_i_video_source.html" rel="noopener noreferrer" target="_blank"><span data-dcnode-id="611" instrument_node="">IVideoSource</span></a><span data-dcnode-id="609" instrument_node=""> interface. The </span><a data-dcnode-id="607" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//docs.agora.io/en/Voice/API%2520Reference/java/interfaceio_1_1agora_1_1rtc_1_1mediaio_1_1_i_video_source.html" rel="noopener noreferrer" target="_blank"><span data-dcnode-id="608" instrument_node="">IVideoSource</span></a><span data-dcnode-id="606" instrument_node=""> interface defines a set of protocols to implement the custom video source and pass it to the underlying media engine to replace the default video source.</span></p><span data-dcnode-id="604" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="601"><code data-dcnode-id="602"><span data-dcnode-id="603" instrument_node="">public class AgoraVideoSource implements IVideoSource {
+    private IVideoFrameConsumer mConsumer;
+
+    @Override
+    public boolean onInitialize(IVideoFrameConsumer iVideoFrameConsumer) {
+        mConsumer = iVideoFrameConsumer;
+        return true;
+    }
+
+    @Override
+    public boolean onStart() {
+        return true;
+    }
+
+    @Override
+    public void onStop() {
+    }
+
+    @Override
+    public void onDispose() {
+    }
+
+    @Override
+    public int getBufferType() {
+        return MediaIO.BufferType.BYTE_ARRAY.intValue();
+    }
+
+    public IVideoFrameConsumer getConsumer() {
+        return mConsumer;
+    }
+}</span></code></pre><span data-dcnode-id="600" instrument_node="">
+</span><p data-dcnode-id="592"><span data-dcnode-id="599" instrument_node="">In the </span><strong data-dcnode-id="597"><span data-dcnode-id="598" instrument_node="">onCreate </span></strong><span data-dcnode-id="596" instrument_node=""> method within the </span><strong data-dcnode-id="594"><span data-dcnode-id="595" instrument_node="">AgoraARStreamerActivity</span></strong><span data-dcnode-id="593" instrument_node="">, call the constructor method to create the AgoraVideoSource instance.</span></p><span data-dcnode-id="591" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="588"><code data-dcnode-id="589"><span data-dcnode-id="590" instrument_node="">mSource = new AgoraVideoSource();</span></code></pre><span data-dcnode-id="587" instrument_node="">
+</span><p data-dcnode-id="576"><span data-dcnode-id="586" instrument_node="">Create a class called </span><strong data-dcnode-id="584"><span data-dcnode-id="585" instrument_node="">AgoraVideoRender</span></strong><span data-dcnode-id="583" instrument_node=""> which implements </span><a data-dcnode-id="581" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//docs.agora.io/en/Voice/API%2520Reference/java/interfaceio_1_1agora_1_1rtc_1_1mediaio_1_1_i_video_sink.html" rel="noopener nofollow noreferrer" target="_blank"><span data-dcnode-id="582" instrument_node="">&nbsp;IVideoSink</span></a><span data-dcnode-id="580" instrument_node=""> interface. The</span><a data-dcnode-id="578" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//docs.agora.io/en/Voice/API%2520Reference/java/interfaceio_1_1agora_1_1rtc_1_1mediaio_1_1_i_video_sink.html" rel="noopener nofollow noreferrer" target="_blank"><span data-dcnode-id="579" instrument_node="">&nbsp;IVideoSink</span></a><span data-dcnode-id="577" instrument_node=""> interface defines a set of protocols to create a customized video sink and pass it to the media engine to replace the default video renderer.</span></p><span data-dcnode-id="575" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="572"><code data-dcnode-id="573"><span data-dcnode-id="574" instrument_node="">public class AgoraVideoRender implements IVideoSink {
+    private Peer mPeer;
+    private boolean mIsLocal;
+
+    public AgoraVideoRender(int uid, boolean local) {
+        mPeer = new Peer();
+        mPeer.uid = uid;
+        mIsLocal = local;
+    }
+
+    public Peer getPeer() {
+        return mPeer;
+    }
+
+    @Override
+    public boolean onInitialize() {
+        return true;
+    }
+
+    @Override
+    public boolean onStart() {
+        return true;
+    }
+
+    @Override
+    public void onStop() {
+
+    }
+
+    @Override
+    public void onDispose() {
+
+    }
+
+    @Override
+    public long getEGLContextHandle() {
+        return 0;
+    }
+
+    @Override
+    public int getBufferType() {
+        return MediaIO.BufferType.BYTE_BUFFER.intValue();
+    }
+
+    @Override
+    public int getPixelFormat() {
+        return MediaIO.PixelFormat.RGBA.intValue();
+    }
+
+    @Override
+    public void consumeByteBufferFrame(ByteBuffer buffer, int format, int width, int height, int rotation, long ts) {
+        if (!mIsLocal) {
+            mPeer.data = buffer;
+            mPeer.width = width;
+            mPeer.height = height;
+            mPeer.rotation = rotation;
+            mPeer.ts = ts;
+        }
+    }
+
+    @Override
+    public void consumeByteArrayFrame(byte[] data, int format, int width, int height, int rotation, long ts) {
+        
+    }
+
+    @Override
+    public void consumeTextureFrame(int texId, int format, int width, int height, int rotation, long ts, float[] matrix) {
+
+    }
+
+}</span></code></pre><span data-dcnode-id="571" instrument_node="">
+</span><p data-dcnode-id="569"><span data-dcnode-id="570" instrument_node="">Similar to the AgoraVideoSource instance, we create the AgoraVideoRender instance by calling its constructor. Here we pass uid as 0 to represent a local video render.</span></p><span data-dcnode-id="568" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="565"><code data-dcnode-id="566"><span data-dcnode-id="567" instrument_node="">mRender = new AgoraVideoRender(0, true);</span></code></pre><span data-dcnode-id="564" instrument_node="">
+</span><p data-dcnode-id="562"><span data-dcnode-id="563" instrument_node="">After creating two instances, we call</span></p><span data-dcnode-id="561" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="558"><code data-dcnode-id="559"><span data-dcnode-id="560" instrument_node="">mRtcEngine.setVideoSource(mSource);
+mRtcEngine.setLocalVideoRenderer(mRender);</span></code></pre><span data-dcnode-id="557" instrument_node="">
+</span><p data-dcnode-id="555"><span data-dcnode-id="556" instrument_node="">to set the custom AR video source and local video renderer.</span></p><span data-dcnode-id="554" instrument_node="">
+</span><p data-dcnode-id="552"><span data-dcnode-id="553" instrument_node="">However, the video source we set does not have data in it. We need to pass the AR camera view to our video source. To do that, we are going to add logic at the end of the onDrawFrame method that we override before.</span></p><span data-dcnode-id="551" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="548"><code data-dcnode-id="549"><span data-dcnode-id="550" instrument_node="">@Override
+public void onDrawFrame(GL10 gl) {
+    ...
+    final Bitmap outBitmap = Bitmap.createBitmap(mSurfaceView.getWidth(), mSurfaceView.getHeight(), Bitmap.Config.ARGB_8888);
+    PixelCopy.request(mSurfaceView, outBitmap, new PixelCopy.OnPixelCopyFinishedListener() {
+        @Override
+        public void onPixelCopyFinished(int copyResult) {
+            if (copyResult == PixelCopy.SUCCESS) {
+                sendARView(outBitmap);
+            } else {
+                Toast.makeText(AgoraARCoreActivity.this, "Pixel Copy Failed", Toast.LENGTH_SHORT);
+            }
+        }
+    }, mSenderHandler);
+}private void sendARView(Bitmap bitmap) {
+    if (bitmap == null) return;
+
+    if (mSource.getConsumer() == null) return;
+
+    //Bitmap bitmap = source.copy(Bitmap.Config.ARGB_8888,true);
+    int width = bitmap.getWidth();
+    int height = bitmap.getHeight();
+
+    int size = bitmap.getRowBytes() * bitmap.getHeight();
+    ByteBuffer byteBuffer = ByteBuffer.allocate(size);
+    bitmap.copyPixelsToBuffer(byteBuffer);
+    byte[] data = byteBuffer.array();
+
+    mSource.getConsumer().consumeByteArrayFrame(data, MediaIO.PixelFormat.RGBA.intValue(), width, height, 0, System.currentTimeMillis());
+}</span></code></pre><span data-dcnode-id="547" instrument_node="">
+</span><p data-dcnode-id="545"><span data-dcnode-id="546" instrument_node="">The logic here is to copy the GLSurfaceView to a bitmap and send the bitmap buffer to our custom video source.</span></p><span data-dcnode-id="544" instrument_node="">
+</span><h3 data-dcnode-id="542" id="h-4-join-channel"><span data-dcnode-id="543" instrument_node="">4. Join Channel</span></h3><span data-dcnode-id="541" instrument_node="">
+</span><p data-dcnode-id="536"><span data-dcnode-id="540" instrument_node="">Now, we are ready to join the channel by calling&nbsp;</span><strong data-dcnode-id="538"><span data-dcnode-id="539" instrument_node="">joinChannel()</span></strong><span data-dcnode-id="537" instrument_node="">&nbsp;on the RtcEngine instance by passing the channelName from the previous activity.</span></p><span data-dcnode-id="535" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="532"><code data-dcnode-id="533"><span data-dcnode-id="534" instrument_node="">mRtcEngine.joinChannel(null, channelName, "", 0);</span></code></pre><span data-dcnode-id="531" instrument_node="">
+</span><p data-dcnode-id="528"><em data-dcnode-id="529"><span data-dcnode-id="530" instrument_node="">Please Note: The token in the parameter can be set to null.</span></em></p><span data-dcnode-id="527" instrument_node="">
+</span><p data-dcnode-id="522"><span data-dcnode-id="526" instrument_node="">By calling this function and successfully joining the channel, the RtcEngineEventHandler will trigger the </span><strong data-dcnode-id="524"><span data-dcnode-id="525" instrument_node="">onJoinChannelSuccess()</span></strong><span data-dcnode-id="523" instrument_node=""> method that we implemented in the previous step. It will return a unique Agora video id which is generated by the Agora server.</span></p><span data-dcnode-id="521" instrument_node="">
+</span><p data-dcnode-id="519"><span data-dcnode-id="520" instrument_node="">Till this point, the streamer can join the channel and broadcast their AR world to the audience.</span></p><span data-dcnode-id="518" instrument_node="">
+</span><h2 data-dcnode-id="515" id="h-enable-audience-s-video-call"><a data-dcnode-id="517" name="enable-audience"></a><span data-dcnode-id="516" instrument_node="">Enable Audience’s Video Call</span></h2><span data-dcnode-id="514" instrument_node="">
+</span><p data-dcnode-id="512"><span data-dcnode-id="513" instrument_node="">Enabling the audience’s video call is very similar to the one we have written for the streamer. The only difference is to set up local camera video after initializing RtcEngine.</span></p><span data-dcnode-id="511" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="508"><code data-dcnode-id="509"><span data-dcnode-id="510" instrument_node="">mRtcEngine.enableVideo();
+mLocalView = RtcEngine.CreateRendererView(getBaseContext());
+mLocalContainer.addView(mLocalView);
+mLocalView.setZOrderMediaOverlay(true);
+
+VideoCanvas localVideoCanvas = new VideoCanvas(mLocalView, VideoCanvas.RENDER_MODE_HIDDEN, 0);
+mRtcEngine.setupLocalVideo(localVideoCanvas);</span></code></pre><span data-dcnode-id="507" instrument_node="">
+</span><p data-dcnode-id="505"><span data-dcnode-id="506" instrument_node="">This will put the audience’s local camera view on the top right corner of the screen.</span></p><span data-dcnode-id="504" instrument_node="">
+</span><p data-dcnode-id="498"><em data-dcnode-id="499"><span data-dcnode-id="503" instrument_node="">Please Note: Find&nbsp;</span><a data-dcnode-id="501" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//github.com/ysc1995/ARCoreAgora/blob/master/app/src/main/java/com/example/arcoreagora/AgoraARAudienceActivity.java" rel="noreferrer noopener" target="_blank"><span data-dcnode-id="502" instrument_node="">Github code</span></a><span data-dcnode-id="500" instrument_node=""> for more understanding.</span></em></p><span data-dcnode-id="497" instrument_node="">
+</span><p data-dcnode-id="495"><span data-dcnode-id="496" instrument_node="">We are now able to start a video call between streamer and audience. However, this is still not a feature-complete remote assistance app because the audience cannot interact with streamer’s AR world. We’ll start implementing the audience markup feature through ARCore next.</span></p><span data-dcnode-id="494" instrument_node="">
+</span><h2 data-dcnode-id="491" id="h-remote-assistance-feature"><a data-dcnode-id="493" name="remote-assistance-feature"></a><span data-dcnode-id="492" instrument_node="">Remote Assistance Feature</span></h2><span data-dcnode-id="490" instrument_node="">
+</span><p data-dcnode-id="488"><span data-dcnode-id="489" instrument_node="">Ideally, the remote technician (audience) should be able to provide assistance when they want to direct the customer (streamer) by drawing on the screen. This markup should be rendered on the customer’s side instantly and should remain in the same position as drawn.</span></p><span data-dcnode-id="487" instrument_node="">
+</span><p data-dcnode-id="485"><span data-dcnode-id="486" instrument_node="">In order to achieve that, we are going to collect the audience member’s touch positions and send them to the streamer. As long as the streamer receives those touch points, we can simulate the touches on the streamer’s screen to create AR objects.</span></p><span data-dcnode-id="484" instrument_node="">
+</span><p data-dcnode-id="471"><span data-dcnode-id="483" instrument_node="">Let’s first collect the audience’s touch positions. In AgoraARAudienceActivity’s </span><strong data-dcnode-id="481"><span data-dcnode-id="482" instrument_node="">onCreate</span></strong><span data-dcnode-id="480" instrument_node=""> method, set up a touch listener on the remote view container. Collect all the touch point positions in relation to the center of the screen. Send them out to the streamer as a data stream message using the Agora API method, </span><a data-dcnode-id="477" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//docs.agora.io/en/Voice/API%2520Reference/java/classio_1_1agora_1_1rtc_1_1_rtc_engine.html%23add24033c9fb02fceaaeaa2377d9d3ec8" rel="noreferrer noopener" target="_blank"><strong data-dcnode-id="478"><span data-dcnode-id="479" instrument_node="">sendStreamMessage</span></strong></a><span data-dcnode-id="476" instrument_node="">. This will trigger the streamer’s&nbsp;</span><a data-dcnode-id="473" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//docs.agora.io/en/Voice/API%2520Reference/java/classio_1_1agora_1_1rtc_1_1_i_rtc_engine_event_handler.html%23a435020ae6eb5a728b5a41a9fa633c80b" rel="noreferrer noopener" target="_blank"><strong data-dcnode-id="474"><span data-dcnode-id="475" instrument_node="">onStreamMessage</span></strong></a><span data-dcnode-id="472" instrument_node=""> callback. Since a user can only send 6kB of data per second, we send out the touch points whenever we collect 10 of them.</span></p><span data-dcnode-id="470" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="467"><code data-dcnode-id="468"><span data-dcnode-id="469" instrument_node="">mRemoteContainer.setOnTouchListener(new View.OnTouchListener() {
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_MOVE:
+                //get the touch position related to the center of the screen
+                touchCount++;
+                float x = event.getRawX() - ((float)mWidth / 2);
+                float y = event.getRawY() - ((float)mHeight / 2);
+                floatList.add(x);
+                floatList.add(y);
+                if (touchCount == 10) {
+                    //send the touch positions when collected 10 touch points
+                    sendMessage(touchCount, floatList);
+                    touchCount = 0;
+                    floatList.clear();
+                }
+                break;
+            case MotionEvent.ACTION_UP:
+                //send touch positions after the touch motion
+                sendMessage(touchCount, floatList);
+                touchCount = 0;
+                floatList.clear();
+                break;
+        }
+        return true;
+    }
+});</span></code></pre><span data-dcnode-id="466" instrument_node="">
+</span><p data-dcnode-id="461"><span data-dcnode-id="465" instrument_node="">Here is the </span><strong data-dcnode-id="463"><span data-dcnode-id="464" instrument_node="">sendMessage</span></strong><span data-dcnode-id="462" instrument_node=""> logic:</span></p><span data-dcnode-id="460" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="457"><code data-dcnode-id="458"><span data-dcnode-id="459" instrument_node="">/**
+ * send the touch points as a byte array to Agora sdk
+ * @param touchCount
+ * @param floatList
+ */
+private void sendMessage(int touchCount, List&lt;Float&gt; floatList) {
+    byte[] motionByteArray = new byte[touchCount * 4 * 2];
+    for (int i = 0; i &lt; floatList.size(); i++) {
+        byte[] curr = ByteBuffer.allocate(4).putFloat(floatList.get(i)).array();
+        for (int j = 0; j &lt; 4; j++) {
+            motionByteArray[i * 4 + j] = curr[j];
+        }
+    }
+    mRtcEngine.sendStreamMessage(dataChannel, motionByteArray);
+}</span></code></pre><span data-dcnode-id="456" instrument_node="">
+</span><p data-dcnode-id="448"><span data-dcnode-id="455" instrument_node="">Now, in </span><strong data-dcnode-id="453"><span data-dcnode-id="454" instrument_node="">AgoraARStreamerActivity</span></strong><span data-dcnode-id="452" instrument_node="">, we need to override the </span><strong data-dcnode-id="450"><span data-dcnode-id="451" instrument_node="">onStreamMessage</span></strong><span data-dcnode-id="449" instrument_node=""> callback to receive touch points sent by the audience and simulate the touches on the streamer’s screen.</span></p><span data-dcnode-id="447" instrument_node="">
+</span><pre class="wp-block-code" data-dcnode-id="444"><code data-dcnode-id="445"><span data-dcnode-id="446" instrument_node="">@Override
+public void onStreamMessage(int uid, int streamId, byte[] data) {
+    //when received the remote user's stream message data
+    super.onStreamMessage(uid, streamId, data);
+    int touchCount = data.length / 8;       //number of touch points from data array
+    for (int k = 0; k &lt; touchCount; k++) {
+        //get the touch point's x,y position related to the center of the screen and calculated the raw position
+        byte[] xByte = new byte[4];
+        byte[] yByte = new byte[4];
+        for (int i = 0; i &lt; 4; i++) {
+            xByte[i] = data[i + 8 * k];
+            yByte[i] = data[i + 8 * k + 4];
+        }
+        float convertedX = ByteBuffer.wrap(xByte).getFloat();
+        float convertedY = ByteBuffer.wrap(yByte).getFloat();
+        float center_X = convertedX + ((float) mWidth / 2);
+        float center_Y = convertedY + ((float) mHeight / 2);
+
+        //simulate the clicks based on the touch position got from the data array
+        instrumentation.sendPointerSync(MotionEvent.obtain(SystemClock.uptimeMillis(), SystemClock.uptimeMillis(), MotionEvent.ACTION_DOWN, center_X, center_Y, 0));
+        instrumentation.sendPointerSync(MotionEvent.obtain(SystemClock.uptimeMillis(), SystemClock.uptimeMillis(), MotionEvent.ACTION_UP, center_X, center_Y, 0));
+    }
+}</span></code></pre><span data-dcnode-id="443" instrument_node="">
+</span><h2 data-dcnode-id="440" id="h-build-and-test-on-device"><a data-dcnode-id="442" name="build-test-device"></a><span data-dcnode-id="441" instrument_node="">Build and Test on Device</span></h2><span data-dcnode-id="439" instrument_node="">
+</span><p data-dcnode-id="437"><span data-dcnode-id="438" instrument_node="">That’s all you need to build a remote assistance app. Now let’s run our application!</span></p><span data-dcnode-id="436" instrument_node="">
+</span><p data-dcnode-id="431"><span data-dcnode-id="435" instrument_node="">Go to Android Studio, make sure your Android device is plugged in, and click </span><strong data-dcnode-id="433"><span data-dcnode-id="434" instrument_node="">Run</span></strong><span data-dcnode-id="432" instrument_node=""> to build the application on your device. Remember to build the application on two devices to start the video call. Both devices must run Android API level 24 or higher and originally ship with Google Play Store.</span></p><span data-dcnode-id="430" instrument_node="">
+</span><p data-dcnode-id="425"><span data-dcnode-id="429" instrument_node="">You can check detailed device requirements&nbsp;</span><a data-dcnode-id="427" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//developers.google.com/ar/discover/supported-devices" rel="noreferrer noopener" target="_blank"><span data-dcnode-id="428" instrument_node="">here</span></a><span data-dcnode-id="426" instrument_node="">.</span></p><span data-dcnode-id="424" instrument_node="">
+</span><figure class="wp-block-image size-large" data-dcnode-id="420"><img alt="" class="wp-image-28027" data-dcnode-id="423" height="566" loading="lazy" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2020/11/build-augmented-reality-remote-assistance-3.gif&amp;raw" width="320"><figcaption data-dcnode-id="421"><span data-dcnode-id="422" instrument_node="">Done!</span></figcaption></figure><span data-dcnode-id="419" instrument_node="">
+</span><h2 data-dcnode-id="417" id="h-done"><span data-dcnode-id="418" instrument_node="">Done</span></h2><span data-dcnode-id="416" instrument_node="">
+</span><p data-dcnode-id="414"><span data-dcnode-id="415" instrument_node="">Congratulations! You just build yourself a remote assistance application with augmented reality features!</span></p><span data-dcnode-id="413" instrument_node="">
+</span><p data-dcnode-id="408"><span data-dcnode-id="412" instrument_node="">Thank you for following along. Please leave a comment below! Here is the email address for any of the questions you might have:&nbsp;</span><a data-dcnode-id="410" href="mailto:devrel@agora.io" rel="noreferrer noopener" target="_blank"><span data-dcnode-id="411" instrument_node="">devrel@agora.io</span></a><span data-dcnode-id="409" instrument_node="">.</span></p><span data-dcnode-id="407" instrument_node="">
+</span><hr class="wp-block-separator" data-dcnode-id="406"><span data-dcnode-id="405" instrument_node="">
+</span><div class="o-block-grid o-block-grid-1-md blog-footer-tile" data-dcnode-id="388"><span data-dcnode-id="404" instrument_node="">
+</span><div class="o-block-grid__item u-hidden-xs u-hidden-sm" data-dcnode-id="398"><span data-dcnode-id="403" instrument_node="">
+</span><figure class="wp-block-image size-full" data-dcnode-id="400"><a data-dcnode-id="401" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//sso.agora.io/en/signup" rel="noopener" target="_blank"><img alt="Blog Cta" class="wp-image-35749" data-dcnode-id="402" height="293" loading="lazy" sizes="(max-width: 1507px) 100vw, 1507px" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2022/01/blog-cta.png&amp;raw" srcset="https://www.agora.io/en/wp-content/uploads/2022/01/blog-cta.png 1507w, https://www.agora.io/en/wp-content/uploads/2022/01/blog-cta-300x58.png 300w, https://www.agora.io/en/wp-content/uploads/2022/01/blog-cta-1024x199.png 1024w, https://www.agora.io/en/wp-content/uploads/2022/01/blog-cta-768x149.png 768w" width="1507"></a></figure><span data-dcnode-id="399" instrument_node="">
+</span></div><span data-dcnode-id="397" instrument_node="">
+</span><div class="o-block-grid__item u-hidden-md u-hidden-lg u-hidden-xl" data-dcnode-id="390"><span data-dcnode-id="396" instrument_node="">
+</span><div class="wp-block-image" data-dcnode-id="392"><figure class="aligncenter size-full" data-dcnode-id="393"><a data-dcnode-id="394" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//sso.agora.io/en/signup" rel="noopener" target="_blank"><img alt="Blog Cta mobile" class="wp-image-35748" data-dcnode-id="395" height="293" loading="lazy" sizes="(max-width: 580px) 100vw, 580px" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/wp-content/uploads/2022/01/blog-cta-mobile.jpeg&amp;raw" srcset="https://www.agora.io/en/wp-content/uploads/2022/01/blog-cta-mobile.jpeg 580w, https://www.agora.io/en/wp-content/uploads/2022/01/blog-cta-mobile-300x152.jpeg 300w" width="580"></a></figure></div><span data-dcnode-id="391" instrument_node="">
+</span></div><span data-dcnode-id="389" instrument_node="">
+</span></div><span data-dcnode-id="387" instrument_node="">
+</span></div><span data-dcnode-id="385" instrument_node="">
+</span><div class="o-col o-col--first-lg u-3of12-lg" data-dcnode-id="357"><span data-dcnode-id="384" instrument_node="">
+</span><div class="c-widgets-area" data-dcnode-id="359" id="js-sticky-sidebar"><span data-dcnode-id="383" instrument_node="">
+</span><aside class="c-widget widget_categories" data-dcnode-id="361" id="categories-2"><h2 class="is-style-h3" data-dcnode-id="381"><span data-dcnode-id="382" instrument_node="">Categories</span></h2><span data-dcnode-id="380" instrument_node="">
+</span><ul data-dcnode-id="363"><span data-dcnode-id="379" instrument_node="">
+</span><li class="cat-item cat-item-32" data-dcnode-id="375"><a data-dcnode-id="377" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/category/business/"><span data-dcnode-id="378" instrument_node="">Business</span></a><span data-dcnode-id="376" instrument_node="">
+</span></li><span data-dcnode-id="374" instrument_node="">
+</span><li class="cat-item cat-item-12" data-dcnode-id="370"><a data-dcnode-id="372" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/category/developer/"><span data-dcnode-id="373" instrument_node="">Developer</span></a><span data-dcnode-id="371" instrument_node="">
+</span></li><span data-dcnode-id="369" instrument_node="">
+</span><li class="cat-item cat-item-87" data-dcnode-id="365"><a data-dcnode-id="367" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/category/product/"><span data-dcnode-id="368" instrument_node="">Product</span></a><span data-dcnode-id="366" instrument_node="">
+</span></li><span data-dcnode-id="364" instrument_node="">
+</span></ul><span data-dcnode-id="362" instrument_node="">
+</span></aside><span data-dcnode-id="360" instrument_node=""> </span></div><span data-dcnode-id="358" instrument_node="">
+</span></div><span data-dcnode-id="356" instrument_node="">
+</span></div><span data-dcnode-id="354" instrument_node="">
+</span></div><span data-dcnode-id="352" instrument_node="">
+</span></article><span data-dcnode-id="350" instrument_node="">
+</span></main><span data-dcnode-id="348" instrument_node="">
+</span><footer class="c-site-footer" data-dcnode-id="46"><span data-dcnode-id="347" instrument_node="">
+</span><div class="c-breadcrumbs" data-dcnode-id="329"><span data-dcnode-id="346" instrument_node="">
+</span><div class="o-container" data-dcnode-id="331"><span data-dcnode-id="345" instrument_node="">
+</span><div data-dcnode-id="333" id="breadcrumbs"><span data-dcnode-id="334"><span data-dcnode-id="335"><a data-dcnode-id="343" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/"><span data-dcnode-id="344" instrument_node="">Home</span></a><span data-dcnode-id="342" instrument_node=""> / </span><span data-dcnode-id="336"><a data-dcnode-id="340" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/blog/"><span data-dcnode-id="341" instrument_node="">Blog</span></a><span data-dcnode-id="339" instrument_node=""> / </span><span aria-current="page" class="breadcrumb_last" data-dcnode-id="337"><span data-dcnode-id="338" instrument_node="">How To: Build an Augmented Reality Remote Assistance App in Android</span></span></span></span></span></div><span data-dcnode-id="332" instrument_node=""> </span></div><span data-dcnode-id="330" instrument_node="">
+</span></div><span data-dcnode-id="328" instrument_node="">
+</span><div class="c-fat-footer" data-dcnode-id="122"><span data-dcnode-id="327" instrument_node="">
+</span><div class="o-container c-fat-footer__content" data-dcnode-id="124"><span data-dcnode-id="326" instrument_node="">
+</span><div class="c-fat-footer__widget-area" data-dcnode-id="305"><span data-dcnode-id="325" instrument_node="">
+</span><div class="c-widget widget_text" data-dcnode-id="307" id="text-2"><h2 class="c-widget__title" data-dcnode-id="323"><span data-dcnode-id="324" instrument_node="">Connect Now</span></h2><span data-dcnode-id="322" instrument_node=""> </span><div class="textwidget" data-dcnode-id="309"><p data-dcnode-id="320"><span data-dcnode-id="321" instrument_node="">tel. 408.879.5885</span></p><span data-dcnode-id="319" instrument_node="">
+</span><p data-dcnode-id="316"><a data-dcnode-id="317" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/talk-to-us/"><span data-dcnode-id="318" instrument_node="">Email our team </span></a></p><span data-dcnode-id="315" instrument_node="">
+</span><p data-dcnode-id="311"><span data-dcnode-id="314" instrument_node="">2804 Mission College Blvd.</span><br data-dcnode-id="313"><span data-dcnode-id="312" instrument_node="">
+Santa Clara, CA, USA 95054</span></p><span data-dcnode-id="310" instrument_node="">
+</span></div><span data-dcnode-id="308" instrument_node="">
+</span></div><span data-dcnode-id="306" instrument_node=""> </span></div><span data-dcnode-id="304" instrument_node="">
+</span><nav aria-label="Social, community, and company links" class="c-fat-footer__nav-area" data-dcnode-id="126"><span data-dcnode-id="303" instrument_node="">
+</span><div class="c-fat-footer__nav-container" data-dcnode-id="254"><span data-dcnode-id="302" instrument_node="">
+</span><h2 class="is-style-h4" data-dcnode-id="300"><span data-dcnode-id="301" instrument_node="">Follow Us</span></h2><span data-dcnode-id="299" instrument_node="">
+</span><ul class="o-list-bare c-footer-nav c-footer-nav--social" data-dcnode-id="256" id="social-links"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50" data-dcnode-id="294" id="menu-item-50"><a data-dcnode-id="295" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//twitter.com/AgoraIO" rel="noopener" target="_blank"><div class="menu-item-content" data-dcnode-id="296"><div class="menu-item-title" data-dcnode-id="297"><span data-dcnode-id="298" instrument_node="">Twitter</span></div></div></a></li><span data-dcnode-id="293" instrument_node="">
+</span><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52" data-dcnode-id="288" id="menu-item-52"><a data-dcnode-id="289" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.facebook.com/AgoraIO/" rel="noopener" target="_blank"><div class="menu-item-content" data-dcnode-id="290"><div class="menu-item-title" data-dcnode-id="291"><span data-dcnode-id="292" instrument_node="">Facebook</span></div></div></a></li><span data-dcnode-id="287" instrument_node="">
+</span><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51" data-dcnode-id="282" id="menu-item-51"><a data-dcnode-id="283" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.linkedin.com/company/agora-lab-inc/" rel="noopener" target="_blank"><div class="menu-item-content" data-dcnode-id="284"><div class="menu-item-title" data-dcnode-id="285"><span data-dcnode-id="286" instrument_node="">LinkedIn</span></div></div></a></li><span data-dcnode-id="281" instrument_node="">
+</span><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56" data-dcnode-id="276" id="menu-item-56"><a data-dcnode-id="277" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.instagram.com/agora.io/" rel="noopener" target="_blank"><div class="menu-item-content" data-dcnode-id="278"><div class="menu-item-title" data-dcnode-id="279"><span data-dcnode-id="280" instrument_node="">Instagram</span></div></div></a></li><span data-dcnode-id="275" instrument_node="">
+</span><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-54" data-dcnode-id="270" id="menu-item-54"><a data-dcnode-id="271" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.youtube.com/channel/UCjPZukasIgWoB4HBHga5CGA" rel="noopener" target="_blank"><div class="menu-item-content" data-dcnode-id="272"><div class="menu-item-title" data-dcnode-id="273"><span data-dcnode-id="274" instrument_node="">YouTube</span></div></div></a></li><span data-dcnode-id="269" instrument_node="">
+</span><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55" data-dcnode-id="264" id="menu-item-55"><a data-dcnode-id="265" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//medium.com/agora-io" rel="noopener" target="_blank"><div class="menu-item-content" data-dcnode-id="266"><div class="menu-item-title" data-dcnode-id="267"><span data-dcnode-id="268" instrument_node="">Medium</span></div></div></a></li><span data-dcnode-id="263" instrument_node="">
+</span><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49" data-dcnode-id="258" id="menu-item-49"><a data-dcnode-id="259" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//github.com/AgoraIO-Community" rel="noopener" target="_blank"><div class="menu-item-content" data-dcnode-id="260"><div class="menu-item-title" data-dcnode-id="261"><span data-dcnode-id="262" instrument_node="">GitHub</span></div></div></a></li><span data-dcnode-id="257" instrument_node="">
+</span></ul><span data-dcnode-id="255" instrument_node=""> </span></div><span data-dcnode-id="253" instrument_node="">
+</span><div class="c-fat-footer__nav-container" data-dcnode-id="228"><span data-dcnode-id="252" instrument_node="">
+</span><h2 class="is-style-h4" data-dcnode-id="250"><span data-dcnode-id="251" instrument_node="">Secondary Navigation</span></h2><span data-dcnode-id="249" instrument_node="">
+</span><ul class="o-list-bare c-footer-nav" data-dcnode-id="230" id="footer-column-1"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-82" data-dcnode-id="244" id="menu-item-82"><a data-dcnode-id="245" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/pricing/"><div class="menu-item-content" data-dcnode-id="246"><div class="menu-item-title" data-dcnode-id="247"><span data-dcnode-id="248" instrument_node="">Pricing</span></div></div></a></li><span data-dcnode-id="243" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84" data-dcnode-id="238" id="menu-item-84"><a data-dcnode-id="239" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/talk-to-us/"><div class="menu-item-content" data-dcnode-id="240"><div class="menu-item-title" data-dcnode-id="241"><span data-dcnode-id="242" instrument_node="">Talk to Us</span></div></div></a></li><span data-dcnode-id="237" instrument_node="">
+</span><li class="is-style-button menu-item menu-item-type-custom menu-item-object-custom menu-item-86" data-dcnode-id="232" id="menu-item-86"><a data-dcnode-id="233" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//sso.agora.io/en/signup"><div class="menu-item-content" data-dcnode-id="234"><div class="menu-item-title" data-dcnode-id="235"><span data-dcnode-id="236" instrument_node="">Get Started</span></div></div></a></li><span data-dcnode-id="231" instrument_node="">
+</span></ul><span data-dcnode-id="229" instrument_node=""> </span></div><span data-dcnode-id="227" instrument_node="">
+</span><div class="c-fat-footer__nav-container" data-dcnode-id="172"><span data-dcnode-id="226" instrument_node="">
+</span><h2 class="is-style-h4" data-dcnode-id="224"><span data-dcnode-id="225" instrument_node="">Company</span></h2><span data-dcnode-id="223" instrument_node="">
+</span><ul class="o-list-bare c-footer-nav" data-dcnode-id="174" id="footer-column-2"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31092" data-dcnode-id="218" id="menu-item-31092"><a data-dcnode-id="219" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/about-us/"><div class="menu-item-content" data-dcnode-id="220"><div class="menu-item-title" data-dcnode-id="221"><span data-dcnode-id="222" instrument_node="">About Us</span></div></div></a></li><span data-dcnode-id="217" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-28299" data-dcnode-id="212" id="menu-item-28299"><a data-dcnode-id="213" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/blog/"><div class="menu-item-content" data-dcnode-id="214"><div class="menu-item-title" data-dcnode-id="215"><span data-dcnode-id="216" instrument_node="">Blog</span></div></div></a></li><span data-dcnode-id="211" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31093" data-dcnode-id="206" id="menu-item-31093"><a data-dcnode-id="207" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/compliance/"><div class="menu-item-content" data-dcnode-id="208"><div class="menu-item-title" data-dcnode-id="209"><span data-dcnode-id="210" instrument_node="">Compliance &amp; Privacy</span></div></div></a></li><span data-dcnode-id="205" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87" data-dcnode-id="200" id="menu-item-87"><a data-dcnode-id="201" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/agora-management/"><div class="menu-item-content" data-dcnode-id="202"><div class="menu-item-title" data-dcnode-id="203"><span data-dcnode-id="204" instrument_node="">Management</span></div></div></a></li><span data-dcnode-id="199" instrument_node="">
+</span><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28300" data-dcnode-id="194" id="menu-item-28300"><a data-dcnode-id="195" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/events/"><div class="menu-item-content" data-dcnode-id="196"><div class="menu-item-title" data-dcnode-id="197"><span data-dcnode-id="198" instrument_node="">Events</span></div></div></a></li><span data-dcnode-id="193" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28298" data-dcnode-id="188" id="menu-item-28298"><a data-dcnode-id="189" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/careers/"><div class="menu-item-content" data-dcnode-id="190"><div class="menu-item-title" data-dcnode-id="191"><span data-dcnode-id="192" instrument_node="">Careers</span></div></div></a></li><span data-dcnode-id="187" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88" data-dcnode-id="182" id="menu-item-88"><a data-dcnode-id="183" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/newsroom/"><div class="menu-item-content" data-dcnode-id="184"><div class="menu-item-title" data-dcnode-id="185"><span data-dcnode-id="186" instrument_node="">Newsroom</span></div></div></a></li><span data-dcnode-id="181" instrument_node="">
+</span><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89" data-dcnode-id="176" id="menu-item-89"><a data-dcnode-id="177" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//investor.agora.io/" rel="noopener" target="_blank"><div class="menu-item-content" data-dcnode-id="178"><div class="menu-item-title" data-dcnode-id="179"><span data-dcnode-id="180" instrument_node="">Investor Relations</span></div></div></a></li><span data-dcnode-id="175" instrument_node="">
+</span></ul><span data-dcnode-id="173" instrument_node=""> </span></div><span data-dcnode-id="171" instrument_node="">
+</span><div class="c-fat-footer__nav-container" data-dcnode-id="128"><span data-dcnode-id="170" instrument_node="">
+</span><h2 class="is-style-h4" data-dcnode-id="168"><span data-dcnode-id="169" instrument_node="">Get Started</span></h2><span data-dcnode-id="167" instrument_node="">
+</span><ul class="o-list-bare c-footer-nav" data-dcnode-id="130" id="footer-column-3"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31094" data-dcnode-id="162" id="menu-item-31094"><a data-dcnode-id="163" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//console.agora.io/" rel="noopener" target="_blank"><div class="menu-item-content" data-dcnode-id="164"><div class="menu-item-title" data-dcnode-id="165"><span data-dcnode-id="166" instrument_node="">Login</span></div></div></a></li><span data-dcnode-id="161" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31095" data-dcnode-id="156" id="menu-item-31095"><a data-dcnode-id="157" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/pricing/"><div class="menu-item-content" data-dcnode-id="158"><div class="menu-item-title" data-dcnode-id="159"><span data-dcnode-id="160" instrument_node="">Pricing</span></div></div></a></li><span data-dcnode-id="155" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31980" data-dcnode-id="150" id="menu-item-31980"><a data-dcnode-id="151" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/pricing/support-plans/"><div class="menu-item-content" data-dcnode-id="152"><div class="menu-item-title" data-dcnode-id="153"><span data-dcnode-id="154" instrument_node="">Support Plans</span></div></div></a></li><span data-dcnode-id="149" instrument_node="">
+</span><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31096" data-dcnode-id="144" id="menu-item-31096"><a data-dcnode-id="145" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//sso.agora.io/en/signup" rel="noopener" target="_blank"><div class="menu-item-content" data-dcnode-id="146"><div class="menu-item-title" data-dcnode-id="147"><span data-dcnode-id="148" instrument_node="">Get Started</span></div></div></a></li><span data-dcnode-id="143" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31097" data-dcnode-id="138" id="menu-item-31097"><a data-dcnode-id="139" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/developer-resources/"><div class="menu-item-content" data-dcnode-id="140"><div class="menu-item-title" data-dcnode-id="141"><span data-dcnode-id="142" instrument_node="">Developer Resources</span></div></div></a></li><span data-dcnode-id="137" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31098" data-dcnode-id="132" id="menu-item-31098"><a data-dcnode-id="133" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/talk-to-us/"><div class="menu-item-content" data-dcnode-id="134"><div class="menu-item-title" data-dcnode-id="135"><span data-dcnode-id="136" instrument_node="">Talk to Us</span></div></div></a></li><span data-dcnode-id="131" instrument_node="">
+</span></ul><span data-dcnode-id="129" instrument_node=""> </span></div><span data-dcnode-id="127" instrument_node="">
+</span></nav><span data-dcnode-id="125" instrument_node="">
+</span></div><span data-dcnode-id="123" instrument_node="">
+</span></div><span data-dcnode-id="121" instrument_node="">
+</span><div class="c-footer-bottom-bar" data-dcnode-id="66"><span data-dcnode-id="120" instrument_node="">
+</span><div class="o-container" data-dcnode-id="68"><span data-dcnode-id="119" instrument_node="">
+</span><p class="u-text-small u-no-margin-bottom" data-dcnode-id="117"><span data-dcnode-id="118" instrument_node="">
+						Copyright © 2022 Agora. All rights reserved.					</span></p><span data-dcnode-id="116" instrument_node="">
+</span><nav aria-label="Legal and additional links" data-dcnode-id="70"><span data-dcnode-id="115" instrument_node="">
+</span><ul class="o-list-bare c-legal-links" data-dcnode-id="72" id="legal-links"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-92" data-dcnode-id="110" id="menu-item-92"><a data-dcnode-id="111" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/privacy-policy/"><div class="menu-item-content" data-dcnode-id="112"><div class="menu-item-title" data-dcnode-id="113"><span data-dcnode-id="114" instrument_node="">Privacy Policy</span></div></div></a></li><span data-dcnode-id="109" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95" data-dcnode-id="104" id="menu-item-95"><a data-dcnode-id="105" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/cookie-policy/"><div class="menu-item-content" data-dcnode-id="106"><div class="menu-item-title" data-dcnode-id="107"><span data-dcnode-id="108" instrument_node="">Cookie Policy</span></div></div></a></li><span data-dcnode-id="103" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96" data-dcnode-id="98" id="menu-item-96"><a data-dcnode-id="99" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/terms-of-service/"><div class="menu-item-content" data-dcnode-id="100"><div class="menu-item-title" data-dcnode-id="101"><span data-dcnode-id="102" instrument_node="">Terms of Service</span></div></div></a></li><span data-dcnode-id="97" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93" data-dcnode-id="92" id="menu-item-93"><a data-dcnode-id="93" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/acceptable-use-policy/"><div class="menu-item-content" data-dcnode-id="94"><div class="menu-item-title" data-dcnode-id="95"><span data-dcnode-id="96" instrument_node="">Acceptable Use Policy</span></div></div></a></li><span data-dcnode-id="91" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94" data-dcnode-id="86" id="menu-item-94"><a data-dcnode-id="87" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/compliance/"><div class="menu-item-content" data-dcnode-id="88"><div class="menu-item-title" data-dcnode-id="89"><span data-dcnode-id="90" instrument_node="">Compliance &amp; Privacy</span></div></div></a></li><span data-dcnode-id="85" instrument_node="">
+</span><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29832" data-dcnode-id="80" id="menu-item-29832"><a data-dcnode-id="81" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/sitemap/"><div class="menu-item-content" data-dcnode-id="82"><div class="menu-item-title" data-dcnode-id="83"><span data-dcnode-id="84" instrument_node="">Site Map</span></div></div></a></li><span data-dcnode-id="79" instrument_node="">
+</span><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34105" data-dcnode-id="74" id="menu-item-34105"><a data-dcnode-id="75" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/trust-safety-with-agora/"><div class="menu-item-content" data-dcnode-id="76"><div class="menu-item-title" data-dcnode-id="77"><span data-dcnode-id="78" instrument_node="">Report Abuse of our Terms of Service</span></div></div></a></li><span data-dcnode-id="73" instrument_node="">
+</span></ul><span data-dcnode-id="71" instrument_node=""> </span></nav><span data-dcnode-id="69" instrument_node="">
+</span></div><span data-dcnode-id="67" instrument_node="">
+</span></div><span data-dcnode-id="65" instrument_node="">
+</span><div class="c-footer-cookie-notice" data-dcnode-id="48" id="js-cookie-notice" style=""><span data-dcnode-id="64" instrument_node="">
+</span><p data-dcnode-id="59"><span data-dcnode-id="63" instrument_node="">
+					We use cookies to offer you a better experience and analyze site traffic. By continuing to use this website, you consent to the use of cookies in accordance with our </span><a data-dcnode-id="61" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/cookie-policy/" target="_blank"><span data-dcnode-id="62" instrument_node="">Cookie Policy</span></a><span data-dcnode-id="60" instrument_node="">.				</span></p><span data-dcnode-id="58" instrument_node="">
+</span><p class="u-text-right" data-dcnode-id="50"><span data-dcnode-id="57" instrument_node="">
+</span><a class="u-no-wrap" data-dcnode-id="55" href="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//www.agora.io/en/cookie-policy/" target="_blank"><span data-dcnode-id="56" instrument_node="">Tell me how to opt out</span></a><span data-dcnode-id="54" instrument_node="">
+</span><button class="c-footer-cookie-notice__accept-btn" data-dcnode-id="52" id="js-cookie-notice-accept-btn" role="button"><span data-dcnode-id="53" instrument_node="">I Accept</span></button><span data-dcnode-id="51" instrument_node="">
+</span></p><span data-dcnode-id="49" instrument_node="">
+</span></div><span data-dcnode-id="47" instrument_node="">
+</span></footer><span data-dcnode-id="45" instrument_node="">
+</span><span data-dcnode-id="43" instrument_node="">
+</span><span data-dcnode-id="41" instrument_node="">
+</span><span data-dcnode-id="39" instrument_node="">
+</span><span data-dcnode-id="37" instrument_node="">
+</span><span data-dcnode-id="35" instrument_node="">
+</span><span data-dcnode-id="33" instrument_node="">
+</span><span data-dcnode-id="31" instrument_node="">
+</span><span data-dcnode-id="28" instrument_node="">
+</span><iframe allow="autoplay" allowfullscreen="" data-dcnode-id="3" id="insent-iframe" src="https://chatnoir-webcontent.chatnoir.eu/?index=cw22&amp;url=https%3A//agora.widget.insent.ai/%3Fproject_key%3DjzKasX5RZwJVWXjW5mgj%26blog_url%3Dwww.agora.io%252Fen%252Fblog%252Fbuild-an-augmented-reality-remote-assistance-app-in-android%252F%26event_listener%3DsSvveUExS4UccyW%26marketo_cookies%3D%255B%255D%26hubspot_cookies%3D%255B%255D%26pardot_cookies%3D%255B%255D%26eloqua_cookies%3D%255B%255D%26parent_innerwidth%3D1024%26parent_innerheight%3D6144%26widgetVisibility%3Dtrue%26locale%3Dundefined&amp;raw" title="insent-widget"><html data-dcnode-id="5" lang="en"><head data-dcnode-id="16"><meta charset="utf-8"><meta charset="utf-8" data-dcnode-id="26"/><meta content="width=device-width,initial-scale=1" data-dcnode-id="25" name="viewport"/><link data-dcnode-id="24" href="https://fonts.googleapis.com/css?family=Rubik:400,700&amp;display=swap" rel="stylesheet"/><meta content="ie=edge" data-dcnode-id="22" http-equiv="X-UA-Compatible"/><base data-dcnode-id="21" target="_blank"/></meta></head><body data-dcnode-id="6"><div data-dcnode-id="14" id="insent-chat-widget"><div class="sc-cTjmhe fNLmbe" data-dcnode-id="15" id="insent-app-container"></div></div></body></html></iframe>
+</body></html></template>
+        </div>
+    
+</body>
+</html>
