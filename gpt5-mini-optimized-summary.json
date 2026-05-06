@@ -1,0 +1,99 @@
+{
+  "variant": "gpt5-mini-optimized",
+  "variant_file": "gpt5-mini-optimized.html",
+  "source_dir": "/Users/tangyao/AgentGEO/5-mini-outputs/documents",
+  "doc_count": 9,
+  "manifest_entries_updated": 266,
+  "docs": [
+    {
+      "doc_id": "35146c118e87",
+      "url": "https://www.nbcnews.com/better/pop-culture/your-weird-dreams-actually-make-lot-sense-according-neuroscience-psychology-ncna913436",
+      "path": "35146c118e87/gpt5-mini-optimized.html",
+      "agentgeo_baseline_test_citation_rate": 0.7837837837837838,
+      "agentgeo_optimized_test_citation_rate": 0.8918918918918919,
+      "agentgeo_delta_test_citation_rate": 0.10810810810810811,
+      "html_bytes": 70529,
+      "source_json": "/Users/tangyao/AgentGEO/5-mini-outputs/documents/35146c118e87.json"
+    },
+    {
+      "doc_id": "56622076e31f",
+      "url": "https://www.newindianexpress.com/states/karnataka/2017/jan/23/traditional-folk-sports-in-karnataka-remain-on-the-horns-of-a-dilemma-1562469.html",
+      "path": "56622076e31f/gpt5-mini-optimized.html",
+      "agentgeo_baseline_test_citation_rate": 1.0,
+      "agentgeo_optimized_test_citation_rate": 1.0,
+      "agentgeo_delta_test_citation_rate": 0.0,
+      "html_bytes": 44620,
+      "source_json": "/Users/tangyao/AgentGEO/5-mini-outputs/documents/56622076e31f.json"
+    },
+    {
+      "doc_id": "8fae8e89d08d",
+      "url": "https://www.health.com/condition/acne/stress-acne",
+      "path": "8fae8e89d08d/gpt5-mini-optimized.html",
+      "agentgeo_baseline_test_citation_rate": 0.9629629629629629,
+      "agentgeo_optimized_test_citation_rate": 0.9259259259259259,
+      "agentgeo_delta_test_citation_rate": -0.03703703703703698,
+      "html_bytes": 105569,
+      "source_json": "/Users/tangyao/AgentGEO/5-mini-outputs/documents/8fae8e89d08d.json"
+    },
+    {
+      "doc_id": "ba4f4dd11189",
+      "url": "https://novoresume.com/career-blog/job-scams",
+      "path": "ba4f4dd11189/gpt5-mini-optimized.html",
+      "agentgeo_baseline_test_citation_rate": 0.9210526315789473,
+      "agentgeo_optimized_test_citation_rate": 0.9210526315789473,
+      "agentgeo_delta_test_citation_rate": 0.0,
+      "html_bytes": 137304,
+      "source_json": "/Users/tangyao/AgentGEO/5-mini-outputs/documents/ba4f4dd11189.json"
+    },
+    {
+      "doc_id": "bed92055a273",
+      "url": "https://lionstale.org/11370/opinion/pro-con-should-the-voting-age-be-lowered/",
+      "path": "bed92055a273/gpt5-mini-optimized.html",
+      "agentgeo_baseline_test_citation_rate": 0.775,
+      "agentgeo_optimized_test_citation_rate": 0.875,
+      "agentgeo_delta_test_citation_rate": 0.09999999999999998,
+      "html_bytes": 36915,
+      "source_json": "/Users/tangyao/AgentGEO/5-mini-outputs/documents/bed92055a273.json"
+    },
+    {
+      "doc_id": "d3a09432c303",
+      "url": "https://www.verywellhealth.com/how-much-does-a-vasectomy-cost-906900",
+      "path": "d3a09432c303/gpt5-mini-optimized.html",
+      "agentgeo_baseline_test_citation_rate": 0.85,
+      "agentgeo_optimized_test_citation_rate": 0.9,
+      "agentgeo_delta_test_citation_rate": 0.050000000000000044,
+      "html_bytes": 117223,
+      "source_json": "/Users/tangyao/AgentGEO/5-mini-outputs/documents/d3a09432c303.json"
+    },
+    {
+      "doc_id": "e8a7347a7c52",
+      "url": "https://www.healthline.com/nutrition/rhubarb",
+      "path": "e8a7347a7c52/gpt5-mini-optimized.html",
+      "agentgeo_baseline_test_citation_rate": 0.8064516129032258,
+      "agentgeo_optimized_test_citation_rate": 0.7741935483870968,
+      "agentgeo_delta_test_citation_rate": -0.032258064516129004,
+      "html_bytes": 98920,
+      "source_json": "/Users/tangyao/AgentGEO/5-mini-outputs/documents/e8a7347a7c52.json"
+    },
+    {
+      "doc_id": "edac288abbfc",
+      "url": "https://www.mskcc.org/news/truth-behind-three-natural-cures",
+      "path": "edac288abbfc/gpt5-mini-optimized.html",
+      "agentgeo_baseline_test_citation_rate": 0.35,
+      "agentgeo_optimized_test_citation_rate": 1.0,
+      "agentgeo_delta_test_citation_rate": 0.65,
+      "html_bytes": 100508,
+      "source_json": "/Users/tangyao/AgentGEO/5-mini-outputs/documents/edac288abbfc.json"
+    },
+    {
+      "doc_id": "fd9ad19ca6c7",
+      "url": "https://www.thesprucepets.com/domesticated-pet-foxes-1238643",
+      "path": "fd9ad19ca6c7/gpt5-mini-optimized.html",
+      "agentgeo_baseline_test_citation_rate": 0.85,
+      "agentgeo_optimized_test_citation_rate": 0.9,
+      "agentgeo_delta_test_citation_rate": 0.050000000000000044,
+      "html_bytes": 117397,
+      "source_json": "/Users/tangyao/AgentGEO/5-mini-outputs/documents/fd9ad19ca6c7.json"
+    }
+  ]
+}
