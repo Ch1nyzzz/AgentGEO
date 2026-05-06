@@ -122,6 +122,7 @@ class SuggestionProcessorV2:
         llm,
         generator,  # AsyncInContextGenerator
         config: AgentGEOConfigV2,
+        config_path: str = "geo_agent/config.yaml",
         history_manager: Optional[HistoryManagerV2] = None,
         search_func: Optional[Callable] = None,
         competitor_content_func: Optional[Callable] = None,
@@ -129,6 +130,7 @@ class SuggestionProcessorV2:
         self.llm = llm
         self.generator = generator
         self.config = config
+        self.config_path = config_path
         self.struct_parser = StructuralHtmlParser(min_length=50)
         self.core_idea_manager = CoreIdeaManagerV2(llm)
 
@@ -251,6 +253,7 @@ class SuggestionProcessorV2:
             enable_memory=self.config.enable_memory,
             enable_history=self.config.enable_history,
             excluded_tools=excluded_tools,
+            config_path=self.config_path,
         )
 
         # 6. Define retrieval and citation check functions

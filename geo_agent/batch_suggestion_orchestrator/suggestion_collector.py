@@ -76,6 +76,7 @@ class SuggestionCollectorV2:
         enable_memory: bool = True,
         enable_history: bool = True,
         excluded_tools: Optional[List[str]] = None,
+        config_path: str = "geo_agent/config.yaml",
     ):
         self.llm = llm
         self.generator = generator
@@ -89,6 +90,7 @@ class SuggestionCollectorV2:
         self.enable_memory = enable_memory
         self.enable_history = enable_history
         self.excluded_tools = excluded_tools or []
+        self.config_path = config_path
 
         # Memory for each query (for tracking retries)
         self._query_memories: Dict[str, OptimizationMemoryV2] = {}
@@ -456,6 +458,7 @@ class SuggestionCollectorV2:
                 core_idea = self.core_ideas.get(orchestra_id, "")
                 tool_args['core_idea'] = core_idea
                 tool_args['previous_modifications'] = memory.get_preservation_rules() if self.enable_memory else ""
+                tool_args['config_path'] = self.config_path
 
                 # Add required parameters for content_relocation tool (aligned with geo_agent)
                 if analysis.selected_tool_name == "content_relocation":

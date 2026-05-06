@@ -48,11 +48,14 @@ def create_optimizer(method: str, config: Dict) -> Dict[str, Any]:
             "keyword_stuffing", "quotation_addition", "easy_to_understand",
             "fluency_optimization", "unique_words", "technical_terms"
         ]
+        baseline_kwargs = {
+            key: value for key, value in baseline_config.items()
+            if key != "methods"
+        }
         for m in baseline_methods:
             optimizers[f"baseline_{m}"] = BaselineOptimizers(
                 method_name=m,
-                provider=baseline_config["provider"],
-                model=baseline_config["model"]
+                **baseline_kwargs,
             )
 
     return optimizers

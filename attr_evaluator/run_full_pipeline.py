@@ -109,7 +109,7 @@ if __name__ == "__main__":
     argparser.add_argument('-o', '--outdir', type=str, default=None, help='path to output csv.')
     argparser.add_argument('--indir-alignments', type=str, default=None, help='path to json file with alignments (if nothing is passed - goes to default under data/{setting}/{split}.json).')
     argparser.add_argument('--indir-prompt', type=str, default=None, help='path to json file with the prompt structure and ICL examples (if nothing is passed - goes to default under prompts/{setting}.json).')
-    argparser.add_argument('--model-name', type=str, default="gpt-4.1-mini", help='model name')
+    argparser.add_argument('--model-name', type=str, default="gpt-5-mini", help='model name')
     argparser.add_argument('--n-demos', type=int, default=2, help='number of ICL examples (default 2)')
     argparser.add_argument('--num-retries', type=int, default=1, help='number of retries of running the model.')
     argparser.add_argument('--temperature', type=float, default=0.2, help='temperature of generation')

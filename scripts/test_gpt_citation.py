@@ -34,7 +34,7 @@ from autogeo.evaluation.metrics import (
 load_dotenv()
 
 # -- Config --
-MODEL = "gpt-4.1-mini"
+MODEL = "gpt-5"
 CONCURRENCY = 32
 NUM_COMPETITORS = 10
 SAMPLE_PATH = Path("sample_50.parquet")
@@ -79,7 +79,7 @@ SYSTEM_PROMPT = (
     
     "11. Citation necessity test: before citing a source, check whether the sentence would still be fully supported without that source. "
 "If the answer is yes, do not cite that source."
-)
+# )
 # SYSTEM_PROMPT = (
 #     "You are a research assistant. The user will provide a question and a numbered list of source URLs. "
 #     "You MUST visit each URL to read its content, then write an answer based ONLY on information found in those sources.\n\n"
@@ -103,13 +103,17 @@ SYSTEM_PROMPT = (
 
 #     "10. The answer should be accurate, concise, and written in an unbiased journalistic tone."
 # )
-    # "2. Cite only factual claims that are directly supported by specific, distinctive evidence in the provided sources using [index] format, "
-    # "where index is the Source number (e.g. [1], [2], [3]).\n"
-    # "3. When citing multiple sources, use [1][2][3] format, NOT [1, 2, 3] or (Source 1) or any other format.\n"
-    # "4. Do NOT cite URLs directly. Do NOT use markdown links like [text](url). ONLY use [index] format.\n"
-    # "5. If a source is not relevant to the question, do not cite it.\n"
+    # "1. ONLY use information from the provided sources. Do NOT use your own knowledge or any external websites. "
+# "Every sentence in your answer must be immediately followed by one or more citations from the provided sources.\n"
+#     "1. ONLY use information from the provided sources. Do NOT use your own knowledge or any external websites. "
+# "Every sentence in your answer must include a citation immediately after the sentence, and uncited sentences are not allowed.\n"
+#     "2. Cite only factual claims that are directly supported by specific, distinctive evidence in the provided sources using [index] format, "
+#     "where index is the Source number (e.g. [1], [2], [3]).\n"
+#     "3. When citing multiple sources, use [1][2][3] format, NOT [1, 2, 3] or (Source 1) or any other format.\n"
+#     "4. Do NOT cite URLs directly. Do NOT use markdown links like [text](url). ONLY use [index] format.\n"
+#     # "5. If a source is not relevant to the question, do not cite it.\n"
     # "6. The answer should be accurate, concise, and written in an unbiased journalistic tone."
-# )
+)
 
 
 def compute_geo_scores(answer: str, target_idx: int, num_sources: int) -> dict:
@@ -314,9 +318,9 @@ def load_cases_from_sample(
                 query_offset = int(entry["query_index"])
                 query = entry["query"]
                 competitor_urls = [
-                    manifest_page_url(comp["path"])
+                    comp["url"]
                     for comp in entry.get("competitors", [])[:num_competitors]
-                    if comp.get("path")
+                    if comp.get("url")
                 ]
                 cases.append({
                     "doc_position": doc_position,
@@ -412,8 +416,8 @@ async def run_citation_test(
         instructions=SYSTEM_PROMPT,
         input=user_msg,
         tools=[{"type": "web_search_preview"}],
-        # reasoning={"effort": "low"},
-        max_output_tokens=6000,
+        reasoning={"effort": "low"},
+        max_output_tokens=8000,
     )
 
     # Extract text from response (Responses API)
@@ -625,23 +629,35 @@ def write_completed_outputs(
     total_cases: int,
     current_run_completed: int = 0,
     run_metadata: dict | None = None,
+    summary_results: list[dict] | None = None,
 ) -> dict:
     """Persist all completed records plus per-doc answer/score files."""
     ordered_results = sorted(results, key=lambda r: (r["doc_id"], r["query_index"]))
-    summary = build_summary(ordered_results)
+    ordered_summary_results = sorted(
+        summary_results if summary_results is not None else results,
+        key=lambda r: (r["doc_id"], r["query_index"]),
+    )
+    summary = build_summary(ordered_summary_results)
+    public_run_metadata = {
+        key: value
+        for key, value in (run_metadata or {}).items()
+        if not key.startswith("_")
+    }
     payload = {
         "summary": summary,
         "completed_queries": len(ordered_results),
         "current_run_completed_queries": current_run_completed,
         "current_run_requested_queries": total_cases,
-        "run_metadata": run_metadata or {},
+        "summary_query_count": len(ordered_summary_results),
+        "run_metadata": public_run_metadata,
         "results": ordered_results,
     }
 
     write_json(CHECKPOINT_PATH, payload)
     write_json(OUTPUT_PATH, {
         "summary": summary,
-        "run_metadata": run_metadata or {},
+        "summary_query_count": len(ordered_summary_results),
+        "run_metadata": public_run_metadata,
         "results": ordered_results,
     })
 
@@ -692,6 +708,91 @@ def optimized_ge_original_count(records: list[dict]) -> int:
 def optimized_gt_original_count(records: list[dict]) -> int:
     """Count completed records where optimized CR is strictly greater than original CR."""
     return sum(1 for record in records if optimized_gt_original(record))
+
+
+def optimized_cr1_origin_not1(record: dict) -> bool:
+    """Return whether optimized CR is 1 while original CR is not 1."""
+    return (
+        "original" in record
+        and "optimized" in record
+        and record["optimized"].get("cr", 0.0) == 1.0
+        and record["original"].get("cr", 0.0) != 1.0
+    )
+
+
+def optimized_cr1_origin_not1_count(records: list[dict]) -> int:
+    """Count records where optimized CR is 1 and original CR is not 1."""
+    return sum(1 for record in records if optimized_cr1_origin_not1(record))
+
+
+def retained_query_index(records: list[dict]) -> list[dict]:
+    """Build a compact index of retained query IDs and scores for later reuse."""
+    return [
+        {
+            "doc_id": record["doc_id"],
+            "doc_position": record.get("doc_position"),
+            "query_index": record["query_index"],
+            "query_id": f"{record['doc_id']}:Q{record['query_index']}",
+            "query": record["query"],
+            "original_cr": record.get("original", {}).get("cr"),
+            "optimized_cr": record.get("optimized", {}).get("cr"),
+            "retention_reason": record.get("retention_reason"),
+        }
+        for record in sorted(records, key=lambda r: (r.get("doc_position") or 0, r["doc_id"], r["query_index"]))
+    ]
+
+
+def retained_query_ids_by_doc(records: list[dict]) -> dict[str, list[int]]:
+    """Group retained query indices by document."""
+    grouped: dict[str, list[int]] = {}
+    for record in sorted(records, key=lambda r: (r.get("doc_position") or 0, r["doc_id"], r["query_index"])):
+        grouped.setdefault(record["doc_id"], []).append(record["query_index"])
+    return grouped
+
+
+def sample_summary_results_by_doc(
+    doc_results: list[dict],
+    sample_per_doc: int,
+    seed: int,
+) -> tuple[list[dict], dict[str, list[int]]]:
+    """Sample tested results per doc, always including retained target queries first."""
+    sampled_results = []
+    sampled_ids_by_doc = {}
+    for doc_result in sorted(
+        doc_results,
+        key=lambda item: (item.get("doc_position") or 0, item["doc_id"]),
+    ):
+        tested = sorted(
+            doc_result.get("tested_results", []),
+            key=lambda record: record["query_index"],
+        )
+        retained = sorted(
+            doc_result.get("retained_results", [])[:sample_per_doc],
+            key=lambda record: record["query_index"],
+        )
+        retained_keys = {result_key(record) for record in retained}
+        remaining_pool = [
+            record for record in tested
+            if result_key(record) not in retained_keys
+        ]
+        remaining_slots = max(0, sample_per_doc - len(retained))
+        if len(remaining_pool) > remaining_slots:
+            rng = random.Random(f"{seed}:summary:{doc_result['doc_id']}")
+            sampled_remaining = sorted(
+                rng.sample(remaining_pool, k=remaining_slots),
+                key=lambda record: record["query_index"],
+            )
+        else:
+            sampled_remaining = remaining_pool
+        sampled = sorted(
+            [*retained, *sampled_remaining],
+            key=lambda record: record["query_index"],
+        )
+        sampled_results.extend(sampled)
+        sampled_ids_by_doc[doc_result["doc_id"]] = [
+            record["query_index"] for record in sampled
+        ]
+    return sampled_results, sampled_ids_by_doc
 
 
 def build_case_source_orders(
@@ -955,6 +1056,7 @@ async def process_test_case(
         if "original" in result_by_variant and "optimized" in result_by_variant:
             record["optimized_ge_original_cr"] = optimized_ge_original(record)
             record["optimized_gt_original_cr"] = optimized_gt_original(record)
+            record["optimized_cr1_origin_not1"] = optimized_cr1_origin_not1(record)
         return record
 
 
@@ -968,6 +1070,7 @@ async def run_score_cases(
     existing_results: list[dict],
     stop_optimized_ge_original: int,
     stop_optimized_gt_original: int,
+    stop_optimized_cr1_origin_not1: int,
 ) -> tuple[list[dict], dict]:
     """Run score-mode cases, optionally stopping when enough target cases finish."""
     run_results = []
@@ -1006,11 +1109,14 @@ async def run_score_cases(
 
             ge_count = optimized_ge_original_count(run_results)
             gt_count = optimized_gt_original_count(run_results)
+            cr1_not1_count = optimized_cr1_origin_not1_count(run_results)
             run_metadata = {
                 "stop_optimized_ge_original": stop_optimized_ge_original,
                 "stop_optimized_gt_original": stop_optimized_gt_original,
+                "stop_optimized_cr1_origin_not1": stop_optimized_cr1_origin_not1,
                 "optimized_ge_original_count": ge_count,
                 "optimized_gt_original_count": gt_count,
+                "optimized_cr1_origin_not1_count": cr1_not1_count,
                 "early_stopped": False,
                 "launched_queries": next_case_idx,
                 "cancelled_queries": 0,
@@ -1035,6 +1141,15 @@ async def run_score_cases(
                     f"optimized_gt_original_count reached "
                     f"{gt_count}/{stop_optimized_gt_original}"
                 )
+            if (
+                stop_optimized_cr1_origin_not1
+                and cr1_not1_count >= stop_optimized_cr1_origin_not1
+            ):
+                stop_triggered = True
+                stop_reason = (
+                    f"optimized_cr1_origin_not1_count reached "
+                    f"{cr1_not1_count}/{stop_optimized_cr1_origin_not1}"
+                )
 
         if stop_triggered:
             cancelled = len(pending)
@@ -1046,8 +1161,10 @@ async def run_score_cases(
             return run_results, {
                 "stop_optimized_ge_original": stop_optimized_ge_original,
                 "stop_optimized_gt_original": stop_optimized_gt_original,
+                "stop_optimized_cr1_origin_not1": stop_optimized_cr1_origin_not1,
                 "optimized_ge_original_count": optimized_ge_original_count(run_results),
                 "optimized_gt_original_count": optimized_gt_original_count(run_results),
+                "optimized_cr1_origin_not1_count": optimized_cr1_origin_not1_count(run_results),
                 "early_stopped": True,
                 "stop_reason": stop_reason,
                 "launched_queries": next_case_idx,
@@ -1060,8 +1177,10 @@ async def run_score_cases(
     return run_results, {
         "stop_optimized_ge_original": stop_optimized_ge_original,
         "stop_optimized_gt_original": stop_optimized_gt_original,
+        "stop_optimized_cr1_origin_not1": stop_optimized_cr1_origin_not1,
         "optimized_ge_original_count": optimized_ge_original_count(run_results),
         "optimized_gt_original_count": optimized_gt_original_count(run_results),
+        "optimized_cr1_origin_not1_count": optimized_cr1_origin_not1_count(run_results),
         "early_stopped": False,
         "stop_reason": "completed_all_cases",
         "launched_queries": next_case_idx,
@@ -1080,8 +1199,10 @@ async def score_doc_until_retained(
     case_source_orders: dict[tuple[str, int], list[list[dict]]],
     variants: list[str],
     retain_per_doc: int,
+    retain_condition: str,
+    min_tested_per_doc: int,
 ) -> dict:
-    """Score one doc, retaining only queries where optimized CR >= original CR."""
+    """Score one doc until enough target and sampled queries are available."""
     retained = []
     rejected = []
     tested = []
@@ -1096,13 +1217,16 @@ async def score_doc_until_retained(
             case_source_orders[case_key(case)],
             variants,
         )
-        keep = optimized_ge_original(result)
+        if retain_condition == "optimized_cr1_origin_not1":
+            keep = optimized_cr1_origin_not1(result)
+            keep_reason = "optimized_cr_eq_1_and_original_cr_ne_1"
+            reject_reason = "not_optimized_cr_eq_1_and_original_cr_ne_1"
+        else:
+            keep = optimized_ge_original(result)
+            keep_reason = "optimized_cr_ge_original_cr"
+            reject_reason = "optimized_cr_lt_original_cr"
         result["retained_for_summary"] = keep
-        result["retention_reason"] = (
-            "optimized_cr_ge_original_cr"
-            if keep
-            else "optimized_cr_lt_original_cr"
-        )
+        result["retention_reason"] = keep_reason if keep else reject_reason
         tested.append(result)
         append_jsonl(JSONL_PATH, result)
 
@@ -1114,24 +1238,29 @@ async def score_doc_until_retained(
         print(
             f"[retain {doc_idx+1}/{total_docs}] {doc_id} "
             f"Q{result['query_index']} keep={keep} "
-            f"retained={len(retained)}/{retain_per_doc}"
+            f"retained={len(retained)}/{retain_per_doc} "
+            f"tested={len(tested)}/{min_tested_per_doc}"
         )
-        if len(retained) >= retain_per_doc:
+        if len(retained) >= retain_per_doc and len(tested) >= min_tested_per_doc:
             break
 
     first_case = doc_cases[0] if doc_cases else {}
+    reached_target = len(retained) >= retain_per_doc
+    reached_sample_size = len(tested) >= min_tested_per_doc
     return {
         "doc_id": doc_id,
         "doc_position": first_case.get("doc_position"),
         "target_retained_queries": retain_per_doc,
-        "has_target_retained_queries": len(retained) >= retain_per_doc,
+        "min_tested_queries_for_summary": min_tested_per_doc,
+        "has_target_retained_queries": reached_target,
+        "has_min_tested_queries": reached_sample_size,
         "retained_count": len(retained),
         "rejected_count": len(rejected),
         "tested_query_count": len(tested),
         "candidate_query_count": len(doc_cases),
         "stopped_because": (
-            "target_retained_reached"
-            if len(retained) >= retain_per_doc
+            "target_retained_and_min_tested_reached"
+            if reached_target and reached_sample_size
             else "exhausted_cases"
         ),
         "retained_results": retained,
@@ -1148,8 +1277,11 @@ async def run_score_cases_per_doc_retain(
     variants: list[str],
     existing_results: list[dict],
     retain_per_doc: int,
+    retain_condition: str = "optimized_ge_original",
+    summary_sample_per_doc: int = 5,
+    seed: int = 0,
 ) -> tuple[list[dict], dict]:
-    """Run score mode grouped by doc and retain only optimized>=original queries."""
+    """Run score mode grouped by doc, stopping after enough matching queries."""
     grouped_cases = group_cases_by_doc(cases)
     case_index_by_key = {
         case_key(case): i
@@ -1167,48 +1299,79 @@ async def run_score_cases_per_doc_retain(
             case_source_orders,
             variants,
             retain_per_doc,
+            retain_condition,
+            summary_sample_per_doc,
         ))
         for i, (doc_id, doc_cases) in enumerate(grouped_cases.items())
     ]
 
     doc_results = []
     retained_results = []
+    tested_results = []
     for task in asyncio.as_completed(tasks):
         doc_result = await task
         doc_results.append(doc_result)
         retained_results.extend(doc_result["retained_results"])
+        tested_results.extend(doc_result["tested_results"])
+        summary_results, summary_query_ids_by_doc = sample_summary_results_by_doc(
+            doc_results,
+            summary_sample_per_doc,
+            seed,
+        )
         run_metadata = {
             "retain_optimized_ge_original_per_doc": retain_per_doc,
+            "retain_condition": retain_condition,
             "docs_completed": len(doc_results),
             "docs_requested": len(grouped_cases),
             "docs_with_target_retained": sum(
                 1 for item in doc_results if item["has_target_retained_queries"]
             ),
             "retained_query_count": len(retained_results),
+            "retained_query_ids_by_doc": retained_query_ids_by_doc(retained_results),
+            "retained_queries": retained_query_index(retained_results),
             "tested_query_count": sum(item["tested_query_count"] for item in doc_results),
+            "summary_sample_per_doc": summary_sample_per_doc,
+            "summary_query_count": len(summary_results),
+            "summary_query_ids_by_doc": summary_query_ids_by_doc,
+            "summary_queries": retained_query_index(summary_results),
             "doc_results": doc_results,
+            "_summary_results": summary_results,
         }
-        combined_results = merge_results(existing_results, retained_results)
+        combined_results = merge_results(existing_results, tested_results)
         write_completed_outputs(
             combined_results,
             len(cases),
-            current_run_completed=len(retained_results),
+            current_run_completed=len(tested_results),
             run_metadata=run_metadata,
+            summary_results=summary_results,
         )
 
-    return retained_results, {
+    summary_results, summary_query_ids_by_doc = sample_summary_results_by_doc(
+        doc_results,
+        summary_sample_per_doc,
+        seed,
+    )
+    return tested_results, {
         "retain_optimized_ge_original_per_doc": retain_per_doc,
+        "retain_condition": retain_condition,
         "docs_completed": len(doc_results),
         "docs_requested": len(grouped_cases),
         "docs_with_target_retained": sum(
             1 for item in doc_results if item["has_target_retained_queries"]
         ),
         "retained_query_count": len(retained_results),
+        "retained_query_ids_by_doc": retained_query_ids_by_doc(retained_results),
+        "retained_queries": retained_query_index(retained_results),
         "tested_query_count": sum(item["tested_query_count"] for item in doc_results),
+        "summary_sample_per_doc": summary_sample_per_doc,
+        "summary_query_count": len(summary_results),
+        "summary_query_ids_by_doc": summary_query_ids_by_doc,
+        "summary_queries": retained_query_index(summary_results),
         "doc_results": sorted(
             doc_results,
             key=lambda item: (item.get("doc_position") or 0, item["doc_id"]),
         ),
+        "_summary_results": summary_results,
     }
 
 
@@ -1280,12 +1443,27 @@ def parse_args() -> argparse.Namespace:
         help="In score mode, stop after this many current-run queries have optimized CR > original CR.",
     )
     parser.add_argument(
+        "--stop-optimized-cr1-origin-not1",
+        type=int,
+        default=0,
+        help="In score mode, stop after this many queries have optimized CR == 1 and original CR != 1.",
+    )
+    parser.add_argument(
         "--retain-optimized-ge-original-per-doc",
         type=int,
         default=0,
         help=(
             "In score mode, retain only optimized CR >= original CR queries for summary, "
             "and stop each doc after this many retained queries."
+        ),
+    )
+    parser.add_argument(
+        "--retain-optimized-cr1-origin-not1-per-doc",
+        type=int,
+        default=0,
+        help=(
+            "In score mode, retain only optimized CR == 1 and original CR != 1 queries "
+            "for summary, and stop each doc after this many retained queries."
         ),
     )
     parser.add_argument("--dry-run", action="store_true", help="Print selected cases without calling GPT")
@@ -1306,23 +1484,53 @@ async def main():
         raise ValueError("--stop-optimized-ge-original must be >= 0")
     if args.stop_optimized_gt_original < 0:
         raise ValueError("--stop-optimized-gt-original must be >= 0")
+    if args.stop_optimized_cr1_origin_not1 < 0:
+        raise ValueError("--stop-optimized-cr1-origin-not1 must be >= 0")
     if args.stop_optimized_ge_original and not {"original", "optimized"}.issubset(set(args.variants)):
         raise ValueError("--stop-optimized-ge-original requires --variants original optimized")
     if args.stop_optimized_gt_original and not {"original", "optimized"}.issubset(set(args.variants)):
         raise ValueError("--stop-optimized-gt-original requires --variants original optimized")
-    if args.stop_optimized_ge_original and args.stop_optimized_gt_original:
+    if args.stop_optimized_cr1_origin_not1 and not {"original", "optimized"}.issubset(set(args.variants)):
+        raise ValueError("--stop-optimized-cr1-origin-not1 requires --variants original optimized")
+    active_stop_options = sum(bool(value) for value in (
+        args.stop_optimized_ge_original,
+        args.stop_optimized_gt_original,
+        args.stop_optimized_cr1_origin_not1,
+    ))
+    if active_stop_options > 1:
         raise ValueError(
-            "Use either --stop-optimized-ge-original or --stop-optimized-gt-original, not both."
+            "Use only one stop-optimized-* option at a time."
         )
     if args.retain_optimized_ge_original_per_doc < 0:
         raise ValueError("--retain-optimized-ge-original-per-doc must be >= 0")
+    if args.retain_optimized_cr1_origin_not1_per_doc < 0:
+        raise ValueError("--retain-optimized-cr1-origin-not1-per-doc must be >= 0")
     if args.retain_optimized_ge_original_per_doc and not {"original", "optimized"}.issubset(set(args.variants)):
         raise ValueError("--retain-optimized-ge-original-per-doc requires --variants original optimized")
+    if args.retain_optimized_cr1_origin_not1_per_doc and not {"original", "optimized"}.issubset(set(args.variants)):
+        raise ValueError("--retain-optimized-cr1-origin-not1-per-doc requires --variants original optimized")
+    active_retain_options = sum(bool(value) for value in (
+        args.retain_optimized_ge_original_per_doc,
+        args.retain_optimized_cr1_origin_not1_per_doc,
+    ))
+    if active_retain_options > 1:
+        raise ValueError("Use only one retain-optimized-* option at a time.")
     if args.retain_optimized_ge_original_per_doc and (
-        args.stop_optimized_ge_original or args.stop_optimized_gt_original
+        args.stop_optimized_ge_original
+        or args.stop_optimized_gt_original
+        or args.stop_optimized_cr1_origin_not1
     ):
         raise ValueError(
             "Use either --retain-optimized-ge-original-per-doc or "
+            "a stop-optimized-* option, not both."
+        )
+    if args.retain_optimized_cr1_origin_not1_per_doc and (
+        args.stop_optimized_ge_original
+        or args.stop_optimized_gt_original
+        or args.stop_optimized_cr1_origin_not1
+    ):
+        raise ValueError(
+            "Use either --retain-optimized-cr1-origin-not1-per-doc or "
             "a stop-optimized-* option, not both."
         )
     MODEL = args.model
@@ -1389,11 +1597,23 @@ async def main():
             f"Score early stop: stop after {args.stop_optimized_gt_original} "
             f"current-run queries with optimized_cr > original_cr\n"
         )
+    elif args.stop_optimized_cr1_origin_not1:
+        print(
+            f"Score early stop: stop after {args.stop_optimized_cr1_origin_not1} "
+            f"current-run queries with optimized_cr == 1 and original_cr != 1\n"
+        )
     elif args.retain_optimized_ge_original_per_doc:
         print(
             f"Score retain mode: each doc keeps only optimized_cr >= original_cr "
             f"queries, stopping after {args.retain_optimized_ge_original_per_doc} "
-            f"retained queries per doc. Summary uses retained queries only.\n"
+            f"target queries per doc. Summary samples 5 tested queries per doc.\n"
+        )
+    elif args.retain_optimized_cr1_origin_not1_per_doc:
+        print(
+            f"Score retain mode: each doc keeps only optimized_cr == 1 and "
+            f"original_cr != 1 queries, stopping after "
+            f"{args.retain_optimized_cr1_origin_not1_per_doc} target queries per doc. "
+            f"Summary samples 5 tested queries per doc.\n"
         )
 
     if args.dry_run:
@@ -1481,7 +1701,16 @@ async def main():
     if existing_results:
         print(f"Loaded {len(existing_results)} existing completed queries from {OUTPUT_PATH}")
 
-    if args.retain_optimized_ge_original_per_doc:
+    if args.retain_optimized_ge_original_per_doc or args.retain_optimized_cr1_origin_not1_per_doc:
+        retain_per_doc = (
+            args.retain_optimized_ge_original_per_doc
+            or args.retain_optimized_cr1_origin_not1_per_doc
+        )
+        retain_condition = (
+            "optimized_cr1_origin_not1"
+            if args.retain_optimized_cr1_origin_not1_per_doc
+            else "optimized_ge_original"
+        )
         run_results, run_metadata = await run_score_cases_per_doc_retain(
             sem,
             client,
@@ -1489,7 +1718,10 @@ async def main():
             case_source_orders,
             args.variants,
             existing_results,
-            args.retain_optimized_ge_original_per_doc,
+            retain_per_doc,
+            retain_condition,
+            summary_sample_per_doc=5,
+            seed=args.seed,
         )
     else:
         run_results, run_metadata = await run_score_cases(
@@ -1502,6 +1734,7 @@ async def main():
             existing_results,
             args.stop_optimized_ge_original,
             args.stop_optimized_gt_original,
+            args.stop_optimized_cr1_origin_not1,
         )
 
     results = merge_results(existing_results, run_results)
@@ -1510,6 +1743,7 @@ async def main():
         len(cases),
         current_run_completed=len(run_results),
         run_metadata=run_metadata,
+        summary_results=run_metadata.get("_summary_results"),
     )
 
     # ── Aggregate stats ──
@@ -1536,17 +1770,40 @@ async def main():
             f"{run_metadata.get('optimized_gt_original_count', 0)}/"
             f"{args.stop_optimized_gt_original}"
         )
-    if args.retain_optimized_ge_original_per_doc:
+    if args.stop_optimized_cr1_origin_not1:
+        print(
+            "Current-run optimized_cr=1 and original_cr!=1 count: "
+            f"{run_metadata.get('optimized_cr1_origin_not1_count', 0)}/"
+            f"{args.stop_optimized_cr1_origin_not1}"
+        )
+    if args.retain_optimized_ge_original_per_doc or args.retain_optimized_cr1_origin_not1_per_doc:
+        target_retained = (
+            args.retain_optimized_ge_original_per_doc
+            or args.retain_optimized_cr1_origin_not1_per_doc
+        )
         print(
             "Per-doc retain mode: "
             f"{run_metadata.get('docs_with_target_retained', 0)}/"
             f"{run_metadata.get('docs_requested', 0)} docs reached "
-            f"{args.retain_optimized_ge_original_per_doc} retained queries"
+            f"{target_retained} retained queries"
         )
         print(
             f"Tested queries: {run_metadata.get('tested_query_count', 0)}, "
-            f"retained for summary: {run_metadata.get('retained_query_count', 0)}"
+            f"target retained: {run_metadata.get('retained_query_count', 0)}, "
+            f"summary sampled: {run_metadata.get('summary_query_count', 0)}"
         )
+        retained_ids = run_metadata.get("retained_query_ids_by_doc", {})
+        if retained_ids:
+            print("Retained query ids by doc:")
+            for doc_id, query_ids in retained_ids.items():
+                query_list = ", ".join(f"Q{query_index}" for query_index in query_ids)
+                print(f"  {doc_id}: {query_list}")
+        summary_ids = run_metadata.get("summary_query_ids_by_doc", {})
+        if summary_ids:
+            print("Summary sampled query ids by doc:")
+            for doc_id, query_ids in summary_ids.items():
+                query_list = ", ".join(f"Q{query_index}" for query_index in query_ids)
+                print(f"  {doc_id}: {query_list}")
     print(f"Total merged queries: {total}")
     for variant in variants:
         cited = summary["overall"][f"{variant}_cited_count"]

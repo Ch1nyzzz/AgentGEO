@@ -1,0 +1,83 @@
+{
+  "run_id": null,
+  "url": "https://www.newindianexpress.com/states/karnataka/2017/jan/23/traditional-folk-sports-in-karnataka-remain-on-the-horns-of-a-dilemma-1562469.html",
+  "version": "v2",
+  "config": {
+    "batch_size": 10,
+    "max_retries_per_query": 3,
+    "chunks_per_orchestra": 2,
+    "suggestion_merge_strategy": "diagnosis_aware",
+    "use_two_phase_analysis": true,
+    "enable_policy_injection": true
+  },
+  "queries": [
+    "cultural significance of traditional sports in karnataka",
+    "how does the animal sports ban affect rural communities?",
+    "current status of animal sports ban legislation",
+    "what are heritage sports?",
+    "how do folk sports impact cultural heritage?",
+    "how are traditional sports in karnataka preserved?",
+    "are animals harmed in traditional sports",
+    "how do traditional sports impact animal welfare laws?",
+    "how are cultural sports preserved?",
+    "how are folk sports connected to karnataka's culture?",
+    "how do cultural sports influence community bonding?",
+    "what are the reasons for banning animal sports?",
+    "examples of traditional sports around the world",
+    "how are traditional sports preserved in modern times?",
+    "how are animals used in traditional sports in karnataka?",
+    "history of cultural sports in indigenous communities",
+    "how do heritage sports impact animal welfare?",
+    "arguments for and against animal sports bans",
+    "what is the history of kambala in karnataka?",
+    "role of heritage sports in community building"
+  ],
+  "batches": [
+    {
+      "batch_id": "9fde758b",
+      "queries": [
+        "cultural significance of traditional sports in karnataka",
+        "how does the animal sports ban affect rural communities?",
+        "current status of animal sports ban legislation",
+        "what are heritage sports?",
+        "how do folk sports impact cultural heritage?",
+        "how are traditional sports in karnataka preserved?",
+        "are animals harmed in traditional sports",
+        "how do traditional sports impact animal welfare laws?",
+        "how are cultural sports preserved?",
+        "how are folk sports connected to karnataka's culture?"
+      ],
+      "suggestions_count": 0,
+      "applied_count": 0,
+      "success_rate_before": 0.7,
+      "diagnosis_stats": {}
+    },
+    {
+      "batch_id": "8a70e5e9",
+      "queries": [
+        "how do cultural sports influence community bonding?",
+        "what are the reasons for banning animal sports?",
+        "examples of traditional sports around the world",
+        "how are traditional sports preserved in modern times?",
+        "how are animals used in traditional sports in karnataka?",
+        "history of cultural sports in indigenous communities",
+        "how do heritage sports impact animal welfare?",
+        "arguments for and against animal sports bans",
+        "what is the history of kambala in karnataka?",
+        "role of heritage sports in community building"
+      ],
+      "suggestions_count": 3,
+      "applied_count": 0,
+      "success_rate_before": 0.9,
+      "diagnosis_stats": {
+        "MISSING_INFO": 1,
+        "CONTENT_TRUNCATED": 2
+      }
+    }
+  ],
+  "overall_diagnosis_stats": {
+    "MISSING_INFO": 1,
+    "CONTENT_TRUNCATED": 2
+  },
+  "final_content": "SubscribeE-PAPER\n\nNATIONWORLDSTATESOPINIONCITIESBUSINESSSPORTGOOD NEWSMOVIESLIFESTYLEVIDEOSWEB SCRAWL\n\nNATIONWORLDSTATESOPINIONCITIESBUSINESSSPORTGOOD NEWSMOVIESLIFESTYLEVIDEOSWEB SCRAWL\n\nTraditional folk sports in Karnataka remain on the horns of a dilemma\n\nCopied\n\nTraditional sports and rituals involving animals are an integral part of many communities in rural parts of Karnataka. Today, many of these events are banned under the Prevention of Cruelty to Animals Act, but are widely practised. The protests over the ban on Jallikattu in Tamil Nadu, followed by an ordinance allowing groups to conduct the event has led to demands for revoking the ban on such sports. Express takes a look at traditional sporting events held across state\n\nYadgir - Tossing lambs over palanquin of village deity\n\nFor over a century, villagers in Mailapur in Yadgir taluk have performed the ritual of tossing lambs over the palanquin of the village deity Mallaiah. This is practised during the annual fair of Mailapur Mallaiah on the day of Sankranti (January 14) every year.\n\nMembers of the Kuruba community sacrifice the lamb as a gesture of devotion to the deity. Apart from Kurubas, members of Gonda community also participate in the ritual. Keshava Motagi, president of Nandi Animal Welfare Society, Kalaburagi, said the tradition is mere fashion today and is cruelty to animals.\n\n“In this modern era, such practices should be prohibited,” Motagi said. Thousands of devotees arrive from parts of Yadgir, Kalaburagi, Vijayapura, Andhra Pradesh, Telangana and Maharashtra to take part in the fair. The ritual has been banned for the past three years by the Yadgir district administration.\n\nHowever, despite the ban, some devotees have continued the practice. This year, six devotees tossed sheep over the palanquin. Police later arrested three people.Status: Banned\n\nOldMysururegion\n\nCattle made to jump across fire or KichchuHaisodu\n\nKichchu Haisodu is a ritual associated with farming in old Mysuru region.\n\nThe ritual is observed during Makara Sankranti every year when cattle are made to jump over fire. The cattle - bull and cow - are bathed, their horns painted and decorated. Later in the evening, they are made to jump over the fire. The ritual is still practised in villages around Bengaluru, Mandya, Ramanagara,\n\nThe ritual is still practised in villages around Bengaluru, Mandya, Ramanagara, Mysuru and Hassan. Farmers believe that the practice of making cattle jump over fire will kill small insects present on their body.Status: Practised\n\nHubbali\n\nRam Fight of Savji Community\n\nSomavansha Sahasrajun Kshatriya Samaj members also known as Savji community hold ram fights during Dasara. The community has been practising this for hundreds of years. Earlier, such fights were organised in district stadiums. But as crowds swelled, it attracted animal rights activists who vehemently opposed it.\n\nAt present, it is only held in areas where members of the Savji community live, mostly in Dajibanpet and Kamaripet in Hubballi. Organisers say the sport is part of their culture and courts should respect the sentiments of the people. Many Muslim families in Hubballi too organise ram fights annually.\n\nStatus: Banned, illegally practised\n\nHubbali\n\nKobriHori competition\n\nKobri Hori Sparde translated as catch a running bull is among the state’s most popular rural sport. The event is held during Diwali when farmers, agricultural workers and youngsters try to subdue a bull and then tie dry coconuts around its horns.\n\nThe bulls are then taken in a procession around the village or town. Farmers usually sharpen the animal’s horn before the event. Over the years, stories of competitors losing their lives or suffering injuries has marred the event.\n\nStatus: Banned, illegally practised\n\nMangaluru, Udupi\n\nCock fightingor korikatte\n\nAlthough a banned sport, cock fighting still thrives illegally in parts of Karnataka. However, the scale of the event pales in comparison with Tamil Nadu, Andhra Pradesh and Telangana where it is a huge betting sport, running to crores. Dakshin Kannada and Udupi districts still follow this age old tradition.\n\nA special breed of cocks/fowls which are known as game cocks are bred and trained for fighting purposes. Blades are tied to the roosters spurs. Farmers engage in this activity before and after harvesting paddy crops.\n\nThe event is held after festivals like Sankranti and Diwali and is organised a few times a year in the vicinity of temples around Mangaluru and Udupi.\n\n“The sport is held secretively as it is banned by High Courts and the Supreme Court. The cost of roosters varies from `20,000-`25,000 while the betting may go up to a few lakhs,” said activist Ravi.\n\nAccording to PeTA India, cock fighting community rear, the roosters and trains them in such a way that these birds become killers.\n\nStatus: Banned, illegally practised\n\nNorth Karnataka\n\nBullock cart racing\n\nBullock cart racing has been a traditional sport practised for more than hundred years. The event which was widely held across the state is now restricted to parts of north Karnataka. The races are held during Dasara and Diwali. Participants race in bullock carts and winners receive prize money.\n\nStatus: No ban\n\nUdupi\n\nBuffalo racing  orkambala\n\nKambala is an annual buffalo race organised by agrarian families after the harvest of Rabi crop. Kambala season lasts from November to March, before the onset of summer when Kolke crop is cultivated. The animals race in paddy fields filled with slush. Locals believe this practice prepares the land for the Kolke crop.\n\nIn the last 50 years, Kambala’s mandate has changed and the folk sport has turned into a money spinner with audiences placing huge bets on the animals. The game has become an organised rural sport with committees setting up schedules and cash prizes.\n\nThe game is conducted across Dakshina Kannada, Udupi and even parts of Kasaragod in Kerala. However, the sport has been put on hold due to an interim ban by the High Court, following opposition by animal rights activists.\n\nPreviously, despite a petition for a ban on the event by People for Ethical Treatment of Animals (PeTA), the races were held with regulations issued by local district administration.\n\nstatus: Interim ban\n\nFollow The New Indian Express channel on WhatsApp\n\nDownload the TNIE app to stay with us and follow the latest\n\nRelated Stories"
+}

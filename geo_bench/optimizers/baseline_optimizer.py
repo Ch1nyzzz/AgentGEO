@@ -25,7 +25,7 @@ class SimpleLLMClient:
         self.api_key = api_key
 
         if self.provider == "openai":
-            self.model = model or "gpt-4.1-mini"
+            self.model = model or "gpt-5-mini"
             self.api_key = api_key or os.getenv("OPENAI_API_KEY")
         elif self.provider in ("anthropic", "claude"):
             self.provider = "anthropic"

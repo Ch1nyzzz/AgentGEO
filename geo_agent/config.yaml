@@ -1,34 +1,34 @@
 llm:
   provider: openai # options: openai, anthropic, or gemini
-  model: gpt-4.1-mini # options: gpt-4.1-mini, claude-haiku-4-5-20251001, gemini-2.5-flash
-  temperature: 0
+  model: gpt-5-mini # options: gpt-5-mini, claude-haiku-4-5-20251001, gemini-2.5-flash
+  temperature: 1
 
 # Fine-grained task configuration (optional, uses llm default config above if not specified)
 llm_tasks:
   # Answer generation (requires high quality)
   generation:
     provider: openai
-    model: gpt-4.1-mini
+    model: gpt-5-mini
 
   # Citation checking (uses llm default if not specified)
   # citation_check:
   #   provider: openai
-  #   model: gpt-4.1-mini
+  #   model: gpt-5-mini
 
   # Diagnostic analysis
   diagnosis:
     provider: openai
-    model: gpt-4.1-mini
+    model: gpt-5-mini
 
   # Tool strategy selection
   tool_strategy:
     provider: openai
-    model: gpt-4.1-mini
+    model: gpt-5-mini
 
   # GEO score evaluation
   geo_score:
     provider: openai
-    model: gpt-4.1-mini
+    model: gpt-5-mini
 
 search:
   provider: chatnoir # tavily or chatnoir

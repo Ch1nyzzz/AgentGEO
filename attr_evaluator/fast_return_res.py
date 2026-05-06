@@ -154,7 +154,7 @@ class FastAttrEvaluator:
             'subtask': subtask_name,
             'indir_alignments': None,
             'outdir': str(self.base_dir / f"temp_{subtask_name}_{time.time()}"),
-            'model_name': curr_configs.get('model_name', 'gpt-4.1-mini'),
+            'model_name': curr_configs.get('model_name', 'gpt-5-mini'),
             'n_demos': curr_configs.get('n_demos', 2),
             'num_retries': curr_configs.get('num_retries', 1),
             'temperature': curr_configs.get('temperature', 0.2),

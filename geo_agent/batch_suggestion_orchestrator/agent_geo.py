@@ -388,6 +388,7 @@ class AgentGEOV2:
             llm=self.llm,
             generator=self.generator,
             config=self.batch_config,
+            config_path=self.config_path,
             history_manager=self.history_manager,
             search_func=self._get_search_results,
             competitor_content_func=self._get_all_competitor_contents,  # Returns tuple (filtered_docs, contents)

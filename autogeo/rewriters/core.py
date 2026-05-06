@@ -317,7 +317,7 @@ You can regenerate the provided source so that it strictly adheres to the "Quali
     engine_llm_lower = (engine_llm or "gemini").lower()
     if "gpt" in engine_llm_lower or "openai" in engine_llm_lower:
         from autogeo.utils.openai_client import call_openai
-        return call_openai(user_prompt, model_name="gpt-4.1-mini")
+        return call_openai(user_prompt, model_name="gpt-5-mini")
     elif "claude" in engine_llm_lower or "anthropic" in engine_llm_lower:
         from autogeo.utils.anthropic_client import call_anthropic
         return call_anthropic(user_prompt, model_name=engine_llm)

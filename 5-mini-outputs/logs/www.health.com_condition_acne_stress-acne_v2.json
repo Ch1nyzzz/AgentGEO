@@ -1,0 +1,83 @@
+{
+  "run_id": null,
+  "url": "https://www.health.com/condition/acne/stress-acne",
+  "version": "v2",
+  "config": {
+    "batch_size": 10,
+    "max_retries_per_query": 3,
+    "chunks_per_orchestra": 2,
+    "suggestion_merge_strategy": "diagnosis_aware",
+    "use_two_phase_analysis": true,
+    "enable_policy_injection": true
+  },
+  "queries": [
+    "how does stress affect skin health?",
+    "are there natural remedies for acne breakouts?",
+    "difference between stress acne and hormonal acne",
+    "natural remedies for stress-induced acne",
+    "how does stress affect acne",
+    "how can diet impact stress-related acne and what foods should be avoided?",
+    "does stress cause acne",
+    "can diet help reduce stress-related acne?",
+    "what are the best skincare routines for stress-related acne?",
+    "can stress make acne worse",
+    "how to treat stress-induced acne naturally?",
+    "tips to manage stress-related acne",
+    "how to reduce stress acne naturally",
+    "tips for reducing stress to improve skin",
+    "are there any effective home remedies for acne caused by stress?",
+    "what foods should i avoid to prevent stress acne?",
+    "how to prevent acne breakouts during exams",
+    "how does stress affect acne and what can be done to treat it?",
+    "what lifestyle changes can help reduce stress-induced acne?",
+    "what causes acne breakouts in adults"
+  ],
+  "batches": [
+    {
+      "batch_id": "b944fc83",
+      "queries": [
+        "how does stress affect skin health?",
+        "are there natural remedies for acne breakouts?",
+        "difference between stress acne and hormonal acne",
+        "natural remedies for stress-induced acne",
+        "how does stress affect acne",
+        "how can diet impact stress-related acne and what foods should be avoided?",
+        "does stress cause acne",
+        "can diet help reduce stress-related acne?",
+        "what are the best skincare routines for stress-related acne?",
+        "can stress make acne worse"
+      ],
+      "suggestions_count": 5,
+      "applied_count": 0,
+      "success_rate_before": 0.8,
+      "diagnosis_stats": {
+        "MISSING_INFO": 4,
+        "ATTRIBUTE_MISMATCH": 1
+      }
+    },
+    {
+      "batch_id": "814e9ad0",
+      "queries": [
+        "how to treat stress-induced acne naturally?",
+        "tips to manage stress-related acne",
+        "how to reduce stress acne naturally",
+        "tips for reducing stress to improve skin",
+        "are there any effective home remedies for acne caused by stress?",
+        "what foods should i avoid to prevent stress acne?",
+        "how to prevent acne breakouts during exams",
+        "how does stress affect acne and what can be done to treat it?",
+        "what lifestyle changes can help reduce stress-induced acne?",
+        "what causes acne breakouts in adults"
+      ],
+      "suggestions_count": 0,
+      "applied_count": 0,
+      "success_rate_before": 1.0,
+      "diagnosis_stats": {}
+    }
+  ],
+  "overall_diagnosis_stats": {
+    "MISSING_INFO": 4,
+    "ATTRIBUTE_MISMATCH": 1
+  },
+  "final_content": "Search the siteGOPlease fill out this field.Newsletters\n\nHow To Get Rid of Stress Pimples\n\nArisara_Tongdonnoi / Getty Images\n\nStress management and acne treatments can help reduce stress pimples.Cortisol and androgen production in response to stress can worsen acne.Cleaning your skin gently and removing makeup can help prevent acne.\n\nStress acne causes breakouts due to increased cortisol and androgen production. You can manage stress and use skincare products to help clear pimples.\n\nSymptoms of Stress Pimples\n\nResearch hasn't identified stress acne as appearing any differently than regular acne. It has the potential to look like:\n\nBlackheads:A type of breakout with widened pores due to oil or dead skin building up, making a black spot because of oxygen reacting with the buildupNodules or cysts:Breakouts with deep skin swelling as the result of oil, dead skin, and bacteria buildupPapules:Blemishes that appear as small, red bumps due to bacteria, dead skin cells, and oil going further into the skinPimples:Breakouts that lead to swelling in the skin where bacteria has accumulated in a porePustules:A breakout similar to papules, where blemishes contain a yellow or white center and yellowish fluidWhiteheads:A type of breakout where raised, white or flesh-colored blemishes form due to oil and dead skin buildup\n\nIn addition, stress acne is a flare or worsening of preexisting acne in response to a psychological stressor,Allison K. Truong, MD, an American Academy of Dermatology (AAD) fellow and dermatologist at Cedars-Sinai Medical Center in Los Angeles, toldHealth. For instance, if someone typically only has one or two pimples, they might suddenly have 10, 20, or 30 pimples during a stressful time.\n\nDoes Stress Cause Acne?\n\nStress isn't an actual cause of acne, though there's a link between acne severity and stress. One review, which analyzed several acne studies, found that emotional stress worsens acne for 50% to 80% of people.\n\nAngela Lamb, MD, associate professor of dermatology at the Icahn School of Medicine at Mount Sinai in New York, toldHealththat people with more acne-prone skin, such as people who have larger pores or tend to have more oily skin, are a bit more sensitive to stress acne. Some researchers have proposed a few theories as to why the link between stress and acne exists.\n\nFor example, an increase in specific hormones is one of the most widely agreed-upon causes. One of those hormones iscortisol, the \"fight-or-flight\" hormone.Bodies also increase androgen (male sex hormone) production in response to stress. These hormones stimulate the skin oil glands and hair follicles, resulting in acne.\n\nOther Acne Causes\n\nThe exact cause of acne remains unknown, but you may end up with acne as a result of the following things happening in your pores:\n\nBacterial growthDead skin buildupExcess or high oil production\n\nHow To Treat Stress Pimples\n\nRecognizing if and when stress is contributing to acne development is important for managing it. Of course, the first step to getting rid of acne is to try to destress. You can achieve this by trying stress-relieving activities such as:\n\nDoing breathing exercisesGetting enough sleepListening to musicMeditatingReadingTrying yoga or tai chiWalking\n\nOther treatments vary from person to person. For instance, someone with mild acne who wants something a little stronger may try some of the following cleansers:\n\nBenzoyl peroxideGlycolic acidSalicylic acid\n\nAnother person with mild acne may use a gentle cleanser with a topical antibiotic regimen, such as topical azelaic acid, dapsone, or clindamycin. In that case, Dr. Truong recommended adding a low topical retinoid, such as an over-the-counter (OTC) adapalene gel (like Differin) or a prescription tretinoin cream.\n\nThe treatment approach could also depend on how quickly someone wants their acne to clear up. Regardless of what products you use to manage acne, Dr. Truong said that \"the most important thing is you have to treat the cause. And that would be treating the stress—if there is a way that we could do that.\"\n\nPrevention\n\nThough it may not always be possible, you may be able to prevent stress pimples by avoiding or limiting your stress. Whether your breakouts are related to stress or not, you can also do the following to help prevent and manage acne in general:\n\nClean your skin gently, which includes not scrubbing it and using a soap that doesn'tdry your skin out.Keep your hair out of your face and limit how much you touch your face.Limit anypimple-picking, rubbing, scratching, or squeezing.Remove any dirt or makeup on your face, especially before going to sleep at night.Stick to your acne treatment plan.Wash your face up to twice daily and always after exercising.\n\nOther Skin Conditions Triggered by Stress\n\nStress can also trigger or worsen other skin conditions, including:\n\nAtopic dermatitis:A subtype of eczema, a skin disorder characterized by itchy, scaly rashesPsoriasis:A condition that results in irritated skin that may be red and have whitish-silver scalesRosacea:A skin disorder where a person's face may turn red or have swelling and acne-like sores\n\nWhen To Contact a Healthcare Provider\n\nYou'll want to contact a healthcare provider or dermatologist if you:\n\nDevelop scarring when your acne is resolvingExperience stress because of your acneHave acne that gets worse or is painfulHave treated your acne with self-care or over-the-counter medications, and they are not working or no longer work\n\nSee a healthcare provider if you have sudden breakouts but are unsure of the cause. A sudden breakout could also be due to an infection or rash. For instance, your acne may be due tofolliculitisor allergic contact dermatitis. Folliculitis is a bacterial or fungal infection of the hair follicles, while allergic contact dermatitis is a rash from anallergy.\n\nIt may also be helpful to see a mental health professional if you find your acne is due to stress. They can provide you with guidance regarding stress relief orstress managementtechniques.\n\nWellnessSkincareAcne\n\nAmerican Academy of Dermatology.Acne: signs and symptoms.American Academy of Dermatology.How to treat different types of acne.Jović A, Marinović B, Kostović K, Čeović R, Basta-Juzbašić A, Bukvić Mokos Z.The impact of pyschological stress on acne.Acta Dermatovenerol Croat. 2017;25(2):1133-1141.Zari S, Alrahmani D.The association between stress and acne among female medical students in Jeddah, Saudi Arabia.Clin Cosmet Investig Dermatol. 2017;10:503-506.American Academy of Dermatology.Adult acne.National Institute of Arthritis and Musculoskeletal and Skin Diseases.Acne - overview, symptoms, & causes.MedlinePlus.Acne - also called: pimples, zits.MedlinePlus.Learn to manage stress.American Academy of Dermatology.Feeling stressed? It can show in your skin, hair, and nails.American Academy of Dermatology.Acne: diagnosis and treatment.MedlinePlus.Acne - self care.MedlinePlus.Atopic dermatitis.MedlinePlus.Psoriasis.MedlinePlus.Rosacea.\n\nRelated Articles"
+}

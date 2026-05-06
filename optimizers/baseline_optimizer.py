@@ -139,7 +139,7 @@ class BaselineOptimizers:
         self,
         method_name: str,
         provider: str = "openai",
-        model: str = "gpt-4.1-mini",
+        model: str = "gpt-5-mini",
         config_path: str = "geo_agent/config.yaml",
         temperature: float = 0.7,
         **kwargs
@@ -162,6 +162,7 @@ class BaselineOptimizers:
         self.method_name = method_name
         self.provider = provider
         self.model = model
+        self.config_path = config_path
         self.temperature = temperature
         self._parser = StructuralHtmlParser()
 
@@ -185,7 +186,7 @@ class BaselineOptimizers:
             return GeminiChatLLM(model=self.model, temperature=self.temperature)
         else:
             # Default to OpenAI
-            return OpenAIChatLLM(model="gpt-4.1-mini", temperature=self.temperature)
+            return OpenAIChatLLM(model="gpt-5-mini", temperature=self.temperature)
 
     def _build_prompt(self, text: str) -> str:
         """Build optimization prompt"""

@@ -1,0 +1,85 @@
+{
+  "run_id": null,
+  "url": "https://www.nbcnews.com/better/pop-culture/your-weird-dreams-actually-make-lot-sense-according-neuroscience-psychology-ncna913436",
+  "version": "v2",
+  "config": {
+    "batch_size": 10,
+    "max_retries_per_query": 3,
+    "chunks_per_orchestra": 2,
+    "suggestion_merge_strategy": "diagnosis_aware",
+    "use_two_phase_analysis": true,
+    "enable_policy_injection": true
+  },
+  "queries": [
+    "neuroscience insights on dreams and creativity",
+    "are bizarre dreams common",
+    "brain activity during rem sleep",
+    "what happens in the brain during rem sleep?",
+    "how do bizarre dreams affect sleep quality",
+    "brain activity during bizarre dreams",
+    "latest research on brain activity during sleep",
+    "how to interpret strange dreams",
+    "bizarre dreams and rem sleep correlation",
+    "what brain regions are involved in dreaming",
+    "understanding the symbolism in odd dreams",
+    "psychological interpretation of weird dreams",
+    "how does dreaming affect learning",
+    "are weird dreams linked to personal growth",
+    "brain science behind problem-solving during sleep",
+    "cognitive neuroscience of dreams",
+    "how do weird dreams affect mental health",
+    "how do psychologists explain weird dreams",
+    "can dreams help with problem-solving",
+    "what happens in the brain during dreaming"
+  ],
+  "batches": [
+    {
+      "batch_id": "555936d3",
+      "queries": [
+        "neuroscience insights on dreams and creativity",
+        "are bizarre dreams common",
+        "brain activity during rem sleep",
+        "what happens in the brain during rem sleep?",
+        "how do bizarre dreams affect sleep quality",
+        "brain activity during bizarre dreams",
+        "latest research on brain activity during sleep",
+        "how to interpret strange dreams",
+        "bizarre dreams and rem sleep correlation",
+        "what brain regions are involved in dreaming"
+      ],
+      "suggestions_count": 8,
+      "applied_count": 4,
+      "success_rate_before": 0.9,
+      "diagnosis_stats": {
+        "MISSING_INFO": 3,
+        "ATTRIBUTE_MISMATCH": 3,
+        "CONTENT_TRUNCATED": 2
+      }
+    },
+    {
+      "batch_id": "daadc36f",
+      "queries": [
+        "understanding the symbolism in odd dreams",
+        "psychological interpretation of weird dreams",
+        "how does dreaming affect learning",
+        "are weird dreams linked to personal growth",
+        "brain science behind problem-solving during sleep",
+        "cognitive neuroscience of dreams",
+        "how do weird dreams affect mental health",
+        "how do psychologists explain weird dreams",
+        "can dreams help with problem-solving",
+        "what happens in the brain during dreaming"
+      ],
+      "suggestions_count": 0,
+      "applied_count": 0,
+      "success_rate_before": 1.0,
+      "diagnosis_stats": {}
+    }
+  ],
+  "overall_diagnosis_stats": {
+    "MISSING_INFO": 3,
+    "ATTRIBUTE_MISMATCH": 3,
+    "CONTENT_TRUNCATED": 2
+  },
+  "final_content": "Bizarre dreams can both reflect the brain’s offline memory‑processing work and sometimes harm sleep quality by causing awakenings, fragmenting REM sleep and sleep continuity, and increasing next‑day fatigue or mood/cognitive effects. An ax murderer is attacking you.You find yourself in bed with a coworker. You’re walking down a road and suddenly your feet leave the ground and you’re flying.\n\nOur dreams are the Wild West of our minds where rules and order don’t exist.\n\nOr do they?\n\nThe scientists who study dreaming say it isn’t really as strange a phenomenon as it might otherwise seem — and even the really weird dreams probably don’t come out of the blue. While bizarre dreams can wake you or leave you restless (reducing subjective sleep quality), they also often reflect normal sleep‑dependent processes that help memory consolidation, emotional processing and problem solving.\n\nThe brain thinks, makes memories, and solves problems. It observes new information. It processes that information by determining what’s important, what’s not, and what’s connected to something you already know. And then the brain either stores that information or dumps what’s not useful, explainsRobert Stickgold, PhD, Associate Professor of Psychiatry at Harvard Medical School’s Center for Sleep and Cognition, who studies the role of cognition in sleep.\n\nAnd you can’t do all of that at the same time, he tells NBC News BETTER. “You can’t both think about something and listen to people at the same time.”\n\nOur brains need offline time for processing and learning new things — andthey do this during sleep. (And there’s a whole lot of evidence to support the idea thatsleep makes learning and memory storing possible.)\n\nAnd it might be that dreaming plays a role in that process, Stickgold says — “where the brain is trying to solve problems and complete processes that were going on during waking that it — in its waking hours — didn’t complete.”\n\nThe dreaming brain can build stories better than a brain that’s awake\n\nThere are certain questions that come up for which we plot a potential course of action or think through a future scenario to solve, Stickgold explains.\n\nRelated\n\nA BETTER WayCan't sleep? Here's how to reset your internal body clock\n\nThat’s what our brains can’t do in the background when we’re awake. But that type of narrative construction (building a story) still requires us to be consciously aware, Stickgold says — which is one feature of dreams. We know they’re happening.\n\n“It might be that you need to bring that sleep-dependent memory processing into consciousness to be able to solve those kinds of problems that require the development of a plan or a narrative or a plot,” Stickgold says — that you need to dream to do that kind of thinking .\n\nSeveral studies show (what nearly everyone has probably experienced on their own) that our waking experiences show up in our dreams. Other research shows that we are more likely to remember something if we dream about it. (Erin Wamsley, PhD, an assistant professor in the Psychology Department at Furman University in Greenville, South Carolina, explains all of those studies in further depth in areview article in a 2014 issue of Current Neurology and Neuroscience Reports.)\n\nAnd more research suggests that dreaming does actually help us problem solve.\n\nAset of experimentsconducted by Wamsley’s and Stickgold’s group (when Wamsley was at Harvard) showed that when a group of 99 individuals were given the task of navigating a complex maze, those whose performance on the task improved the most when re-tested after a five-hour period were those individuals given the opportunity to take a nap — and more specifically those who reported dreaming about the maze during that nap — compared to when they were simply awake during that time (even if they reported thinking about the maze during that period of being awake).\n\nAnd perhaps more interesting still, research that looks at the mechanical changes in the brain during sleep and during dreaming align with this thinking, too.\n\nDuring dreaming, the visual and emotional processing areas of the brain are active\n\nResearchers have measured brain activity during sleep and during dreaming. “And it does match the psychology in some interesting ways,” saysBenjamin Baird, PhD, a researcher at the Center for Sleep and Consciousness at University of Wisconsin-Madison, whose work focuses on understanding the neural mechanisms of consciousness. These correlations have been made usingPET/rCBFandfMRIand by performing targeted awakenings during REM to collect immediate dream reports.\n\nStudies going back to the 1990ssuggest theamygdala(a part of our brain that plays a role in emotional processing) appear to be very active during dreaming, and amygdala hyperactivation has been reported to correlate with emotionally charged and bizarre dream content.And more recent workfrom Baird’s group suggests that areas of the brain known to be involved in visual processing (the regions that appear to allow us to register colors, motion, and faces) are active during dreaming; neuroimaging specifically points to increased activity in visual association areas such as theextrastriate cortexand thefusiform gyrusduring REM and when dreams are reported. Other studies also report increased regional cerebral blood flow or activation in thetemporoparietal junction (TPJ)and themedial prefrontal cortex (mPFC)that are associated with the generation and recall of vivid, narrative dreams, and high dream‑recallers tend to show greaterTPJandmPFCactivity (and stronger connectivity between medial prefrontal and temporoparietal areas) than low recallers.\n\nOn the flip side, other parts of the brain (the frontal and prefrontal cortices, which are involved with our ability to plan, think through things and apply logic and order) are less active during dreaming compared with other parts of sleep and wakefulness (thatresearchalso goes back to the late 1990s). “That doesn’t mean they’re totally off, but it means activity is suppressed to a very large extent,” Baird says. Neuroimaging studies have consistently found decreased activation in lateral frontal regions, including thedorsolateral prefrontal cortex (DLPFC), a pattern linked to reduced executive control and the greater acceptance of bizarre elements in dreams.\n\nAll of that seems to fit our understanding of dreaming, Baird says — that we are visually and emotionally processing things, but certain executive processing functions (like being able to plan out the future or weigh the past against a present scenario) don’t really happen during dreaming.\n\nThe big caveat, however, is that nearly all of those studies have come to those conclusions using rapid eye movement (REM) sleep to measure dream sleep, Baird says — “which is a big (and actually a wrongful) assumption.”\n\nRelated\n\nBETTER SleepWhat actually happens in your body and brain while you sleep\n\nWe dream in the non-REM stages of sleep as well as in the REM stages of sleep, and we spend some of our time in REM sleep not dreaming.\n\nBut, Baird adds, REM sleep can be useful for approximating what’s happening during dreaming because it’s during REM sleep that we tend to have the most vivid, story-like dreams. And data suggests that we spend the vast majority of our time in REM sleep (as much as 95 percent of it, according to research from Baird and his colleaguespublished in 2017 in the journal Nature Neuroscience) dreaming.\n\n“So looking at the brain during REM sleep can still give us some clues about what’s happening,” Baird says.\n\nIn fact, REM has several explicit physiological and neural signatures that help explain why it’s often used to study dreaming: the cortex typically shows alow-voltage, mixed-frequency EEG with prominent theta-band activity (~4–8 Hz) and phasic sawtooth waves, and REM is marked byrapid conjugate eye movements and, in many species and human recordings, phasic pontine‑geniculate‑occipital (PGO) wavesassociated with visual dream imagery. The state is produced by a distinctive neuromodulatory milieu —increased cholinergic (PPT/LDT) activity and greatly reduced monoaminergic (serotonin, norepinephrine) firing— and that cholinergic drivedepolarizes thalamic relay cells and reduces usual sensory gating, favoring internally generated thalamocortical activity over externally driven input. At the same time, REM atonia arises becausebrainstem REM‑on regions (e.g., sublaterodorsal nucleus / pontine tegmentum) recruit medullary inhibitory interneurons that hyperpolarize spinal motor neurons via GABA/glycine release, producing near‑complete skeletal muscle paralysis while eye and diaphragm muscles remain active. Autonomic signs during REM includeirregular/variable heart rate and respiration, phasic sympathetic surges, and common genital autonomic activation, and thermoregulation is reduced; imaging (PET/fMRI) typically showsincreased metabolic activity and blood flow in limbic structures (amygdala, hippocampus) and visual association areas, with relative decreases in dorsolateral prefrontal cortex.REM sleep combines wake-like cortical activation (desynchronized EEG and theta), phasic brainstem phenomena (rapid eye movements, PGO waves), cholinergic-driven thalamocortical activation, and a brainstem-mediated muscle atonia — producing vivid internally generated imagery with strong emotional tone but reduced executive control.\n\nAnd it’s not actually that difficult to understand that when this type of brain activity happens, we dream, he adds.\n\n“What the brain is doing at all times is trying to construct a model of the world around us,” Baird says. When we’re awake the input comes from our environment (what we see, taste, smell, hear, and feel). But when we’re asleep, it may be trying to do the same thing — but the input comes from within.\n\n“During sleep — and particularly during REM sleep when the brain is becoming activated again — the brain tries to do what it always does: it tries to construct a reasonable model of the world,” he says.\n\nSo, why do we dream the truly wacky dreams?\n\nBut some dreams are very far from reasonable. Some dreams are really weird.\n\nEven the really weird dreams may just be part of the brain’s process of elimination-approach to problem solving, according to Stickgold.\n\nA lot of memory processing happens during sleep, he says. The brain is filing away new memories, deciding which ones to store and which ones not to. If we presume the brain is indeed problem solving during dreaming, it’s going to look through all of those files (sometimes the ones you just put there and sometimes the really old, dusty ones from a while back) and try to find something useful.\n\n“Your brain is looking for associated memories that are relevant to recent events,” Stickgold explains.\n\nAnd remember the emotional centers of the brain are more active during REM, and the parts responsible for logical thinking are less active. So it would make sense that the memories the brain uses during dreaming may be the more emotionally charged ones, and ones that may not fit the logical narrative.Empirical findings on 'bizarreness' and REM:Empirical studies using standardized dream-bizarreness scoring report that dreams scored as more \"bizarre\" occur more often during REM sleep than during non‑REM sleep, indicating a quantitative correlation between REM and higher levels of dream bizarreness. Researchers such as Michael Schredl and Tore Nielsen have reported patterns consistent with greater bizarreness and vivid, story‑like content in REM dreams (see work by Schredl and Nielsen and related reviews).Pharmacological effects (melatonin/tryptophan):Several experimental trials and clinical reports have found that melatonin supplementation — and, in some studies, tryptophan — can increase reports of vividness and bizarre dream content; some of these studies note dose-related effects where higher doses are associated with more vivid or unusual dreams (see clinical trials and reviews of melatonin's effects on dreaming).\n\nThis is when your brain is trying the out-of-the-box solutions, Stickgold says. It’s not necessarily looking for something reliable that works every time.\n\n“The brain is acting like a venture capitalist,” he says. It’s intentionally throwing a lot of spaghetti against the wall to see what sticks, knowing that some of it won’t.\n\nMORE \"THIS IS YOUR BRAIN ON\"\n\nWhat the beach does to your brainYour brain on a dietSmiling can trick your brain into happiness (and boost your health)Your brain on prayer and meditiationThe science behind being 'hangry'\n\nWant more tips like these? NBC News BETTER is obsessed with finding easier, healthier and smarter ways to live.Sign up for our newsletter."
+}

@@ -65,7 +65,7 @@ class HTMLModificationEngine:
     Use LLM to analyze changes and apply modifications in HTML.
     """
 
-    def __init__(self, model: str = "gpt-4.1-mini", temperature: float = 0):
+    def __init__(self, model: str = "gpt-5-mini", temperature: float = 0):
         """Initialize LLM"""
         self.llm = ChatOpenAI(model=model, temperature=temperature)
         self.parser = PydanticOutputParser(pydantic_object=ChangesOutput)
@@ -294,7 +294,7 @@ class HTMLContentModifier:
 
     OUTPUT_DIR = "refined_pages"
 
-    def __init__(self, model: str = "gpt-4.1-mini", temperature: float = 0):
+    def __init__(self, model: str = "gpt-5-mini", temperature: float = 0):
         """Initialize modifier"""
         self.engine = HTMLModificationEngine(model=model, temperature=temperature)
         self.parser = HtmlParser()

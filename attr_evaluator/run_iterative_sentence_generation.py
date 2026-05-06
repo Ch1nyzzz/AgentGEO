@@ -400,7 +400,7 @@ if __name__ == "__main__":
     argparser.add_argument('--setting', type=str, default=None, help='setting (MDS or LFQA)')
     argparser.add_argument('--split', type=str, default=None, help='data split (test or dev)')
     argparser.add_argument('-o', '--outdir', type=str, default=None, help='path to output csv.')
-    argparser.add_argument('--model-name', type=str, default="gpt-4.1-mini", help='model name')
+    argparser.add_argument('--model-name', type=str, default="gpt-5-mini", help='model name')
     argparser.add_argument('--n-demos', type=int, default=2, help='number of ICL examples (default 2)')
     argparser.add_argument('--num-retries', type=int, default=1, help='number of retries of running the model.')
     argparser.add_argument('--num-demo-changes', type=int, default=4, help='number of changing demos when the currently-chosen set of demos returns an ERROR.')

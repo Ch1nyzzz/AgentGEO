@@ -7,6 +7,9 @@ class DataSaver:
     """Manages file storage and paths."""
     def __init__(self, base_dir="outputs"):
         self.base_dir = base_dir
+        self.enabled = bool(base_dir)
+        if not self.enabled:
+            return
         if not os.path.exists(base_dir):
             os.makedirs(base_dir)
 
@@ -18,6 +21,8 @@ class DataSaver:
 
     def save(self, content: str, filename: str, ext: str = "html", verbose: bool = False):
         """Generic save method."""
+        if not self.enabled:
+            return
         if not content:
             return
 
@@ -33,6 +38,8 @@ class DataSaver:
 
     def load(self, filename: str, ext: str = "html", verbose: bool = False) -> Optional[str]:
         """Read file."""
+        if not self.enabled:
+            return None
         full_path = os.path.join(self.base_dir, f"{filename}.{ext}")
         if os.path.exists(full_path):
             try:

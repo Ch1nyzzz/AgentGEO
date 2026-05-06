@@ -22,7 +22,7 @@ def _get_client():
 def call_openai(
     user_prompt: str,
     system_prompt: str = COMMON_SYSTEM_PROMPT,
-    model_name: str = "gpt-4.1-mini",
+    model_name: str = "gpt-5-mini",
     temperature: float = 0.7
 ) -> str:
     """Call OpenAI API with retry logic.
@@ -30,7 +30,7 @@ def call_openai(
     Args:
         user_prompt: User prompt text
         system_prompt: System prompt text (default: COMMON_SYSTEM_PROMPT)
-        model_name: OpenAI model name (default: "gpt-4.1-mini")
+        model_name: OpenAI model name (default: "gpt-5-mini")
         temperature: Sampling temperature (default: 0.7)
 
     Returns:

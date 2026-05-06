@@ -366,17 +366,17 @@ The `geo_agent/config.yaml` file configures individual components:
 # LLM configuration
 llm:
   provider: openai  # Options: openai, anthropic, gemini
-  model: gpt-4.1-mini
+  model: gpt-5-mini
   temperature: 0
 
 # Task-specific LLM settings (optional, overrides defaults)
 llm_tasks:
   generation:
     provider: openai
-    model: gpt-4.1-mini
+    model: gpt-5-mini
   diagnosis:
     provider: openai
-    model: gpt-4.1-mini
+    model: gpt-5-mini
 
 # Search engine configuration
 search:
@@ -442,7 +442,7 @@ optimizer:
 
 baseline:
   provider: "openai"
-  model: "gpt-4.1-mini"
+  model: "gpt-5-mini"
   methods: null  # null = all 9 methods, or specify: ["cite_sources", "authoritative"]
 ```
 

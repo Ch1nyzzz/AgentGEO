@@ -372,7 +372,7 @@ def pre_init(arg_list=None):
     argparser.add_argument('-o', '--outdir', type=str, default=None, help='path to output csv.')
     argparser.add_argument('--indir-alignments', type=str, default=None, help='path to json file with alignments (if nothing is passed - goes to default under data/{setting}/{split}.json).')
     argparser.add_argument('--indir-prompt', type=str, default=None, help='path to json file with the prompt structure and ICL examples (if nothing is passed - goes to default under prompts/{setting}.json).')
-    argparser.add_argument('--model-name', type=str, default="gpt-4.1-mini", help='model name')
+    argparser.add_argument('--model-name', type=str, default="gpt-5-mini", help='model name')
     argparser.add_argument('--n-demos', type=int, default=2, help='number of ICL examples (default 2)')
     argparser.add_argument('--compete-times', type=int, default=3, help='number of gpt compete tim (default 4)')
     argparser.add_argument('--data-num', type=int, default=50, help='number of data samples to use (default 50)')

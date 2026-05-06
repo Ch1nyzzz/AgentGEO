@@ -278,7 +278,7 @@ class AutoGEOOptimizer:
         temperature = llm_config.get('temperature', 0.7)
 
         if "gpt" in engine_llm_lower or "openai" in engine_llm_lower:
-            return OpenAIChatLLM(model="gpt-4.1-mini", temperature=temperature)
+            return OpenAIChatLLM(model="gpt-5-mini", temperature=temperature)
         elif "claude" in engine_llm_lower or "anthropic" in engine_llm_lower:
             return AnthropicChatLLM(model="claude-haiku-4-5-20251001", temperature=temperature)
         else:  # gemini

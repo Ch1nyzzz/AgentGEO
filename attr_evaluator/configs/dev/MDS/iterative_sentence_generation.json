@@ -1,7 +1,7 @@
 {
     "split": "dev",
     "setting": "MDS",
-    "model_name": "gpt-4.1-mini",
+    "model_name": "gpt-5-mini",
     "n_demos": 3,
     "num_retries": 5,
     "temperature": 0.3,

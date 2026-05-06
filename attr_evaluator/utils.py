@@ -88,7 +88,7 @@ def update_args(args):
 
 
 def get_token_counter(model_name):
-    if model_name=="gpt-4.1-mini":
+    if model_name=="gpt-5-mini":
         return {"tkn_counter" : TokenCounter(model_name),
                 "tkn_max_limit" : 30720}
     else:

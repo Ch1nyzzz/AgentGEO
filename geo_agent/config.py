@@ -71,6 +71,16 @@ class LLMResponse:
         self.content = content
 
 
+def _openai_chat_kwargs(model: str, temperature: float, messages):
+    kwargs = {
+        "model": model,
+        "messages": messages,
+    }
+    if not model.lower().startswith("gpt-5"):
+        kwargs["temperature"] = temperature
+    return kwargs
+
+
 def _normalize_chat_messages(prompt_input):
     """
     Compatible with LangChain-style input:
@@ -124,9 +134,7 @@ class OpenAIChatLLM:
         client = OpenAI()
         messages = _normalize_chat_messages(prompt_input)
         resp = client.chat.completions.create(
-            model=self.model,
-            temperature=self.temperature,
-            messages=messages,
+            **_openai_chat_kwargs(self.model, self.temperature, messages)
         )
         content = (resp.choices[0].message.content or "").strip()
         return LLMResponse(content)
@@ -137,9 +145,7 @@ class OpenAIChatLLM:
         client = AsyncOpenAI()
         messages = _normalize_chat_messages(prompt_input)
         resp = await client.chat.completions.create(
-            model=self.model,
-            temperature=self.temperature,
-            messages=messages,
+            **_openai_chat_kwargs(self.model, self.temperature, messages)
         )
         content = (resp.choices[0].message.content or "").strip()
         return LLMResponse(content)
@@ -238,8 +244,8 @@ def get_llm_from_config(config_path='config.yaml'):
     config = load_config(config_path)
     llm_config = config.get('llm', {})
     provider = llm_config.get('provider', 'openai')
-    model_name = llm_config.get('model', 'gpt-4.1-mini')
-    temperature = llm_config.get('temperature', 0)
+    model_name = llm_config.get('model', 'gpt-5-mini')
+    temperature = llm_config.get('temperature', 1 if model_name.lower().startswith('gpt-5') else 0)
 
     if provider == 'openai':
         return OpenAIChatLLM(model=model_name, temperature=temperature)
@@ -267,6 +273,7 @@ def get_llm_for_task(config_path: str = 'config.yaml', task: Optional[LLMTask] =
     config = load_config(config_path)
 
     # Try to get task-specific configuration
+    base_config = config.get('llm', {})
     task_config = None
     if task:
         llm_tasks = config.get('llm_tasks', {})
@@ -274,11 +281,13 @@ def get_llm_for_task(config_path: str = 'config.yaml', task: Optional[LLMTask] =
 
     # Fall back to global configuration
     if not task_config:
-        task_config = config.get('llm', {})
+        task_config = base_config
+    else:
+        task_config = {**base_config, **task_config}
 
     provider = task_config.get('provider', 'openai')
-    model = task_config.get('model', 'gpt-4.1-mini')
-    temperature = task_config.get('temperature', 0)
+    model = task_config.get('model', 'gpt-5-mini')
+    temperature = task_config.get('temperature', 1 if model.lower().startswith('gpt-5') else 0)
 
     if provider == 'openai':
         return OpenAIChatLLM(model=model, temperature=temperature)
