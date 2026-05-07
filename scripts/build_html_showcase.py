@@ -17,7 +17,7 @@ import pandas as pd
 NUM_DOCS = 20
 NUM_QUERIES = 2
 NUM_COMPETITORS = 10
-CACHE_DIR = Path("/Users/erv1n/autoGEO_reproduce/experiments/cache")
+CACHE_DIR = Path(os.getenv("AGENTGEO_CACHE_DIR", "experiments/cache"))
 OUTPUT_DIR = Path("outputs/showcase")
 
 # ── Load data ──
