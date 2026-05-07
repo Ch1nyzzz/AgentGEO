@@ -1,0 +1,63 @@
+{
+  "run_id": "page_optim_top10_20260507",
+  "run_marker": "agentgeo-page-optim-top10",
+  "source_dir": "outputs/page_optim_top10/documents",
+  "successful_documents": 6,
+  "total_queries": 41,
+  "documents": [
+    {
+      "doc_id": "page_optim_0000_fff7d9ffb927",
+      "url": "https://en.wikipedia.org/wiki/Sick_leave_in_the_United_States",
+      "queries": 13,
+      "baseline_rate": 0.38461538461538464,
+      "optimized_rate": 0.46153846153846156,
+      "delta": 0.07692307692307693,
+      "optimized_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/optimized.html"
+    },
+    {
+      "doc_id": "page_optim_0001_d4c313271872",
+      "url": "https://en.wikipedia.org/wiki/Sick_leave",
+      "queries": 10,
+      "baseline_rate": 0.3,
+      "optimized_rate": 0.8,
+      "delta": 0.5,
+      "optimized_path": "page_optim_top10/page_optim_0001_d4c313271872/optimized.html"
+    },
+    {
+      "doc_id": "page_optim_0019_9c3546d3690d",
+      "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_GL-Class_%28X164%29",
+      "queries": 5,
+      "baseline_rate": 0.0,
+      "optimized_rate": 0.4,
+      "delta": 0.4,
+      "optimized_path": "page_optim_top10/page_optim_0019_9c3546d3690d/optimized.html"
+    },
+    {
+      "doc_id": "page_optim_0020_d2a12b340e2f",
+      "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_GL-Class_%28X166%29",
+      "queries": 5,
+      "baseline_rate": 0.0,
+      "optimized_rate": 1.0,
+      "delta": 1.0,
+      "optimized_path": "page_optim_top10/page_optim_0020_d2a12b340e2f/optimized.html"
+    },
+    {
+      "doc_id": "page_optim_0024_0e171231e73c",
+      "url": "https://en.wikipedia.org/wiki/Colorado_Department_of_Labor_and_Employment",
+      "queries": 4,
+      "baseline_rate": 0.75,
+      "optimized_rate": 0.75,
+      "delta": 0.0,
+      "optimized_path": "page_optim_top10/page_optim_0024_0e171231e73c/optimized.html"
+    },
+    {
+      "doc_id": "page_optim_0025_338fa4b16b7c",
+      "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class_EV",
+      "queries": 4,
+      "baseline_rate": 0.5,
+      "optimized_rate": 1.0,
+      "delta": 0.5,
+      "optimized_path": "page_optim_top10/page_optim_0025_338fa4b16b7c/optimized.html"
+    }
+  ]
+}
