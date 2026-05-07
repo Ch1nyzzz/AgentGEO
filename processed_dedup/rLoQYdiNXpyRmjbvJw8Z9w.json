@@ -1,0 +1,1146 @@
+{
+  "uuid": "rLoQYdiNXpyRmjbvJw8Z9w",
+  "source_title": "Difference between Management and Administration | Management vs Administration",
+  "keywords": {
+    "core": [
+      "management",
+      "administration"
+    ],
+    "lsi_synonyms": [
+      "leadership",
+      "governance",
+      "supervision",
+      "oversight"
+    ],
+    "keyphases": [
+      "difference between management and administration",
+      "management vs administration",
+      "management and administration comparison",
+      "roles of management and administration"
+    ]
+  },
+  "personas": [
+    {
+      "name": "Business Students",
+      "description": "Individuals pursuing education in business or management studies, seeking to understand foundational concepts and differences in organizational roles."
+    },
+    {
+      "name": "Aspiring Managers",
+      "description": "Professionals aiming to advance into management positions, interested in understanding the nuances between management and administration to better prepare for their roles."
+    },
+    {
+      "name": "HR Professionals",
+      "description": "Human resources specialists involved in organizational development and structure, looking to clarify role definitions and responsibilities within a company."
+    },
+    {
+      "name": "Small Business Owners",
+      "description": "Entrepreneurs managing their own businesses, needing to differentiate between management and administrative tasks to optimize operations."
+    },
+    {
+      "name": "Corporate Trainers",
+      "description": "Professionals responsible for developing training programs, requiring a clear understanding of management and administration to educate others effectively."
+    }
+  ],
+  "detailed_data": [
+    {
+      "focus_keyword": "management",
+      "variations": [
+        {
+          "target_persona": "Business Students",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management articles"
+            ],
+            "informational": [
+              "what are the key functions of management"
+            ],
+            "commercial": [
+              "best management textbooks for business students"
+            ],
+            "transactional": [
+              "buy Principles of Management textbook"
+            ]
+          }
+        },
+        {
+          "target_persona": "Aspiring Managers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management articles"
+            ],
+            "informational": [
+              "difference between management and administration"
+            ],
+            "commercial": [
+              "best online courses for aspiring managers"
+            ],
+            "transactional": [
+              "buy management books for beginners"
+            ]
+          }
+        },
+        {
+          "target_persona": "HR Professionals",
+          "queries": {
+            "navigational": [
+              "SHRM management resources"
+            ],
+            "informational": [
+              "how to define management roles in a company"
+            ],
+            "commercial": [
+              "best management software for HR professionals"
+            ],
+            "transactional": [
+              "buy management training course online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management articles"
+            ],
+            "informational": [
+              "difference between management and administrative tasks"
+            ],
+            "commercial": [
+              "best management software for small businesses"
+            ],
+            "transactional": [
+              "buy management books for entrepreneurs"
+            ]
+          }
+        },
+        {
+          "target_persona": "Corporate Trainers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management articles"
+            ],
+            "informational": [
+              "what are the key principles of effective management"
+            ],
+            "commercial": [
+              "best management training programs for corporate trainers"
+            ],
+            "transactional": [
+              "buy management training materials online"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "administration",
+      "variations": [
+        {
+          "target_persona": "Business Students",
+          "queries": {
+            "navigational": [
+              "Harvard Business School administration page"
+            ],
+            "informational": [
+              "what is the role of administration in business management"
+            ],
+            "commercial": [
+              "best online courses for business administration"
+            ],
+            "transactional": [
+              "buy business administration textbooks"
+            ]
+          }
+        },
+        {
+          "target_persona": "Aspiring Managers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review administration articles"
+            ],
+            "informational": [
+              "difference between management and administration in business"
+            ],
+            "commercial": [
+              "best online courses for business administration"
+            ],
+            "transactional": [
+              "buy business administration books on Amazon"
+            ]
+          }
+        },
+        {
+          "target_persona": "HR Professionals",
+          "queries": {
+            "navigational": [
+              "SHRM administration resources"
+            ],
+            "informational": [
+              "what are the key responsibilities of an administration department in a company"
+            ],
+            "commercial": [
+              "best software for HR administration management"
+            ],
+            "transactional": [
+              "buy HR administration training course"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Small Business Administration official website"
+            ],
+            "informational": [
+              "difference between management and administration in small business"
+            ],
+            "commercial": [
+              "best administration software for small businesses"
+            ],
+            "transactional": [
+              "buy small business administration software"
+            ]
+          }
+        },
+        {
+          "target_persona": "Corporate Trainers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review administration articles"
+            ],
+            "informational": [
+              "what are the key principles of effective administration in corporate training"
+            ],
+            "commercial": [
+              "best administration software for corporate trainers"
+            ],
+            "transactional": [
+              "buy administration training course online"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "leadership",
+      "variations": [
+        {
+          "target_persona": "Business Students",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review leadership articles"
+            ],
+            "informational": [
+              "what are the key traits of effective leadership"
+            ],
+            "commercial": [
+              "best leadership books for business students"
+            ],
+            "transactional": [
+              "buy leadership development course online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Aspiring Managers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review leadership articles"
+            ],
+            "informational": [
+              "difference between management and administration in leadership"
+            ],
+            "commercial": [
+              "best leadership training programs for aspiring managers"
+            ],
+            "transactional": [
+              "buy leadership books for new managers"
+            ]
+          }
+        },
+        {
+          "target_persona": "HR Professionals",
+          "queries": {
+            "navigational": [
+              "SHRM leadership development resources"
+            ],
+            "informational": [
+              "effective leadership styles in organizational development"
+            ],
+            "commercial": [
+              "best leadership training programs for HR professionals"
+            ],
+            "transactional": [
+              "buy leadership development books for HR"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "John Maxwell leadership blog"
+            ],
+            "informational": [
+              "difference between leadership and management in small business"
+            ],
+            "commercial": [
+              "best leadership books for entrepreneurs"
+            ],
+            "transactional": [
+              "buy leadership training course for small business owners"
+            ]
+          }
+        },
+        {
+          "target_persona": "Corporate Trainers",
+          "queries": {
+            "navigational": [
+              "John Maxwell leadership training program"
+            ],
+            "informational": [
+              "effective leadership strategies for corporate trainers"
+            ],
+            "commercial": [
+              "best leadership development books for trainers"
+            ],
+            "transactional": [
+              "buy leadership training materials online"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "governance",
+      "variations": [
+        {
+          "target_persona": "Business Students",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review governance articles"
+            ],
+            "informational": [
+              "what is corporate governance in business"
+            ],
+            "commercial": [
+              "best books on corporate governance for business students"
+            ],
+            "transactional": [
+              "buy corporate governance textbook online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Aspiring Managers",
+          "queries": {
+            "navigational": [
+              "World Bank governance page"
+            ],
+            "informational": [
+              "difference between governance and management in business"
+            ],
+            "commercial": [
+              "best books on corporate governance for aspiring managers"
+            ],
+            "transactional": [
+              "buy corporate governance training course"
+            ]
+          }
+        },
+        {
+          "target_persona": "HR Professionals",
+          "queries": {
+            "navigational": [
+              "SHRM governance resources"
+            ],
+            "informational": [
+              "what is corporate governance in HR"
+            ],
+            "commercial": [
+              "best governance software for HR"
+            ],
+            "transactional": [
+              "buy governance training materials for HR"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "corporate governance guidelines for small businesses"
+            ],
+            "informational": [
+              "difference between governance and management in business"
+            ],
+            "commercial": [
+              "best governance software for small businesses"
+            ],
+            "transactional": [
+              "buy governance training course for entrepreneurs"
+            ]
+          }
+        },
+        {
+          "target_persona": "Corporate Trainers",
+          "queries": {
+            "navigational": [
+              "World Bank governance resources"
+            ],
+            "informational": [
+              "what is corporate governance in management"
+            ],
+            "commercial": [
+              "best governance training programs for corporate trainers"
+            ],
+            "transactional": [
+              "buy corporate governance training materials"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "supervision",
+      "variations": [
+        {
+          "target_persona": "Business Students",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review article on supervision"
+            ],
+            "informational": [
+              "what is the role of supervision in management"
+            ],
+            "commercial": [
+              "best books on effective supervision in business"
+            ],
+            "transactional": [
+              "buy 'The Art of Supervision' book"
+            ]
+          }
+        },
+        {
+          "target_persona": "Aspiring Managers",
+          "queries": {
+            "navigational": [
+              "LinkedIn page for supervision skills training"
+            ],
+            "informational": [
+              "difference between supervision and management roles"
+            ],
+            "commercial": [
+              "best online courses for supervision skills"
+            ],
+            "transactional": [
+              "buy supervision skills training book"
+            ]
+          }
+        },
+        {
+          "target_persona": "HR Professionals",
+          "queries": {
+            "navigational": [
+              "SHRM supervision guidelines"
+            ],
+            "informational": [
+              "importance of supervision in organizational development"
+            ],
+            "commercial": [
+              "best supervision training programs for HR professionals"
+            ],
+            "transactional": [
+              "buy supervision training course online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Small Business Supervision Software Homepage"
+            ],
+            "informational": [
+              "difference between supervision and management in small business"
+            ],
+            "commercial": [
+              "best supervision tools for small business owners"
+            ],
+            "transactional": [
+              "buy supervision software for small business"
+            ]
+          }
+        },
+        {
+          "target_persona": "Corporate Trainers",
+          "queries": {
+            "navigational": [
+              "LinkedIn page for supervision training programs"
+            ],
+            "informational": [
+              "importance of supervision in corporate training"
+            ],
+            "commercial": [
+              "best online courses for supervision skills"
+            ],
+            "transactional": [
+              "buy supervision training materials"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "oversight",
+      "variations": [
+        {
+          "target_persona": "Business Students",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review oversight article"
+            ],
+            "informational": [
+              "what is the role of oversight in business management"
+            ],
+            "commercial": [
+              "best books on corporate oversight"
+            ],
+            "transactional": [
+              "buy corporate oversight training course"
+            ]
+          }
+        },
+        {
+          "target_persona": "Aspiring Managers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review oversight article"
+            ],
+            "informational": [
+              "difference between oversight and management"
+            ],
+            "commercial": [
+              "best books on management oversight"
+            ],
+            "transactional": [
+              "buy management oversight training course"
+            ]
+          }
+        },
+        {
+          "target_persona": "HR Professionals",
+          "queries": {
+            "navigational": [
+              "SHRM oversight guidelines"
+            ],
+            "informational": [
+              "what is the role of oversight in HR management"
+            ],
+            "commercial": [
+              "best oversight software for HR departments"
+            ],
+            "transactional": [
+              "buy HR oversight tools"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Small Business Administration oversight guidelines"
+            ],
+            "informational": [
+              "what is business oversight in management"
+            ],
+            "commercial": [
+              "best oversight software for small businesses"
+            ],
+            "transactional": [
+              "buy business oversight tools online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Corporate Trainers",
+          "queries": {
+            "navigational": [
+              "corporate training oversight committee website"
+            ],
+            "informational": [
+              "what is oversight in corporate training programs"
+            ],
+            "commercial": [
+              "best oversight tools for corporate training"
+            ],
+            "transactional": [
+              "buy oversight software for training management"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "difference between management and administration",
+      "variations": [
+        {
+          "target_persona": "Business Students",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review article on management vs administration"
+            ],
+            "informational": [
+              "difference between management and administration in business studies"
+            ],
+            "commercial": [
+              "best books on management vs administration"
+            ],
+            "transactional": [
+              "buy textbook on management and administration differences"
+            ]
+          }
+        },
+        {
+          "target_persona": "Aspiring Managers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management vs administration article"
+            ],
+            "informational": [
+              "difference between management and administration in simple terms"
+            ],
+            "commercial": [
+              "best books on management vs administration"
+            ],
+            "transactional": [
+              "buy online course on management and administration differences"
+            ]
+          }
+        },
+        {
+          "target_persona": "HR Professionals",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review article on management vs administration"
+            ],
+            "informational": [
+              "difference between management and administration in organizational structure"
+            ],
+            "commercial": [
+              "best books on management vs administration"
+            ],
+            "transactional": [
+              "buy course on management and administration differences"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "difference between management and administration Wikipedia"
+            ],
+            "informational": [
+              "what is the difference between management and administration in small businesses"
+            ],
+            "commercial": [
+              "best books on management vs administration for entrepreneurs"
+            ],
+            "transactional": [
+              "buy course on management and administration differences"
+            ]
+          }
+        },
+        {
+          "target_persona": "Corporate Trainers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review article on management vs administration"
+            ],
+            "informational": [
+              "difference between management and administration in corporate training"
+            ],
+            "commercial": [
+              "best books on management vs administration for trainers"
+            ],
+            "transactional": [
+              "buy online course on management and administration differences"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "management vs administration",
+      "variations": [
+        {
+          "target_persona": "Business Students",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management vs administration article"
+            ],
+            "informational": [
+              "difference between management and administration in business"
+            ],
+            "commercial": [
+              "best books on management vs administration"
+            ],
+            "transactional": [
+              "buy management vs administration course online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Aspiring Managers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management vs administration article"
+            ],
+            "informational": [
+              "difference between management and administration in business"
+            ],
+            "commercial": [
+              "best courses for understanding management vs administration"
+            ],
+            "transactional": [
+              "buy book on management vs administration differences"
+            ]
+          }
+        },
+        {
+          "target_persona": "HR Professionals",
+          "queries": {
+            "navigational": [
+              "SHRM management vs administration article",
+              "Harvard Business Review management vs administration",
+              "LinkedIn Learning management vs administration course",
+              "Forbes management vs administration roles",
+              "Wikipedia management vs administration"
+            ],
+            "informational": [
+              "difference between management and administration in HR",
+              "roles of management vs administration in organizations",
+              "how management and administration impact company structure",
+              "management vs administration responsibilities",
+              "understanding management vs administration in business"
+            ],
+            "commercial": [
+              "best books on management vs administration",
+              "top courses for management vs administration",
+              "management vs administration certification programs",
+              "management vs administration workshops",
+              "online seminars on management vs administration"
+            ],
+            "transactional": [
+              "buy management vs administration book",
+              "purchase management vs administration course",
+              "enroll in management vs administration workshop",
+              "download management vs administration guide",
+              "subscribe to management vs administration newsletter"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "difference between management and administration Wikipedia"
+            ],
+            "informational": [
+              "what is the difference between management and administration in business"
+            ],
+            "commercial": [
+              "best books on management vs administration for small business owners"
+            ],
+            "transactional": [
+              "buy management and administration course for entrepreneurs"
+            ]
+          }
+        },
+        {
+          "target_persona": "Corporate Trainers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management vs administration article"
+            ],
+            "informational": [
+              "difference between management and administration in corporate training"
+            ],
+            "commercial": [
+              "best books on management vs administration for trainers"
+            ],
+            "transactional": [
+              "buy management vs administration training course"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "management and administration comparison",
+      "variations": [
+        {
+          "target_persona": "Business Students",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management vs administration article"
+            ],
+            "informational": [
+              "difference between management and administration in business"
+            ],
+            "commercial": [
+              "best books on management and administration comparison"
+            ],
+            "transactional": [
+              "buy management and administration comparison textbook"
+            ]
+          }
+        },
+        {
+          "target_persona": "Aspiring Managers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management vs administration article"
+            ],
+            "informational": [
+              "difference between management and administration in business"
+            ],
+            "commercial": [
+              "best books on management and administration comparison"
+            ],
+            "transactional": [
+              "buy management and administration comparison course online"
+            ]
+          }
+        },
+        {
+          "target_persona": "HR Professionals",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management vs administration article"
+            ],
+            "informational": [
+              "difference between management and administration in HR"
+            ],
+            "commercial": [
+              "best books on management and administration comparison"
+            ],
+            "transactional": [
+              "buy management and administration comparison guide"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "difference between management and administration on Small Business Administration website"
+            ],
+            "informational": [
+              "what is the difference between management and administration in small businesses"
+            ],
+            "commercial": [
+              "best tools for managing and administering a small business"
+            ],
+            "transactional": [
+              "buy management and administration guide for small business owners"
+            ]
+          }
+        },
+        {
+          "target_persona": "Corporate Trainers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management vs administration article"
+            ],
+            "informational": [
+              "difference between management and administration in corporate training"
+            ],
+            "commercial": [
+              "best books on management and administration comparison"
+            ],
+            "transactional": [
+              "buy management and administration comparison course online"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "roles of management and administration",
+      "variations": [
+        {
+          "target_persona": "Business Students",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review roles of management and administration"
+            ],
+            "informational": [
+              "what are the roles of management and administration in a business"
+            ],
+            "commercial": [
+              "best books on management and administration roles"
+            ],
+            "transactional": [
+              "buy textbook on management and administration roles"
+            ]
+          }
+        },
+        {
+          "target_persona": "Aspiring Managers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management vs administration"
+            ],
+            "informational": [
+              "difference between management and administration roles"
+            ],
+            "commercial": [
+              "best courses for management and administration skills"
+            ],
+            "transactional": [
+              "buy management and administration books online"
+            ]
+          }
+        },
+        {
+          "target_persona": "HR Professionals",
+          "queries": {
+            "navigational": [
+              "SHRM roles of management and administration page"
+            ],
+            "informational": [
+              "what are the roles of management and administration in a company"
+            ],
+            "commercial": [
+              "best books on management and administration roles"
+            ],
+            "transactional": [
+              "buy management and administration role definition templates"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review roles of management and administration"
+            ],
+            "informational": [
+              "difference between management and administration in small business"
+            ],
+            "commercial": [
+              "best software for managing administrative tasks in small business"
+            ],
+            "transactional": [
+              "buy management and administration guidebook for small business owners"
+            ]
+          }
+        },
+        {
+          "target_persona": "Corporate Trainers",
+          "queries": {
+            "navigational": [
+              "Harvard Business Review management roles article"
+            ],
+            "informational": [
+              "what are the key roles of management and administration in corporate training"
+            ],
+            "commercial": [
+              "best books on management and administration roles for trainers"
+            ],
+            "transactional": [
+              "buy management and administration training course online"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "dataset": {
+    "train": [
+      "small business administration oversight guidelines",
+      "best books on management oversight",
+      "harvard business review article on supervision",
+      "what is corporate governance in management",
+      "what are the key principles of effective management",
+      "buy management vs administration training course",
+      "best oversight software for hr departments",
+      "what is oversight in corporate training programs",
+      "buy management and administration guidebook for small business owners",
+      "buy management and administration training course online",
+      "roles of management vs administration in organizations",
+      "difference between supervision and management in small business",
+      "buy management books for beginners",
+      "world bank governance page",
+      "how management and administration impact company structure",
+      "harvard business review management articles",
+      "buy textbook on management and administration roles",
+      "what are the key roles of management and administration in corporate training",
+      "best leadership books for entrepreneurs",
+      "harvard business review article on management vs administration",
+      "online seminars on management vs administration",
+      "management vs administration responsibilities",
+      "buy management vs administration course online",
+      "buy corporate governance training course",
+      "buy administration training course online",
+      "best books on management vs administration for small business owners",
+      "buy 'the art of supervision' book",
+      "linkedin learning management vs administration course",
+      "effective leadership strategies for corporate trainers",
+      "buy leadership training materials online",
+      "difference between oversight and management",
+      "harvard business review management vs administration",
+      "harvard business review management vs administration article",
+      "difference between management and administrative tasks",
+      "difference between management and administration on small business administration website",
+      "buy governance training materials for hr",
+      "top courses for management vs administration",
+      "john maxwell leadership training program",
+      "buy management books for entrepreneurs",
+      "buy management and administration course for entrepreneurs",
+      "difference between management and administration in leadership",
+      "buy course on management and administration differences",
+      "difference between management and administration roles",
+      "buy management and administration role definition templates",
+      "best software for managing administrative tasks in small business",
+      "difference between management and administration in hr",
+      "what are the roles of management and administration in a company",
+      "harvard business review governance articles",
+      "difference between supervision and management roles",
+      "what are the roles of management and administration in a business",
+      "what is the role of oversight in business management",
+      "shrm leadership development resources",
+      "best online courses for aspiring managers",
+      "best administration software for small businesses",
+      "buy small business administration software",
+      "buy leadership books for new managers",
+      "difference between management and administration in organizational structure",
+      "what is corporate governance in hr",
+      "shrm management vs administration article",
+      "harvard business review roles of management and administration",
+      "buy leadership training course for small business owners",
+      "harvard business review management roles article",
+      "buy supervision training materials",
+      "management vs administration certification programs",
+      "best management software for hr professionals",
+      "what is the role of administration in business management",
+      "best tools for managing and administering a small business",
+      "buy principles of management textbook",
+      "buy management training materials online",
+      "linkedin page for supervision skills training",
+      "best online courses for business administration",
+      "corporate governance guidelines for small businesses",
+      "difference between leadership and management in small business",
+      "best courses for management and administration skills",
+      "what are the key functions of management",
+      "management vs administration workshops",
+      "difference between management and administration in business",
+      "shrm roles of management and administration page",
+      "shrm governance resources",
+      "buy supervision software for small business",
+      "shrm management resources",
+      "buy management oversight training course",
+      "importance of supervision in corporate training",
+      "best supervision tools for small business owners",
+      "buy oversight software for training management"
+    ],
+    "test": [
+      "best software for hr administration management",
+      "best books on management and administration comparison",
+      "best books on management and administration roles for trainers",
+      "best leadership books for business students",
+      "purchase management vs administration course",
+      "buy governance training course for entrepreneurs",
+      "what are the key principles of effective administration in corporate training",
+      "difference between management and administration",
+      "difference between governance and management in business",
+      "best courses for understanding management vs administration",
+      "buy business oversight tools online",
+      "shrm administration resources",
+      "buy management and administration guide for small business owners",
+      "shrm oversight guidelines",
+      "enroll in management vs administration workshop",
+      "what is corporate governance in business",
+      "buy management and administration books online",
+      "harvard business review oversight article",
+      "buy business administration books on amazon",
+      "buy hr oversight tools",
+      "difference between management and administration in simple terms",
+      "buy management training course online",
+      "best books on management vs administration for entrepreneurs",
+      "what is the difference between management and administration in business",
+      "wikipedia management vs administration",
+      "buy supervision training course online",
+      "buy corporate governance training materials",
+      "difference between management and administration wikipedia",
+      "harvard business review administration articles",
+      "buy management vs administration book",
+      "best governance training programs for corporate trainers",
+      "buy leadership development course online",
+      "best books on corporate oversight",
+      "best books on management vs administration",
+      "buy business administration textbooks",
+      "download management vs administration guide",
+      "harvard business school administration page",
+      "best leadership training programs for aspiring managers",
+      "buy online course on management and administration differences",
+      "best online courses for supervision skills",
+      "best governance software for small businesses",
+      "best supervision training programs for hr professionals",
+      "buy hr administration training course",
+      "best management textbooks for business students",
+      "effective leadership styles in organizational development",
+      "best books on management and administration roles",
+      "best oversight tools for corporate training",
+      "best management software for small businesses",
+      "buy corporate oversight training course",
+      "best books on management vs administration for trainers",
+      "best leadership development books for trainers",
+      "what is business oversight in management",
+      "how to define management roles in a company",
+      "forbes management vs administration roles",
+      "small business administration official website",
+      "buy leadership development books for hr",
+      "buy management and administration comparison textbook",
+      "best books on effective supervision in business",
+      "world bank governance resources",
+      "harvard business review leadership articles",
+      "buy corporate governance textbook online",
+      "best books on corporate governance for business students",
+      "best management training programs for corporate trainers",
+      "best leadership training programs for hr professionals",
+      "difference between management and administration in corporate training",
+      "what is the role of oversight in hr management",
+      "understanding management vs administration in business",
+      "what are the key responsibilities of an administration department in a company",
+      "linkedin page for supervision training programs",
+      "corporate training oversight committee website",
+      "what are the key traits of effective leadership",
+      "best books on corporate governance for aspiring managers",
+      "buy book on management vs administration differences",
+      "difference between management and administration in business studies",
+      "best administration software for corporate trainers",
+      "small business supervision software homepage",
+      "difference between management and administration in small business",
+      "subscribe to management vs administration newsletter",
+      "john maxwell leadership blog",
+      "what is the role of supervision in management",
+      "best governance software for hr",
+      "buy supervision skills training book",
+      "buy management and administration comparison guide",
+      "importance of supervision in organizational development",
+      "best oversight software for small businesses",
+      "what is the difference between management and administration in small businesses"
+    ]
+  },
+  "stats": {
+    "total_unique": 171,
+    "train_count": 85,
+    "test_count": 86,
+    "keywords_count": 10,
+    "personas_count": 5
+  }
+}

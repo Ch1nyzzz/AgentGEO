@@ -7,7 +7,6 @@ cw22_search_dataset/
 scripts/rerun_uncitable.py
 scripts/analyze_uncitable.py
 AgentGEO.pdf
-processed_dedup/*
 # Python
 __pycache__/
 *.py[cod]
