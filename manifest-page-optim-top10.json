@@ -6,11 +6,48 @@
     "query_index": 1,
     "original_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/original.html",
     "optimized_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://cdle.colorado.gov/dlss/labor-laws-by-topic/wage-and-hour-laws-including-paid-sick-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://help.justworks.com/hc/en-us/articles/360024911391-An-Employer-s-Compliance-Starter-Guide-Colorado",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://cl.cobar.org/features/paid-sick-leave-requirements-under-the-healthy-families-and-workplaces-act/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/info_%236b_employer_employee_rights_and_obligations_under_the_healthy_families_and_workplaces_act_05.29.24.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/colorado_healthy_families_and_workplaces_act_revised_aug_7_2023.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      }
+    ],
     "baseline_citation_rate": 0.38461538461538464,
     "optimized_citation_rate": 0.46153846153846156,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0000_fff7d9ffb927.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 5
   },
   {
     "doc_id": "page_optim_0000_fff7d9ffb927",
@@ -19,11 +56,27 @@
     "query_index": 2,
     "original_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/original.html",
     "optimized_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/info_%236a_paid_leave_under_the_healthy_families_and_workplaces_act_10.22.2025.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://cdle.colorado.gov/dlss/labor-laws-by-topic/wage-and-hour-laws-including-paid-sick-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      }
+    ],
     "baseline_citation_rate": 0.38461538461538464,
     "optimized_citation_rate": 0.46153846153846156,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0000_fff7d9ffb927.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 2
   },
   {
     "doc_id": "page_optim_0000_fff7d9ffb927",
@@ -32,11 +85,20 @@
     "query_index": 3,
     "original_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/original.html",
     "optimized_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/Colorado%20Healthy%20Families%20and%20Workplaces%20Act%20Revised%20August%207%202023%20%5Baccessible%5D.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      }
+    ],
     "baseline_citation_rate": 0.38461538461538464,
     "optimized_citation_rate": 0.46153846153846156,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0000_fff7d9ffb927.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 1
   },
   {
     "doc_id": "page_optim_0000_fff7d9ffb927",
@@ -45,11 +107,55 @@
     "query_index": 4,
     "original_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/original.html",
     "optimized_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.builtincolorado.com/companies/perks/paid-sick-days",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.builtincolorado.com/company/pivot-energy-0/benefits",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.cu.edu/employee-services/leave/famli-fmla-and-parental-leave/cu-boulder/classified-staff",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.builtincolorado.com/company/stream/benefits",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://www.travelershaven.com/careers/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/Colorado%20Healthy%20Families%20and%20Workplaces%20Act%20Revised%20August%207%202023%20%5Baccessible%5D.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      }
+    ],
     "baseline_citation_rate": 0.38461538461538464,
     "optimized_citation_rate": 0.46153846153846156,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0000_fff7d9ffb927.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 6
   },
   {
     "doc_id": "page_optim_0000_fff7d9ffb927",
@@ -58,11 +164,48 @@
     "query_index": 5,
     "original_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/original.html",
     "optimized_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.dol.gov/agencies/whd/fact-sheets/84-paid-sick-leave-federal-contractors",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.govdocs.com/paid-sick-leave-laws-by-state/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://beta.dol.gov/research-data/fact-sheets/fact-sheet-28-family-and-medical-leave-act",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.dol.gov/index.php/agencies/wb/featured-paid-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Federal_Employee_Paid_Leave_Act",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      }
+    ],
     "baseline_citation_rate": 0.38461538461538464,
     "optimized_citation_rate": 0.46153846153846156,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0000_fff7d9ffb927.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 5
   },
   {
     "doc_id": "page_optim_0000_fff7d9ffb927",
@@ -71,11 +214,48 @@
     "query_index": 6,
     "original_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/original.html",
     "optimized_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.ncsl.org/labor-and-employment/paid-sick-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.dol.gov/agencies/wb/featured-paid-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://help.onpay.com/hc/en-us/articles/115001853746-Guide-to-paid-sick-leave-See-what-your-state-requires-and-allows",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.cga.ct.gov/2024/rpt/pdf/2024-R-0077.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://www.adp.com/-/media/adp/blog/articles/pdf/e/y/eye-on-state-and-local-dec-25_940627.pdf?hash=4D12616AF8D872FD4C7553CCD814A92D&rev=af0dfbaecf184b39858ee58b60f15bdc",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      }
+    ],
     "baseline_citation_rate": 0.38461538461538464,
     "optimized_citation_rate": 0.46153846153846156,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0000_fff7d9ffb927.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 5
   },
   {
     "doc_id": "page_optim_0000_fff7d9ffb927",
@@ -84,11 +264,55 @@
     "query_index": 7,
     "original_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/original.html",
     "optimized_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://cdle.colorado.gov/dlss/labor-laws-by-topic/wage-and-hour-laws-including-paid-sick-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.employmentlawhandbook.com/employment-and-labor-laws/states/colorado/leave-laws/sick-leave/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://famli.colorado.gov/news-article/colorados-paid-sick-leave-law-is-expanding-what-does-that-mean-for-famli",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.denvergov.org/files/assets/public/v/2/auditor/documents/denver-labor/2025/civil-wage-theft-rules-2025.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/INFO%20%236A%20Paid%20Leave%20under%20the%20Healthy%20Families%20and%20Workplaces%20Act%203.29.2022%20accessible.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/INFO%20%236%20HFWA%20Summary%20%26%20Overview%2007.19.2023%20accessible_0.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      }
+    ],
     "baseline_citation_rate": 0.38461538461538464,
     "optimized_citation_rate": 0.46153846153846156,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0000_fff7d9ffb927.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 6
   },
   {
     "doc_id": "page_optim_0000_fff7d9ffb927",
@@ -97,11 +321,62 @@
     "query_index": 8,
     "original_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/original.html",
     "optimized_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://leaveintel.com/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.bamboohr.com/uk/platform/time-and-attendance/time-off",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://leavesiq.com/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://qcera.com/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://rulewize.com/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://apps.adp.com/en-us/apps/29695/adp-total-absence-management/features",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      },
+      {
+        "url": "https://www.ukg.com/sites/default/files/legacy/kronos/resources/pdf/en/workforce-absence-manager73a-accruals-ds-fnl.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 7
+      }
+    ],
     "baseline_citation_rate": 0.38461538461538464,
     "optimized_citation_rate": 0.46153846153846156,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0000_fff7d9ffb927.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 7
   },
   {
     "doc_id": "page_optim_0000_fff7d9ffb927",
@@ -110,11 +385,62 @@
     "query_index": 9,
     "original_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/original.html",
     "optimized_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.dol.gov/agencies/wb/featured-paid-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.dol.gov/index.php/general/topic/workhours/sickleave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.bls.gov/ebs/factsheets/paid-sick-leave.htm",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://legalclarity.org/what-is-paid-sick-leave-laws-accrual-and-your-rights/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://www.everycrsreport.com/reports/R48921.html",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Families_First_Coronavirus_Response_Act",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      },
+      {
+        "url": "https://www.dol.gov/sites/dolgov/files/WB/StatePaidSickLeaveLaws.pdf?ceid=595181&emci=d54cbea2-49ab-ef11-88cf-6045bdfe8d29&emdi=44f00688-49ae-ef11-88cf-6045bdfe8d29",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 7
+      }
+    ],
     "baseline_citation_rate": 0.38461538461538464,
     "optimized_citation_rate": 0.46153846153846156,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0000_fff7d9ffb927.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 7
   },
   {
     "doc_id": "page_optim_0000_fff7d9ffb927",
@@ -127,7 +453,8 @@
     "baseline_citation_rate": 0.38461538461538464,
     "optimized_citation_rate": 0.46153846153846156,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0000_fff7d9ffb927.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 0
   },
   {
     "doc_id": "page_optim_0000_fff7d9ffb927",
@@ -136,11 +463,27 @@
     "query_index": 11,
     "original_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/original.html",
     "optimized_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://cdle.colorado.gov/dlss/labor-laws-by-topic/wage-and-hour-laws-including-paid-sick-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/colorado_healthy_families_and_workplaces_act_revised_aug_7_2023.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      }
+    ],
     "baseline_citation_rate": 0.38461538461538464,
     "optimized_citation_rate": 0.46153846153846156,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0000_fff7d9ffb927.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 2
   },
   {
     "doc_id": "page_optim_0000_fff7d9ffb927",
@@ -149,11 +492,48 @@
     "query_index": 12,
     "original_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/original.html",
     "optimized_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://cdle.colorado.gov/dlss/labor-laws-by-topic/wage-and-hour-laws-including-paid-sick-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.govdocs.com/home-page/resources/guides/county-and-city-paid-sick-leave-laws/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.littler.com/publication-press/publication/colorado-updates-its-paid-sick-leave-guidance-including-clarifications",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://law.justia.com/codes/colorado/2021/title-8/article-13-3/part-4/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/INFO%20%236A%20Paid%20Leave%20under%20the%20Healthy%20Families%20and%20Workplaces%20Act%203.29.2022%20accessible.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      }
+    ],
     "baseline_citation_rate": 0.38461538461538464,
     "optimized_citation_rate": 0.46153846153846156,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0000_fff7d9ffb927.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 5
   },
   {
     "doc_id": "page_optim_0000_fff7d9ffb927",
@@ -162,11 +542,69 @@
     "query_index": 13,
     "original_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/original.html",
     "optimized_path": "page_optim_top10/page_optim_0000_fff7d9ffb927/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.dol.gov/whd/fmla/index.htm",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.dol.gov/agencies/whd/government-contracts/sick-leave/faq",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.irs.gov/newsroom/section-45s-employer-credit-for-paid-family-and-medical-leave-faqs",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.ncsl.org/labor-and-employment/state-family-and-medical-leave-laws",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-reasonable-accommodation-and-undue-hardship-under-ada",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://www.eeoc.gov/disability-discrimination-and-reasonable-accommodation-medical-inquiries-leave-and-telework",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      },
+      {
+        "url": "https://www.dol.gov/whd/fmla/employerguide.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 7
+      },
+      {
+        "url": "https://www.shrm.org/content/dam/en/shrm/advocacy/workplace-flexibility-and-leave-website-uploads/shrm-working-text-rfi-1.10.25.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 8
+      }
+    ],
     "baseline_citation_rate": 0.38461538461538464,
     "optimized_citation_rate": 0.46153846153846156,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0000_fff7d9ffb927.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 8
   },
   {
     "doc_id": "page_optim_0001_d4c313271872",
@@ -175,11 +613,27 @@
     "query_index": 1,
     "original_path": "page_optim_top10/page_optim_0001_d4c313271872/original.html",
     "optimized_path": "page_optim_top10/page_optim_0001_d4c313271872/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://cdle.colorado.gov/dlss/labor-laws-by-topic/wage-and-hour-laws-including-paid-sick-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/colorado_healthy_families_and_workplaces_act_revised_aug_7_2023.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      }
+    ],
     "baseline_citation_rate": 0.3,
     "optimized_citation_rate": 0.8,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0001_d4c313271872.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 2
   },
   {
     "doc_id": "page_optim_0001_d4c313271872",
@@ -188,11 +642,48 @@
     "query_index": 2,
     "original_path": "page_optim_top10/page_optim_0001_d4c313271872/original.html",
     "optimized_path": "page_optim_top10/page_optim_0001_d4c313271872/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.dol.gov/index.php/general/topic/workhours/sickleave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.dol.gov/agencies/wb/featured-paid-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.dol.gov/newsroom/releases/whd/whd20200327",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.dol.gov/whd/fmla/index.htm",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://beta.dol.gov/policy-regulations/pay-benefits/leave-benefits/family-and-medical-leave-act-fmla/workplace-protections-individuals-impacted-cancer",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      }
+    ],
     "baseline_citation_rate": 0.3,
     "optimized_citation_rate": 0.8,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0001_d4c313271872.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 5
   },
   {
     "doc_id": "page_optim_0001_d4c313271872",
@@ -201,11 +692,83 @@
     "query_index": 3,
     "original_path": "page_optim_top10/page_optim_0001_d4c313271872/original.html",
     "optimized_path": "page_optim_top10/page_optim_0001_d4c313271872/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://cdle.colorado.gov/dlss/labor-laws-by-topic/wage-and-hour-laws-including-paid-sick-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.employmentlawaid.org/colorado/leave-laws/paid-sick-leave/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.dol.gov/whd/fmla/index.htm",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://law.justia.com/codes/colorado/2022/title-8/article-13-3/part-4/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/Colorado%20Healthy%20Families%20and%20Workplaces%20Act%20Revised%20August%207%202023%20%5Baccessible%5D.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://www.law.cornell.edu/regulations/colorado/7-CCR-1103-7-2",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      },
+      {
+        "url": "https://leg.colorado.gov/bills/sb20-205",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 7
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/info_%236_hfwa_summary_%26_overview_10.22.25.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 8
+      },
+      {
+        "url": "https://denver-co.elaws.us/code/coor_ch18_artv_div2_sec18-132",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 9
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/info_%236b_employer_employee_rights_and_obligations_under_the_healthy_families_and_workplaces_act_10.22.2025.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 10
+      }
+    ],
     "baseline_citation_rate": 0.3,
     "optimized_citation_rate": 0.8,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0001_d4c313271872.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 10
   },
   {
     "doc_id": "page_optim_0001_d4c313271872",
@@ -214,11 +777,41 @@
     "query_index": 4,
     "original_path": "page_optim_top10/page_optim_0001_d4c313271872/original.html",
     "optimized_path": "page_optim_top10/page_optim_0001_d4c313271872/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.dol.gov/index.php/general/topic/workhours/sickleave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.dol.gov/agencies/whd/government-contracts/sick-leave/faq",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.dol.gov/whd/fmla/index.htm",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.dol.gov/sites/dolgov/files/WHD/legacy/files/PaidLeaveFS.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      }
+    ],
     "baseline_citation_rate": 0.3,
     "optimized_citation_rate": 0.8,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0001_d4c313271872.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 4
   },
   {
     "doc_id": "page_optim_0001_d4c313271872",
@@ -227,11 +820,48 @@
     "query_index": 5,
     "original_path": "page_optim_top10/page_optim_0001_d4c313271872/original.html",
     "optimized_path": "page_optim_top10/page_optim_0001_d4c313271872/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.dol.gov/whd/fmla/fmla-faqs.htm",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.dol.gov/agencies/whd/fmla/faq",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.dol.gov/agencies/whd/fact-sheets/28a-fmla-employee-protections",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.dol.gov/whd/fmla/index.htm",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://ecfr.io/Title-29/Section-825.300",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      }
+    ],
     "baseline_citation_rate": 0.3,
     "optimized_citation_rate": 0.8,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0001_d4c313271872.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 5
   },
   {
     "doc_id": "page_optim_0001_d4c313271872",
@@ -240,11 +870,48 @@
     "query_index": 6,
     "original_path": "page_optim_top10/page_optim_0001_d4c313271872/original.html",
     "optimized_path": "page_optim_top10/page_optim_0001_d4c313271872/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.dol.gov/newsroom/releases/whd/whd20201231-1?lang=en",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.dol.gov/general/topic/benefits-leave/sickleave?lang=en",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://catalog.data.gov/dataset/map-state-paid-sick-leave-laws",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.paylocity.com/resources/library/articles/paid-sick-leave-laws/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://www.brightmine.com/us/resources/hr-compliance/employee-leaves/state-sick-leave-laws-chart/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      }
+    ],
     "baseline_citation_rate": 0.3,
     "optimized_citation_rate": 0.8,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0001_d4c313271872.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 5
   },
   {
     "doc_id": "page_optim_0001_d4c313271872",
@@ -253,11 +920,41 @@
     "query_index": 7,
     "original_path": "page_optim_top10/page_optim_0001_d4c313271872/original.html",
     "optimized_path": "page_optim_top10/page_optim_0001_d4c313271872/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.vidahr.com/post/colorado-updates-paid-sick-leave-rules-under-hfwa-hr-alerts",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://cdle.colorado.gov/dwc/employers",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://content.govdelivery.com/accounts/CODLE/bulletins/3e4d361",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Family_and_Medical_Leave_Act_of_1993",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      }
+    ],
     "baseline_citation_rate": 0.3,
     "optimized_citation_rate": 0.8,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0001_d4c313271872.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 4
   },
   {
     "doc_id": "page_optim_0001_d4c313271872",
@@ -266,11 +963,55 @@
     "query_index": 8,
     "original_path": "page_optim_top10/page_optim_0001_d4c313271872/original.html",
     "optimized_path": "page_optim_top10/page_optim_0001_d4c313271872/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://cdle.colorado.gov/dlss/labor-laws-by-topic/wage-and-hour-laws-including-paid-sick-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.employmentlawhandbook.com/employment-and-labor-laws/states/colorado/leave-laws/sick-leave/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://famli.colorado.gov/news-article/colorados-paid-sick-leave-law-is-expanding-what-does-that-mean-for-famli",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.denvergov.org/files/assets/public/v/2/auditor/documents/denver-labor/2025/civil-wage-theft-rules-2025.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/INFO%20%236A%20Paid%20Leave%20under%20the%20Healthy%20Families%20and%20Workplaces%20Act%203.29.2022%20accessible.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/INFO%20%236%20HFWA%20Summary%20%26%20Overview%2007.19.2023%20accessible_0.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      }
+    ],
     "baseline_citation_rate": 0.3,
     "optimized_citation_rate": 0.8,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0001_d4c313271872.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 6
   },
   {
     "doc_id": "page_optim_0001_d4c313271872",
@@ -279,11 +1020,48 @@
     "query_index": 9,
     "original_path": "page_optim_top10/page_optim_0001_d4c313271872/original.html",
     "optimized_path": "page_optim_top10/page_optim_0001_d4c313271872/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.ncsl.org/labor-and-employment/paid-sick-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.dol.gov/agencies/wb/featured-paid-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://help.onpay.com/hc/en-us/articles/115001853746-Guide-to-paid-sick-leave-See-what-your-state-requires-and-allows",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.cga.ct.gov/2024/rpt/pdf/2024-R-0077.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://www.adp.com/-/media/adp/blog/articles/pdf/e/y/eye-on-state-and-local-dec-25_940627.pdf?hash=4D12616AF8D872FD4C7553CCD814A92D&rev=af0dfbaecf184b39858ee58b60f15bdc",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      }
+    ],
     "baseline_citation_rate": 0.3,
     "optimized_citation_rate": 0.8,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0001_d4c313271872.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 5
   },
   {
     "doc_id": "page_optim_0001_d4c313271872",
@@ -292,11 +1070,62 @@
     "query_index": 10,
     "original_path": "page_optim_top10/page_optim_0001_d4c313271872/original.html",
     "optimized_path": "page_optim_top10/page_optim_0001_d4c313271872/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.dol.gov/agencies/whd/minimum-wage/state?lang=en",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.dol.gov/general/topics/posters?lang=en",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://webapps.dol.gov/elaws/posters.html",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.govdocs.com/paid-sick-leave-laws-by-state/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://myhours.com/articles/state-labor-laws",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/United_States_labor_law",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Occupational_Safety_and_Health_Act_%28United_States%29",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 7
+      }
+    ],
     "baseline_citation_rate": 0.3,
     "optimized_citation_rate": 0.8,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0001_d4c313271872.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 7
   },
   {
     "doc_id": "page_optim_0019_9c3546d3690d",
@@ -305,11 +1134,34 @@
     "query_index": 1,
     "original_path": "page_optim_top10/page_optim_0019_9c3546d3690d/original.html",
     "optimized_path": "page_optim_top10/page_optim_0019_9c3546d3690d/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.mercedes-benz.es/passengercars/models/suv/new/gle.html",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://mercedes-benzmodels.com/collateral/wp-content/uploads/2023/09/GLE-SUV-ePaper.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://media.mercedes-benz.ch/download/ae4e8a00-cec5-4237-9752-e0b200f61c18/260331_thenewmercedes-benzgle.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      }
+    ],
     "baseline_citation_rate": 0.0,
     "optimized_citation_rate": 0.4,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0019_9c3546d3690d.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 3
   },
   {
     "doc_id": "page_optim_0019_9c3546d3690d",
@@ -318,11 +1170,55 @@
     "query_index": 2,
     "original_path": "page_optim_top10/page_optim_0019_9c3546d3690d/original.html",
     "optimized_path": "page_optim_top10/page_optim_0019_9c3546d3690d/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.topgear.com/car-reviews/mercedes-benz/g-class",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.edmunds.com/mercedes-benz/g-class/2018/review/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.motortrend.com/news/2025-mercedes-benz-g550-pros-cons-review/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.whatcar.com/mercedes-benz/g-class/4x4/review/n180/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://www.caranddriver.com/mercedes-benz/g-class-2024",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://www.techradar.com/vehicle-tech/hybrid-electric-vehicles/ive-driven-the-new-electric-mercedes-g-wagen-and-the-rough-and-ready-ev-makes-very-little-sense-which-is-why-its-perfect",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      }
+    ],
     "baseline_citation_rate": 0.0,
     "optimized_citation_rate": 0.4,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0019_9c3546d3690d.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 6
   },
   {
     "doc_id": "page_optim_0019_9c3546d3690d",
@@ -331,11 +1227,34 @@
     "query_index": 3,
     "original_path": "page_optim_top10/page_optim_0019_9c3546d3690d/original.html",
     "optimized_path": "page_optim_top10/page_optim_0019_9c3546d3690d/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.capitalone.com/cars/overview/mercedes-benz/g-class/2026",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.edmunds.com/mercedes-benz/g-class/2026/?msockid=372b60320d1c67a91ded76c80c666600",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.carfax.com/Research-Mercedes-Benz-G-Class_w467",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      }
+    ],
     "baseline_citation_rate": 0.0,
     "optimized_citation_rate": 0.4,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0019_9c3546d3690d.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 3
   },
   {
     "doc_id": "page_optim_0019_9c3546d3690d",
@@ -344,11 +1263,41 @@
     "query_index": 4,
     "original_path": "page_optim_top10/page_optim_0019_9c3546d3690d/original.html",
     "optimized_path": "page_optim_top10/page_optim_0019_9c3546d3690d/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.motortrend.com/cars/mercedes-benz/g-class/2021/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.caranddriver.com/mercedes-benz/g-class-2021",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://cdn.dealereprocess.org/cdn/brochures/mercedesbenz/2021-gclass.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.mbusa.com/content/dam/mb-nafta/us/brochures/pdf/MY21_G-class_WebPDF_031021%20%281%29.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      }
+    ],
     "baseline_citation_rate": 0.0,
     "optimized_citation_rate": 0.4,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0019_9c3546d3690d.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 4
   },
   {
     "doc_id": "page_optim_0019_9c3546d3690d",
@@ -357,11 +1306,48 @@
     "query_index": 5,
     "original_path": "page_optim_top10/page_optim_0019_9c3546d3690d/original.html",
     "optimized_path": "page_optim_top10/page_optim_0019_9c3546d3690d/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.edmunds.com/mercedes-benz/g-class/2021/trims/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.mbusa.com/content/dam/mb-nafta/us/brochures/pdf/MY21_G-class_WebPDF_031021%20%281%29.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://monroneylabels.com/cars/6196614-2021-mercedes-benz-g-class/window_sticker.pdf?cfl=5052117748",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.caranddriver.com/mercedes-benz/g-class/specs/2021/mercedes-benz_g-class_mercedes-benz-g550_2021",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://www.mbusa.com/en/vehicles/class/g-class/suv?msockid=13d202f198c16e983a5214ce99146f94",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      }
+    ],
     "baseline_citation_rate": 0.0,
     "optimized_citation_rate": 0.4,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0019_9c3546d3690d.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 5
   },
   {
     "doc_id": "page_optim_0020_d2a12b340e2f",
@@ -370,11 +1356,62 @@
     "query_index": 1,
     "original_path": "page_optim_top10/page_optim_0020_d2a12b340e2f/original.html",
     "optimized_path": "page_optim_top10/page_optim_0020_d2a12b340e2f/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.caranddriver.com/mercedes-benz/g-class/specs/2025/mercedes-benz_g-class_mercedes-benz-g550_2025",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.caranddriver.com/mercedes-amg/g63/specs",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.caranddriver.com/mercedes-benz/g-class/specs/2024/mercedes-benz_g-class_mercedes-benz-g-class_2024",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://mercedes-benzmodels.com/collateral/wp-content/uploads/2025/07/The-Mercedes-AMG-G-63-1.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://www.autovisionllc.com/images/products/pdf31820e92665870895daed8b3c9ff1de83003fce3.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      },
+      {
+        "url": "https://www.milele.com/wp-content/uploads/2025/03/G63.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 7
+      }
+    ],
     "baseline_citation_rate": 0.0,
     "optimized_citation_rate": 1.0,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0020_d2a12b340e2f.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 7
   },
   {
     "doc_id": "page_optim_0020_d2a12b340e2f",
@@ -383,11 +1420,41 @@
     "query_index": 2,
     "original_path": "page_optim_top10/page_optim_0020_d2a12b340e2f/original.html",
     "optimized_path": "page_optim_top10/page_optim_0020_d2a12b340e2f/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.motortrend.com/cars/mercedes-benz/g-class/2021/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.kbb.com/mercedes-benz/g-class/2021/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.caranddriver.com/mercedes-benz/g-class-2021",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://consumerguide.com/mercedes-benz/g-class/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      }
+    ],
     "baseline_citation_rate": 0.0,
     "optimized_citation_rate": 1.0,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0020_d2a12b340e2f.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 4
   },
   {
     "doc_id": "page_optim_0020_d2a12b340e2f",
@@ -396,11 +1463,20 @@
     "query_index": 3,
     "original_path": "page_optim_top10/page_optim_0020_d2a12b340e2f/original.html",
     "optimized_path": "page_optim_top10/page_optim_0020_d2a12b340e2f/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://g-class.mercedes-benz.com/en",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      }
+    ],
     "baseline_citation_rate": 0.0,
     "optimized_citation_rate": 1.0,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0020_d2a12b340e2f.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 1
   },
   {
     "doc_id": "page_optim_0020_d2a12b340e2f",
@@ -409,11 +1485,27 @@
     "query_index": 4,
     "original_path": "page_optim_top10/page_optim_0020_d2a12b340e2f/original.html",
     "optimized_path": "page_optim_top10/page_optim_0020_d2a12b340e2f/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://cdn.dealereprocess.org/cdn/brochures/mercedesbenz/2021-gclass.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://g-class.mercedes-benz.com/en/g-class-suv",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      }
+    ],
     "baseline_citation_rate": 0.0,
     "optimized_citation_rate": 1.0,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0020_d2a12b340e2f.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 2
   },
   {
     "doc_id": "page_optim_0020_d2a12b340e2f",
@@ -426,7 +1518,8 @@
     "baseline_citation_rate": 0.0,
     "optimized_citation_rate": 1.0,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0020_d2a12b340e2f.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 0
   },
   {
     "doc_id": "page_optim_0024_0e171231e73c",
@@ -435,11 +1528,48 @@
     "query_index": 1,
     "original_path": "page_optim_top10/page_optim_0024_0e171231e73c/original.html",
     "optimized_path": "page_optim_top10/page_optim_0024_0e171231e73c/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://cdle.colorado.gov/labor-law-stats/labor-laws-rules-resources/posters",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.colorado.gov/governor/news/8791-polis-administration-announces-increase-minimum-wage-continuing-support-hardworking",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://childsupport.state.co.us/new-hire-reporting",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/Colorado%20Healthy%20Families%20and%20Workplaces%20Act%20Revised%20August%207%202023%20%5Baccessible%5D.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/2023%20COMPS%20Order%20%2338%20Poster%20accessible.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      }
+    ],
     "baseline_citation_rate": 0.75,
     "optimized_citation_rate": 0.75,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0024_0e171231e73c.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 5
   },
   {
     "doc_id": "page_optim_0024_0e171231e73c",
@@ -448,11 +1578,62 @@
     "query_index": 2,
     "original_path": "page_optim_top10/page_optim_0024_0e171231e73c/original.html",
     "optimized_path": "page_optim_top10/page_optim_0024_0e171231e73c/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://doi.colorado.gov/insurance-products/health-insurance/consumer-resources/types-of-health-insurance",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://famli.colorado.gov/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://cdle.colorado.gov/unemployment",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.metlife.com/info/hanger/benefits/colorado/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://leg.colorado.gov/sites/default/files/documents/audits/1433_public_emp_retire_assoc.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Benefits.gov",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Connect_for_Health_Colorado",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 7
+      }
+    ],
     "baseline_citation_rate": 0.75,
     "optimized_citation_rate": 0.75,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0024_0e171231e73c.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 7
   },
   {
     "doc_id": "page_optim_0024_0e171231e73c",
@@ -461,11 +1642,69 @@
     "query_index": 3,
     "original_path": "page_optim_top10/page_optim_0024_0e171231e73c/original.html",
     "optimized_path": "page_optim_top10/page_optim_0024_0e171231e73c/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.nolo.com/legal-encyclopedia/colorado-wage-hour-laws-35478.html",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://cdle.colorado.gov/dlss",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.eatdenver.com/immigration",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://ccrd.colorado.gov/discrimination",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://law.justia.com/codes/colorado/title-8/labor-i-department-of-labor-and-employment/labor-relations/article-2/part-1/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://cdle.colorado.gov/sites/cdle/files/2025_comps_order_poster_accessible.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Fair_Labor_Standards_Act_of_1938",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 7
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/At-will_employment",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 8
+      }
+    ],
     "baseline_citation_rate": 0.75,
     "optimized_citation_rate": 0.75,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0024_0e171231e73c.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 8
   },
   {
     "doc_id": "page_optim_0024_0e171231e73c",
@@ -474,11 +1713,55 @@
     "query_index": 4,
     "original_path": "page_optim_top10/page_optim_0024_0e171231e73c/original.html",
     "optimized_path": "page_optim_top10/page_optim_0024_0e171231e73c/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://law.justia.com/codes/colorado/2023/title-8/labor-i-department-of-labor-and-employment/labor-conditions/article-13-3/part-4/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.colorado.gov/governor/news/8791-polis-administration-announces-increase-minimum-wage-continuing-support-hardworking",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.colorado.gov/governor/news/10901-polis-primavera-administration-eliminates-subminimum-wages-people-disabilities-two-years",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://cdle.colorado.gov/dlss/labor-laws-by-topic/wage-and-hour-laws-including-paid-sick-leave",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://famli.colorado.gov/news-article/colorados-paid-sick-leave-law-is-expanding-what-does-that-mean-for-famli",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://www.employmentlawaid.org/colorado/wages-and-hours/overtime/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      }
+    ],
     "baseline_citation_rate": 0.75,
     "optimized_citation_rate": 0.75,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0024_0e171231e73c.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 6
   },
   {
     "doc_id": "page_optim_0025_338fa4b16b7c",
@@ -487,11 +1770,62 @@
     "query_index": 1,
     "original_path": "page_optim_top10/page_optim_0025_338fa4b16b7c/original.html",
     "optimized_path": "page_optim_top10/page_optim_0025_338fa4b16b7c/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.motortrend.com/land-rover/range-rover/2026",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.kbb.com/mercedes-benz/g-class/2026/specs/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.caranddriver.com/mercedes-benz/g-class-2026",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.motortrend.com/cars/mercedes-benz/g-class/2026",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://www.cars.com/research/land_rover-range_rover-2026/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://www.kbb.com/mercedes-benz/g-class/2025/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 7
+      }
+    ],
     "baseline_citation_rate": 0.5,
     "optimized_citation_rate": 1.0,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0025_338fa4b16b7c.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 7
   },
   {
     "doc_id": "page_optim_0025_338fa4b16b7c",
@@ -500,11 +1834,55 @@
     "query_index": 2,
     "original_path": "page_optim_top10/page_optim_0025_338fa4b16b7c/original.html",
     "optimized_path": "page_optim_top10/page_optim_0025_338fa4b16b7c/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.thecarconnection.com/tips/compare/1131450_lincoln-navigator-vs-cadillac-escalade-compare-luxury-suvs",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.lincoln.com/luxury-suvs/navigator/2025?intcmp=vhp-seconNav-previous",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_GLS",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://www.kbb.com/bmw/x7/2025/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://www.truecar.com/overview/land-rover/range-rover/specs/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      }
+    ],
     "baseline_citation_rate": 0.5,
     "optimized_citation_rate": 1.0,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0025_338fa4b16b7c.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 6
   },
   {
     "doc_id": "page_optim_0025_338fa4b16b7c",
@@ -513,11 +1891,62 @@
     "query_index": 3,
     "original_path": "page_optim_top10/page_optim_0025_338fa4b16b7c/original.html",
     "optimized_path": "page_optim_top10/page_optim_0025_338fa4b16b7c/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.caranddriver.com/mercedes-benz/g-class/specs/2025/mercedes-benz_g-class_mercedes-benz-g550_2025",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://www.caranddriver.com/mercedes-amg/g63/specs",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.caranddriver.com/mercedes-benz/g-class/specs/2024/mercedes-benz_g-class_mercedes-benz-g-class_2024",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      },
+      {
+        "url": "https://mercedes-benzmodels.com/collateral/wp-content/uploads/2025/07/The-Mercedes-AMG-G-63-1.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 5
+      },
+      {
+        "url": "https://www.autovisionllc.com/images/products/pdf31820e92665870895daed8b3c9ff1de83003fce3.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 6
+      },
+      {
+        "url": "https://www.milele.com/wp-content/uploads/2025/03/G63.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 7
+      }
+    ],
     "baseline_citation_rate": 0.5,
     "optimized_citation_rate": 1.0,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0025_338fa4b16b7c.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 7
   },
   {
     "doc_id": "page_optim_0025_338fa4b16b7c",
@@ -526,10 +1955,40 @@
     "query_index": 4,
     "original_path": "page_optim_top10/page_optim_0025_338fa4b16b7c/original.html",
     "optimized_path": "page_optim_top10/page_optim_0025_338fa4b16b7c/optimized.html",
-    "competitors": [],
+    "competitors": [
+      {
+        "url": "https://www.motortrend.com/cars/mercedes-benz/g-class/2021/",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 1
+      },
+      {
+        "url": "https://www.caranddriver.com/mercedes-benz/g-class-2021",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 2
+      },
+      {
+        "url": "https://cdn.dealereprocess.org/cdn/brochures/mercedesbenz/2021-gclass.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 3
+      },
+      {
+        "url": "https://www.mbusa.com/content/dam/mb-nafta/us/brochures/pdf/MY21_G-class_WebPDF_031021%20%281%29.pdf",
+        "path": "",
+        "title": "",
+        "source": "data/per_query_candidates.jsonl",
+        "rank": 4
+      }
+    ],
     "baseline_citation_rate": 0.5,
     "optimized_citation_rate": 1.0,
     "source_document": "outputs/page_optim_top10/documents/page_optim_0025_338fa4b16b7c.json",
-    "run_marker": "agentgeo-page-optim-top10"
+    "run_marker": "agentgeo-page-optim-top10",
+    "num_competitors_available": 4
   }
 ]
