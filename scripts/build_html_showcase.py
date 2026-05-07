@@ -2,7 +2,7 @@
 Build HTML showcase for AgentGEO optimized documents.
 For each of 20 docs, pick 2 test queries.
 For each query, save: original HTML, optimized HTML, top 3 competitor HTMLs.
-Output: docs/showcase/ directory with index.html and per-doc/query folders.
+Output: outputs/showcase/ directory with index.html and per-doc/query folders.
 """
 
 import json
@@ -18,7 +18,7 @@ NUM_DOCS = 20
 NUM_QUERIES = 2
 NUM_COMPETITORS = 10
 CACHE_DIR = Path("/Users/erv1n/autoGEO_reproduce/experiments/cache")
-OUTPUT_DIR = Path("docs/showcase")
+OUTPUT_DIR = Path("outputs/showcase")
 
 # ── Load data ──
 opt_results = json.load(open("outputs/optimization_results_20260215_175657.json"))

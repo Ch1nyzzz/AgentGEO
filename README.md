@@ -147,9 +147,6 @@ AgentGEO/
 │   ├── models.py               # Data models
 │   └── prompts.py              # LLM prompts
 │
-├── geo_bench/                  # GEO-Bench baseline
-│   └── optimizers/             # Baseline optimizer implementations
-│
 ├── scripts/                    # Utility scripts
 │   ├── generate_queries.py     # Generate train/test queries from HTML
 │   ├── run_optimization.py     # Unified optimization runner

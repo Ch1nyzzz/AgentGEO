@@ -135,7 +135,7 @@ agentgeo:
   disk_cache_dir: ""
 
   # Optimization log directory
-  optimization_log_dir: "5-mini-outputs/logs"
+  optimization_log_dir: "outputs/agentgeo/logs"
 
 # GEO-Bench Baseline Configuration (9 optimization methods)
 baseline:
@@ -156,7 +156,7 @@ data:
 
 # Output configuration
 output:
-  base_dir: "5-mini-outputs"
+  base_dir: "outputs/agentgeo"
   save_optimized_html: true
   save_evaluation: true
 
