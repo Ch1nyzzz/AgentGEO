@@ -676,6 +676,7 @@ class SuggestionCollectorV2:
                             generated_answer="",
                             suggestions=[],
                             error="No retrieved documents",
+                            retrieved_urls=[],
                         )
 
                     # Get competitor contents (returns filtered docs and contents)
@@ -691,10 +692,11 @@ class SuggestionCollectorV2:
                             generated_answer="",
                             suggestions=[],
                             error="No competitor contents",
+                            retrieved_urls=[doc.url for doc in retrieved_docs if getattr(doc, "url", "")],
                         )
 
                     # Collect suggestions (pass HTML)
-                    return await self.collect_for_query(
+                    query_result = await self.collect_for_query(
                         query=query,
                         original_content=current_content,
                         original_html=current_html,
@@ -703,6 +705,10 @@ class SuggestionCollectorV2:
                         max_retries=max_retries_per_query,
                         check_citation_func=check_citation_func,
                     )
+                    query_result.retrieved_urls = [
+                        doc.url for doc in retrieved_docs if getattr(doc, "url", "")
+                    ]
+                    return query_result
                 except Exception as e:
                     logger.error(f"Failed to process query '{query[:50]}...': {e}")
                     import traceback
@@ -713,6 +719,7 @@ class SuggestionCollectorV2:
                         generated_answer="",
                         suggestions=[],
                         error=str(e),
+                        retrieved_urls=[],
                     )
 
         tasks = [asyncio.create_task(process_query(q)) for q in queries]

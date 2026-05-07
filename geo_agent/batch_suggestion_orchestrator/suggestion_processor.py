@@ -177,6 +177,7 @@ class SuggestionProcessorV2:
         content: str,
         queries: List[str],
         raw_html: Optional[str] = None,
+        target_url: str = "",
     ) -> OptimizationResultV2:
         """
         Process a batch of queries
@@ -185,6 +186,7 @@ class SuggestionProcessorV2:
             content: Current document content (plain text)
             queries: List of queries to process
             raw_html: HTML content (used preferentially)
+            target_url: Public target URL, used by URL-mode citation checks
 
         Returns:
             OptimizationResultV2: Batch result
@@ -197,6 +199,7 @@ class SuggestionProcessorV2:
         js_fallback_mode = False  # Flag for JS fallback mode
         if raw_html:
             current_structure = self.struct_parser.parse(raw_html)
+            current_structure.clear_modification_highlights()
             current_structure.calculate_chunks(max_chunk_length=2000)
             chunks = current_structure._chunks
             current_text = current_structure.get_clean_text()
@@ -274,7 +277,7 @@ class SuggestionProcessorV2:
         async def check_citation(query, current_content, retrieved_docs, competitor_contents):
             from geo_agent.core.models import WebPage
             temp_page = WebPage(
-                url="",
+                url=target_url,
                 raw_html="",
                 cleaned_content=current_content,
             )
@@ -435,6 +438,7 @@ class SuggestionProcessorV2:
         content: str,
         all_queries: List[str],
         raw_html: Optional[str] = None,
+        target_url: str = "",
     ) -> List[OptimizationResultV2]:
         """
         Process all queries with automatic batching
@@ -443,6 +447,7 @@ class SuggestionProcessorV2:
             content: Plain text content
             all_queries: All query list
             raw_html: HTML content (used preferentially)
+            target_url: Public target URL, used by URL-mode citation checks
 
         Returns:
             List[OptimizationResultV2]: All batch results
@@ -471,7 +476,7 @@ class SuggestionProcessorV2:
             print(f"\n>>> Batch {batch_num}/{total_batches}")
 
             result = await self.process_batch(
-                current_content, batch_queries, raw_html=current_html
+                current_content, batch_queries, raw_html=current_html, target_url=target_url
             )
             results.append(result)
 

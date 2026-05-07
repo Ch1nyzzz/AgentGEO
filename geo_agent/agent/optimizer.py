@@ -139,6 +139,7 @@ class GEOAgent:
             for i in range(max_retries):
                 print(f"Iteration {i+1}/{max_retries}")
                 
+                current_structure.clear_modification_highlights()
                 current_raw_html = current_structure.export_html()
                 current_structure = struct_parser.parse(current_raw_html) 
                 current_clean_text = current_structure.get_clean_text()

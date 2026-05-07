@@ -1,0 +1,979 @@
+{
+  "uuid": "cqsyZoFvUjSDn8pXuNNH8Q",
+  "source_title": "﻿﻿WiFi Routers | Wireless Routers | NETGEAR",
+  "keywords": {
+    "core": [
+      "WiFi routers",
+      "wireless routers",
+      "NETGEAR"
+    ],
+    "lsi_synonyms": [
+      "internet routers",
+      "home routers",
+      "network routers"
+    ],
+    "keyphases": [
+      "best WiFi routers for home",
+      "NETGEAR wireless router setup",
+      "buy NETGEAR WiFi router"
+    ]
+  },
+  "personas": [
+    {
+      "name": "Tech-Savvy Homeowners",
+      "description": "Individuals who are knowledgeable about technology and are looking to upgrade their home network for better performance and connectivity."
+    },
+    {
+      "name": "Small Business Owners",
+      "description": "Entrepreneurs or small business managers seeking reliable and efficient networking solutions to support their business operations."
+    },
+    {
+      "name": "Gamers",
+      "description": "Individuals who engage in online gaming and require high-speed internet connectivity to ensure a seamless gaming experience."
+    },
+    {
+      "name": "Remote Workers",
+      "description": "Professionals who work from home and need a stable and fast internet connection to perform their job duties effectively."
+    },
+    {
+      "name": "Families with Multiple Devices",
+      "description": "Households with several members using multiple devices simultaneously, requiring a robust network to handle the load."
+    }
+  ],
+  "detailed_data": [
+    {
+      "focus_keyword": "WiFi routers",
+      "variations": [
+        {
+          "target_persona": "Tech-Savvy Homeowners",
+          "queries": {
+            "navigational": [
+              "Netgear Nighthawk official site"
+            ],
+            "informational": [
+              "how to optimize home WiFi network performance"
+            ],
+            "commercial": [
+              "best WiFi routers for large homes 2023"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX6000 online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Netgear official website"
+            ],
+            "informational": [
+              "how to set up a WiFi router for small business"
+            ],
+            "commercial": [
+              "best WiFi routers for small businesses 2023"
+            ],
+            "transactional": [
+              "buy Linksys WiFi router for business"
+            ]
+          }
+        },
+        {
+          "target_persona": "Gamers",
+          "queries": {
+            "navigational": [
+              "ASUS ROG gaming router page"
+            ],
+            "informational": [
+              "how to improve WiFi speed for gaming"
+            ],
+            "commercial": [
+              "best WiFi routers for gaming 2023"
+            ],
+            "transactional": [
+              "buy Netgear Nighthawk gaming router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Remote Workers",
+          "queries": {
+            "navigational": [
+              "Netgear official website"
+            ],
+            "informational": [
+              "how to improve WiFi signal at home"
+            ],
+            "commercial": [
+              "best WiFi routers for remote work 2023"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX50 router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Families with Multiple Devices",
+          "queries": {
+            "navigational": [
+              "Netgear official website"
+            ],
+            "informational": [
+              "how to improve WiFi signal at home"
+            ],
+            "commercial": [
+              "best WiFi routers for multiple devices"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX6000 router"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "wireless routers",
+      "variations": [
+        {
+          "target_persona": "Tech-Savvy Homeowners",
+          "queries": {
+            "navigational": [
+              "Netgear Nighthawk official site"
+            ],
+            "informational": [
+              "how do wireless routers work"
+            ],
+            "commercial": [
+              "best wireless routers for large homes 2023"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX6000"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Netgear official website"
+            ],
+            "informational": [
+              "how do wireless routers work for small businesses"
+            ],
+            "commercial": [
+              "best wireless routers for small business 2023"
+            ],
+            "transactional": [
+              "buy Linksys wireless router online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Gamers",
+          "queries": {
+            "navigational": [
+              "Netgear Nighthawk gaming router official site"
+            ],
+            "informational": [
+              "how do wireless routers work for gaming"
+            ],
+            "commercial": [
+              "best wireless routers for gaming 2023"
+            ],
+            "transactional": [
+              "buy ASUS ROG Rapture GT-AX11000 router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Remote Workers",
+          "queries": {
+            "navigational": [
+              "Netgear Nighthawk router official site"
+            ],
+            "informational": [
+              "how do wireless routers work for home office"
+            ],
+            "commercial": [
+              "best wireless routers for remote work 2023"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX50 router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Families with Multiple Devices",
+          "queries": {
+            "navigational": [
+              "Netgear Nighthawk router official site"
+            ],
+            "informational": [
+              "how do wireless routers work for multiple devices"
+            ],
+            "commercial": [
+              "best wireless routers for families 2023"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX6000 router"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "NETGEAR",
+      "variations": [
+        {
+          "target_persona": "Tech-Savvy Homeowners",
+          "queries": {
+            "navigational": [
+              "NETGEAR official website"
+            ],
+            "informational": [
+              "how to optimize NETGEAR router performance"
+            ],
+            "commercial": [
+              "NETGEAR vs TP-Link routers comparison"
+            ],
+            "transactional": [
+              "buy NETGEAR Nighthawk AX8 router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "NETGEAR official website"
+            ],
+            "informational": [
+              "how does NETGEAR improve small business network efficiency"
+            ],
+            "commercial": [
+              "best NETGEAR routers for small businesses"
+            ],
+            "transactional": [
+              "buy NETGEAR Nighthawk router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Gamers",
+          "queries": {
+            "navigational": [
+              "NETGEAR official website"
+            ],
+            "informational": [
+              "how does NETGEAR improve gaming performance"
+            ],
+            "commercial": [
+              "best NETGEAR routers for gaming"
+            ],
+            "transactional": [
+              "buy NETGEAR Nighthawk Pro Gaming Router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Remote Workers",
+          "queries": {
+            "navigational": [
+              "NETGEAR official website"
+            ],
+            "informational": [
+              "how to set up NETGEAR router for remote work"
+            ],
+            "commercial": [
+              "best NETGEAR routers for home office"
+            ],
+            "transactional": [
+              "buy NETGEAR Nighthawk router online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Families with Multiple Devices",
+          "queries": {
+            "navigational": [
+              "NETGEAR official website"
+            ],
+            "informational": [
+              "how does NETGEAR router work for multiple devices"
+            ],
+            "commercial": [
+              "best NETGEAR router for families"
+            ],
+            "transactional": [
+              "buy NETGEAR Nighthawk router"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "internet routers",
+      "variations": [
+        {
+          "target_persona": "Tech-Savvy Homeowners",
+          "queries": {
+            "navigational": [
+              "Netgear Nighthawk router official site"
+            ],
+            "informational": [
+              "how do mesh routers improve home network performance"
+            ],
+            "commercial": [
+              "best internet routers for large homes 2023"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX6000 router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Netgear official website"
+            ],
+            "informational": [
+              "how do internet routers work for small businesses"
+            ],
+            "commercial": [
+              "best internet routers for small business 2023"
+            ],
+            "transactional": [
+              "buy Linksys internet router for business"
+            ]
+          }
+        },
+        {
+          "target_persona": "Gamers",
+          "queries": {
+            "navigational": [
+              "Netgear Nighthawk gaming router official site"
+            ],
+            "informational": [
+              "how do internet routers affect gaming latency"
+            ],
+            "commercial": [
+              "best internet routers for gaming 2023"
+            ],
+            "transactional": [
+              "buy ASUS ROG Rapture GT-AX11000 router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Remote Workers",
+          "queries": {
+            "navigational": [
+              "Netgear official website"
+            ],
+            "informational": [
+              "how to improve internet speed with a router"
+            ],
+            "commercial": [
+              "best internet routers for remote work 2023"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX50 router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Families with Multiple Devices",
+          "queries": {
+            "navigational": [
+              "Netgear official website"
+            ],
+            "informational": [
+              "how do internet routers work for multiple devices"
+            ],
+            "commercial": [
+              "best internet routers for families with multiple devices"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX6000 router"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "home routers",
+      "variations": [
+        {
+          "target_persona": "Tech-Savvy Homeowners",
+          "queries": {
+            "navigational": [
+              "Netgear Nighthawk router official site"
+            ],
+            "informational": [
+              "how to optimize home router performance"
+            ],
+            "commercial": [
+              "best home routers for large houses 2023"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX6000 router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Netgear home routers official site"
+            ],
+            "informational": [
+              "how do home routers work for small businesses"
+            ],
+            "commercial": [
+              "best home routers for small business use"
+            ],
+            "transactional": [
+              "buy Linksys home router online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Gamers",
+          "queries": {
+            "navigational": [
+              "Netgear Nighthawk gaming router official site"
+            ],
+            "informational": [
+              "how do home routers affect gaming latency"
+            ],
+            "commercial": [
+              "best home routers for gaming 2023"
+            ],
+            "transactional": [
+              "buy ASUS ROG Rapture GT-AX11000 router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Remote Workers",
+          "queries": {
+            "navigational": [
+              "Netgear home routers official site"
+            ],
+            "informational": [
+              "how do home routers work for remote work"
+            ],
+            "commercial": [
+              "best home routers for remote workers 2023"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX50 home router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Families with Multiple Devices",
+          "queries": {
+            "navigational": [
+              "Netgear home routers official site"
+            ],
+            "informational": [
+              "how do home routers work for multiple devices"
+            ],
+            "commercial": [
+              "best home routers for families with multiple devices"
+            ],
+            "transactional": [
+              "buy TP-Link home router for large family"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "network routers",
+      "variations": [
+        {
+          "target_persona": "Tech-Savvy Homeowners",
+          "queries": {
+            "navigational": [
+              "Netgear official website"
+            ],
+            "informational": [
+              "how to optimize home network with advanced router settings"
+            ],
+            "commercial": [
+              "best network routers for large homes 2023"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX6000 router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Cisco small business routers official site"
+            ],
+            "informational": [
+              "how do network routers work for small businesses"
+            ],
+            "commercial": [
+              "best network routers for small businesses 2023"
+            ],
+            "transactional": [
+              "buy Linksys network router for small business"
+            ]
+          }
+        },
+        {
+          "target_persona": "Gamers",
+          "queries": {
+            "navigational": [
+              "ASUS ROG gaming router official site"
+            ],
+            "informational": [
+              "how do network routers affect gaming latency"
+            ],
+            "commercial": [
+              "best network routers for gaming 2023"
+            ],
+            "transactional": [
+              "buy Netgear Nighthawk Pro Gaming router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Remote Workers",
+          "queries": {
+            "navigational": [
+              "Netgear official website"
+            ],
+            "informational": [
+              "how do network routers work for home offices"
+            ],
+            "commercial": [
+              "best network routers for remote work 2023"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX50 router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Families with Multiple Devices",
+          "queries": {
+            "navigational": [
+              "Netgear official website"
+            ],
+            "informational": [
+              "how do network routers work for multiple devices"
+            ],
+            "commercial": [
+              "best network routers for families with multiple devices"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX6000 router"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "best WiFi routers for home",
+      "variations": [
+        {
+          "target_persona": "Tech-Savvy Homeowners",
+          "queries": {
+            "navigational": [
+              "Netgear Nighthawk official site"
+            ],
+            "informational": [
+              "how to choose the best WiFi router for home"
+            ],
+            "commercial": [
+              "best WiFi routers for home 2023 reviews"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX6000 online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Netgear official website"
+            ],
+            "informational": [
+              "how to choose a WiFi router for small business"
+            ],
+            "commercial": [
+              "best WiFi routers for small business 2023 reviews"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX6000 online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Gamers",
+          "queries": {
+            "navigational": [
+              "ASUS ROG gaming router official site"
+            ],
+            "informational": [
+              "how to choose the best WiFi router for gaming"
+            ],
+            "commercial": [
+              "top WiFi routers for gaming 2023 reviews"
+            ],
+            "transactional": [
+              "buy Netgear Nighthawk Pro Gaming router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Remote Workers",
+          "queries": {
+            "navigational": [
+              "Netgear official site"
+            ],
+            "informational": [
+              "how to choose a WiFi router for home office"
+            ],
+            "commercial": [
+              "best WiFi routers for remote work 2023"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX50 online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Families with Multiple Devices",
+          "queries": {
+            "navigational": [
+              "Netgear Nighthawk official site"
+            ],
+            "informational": [
+              "how to choose the best WiFi router for a large family"
+            ],
+            "commercial": [
+              "best WiFi routers for multiple devices 2023 reviews"
+            ],
+            "transactional": [
+              "buy TP-Link Archer AX6000 online"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "NETGEAR wireless router setup",
+      "variations": [
+        {
+          "target_persona": "Tech-Savvy Homeowners",
+          "queries": {
+            "navigational": [
+              "NETGEAR official site router setup"
+            ],
+            "informational": [
+              "how to configure NETGEAR wireless router for optimal performance"
+            ],
+            "commercial": [
+              "NETGEAR vs TP-Link wireless routers for home use"
+            ],
+            "transactional": [
+              "buy NETGEAR Nighthawk wireless router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "NETGEAR support page for router setup"
+            ],
+            "informational": [
+              "how to set up a NETGEAR wireless router for small business"
+            ],
+            "commercial": [
+              "best NETGEAR wireless router for small business setup"
+            ],
+            "transactional": [
+              "buy NETGEAR wireless router for business"
+            ]
+          }
+        },
+        {
+          "target_persona": "Gamers",
+          "queries": {
+            "navigational": [
+              "NETGEAR router setup page"
+            ],
+            "informational": [
+              "how to set up NETGEAR wireless router for gaming"
+            ],
+            "commercial": [
+              "best NETGEAR routers for gaming 2023"
+            ],
+            "transactional": [
+              "buy NETGEAR Nighthawk gaming router"
+            ]
+          }
+        },
+        {
+          "target_persona": "Remote Workers",
+          "queries": {
+            "navigational": [
+              "NETGEAR official site router setup"
+            ],
+            "informational": [
+              "how to set up NETGEAR wireless router for home office"
+            ],
+            "commercial": [
+              "best NETGEAR router for remote work"
+            ],
+            "transactional": [
+              "buy NETGEAR Nighthawk router online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Families with Multiple Devices",
+          "queries": {
+            "navigational": [
+              "NETGEAR router setup page"
+            ],
+            "informational": [
+              "how to set up NETGEAR wireless router for multiple devices"
+            ],
+            "commercial": [
+              "best NETGEAR router for families with multiple devices"
+            ],
+            "transactional": [
+              "buy NETGEAR Nighthawk router"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "buy NETGEAR WiFi router",
+      "variations": [
+        {
+          "target_persona": "Tech-Savvy Homeowners",
+          "queries": {
+            "navigational": [
+              "NETGEAR official website"
+            ],
+            "informational": [
+              "how to choose the best NETGEAR WiFi router for home"
+            ],
+            "commercial": [
+              "NETGEAR WiFi router reviews and comparisons"
+            ],
+            "transactional": [
+              "buy NETGEAR Nighthawk WiFi router online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "NETGEAR official website"
+            ],
+            "informational": [
+              "how to choose a NETGEAR WiFi router for small business"
+            ],
+            "commercial": [
+              "best NETGEAR WiFi routers for small businesses 2023"
+            ],
+            "transactional": [
+              "buy NETGEAR WiFi router online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Gamers",
+          "queries": {
+            "navigational": [
+              "NETGEAR official website"
+            ],
+            "informational": [
+              "how to choose the best NETGEAR WiFi router for gaming"
+            ],
+            "commercial": [
+              "NETGEAR WiFi router reviews for gamers"
+            ],
+            "transactional": [
+              "buy NETGEAR Nighthawk router online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Remote Workers",
+          "queries": {
+            "navigational": [
+              "NETGEAR official website"
+            ],
+            "informational": [
+              "how to choose the best NETGEAR WiFi router for home office"
+            ],
+            "commercial": [
+              "NETGEAR WiFi router reviews for remote work"
+            ],
+            "transactional": [
+              "buy NETGEAR Nighthawk WiFi router online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Families with Multiple Devices",
+          "queries": {
+            "navigational": [
+              "NETGEAR official website"
+            ],
+            "informational": [
+              "how to choose a NETGEAR WiFi router for a large family"
+            ],
+            "commercial": [
+              "best NETGEAR WiFi routers for multiple devices"
+            ],
+            "transactional": [
+              "buy NETGEAR Nighthawk WiFi router online"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "dataset": {
+    "train": [
+      "buy linksys home router online",
+      "buy tp-link archer ax6000 router",
+      "how do wireless routers work for multiple devices",
+      "best netgear wifi routers for small businesses 2023",
+      "best netgear router for remote work",
+      "how do wireless routers work for gaming",
+      "netgear router setup page",
+      "buy linksys network router for small business",
+      "netgear vs tp-link routers comparison",
+      "buy netgear nighthawk pro gaming router",
+      "how to improve wifi speed for gaming",
+      "how to optimize home router performance",
+      "how to set up netgear wireless router for gaming",
+      "best wifi routers for small business 2023 reviews",
+      "how do internet routers affect gaming latency",
+      "best wireless routers for families 2023",
+      "best home routers for gaming 2023",
+      "how to optimize netgear router performance",
+      "best wifi routers for home 2023 reviews",
+      "best network routers for large homes 2023",
+      "buy netgear wifi router online",
+      "how to set up netgear wireless router for multiple devices",
+      "best network routers for remote work 2023",
+      "netgear nighthawk gaming router official site",
+      "how to choose a wifi router for home office",
+      "how to choose the best netgear wifi router for home office",
+      "best home routers for families with multiple devices",
+      "buy netgear nighthawk wireless router",
+      "netgear official website",
+      "how to choose a netgear wifi router for small business",
+      "how to improve internet speed with a router",
+      "best netgear routers for gaming",
+      "how to set up a wifi router for small business",
+      "best wireless routers for small business 2023",
+      "how do internet routers work for small businesses",
+      "best wifi routers for multiple devices 2023 reviews",
+      "netgear support page for router setup",
+      "how do network routers work for small businesses",
+      "buy tp-link archer ax50 router",
+      "best wireless routers for gaming 2023",
+      "how to choose the best netgear wifi router for gaming",
+      "buy linksys internet router for business",
+      "best internet routers for remote work 2023",
+      "how do internet routers work for multiple devices",
+      "netgear official site router setup",
+      "best internet routers for families with multiple devices",
+      "buy tp-link archer ax6000 online",
+      "best internet routers for small business 2023",
+      "buy netgear nighthawk router",
+      "best home routers for small business use",
+      "how do home routers work for remote work",
+      "netgear wifi router reviews and comparisons",
+      "best wireless routers for remote work 2023",
+      "how does netgear improve gaming performance",
+      "how to set up netgear router for remote work"
+    ],
+    "test": [
+      "best home routers for remote workers 2023",
+      "buy netgear nighthawk wifi router online",
+      "how to optimize home wifi network performance",
+      "how to improve wifi signal at home",
+      "best wifi routers for remote work 2023",
+      "how do home routers affect gaming latency",
+      "best netgear wireless router for small business setup",
+      "best netgear router for families with multiple devices",
+      "how to choose a wifi router for small business",
+      "asus rog gaming router page",
+      "buy netgear nighthawk router online",
+      "how to optimize home network with advanced router settings",
+      "how do mesh routers improve home network performance",
+      "netgear wifi router reviews for gamers",
+      "buy netgear wireless router for business",
+      "how to choose a netgear wifi router for a large family",
+      "how to configure netgear wireless router for optimal performance",
+      "best wifi routers for multiple devices",
+      "how does netgear improve small business network efficiency",
+      "netgear nighthawk official site",
+      "how to choose the best wifi router for home",
+      "best netgear routers for gaming 2023",
+      "how to choose the best netgear wifi router for home",
+      "how to set up a netgear wireless router for small business",
+      "netgear vs tp-link wireless routers for home use",
+      "best wifi routers for small businesses 2023",
+      "best network routers for families with multiple devices",
+      "best netgear router for families",
+      "best netgear routers for small businesses",
+      "buy netgear nighthawk gaming router",
+      "how do wireless routers work for home office",
+      "how do network routers work for home offices",
+      "best wifi routers for large homes 2023",
+      "asus rog gaming router official site",
+      "netgear official site",
+      "how do home routers work for multiple devices",
+      "how do wireless routers work",
+      "buy linksys wireless router online",
+      "buy tp-link home router for large family",
+      "best home routers for large houses 2023",
+      "buy tp-link archer ax6000",
+      "best netgear wifi routers for multiple devices",
+      "how does netgear router work for multiple devices",
+      "cisco small business routers official site",
+      "best internet routers for large homes 2023",
+      "how to choose the best wifi router for a large family",
+      "netgear wifi router reviews for remote work",
+      "netgear home routers official site",
+      "top wifi routers for gaming 2023 reviews",
+      "best netgear routers for home office",
+      "how to choose the best wifi router for gaming",
+      "buy linksys wifi router for business",
+      "buy asus rog rapture gt-ax11000 router",
+      "how to set up netgear wireless router for home office",
+      "how do home routers work for small businesses",
+      "buy netgear nighthawk ax8 router"
+    ]
+  },
+  "stats": {
+    "total_unique": 111,
+    "train_count": 55,
+    "test_count": 56,
+    "keywords_count": 9,
+    "personas_count": 5
+  }
+}

@@ -34,7 +34,7 @@ from autogeo.evaluation.metrics import (
 load_dotenv()
 
 # -- Config --
-MODEL = "gpt-5"
+MODEL = "gpt-5-mini"
 CONCURRENCY = 32
 NUM_COMPETITORS = 10
 SAMPLE_PATH = Path("sample_50.parquet")
@@ -72,6 +72,10 @@ SYSTEM_PROMPT = (
     "7. When citing multiple sources for the same information point, use [1][2][3] format, not [1, 2, 3].\n"
 
     "8. Do NOT cite URLs directly. Do NOT use markdown links. ONLY use [index] format.\n"
+
+    "8a. NEVER output internal browsing/view identifiers such as [turn1view1], [turn2view3], "
+    "[turn...view...], or similar tool IDs. Convert every citation to the provided Source number format, "
+    "for example [1], [2], or [1][3].\n"
 
     "9. If a source is not necessary for supporting a specific information point, do not cite it.\n"
 
@@ -417,6 +421,7 @@ async def run_citation_test(
         input=user_msg,
         tools=[{"type": "web_search_preview"}],
         reasoning={"effort": "low"},
+        text={"verbosity": "low"},
         max_output_tokens=8000,
     )
 

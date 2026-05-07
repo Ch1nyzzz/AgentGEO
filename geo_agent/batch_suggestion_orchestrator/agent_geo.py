@@ -15,9 +15,11 @@ import hashlib
 import json
 import logging
 import os
+import re
 import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
+from urllib.parse import urlparse
 
 # Setup paths
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -92,7 +94,10 @@ class AsyncInContextGeneratorV2:
         num_competitors = len(retrieved_docs)
         target_idx = num_competitors + 1
 
-        if competitor_contents is None or len(competitor_contents) < len(retrieved_docs):
+        if (
+            self._citation_input_mode() != "url"
+            and (competitor_contents is None or len(competitor_contents) < len(retrieved_docs))
+        ):
             raise ValueError("competitor_contents is required")
 
         # Delegate to citation_checker
@@ -117,6 +122,13 @@ class AsyncInContextGeneratorV2:
     def citation_checker(self) -> BaseCitationChecker:
         """Get the current citation checker"""
         return self._citation_checker
+
+    def _citation_input_mode(self) -> str:
+        mode = getattr(self._citation_checker, "citation_input_mode", None)
+        if mode:
+            return mode
+        llm_checker = getattr(self._citation_checker, "llm_checker", None)
+        return getattr(llm_checker, "citation_input_mode", "content")
 
 
 class AgentGEOV2:
@@ -165,6 +177,8 @@ class AgentGEOV2:
             attr_evaluator_config=self.batch_config.attr_evaluator_config,
             composite_strategy=self.batch_config.citation_composite_strategy,
             use_fast_mode=self.batch_config.use_fast_mode,
+            citation_input_mode=self.batch_config.citation_input_mode,
+            url_citation_model=self.batch_config.url_citation_model,
         )
 
         # Generator uses independent GENERATION config and citation_checker
@@ -189,6 +203,7 @@ class AgentGEOV2:
         self._html_content_cache: Dict[str, str] = {}
         self._search_cache: Dict[str, List[SearchResult]] = {}
         self._cache_lock = asyncio.Lock()
+        self._openai_search_client = None
 
         # Disk cache
         self._disk_cache_dir: Optional[Path] = None
@@ -217,19 +232,24 @@ class AgentGEOV2:
         self.history_manager = HistoryManagerV2(persist_path=history_path)
 
     def _cache_key(self, query: str) -> str:
-        return hashlib.sha256(query.encode("utf-8")).hexdigest()
+        cache_key = f"{self.batch_config.retrieval_method}:{query}"
+        return hashlib.sha256(cache_key.encode("utf-8")).hexdigest()
 
     def _disk_cache_path(self, query: str) -> Optional[Path]:
         if not self._disk_cache_dir:
             return None
         return self._disk_cache_dir / f"{self._cache_key(query)}.json"
 
-    async def _get_search_results(self, query: str) -> List[SearchResult]:
+    async def _get_search_results(
+        self,
+        query: str,
+        exclude_url: Optional[str] = None,
+    ) -> List[SearchResult]:
         """Get search results (with caching)"""
         async with self._cache_lock:
             cached = self._search_cache.get(query)
         if cached is not None:
-            return cached
+            return self._filter_excluded_url(cached, exclude_url)
 
         cache_path = self._disk_cache_path(query)
         if cache_path and cache_path.exists():
@@ -239,11 +259,15 @@ class AgentGEOV2:
                 results = [SearchResult(**item) for item in payload]
                 async with self._cache_lock:
                     self._search_cache[query] = results
-                return results
+                return self._filter_excluded_url(results, exclude_url)
             except Exception as exc:
                 logger.warning("Failed to load disk cache: %s", exc)
 
-        results = await asyncio.to_thread(self.search_engine.search, query)
+        if self.batch_config.retrieval_method == "gpt_search":
+            results = await self._get_gpt_search_results(query)
+        else:
+            results = await asyncio.to_thread(self.search_engine.search, query)
+
         async with self._cache_lock:
             self._search_cache[query] = results
 
@@ -254,10 +278,115 @@ class AgentGEOV2:
             except Exception as exc:
                 logger.warning("Failed to write disk cache: %s", exc)
 
+        return self._filter_excluded_url(results, exclude_url)
+
+    def _filter_excluded_url(
+        self,
+        results: List[SearchResult],
+        exclude_url: Optional[str],
+    ) -> List[SearchResult]:
+        excluded = self._normalize_url_for_compare(exclude_url) if exclude_url else None
+        filtered = []
+        for result in results:
+            url = result.url or ""
+            if self._is_reddit_url(url):
+                continue
+            if excluded and self._normalize_url_for_compare(url) == excluded:
+                continue
+            filtered.append(result)
+        return filtered
+
+    def _is_reddit_url(self, url: str) -> bool:
+        return "reddit.com" in urlparse(url or "").netloc.lower()
+
+    def _normalize_url_for_compare(self, url: str) -> str:
+        parsed = urlparse(url or "")
+        host = parsed.netloc.lower().removeprefix("www.")
+        path = parsed.path.rstrip("/")
+        return f"{host}{path}"
+
+    def _extract_json_object(self, text: str) -> Dict:
+        try:
+            return json.loads(text)
+        except json.JSONDecodeError:
+            match = re.search(r"\{.*\}", text, flags=re.DOTALL)
+            if not match:
+                raise
+            return json.loads(match.group(0))
+
+    async def _get_gpt_search_results(self, query: str) -> List[SearchResult]:
+        """Use GPT web search to discover competitor URLs for a query."""
+        if self._openai_search_client is None:
+            from openai import AsyncOpenAI
+            self._openai_search_client = AsyncOpenAI()
+
+        max_results = self.batch_config.gpt_search_max_results
+        instructions = (
+            "You are a web research assistant. Use web search to find source pages "
+            "that could help answer the user's query. Return ONLY valid JSON with this "
+            "schema: {\"results\":[{\"title\":\"...\",\"url\":\"https://...\","
+            "\"snippet\":\"...\"}]}. Include canonical, publicly accessible webpage "
+            "URLs. Do not include markdown, commentary, citations, or non-JSON text."
+        )
+        prompt = (
+            f"Query: {query}\n\n"
+            f"Find up to {max_results} diverse, high-quality source pages relevant to "
+            "answering this query. Prefer pages with enough substantive content for "
+            "citation comparison."
+        )
+
+        response = await self._openai_search_client.responses.create(
+            model=self.batch_config.gpt_search_model,
+            instructions=instructions,
+            input=prompt,
+            tools=[{"type": "web_search_preview"}],
+            reasoning={"effort": "low"},
+            text={"verbosity": "low"},
+            max_output_tokens=2000,
+        )
+
+        output_text = getattr(response, "output_text", "") or ""
+        try:
+            payload = self._extract_json_object(output_text)
+            raw_results = payload.get("results", [])
+        except Exception as exc:
+            logger.warning("GPT search JSON parse failed, falling back to URL regex: %s", exc)
+            raw_results = [
+                {"title": "", "url": url, "snippet": ""}
+                for url in re.findall(r"https?://[^\s\]\)\"'<>]+", output_text)
+            ]
+
+        seen_urls = set()
+        results: List[SearchResult] = []
+        for item in raw_results:
+            url = (item.get("url") or "").strip()
+            if not url or not url.startswith(("http://", "https://")):
+                continue
+            normalized = self._normalize_url_for_compare(url)
+            if normalized in seen_urls:
+                continue
+            seen_urls.add(normalized)
+            results.append(SearchResult(
+                idx=len(results) + 1,
+                title=(item.get("title") or "").strip(),
+                snippet=(item.get("snippet") or "").strip(),
+                url=url,
+                uuid="",
+            ))
+            if len(results) >= max_results:
+                break
+
+        logger.info("GPT search returned %d URLs for query: %s", len(results), query)
         return results
 
     async def _get_competitor_full_content(self, doc: SearchResult) -> Optional[str]:
         """Get competitor full content (must fetch HTML, no fallback to snippet allowed)"""
+        if self.batch_config.retrieval_method == "gpt_search":
+            if doc.raw_content:
+                self._html_content_cache[doc.url] = doc.raw_content
+                return doc.raw_content
+            return await self._get_url_full_content(doc)
+
         if not doc.uuid:
             raise RuntimeError(f"Competitor doc has no uuid, cannot fetch HTML: url={doc.url}")
 
@@ -347,6 +476,45 @@ class AgentGEOV2:
             # 4. All attempts failed, raise error
             raise RuntimeError(f"All attempts to fetch HTML failed for competitor: uuid={doc.uuid}, url={doc.url}")
 
+    async def _get_url_full_content(self, doc: SearchResult) -> Optional[str]:
+        """Fetch and parse content from a GPT-discovered URL."""
+        cache_key = doc.url
+        if cache_key in self._html_content_cache:
+            return self._html_content_cache[cache_key]
+        if not doc.url:
+            return None
+
+        import requests
+
+        def fetch_url() -> str:
+            headers = {
+                "User-Agent": (
+                    "Mozilla/5.0 (compatible; AgentGEO/1.0; "
+                    "+https://github.com/ch1nyzzz/AgentGEO)"
+                ),
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            }
+            resp = requests.get(
+                doc.url,
+                headers=headers,
+                timeout=self.batch_config.gpt_search_fetch_timeout,
+            )
+            resp.raise_for_status()
+            return resp.text or ""
+
+        try:
+            html_content = await asyncio.to_thread(fetch_url)
+            if not html_content:
+                return None
+            parsed_content = self._html_parser.parse(html_content)
+            if not parsed_content:
+                parsed_content = doc.snippet or ""
+            self._html_content_cache[cache_key] = parsed_content
+            return parsed_content
+        except Exception as exc:
+            logger.warning("Failed to fetch GPT-discovered URL %s: %s", doc.url, exc)
+            return doc.snippet or None
+
     async def _get_all_competitor_contents(
         self, docs: List[SearchResult], target_count: int = 10
     ) -> Tuple[List[SearchResult], List[str]]:
@@ -384,13 +552,16 @@ class AgentGEOV2:
         print("=" * 50)
 
         # Create batch processor
+        async def search_for_current_page(query: str) -> List[SearchResult]:
+            return await self._get_search_results(query, exclude_url=webpage.url)
+
         processor = SuggestionProcessorV2(
             llm=self.llm,
             generator=self.generator,
             config=self.batch_config,
             config_path=self.config_path,
             history_manager=self.history_manager,
-            search_func=self._get_search_results,
+            search_func=search_for_current_page,
             competitor_content_func=self._get_all_competitor_contents,  # Returns tuple (filtered_docs, contents)
         )
 
@@ -399,6 +570,7 @@ class AgentGEOV2:
             content=webpage.cleaned_content,
             all_queries=queries,
             raw_html=webpage.raw_html if webpage.raw_html else None,
+            target_url=webpage.url,
         )
 
         # Update webpage content
@@ -449,6 +621,10 @@ class AgentGEOV2:
                 "suggestion_merge_strategy": self.batch_config.suggestion_merge_strategy,
                 "use_two_phase_analysis": self.batch_config.use_two_phase_analysis,
                 "enable_policy_injection": self.batch_config.enable_policy_injection,
+                "retrieval_method": self.batch_config.retrieval_method,
+                "gpt_search_model": self.batch_config.gpt_search_model,
+                "citation_input_mode": self.batch_config.citation_input_mode,
+                "url_citation_model": self.batch_config.url_citation_model,
             },
             "queries": queries,
             "batches": [
@@ -504,24 +680,40 @@ class AgentGEOV2:
         elif not isinstance(queries, list):
             queries = list(queries)
 
-        async def evaluate_one(query: str) -> Tuple[str, bool]:
+        async def evaluate_one(query: str) -> Tuple[str, bool, List[str]]:
             async with semaphore:
-                retrieved_docs = await self._get_search_results(query)
+                retrieved_docs = await self._get_search_results(query, exclude_url=webpage.url)
+                if self.batch_config.citation_input_mode == "url":
+                    citation_result = await self.generator.generate_and_check(
+                        query, webpage, retrieved_docs, []
+                    )
+                    return (
+                        query,
+                        citation_result.is_cited,
+                        [doc.url for doc in retrieved_docs if doc.url],
+                    )
+
                 retrieved_docs, competitor_contents = await self._get_all_competitor_contents(
                     retrieved_docs
                 )
                 if not competitor_contents:
-                    return query, False
+                    return query, False, [doc.url for doc in retrieved_docs if doc.url]
 
                 citation_result = await self.generator.generate_and_check(
                     query, webpage, retrieved_docs, competitor_contents
                 )
-                return query, citation_result.is_cited
+                return (
+                    query,
+                    citation_result.is_cited,
+                    [doc.url for doc in retrieved_docs if doc.url],
+                )
 
         tasks = [asyncio.create_task(evaluate_one(query)) for query in queries]
+        retrieved_urls: Dict[str, List[str]] = {}
         for coro in asyncio.as_completed(tasks):
-            query, cited = await coro
+            query, cited, urls = await coro
             results[query] = cited
+            retrieved_urls[query] = urls
 
         # Safely compute ratio, avoiding numpy array issues
         if not queries:
@@ -532,6 +724,7 @@ class AgentGEOV2:
             ratio = float(success_count) / queries_len if queries_len > 0 else 0.0
         
         results["ratio"] = ratio
+        results["_retrieved_urls"] = retrieved_urls
         return results
 
 

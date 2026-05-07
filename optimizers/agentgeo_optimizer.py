@@ -42,6 +42,8 @@ class AgentGEOOptimizer:
         batch_size: int = 10,
         max_concurrency: int = 4,
         citation_method: str = "llm",
+        citation_input_mode: str = "content",
+        url_citation_model: str = "gpt-5-mini",
         enable_memory: bool = True,
         enable_history: bool = True,
         disk_cache_dir: str = None,
@@ -55,6 +57,8 @@ class AgentGEOOptimizer:
             batch_size=batch_size,
             max_concurrency=max_concurrency,
             citation_method=citation_method,
+            citation_input_mode=citation_input_mode,
+            url_citation_model=url_citation_model,
             enable_memory=enable_memory,
             enable_history=enable_history,
             **kwargs

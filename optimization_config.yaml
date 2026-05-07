@@ -78,6 +78,34 @@ agentgeo:
   use_fast_mode: true
 
   # ============================================================
+  # In-Context Citation Test Input Mode
+  # ============================================================
+  # Options: "content", "url"
+  #
+  # - content: Existing mode. AgentGEO fetches/parses target + competitor pages,
+  #   then gives source text to the LLM.
+  # - url: Real-engine mode. AgentGEO gives source URLs directly to OpenAI
+  #   Responses API with web_search_preview, matching scripts/test_gpt_citation.py.
+  #   Note: URL mode tests the currently live target URL. To test optimized
+  #   content, publish the optimized HTML and pass that published URL.
+  citation_input_mode: "content"
+  url_citation_model: "gpt-5-mini"
+
+  # ============================================================
+  # Retrieval Method for Train/Test Citation Checks
+  # ============================================================
+  # Options: "chatnoir", "gpt_search"
+  #
+  # - chatnoir: Use the existing ChatNoir/CW22 search + cached HTML pipeline.
+  # - gpt_search: Ask GPT with web_search_preview to discover source URLs, then
+  #   fetch those URLs and pass their parsed page content into the same citation
+  #   and optimization pipeline. Retrieved URLs are recorded per query.
+  retrieval_method: "chatnoir"
+  gpt_search_model: "gpt-5-mini"
+  gpt_search_max_results: 10
+  gpt_search_fetch_timeout: 20
+
+  # ============================================================
   # Performance Comparison Reference
   # ============================================================
   #

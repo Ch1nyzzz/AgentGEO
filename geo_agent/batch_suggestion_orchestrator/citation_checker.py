@@ -233,14 +233,153 @@ class BaseCitationChecker(ABC):
 class LLMCitationChecker(BaseCitationChecker):
     """LLM citation checker (current implementation)"""
 
-    def __init__(self, llm: "BaseChatModel", max_snippet_length: int = 2000):
+    def __init__(
+        self,
+        llm: "BaseChatModel",
+        max_snippet_length: int = 2000,
+        citation_input_mode: str = "content",
+        url_citation_model: str = "gpt-5-mini",
+    ):
         self.llm = llm
         self.max_snippet_length = max_snippet_length
+        self.citation_input_mode = citation_input_mode
+        self.url_citation_model = url_citation_model
+        self._openai_client = None
 
     async def _ainvoke(self, prompt_input):
         if hasattr(self.llm, "ainvoke"):
             return await self.llm.ainvoke(prompt_input)
         return await asyncio.to_thread(self.llm.invoke, prompt_input)
+
+    def _system_prompt(self, source_kind: str) -> str:
+        return (
+            "You are a research assistant. The user will provide a question and a "
+            f"numbered list of source {source_kind}. You MUST read all provided sources "
+            "and answer using only information from those sources.\n\n"
+            "STRICT RULES:\n"
+            "1. ONLY use information from the provided sources. Do NOT use your own "
+            "knowledge or any external websites. Do not use source URLs, source names, "
+            "file names, paths, slugs, or link text to judge relevance; rely only on "
+            "source content.\n"
+            "2. Before writing the answer, identify the source-based information points "
+            "needed to answer the question. For each information point, choose the "
+            "smallest set of sources that directly supports it.\n"
+            "3. Do not cite a source only because it is relevant, similar, or also "
+            "mentions the topic. Cite a source only when it is necessary to support a "
+            "specific information point in the sentence.\n"
+            "4. If multiple sources support the same information point, cite only the "
+            "source or sources that provide the clearest and most direct support. Do "
+            "not cite all matching sources.\n"
+            "5. Sentences that only summarize, organize, compare, or generalize from "
+            "already cited information do not need citations.\n"
+            "6. Place citations immediately after the supported information point using "
+            "[index] format.\n"
+            "7. When citing multiple sources for the same information point, use "
+            "[1][2][3] format, not [1, 2, 3].\n"
+            "8. Do NOT cite URLs directly. Do NOT use markdown links. ONLY use [index] "
+            "format.\n"
+            "8a. NEVER output internal browsing/view identifiers such as [turn1view1], "
+            "[turn2view3], [turn...view...], or similar tool IDs. Convert every citation "
+            "to the provided Source number format, for example [1], [2], or [1][3].\n"
+            "9. If a source is not necessary for supporting a specific information point, "
+            "do not cite it.\n"
+            "10. The answer should be accurate, concise, and written in an unbiased "
+            "journalistic tone.\n"
+            "11. Citation necessity test: before citing a source, check whether the "
+            "sentence would still be fully supported without that source. If the answer "
+            "is yes, do not cite that source."
+        )
+
+    def _citation_result_from_answer(
+        self,
+        answer: str,
+        target_idx: int,
+        target_url: str,
+        num_sources: int,
+    ) -> CitationResult:
+        cited_by_index = f"[{target_idx}]" in answer
+        cited_by_url = bool(target_url) and target_url in answer
+        is_cited = cited_by_index or cited_by_url
+        cited_indices = list({int(m) for m in re.findall(r"\[(\d+)\]", answer)})
+        geo_score_info = compute_geo_score(answer, target_idx, num_sources)
+        return CitationResult(
+            is_cited=is_cited,
+            generated_answer=answer,
+            citations_found_idx=cited_indices,
+            method=CitationMethod.LLM,
+            cited_by_index=cited_by_index,
+            cited_by_url=cited_by_url,
+            geo_score=geo_score_info,
+        )
+
+    async def _check_with_urls(
+        self,
+        query: str,
+        target_url: str,
+        target_idx: int,
+        retrieved_docs: List[Any],
+    ) -> CitationResult:
+        if not target_url:
+            logger.warning("URL citation mode requested but target_url is empty")
+            return CitationResult(
+                is_cited=False,
+                generated_answer="",
+                citations_found_idx=[],
+                method=CitationMethod.LLM,
+            )
+
+        urls = [getattr(doc, "url", "") for doc in retrieved_docs if getattr(doc, "url", "")]
+        num_sources = len(urls) + 1
+        expected_target_idx = num_sources
+        if target_idx != expected_target_idx:
+            logger.warning(
+                "URL citation mode expects target as final source; got target_idx=%s, expected=%s",
+                target_idx,
+                expected_target_idx,
+            )
+            target_idx = expected_target_idx
+
+        sources_text = ""
+        for i, url in enumerate(urls, start=1):
+            sources_text += f"[Source {i}] URL: {url}\n"
+        sources_text += f"[Source {target_idx}] URL: {target_url}\n"
+
+        user_msg = (
+            f"Question: {query}\n\n"
+            "Below are the ONLY sources you may use. Visit each URL, read its content, "
+            "and write your answer citing ONLY these sources using [index] format.\n"
+            "Do NOT search the web for additional information. Do NOT cite external URLs.\n\n"
+            f"Sources:\n{sources_text}"
+        )
+
+        if self._openai_client is None:
+            from openai import AsyncOpenAI
+
+            self._openai_client = AsyncOpenAI()
+
+        try:
+            response = await self._openai_client.responses.create(
+                model=self.url_citation_model,
+                instructions=self._system_prompt("URLs"),
+                input=user_msg,
+                tools=[{"type": "web_search_preview"}],
+                reasoning={"effort": "low"},
+                text={"verbosity": "low"},
+                max_output_tokens=8000,
+            )
+        except Exception as exc:
+            logger.error("URL-mode LLM citation generation failed: %s", exc)
+            raise RuntimeError("URL-mode LLM citation generation failed.") from exc
+
+        answer = getattr(response, "output_text", "") or ""
+        if not answer:
+            for item in getattr(response, "output", []) or []:
+                if getattr(item, "type", "") == "message":
+                    for content in getattr(item, "content", []) or []:
+                        if getattr(content, "type", "") == "output_text":
+                            answer += getattr(content, "text", "")
+
+        return self._citation_result_from_answer(answer, target_idx, target_url, num_sources)
 
     async def check(
         self,
@@ -252,6 +391,11 @@ class LLMCitationChecker(BaseCitationChecker):
         competitor_contents: List[str],
     ) -> CitationResult:
         from langchain_core.prompts import ChatPromptTemplate
+
+        if self.citation_input_mode == "url":
+            return await self._check_with_urls(query, target_url, target_idx, retrieved_docs)
+        if self.citation_input_mode != "content":
+            raise ValueError(f"Unknown citation_input_mode: {self.citation_input_mode}")
 
         # Build sources text
         sources_text = ""
@@ -277,23 +421,15 @@ class LLMCitationChecker(BaseCitationChecker):
         messages = [
             (
                 "system",
-                "Write an accurate and concise answer for the given user question, "
-                "using _only_ the provided summarized web search results. The answer "
-                "should be correct, high-quality, and written by an expert using an "
-                "unbiased and journalistic tone. The user's language of choice such as "
-                "English, Francais, Espanol, Deutsch, or Japanese should be used. The "
-                "answer should be informative, interesting, and engaging. The answer's "
-                "logic and reasoning should be rigorous and defensible. Every sentence "
-                "in the answer should be _immediately followed_ by an in-line citation "
-                "to the search result(s). The cited search result(s) should fully support "
-                "_all_ the information in the sentence. Search results need to be cited "
-                "using [index]. When citing several search results, use [1][2][3] format "
-                "rather than [1, 2, 3]. You can use multiple search results to respond "
-                "comprehensively while avoiding irrelevant search results.",
+                self._system_prompt("texts"),
             ),
             (
                 "human",
-                "Question: {query}\n\nSearch Results:\n{sources}",
+                "Question: {query}\n\n"
+                "Below are the ONLY sources you may use. Read each source text and write "
+                "your answer citing ONLY these sources using [index] format. Do NOT use "
+                "external information.\n\n"
+                "Sources:\n{sources}",
             ),
         ]
 
@@ -307,25 +443,8 @@ class LLMCitationChecker(BaseCitationChecker):
 
         answer = response.content
 
-        # Check citations
-        cited_by_index = f"[{target_idx}]" in answer
-        cited_by_url = bool(target_url) and target_url in answer
-        is_cited = cited_by_index or cited_by_url
-        cited_indices = list({int(m) for m in re.findall(r"\[(\d+)\]", answer)})
-
-        # Calculate GEO Score (LLM answer has standard [n] format)
         num_sources = len(competitor_contents) + 1  # Competitor docs + target doc
-        geo_score_info = compute_geo_score(answer, target_idx, num_sources)
-
-        return CitationResult(
-            is_cited=is_cited,
-            generated_answer=answer,
-            citations_found_idx=cited_indices,
-            method=CitationMethod.LLM,
-            cited_by_index=cited_by_index,
-            cited_by_url=cited_by_url,
-            geo_score=geo_score_info,
-        )
+        return self._citation_result_from_answer(answer, target_idx, target_url, num_sources)
 
 
 class AttrEvaluatorCitationChecker(BaseCitationChecker):
@@ -559,6 +678,8 @@ def create_citation_checker(
     attr_evaluator_config: Optional[str] = None,
     composite_strategy: str = "any",
     use_fast_mode: bool = True,
+    citation_input_mode: str = "content",
+    url_citation_model: str = "gpt-5-mini",
 ) -> BaseCitationChecker:
     """
     Factory function: Create citation checker
@@ -570,6 +691,8 @@ def create_citation_checker(
         attr_evaluator_config: AttrEvaluator config file path
         composite_strategy: Composite mode strategy
         use_fast_mode: Whether to use fast mode, default True
+        citation_input_mode: LLM citation input mode, either content or url
+        url_citation_model: OpenAI model for URL-mode citation checks
 
     Returns:
         BaseCitationChecker: Citation checker instance
@@ -577,7 +700,12 @@ def create_citation_checker(
     if method == CitationMethod.LLM:
         if llm is None:
             raise ValueError("LLM instance is required for LLM citation method")
-        return LLMCitationChecker(llm, max_snippet_length)
+        return LLMCitationChecker(
+            llm,
+            max_snippet_length,
+            citation_input_mode=citation_input_mode,
+            url_citation_model=url_citation_model,
+        )
 
     elif method == CitationMethod.ATTR_EVALUATOR:
         return AttrEvaluatorCitationChecker(attr_evaluator_config, use_fast_mode)
@@ -585,7 +713,12 @@ def create_citation_checker(
     elif method == CitationMethod.BOTH:
         if llm is None:
             raise ValueError("LLM instance is required for BOTH citation method")
-        llm_checker = LLMCitationChecker(llm, max_snippet_length)
+        llm_checker = LLMCitationChecker(
+            llm,
+            max_snippet_length,
+            citation_input_mode=citation_input_mode,
+            url_citation_model=url_citation_model,
+        )
         attr_checker = AttrEvaluatorCitationChecker(attr_evaluator_config, use_fast_mode)
         return CompositeCitationChecker(llm_checker, attr_checker, composite_strategy)
 

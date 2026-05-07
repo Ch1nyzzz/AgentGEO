@@ -75,6 +75,8 @@ def extract_training_citation_info(optimized) -> Dict[str, Any]:
                 "iterations_used": qr.iterations_used,
                 "geo_score_overall": qr.geo_score_overall,
             }
+            if getattr(qr, "retrieved_urls", None):
+                entry["retrieved_urls"] = qr.retrieved_urls
             if qr.diagnosis:
                 entry["diagnosis"] = qr.diagnosis.to_dict()
             # Save optimization attempt details for all queries
@@ -129,10 +131,17 @@ async def process_document(
     eval_config = config.get("evaluation", {})
     enable_citation_eval = eval_config.get("enable_citation", False)
     test_queries = doc.get("test_queries", [])
+    citation_input_mode = config.get("agentgeo", {}).get("citation_input_mode", "content")
 
     for name, optimizer in optimizers.items():
         try:
             logger.info(f"  [{doc_id}] Running {name}...")
+            if name == "agentgeo" and citation_input_mode == "url":
+                logger.warning(
+                    "  [%s] URL citation mode tests the live target URL during optimization; "
+                    "intermediate in-memory edits are not visible to the real engine until published.",
+                    doc_id,
+                )
 
             # 1. Pre-optimization test evaluation (baseline)
             if enable_citation_eval and test_queries and hasattr(optimizer, 'evaluate_page_async'):
@@ -178,23 +187,35 @@ async def process_document(
 
             # 3. Post-optimization test evaluation
             if enable_citation_eval and test_queries and hasattr(optimizer, 'evaluate_page_async'):
-                logger.info(f"    [{doc_id}] Evaluating optimized page with {len(test_queries)} test queries...")
-                optimized_eval = await optimizer.evaluate_page_async(
-                    raw_html=optimized_html,
-                    test_queries=test_queries,
-                    url=doc.get("url", "")
-                )
-                optimized_citation_rate = optimized_eval.get("ratio", 0.0)
-                result[f"{name}_optimized_test_citation_rate"] = optimized_citation_rate
-                # Per-query detail
-                optimized_per_query = {q: optimized_eval.get(q, False) for q in test_queries}
-                result[f"{name}_optimized_test_per_query"] = optimized_per_query
-                logger.info(f"    [{doc_id}] Optimized test citation rate: {optimized_citation_rate:.2%}")
+                optimized_url = doc.get("optimized_url") or doc.get(f"{name}_optimized_url")
+                eval_url = optimized_url or doc.get("url", "")
+                if citation_input_mode == "url" and not optimized_url:
+                    skip_reason = (
+                        "citation_input_mode=url tests live URLs; optimized HTML is not "
+                        "publicly reachable because doc.optimized_url is missing"
+                    )
+                    result[f"{name}_optimized_test_skipped"] = skip_reason
+                    logger.warning(f"    [{doc_id}] Skipping optimized URL-mode evaluation: {skip_reason}")
+                else:
+                    logger.info(f"    [{doc_id}] Evaluating optimized page with {len(test_queries)} test queries...")
+                    optimized_eval = await optimizer.evaluate_page_async(
+                        raw_html=optimized_html,
+                        test_queries=test_queries,
+                        url=eval_url
+                    )
+                    optimized_citation_rate = optimized_eval.get("ratio", 0.0)
+                    result[f"{name}_optimized_test_citation_rate"] = optimized_citation_rate
+                    # Per-query detail
+                    optimized_per_query = {q: optimized_eval.get(q, False) for q in test_queries}
+                    result[f"{name}_optimized_test_per_query"] = optimized_per_query
+                    if optimized_url:
+                        result[f"{name}_optimized_test_url"] = optimized_url
+                    logger.info(f"    [{doc_id}] Optimized test citation rate: {optimized_citation_rate:.2%}")
 
-                if baseline_citation_rate is not None:
-                    delta = optimized_citation_rate - baseline_citation_rate
-                    result[f"{name}_delta_test_citation_rate"] = delta
-                    logger.info(f"    [{doc_id}] Test delta: {delta:+.2%}")
+                    if baseline_citation_rate is not None:
+                        delta = optimized_citation_rate - baseline_citation_rate
+                        result[f"{name}_delta_test_citation_rate"] = delta
+                        logger.info(f"    [{doc_id}] Test delta: {delta:+.2%}")
 
             logger.info(f"  [{doc_id}] {name} completed")
         except Exception as e:
@@ -354,6 +375,10 @@ async def main():
     parser.add_argument("--doc-offset", type=int, help="Document offset (overrides config)")
     parser.add_argument("--doc-concurrency", type=int, default=1,
                         help="Number of documents to process in parallel (default: 1)")
+    parser.add_argument("--citation-input-mode", choices=["content", "url"],
+                        help="AgentGEO citation-test input mode: content or url")
+    parser.add_argument("--url-citation-model",
+                        help="OpenAI model for AgentGEO URL-mode citation tests")
     parser.add_argument("--force-restart", action="store_true", help="Ignore checkpoints")
 
     args = parser.parse_args()
@@ -377,6 +402,10 @@ async def main():
         config["data"]["doc_limit"] = args.doc_limit
     if args.doc_offset is not None:
         config["data"]["doc_offset"] = args.doc_offset
+    if args.citation_input_mode:
+        config.setdefault("agentgeo", {})["citation_input_mode"] = args.citation_input_mode
+    if args.url_citation_model:
+        config.setdefault("agentgeo", {})["url_citation_model"] = args.url_citation_model
 
     doc_concurrency = args.doc_concurrency
 
@@ -387,6 +416,7 @@ async def main():
     logger.info(f"Document concurrency: {doc_concurrency}")
     logger.info(f"Query concurrency: {config.get('agentgeo', {}).get('max_concurrency', 4)}")
     logger.info(f"Test evaluation: {config.get('evaluation', {}).get('enable_citation', False)}")
+    logger.info(f"Citation input mode: {config.get('agentgeo', {}).get('citation_input_mode', 'content')}")
 
     # 2. Load data
     data_loader = DataLoader(config["data"])

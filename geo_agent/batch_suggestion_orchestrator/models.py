@@ -166,6 +166,7 @@ class QueryResultV2:
     geo_score_wordpos: float = 0.0
     geo_score_overall: float = 0.0
     has_valid_citations: bool = False
+    retrieved_urls: List[str] = field(default_factory=list)
 
 
 @dataclass
@@ -323,6 +324,30 @@ class AgentGEOConfigV2(BaseModel):
     use_fast_mode: bool = Field(
         True,
         description="Use fast mode for Attribute Evaluator"
+    )
+    citation_input_mode: str = Field(
+        "content",
+        description="Input mode for LLM citation checks: content or url"
+    )
+    url_citation_model: str = Field(
+        "gpt-5-mini",
+        description="OpenAI model used for URL-mode citation checks with web_search_preview"
+    )
+    retrieval_method: str = Field(
+        "chatnoir",
+        description="Competitor retrieval method for train/test: chatnoir or gpt_search"
+    )
+    gpt_search_model: str = Field(
+        "gpt-5-mini",
+        description="OpenAI model used to discover competitor URLs when retrieval_method=gpt_search"
+    )
+    gpt_search_max_results: int = Field(
+        10,
+        description="Maximum number of URLs to request from GPT web search"
+    )
+    gpt_search_fetch_timeout: int = Field(
+        20,
+        description="Timeout in seconds when fetching GPT-discovered URLs"
     )
 
     # Tool config (V2.4 addition)

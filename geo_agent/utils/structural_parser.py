@@ -64,6 +64,7 @@ class HtmlStructureManager:
         # Cache for parsed results
         self.extracted_elements: List[Dict] = []
         self._chunks: List[ContentChunk] = []
+        self._removed_technical_tags: List[Dict] = []
         self._parse_and_mark()
 
     def _generate_id(self) -> str:
@@ -130,10 +131,32 @@ class HtmlStructureManager:
     def _clean_dom(self):
         """
         Marks noise and interference elements in the DOM to be ignored during parsing.
-        Does NOT remove them from the final HTML output (except checking scripts/styles).
+        Temporarily removes strict technical interference for extraction, but records
+        enough information to restore it when exporting HTML.
         """
-        # 1. Remove strict technical interference
-        for tag in self.soup(['script', 'style', 'meta', 'noscript', 'svg']):
+        # 1. Remove strict technical interference from the working DOM only.
+        # These tags are irrelevant for chunk extraction but should survive final
+        # HTML export so optimized pages keep the original page shell.
+        technical_tag_names = {'script', 'style', 'meta', 'noscript', 'svg'}
+        self._removed_technical_tags = []
+        for parent in self.soup.find_all(True):
+            if parent.name in technical_tag_names:
+                continue
+            parent_records = []
+            for child_index, child in enumerate(list(parent.contents)):
+                if isinstance(child, Tag) and child.name in technical_tag_names:
+                    restore_id = parent.get('data-geo-restore-id')
+                    if not restore_id:
+                        restore_id = self._generate_id()
+                        parent['data-geo-restore-id'] = restore_id
+                    parent_records.append({
+                        'parent_restore_id': restore_id,
+                        'child_index': child_index,
+                        'html': str(child),
+                    })
+            self._removed_technical_tags.extend(parent_records)
+
+        for tag in list(self.soup.find_all(list(technical_tag_names))):
             tag.decompose()
 
         # 2. Mark Semantic & Heuristic Noise (Headers/Footers/Widgets)
@@ -311,6 +334,11 @@ class HtmlStructureManager:
             return self.soup.body.get_text(separator="\n\n", strip=True)
         return self.soup.get_text(separator="\n\n", strip=True)
 
+    def clear_modification_highlights(self) -> None:
+        """Remove visual GEO modification wrappers while preserving their content."""
+        for wrapper in list(self.soup.find_all(class_="geo-modified-chunk")):
+            wrapper.unwrap()
+
     def calculate_chunks(self, max_chunk_length: int = 2000, max_snippet_length: int = 10000) -> int:
         """
         Groups extracted elements into Chunks based on length and stores them internally.
@@ -460,12 +488,43 @@ class HtmlStructureManager:
         Args:
             clean_internal_attributes: If True, removes internal attributes used for processing (e.g. data-geo-ignore).
         """
+        export_soup = BeautifulSoup(str(self.soup), 'lxml')
+        self._restore_technical_tags(export_soup)
+
         if clean_internal_attributes:
             # Remove data-geo-ignore markers so they don't appear in the final output
-            for tag in self.soup.find_all(attrs={"data-geo-ignore": True}):
+            for tag in export_soup.find_all(attrs={"data-geo-ignore": True}):
                 del tag['data-geo-ignore']
+            for tag in export_soup.find_all(attrs={"data-geo-restore-id": True}):
+                del tag['data-geo-restore-id']
 
-        return str(self.soup)
+        return str(export_soup)
+
+    def _restore_technical_tags(self, export_soup: BeautifulSoup) -> None:
+        """Restore script/style/meta/noscript/svg tags removed for extraction."""
+        if not self._removed_technical_tags:
+            return
+
+        records_by_parent: Dict[str, List[Dict]] = {}
+        for record in self._removed_technical_tags:
+            records_by_parent.setdefault(record['parent_restore_id'], []).append(record)
+
+        for parent_restore_id, records in records_by_parent.items():
+            parent = export_soup.find(attrs={"data-geo-restore-id": parent_restore_id})
+            if not parent:
+                continue
+
+            for record in sorted(records, key=lambda item: item['child_index']):
+                fragment = BeautifulSoup(record['html'], 'html.parser')
+                restored_tag = fragment.find()
+                if not restored_tag:
+                    continue
+
+                insert_at = min(record['child_index'], len(parent.contents))
+                if insert_at >= len(parent.contents):
+                    parent.append(restored_tag)
+                else:
+                    parent.contents[insert_at].insert_before(restored_tag)
     
     def format_indexed_content(self):
         return "\n\n".join(

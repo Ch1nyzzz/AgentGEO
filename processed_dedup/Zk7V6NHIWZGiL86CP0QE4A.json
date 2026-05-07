@@ -1,0 +1,901 @@
+{
+  "uuid": "Zk7V6NHIWZGiL86CP0QE4A",
+  "source_title": "How to Collect Your Judgement by Garnishee | Calgary Legal Guidance",
+  "keywords": {
+    "core": [
+      "collect judgement",
+      "garnishee",
+      "Calgary legal guidance"
+    ],
+    "lsi_synonyms": [
+      "enforce judgement",
+      "wage garnishment",
+      "legal advice Calgary"
+    ],
+    "keyphases": [
+      "how to collect a court judgement in Calgary",
+      "garnishee process in Alberta",
+      "legal steps for judgement collection"
+    ]
+  },
+  "personas": [
+    {
+      "name": "Debtors Seeking Resolution",
+      "description": "Individuals who have won a court judgement and are looking for ways to enforce it to collect the owed money."
+    },
+    {
+      "name": "Legal Professionals",
+      "description": "Lawyers or legal advisors in Calgary who assist clients in collecting judgements through garnishment and other legal means."
+    },
+    {
+      "name": "Financially Distressed Individuals",
+      "description": "People who owe money and are subject to garnishment, seeking to understand the process and their rights."
+    },
+    {
+      "name": "Small Business Owners",
+      "description": "Entrepreneurs in Calgary who have won a judgement against a client or partner and need guidance on how to collect the debt."
+    }
+  ],
+  "detailed_data": [
+    {
+      "focus_keyword": "collect judgement",
+      "variations": [
+        {
+          "target_persona": "Debtors Seeking Resolution",
+          "queries": {
+            "navigational": [
+              "court judgement enforcement services website"
+            ],
+            "informational": [
+              "how to enforce a court judgement to collect money"
+            ],
+            "commercial": [
+              "best services for collecting court judgements"
+            ],
+            "transactional": [
+              "hire a lawyer to collect court judgement"
+            ]
+          }
+        },
+        {
+          "target_persona": "Legal Professionals",
+          "queries": {
+            "navigational": [
+              "Alberta Courts judgement collection page"
+            ],
+            "informational": [
+              "how to collect a judgement in Alberta"
+            ],
+            "commercial": [
+              "best law firms in Calgary for judgement collection"
+            ],
+            "transactional": [
+              "hire a lawyer in Calgary for judgement collection"
+            ]
+          }
+        },
+        {
+          "target_persona": "Financially Distressed Individuals",
+          "queries": {
+            "navigational": [
+              "court website for collecting judgment"
+            ],
+            "informational": [
+              "how does judgment collection work"
+            ],
+            "commercial": [
+              "best services for collecting a judgment"
+            ],
+            "transactional": [
+              "hire a lawyer to collect judgment"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Alberta Courts judgement collection page"
+            ],
+            "informational": [
+              "how to collect a judgement in Alberta"
+            ],
+            "commercial": [
+              "best debt collection agencies in Calgary"
+            ],
+            "transactional": [
+              "hire a debt collection agency in Calgary"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "garnishee",
+      "variations": [
+        {
+          "target_persona": "Debtors Seeking Resolution",
+          "queries": {
+            "navigational": [
+              "court order garnishee form download"
+            ],
+            "informational": [
+              "how does a garnishee order work"
+            ],
+            "commercial": [
+              "best legal services for enforcing garnishee orders"
+            ],
+            "transactional": [
+              "buy garnishee order enforcement service"
+            ]
+          }
+        },
+        {
+          "target_persona": "Legal Professionals",
+          "queries": {
+            "navigational": [
+              "Alberta Courts garnishee forms"
+            ],
+            "informational": [
+              "how does garnishee work in Alberta"
+            ],
+            "commercial": [
+              "best garnishee services in Calgary"
+            ],
+            "transactional": [
+              "hire garnishee lawyer in Calgary"
+            ]
+          }
+        },
+        {
+          "target_persona": "Financially Distressed Individuals",
+          "queries": {
+            "navigational": [
+              "garnishee order government website"
+            ],
+            "informational": [
+              "what is a garnishee and how does it work"
+            ],
+            "commercial": [
+              "best legal services for garnishee advice"
+            ],
+            "transactional": [
+              "buy garnishee legal forms online"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Alberta Courts garnishee forms"
+            ],
+            "informational": [
+              "how does garnishee work in Alberta"
+            ],
+            "commercial": [
+              "best garnishee services in Calgary"
+            ],
+            "transactional": [
+              "hire garnishee lawyer in Calgary"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "Calgary legal guidance",
+      "variations": [
+        {
+          "target_persona": "Debtors Seeking Resolution",
+          "queries": {
+            "navigational": [
+              "Calgary Legal Guidance official website"
+            ],
+            "informational": [
+              "how to enforce a court judgment in Calgary"
+            ],
+            "commercial": [
+              "best legal services in Calgary for debt collection"
+            ],
+            "transactional": [
+              "hire a lawyer in Calgary for judgment enforcement"
+            ]
+          }
+        },
+        {
+          "target_persona": "Legal Professionals",
+          "queries": {
+            "navigational": [
+              "Calgary Legal Guidance official website"
+            ],
+            "informational": [
+              "how to collect a judgement in Calgary"
+            ],
+            "commercial": [
+              "best legal advisors in Calgary for garnishment"
+            ],
+            "transactional": [
+              "hire a lawyer in Calgary for judgement collection"
+            ]
+          }
+        },
+        {
+          "target_persona": "Financially Distressed Individuals",
+          "queries": {
+            "navigational": [
+              "Calgary Legal Guidance official website"
+            ],
+            "informational": [
+              "What are my rights if my wages are being garnished in Calgary?"
+            ],
+            "commercial": [
+              "Best legal aid services in Calgary for debt issues"
+            ],
+            "transactional": [
+              "Hire a lawyer in Calgary for garnishment issues"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Calgary Debt Collection Legal Services website"
+            ],
+            "informational": [
+              "how to collect a debt after winning a judgement in Calgary"
+            ],
+            "commercial": [
+              "best legal firms in Calgary for debt collection"
+            ],
+            "transactional": [
+              "hire a Calgary lawyer for debt collection"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "enforce judgement",
+      "variations": [
+        {
+          "target_persona": "Debtors Seeking Resolution",
+          "queries": {
+            "navigational": [
+              "court judgement enforcement services website"
+            ],
+            "informational": [
+              "how to enforce a court judgement to collect money"
+            ],
+            "commercial": [
+              "best services for enforcing court judgements"
+            ],
+            "transactional": [
+              "hire a lawyer to enforce court judgement"
+            ]
+          }
+        },
+        {
+          "target_persona": "Legal Professionals",
+          "queries": {
+            "navigational": [
+              "Alberta Courts enforce judgement page"
+            ],
+            "informational": [
+              "how to enforce a judgement in Alberta"
+            ],
+            "commercial": [
+              "best law firms in Calgary for enforcing judgements"
+            ],
+            "transactional": [
+              "hire lawyer in Calgary to enforce judgement"
+            ]
+          }
+        },
+        {
+          "target_persona": "Financially Distressed Individuals",
+          "queries": {
+            "navigational": [
+              "court website for enforcing judgement"
+            ],
+            "informational": [
+              "how does judgement enforcement work"
+            ],
+            "commercial": [
+              "best services for enforcing a judgement"
+            ],
+            "transactional": [
+              "hire lawyer to enforce judgement"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Alberta Courts enforce judgement page"
+            ],
+            "informational": [
+              "how to enforce a court judgement in Calgary"
+            ],
+            "commercial": [
+              "best debt collection agencies in Calgary"
+            ],
+            "transactional": [
+              "hire a lawyer to enforce judgement in Calgary"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "wage garnishment",
+      "variations": [
+        {
+          "target_persona": "Debtors Seeking Resolution",
+          "queries": {
+            "navigational": [
+              "nolo wage garnishment guide"
+            ],
+            "informational": [
+              "how does wage garnishment work after winning a court judgment"
+            ],
+            "commercial": [
+              "best services for enforcing wage garnishment"
+            ],
+            "transactional": [
+              "hire lawyer for wage garnishment enforcement"
+            ]
+          }
+        },
+        {
+          "target_persona": "Legal Professionals",
+          "queries": {
+            "navigational": [
+              "Alberta Courts wage garnishment forms"
+            ],
+            "informational": [
+              "how does wage garnishment work in Alberta"
+            ],
+            "commercial": [
+              "best law firms in Calgary for wage garnishment cases"
+            ],
+            "transactional": [
+              "hire a lawyer for wage garnishment in Calgary"
+            ]
+          }
+        },
+        {
+          "target_persona": "Financially Distressed Individuals",
+          "queries": {
+            "navigational": [
+              "nolo wage garnishment page"
+            ],
+            "informational": [
+              "how does wage garnishment work"
+            ],
+            "commercial": [
+              "best wage garnishment lawyer reviews"
+            ],
+            "transactional": [
+              "buy wage garnishment protection service"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Government of Alberta wage garnishment guidelines"
+            ],
+            "informational": [
+              "how does wage garnishment work in Calgary"
+            ],
+            "commercial": [
+              "best debt collection agencies in Calgary for wage garnishment"
+            ],
+            "transactional": [
+              "hire a lawyer for wage garnishment in Calgary"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "legal advice Calgary",
+      "variations": [
+        {
+          "target_persona": "Debtors Seeking Resolution",
+          "queries": {
+            "navigational": [
+              "Calgary Debt Collection Law Firm website"
+            ],
+            "informational": [
+              "how to enforce a court judgement in Calgary"
+            ],
+            "commercial": [
+              "best legal services for debt collection in Calgary"
+            ],
+            "transactional": [
+              "hire a debt collection lawyer in Calgary"
+            ]
+          }
+        },
+        {
+          "target_persona": "Legal Professionals",
+          "queries": {
+            "navigational": [
+              "Field Law Calgary garnishment services"
+            ],
+            "informational": [
+              "how to collect a judgement in Calgary"
+            ],
+            "commercial": [
+              "best legal firms in Calgary for garnishment"
+            ],
+            "transactional": [
+              "hire a lawyer in Calgary for garnishment"
+            ]
+          }
+        },
+        {
+          "target_persona": "Financially Distressed Individuals",
+          "queries": {
+            "navigational": [
+              "Calgary Legal Guidance website"
+            ],
+            "informational": [
+              "how does wage garnishment work in Calgary"
+            ],
+            "commercial": [
+              "best legal advice services for debt issues in Calgary"
+            ],
+            "transactional": [
+              "hire a lawyer for debt garnishment in Calgary"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Field Law Calgary debt collection",
+              "Bennett Jones LLP Calgary office",
+              "Calgary Legal Guidance website",
+              "MLT Aikins Calgary contact",
+              "Dunphy Best Blocksom LLP Calgary"
+            ],
+            "informational": [
+              "how to collect a debt after winning a judgement in Calgary",
+              "steps to enforce a court judgement in Alberta",
+              "Calgary small business debt collection advice",
+              "legal process for debt recovery in Calgary",
+              "understanding Alberta's debt collection laws"
+            ],
+            "commercial": [
+              "best debt collection lawyers in Calgary",
+              "top-rated legal firms for debt recovery in Calgary",
+              "Calgary legal services for small business debt collection",
+              "reviews of Calgary debt collection attorneys",
+              "compare Calgary law firms for debt enforcement"
+            ],
+            "transactional": [
+              "hire a debt collection lawyer in Calgary",
+              "book a consultation with a Calgary debt recovery attorney",
+              "pay for legal advice on debt collection in Calgary",
+              "purchase legal services for enforcing a judgement in Calgary",
+              "sign up for a debt collection service in Calgary"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "how to collect a court judgement in Calgary",
+      "variations": [
+        {
+          "target_persona": "Debtors Seeking Resolution",
+          "queries": {
+            "navigational": [
+              "Alberta Courts judgement enforcement page",
+              "Calgary court judgement collection services",
+              "Government of Alberta debt collection",
+              "Calgary legal aid for judgement collection",
+              "Alberta Justice enforcement office"
+            ],
+            "informational": [
+              "how to enforce a court judgement in Calgary",
+              "steps to collect a court judgement in Alberta",
+              "what to do after winning a court judgement in Calgary",
+              "Calgary court judgement collection process",
+              "how long does it take to collect a court judgement in Alberta"
+            ],
+            "commercial": [
+              "best debt collection agencies in Calgary",
+              "reviews of Calgary judgement enforcement services",
+              "top-rated lawyers for judgement collection in Calgary",
+              "compare Calgary debt recovery services",
+              "affordable judgement collection services in Calgary"
+            ],
+            "transactional": [
+              "hire a debt collection agency in Calgary",
+              "book a consultation with a Calgary judgement lawyer",
+              "purchase Calgary court judgement enforcement service",
+              "sign up for Calgary debt recovery assistance",
+              "pay for judgement collection service in Alberta"
+            ]
+          }
+        },
+        {
+          "target_persona": "Legal Professionals",
+          "queries": {
+            "navigational": [
+              "Alberta Courts garnishment forms"
+            ],
+            "informational": [
+              "steps to enforce a court judgement in Calgary"
+            ],
+            "commercial": [
+              "best law firms in Calgary for judgement collection"
+            ],
+            "transactional": [
+              "hire a lawyer in Calgary for judgement enforcement"
+            ]
+          }
+        },
+        {
+          "target_persona": "Financially Distressed Individuals",
+          "queries": {
+            "navigational": [
+              "Alberta Courts judgment collection page"
+            ],
+            "informational": [
+              "how does garnishment work in Calgary"
+            ],
+            "commercial": [
+              "best debt collection agencies in Calgary"
+            ],
+            "transactional": [
+              "hire a lawyer for judgment collection in Calgary"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Alberta Courts debt collection page",
+              "Calgary Small Claims Court judgement enforcement",
+              "Service Alberta debt collection guidelines",
+              "Calgary Court of Queen's Bench judgement collection",
+              "Alberta Justice debt recovery resources"
+            ],
+            "informational": [
+              "how to enforce a court judgement in Calgary",
+              "steps to collect a court judgement in Alberta",
+              "what to do after winning a court judgement in Calgary",
+              "how long does it take to collect a court judgement in Calgary",
+              "legal process for collecting a court judgement in Alberta"
+            ],
+            "commercial": [
+              "best debt collection agencies in Calgary",
+              "top-rated lawyers for judgement collection in Calgary",
+              "reviews of Calgary debt recovery services",
+              "compare debt collection services in Alberta",
+              "cost of hiring a debt collector in Calgary"
+            ],
+            "transactional": [
+              "hire a debt collection agency in Calgary",
+              "book a consultation with a Calgary debt recovery lawyer",
+              "purchase a guide on collecting court judgements in Alberta",
+              "download Alberta court forms for judgement collection",
+              "pay for debt collection services in Calgary"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "garnishee process in Alberta",
+      "variations": [
+        {
+          "target_persona": "Debtors Seeking Resolution",
+          "queries": {
+            "navigational": [
+              "Alberta court garnishee forms"
+            ],
+            "informational": [
+              "how does the garnishee process work in Alberta"
+            ],
+            "commercial": [
+              "best legal services for garnishee orders in Alberta"
+            ],
+            "transactional": [
+              "hire lawyer for garnishee process in Alberta"
+            ]
+          }
+        },
+        {
+          "target_persona": "Legal Professionals",
+          "queries": {
+            "navigational": [
+              "Alberta Courts garnishee process page"
+            ],
+            "informational": [
+              "how does the garnishee process work in Alberta"
+            ],
+            "commercial": [
+              "best law firms in Calgary for garnishee process assistance"
+            ],
+            "transactional": [
+              "hire a lawyer in Calgary for garnishee process"
+            ]
+          }
+        },
+        {
+          "target_persona": "Financially Distressed Individuals",
+          "queries": {
+            "navigational": [
+              "Alberta government garnishee process page"
+            ],
+            "informational": [
+              "how does garnishment work in Alberta"
+            ],
+            "commercial": [
+              "best legal services for garnishment advice in Alberta"
+            ],
+            "transactional": [
+              "hire a lawyer for garnishment issues in Alberta"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Alberta Courts garnishee process page"
+            ],
+            "informational": [
+              "how does the garnishee process work in Alberta"
+            ],
+            "commercial": [
+              "best legal services for garnishee process in Calgary"
+            ],
+            "transactional": [
+              "hire lawyer for garnishee process in Alberta"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "focus_keyword": "legal steps for judgement collection",
+      "variations": [
+        {
+          "target_persona": "Debtors Seeking Resolution",
+          "queries": {
+            "navigational": [
+              "court judgement collection process official site"
+            ],
+            "informational": [
+              "how to enforce a court judgement to collect money"
+            ],
+            "commercial": [
+              "best services for judgement collection assistance"
+            ],
+            "transactional": [
+              "hire a lawyer for judgement collection"
+            ]
+          }
+        },
+        {
+          "target_persona": "Legal Professionals",
+          "queries": {
+            "navigational": [
+              "Alberta Courts judgement collection procedures"
+            ],
+            "informational": [
+              "how to collect a judgement in Alberta"
+            ],
+            "commercial": [
+              "best judgement collection services in Calgary"
+            ],
+            "transactional": [
+              "hire judgement collection lawyer Calgary"
+            ]
+          }
+        },
+        {
+          "target_persona": "Financially Distressed Individuals",
+          "queries": {
+            "navigational": [
+              "Nolo judgement collection guide"
+            ],
+            "informational": [
+              "how does judgement collection work for debtors"
+            ],
+            "commercial": [
+              "best legal services for judgement collection"
+            ],
+            "transactional": [
+              "buy judgement collection legal forms"
+            ]
+          }
+        },
+        {
+          "target_persona": "Small Business Owners",
+          "queries": {
+            "navigational": [
+              "Alberta Courts judgement collection process"
+            ],
+            "informational": [
+              "how to collect a judgement in Calgary"
+            ],
+            "commercial": [
+              "best judgement collection services in Calgary"
+            ],
+            "transactional": [
+              "hire a lawyer for judgement collection in Calgary"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "dataset": {
+    "train": [
+      "hire a lawyer in calgary for garnishee process",
+      "hire a lawyer to enforce judgement in calgary",
+      "alberta justice debt recovery resources",
+      "hire a lawyer for wage garnishment in calgary",
+      "court website for enforcing judgement",
+      "hire a lawyer in calgary for garnishment issues",
+      "hire judgement collection lawyer calgary",
+      "best law firms in calgary for wage garnishment cases",
+      "understanding alberta's debt collection laws",
+      "court website for collecting judgment",
+      "book a consultation with a calgary debt recovery attorney",
+      "calgary court of queen's bench judgement collection",
+      "garnishee order government website",
+      "cost of hiring a debt collector in calgary",
+      "hire a debt collection agency in calgary",
+      "best law firms in calgary for enforcing judgements",
+      "reviews of calgary judgement enforcement services",
+      "hire a lawyer in calgary for garnishment",
+      "alberta justice enforcement office",
+      "alberta government garnishee process page",
+      "court order garnishee form download",
+      "best debt collection lawyers in calgary",
+      "purchase legal services for enforcing a judgement in calgary",
+      "buy wage garnishment protection service",
+      "how does garnishee work in alberta",
+      "reviews of calgary debt recovery services",
+      "best wage garnishment lawyer reviews",
+      "calgary small claims court judgement enforcement",
+      "alberta courts enforce judgement page",
+      "bennett jones llp calgary office",
+      "best services for enforcing wage garnishment",
+      "alberta courts judgment collection page",
+      "calgary debt collection legal services website",
+      "pay for judgement collection service in alberta",
+      "legal process for debt recovery in calgary",
+      "purchase calgary court judgement enforcement service",
+      "steps to enforce a court judgement in alberta",
+      "pay for legal advice on debt collection in calgary",
+      "hire a lawyer to collect judgment",
+      "best debt collection agencies in calgary",
+      "hire a lawyer in calgary for judgment enforcement",
+      "buy garnishee legal forms online",
+      "how does wage garnishment work in alberta",
+      "best legal services for garnishee advice",
+      "book a consultation with a calgary judgement lawyer",
+      "sign up for calgary debt recovery assistance",
+      "alberta courts judgement collection process",
+      "best garnishee services in calgary",
+      "best legal firms in calgary for debt collection",
+      "best legal advisors in calgary for garnishment",
+      "how does the garnishee process work in alberta",
+      "hire a lawyer to collect court judgement",
+      "compare calgary debt recovery services",
+      "affordable judgement collection services in calgary",
+      "best legal services for garnishee orders in alberta",
+      "best legal services for enforcing garnishee orders",
+      "how to enforce a court judgement in calgary",
+      "alberta courts judgement enforcement page",
+      "how does wage garnishment work",
+      "buy judgement collection legal forms",
+      "service alberta debt collection guidelines",
+      "calgary small business debt collection advice",
+      "hire a lawyer in calgary for judgement collection",
+      "hire lawyer to enforce judgement",
+      "hire a lawyer for judgment collection in calgary",
+      "best legal services in calgary for debt collection",
+      "sign up for a debt collection service in calgary",
+      "court judgement collection process official site",
+      "best services for collecting a judgment",
+      "top-rated legal firms for debt recovery in calgary",
+      "hire lawyer in calgary to enforce judgement"
+    ],
+    "test": [
+      "reviews of calgary debt collection attorneys",
+      "steps to enforce a court judgement in calgary",
+      "hire a lawyer in calgary for judgement enforcement",
+      "pay for debt collection services in calgary",
+      "calgary legal services for small business debt collection",
+      "calgary court judgement collection services",
+      "how long does it take to collect a court judgement in alberta",
+      "how does judgment collection work",
+      "hire a lawyer to enforce court judgement",
+      "best judgement collection services in calgary",
+      "government of alberta wage garnishment guidelines",
+      "best legal advice services for debt issues in calgary",
+      "field law calgary garnishment services",
+      "legal process for collecting a court judgement in alberta",
+      "best debt collection agencies in calgary for wage garnishment",
+      "best legal aid services in calgary for debt issues",
+      "calgary legal guidance official website",
+      "calgary debt collection law firm website",
+      "hire a lawyer for judgement collection",
+      "calgary legal aid for judgement collection",
+      "dunphy best blocksom llp calgary",
+      "hire a calgary lawyer for debt collection",
+      "calgary legal guidance website",
+      "alberta court garnishee forms",
+      "what are my rights if my wages are being garnished in calgary?",
+      "compare calgary law firms for debt enforcement",
+      "what is a garnishee and how does it work",
+      "top-rated lawyers for judgement collection in calgary",
+      "steps to collect a court judgement in alberta",
+      "nolo wage garnishment page",
+      "hire lawyer for garnishee process in alberta",
+      "alberta courts garnishee forms",
+      "how to collect a debt after winning a judgement in calgary",
+      "purchase a guide on collecting court judgements in alberta",
+      "how to enforce a judgement in alberta",
+      "nolo wage garnishment guide",
+      "best services for judgement collection assistance",
+      "court judgement enforcement services website",
+      "compare debt collection services in alberta",
+      "best legal services for garnishment advice in alberta",
+      "government of alberta debt collection",
+      "how does a garnishee order work",
+      "mlt aikins calgary contact",
+      "buy garnishee order enforcement service",
+      "field law calgary debt collection",
+      "calgary court judgement collection process",
+      "hire a lawyer for judgement collection in calgary",
+      "book a consultation with a calgary debt recovery lawyer",
+      "what to do after winning a court judgement in calgary",
+      "alberta courts garnishee process page",
+      "hire a lawyer for debt garnishment in calgary",
+      "how to collect a judgement in alberta",
+      "hire a lawyer for garnishment issues in alberta",
+      "how does wage garnishment work after winning a court judgment",
+      "how long does it take to collect a court judgement in calgary",
+      "hire garnishee lawyer in calgary",
+      "alberta courts judgement collection page",
+      "alberta courts wage garnishment forms",
+      "download alberta court forms for judgement collection",
+      "how to collect a judgement in calgary",
+      "alberta courts garnishment forms",
+      "best law firms in calgary for garnishee process assistance",
+      "hire a debt collection lawyer in calgary",
+      "hire lawyer for wage garnishment enforcement",
+      "alberta courts judgement collection procedures",
+      "alberta courts debt collection page",
+      "how does garnishment work in calgary",
+      "nolo judgement collection guide",
+      "best services for enforcing court judgements",
+      "best legal firms in calgary for garnishment",
+      "best legal services for garnishee process in calgary"
+    ]
+  },
+  "stats": {
+    "total_unique": 142,
+    "train_count": 71,
+    "test_count": 71,
+    "keywords_count": 9,
+    "personas_count": 4
+  }
+}
