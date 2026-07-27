@@ -59,11 +59,13 @@ class AsyncInContextGeneratorV2:
     def __init__(
         self,
         config_path: str = "geo_agent/config.yaml",
-        max_snippet_length: int = 2000,
+        max_snippet_length: int = None,
         citation_checker: Optional[BaseCitationChecker] = None,
     ):
         # Use LLM configured for GENERATION task
         self.llm = get_llm_for_task(config_path, LLMTask.GENERATION)
+        if max_snippet_length is None:
+            max_snippet_length = 2000
         self.max_snippet_length = max_snippet_length
 
         # If not provided, create default LLM checker (backward compatible)
@@ -680,51 +682,106 @@ class AgentGEOV2:
         elif not isinstance(queries, list):
             queries = list(queries)
 
-        async def evaluate_one(query: str) -> Tuple[str, bool, List[str]]:
+        detailed_results: Dict[str, Dict] = {}
+
+        async def evaluate_one(query: str) -> Tuple[str, Dict, List[str]]:
             async with semaphore:
                 retrieved_docs = await self._get_search_results(query, exclude_url=webpage.url)
+                urls = [doc.url for doc in retrieved_docs if doc.url]
                 if self.batch_config.citation_input_mode == "url":
                     citation_result = await self.generator.generate_and_check(
                         query, webpage, retrieved_docs, []
                     )
-                    return (
-                        query,
-                        citation_result.is_cited,
-                        [doc.url for doc in retrieved_docs if doc.url],
-                    )
+                    geo = citation_result.geo_score
+                    return query, {
+                        "is_cited": citation_result.is_cited,
+                        "answer": citation_result.generated_answer,
+                        "geo_score": {
+                            "word": geo.word,
+                            "position": geo.position,
+                            "wordpos": geo.wordpos,
+                            "overall": geo.overall,
+                        } if geo else None,
+                        "documents": urls + ([webpage.url] if webpage.url else []),
+                        "target_idx": len(retrieved_docs) + 1,
+                        "no_competitors": False,
+                    }, urls
 
                 retrieved_docs, competitor_contents = await self._get_all_competitor_contents(
                     retrieved_docs
                 )
                 if not competitor_contents:
-                    return query, False, [doc.url for doc in retrieved_docs if doc.url]
+                    # No candidate set means the query was never actually evaluated.
+                    # Flag it instead of letting it pass as a genuine "not cited",
+                    # which would silently understate the citation rate.
+                    logger.warning(
+                        f"No competitor content for query '{query[:60]}' "
+                        f"({len(retrieved_docs)} retrieved); scoring it as uncited is not meaningful"
+                    )
+                    return query, {
+                        "is_cited": False,
+                        "answer": "",
+                        "geo_score": None,
+                        "documents": [],
+                        "target_idx": 0,
+                        "no_competitors": True,
+                    }, urls
 
                 citation_result = await self.generator.generate_and_check(
                     query, webpage, retrieved_docs, competitor_contents
                 )
-                return (
-                    query,
-                    citation_result.is_cited,
-                    [doc.url for doc in retrieved_docs if doc.url],
-                )
+                geo = citation_result.geo_score
+                target_content = webpage.cleaned_content or ""
+                full_documents = list(competitor_contents) + [target_content]
+                target_idx = len(full_documents)
+                return query, {
+                    "is_cited": citation_result.is_cited,
+                    "answer": citation_result.generated_answer,
+                    "geo_score": {
+                        "word": geo.word,
+                        "position": geo.position,
+                        "wordpos": geo.wordpos,
+                        "overall": geo.overall,
+                    } if geo else None,
+                    "documents": full_documents,
+                    "target_idx": target_idx,
+                    "no_competitors": False,
+                }, urls
 
         tasks = [asyncio.create_task(evaluate_one(query)) for query in queries]
         retrieved_urls: Dict[str, List[str]] = {}
         for coro in asyncio.as_completed(tasks):
-            query, cited, urls = await coro
-            results[query] = cited
+            query, detail, urls = await coro
+            detailed_results[query] = detail
+            results[query] = detail["is_cited"]
             retrieved_urls[query] = urls
+
+        # A page whose queries all came back without a candidate set was never really
+        # evaluated — retrieval or the competitor cache is broken. Reporting 0% here
+        # would look like a legitimately uncitable page, so fail loudly instead.
+        starved = [q for q, d in detailed_results.items() if d.get("no_competitors")]
+        if queries and len(starved) == len(queries):
+            raise RuntimeError(
+                f"No competitor content for any of the {len(queries)} queries on {webpage.url}; "
+                f"retrieval or the competitor cache is unavailable"
+            )
+        if starved:
+            logger.warning(
+                f"{len(starved)}/{len(queries)} queries on {webpage.url} had no competitors; "
+                f"they are counted as uncited and depress the citation rate"
+            )
 
         # Safely compute ratio, avoiding numpy array issues
         if not queries:
             ratio = 0.0
         else:
-            success_count = sum(results.values())
+            success_count = sum(1 for v in results.values() if isinstance(v, bool) and v)
             queries_len = len(queries)
             ratio = float(success_count) / queries_len if queries_len > 0 else 0.0
-        
+
         results["ratio"] = ratio
         results["_retrieved_urls"] = retrieved_urls
+        results["detailed"] = detailed_results
         return results
 
 

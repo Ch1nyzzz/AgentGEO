@@ -44,7 +44,9 @@ sys.path.insert(0, str(REPO_ROOT))
 
 load_dotenv(REPO_ROOT / ".env")
 
-from optimizers import create_optimizer
+from difflib import SequenceMatcher
+
+from optimizers import create_optimizer, AgentGEOOptimizer
 from utils.data_loader import DataLoader
 
 logging.basicConfig(
@@ -112,6 +114,68 @@ def extract_training_citation_info(optimized) -> Dict[str, Any]:
     }
 
 
+def compute_similarity(original_text: str, optimized_text: str) -> Dict[str, float]:
+    """Compute three faithfulness metrics: TF-IDF, Embedding, Jaccard."""
+    if not original_text or not optimized_text:
+        return {"tfidf_similarity": 0.0, "jaccard_similarity": 0.0, "embedding_similarity": 0.0}
+
+    # 1. TF-IDF cosine similarity
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.metrics.pairwise import cosine_similarity as sk_cosine
+    vectorizer = TfidfVectorizer()
+    tfidf_matrix = vectorizer.fit_transform([original_text, optimized_text])
+    tfidf_sim = sk_cosine(tfidf_matrix[0:1], tfidf_matrix[1:2])[0][0]
+
+    # 2. Jaccard similarity (word-level)
+    orig_words = set(original_text.lower().split())
+    opt_words = set(optimized_text.lower().split())
+    union = orig_words | opt_words
+    jaccard = len(orig_words & opt_words) / len(union) if union else 0.0
+
+    # 3. Embedding similarity (sentence-transformers)
+    try:
+        from sentence_transformers import SentenceTransformer
+        import numpy as np
+        model = SentenceTransformer('all-MiniLM-L6-v2')
+        emb_orig = model.encode(original_text[:10000], convert_to_numpy=True)
+        emb_opt = model.encode(optimized_text[:10000], convert_to_numpy=True)
+        embed_sim = float(np.dot(emb_orig, emb_opt) / (np.linalg.norm(emb_orig) * np.linalg.norm(emb_opt)))
+    except Exception:
+        embed_sim = 0.0
+
+    return {
+        "tfidf_similarity": round(float(tfidf_sim), 4),
+        "jaccard_similarity": round(jaccard, 4),
+        "embedding_similarity": round(embed_sim, 4),
+    }
+
+
+def extract_eval_geo_scores(eval_result: Dict, queries: List[str]) -> Dict[str, Any]:
+    """Extract per-query GEO scores and answers from evaluation result."""
+    detailed = eval_result.get("detailed", {})
+    per_query = {}
+    geo_scores = []
+    for q in queries:
+        info = detailed.get(q, {})
+        geo = info.get("geo_score")
+        per_query[q] = {
+            "is_cited": info.get("is_cited", False),
+            "answer": info.get("answer", ""),
+            "geo_score": geo,
+        }
+        if geo:
+            geo_scores.append(geo["overall"])
+    avg_geo = sum(geo_scores) / len(geo_scores) if geo_scores else 0.0
+    return {"per_query": per_query, "avg_geo_score": round(avg_geo, 4)}
+
+
+def _get_shared_evaluator(config: Dict) -> Any:
+    """Create a shared AgentGEO evaluator for methods without their own evaluate_page_async."""
+    agentgeo_config = config.get("agentgeo", {})
+    evaluator = AgentGEOOptimizer(**agentgeo_config)
+    return evaluator
+
+
 async def process_document(
     doc: Dict[str, Any],
     optimizers: Dict[str, Any],
@@ -133,6 +197,19 @@ async def process_document(
     test_queries = doc.get("test_queries", [])
     citation_input_mode = config.get("agentgeo", {}).get("citation_input_mode", "content")
 
+    # Extract original text once for similarity computation
+    try:
+        from trafilatura import extract as tf_extract
+        original_text = tf_extract(doc["raw_html"]) or ""
+    except Exception:
+        original_text = ""
+
+    # Shared evaluator for optimizers without evaluate_page_async
+    shared_evaluator = None
+
+    # Baseline evaluation (original page) — run once and reuse across all optimizers
+    baseline_eval_cache = None
+
     for name, optimizer in optimizers.items():
         try:
             logger.info(f"  [{doc_id}] Running {name}...")
@@ -143,20 +220,32 @@ async def process_document(
                     doc_id,
                 )
 
+            # Determine which evaluator to use
+            has_eval = hasattr(optimizer, 'evaluate_page_async')
+            if not has_eval and enable_citation_eval and test_queries:
+                if shared_evaluator is None:
+                    shared_evaluator = _get_shared_evaluator(config)
+                evaluator = shared_evaluator
+            else:
+                evaluator = optimizer if has_eval else None
+
             # 1. Pre-optimization test evaluation (baseline)
-            if enable_citation_eval and test_queries and hasattr(optimizer, 'evaluate_page_async'):
-                logger.info(f"    [{doc_id}] Evaluating baseline with {len(test_queries)} test queries...")
-                baseline_eval = await optimizer.evaluate_page_async(
-                    raw_html=doc["raw_html"],
-                    test_queries=test_queries,
-                    url=doc.get("url", "")
-                )
+            if enable_citation_eval and test_queries and evaluator is not None:
+                if baseline_eval_cache is None:
+                    logger.info(f"    [{doc_id}] Evaluating baseline with {len(test_queries)} test queries...")
+                    baseline_eval_cache = await evaluator.evaluate_page_async(
+                        raw_html=doc["raw_html"],
+                        test_queries=test_queries,
+                        url=doc.get("url", "")
+                    )
+                baseline_eval = baseline_eval_cache
                 baseline_citation_rate = baseline_eval.get("ratio", 0.0)
                 result[f"{name}_baseline_test_citation_rate"] = baseline_citation_rate
-                # Per-query detail
-                baseline_per_query = {q: baseline_eval.get(q, False) for q in test_queries}
-                result[f"{name}_baseline_test_per_query"] = baseline_per_query
-                logger.info(f"    [{doc_id}] Baseline test citation rate: {baseline_citation_rate:.2%}")
+                baseline_detail = extract_eval_geo_scores(baseline_eval, test_queries)
+                result[f"{name}_baseline_test_per_query"] = baseline_detail["per_query"]
+                result[f"{name}_baseline_test_avg_geo_score"] = baseline_detail["avg_geo_score"]
+                logger.info(f"    [{doc_id}] Baseline test citation rate: {baseline_citation_rate:.2%}, "
+                            f"avg GEO score: {baseline_detail['avg_geo_score']:.4f}")
             else:
                 baseline_citation_rate = None
 
@@ -171,22 +260,37 @@ async def process_document(
                 result[f"{name}_text"] = optimized.optimized_text
                 result[f"{name}_html"] = optimized.optimized_html
                 optimized_html = optimized.optimized_html
+                optimized_text = optimized.optimized_text
 
-                # Extract training citation info
-                train_citation = extract_training_citation_info(optimized)
-                result[f"{name}_train_citation"] = train_citation
-                logger.info(
-                    f"  [{doc_id}] Training citation rate: {train_citation['train_citation_rate']:.2%} "
-                    f"({train_citation['cited_count']}/{train_citation['total_queries']})"
-                )
-                if train_citation['uncitable_queries']:
-                    logger.info(f"  [{doc_id}] Uncitable queries: {len(train_citation['uncitable_queries'])}")
+                # Extract training citation info (AgentGEO only)
+                if hasattr(optimized, 'optimization_results'):
+                    train_citation = extract_training_citation_info(optimized)
+                    result[f"{name}_train_citation"] = train_citation
+                    logger.info(
+                        f"  [{doc_id}] Training citation rate: {train_citation['train_citation_rate']:.2%} "
+                        f"({train_citation['cited_count']}/{train_citation['total_queries']})"
+                    )
+                    if train_citation['uncitable_queries']:
+                        logger.info(f"  [{doc_id}] Uncitable queries: {len(train_citation['uncitable_queries'])}")
             else:
-                result[f"{name}_text"] = optimized
-                optimized_html = optimized
+                # AutoGEO / Baseline returns plain text
+                optimized_text = optimized if isinstance(optimized, str) else str(optimized)
+                optimized_html = optimized_text
+                result[f"{name}_text"] = optimized_text
+
+            # Compute similarity (original vs optimized)
+            if original_text and optimized_text:
+                similarity = compute_similarity(original_text, optimized_text)
+                result[f"{name}_similarity"] = similarity
+                result[f"{name}_length_ratio"] = round(
+                    len(optimized_text) / len(original_text), 4
+                ) if original_text else 0.0
+                logger.info(f"  [{doc_id}] Similarity: tfidf={similarity['tfidf_similarity']:.3f}, "
+                            f"jaccard={similarity['jaccard_similarity']:.3f}, "
+                            f"embed={similarity['embedding_similarity']:.3f}")
 
             # 3. Post-optimization test evaluation
-            if enable_citation_eval and test_queries and hasattr(optimizer, 'evaluate_page_async'):
+            if enable_citation_eval and test_queries and evaluator is not None:
                 optimized_url = doc.get("optimized_url") or doc.get(f"{name}_optimized_url")
                 eval_url = optimized_url or doc.get("url", "")
                 if citation_input_mode == "url" and not optimized_url:
@@ -198,24 +302,42 @@ async def process_document(
                     logger.warning(f"    [{doc_id}] Skipping optimized URL-mode evaluation: {skip_reason}")
                 else:
                     logger.info(f"    [{doc_id}] Evaluating optimized page with {len(test_queries)} test queries...")
-                    optimized_eval = await optimizer.evaluate_page_async(
-                        raw_html=optimized_html,
+                    # StructuralHtmlParser requires markup for plain-text optimizers.
+                    eval_html = optimized_html
+                    if not eval_html.strip().startswith('<'):
+                        paragraphs = ''.join(
+                            f'<p>{line}</p>' for line in eval_html.split('\n') if line.strip()
+                        )
+                        eval_html = f"<html><body>{paragraphs}</body></html>"
+                    optimized_eval = await evaluator.evaluate_page_async(
+                        raw_html=eval_html,
                         test_queries=test_queries,
                         url=eval_url
                     )
                     optimized_citation_rate = optimized_eval.get("ratio", 0.0)
                     result[f"{name}_optimized_test_citation_rate"] = optimized_citation_rate
-                    # Per-query detail
-                    optimized_per_query = {q: optimized_eval.get(q, False) for q in test_queries}
-                    result[f"{name}_optimized_test_per_query"] = optimized_per_query
+                    optimized_detail = extract_eval_geo_scores(optimized_eval, test_queries)
+                    result[f"{name}_optimized_test_per_query"] = optimized_detail["per_query"]
+                    result[f"{name}_optimized_test_avg_geo_score"] = optimized_detail["avg_geo_score"]
                     if optimized_url:
                         result[f"{name}_optimized_test_url"] = optimized_url
-                    logger.info(f"    [{doc_id}] Optimized test citation rate: {optimized_citation_rate:.2%}")
+                    logger.info(
+                        f"    [{doc_id}] Optimized test citation rate: {optimized_citation_rate:.2%}, "
+                        f"avg GEO score: {optimized_detail['avg_geo_score']:.4f}"
+                    )
 
                     if baseline_citation_rate is not None:
                         delta = optimized_citation_rate - baseline_citation_rate
                         result[f"{name}_delta_test_citation_rate"] = delta
-                        logger.info(f"    [{doc_id}] Test delta: {delta:+.2%}")
+                        delta_geo = (
+                            optimized_detail["avg_geo_score"]
+                            - result.get(f"{name}_baseline_test_avg_geo_score", 0)
+                        )
+                        result[f"{name}_delta_test_avg_geo_score"] = round(delta_geo, 4)
+                        logger.info(
+                            f"    [{doc_id}] Test delta: citation={delta:+.2%}, "
+                            f"geo_score={delta_geo:+.4f}"
+                        )
 
             logger.info(f"  [{doc_id}] {name} completed")
         except Exception as e:
@@ -226,14 +348,23 @@ async def process_document(
 
 
 def get_completed_doc_ids(checkpoint_dir: Path) -> set:
-    """Get set of completed doc IDs from checkpoint directory"""
+    """Get set of completed doc IDs from checkpoint directory
+
+    Checkpoints that recorded an optimizer error (e.g. an API failure) are not
+    treated as completed, so a resumed run retries them instead of silently
+    dropping those documents from the aggregate statistics.
+    """
     completed = set()
     if checkpoint_dir.exists():
         for f in checkpoint_dir.glob("*.json"):
             try:
                 data = json.loads(f.read_text(encoding="utf-8"))
-                if "doc_id" in data:
-                    completed.add(data["doc_id"])
+                if "doc_id" not in data:
+                    continue
+                if any(k.endswith("_error") for k in data):
+                    logger.warning(f"Checkpoint {f.name} recorded an error; will retry this document")
+                    continue
+                completed.add(data["doc_id"])
             except (json.JSONDecodeError, KeyError):
                 continue
     return completed
@@ -252,6 +383,11 @@ def save_checkpoint(result: Dict[str, Any], checkpoint_dir: Path):
 
 def generate_analysis_report(results: List[Dict[str, Any]], output_dir: Path):
     """Generate summary analysis report from all document results"""
+    def is_cited(value: Any) -> bool:
+        if isinstance(value, dict):
+            return bool(value.get("is_cited", False))
+        return bool(value)
+
     total_docs = len(results)
     all_uncitable = []
     diagnosis_distribution = defaultdict(int)
@@ -303,8 +439,12 @@ def generate_analysis_report(results: List[Dict[str, Any]], output_dir: Path):
                 optimized_pq = r.get(f"{prefix}_optimized_test_per_query", {})
                 n_test = len(baseline_pq) if baseline_pq else 0
                 total_test_queries += n_test
-                total_test_baseline_cited += sum(1 for v in baseline_pq.values() if v)
-                total_test_optimized_cited += sum(1 for v in optimized_pq.values() if v)
+                total_test_baseline_cited += sum(
+                    1 for v in baseline_pq.values() if is_cited(v)
+                )
+                total_test_optimized_cited += sum(
+                    1 for v in optimized_pq.values() if is_cited(v)
+                )
                 break
 
         per_doc_summary.append(doc_summary)
@@ -367,8 +507,8 @@ def generate_analysis_report(results: List[Dict[str, Any]], output_dir: Path):
 async def main():
     parser = argparse.ArgumentParser(description="AgentGEO Unified Optimization Script")
     parser.add_argument("--config", default="optimization_config.yaml", help="Configuration file path")
-    parser.add_argument("--method", choices=["autogeo", "agentgeo", "baseline", "all"],
-                        help="Optimization method (overrides config)")
+    parser.add_argument("--method",
+                        help="Optimization method: autogeo, agentgeo, baseline, all, or comma-separated combo (overrides config)")
     parser.add_argument("--data", help="Data file path (overrides config)")
     parser.add_argument("--output-dir", help="Output directory (overrides config)")
     parser.add_argument("--doc-limit", type=int, help="Limit number of documents (overrides config)")

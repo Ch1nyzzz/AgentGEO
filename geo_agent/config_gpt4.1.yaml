@@ -1,0 +1,39 @@
+llm:
+  provider: openai
+  model: gpt-4.1
+  temperature: 0
+
+llm_tasks:
+  generation:
+    provider: openai
+    model: gpt-4.1
+
+  diagnosis:
+    provider: openai
+    model: gpt-4.1
+
+  tool_strategy:
+    provider: openai
+    model: gpt-4.1
+
+  geo_score:
+    provider: openai
+    model: gpt-4.1
+
+search:
+  provider: chatnoir
+  max_results: 10
+
+generator:
+  method: in-context
+  max_snippet_length: 10000
+
+html_browser:
+  method: requests
+
+html_parser:
+  method: trafilatura
+
+data:
+  mode: cw22
+  html_db_path: "./cache"

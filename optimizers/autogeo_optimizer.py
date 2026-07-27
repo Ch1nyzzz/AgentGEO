@@ -278,11 +278,14 @@ class AutoGEOOptimizer:
         temperature = llm_config.get('temperature', 0.7)
 
         if "gpt" in engine_llm_lower or "openai" in engine_llm_lower:
-            return OpenAIChatLLM(model="gpt-5-mini", temperature=temperature)
+            model = self.engine_llm if "gpt" in engine_llm_lower else "gpt-5-mini"
+            return OpenAIChatLLM(model=model, temperature=temperature)
         elif "claude" in engine_llm_lower or "anthropic" in engine_llm_lower:
-            return AnthropicChatLLM(model="claude-haiku-4-5-20251001", temperature=temperature)
+            model = self.engine_llm if "claude" in engine_llm_lower else "claude-haiku-4-5-20251001"
+            return AnthropicChatLLM(model=model, temperature=temperature)
         else:  # gemini
-            return GeminiChatLLM(model="gemini-2.5-flash", temperature=temperature)
+            model = self.engine_llm if "gemini" in engine_llm_lower else "gemini-2.5-flash"
+            return GeminiChatLLM(model=model, temperature=temperature)
 
     def _build_prompt(self, document: str) -> str:
         """Build rewrite prompt"""
