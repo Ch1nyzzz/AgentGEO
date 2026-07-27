@@ -31,17 +31,19 @@ def create_optimizer(method: str, config: Dict) -> Dict[str, Any]:
     """
     optimizers = {}
 
-    if method == "autogeo" or method == "all":
+    methods = [m.strip() for m in method.split(",")] if "," in method else [method]
+
+    if "autogeo" in methods or "all" in methods:
         optimizers["autogeo"] = AutoGEOOptimizer(
             **config.get("autogeo", {})
         )
 
-    if method == "agentgeo" or method == "all":
+    if "agentgeo" in methods or "all" in methods:
         optimizers["agentgeo"] = AgentGEOOptimizer(
             **config.get("agentgeo", {})
         )
 
-    if method == "baseline" or method == "all":
+    if "baseline" in methods or "all" in methods:
         baseline_config = config.get("baseline", {})
         baseline_methods = baseline_config.get("methods") or [
             "authoritative", "cite_sources", "statistics_addition",

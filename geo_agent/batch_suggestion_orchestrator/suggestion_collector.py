@@ -9,6 +9,7 @@ V2.1 Updates:
 """
 import asyncio
 import logging
+import os
 import sys
 import uuid
 from pathlib import Path
@@ -108,6 +109,22 @@ class SuggestionCollectorV2:
         return "\n\n".join(
             [f">> [CHUNK_ID: {i}]\n{chunk.text}" for i, chunk in enumerate(self.chunks)]
         )
+
+    @staticmethod
+    def _missing_required_args(tool, tool_args: Dict[str, Any]) -> list:
+        """Required arguments the tool's schema declares but tool_args does not contain.
+
+        Mirrors pydantic's own check (presence only, empty values are valid) so this
+        reports exactly the cases that would raise ValidationError on tool.run().
+        """
+        schema = getattr(tool, "args_schema", None)
+        fields = getattr(schema, "model_fields", None)
+        if not fields:
+            return []
+        return [
+            name for name, field in fields.items()
+            if field.is_required() and name not in tool_args
+        ]
 
     def _sanitize_for_logging(self, tool_args: Dict[str, Any]) -> Dict[str, Any]:
         """Sanitize tool arguments, remove lengthy content (aligned with geo_agent)"""
@@ -496,6 +513,54 @@ class SuggestionCollectorV2:
                     tool_outcome = ToolOutcome.FAILED
                     tool_error_msg = f"Tool {analysis.selected_tool_name} not found"
                     continue
+
+                # The Injection Rule tells the LLM to emit the placeholder arguments the
+                # system fills in, and it sometimes returns only those — dropping a
+                # tool-specific required argument (typically entity_injection's
+                # missing_entities). Regenerate those arguments once rather than losing
+                # the iteration to a ValidationError.
+                # AGENTGEO_DISABLE_ARG_RECOVERY reproduces the pre-fix behaviour, where a
+                # tool call missing a required argument was lost to a ValidationError.
+                # Kept as an escape hatch so runs can be compared against published numbers.
+                missing_args = (
+                    [] if os.getenv("AGENTGEO_DISABLE_ARG_RECOVERY")
+                    else self._missing_required_args(tool, tool_args)
+                )
+                if missing_args:
+                    logger.warning(
+                        f"Tool {analysis.selected_tool_name} missing required args {missing_args}; regenerating"
+                    )
+                    try:
+                        retry_analysis = await regenerate_tool_args_async(
+                            llm=self.llm,
+                            forced_tool=analysis.selected_tool_name,
+                            diagnosis=diagnosis,
+                            query=query,
+                            target_content_indexed=indexed_content,
+                            history_context=memory.get_history_summary() if self.enable_memory and memory else "",
+                            num_chunks=num_chunks,
+                        )
+                        # Only fill the gaps: the placeholder arguments already hold the
+                        # system-populated chunk content, which must not be overwritten.
+                        tool_args.update({
+                            k: v for k, v in retry_analysis.tool_arguments.items()
+                            if k in missing_args
+                        })
+                    except Exception as e:
+                        logger.error(f"Failed to regenerate args for {analysis.selected_tool_name}: {e}")
+
+                    still_missing = self._missing_required_args(tool, tool_args)
+                    if still_missing:
+                        logger.warning(
+                            f"Tool {analysis.selected_tool_name} still missing {still_missing} after regeneration; skipping"
+                        )
+                        failed_tools_by_diagnosis.setdefault(
+                            diagnosis.root_cause, set()
+                        ).add(analysis.selected_tool_name)
+                        tool_outcome = ToolOutcome.FAILED
+                        tool_error_msg = f"Missing required arguments: {still_missing}"
+                        continue
+                    logger.info(f"✅ Recovered missing args {missing_args} for {analysis.selected_tool_name}")
 
                 try:
                     # Save original chunk content before modification
